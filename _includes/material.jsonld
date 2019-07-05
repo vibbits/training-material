@@ -1,0 +1,4 @@
+{% assign material = include.material %}
+{% assign topic = include.topic %}
+{% assign site = include.site %}
+{{ material | to_jsonld: topic, site }}
