@@ -21,7 +21,6 @@ url: "https://vibbits.github.io/"
 baseurl: "/training-material"
 repository: vibbits/training-material
 repository_branch: "master"
-gitter_url: "https://gitter.im/Galaxy-Training-Network/Lobby"
 logo: "assets/images/bioinformatics_core_rgb_neg.png"
 small_logo: "assets/images/bioinformatics_core_rgb_neg.png"
 help_url: https://www.bits.vib.be
