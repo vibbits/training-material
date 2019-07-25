@@ -49,7 +49,7 @@ figurify:
   skip_layouts:
     - introduction_slides
     - tutorial_slides
-    - base_slides
+#    - base_slides
   skip_titles:
     - Example of an image with a caption
 

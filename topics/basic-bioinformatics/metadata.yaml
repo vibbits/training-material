@@ -1,11 +1,10 @@
 ---
 name: "basic-bioinformatics"
-type: "use"
+type: "basics"
+category: "basics"
 title: "Basic Bioinformatics Concepts, Databases and Tools"
 summary: "Bioinformatics Introduction"
 requirements:
 
-docker_image: 
-
 maintainers:
-  - slugger70 
+  - abotzki 

@@ -7,8 +7,8 @@ module Jekyll
       gtn = {
         "@type": "Organization",
         "email": "#{site['email']}",
-        "name": "Galaxy Training Network",
-        "url": "https://galaxyproject.org/teach/gtn/"
+        "name": "VIB Bioinformatics Core",
+        "url": "https://www.bits.vib.be"
       }
       if not topic then
         return '{}'
@@ -53,11 +53,11 @@ module Jekyll
         #"award":,
         #"author" described below
         #"character":,
-        "citation": {
-          "@type": "CreativeWork",
-          "name": "Community-Driven Data Analysis Training for Biology",
-          "url": "https://doi.org/10.1016/j.cels.2018.05.012"
-        },
+        #"citation": {
+        #  "@type": "CreativeWork",
+        #  "name": "Community-Driven Data Analysis Training for Biology",
+        #"  "url": "https://doi.org/10.1016/j.cels.2018.05.012"
+        #},
         #"comment":,
         #"commentCount":,
         #"contentLocation":,
@@ -71,7 +71,7 @@ module Jekyll
         #"dateCreated":,
         #"dateModified":,
         #"datePublished":,
-        "discussionUrl": "#{site["gitter_url"]}",
+        #"discussionUrl": "#{site["gitter_url"]}",
         #"editor":,
         #"educationalAlignment":,
         #"educationalUse":,
@@ -336,7 +336,7 @@ module Jekyll
         })
       end
       data['mentions'] = mentions
-
+      
       # Add contributors/authors
       if material.key?('contributors') then
         contributors = material['contributors'].map{ |x|

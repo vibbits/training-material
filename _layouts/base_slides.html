@@ -34,11 +34,11 @@
     {% endif %}
     {% assign og_desc = topic.summary %}
     <meta name="description" content="{{ og_desc | strip_html | truncate: 60}}" />
-    <meta property="og:title" content="Galaxy Training: {{ og_title | truncate: 60}}" />
+    <meta property="og:title" content="VIB Bioinformatics Training: {{ og_title | truncate: 60}}" />
     <meta property="og:description" content="{{ og_desc | strip_html | truncate: 60}}" />
-    <meta property="og:image" content="{{ "/assets/images/GTNLogo1000.png" | prepend: site.baseurl }}" />
+    <meta property="og:image" content="{{ "/assets/images/bioinformatics_core_rgb_neg.png" | prepend: site.baseurl }}" />
     <script type="application/ld+json">
-      {% include _includes/material.jsonld material=page topic=topic site=site %}
+       {% include _includes/material.jsonld material=page topic=topic site=site %}
     </script>
   </head>
   <body>
@@ -91,7 +91,7 @@ Before diving into this slide deck, we recommend you to have a look at:
 
 ## Thank you!
 
-This material is the result of a collaborative work. Thanks to the [Galaxy Training Network](https://wiki.galaxyproject.org/Teach/GTN) and all the contributors!
+This material is the result of a collaborative work. Thanks the colleagues of the VIB Bioinformatics Core and all the contributors!
 
 {% if tutorial.contributors %}
 <div class="contributors-line">
