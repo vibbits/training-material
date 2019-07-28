@@ -63,7 +63,7 @@ detached-serve: ## run a local server in detached mode (You can specify PORT=, H
 
 build: clean ## build files but do not run a server (You can specify FLAGS= to pass additional flags to Jekyll)
 	$(ACTIVATE_ENV) && \
-		${JEKYLL} build --trace --strict_front_matter -d _site/training-material ${FLAGS}
+		${JEKYLL} build -V --trace --strict_front_matter -d _site/training-material ${FLAGS}
 .PHONY: build
 
 check-frontmatter: build ## Validate the frontmatter

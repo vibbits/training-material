@@ -42,6 +42,12 @@
     </script>
   </head>
   <body>
+         <pre>
+              site: {{ site | jsonify | escape }}
+              page: {{ page | jsonify | escape }}
+              topic: {{ topic | jsonify | escape }}
+              material: {{ material | jsonify | escape }}
+        </pre>
     <textarea id="source">
 name: inverse
 layout: true
@@ -60,7 +66,7 @@ class: center, middle, inverse
 
 <div class="my-footer"><span>
 {% if page.logo == "GTN" %}
-<img src="{{ site.baseurl }}/{{ site.small_logo }}" alt="Galaxy Training Network" style="height: 40px;"/>
+<img src="{{ site.baseurl }}/{{ site.small_logo }}" alt="VIB Bioinformatics Core" style="height: 40px;"/>
 {% else %}
 <img src="{{ page.logo }}" alt="page logo" style="height: 40px;"/>
 {% endif %}

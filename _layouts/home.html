@@ -1,6 +1,7 @@
 ---
 layout: base
 ---
+<div class="container main-content">
 
 {% include _includes/default-header.html %}
 {% assign contributors = site.data['contributors'] %}
@@ -16,17 +17,52 @@ layout: base
     {% endif %}
 {% endfor %}
 
-<div class="container main-content">
-    <section>
-        <h1>Welcome to {{ site.title }}</h1>
-        <p class="lead">
-            Collection of courses developed and maintained by VIB Bioinformatics Core
-        </p>
-
         <div class="row">
-            <div class="col">
-                <h3>Omics</h3>
-                <table class="table table-striped">
+          <div class="col-md-9" role="main">
+	    <div class="bs-docs-section">
+              <div id="results"></div>
+              <h3 id="basics" class="page-header">Basic Bioinformatics</h3>
+              <table class="table table-striped">
+                    <thead> 
+                        <tr>
+                            <th>Topic</td>
+                            <th>Tutorials</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for topic in sorted_topics %}
+                        {% if topic[1].category == "basics" %}
+                        <tr>
+                            {% assign tutorial_number = site.pages | topic_filter:topic[1].name | topic_count %}
+                            <td><a href="{{ site.baseurl }}/topics/{{ topic[1].name }}/">{{ topic[1].title }}</a></td>
+                            <td>{{ tutorial_number }}</td>
+                        </tr>
+                        {% endif %}
+                    {% endfor %}
+                    </tbody>
+              </table>
+              <h3 id="software" class="page-header">Software</h3>
+              <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Topic</td>
+                            <th>Tutorials</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for topic in sorted_topics %}
+                        {% if topic[1].category == "software" %}
+                        <tr>
+                            {% assign tutorial_number = site.pages | topic_filter:topic[1].name | topic_count %}
+                            <td><a href="{{ site.baseurl }}/topics/{{ topic[1].name }}/">{{ topic[1].title }}</a></td>
+                            <td>{{ tutorial_number }}</td>
+                        </tr>
+                        {% endif %}
+                    {% endfor %}
+                    </tbody>
+              </table>
+              <h3 id="omics" class="page-header">Omics</h3>
+              <table class="table table-striped">
                     <thead>
                         <tr>
                             <th>Topic</td>
@@ -44,7 +80,111 @@ layout: base
                         {% endif %}
                     {% endfor %}
                     </tbody>
+              </table>
+              <h3 id="advanced" class="page-header">Advanced Bioinformatics</h3>
+              <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Topic</td>
+                            <th>Tutorials</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for topic in sorted_topics %}
+                        {% if topic[1].category == "advanced" %}
+                        <tr>
+                            {% assign tutorial_number = site.pages | topic_filter:topic[1].name | topic_count %}
+                            <td><a href="{{ site.baseurl }}/topics/{{ topic[1].name }}/">{{ topic[1].title }}</a></td>
+                            <td>{{ tutorial_number }}</td>
+                        </tr>
+                        {% endif %}
+                    {% endfor %}
+                    </tbody>
+              </table>
+              <h3 id="programming" class="page-header">Programming</h3>
+              <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Topic</td>
+                            <th>Tutorials</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for topic in sorted_topics %}
+                        {% if topic[1].category == "programming" %}
+                        <tr>
+                            {% assign tutorial_number = site.pages | topic_filter:topic[1].name | topic_count %}
+                            <td><a href="{{ site.baseurl }}/topics/{{ topic[1].name }}/">{{ topic[1].title }}</a></td>
+                            <td>{{ tutorial_number }}</td>
+                        </tr>
+                        {% endif %}
+                    {% endfor %}
+                    </tbody>
+              </table>
+              <h3 id="statistics" class="page-header">Statistics</h3>
+              <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Topic</td>
+                            <th>Tutorials</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for topic in sorted_topics %}
+                        {% if topic[1].category == "statistics" %}
+                        <tr>
+                            {% assign tutorial_number = site.pages | topic_filter:topic[1].name | topic_count %}
+                            <td><a href="{{ site.baseurl }}/topics/{{ topic[1].name }}/">{{ topic[1].title }}</a></td>
+                            <td>{{ tutorial_number }}</td>
+                        </tr>
+                        {% endif %}
+                    {% endfor %}
+                    </tbody>
+              </table> 
+            </div>
+          </div>
+          <div class="col-md-3" role="complementary">
+            <form id="cloudsh" class="search form-inline">
+               <div class="form-group">
+                  <input class="form-control" id="q" placeholder="search" type="text"></input>
+                  <button class="btn btn-primary">Search</button> </div>
+            </form>
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix">
+             <ul class="nav bs-docs-sidenav">
+              <li><a href="#basics">Basics Bioinformatics</a></li>
+              <li><a href="#software">Software</a></li>
+              <li><a href="#omics">Omics</a></li>
+              <li><a href="#advanced">Advanced Bioinformatics</a></li>
+              <li><a href="#programming">Programming</a></li>
+              <li><a href="#statistics">Statistics</a></li>
+             </ul>
+             <a class="back-to-top" href="#top">Back to top</a>
+            </nav>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h3>Basics Bioinformatics</h3>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Topic</td>
+                            <th>Tutorials</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for topic in sorted_topics %}
+                        {% if topic[1].category == "basics" %}
+                        <tr>
+                            {% assign tutorial_number = site.pages | topic_filter:topic[1].name | topic_count %}
+                            <td><a href="{{ site.baseurl }}/topics/{{ topic[1].name }}/">{{ topic[1].title }}</a></td>
+                            <td>{{ tutorial_number }}</td>
+                        </tr>
+                        {% endif %}
+                    {% endfor %}
+                    </tbody>
                 </table>
+       
                 <h3>Scientific Software</h3>
                 <table class="table table-striped">
                     <thead>
@@ -199,66 +339,37 @@ layout: base
 
             </div>
         </div>
-
-        <h2>Acknowledgment and Funding</h2>
-        <p>
+        <div class="row">
+            <div class="col">
+            <h2>Acknowledgment and Funding</h2>
+        
             We would like to thank all <a href="{{ site.baseurl }}/hall-of-fame">contributors</a> to our 
             training materials, and our funding sources:
-        </p>
+            <div class="row">
+		<div class="col-md-6"> 
 
-        <p>
-            <a href="https://www.vib.de/"><img src="http://www.vib.be/Style%20Library/VIB%20Styles/Images/Logo.png" alt="VIB" width="15%" style="max-width:100%;"></a>
-            <a href="https://www.elixir-belgium.org/"><img src="{{ site.baseurl }}/shared/images/elixir.png" alt="Elixir" width="10%" style="max-width:100%;"></a>
-        </p>
-
-        <div class="row">
-            <div class="col-md-6">
-                <h2>Contributors</h2>
-                <p>
-                    This collection would not be possible without the many
-                    community contributors!
-                </p>
-
-                <div class="container-fluid contributors">
-                    <div id="contributors-carousel" class="carousel slide" data-ride="carousel" data-interval="3000">
-                        <div class="carousel-inner" role="listbox">
-                            {% for contributor in contributors %}
-                                {% capture modulo %}{{ forloop.index0 | modulo:4 }}{% endcapture %}
-
-                                {% if modulo == '0' or forloop.first %}
-                                {% if forloop.first == false %}</div>{% endif %}
-                                <div class="carousel-item {% if forloop.first %}active{% endif %}">
-                                {% endif %}
-
-                                {% assign username = contributor[0] %}
-                                {% assign fullname = contributor[1].name %}
-                                <div class="hall-of-fame-hero">
-                                    <a class="thumbnail" href="{{ site.baseurl }}/hall-of-fame#{{ username }}">
-                                        <img class="img-fluid" src="https://avatars.githubusercontent.com/{{ username }}" alt="{{ username }}">
-                                    </a>
-                                    <p class="name">{{ username }}</p>
-                                </div>
-
-                                {% if forloop.last %}
-                                </div>
-                                {% endif %}
-                            {% endfor %}
-                        </div>
-                    </div>
-                </div>
-
-                <p>
-                    Check out the full <a href="{{ site.baseurl }}/hall-of-fame">list of contributors</a>.
-                </p>
-
-                <p>Do you want to help with these pages? Please see our <a href="{{ site.baseurl }}/topics/contributing/">dedicated tutorials</a> or our <a href="{{ site.baseurl }}/faq">Frequently Asked Questions</a> to get you started.</p>
-
+            <a href="https://www.vib.de/"><img src="http://www.vib.be/Style%20Library/VIB%20Styles/Images/Logo.png" alt="VIB" width="40%" style="max-width:100%;"></a>
+           </div>
+	   <div class="col-md-6"> 
+ 
+            <a href="https://www.elixir-belgium.org/"><img src="{{ site.baseurl }}/shared/images/elixir.png" alt="Elixir" width="40%" style="max-width:100%;"></a>
+        </div> 
+        </div>
+        </div>
+        <div class="col">
                 <h2>License</h2>
                 <p>This work is licensed under the <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
-
-            </div>
+              <p>
+            The <a href="https://www.bits.vib.be">VIB Bioinformatics Core</a>
+            provides researchers with online training materials and connects th
+em with local trainers in Belgium in the framework of <a href="https://www.elix
+ir-belgium.org">ELIXIR Belgium</a>. We are very grateful to be able to use the 
+excellent work of the <a href="https://galaxyproject.org/teach/gtn/">Galaxy tra
+ining network</a> as basis of this web site.
+             </p>
         </div>
-    </section>
-</div>
+       </div>
 
 {% include _includes/default-footer.html %}
+</div>
+

@@ -1,6 +1,7 @@
 ---
 layout: base
 ---
+<div class="container main-content">
 
 {% include _includes/default-header.html %}
 
@@ -9,9 +10,9 @@ layout: base
 {% assign instances = site.data['instances'] %}
 {% assign topic_material = site.pages | topic_filter:page.topic_name %}
 {% assign language = site.other_languages | split: ", " %}
-
-<div class="container main-content">
-    <section>
+       
+    <div class="row">
+      <div class="col-md-12">
         <h1>{{ topic.title }}</h1>
         <p>{{ topic.summary }}</p>
 
@@ -161,7 +162,8 @@ layout: base
         {% endfor %}
         </ul>
         {% endif %}
-    </section>
-</div>
+   </div>
+   </div>
 
 {% include _includes/default-footer.html %}
+</div>
