@@ -37,7 +37,7 @@ footer {
   font-size: 18px; }
 
 .navbar {
-  background-color: #2c3143 !important; }
+  background-color: #1b2944 !important; }
   .navbar .navbar-collapse {
     justify-content: flex-end;
     align-items: flex-end;
@@ -87,7 +87,7 @@ footer {
     font-size: 18px;
     margin-left: -1rem;
     margin-right: -1rem;
-    margin-top: -3.30rem;
+    margin-top: -3.90rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-left: 1rem;
@@ -109,7 +109,7 @@ footer {
     font-size: 18px;
     margin-left: -1rem;
     margin-right: -1rem;
-    margin-top: -3.30rem;
+    margin-top: -3.90rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-left: 1rem;
@@ -131,7 +131,7 @@ footer {
     font-size: 18px;
     margin-left: -1rem;
     margin-right: -1rem;
-    margin-top: -3.30rem;
+    margin-top: -3.90rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-left: 1rem;
@@ -153,7 +153,7 @@ footer {
     font-size: 18px;
     margin-left: -1rem;
     margin-right: -1rem;
-    margin-top: -3.30rem;
+    margin-top: -3.90rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-left: 1rem;
@@ -175,7 +175,7 @@ footer {
     font-size: 18px;
     margin-left: -1rem;
     margin-right: -1rem;
-    margin-top: -3.30rem;
+    margin-top: -3.90rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-left: 1rem;
@@ -197,7 +197,7 @@ footer {
     font-size: 18px;
     margin-left: -1rem;
     margin-right: -1rem;
-    margin-top: -3.30rem;
+    margin-top: -3.90rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-left: 1rem;
@@ -219,7 +219,7 @@ footer {
     font-size: 18px;
     margin-left: -1rem;
     margin-right: -1rem;
-    margin-top: -3.30rem;
+    margin-top: -3.90rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-left: 1rem;
@@ -241,7 +241,7 @@ footer {
     font-size: 18px;
     margin-left: -1rem;
     margin-right: -1rem;
-    margin-top: -3.30rem;
+    margin-top: -3.90rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-left: 1rem;
@@ -263,7 +263,7 @@ footer {
     font-size: 18px;
     margin-left: -1rem;
     margin-right: -1rem;
-    margin-top: -3.30rem;
+    margin-top: -3.90rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-left: 1rem;
@@ -285,7 +285,7 @@ footer {
     font-size: 18px;
     margin-left: -1rem;
     margin-right: -1rem;
-    margin-top: -3.30rem;
+    margin-top: -3.90rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-left: 1rem;
@@ -326,7 +326,7 @@ footer {
     font-size: 18px;
     margin-left: -1rem;
     margin-right: -1rem;
-    margin-top: -3.30rem;
+    margin-top: -3.90rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-left: 1rem;
@@ -392,7 +392,7 @@ footer {
     -o-transition: border 0.2s ease-in-out;
     transition: border 0.2s ease-in-out; }
   .hall-of-fame-hero a.thumbnail:hover img, .hall-of-fame-hero a.thumbnail:focus img, .hall-of-fame-hero a.thumbnail:active img {
-    border-color: #2c3143; }
+    border-color: #1b2944; }
 
 @media (max-width: 575px) {
   .navbar > .container {
