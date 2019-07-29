@@ -1,23 +1,32 @@
-@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
-@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
 @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
 
+@font-face
+{
+    font-family: Dense;
+    src: url(../fonts/Dense-Regular.ttf);
+}
+@font-face
+{
+    font-family: Open Sans;
+    src: url(../fonts/OpenSans.woff);
+}
+
 body {
-  font-family: 'Droid Serif';
+  font-family: 'Open Sans';
 }
 
 h1,
 h2,
 h3 {
-  font-family: 'Yanone Kaffeesatz';
+  font-family: 'Dense';
   font-weight: normal;
-  text-align: center;
+  text-align: left;
 }
 
 h3 {
   position: absolute;
   top: 30px;
-  left: 0px;
+  left: 20px;
   width: 100%;
 }
 
@@ -90,7 +99,7 @@ img {
 }
 
 .image-90 img {
-  width: 100%;
+  width: 90%;
 }
 
 .image-100 img {
