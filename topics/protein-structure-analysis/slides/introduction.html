@@ -21,14 +21,20 @@ contributors:
 ---
 ### Sequences and Structures ###
 
+add one slide over transcription / translation / 
 
+---
+
+### Amino acids and peptide structure
+
+![](/training-material/topics/protein-structure-analysis/images/amino-acids.png)
 
 ---
 
 ### The Structure-Function Connection ###
 
-.left[![Left-aligned image](/training-material/topics/protein-structure-analysis/images/hemoglobin.png)]
-.right[Folded proteins provide a well-  defined 3D  arrangement of functional groups, creating microenvironments and active sites.
+.pull-left[![Left-aligned image](/training-material/topics/protein-structure-analysis/images/hemoglobin.png)]
+.pull-right[Folded proteins provide a well-  defined 3D  arrangement of functional groups, creating microenvironments and active sites.
 Structural changes  are often involved in functional  mechanisms  (motor proteins, ...)
 ]
 
@@ -77,7 +83,7 @@ intensities of all the diffracted rays of the  crystal can be derived.
 ### X-Ray Crystallography ###
 
 .pull-left[
-![](/training-material/topics/protein-structure-analysis/images/diffration-pattern.png)
+![](/training-material/topics/protein-structure-analysis/images/diffraction-pattern.png)
 ]
 .pull-right[ ![](/training-material/topics/protein-structure-analysis/images/electron-density.png)]
 
@@ -85,15 +91,14 @@ intensities of all the diffracted rays of the  crystal can be derived.
 
 ### The Protein Databank ###
 
-.pull-left[ ![](/training-material/topics/protein-structure-analysis/images/wwpdb-welcome-page) ] 
+.pull-left[ ![](/training-material/topics/protein-structure-analysis/images/wwpdb-welcome-page.png) ] 
 
 
-.pull-right[
-[http://www.wwpdb.org](http://www.wwpdb.org)
+.pull-right[ [http://www.wwpdb.org](http://www.wwpdb.org)
 - contains structures of  proteins, nucleic acids  and complexes,  determined by X-ray  crystallography, NMR  spectroscopy
 - No purely theoretical  or ab initio models  (since 2006)
 - Also stores supporting  experimental data
-- Full deposition now  required by all peer-reviewed journals
+- Full deposition now  required by all peer-reviewed journals]
 
 ---
 
@@ -101,7 +106,7 @@ intensities of all the diffracted rays of the  crystal can be derived.
 
 - Use the UniProt site to search for “dnak”.  
 - Use the PDB site to search for “dnak”.
-- Compare the UniProt and PDB result lists.
+ - Compare the UniProt and PDB result lists.
 - Use the sequence search function to see if there are structures with sequences similar to that of the  DnaK C-terminal domain.
 - Look at the summary pages of a number of  structures and note some interesting properties.
 - Select a number of structures and create a report  page.
@@ -111,6 +116,8 @@ intensities of all the diffracted rays of the  crystal can be derived.
 ### PDB File Format ###
 
 ![](/training-material/topics/protein-structure-analysis/images/pdb-file-format.png)
+
+![](/training-material/topics/protein-structure-analysis/images/occupancy.png)
 
 ---
 
@@ -138,7 +145,7 @@ intensities of all the diffracted rays of the  crystal can be derived.
 
 Many atomic nuclei, including the ubiquitous hydrogen nuclei,  resonate at specific radio frequencies when placed in a  strong, uniform magnetic field. The chemical environment of each individual atom slightly modulates its exact resonance  frequency.
 
-![]()
+![](/training-material/topics/protein-structure-analysis/images/nmr-peaks-to-structure.png)
 
 In macromolecules with thousands of atoms, many different  effects combine to generate an extremely complicated pattern of chemical shifts, which therefore more or less uniquely  identify each atom. Multidimensional spectra allow these  frequencies to be assigned to specific atoms.
 
@@ -148,7 +155,7 @@ In macromolecules with thousands of atoms, many different  effects combine to ge
 
 When two atoms are near each other in 3D space, they can exchange magnetization, giving rise to crosspeaks at the  intersection of their respective frequencies.
 
-![]()
+![](/training-material/topics/protein-structure-analysis/images/nmr-noe.jpg)
 
 This nuclear Overhauser effect (NOE) is used to effectively measure the distances between pairs of atoms, at least  qualitatively.
 
@@ -158,7 +165,7 @@ This nuclear Overhauser effect (NOE) is used to effectively measure the distance
 
 After identification of the atoms by means of their unique chemical shifts, distance restraints are derived from the  Overhauser crosspeaks. An extended model of the protein  is  generated,  and  then  condensed  into  a  shape  that  is consistent with as many of distance restraints as possible.
 
-![]()
+![](/training-material/topics/protein-structure-analysis/images/nmr-model-example.png)
 
 ---
 
@@ -168,7 +175,7 @@ Electron microscopy (and especially Cryo-electron microscopy): Electron crystall
 
 Small-angle X-ray and neutron scattering (SAXS and SANS)
 
-![]()
+![](/training-material/topics/protein-structure-analysis/images/saxs.png)
 
 ---
 
@@ -196,17 +203,17 @@ Small-angle X-ray and neutron scattering (SAXS and SANS)
 
 General geometric properties (bond lengths and angles,  Ramachandran distribution, …): MolProbity  [Link](http://molprobity.biochem.duke.edu/)
 
-Crystal Structures
+#### Crystal Structures####
 - Diffraction data resolution and completeness (PDB)
 - Final Rcryst and Rfree factors (PDB)
 - Local correspondence to electron density (EDS)
 
-NMR Structures
+####NMR Structures####
 - Number of distance restraints and additional experimental  data sources (BMRB)
 - Local restraint density (on-line NMR constraint analyser)
 [link](http://molsim.sci.univr.it/bioinfo/tools/constraint/index.html)
 
-Other techniques
+####Other techniques####
 - Difficult to generalise: carefully read and consider the  published protocol
 
 ---
@@ -244,6 +251,32 @@ Explore the Edit and View menus to change  various aspects of the graphical repr
 Examine the hydrogen bonding patterns.  Display a molecular surface.
 
 Create an interesting view of the molecule and  save it as a high-resolution image.
+
+---
+
+### Protein folds are the structures of domains ###
+
+Similarities in assembly of secondary structure elements
+
+So not based on sequence like motifs but on 3D structure
+
+Folds represent the shapes of protein domains !
+
+Examples: TODO (add images e.g. alpha solenoid, DNA clamp, thioredoxin fold)
+
+---
+
+### Databases of protein folds ###
+
+- SCOP (http://scop.mrc-lmb.cam.ac.uk/scop/)
+- CATH (http://www.cathdb.info/)
+
+
+---
+
+### check on slides from course Wim Vranken ###
+
+see also (http://www.ii.uib.no/~slars/bioinfocourse/PDFs/structpred_tutorial.pdf)
 
 ---
 
@@ -359,12 +392,55 @@ This exports the object as a temporary PDB file,  starts FoldX with the appropri
 - When a structure is available for a protein with a  similar sequences, it is possible to predict the  structure of a new sequence with varying degrees of  confidence.
 - All homology modelling procedures start from an  alignment of the template and target sequences.  The quality of this alignment will have a major  impact on the resulting model.
 - Available applications include stand-alone programs  (Modeller, FoldX, …) and web-based services (such as SwissModel).
+- use PSI-BLAST/DELTA-BLAST to detect sequences with similar structures
+ 
 
 ---
 
 ### Exercise 5: Make a Homology  Model using Swiss Model ###
 
 see []()
+
+---
+
+### Predict protein structures by fold recognition ###
+
+1. Search SCOP/CATH for protein with same fold and known 3D structure
+2. Align each amino acid of query sequence to a position in the template structure
+3. Evaluate how well the sequence fits the fold and select best-fit fold
+4. Build structural model of query based on alignment with selected fold
+
+Phyre (http://www.sbg.bio.ic.ac.uk/phyre2/html/page.cgi?id=index)
+HHpred (http://toolkit.lmb.uni-muenchen.de/hhpred)
+DescFold (http://202.112.170.199/DescFold/)
+
+Works because:
+- Number of different folds in nature is fairly small (approximately 1300)
+- 90% of new submissions in PDB have similar folds to those already in PDB
+- Not always accurate
+
+---
+
+### Guidelines to improve fold recognition results ###
+
+- Run as many methods as you can
+- Run each method on many sequences from your homologous protein family
+- After all of these runs, build up a consensus picture of the likely fold
+- Compare function of your protein to function of the proteins with the likely fold
+- Compare secondary structure of your protein to that of the likely fold
+
+
+---
+
+### Similarity searches based on 3D structure ###
+
+Similarity on structural level: aligning 3D structures
+Structure of query protein is known and aligned to PDB structures
+VAST+ (https://www.ncbi.nlm.nih.gov/Structure/vastplus/vastplus.cgi)
+DALI (http://ekhidna.biocenter.helsinki.fi/dali_server/)
+Compare proteins with low sequence similarity:
+similar structure implies homology -> same function
+Can help to find active sites
 
 ---
 
