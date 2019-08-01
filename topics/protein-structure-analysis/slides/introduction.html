@@ -7,6 +7,7 @@ type: introduction
 contributors:
 - abotzki
 - jvdurme
+- janick-bits
 ---
 
 ### Protein Structure Analysis ###
@@ -55,11 +56,13 @@ experimentally determined structures
 
 - Mainly determined by X-ray crystallography and high-resolution NMR spectroscopy
 - Automation is increasing, but there are still significant limitations in the rate of solving new structures
+]
 
 
 ]
 .pull-right[ .image-50[![](/training-material/topics/protein-structure-analysis/images/uniprot-logo.png)]
              .image-50[![](/training-material/topics/protein-structure-analysis/images/pdb-logo.png)]
+]
 
 ---
 
@@ -76,7 +79,8 @@ detector. By rotating the crystal, a series  of images is obtained. From these, 
 intensities of all the diffracted rays of the  crystal can be derived.]
 
 ]
-.pull-right[ [.image-90[![](/training-material/topics/protein-structure-analysis/images/diffraction-pattern.png)]
+.pull-right[ .image-90[![](/training-material/topics/protein-structure-analysis/images/diffraction-pattern.png)]
+]
 
 
 ---
@@ -84,9 +88,9 @@ intensities of all the diffracted rays of the  crystal can be derived.]
 ### X-Ray Crystallography ###
 
 .pull-left[
-![](/training-material/topics/protein-structure-analysis/images/diffraction-pattern.png)
+.image-50[![](/training-material/topics/protein-structure-analysis/images/diffraction-pattern.png)]
 ]
-.pull-right[ ![](/training-material/topics/protein-structure-analysis/images/electron-density.png)]
+.pull-right[.image-50[![](/training-material/topics/protein-structure-analysis/images/electron-density.png)]]
 
 |              |          |               |
 |:-------------|:--------:|--------------:|
@@ -97,7 +101,7 @@ intensities of all the diffracted rays of the  crystal can be derived.]
 
 ### The Protein Databank ###
 
-.pull-left[ .image-75[![](/training-material/topics/protein-structure-analysis/images/wwpdb-welcome-page.png)] 
+.pull-left[ .image-80[![](/training-material/topics/protein-structure-analysis/images/wwpdb-welcome-page.png)] 
 
 
 .pull-right[ 
@@ -106,6 +110,7 @@ intensities of all the diffracted rays of the  crystal can be derived.]
 - No purely theoretical  or ab initio models  (since 2006)
 - Also stores supporting  experimental data
 - Full deposition now  required by all peer-reviewed journals
+]
 ]
 
 ---
@@ -158,7 +163,7 @@ intensities of all the diffracted rays of the  crystal can be derived.]
 
 .left[Many atomic nuclei, including the ubiquitous hydrogen nuclei,  resonate at specific radio frequencies when placed in a  strong, uniform magnetic field. The chemical environment of each individual atom slightly modulates its exact resonance  frequency.]
 
-.image-90[![](/training-material/topics/protein-structure-analysis/images/nmr-peaks-to-structure.png)]
+.image-80[![](/training-material/topics/protein-structure-analysis/images/nmr-peaks-to-structure.png)]
 
 .left[In macromolecules with thousands of atoms, many different  effects combine to generate an extremely complicated pattern of chemical shifts, 
 which therefore more or less uniquely  identify each atom. Multidimensional spectra allow these  frequencies to be assigned to specific atoms.]
@@ -168,7 +173,7 @@ which therefore more or less uniquely  identify each atom. Multidimensional spec
 
 .left[When two atoms are near each other in 3D space, they can exchange magnetization, giving rise to crosspeaks at the  intersection of their respective frequencies.]
 
-.image-80[![](/training-material/topics/protein-structure-analysis/images/nmr-noe.jpg)]
+.image-50[![](/training-material/topics/protein-structure-analysis/images/nmr-noe.jpg)]
 
 .left[This nuclear Overhauser effect (NOE) is used to effectively measure the distances between pairs of atoms, at least  qualitatively.]
 
@@ -179,7 +184,7 @@ which therefore more or less uniquely  identify each atom. Multidimensional spec
 .left[After identification of the atoms by means of their unique chemical shifts, distance restraints are derived from the  Overhauser crosspeaks. An extended model of the protein  is  generated,  
 and  then  condensed  into  a  shape  that  is consistent with as many of distance restraints as possible.]
 
-.image-80[![](/training-material/topics/protein-structure-analysis/images/nmr-model-example.png)]
+.image-50[![](/training-material/topics/protein-structure-analysis/images/nmr-model-example.png)]
 
 ---
 
@@ -190,7 +195,7 @@ and  then  condensed  into  a  shape  that  is consistent with as many of distan
 -Small-angle X-ray and neutron scattering (SAXS and SANS)
 
 
-.image-90[![](/training-material/topics/protein-structure-analysis/images/saxs.png)]
+.image-80[![](/training-material/topics/protein-structure-analysis/images/saxs.png)]
 
 ---
 
@@ -220,7 +225,7 @@ General geometric properties (bond lengths and angles, Ramachandran distribution
 
 .left[ **Crystal Structures** ]
 - Diffraction data resolution and completeness (PDB)
-- Final $$R_{cryst}$$ and $$R_{free}$$ factors (PDB)
+- Final $$ R_{cryst} $$ and $$ R_{free} $$ factors (PDB)
 - Local correspondence to electron density (EDS)
 
 .left[**NMR Structures**]
@@ -321,7 +326,7 @@ Use the `Analyze|Align|Objects` with MUSTANG  function to align the four last ob
 Use the space bar to open the text console and  see the reported root mean square deviations as well as the number of residues matched.
 ]
 
-$$ rmsd = \sqrt{\frac{1}{N}\sum_{i=1}^{N}R_{i}^{2}}$$ 
+$$ rmsd = \sqrt{\frac{1}{N}\sum_{i=1}^{N}R_{i}^{2}} $$ 
 
 .left[
 Color all structures by B factor and compare the  distribution to the local variability of the structures.
