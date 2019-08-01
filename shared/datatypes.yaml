@@ -1,5 +1,5 @@
 ---
-# This file makes the correspondance between extensions on Zenodo (first element) and Galaxy datatypes (second element)
+# extensions on Zenodo (first element) and Galaxy datatypes (second element)
 # Keep the alphabetical order
 bam: bam
 bai: bai
