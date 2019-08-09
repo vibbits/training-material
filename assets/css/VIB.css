@@ -162,7 +162,7 @@ legend
 
 .slogan {
     font-family: Dense;
-    font-size: 30pt;
+    font-size: 20pt;
     font-weight: bold;
 }
 
@@ -199,6 +199,8 @@ body
     font-family: Dense;
     font-size: 2em;
     color: #ff681e !important;
+    padding:1px 6px;
+    background-color: #1b2944;
 }
 
 .btn-default
@@ -512,7 +514,7 @@ p img
 {
     .container
     {
-        width: 1570px;
+        width: 1270px;
     }
 }
 
