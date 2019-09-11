@@ -1,3 +1,15 @@
+---
+layout: tutorial_hands_on
+
+title: "Gene expression analysis"
+questions:
+  - "How do you perform a qPCR analysis using the qbase+ software?"
+objectives:
+  - "Use the qbase+ software to analyze the qPCR experiment results."
+time_estimation: "5m"
+contributors:
+  - chdeb 
+---
 #### Create a project
 
 When you use qbase+ for the first time, you can't do anything unless you

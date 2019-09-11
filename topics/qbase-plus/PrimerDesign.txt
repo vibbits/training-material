@@ -1,3 +1,17 @@
+---
+layout: tutorial_hands_on
+
+title: "Primer design exercises"
+questions:
+  - "How do you perform a qPCR analysis using the qbase+ software?"
+objectives:
+  - "Design qPCR experiments"
+  - "Design qPCR primers"
+  - "Use the qbase+ software to analyze the qPCR experiment results."
+time_estimation: "5m"
+contributors:
+  - chdeb 
+---
 The following exercise will make you familiar with the Primer3Plus software for designing primers for PCR. Primer3Plus is the user-friendly version of Primer3, the standard software for primer design.
 
 ### Criteria for qPCR primers

@@ -1,3 +1,15 @@
+---
+layout: tutorial_hands_on
+
+title: "Selecting reference genes: exercises"
+questions:
+  - "How do you perform a qPCR analysis using the qbase+ software?"
+objectives:
+  - "Use the qbase+ software to analyze the qPCR experiment results."
+time_estimation: "5m"
+contributors:
+  - chdeb 
+---
 Since normalization of qPCR data is based on the assumption that the reference targets have the same expression level in all samples it is crucial that the expression of the chosen reference genes is stable.
 However, none of the so-called **housekeeping** genes is universally stably expressed.
 

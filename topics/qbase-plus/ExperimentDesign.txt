@@ -1,3 +1,16 @@
+---
+layout: tutorial_hands_on
+
+title: "Experiment design exercises"
+questions:
+  - "How do you perform a qPCR analysis using the qbase+ software?"
+objectives:
+  - "Design qPCR experiments"
+  - "Use the qbase+ software to analyze the qPCR experiment results."
+time_estimation: "5m"
+contributors:
+  - chdeb 
+---
 ### Exercise 1: simple gene expression study
 
 In my qPCR experiment I want to study the expression of 12 genes of interest in 8 samples of interest. I want to use 2 PCR replicates for each reaction.
