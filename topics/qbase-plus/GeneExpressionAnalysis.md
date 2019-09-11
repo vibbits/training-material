@@ -411,21 +411,20 @@ There are two technical replicates per reaction
 
 | Create a new Experiment called GeneExpression2 in Project1
 | :---------------------------- |
-| You can find the details on how to create a new experiment in [](Creating_a_project_and_an_experiment" title="wikilink)Creating a project and an experiment
+| You can find the details on how to create a new experiment in Creating a project and an experiment
 
 #### Loading the data
 
 | Import [Run7](http://data.bits.vib.be/pub/trainingen/qbasePLUS/DataTraining/Run7.xls). This file is in qBase format.                    |
 | :-------------------------------------------------------------------------------------------------------------------------------------- |
-| You can find the details on how to import the data file in the **Loading the data into qbase+** section of [Analyzing data from a geNorm pilot experiment in qbase+](Analyzing_data_from_a_geNorm_pilot_experiment_in_qbase+ "wikilink") |
+| You can find the details on how to import the data file in the **Loading the data into qbase+** section of Analyzing data from a geNorm pilot experiment in qbase+ |
 
 #### Adding sample annotation
 
-Download the [the sample properties
-file](http://data.bits.vib.be/pub/trainingen/qbasePLUS/DataTraining/Sample_Properties_GE2.xlsx).
+Download the [the sample properties file](http://data.bits.vib.be/pub/trainingen/qbasePLUS/DataTraining/Sample_Properties_GE2.xlsx).
 | Add a custom sample property called Treatment.
 | :---------------------------- |
-| You can find the details on how to add a custom sample property in the **Adding annotation to the data** section of [](Loading_data_into_qbase+" title="wikilink)Loading data into qbase+
+| You can find the details on how to add a custom sample property in the **Adding annotation to the data** section of Loading data into qbase+
 
 #### Analyzing the data
 
@@ -435,10 +434,8 @@ file](http://data.bits.vib.be/pub/trainingen/qbasePLUS/DataTraining/Sample_Prope
 
 | Check controls and replicates.
 | :---------------------------- |
-| First set the minimum requirements for controls and replicates 
-You see that 6 replicates do not meet these requirements . Select to **Show details and manually exclude bad replicates**
-All negative controls pass the test . Positive controls were not included in this analysis.
-Qbase+ will now open the results for the failing replicates: as you can see the difference in Cq values between these replicates is not that big. They fail to meet the requirement just slightly.
+| First set the minimum requirements for controls and replicates  You see that 6 replicates do not meet these requirements . Select to **Show details and manually exclude bad replicates**
+All negative controls pass the test . Positive controls were not included in this analysis. Qbase+ will now open the results for the failing replicates: as you can see the difference in Cq values between these replicates is not that big. They fail to meet the requirement just slightly.
 
 | Which amplification efficiencies strategy are you going to use ?
 | :---------------------------- |
@@ -446,7 +443,7 @@ Qbase+ will now open the results for the failing replicates: as you can see the 
 
 | Appoint the reference genes as reference targets.
 | :---------------------------- |
-| You can find the details on how to appoint reference targets in the **Normalization** section of [](Analyzing_gene_expression_data_in_qbase+" title="wikilink)Analyzing gene expression data in qbase+
+| You can find the details on how to appoint reference targets in the **Normalization** section of Analyzing gene expression data in qbase+
 
 | Is the stability of the reference genes ok ?
 | :---------------------------- |
@@ -454,13 +451,13 @@ Qbase+ will now open the results for the failing replicates: as you can see the 
 
 | Which scaling strategy are you going to use ?
 | :---------------------------- |
-| Since you have a treated and a **control** group, it seems logical to use the average of the control group for scaling. You can find the details on how to specify the scaling strategy in the **Scaling** section of [](Analyzing_gene_expression_data_in_qbase+" title="wikilink)Analyzing gene expression data in qbase+
+| Since you have a treated and a **control** group, it seems logical to use the average of the control group for scaling. You can find the details on how to specify the scaling strategy in the **Scaling** section of Analyzing gene expression data in qbase+
 
 Look at the target bar charts.
 
 | In the target bar charts group the samples according to treatment.
 | :---------------------------- |
-| You can find the details on how to group the samples in the **Visualization of the results** section of [](Analyzing_gene_expression_data_in_qbase+" title="wikilink)Analyzing gene expression data in qbase+
+| You can find the details on how to group the samples in the **Visualization of the results** section of Analyzing gene expression data in qbase+
 
 The samples of each group are biological replicates so you might want to generate a plot that compares the average expression of the treated samples with the average expression of the untreated samples.
 
@@ -483,4 +480,4 @@ So for gene 1 the means are very close but just based on the plot we may not mak
 | :---------------------------- |
 | You only have 5 replicates per group so you cannot test if the data comes from a normal distribution. Qbase+ will assume they're not normally distributed and perform a non-parametric Mann-Whitney test.
 
-The p-value of gene2 is smaller than 0.05 so it has a statistically significant difference in expression levels in treated samples compared to untreated samples. For gene1 the p-value is 1 so we have no evidence to conclude that the expression of gene1 is different in treated compared to untreated samples. You can find the details on how to compare the means of the two groups in the **Statistical analysis** section of [](Analyzing_gene_expression_data_in_qbase+" title="wikilink)Analyzing gene expression data in qbase+
+The p-value of gene2 is smaller than 0.05 so it has a statistically significant difference in expression levels in treated samples compared to untreated samples. For gene1 the p-value is 1 so we have no evidence to conclude that the expression of gene1 is different in treated compared to untreated samples. You can find the details on how to compare the means of the two groups in the **Statistical analysis** section of Analyzing gene expression data in qbase+
