@@ -253,7 +253,7 @@ These are artificial data. But when you read [the paper by Hruz et al., 2011](ht
 | You can find the details on how to create a new experiment in Creating a project and an experiment |
 
 #### Loading the data into qbase+
-| Import (http://data.bits.vib.be/pub/trainingen/qbasePLUS/DataTraining/Run6.xls) Run6. This file is in qBase format. |
+| Import [Run6](http://data.bits.vib.be/pub/trainingen/qbasePLUS/DataTraining/Run6.xls) . This file is in qBase format. |
 | :------------------------------------------- |
 | You can find the details on how to start the data import in Loading data into qbase+. Unlike the previous exercise, qbase+ does not allow you to do a quick import this time. In the Import Run window Manual import is selected:
 

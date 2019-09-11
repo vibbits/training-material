@@ -54,8 +54,8 @@ In my qPCR experiment I want to study the pattern of expression of 5 genes (gene
 
 | What is the minimum number of 96 well plates I need for this experiment ? |
 | :------------------------------ |
-| <p>5 genes * 38 samples * 2 replicates = 380 reactions.<br />
-I need a minimum of 4 plates for this experiment.</p>
+| 5 genes * 38 samples * 2 replicates = 380 reactions.
+I need a minimum of 4 plates for this experiment.
 
 | If I use the minimum number of 96 well plates do I need to include IRCs ?                                                      |
 | :----------------------------------------------------------------------------------------------------------------------------- |
@@ -69,8 +69,8 @@ Suppose there's only one 96-well plate left in your lab. You have 10 samples (sa
 
 | How many genes of interest would you measure ? |
 | :------------------------------ |
-| <p>Since you want to make most of what you have, let's assume you are omitting PCR replicates.<br />
-Theoretically, you could fit 9 genes on your 96-well plate. However, to avoid pipetting mistakes I would measure only 8 genes so I can work with one row / gene. This is very handy for multichannel pipets.</p>
+| Since you want to make most of what you have, let's assume you are omitting PCR replicates.
+Theoretically, you could fit 9 genes on your 96-well plate. However, to avoid pipetting mistakes I would measure only 8 genes so I can work with one row / gene. This is very handy for multichannel pipets.
 
 ### Exercise 4: a growing study
 
@@ -78,15 +78,15 @@ In my qPCR experiment I want to study the pattern of expression of 24 genes (gen
 
 | How many genes can I analyze on one 384 well plate ? |
 | :------------------------------ |
-| <p>48 samples * 2 replicates = 96 reactions per gene.<br />
-I can analyze 4 genes on each 384 well plate.</p>
+| 48 samples * 2 replicates = 96 reactions per gene.
+I can analyze 4 genes on each 384 well plate.
 
 Each week I receive 2 additional samples to analyze.
 
 | Do I analyze them immediately after I get them ? |
 | :------------------------------ |
-| <p>No. Since the samples are placed on different plates as in the previous experiment, you have to use IRCs. You typically need 3 IRCs and a no template control sample. It means that if you want to analyze these 2 samples you have to include 4 additional samples for each gene. This is a lot of overhead for just 2 samples !<br />
-Try to avoid this: it's better to wait a few weeks until you have 6 or 8 or even more samples.</p>
+| No. Since the samples are placed on different plates as in the previous experiment, you have to use IRCs. You typically need 3 IRCs and a no template control sample. It means that if you want to analyze these 2 samples you have to include 4 additional samples for each gene. This is a lot of overhead for just 2 samples !
+Try to avoid this: it's better to wait a few weeks until you have 6 or 8 or even more samples.
 
 ### Exercise 5: a diagnostic copy number screen
 
@@ -99,8 +99,8 @@ In diagnostic screens all samples are important: you cannot leave out samples an
 
 | How many samples can I fit on a 384 well plate ? |
 | :------------------------------ |
-| <p>We have 16 (genes) * 4 (replicates) = 64 reactions per sample.<br />
-This means that we can fit 6 samples on a 384 well plate: 4 unknowns and 2 calibrators.</p>
+| We have 16 (genes) * 4 (replicates) = 64 reactions per sample.
+This means that we can fit 6 samples on a 384 well plate: 4 unknowns and 2 calibrators.
 
 ### Exercise 6: fix experiments with bad or missing data
 

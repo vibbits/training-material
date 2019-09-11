@@ -27,8 +27,6 @@ To open actual data (one/more runs) in qbase+, creating a project is not suffici
 | :----------------------------------- |
 | Select the Create a new qbase+ experiment option  in the Start page. Type a name for th new experiment . Click the Next button at the bottom of the page . This will create the experiment.
 
-
-
 When you leave the **Start page**, the **Import run** page is automatically opened allowing you to import the actual qPCR data into qbase+.
 
 #### Loading the data
