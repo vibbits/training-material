@@ -1,7 +1,7 @@
 ---
 layout: tutorial_hands_on
 
-title: "Experiment design exercises"
+title: "02 Experiment design exercises"
 questions:
   - "How do you perform a qPCR analysis using the qbase+ software?"
 objectives:

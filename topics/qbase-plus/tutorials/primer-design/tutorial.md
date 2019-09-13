@@ -1,7 +1,7 @@
 ---
 layout: tutorial_hands_on
 
-title: "Primer design exercises"
+title: "03 Primer design exercises"
 questions:
   - "How do you perform a qPCR analysis using the qbase+ software?"
 objectives:

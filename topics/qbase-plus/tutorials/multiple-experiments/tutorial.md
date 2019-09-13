@@ -1,3 +1,15 @@
+---
+layout: tutorial_hands_on
+
+title: "05 Analyzing data from different qPCR experiments over time"
+questions:
+  - "How do you perform a qPCR analysis using the qbase+ software?"
+objectives:
+  - "Use the qbase+ software to analyze the qPCR experiment results."
+time_estimation: "5m"
+contributors:
+  - chdeb 
+---
 You need to do inter-run calibration if you want to compare samples from different runs e.g.:
 
   - when it is not possible to get all samples for the same gene on the same plate

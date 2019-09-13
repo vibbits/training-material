@@ -1,7 +1,7 @@
 ---
 layout: tutorial_hands_on
 
-title: "Selecting reference genes: exercises"
+title: "05 Selecting reference genes: exercises"
 questions:
   - "How do you perform a qPCR analysis using the qbase+ software?"
 objectives:

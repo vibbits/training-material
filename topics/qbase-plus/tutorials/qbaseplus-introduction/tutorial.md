@@ -1,7 +1,7 @@
 ---
 layout: tutorial_hands_on
 
-title: "qPCR analysis using qbase+"
+title: "01 qbase+ introduction"
 questions:
   - "How do you perform a qPCR analysis using the qbase+ software?"
 objectives:

@@ -1,7 +1,7 @@
 ---
 layout: tutorial_hands_on
 
-title: "Gene expression analysis"
+title: "04 Gene expression analysis"
 questions:
   - "How do you perform a qPCR analysis using the qbase+ software?"
 objectives:
