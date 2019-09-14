@@ -1,0 +1,1130 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="google-site-verification" content="dw_1zBYRNxF7-vYNDXh3Ght_JuqgJt3BD1N_Pynqmv0" />
+        <title>04 Gene expression analysis</title>
+        
+        <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
+        <link rel="stylesheet" href="/training-material/assets/css/bootstrap-toc.min.css">
+        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=2">
+        <link rel="stylesheet" href="/training-material/assets/css/font-awesome.css">
+        <link rel="stylesheet" href="/training-material/assets/css/VIB.css">
+        <link rel="stylesheet" href="/training-material/assets/css/academicons.css">
+        <link rel="stylesheet" href="/training-material/assets/css/syntax_highlighting.css">
+        <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon" />
+
+        
+        
+        
+        
+        
+        <meta name="description" content="Bioinformatics Introduction" />
+        <meta property="og:title" content="VIB Bioinformatics Training: 04 Gene expression analysis" />
+        <meta property="og:description" content="Bioinformatics Introduction" />
+        <meta property="og:image" content="/training-material/assets/images/bioinformatics_core_rgb_neg.png" />
+    </head>
+    <body data-spy="scroll" data-target="#toc">
+        <div class="container main-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="well row">
+           <div id="logo" class="col-md-4 col-lg-2 text-center">
+              <a href="/training-material/">
+                <img src="/training-material/assets/images/vib_notag_neg_rgb.jpg" height="50" alt="VIB logo" class="margin20">
+              </a>
+           </div> 
+           <div class="col-md-4 col-lg-8" id="top-navbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/training-material/topics/qbase-plus" title="Go back to list of tutorials">
+                            <i class="fa fa-folder-o" aria-hidden="true"></i><span class="visually-hidden">topic</span> QPCR analysis using qbase+
+                        </a>
+                    </li>
+            </div>
+            <div class="col-md-4 col-lg-2 text-right form-group label-floating" id="help">
+                       
+    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Help">
+        <i class="fa fa-life-ring" aria-hidden="true"></i><span class="visually-hidden">help</span> Help
+    </a>
+    <div class="dropdown-menu dropdown-menu-right">
+        <form method="get" action="https://tess.elixir-europe.org/materials">
+            <input type="text" id="search" name="q" value="" style="margin-left: 0.5em;/*! border-radius: 0px; */">
+            <input type="hidden" value="VIB Bioinformatics Core" name="content_provider">
+            <input type="submit" value="Search on TeSS" style="width: 92%;border-radius: 0px;margin: 0.5em;background: #f47d20;border: 0px;padding: 0.25em;" class="">
+        </form>
+
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="https://www.bits.vib.be" title="Contact us">
+            Contact us 
+        </a>
+    </div>
+
+
+            </div>
+</header>
+
+    <script type="application/ld+json">
+        
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "headline": "04 Gene expression analysis",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "/blob//LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "courseCode": "qbase-plus / gene-expression / hands-on",
+  "learningResourceType": "hands-on tutorial",
+  "name": "Hands-on for '04 Gene expression analysis' tutorial",
+  "isPartOf": {
+    "@type": "Course",
+    "name": "04 Gene expression analysis",
+    "description": "04 Gene expression analysis",
+    "learningResourceType": "tutorial",
+    "interactivityType": "expositive",
+    "provider": {
+      "@type": "Organization",
+      "email": "bits@vib.be",
+      "name": "VIB Bioinformatics Core",
+      "url": "https://www.bits.vib.be"
+    }
+  },
+  "url": "https://vibbits.github.io//training-material/topics/qbase-plus/tutorials/gene-expression/tutorial.html",
+  "timeRequired": "PT5M",
+  "description": "04 Gene expression analysis\\nThe questions this  addresses are:\n - How do you perform a qPCR analysis using the qbase+ software?\n\n\\nThe objectives are:\n - Use the qbase+ software to analyze the qPCR experiment results.\n\n",
+  "hasPart": [
+
+  ],
+  "mentions": [
+
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Christof De Bo"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Christof De Bo"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "QPCR analysis using qbase+",
+      "description": "Bioinformatics Introduction",
+      "url": "https://vibbits.github.io//training-material/topics/qbase-plus/"
+    }
+  ]
+}
+    </script>
+
+    <div class="row tutorial">
+      <div class="col-md-12" role="main">
+        <h1 data-toc-skip>04 Gene expression analysis</h1>
+        <div class="contributors-line">By: 
+
+<a href="/training-material/hall-of-fame#chdeb" class="contributor-badge"><img src="https://avatars.githubusercontent.com/chdeb" alt="Christof De Bo">Christof De Bo</a>
+
+</div>
+        <blockquote class="overview">
+            <h3>Overview</h3>
+            <strong><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</strong>
+            <ul>
+            
+            <li>How do you perform a qPCR analysis using the qbase+ software?</li>
+            
+            </ul>
+
+            <strong><i class="fa fa-bullseye" aria-hidden="true"></i><span class="visually-hidden">objectives</span> Objectives</strong>
+            <ul>
+            
+            <li>Use the qbase+ software to analyze the qPCR experiment results.</li>
+            
+            </ul>
+
+            
+
+            
+            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 5 minutes</p>
+            
+
+            
+
+
+
+            <div>
+                <div><strong><i class="fa fa-external-link" aria-hidden="true"></i> Supporting Materials</strong></div>
+                <div id="supporting_materials">
+                    <ul>
+                        <li>
+                            <div>
+                    
+
+                    
+
+                    
+                    
+
+
+                    
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </blockquote>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-10" role="main">
+                    <h4 id="create-a-project">Create a project</h4>
+
+<p>When you use qbase+ for the first time, you can’t do anything unless you
+create a project to store your experiments in.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Create a new Project</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">When you double click the qbase+ icon, the software starts up automatically opens the Start page where you can create a new project by clicking the Create new project button : This will create a new project with a default name like Project 1 .</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="create-an-experiment">Create an experiment</h4>
+
+<p>To open actual data (one/more runs) in qbase+, creating a project is not sufficient. You need to create an experiment in this project to hold the run data.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Create a new Experiment called GeneExpression in the new project.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Select the Create a new qbase+ experiment option  in the Start page. Type a name for th new experiment . Click the Next button at the bottom of the page . This will create the experiment.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>When you leave the <strong>Start page</strong>, the <strong>Import run</strong> page is automatically opened allowing you to import the actual qPCR data into qbase+.</p>
+
+<h4 id="loading-the-data">Loading the data</h4>
+
+<p>First a few quick words about the data set. We’ll be working with data coming from 3 runs (plates in the qPCR instrument): <a href="http://data.bits.vib.be/pub/trainingen/qbasePLUS/DataTraining/Run1.xls">Run1</a>, <a href="http://data.bits.vib.be/pub/trainingen/qbasePLUS/DataTraining/Run2.xls">Run2</a> and <a href="http://data.bits.vib.be/pub/trainingen/qbasePLUS/DataTraining/Run3.xls">Run3</a></p>
+
+<p>The data consist of Cq values for:</p>
+
+<ul>
+  <li>3 reference target genes: Stable, Nonregulated, and Flexible</li>
+  <li>3 target genes of interest: Duvel, Leffe, and Palm</li>
+</ul>
+
+<p>each measured twice (= technical replicates) in 16 different samples. Half of the samples have undergone a treatment, half of them are untreated control samples.</p>
+
+<p>The data set also contains a series of standard samples consisting of a four-fold dilution series of cDNA for each target gene. These measurements allow to generate a standard curve from which target-specific amplification efficiencies can be calculated. Finally, negative controls (No Template Controls) have been measured. The goal of the analysis is to identify target genes of interest that have different expression levels in the treated samples compared to the untreated control samples.</p>
+
+<p>| In GeneExpression load CFX run files <a href="http://data.bits.vib.be/pub/trainingen/qbasePLUS/DataTraining/Run1.xls">Run1</a>, <a href="http://data.bits.vib.be/pub/trainingen/qbasePLUS/DataTraining/Run2.xls">Run2</a> and <a href="http://data.bits.vib.be/pub/trainingen/qbasePLUS/DataTraining/Run3.xls">Run3</a>.
+| :—————————- |
+|</p>
+<ul>
+  <li>Click the <strong>Import runs</strong> button  to open the <strong>Import Run</strong> window</li>
+  <li>Click the <strong>Browse</strong> button  to go to the directory that stores the files containing the qPCR data</li>
+</ul>
+
+<p>Select the 3 run files simultaneously by holding the <strong>Ctrl</strong> key on your keyboard during the selection in Windows or the command button in MacOSX.</p>
+
+<p>Click the <strong>Open</strong> button</p>
+
+<p>Now you go back to the <strong>Import Run</strong> window, click the <strong>Next</strong> button (purple)</p>
+
+<ul>
+  <li>qbase+ tries to recognize the format of the selected import files. If only one format matches the files (as in our case CFX), it is selected and the quick import option is enabled. Click the <strong>Finish</strong> button.</li>
+</ul>
+
+<p>In the Imported run names area on the <strong>Import run</strong> page you should now see the names of the 3 run files. If these are the correct files, click the <strong>Next</strong> button at the bottom of the page.</p>
+
+<h4 id="adding-annotation-to-the-data">Adding annotation to the data</h4>
+
+<p>When you leave the <strong>Import run</strong> page, you are redirected to the <strong>Sample target list</strong> page, which gives you an overview of the targets (= genes) and samples qbase+ detected when reading in the datafiles.
+Take a look at the data. You see that the list of samples and targets matches the description of the qPCR experiment at the top of this page. The samples in this experiment are divided into two groups: samples that received some kind of treatment and untreated control samples. This information was not included in the run files so qbase+ does not know which sample belongs to which group. However, this is relevant information: in our analysis we are going to compare the expression of our genes of interest between treated and untreated samples. This means that qbase+ needs the grouping annotation to be able to perform the analysis we want to do. So we have to give qbase+ this annotation: we can do this by adding a custom sample property. To do this we need to create a sample properties file with a specific format that is described in <a href="http://data.bits.vib.be/pub/trainingen/qbasePLUS/TutorialIII.pdf">the tutorial</a>. You can find the file in the qbase+ folder on the BITS laptops or you can <a href="http://data.bits.vib.be/pub/trainingen/qbasePLUS/Sample_Properties_file.xlsx">download the file here</a>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">How to add the grouping annotation ?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">To import the file containing to grouping annotation:</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>select <strong>Add samples and targets</strong></li>
+  <li>click <strong>Import sample list</strong></li>
+  <li>browse to the folder that contains the samples file</li>
+  <li>select the file and click <strong>Open</strong></li>
+  <li>click <strong>Next</strong></li>
+</ul>
+
+<p>In the <strong>Importing samples</strong> window, you have to tell qbase+ which sample annotation you want to import from the sample properties file</p>
+
+<p>In our case we could import Quantities (this annnotation is available in the sample properties file) but the quantities of the standard samples were included in the run files so qbase+ has already imported this annotation from the run files during data import.
+We definitely need to import the Custom properties since they were not a part of the run files. The Treatment property will tell qbase+ which samples belong to the group of control samples and which samples belong to the group of treated samples.
+Click the <strong>Next</strong> button at the bottom of the page to finish the import.</p>
+
+<p>At this point you don’t see the custom annotation that you have imported, you will see it later in the analysis during scaling
+Leaving the <strong>Sample target list</strong> page takes you to the <strong>Run annotation</strong> page, where you have to confirm again that the sample and gene names are ok. If this is not the case you can adjust the annotation here.</p>
+
+<p>Click the <strong>Next</strong> button at the bottom of the page</p>
+
+<p>Our data file contains all required annotation:</p>
+
+<ul>
+  <li>Cq values</li>
+  <li>sample and target names</li>
+  <li>sample types</li>
+  <li>quantities for the standard samples</li>
+  <li>grouping of the samples</li>
+</ul>
+
+<p>Once runs are imported, you can start analyzing the data. Data consist
+of Cq values for all the wells.</p>
+
+<h4 id="specifying-the-aim-of-the-experiment">Specifying the aim of the experiment</h4>
+
+<p>On the <strong>Aim</strong> page you tell the software what type of analysis you want to do. Different types of analyses require different parameters, parameter settings and different calculations. By selecting the proper analysis type, qbase+ will only show the relevant parameters and parameter settings.</p>
+
+<p>Since we are doing a <strong>gene expression analysis</strong> in this exercise, this the option we should select. Click the <strong>Next</strong> button on the bottom of the page to go to the <strong>Technical quality control</strong> page.</p>
+
+<h4 id="checking-the-quality-of-technical-replicates-and-controls">Checking the quality of technical replicates and controls</h4>
+
+<p>The <strong>Technical quality control</strong> page handles the settings of the requirements that the data have to meet to be considered high quality. For instance the maximum difference between technical replicates is defined on this page. If there are technical replicates in the data set, qbase+ will detect them automatically (they have the same sample and target name) and calculate the average Cq value. In theory, technical replicates should generate more or less identical signals.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">How to set the maximum difference in Cq values for technical replicates ?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">The quality criterium that the replicates must meet to be included for further analysis is one of the parameters in qbase+. You can set it on the <strong>Technical quality control</strong> page:</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The default maximum allowed difference in Cq values between technical replicates is 0.5</p>
+
+<p>Additionally, you can do quality checks based on the data of the positive and negative controls.
+| How to set quality requirements for the control samples ?
+| :—————————- |
+|  On the same <strong>Technical quality control</strong> page you can define the minimum requirements for a well to be included in the calculations:</p>
+
+<ul>
+  <li><strong>Negative control threshold</strong> : minimum allowed difference in Cq value between the sample with the highest Cq value and the negative control with the lowest Cq value: the default is 5 which means that negative controls should be more than 5 cycles away from the sample of interest.</li>
+  <li><strong>Lower and upper boundary</strong> : allowed range of Cq values for positive controls.</li>
+</ul>
+
+<p>Excluded means that the data are ignored in the calculations.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">How to check if there are wells that do not meet these criteria ?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">You can see flagged and excluded data by ticking the <strong>Show details…</strong> options  on the <strong>Technical quality control</strong> page and clicking the <strong>Next</strong> button (purple) at the bottom of the page.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Qbase+ will open the results of the quality checks for the replicates  and the controls  on two different tabs. These tabs show lists of samples that failed the quality control criteria. When you open the replicates tab  you can get an overview of the flagged  or the excluded (purple) wells. Select the <strong>failing</strong>  wells.</p>
+
+<p>When the difference in Cq between technical replicates exceeds 0.5, the wells end up in the flagged or failing list. They are included in calculations unless you exclude them by unticking them. You see that the two replicates of Palm in Sample05 have very different Cq values. All other bad replicates are coming from standard samples.
+If you are finished checking the data quality, click <strong>Next</strong> to go to the <strong>Amplification efficiencies</strong> page.</p>
+
+<h4 id="taking-into-account-amplification-efficiencies">Taking into account amplification efficiencies</h4>
+
+<p>Qbase+ calculates an amplification efficiency (E) for each primer pair (= gene). Genes have different amplification efficiencies because:</p>
+
+<ul>
+  <li>some primer pairs anneal better than others</li>
+  <li>the presence of inhibitors in the reaction mix (salts, detergents…) decreases the amplification efficiency</li>
+  <li>inaccurate pipetting</li>
+</ul>
+
+<p>Qbase+ has a parameter that allows you to specify how you want to handle amplification efficiencies on the <strong>Amplification efficiencies</strong> page.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">How to specify the amplification efficiencies strategy you want to use ?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Since we have included a dilution series for creating a standard curve in our qPCR experiment, we will select</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li><strong>Use assay specific amplification efficiencies</strong></li>
+  <li><strong>Calculate efficiencies from included standard curves</strong></li>
+</ul>
+
+<p>Amplification efficiencies are calculated based on the Cq values of a serial dilution of representative template, preferably a mixture of cDNAs from all your samples. Since you know the quantity of the template in each dilution, you can plot Cq values against template quantities for each primer pair. Linear regression will fit a standard curve to the data of each gene, and the slope of this curve is used to calculate the amplification efficiency.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">How to check the amplification efficiencies of the genes ?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Once you have made this selection, qbase+ starts calculating the efficiencies and the results are immediately shown in the <strong>calculation efficiencies</strong> table.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>In this way, one amplification efficiency (E) for each gene is calculated and used to calculate <strong>Relative Quantities (RQ)</strong>:
+∆Cq is calculated for each well by subtracting the Cq of that well from the average Cq across all samples for the gene that is measured in the well. So ∆Cq is the difference between the Cq value of a gene in a given sample and the average Cq value of that gene across all samples. Cq is subtracted from the average because in this way high expression will result in a positive ∆Cq and low expression in a negative ∆Cq. 
+<strong>So at this point the data set contains one RQ value for each gene in each sample.</strong></p>
+
+<p>Click <strong>Next</strong> to go to the <strong>Normalization</strong> page.</p>
+
+<h4 id="normalization">Normalization</h4>
+
+<p>Differences in amplification efficiency are not the only source of variability in a qPCR experiment. Several factors are responsible for noise in qPCR experiments e.g. differences in:</p>
+
+<ul>
+  <li>amount of template cDNA between wells</li>
+  <li>RNA integrity of samples</li>
+  <li>efficiency of enzymes used in the PCR or in the reverse
+transcription</li>
+</ul>
+
+<p>Normalization will eliminate this noise as much as possible. In this way it is possible to make a distinction between genes that are really upregulated and genes with high expression levels in one group of samples simply because higher cDNA concentrations were used in these samples.
+In qPCR analysis, normalization is done based on housekeeping genes.</p>
+
+<p>Housekeeping genes are measured in all samples along with the genes of interest. In theory, a housekeeping gene should have identical RQ values in all samples. In reality, noise generates variation in the expression levels of the housekeeping genes. This variation is a direct measure of the noise and is used to calculate a normalization factor for each sample.
+These normalization factors are used to adjust the RQ values of the genes of interest accordingly so that the variability is eliminated.</p>
+
+<p>These adjusted RQ values are called <strong>Normalized Relative Quantities (NRQs)</strong>. In qbase+ housekeeping genes are called reference genes. In our data set there are three reference genes: Stable, Non-regulated and Flexible. On the <strong>Normalization page</strong> we can define the normalization strategy we are going to use, appoint the reference genes and check their stability of expression.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">How to specify the normalization strategy you want to use ?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">You can specify the normalization strategy you want to use on the Normalization method page:</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li><strong>Reference genes</strong> normalization is based on the RQ values of the housekeeping genes</li>
+  <li><strong>Global mean</strong> normalization calculates normalization factors based on the RQ values of all genes instead of only using the reference genes. This strategy is recommended for experiments with more than 50 random genes. Random means that the genes are randomly distributed over all biological pathways.</li>
+  <li><strong>Custom value</strong> normalization is used for specific study types. This strategy allows users to provide custom normalization factors such as for example the cell count.</li>
+  <li><strong>None</strong> means that you choose to do no normalization at all. This option should only be used for single cell qPCR.</li>
+</ul>
+
+<p>We have incorporated 3 housekeeping genes in our experiment so we select the <strong>Reference genes</strong> strategy.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">How to appoint reference targets ?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">You have to indicate which targets should be used as reference genes since qbase+ treats all genes as targets of interest unless you explicitly mark them as reference genes on the Normalization method page:</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>We have measured 3 housekeeping genes: Stable, Flexible and Non-regulated so we tick the boxes in front of their names.</p>
+
+<p>It’s not because you have appointed genes as reference genes that they necessarily are <strong>good</strong> reference genes. They should have stable expression values over all samples in your study. Fortunately, qbase+ checks the quality of the reference genes. For each appointed reference gene, qbase+ calculates two indicators of expression stability</p>
+
+<ul>
+  <li><strong>M</strong> (geNorm expression stability value): calculated based on the pairwise variations of the reference genes.</li>
+  <li><strong>CV</strong> (coefficient of variation): the ratio of the standard deviation of the NRQs of a reference gene over all samples to the mean NRQ of that reference gene.</li>
+</ul>
+
+<p>It is considered that the higher these indicators the less stable the reference gene.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Are Flexible, Stable and Nonregulated good reference targets ?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">M and CV values of the appointed reference genes are automatically calculated by qbase+ and shown on the Normalization method page:</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The default limits for M and CV were determined by checking M-values and CVs for established reference genes in a pilot experiment that was done by Biogazelle. Based on the results of this pilot experiment, the threshold for CV and M was set to 0.2 and 0.5 respectively.
+If a reference gene does not meet these criteria it is displayed in red. As you can see the M and CV values of all our reference exceed the limits and are displayed in red.</p>
+
+<p>If the quality of the reference genes is not good enough, it is advised to remove the reference gene with the worst M and CV values and re-evaluate the remaining reference genes.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Which reference target are you going to remove ?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Both the M-value and the CV are measures of variability. The higher these values the more variable the expression values are. So we will remove the gene with the highest M and CV.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>You can remove a reference gene simply by unticking the box in front of its name.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Are the two remaining reference genes good references ?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">After removing Flexible as a reference gene the M and CV values of the two remaining reference genes decrease drastically to values that do meet the quality criteria. M and CV values that meet the criteria are displayed in green.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>This exercise shows the importance of using a minimum of three reference genes. If one of the reference genes does not produce stable expression values as is the case for Flexible, you always have two remaining reference genes to do the normalization.</p>
+
+<p><a href="http://wiki.bits.vib.be/index.php/Using_GeneVestigator_to_select_candidate_reference_genes">See how to select reference genes for your qPCR experiment</a>.</p>
+
+<p><strong>So after normalization you have one NRQ value for each gene in each sample.</strong></p>
+
+<p>Click <strong>Next</strong> to go to the <strong>Scaling</strong> page.</p>
+
+<h4 id="scaling">Scaling</h4>
+
+<p>Rescaling means that you calculate NRQ values relative to a specified reference level.</p>
+
+<p>Qbase+ allows you to rescale the NRQ values using one of the following as a reference:</p>
+
+<ul>
+  <li>the sample with the minimal expression</li>
+  <li>the average expression level of a gene across all samples</li>
+  <li>the sample with the maximal expression</li>
+  <li>a specific sample (e.g. untreated control)</li>
+  <li>the average of a certain group (e.g. all control samples): this is
+often how people want to visualize their results</li>
+  <li>positive control: only to be used for copy number analysis</li>
+</ul>
+
+<p>After scaling, the expression values of the choice you make here will be set to 1 e.g. when you choose <strong>average</strong> the average expression level across all samples will be set to 1 and the expression levels of the individual samples will be scaled accordingly.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">How to scale to the average of the untreated samples ?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">You can specify the scaling strategy on the <strong>Scaling</strong> page. Select <strong>Scale to group</strong> and set the <strong>Scaling group</strong> to the <strong>untreated</strong> samples . This is one of the reasons why you need the grouping annotation.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Rescaling to the average of a group is typically used to compare results between 2 groups, e.g. treated samples against untreated controls. After rescaling, the average of the NRQs across all untreated samples is 1 and the NRQs of the treated samples are scaled accordingly.</p>
+
+<p>Click <strong>Next</strong> to go to the <strong>Analysis</strong> page.</p>
+
+<h4 id="visualization-of-the-results">Visualization of the results</h4>
+
+<p>One of the things you can select to do on the <strong>Analysis</strong> page is viewing the relative expression levels (= scaled NRQs) of each of the genes in a bar chart per gene. It is recommended to visualize your results like this.</p>
+
+<p>It is possible to view the relative expression levels of all genes of interest on the same bar chart. You can use this view to see if these genes show the same expression pattern but you cannot directly compare the heights of the different genes because each gene is independently rescaled!</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">How to visualize single gene expression bar charts ?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Select <strong>Visually inspect results For individual targets</strong> on the <strong>Analysis</strong> page and click <strong>Finish</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">How to visualize the expression levels of Palm in each sample ?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Select <strong>Visually inspect results For individual targets</strong> on the <strong>Analysis</strong> page and click <strong>Finish</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The <strong>Target</strong> select box allows you to select the gene you want to view the expression levels of. Relative expression levels are shown for each sample. Error bars are shown and represent the technical variation in your experiment (variation generated by differences in amounts pipetted, efficiency of enzymes, purity of the samples…).</p>
+
+<p>You see that Palm has a low expression level and a very large error bar in Sample05 because the two replicates of this sample had very different Cq values. You can group and colour the bars according to a property.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">How to group the bars of Palm according to treatment (so treated at one side and untreated at the other side)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">In the <strong>Grouping</strong> section you can specify the property you want to group by.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">How to view average expression levels in each group ?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">In the <strong>Grouping</strong> section you can choose to plot individual samples as shown above but you can also choose to <strong>plot group average</strong> expression levels.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The error bars that you see here represent biological variation and will be used later on in the statistical analysis. The error bars are 95% confidence intervals which means that they represent the range that will contain with 95% certainty the real average expression level in that group of samples.
+The nice characteristic of 95% confidence intervals is the following:</p>
+
+<ul>
+  <li>if they do not overlap you are sure that the expression levels in the two groups are significantly different, in other words the gene is differentially expressed</li>
+  <li>if they do overlap you cannot say that you are sure that the expression levels are the same. You simply don’t know if the gene is differentially expressed or not.</li>
+</ul>
+
+<p>| Assess the effect of switching the Y-axis to a logarithmic scale for Palm.
+| :—————————- |
+|  In the <strong>Y axis</strong> section you can specify if you want a linear or logarithmic axis.
+As you can see you do not change the expression values, you just change the scale of the Y axis. Switching the Y-axis to a logarithmic scale can be helpful if you have large differences in NRQs between different samples</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Assess the effect of switching the Y-axis to a logarithmic scale for Flexible.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Switch to the bar charts of Flexible. By switching the Y-axis to logarithmic you can now see more clearly the differences between samples with small NRQs.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="statistical-analysis">Statistical analysis</h4>
+
+<p>Once you generate target bar charts you leave the <strong>Analysis wizard</strong> and you go to the regular qbase+ interface. Suppose that you want to perform a statistical test to prove that the difference in expression that you see in the target chart is significant.
+At some point, qbase+ will ask you if your data is coming from a normal distribution. If you don’t know, you can select <strong>I don’t know</strong> and qbase+ will assume the data are not coming from a normal distribution and perform a stringent non-parametric test.
+However, when you have <strong>7 or more replicates per group</strong>, you can check if the data is normally distributed using a statistical test. If it is, qbase+ will perform a regular t-test. The upside is that the t-test is less stringent than the non-parametric tests and will find more DE genes. However, you may only perform it on normally distributed data. If you perform the t-test on data that is not normally distributed you will generate false positives i.e. qbase+ will say that genes are DE while in fact they are not. Performing a non-parametric test on normally distributed data will generate false negatives i.e. you will miss DE genes.</p>
+
+<p>Checking if the data is normally distributed can be easily done in GraphPad Prism. To this end you have to export the data.
+| How to export the data ?
+| :—————————- |
+|  To export the results click <strong>the upward pointing arrow</strong> in the qbase+ toolbar:
+You want to export the normalized data so select <strong>Export Result Table (CNRQ)</strong>:
+You will be given the choice to export results only (CNRQs) or to include the errors (standard error of the mean) as well . We don’t need the errors in Prism so we do not select this option.
+The scale of the Result table can be linear or logarithmic (base 10) . Without user intervention, qbase+ will automatically log10 transform the CNRQs prior to doing statistics. So we need to check in Prism if the log transformed data are normally distributed.
+Additionally, you need to tell qbase+ where to store the file containing the exported data. Click the <strong>Browse</strong> button for this .</p>
+
+<p>Exporting will generate an Excel file in the location that you specified. However, the file contains the results for all samples and we need to check the two groups (treated and untreated) separately. The sample properties show that the even samples belong to the treated group and the odd samples to the untreated group.
+This means we have to generate two files:</p>
+
+<ul>
+  <li><a href="http://data.bits.vib.be/pub/trainingen/qbasePLUS/resultslog.csv">a file containing the data of the untreated samples</a></li>
+  <li><a href="http://data.bits.vib.be/pub/trainingen/qbasePLUS/resultslogTreated.csv">a file containing the data of the treated samples</a></li>
+</ul>
+
+<p>Now we can open these files in Prism to check if the data is normally distributed.</p>
+
+<p>| How to import the data of the untreated samples in Prism ?
+| :—————————- |
+|</p>
+<ul>
+  <li>Open Prism</li>
+  <li>Expand <strong>File</strong> in the top menu</li>
+  <li>Select <strong>New</strong></li>
+  <li>Click <strong>New Project File</strong></li>
+  <li>In the left menu select to create a <strong>Column</strong> table. Data representing different groups (in our case measurements for different genes) should always be loaded into a column table.</li>
+  <li>Select <strong>Enter replicate values, stacked into columns</strong> (this is normally the default selection) since the replicates (measurements for the same gene) are stacked in the columns.</li>
+  <li>Click <strong>Create</strong></li>
+</ul>
+
+<p>Prism has now created a table to hold the data of the untreated samples but at this point the table is still empty. To load the data:</p>
+
+<ul>
+  <li>Expand <strong>File</strong> in the top menu</li>
+  <li>Select <strong>Import</strong></li>
+  <li>Browse to the resultslog.csv file, select it and click <strong>Open</strong></li>
+  <li>In the <strong>Source</strong> tab select <strong>Insert data only</strong></li>
+  <li>Since this is a European csv file commas are used as decimal separators so in contrast to what its name might imply, semicolons and not commas are used to separate the columns in the csv file (you can open the file in a text editor to take a look). In American csv files dots are used as decimal separator and the comma is used to separate the columns. Prism doesn’t know the format of your csv file so you have to tell him the role of the comma in your file. Select <strong>Separate decimals</strong></li>
+  <li>Go to the <strong>Filter</strong> tab and specify the rows you want to import (the last rows are these of the standard and the water samples, you don’t want to include them)</li>
+  <li>Click <strong>Import</strong></li>
+</ul>
+
+<p>As the file is opened in Prism you see that the first column containing the sample names is treated as a data column. Right click the header of the first column and select <strong>Delete</strong></p>
+
+<p>| How to check if the data of the untreated samples comes from a normal distribution ?
+| :—————————- |
+|</p>
+<ul>
+  <li>Click the <strong>Analyze</strong> button in the top menu</li>
+  <li>Select to do the <strong>Column statistics</strong> analysis in the <strong>Column analyses</strong> section of the left menu</li>
+  <li>In the right menu, deselect <strong>Flexible</strong>. It’s a bad reference gene so you will not include it in the qbase+ analysis so there’s no point checking its normality (it is probably not normally distributed). In that respect you could also deselect the other two reference genes since you will do the DE test on the target genes and not on the reference genes.</li>
+  <li>Click <strong>OK</strong></li>
+  <li>In the <strong>Descriptive statistics</strong> and the <strong>Confidence intervals</strong> section deselect everything except <strong>Mean, SD, SEM</strong>. These statistics is not what we are interested in: we want to know if the data comes from a normal distribution. The only reason we select Mean, SD, SEM is because if we make no selection here Prism throws an error.</li>
+  <li>In the <strong>Test if the values come from a Gaussian distribution</strong> section select the <strong>D’agostino-Pearson omnibus test</strong> to test if the data are drawn from a normal distribution. Although Prism offers three tests for this, the D’Agostino-Pearson test is the safest option.</li>
+  <li>Click <strong>OK</strong></li>
+</ul>
+
+<p>Prism now generates a table to hold the results of the statistical analysis: As you can see, the data for Palm are not normally distributed.</p>
+
+<p>Since we found that there’s one group of data that does not follow a normal distribution, it’s no longer necessary to check if the treated data are normally distributed but you can do it if you want to. We will now proceed with the statistical analysis in qbase+. Statistical analyses can be performed via the <strong>Statistics wizard</strong>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">How to open the Statistics wizard ?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">You can open it in the <strong>Project Explorer</strong> (window at the left):</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>expand <strong>Project1</strong> if it’s not yet expanded</li>
+  <li>expand the <strong>Experiments</strong> folder in the project if it’s not yet expanded</li>
+  <li>expand the <strong>GeneExpression</strong> experiment if it’s not yet expanded</li>
+  <li>expand the <strong>Analysis</strong> section if it’s not yet expanded</li>
+  <li>expand the <strong>Statistics</strong> section</li>
+  <li>double click <strong>Stat wizard</strong></li>
+</ul>
+
+<p>This opens the <strong>Statistics wizard</strong> that allows you to perform various kinds of statistical analyses.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Which kind of analysis are you going to do ?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">On the <strong>Goal</strong> page: Select <strong>Mean comparison</strong> since you want to compare expression between two groups of samples so what you want to do is comparing the mean expression of each gene in the treated samples with its mean expression level in the untreated samples. Click <strong>Next</strong>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">How to define the groups that you are going to compare ?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">On the <strong>Groups</strong> page: specify how to define the two groups of samples that you want to compare. Select <strong>Treatment</strong> as the grouping variable to compare treated and untreated samples. Click <strong>Next</strong>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">How to define the genes that you want to analyze ?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">On the <strong>Targets</strong> page: specify for which targets of interest you want to do the test. Deselect <strong>Flexible</strong> since you do not want to include it in the analysis. It’s just a bad reference gene. Click <strong>Next</strong>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>On the <strong>Settings</strong> page you have to describe the characteristics of your data set, allowing qbase+ to choose the appropriate test for your data.</p>
+
+<p>The first thing you need to tell qbase+ is whether the data was drawn from a normal or a non-normal distribution. Since we have 8 biological replicates per group we can do a test in Prism to check if the data are normally distributed.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Which gene(s) is/are differentially expressed ?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">On the <strong>Settings</strong> page you describe the characteristics of your data set so that qbase+ can choose the ideal test for your data. For our data set we can use the default settings. Click <strong>Next</strong>. In the results <strong>Table</strong> you can see that the p-value for Palm is below 0.05 so Palm is differentially expressed.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>In this example we will analyze data from another expression study with the following characteristics:</p>
+
+<p>All samples fit in a single run: <a href="http://data.bits.vib.be/pub/trainingen/qbasePLUS/DataTraining/Run7.xls">Run7</a>
+We have the following samples:</p>
+
+<ul>
+  <li>5 control samples: control1, control2…</li>
+  <li>5 treated samples: treated1, treated2…</li>
+  <li>1 no template control: NTC</li>
+</ul>
+
+<p>The expression of the following genes was measured:</p>
+
+<ul>
+  <li>2 reference genes: refgene1 and refgene2</li>
+  <li>2 genes of interest: gene1 and gene2</li>
+</ul>
+
+<p>There are two technical replicates per reaction</p>
+
+<h4 id="creating-a-new-experiment">Creating a new experiment</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Create a new Experiment called GeneExpression2 in Project1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">You can find the details on how to create a new experiment in Creating a project and an experiment</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="loading-the-data-1">Loading the data</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Import <a href="http://data.bits.vib.be/pub/trainingen/qbasePLUS/DataTraining/Run7.xls">Run7</a>. This file is in qBase format.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">You can find the details on how to import the data file in the <strong>Loading the data into qbase+</strong> section of Analyzing data from a geNorm pilot experiment in qbase+</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="adding-sample-annotation">Adding sample annotation</h4>
+
+<p>Download the <a href="http://data.bits.vib.be/pub/trainingen/qbasePLUS/DataTraining/Sample_Properties_GE2.xlsx">the sample properties file</a>.
+| Add a custom sample property called Treatment.
+| :—————————- |
+| You can find the details on how to add a custom sample property in the <strong>Adding annotation to the data</strong> section of Loading data into qbase+</p>
+
+<h4 id="analyzing-the-data">Analyzing the data</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Choose the type of analysis you want to perform.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>| Check controls and replicates.
+| :—————————- |
+| First set the minimum requirements for controls and replicates  You see that 6 replicates do not meet these requirements . Select to <strong>Show details and manually exclude bad replicates</strong>
+All negative controls pass the test . Positive controls were not included in this analysis. Qbase+ will now open the results for the failing replicates: as you can see the difference in Cq values between these replicates is not that big. They fail to meet the requirement just slightly.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Which amplification efficiencies strategy are you going to use ?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">You don’t have data of serial dilutions of representative template to build standard curves so the only choice you have is to use the default amplification efficiency (E = 2) for all the genes.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Appoint the reference genes as reference targets.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">You can find the details on how to appoint reference targets in the <strong>Normalization</strong> section of Analyzing gene expression data in qbase+</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Is the stability of the reference genes ok ?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">In the <strong>Reference target stability window</strong> the M and CV values of the reference genes are shown in green so the stability of the reference genes is ok. You can find the details on how to check reference target stability in the <strong>Normalization</strong> section of <a href="Analyzing_gene_expression_data_in_qbase+&quot; title=&quot;wikilink"></a>Analyzing gene expression data in qbase+</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Which scaling strategy are you going to use ?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Since you have a treated and a <strong>control</strong> group, it seems logical to use the average of the control group for scaling. You can find the details on how to specify the scaling strategy in the <strong>Scaling</strong> section of Analyzing gene expression data in qbase+</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Look at the target bar charts.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">In the target bar charts group the samples according to treatment.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">You can find the details on how to group the samples in the <strong>Visualization of the results</strong> section of Analyzing gene expression data in qbase+</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The samples of each group are biological replicates so you might want to generate a plot that compares the average expression of the treated samples with the average expression of the untreated samples.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">In the target bar charts plot the group averages instead of the individual samples.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">In the <strong>Grouping</strong> section at the bottom of the chart you can select <strong>Plot group average</strong>:</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Are there any genes for which you see a clear difference in expression between the two groups ?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">For gene 1, the mean expression levels in the two groups are almost the same and the error bars completely overlap.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>When you look at the title of the Y-axis, you see that 95% confidence levels are used as error bars. In case of 95% confidence intervakls you can use the following rules:</p>
+
+<ul>
+  <li>if they do not overlap: you are certain that the difference between the means of the two groups is significant</li>
+  <li>if they do not overlap: you know nothing with certainty: the means can be different or they can be the same</li>
+</ul>
+
+<p>So for gene 1 the means are very close but just based on the plot we may not make any conclusions with certainty. For gene 2, the mean expression levels in the two groups are very different and the error bars do not overlap. So the 95% confidence intervals do not overlap meaning that we can be certain that the difference between the means of the two groups is significant.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Use a statistical test to compare the expression levels between the two groups of samples ?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">You only have 5 replicates per group so you cannot test if the data comes from a normal distribution. Qbase+ will assume they’re not normally distributed and perform a non-parametric Mann-Whitney test.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The p-value of gene2 is smaller than 0.05 so it has a statistically significant difference in expression levels in treated samples compared to untreated samples. For gene1 the p-value is 1 so we have no evidence to conclude that the expression of gene1 is different in treated compared to untreated samples. You can find the details on how to compare the means of the two groups in the <strong>Statistical analysis</strong> section of Analyzing gene expression data in qbase+</p>
+
+
+
+                    
+
+                    
+
+                    
+
+                </div>
+                <!-- sidebar, which will move to the top on a small screen -->
+                <div class="col-sm-2" role="supplementary">
+                    <nav id="toc" data-toggle="toc" class="sticky-top bs-docs-sidebar hidden-print hidden-xs hidden-sm"></nav>
+                </div>
+            </div>
+        </div>
+
+        <h3><i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
+
+        
+
+        
+
+</div>
+</div>
+
+
+<footer>
+        <div class="well row">
+         <div class="col-md-3 text-center">             
+            <span class="slogan">SCIENCE MEETS LIFE</span>
+         </div>
+         <div class="col-md-6">
+            This material is the result of a collaborative work. Thanks to the
+            <a href="https://www.bits.vib.be">VIB Bioinformatics Core</a>
+            and all the <a href="/training-material/hall-of-fame">contributors</a>.
+            Found a typo? Something is wrong in this tutorial? Edit it on
+            <a href="https://github.com/vibbits/training-material/tree/master/topics/qbase-plus/tutorials/gene-expression/tutorial.md">GitHub</a>.
+          </div>
+          <div class="col-md-3 text-center">
+                <a href="http://www.bits.vib.be"><img src="/training-material/assets/images/bioinformatics_core_rgb_neg.png"></a>
+       </div>
+   </div>
+   </footer>
+</div>
+
+    </body>
+    <script type="text/javascript" src="/training-material/assets/js/jquery.slim.min.js"></script>
+    <script type="text/javascript" src="/training-material/assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
+    <script type="text/javascript" src="/training-material/assets/js/details-element-polyfill.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="/training-material/assets/js/bootstrap-toc.min.js"></script>
+    <script type="text/javascript" src="/training-material/assets/js/main.js"></script>
+    <script type="text/javascript" src="/training-material/assets/js/clipboard.min.js"></script>
+    <script type="text/javascript" src="https://app.cloudsh.com/js/cloudsh.js"></script>
+    <script type="text/javascript">
+    var snippets=document.querySelectorAll('div.highlight');
+    [].forEach.call(snippets,function(snippet){
+        snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+    });
+
+    var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
+        target:function(trigger){return trigger.nextElementSibling;
+    }});
+    </script>
+</html>
