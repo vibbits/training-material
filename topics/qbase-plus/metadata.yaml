@@ -1,0 +1,10 @@
+---
+name: "qbase-plus"
+type: "basics"
+category: "software"
+title: "QPCR analysis using qbase+"
+summary: "Bioinformatics Introduction"
+requirements:
+
+maintainers:
+  - chdeb 
