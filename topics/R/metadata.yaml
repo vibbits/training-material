@@ -1,10 +1,10 @@
 ---
-name: "qbase-plus"
+name: "R"
 type: "basics"
-category: "software"
-title: "QPCR analysis using qbase+"
-summary: "Bioinformatics Introduction"
+category: "statistics"
+title: "data analysis in R"
+summary: "Statistics and bioinformatics analyses in R"
 requirements:
 
 maintainers:
-  - chdeb 
+  - janick-bits
