@@ -38,7 +38,7 @@ The log10() function is written in such a way that it can be applied on a vector
 [1] 0     9    99   999  9999
 ```
 R has built-in functions for virtually any standard mathematical task. 
-![general_functions](../../images/general_functions.png)
+![general_functions](../../images/Rgeneral_functions.png)
 
 Arithmetic operators can be used on variables. Provided that the variables have the same dimensions, you can do element-wise addition, subtraction, multiplication and division of two vectors or tables. Element-wise means that the calculation is performed on the equivalent positions between the two variables: first element + first element, second element + second element etc.
 ```
@@ -169,7 +169,7 @@ Furthermore there are also functions specific for factors. For instance to selec
 ```
 > table(cell_phone_data$own, cell_phone_data$grade)
 ```
-![table_function](../../images/table_function.png)
+![table_function](../../images/Rtable_function.png)
 
 > ##### {% icon hands_on %} Hands-on: Exercise 13d
 >
