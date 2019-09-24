@@ -134,7 +134,7 @@ To sort in descending order place a minus sign in front of the variable:
 
 Select the **labels** of a vector or table using names(). For tables rownames() and colnames() can access or set the either row or the column labels. Both functions will not work on vectors. 
 
-The length() function retrieves the number of elements of a vector. Used on data frames it doesn’t throw an error but returns the number of columns instead. 
+The length() function retrieves the number of elements of a vector. Used on data frames it doesn't throw an error but returns the number of columns instead. 
 
 The same is true for match(x,y). It compares x and y and returns a vector with the same length as x containing: 
 -  NA for elements of x that are not in y  
@@ -153,11 +153,11 @@ There are also functions to be used only on tables, e.g.
 - dim() returns how many rows and columns a table has, nrow() and ncol() will get these values individually
 - t() transposes matrices (exchanges rows and columns), the output is a transposed matrix: the columns are the rows of the original matrix and vice versa
 
-Use merge() to join two data frames. Let’s say D1 has a column A with values. Data frame D2 has the same values stored in column A. Merge the two data frames on the basis of this common column:
+Use merge() to join two data frames. Let?s say D1 has a column A with values. Data frame D2 has the same values stored in column A. Merge the two data frames on the basis of this common column:
 ```
 > newD <- merge(D1,D2)
 ```
-If (some of) the values of the common column differ, merge() will ignore these values. Use argument *all.x* to add an extra row for every different value to the resulting data frame. All rows where the values of the two data frames don’t correspond, will be filled up with NA values.
+If (some of) the values of the common column differ, merge() will ignore these values. Use argument *all.x* to add an extra row for every different value to the resulting data frame. All rows where the values of the two data frames don?t correspond, will be filled up with NA values.
 
 Most functions operate on numbers but there are also functions for manipulating text, e.g. 
 ```
@@ -176,7 +176,7 @@ Furthermore there are also functions specific for factors. For instance to selec
 > You repeat the plant study experiment this time having the following numbers of plants developing lesions: 1, 6, 6, 5, 4
 > 1. Add these data as a third column to the data frame 
 > 2. Relabel columns to Day, Infected and Repeat
-> 3. Use paste() to add the word “day” to the elements of the Day column. Look at the documentation first !
+> 3. Use paste() to add the word ?day? to the elements of the Day column. Look at the documentation first !
 >    > ##### {% icon solution %} solution: answer
 >    >
 >    >  ```
@@ -246,7 +246,7 @@ Furthermore there are also functions specific for factors. For instance to selec
 > ##### {% icon hands_on %} Hands-on: Extra exercise 13f
 >
 > 1. Sort the elements of z from smallest to largest
-> 2. Now use order(z). What’s the difference with the previous exercise?
+> 2. Now use order(z). What?s the difference with the previous exercise?
 > 3. How many elements does z contain?
 >    > ##### {% icon solution %} solution: answer
 >    >
@@ -383,7 +383,7 @@ The is.na(x) function returns TRUE when an element of x is missing:
 > is.na(x)
 [1] FALSE FALSE FALSE TRUE
 ```
-To recode values to missing values you don’t need is.na(). Select the rows that contain the value you want to recode, e.g. 99, and change the value using an assignment:
+To recode values to missing values you don?t need is.na(). Select the rows that contain the value you want to recode, e.g. 99, and change the value using an assignment:
 ```
 > data$v1[data$v1==99] <- NA
 ```

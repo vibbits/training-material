@@ -37,6 +37,7 @@ includes_dir: .
 # Conversion
 markdown: kramdown
 highlighter: rouge
+encoding: utf-8
 kramdown:
   input: GFM
   syntax_highlighter: rouge

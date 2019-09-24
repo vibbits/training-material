@@ -218,7 +218,7 @@ There is an install_github() function in the devtools packageto install R packag
 ```
 > install.packages("devtools") 
 > library(devtools)
-> devtools::install_github("statOmics/MSqRob@MSqRob0.7.6")
+> devtools::install_github("statOmics/MSqRob&copy;MSqRob0.7.6")
 ```
 
 ##### Loading packages
@@ -264,7 +264,7 @@ R can handle any kind of data: numerical, character, logical...
 ### Character data
 Character data like "green", "cytoplasm" must be typed in between **single or double quotes**:
 ```
-> x <- "Hello"
+> x <- "Hello"
 ```
 To use quotes in the text escape the quotes:
 ```
@@ -511,10 +511,3 @@ Sometimes functions from different packages have the same name. In that case use
 > name <- 'Janick'
 > name <- Janick
 {: .hands_on}
-
-
-
-
-
-
-

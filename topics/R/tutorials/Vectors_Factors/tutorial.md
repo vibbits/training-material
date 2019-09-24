@@ -59,7 +59,7 @@ You can also create a vector by **joining existing vectors with the c () functio
 > You count every day how many plants of the initial set of 40 plants developed lesions as a result of a mold infection. 
 > 
 > 1. Create a vector called Plants_with_lesions containing the results of your counts: 1,3,4,2,6
-> 2. Create a vector days containing the days of the week in the following format: “Mon”, “Tues”,”Wednes”,”Thurs”,”Fri”.
+> 2. Create a vector days containing the days of the week in the following format: Mon, Tues, Wednes, Thurs, Fri.
 >    > ##### {% icon solution %} solution: answer
 >    >
 >    >  ```
@@ -147,7 +147,7 @@ Suppose you want to simulate 10 rolls of a dice. Because the outcome of a single
 > sample(1:6, 10, replace=TRUE)
 [1] 2 2 5 3 5 3 5 6 3 5
 ```
-You tell sample() to return 10 values, each in the range 1:6. Because every roll of dice is independent, you sample with replacement. This means that you put the element you’ve drawn back into the list of values to choose from.
+You tell sample() to return 10 values, each in the range 1:6. Because every roll of dice is independent, you sample with replacement. This means that you put the element you?ve drawn back into the list of values to choose from.
 
 > ##### {% icon hands_on %} Hands-on: Exercise 4c
 >
@@ -380,7 +380,7 @@ Logical operators applied to vectors will result in a vector of the same length 
 {: .hands_on}
 
 ##### Removing, changing or adding elements in a vector
-To remove an element from a vector use a negative index: ‘-‘ indicates ‘NOT’ followed by the index of the element you want to remove, e.g. to remove the second element of vector z use:
+To remove an element from a vector use a negative index: ?-? indicates ?NOT? followed by the index of the element you want to remove, e.g. to remove the second element of vector z use:
 ```
 > z <- z[-2]
 ```

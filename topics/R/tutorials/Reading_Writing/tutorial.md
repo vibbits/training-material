@@ -27,14 +27,14 @@ contributors:
 ### Reading files
 Entering data in R can be done by typing the values when you create a variable. In most cases, however, you will have a file with data that was created by an instrument in your lab. How to import such a file into R? 
 
-There is a manual available in the R documentation called **R Data Import/Export**. It’s accessible using help.start() and covers in detail the functionality R has to import and export data. Reading this is highly recommended. This manual covers importing data from spreadsheets, text files, and networks.
+There is a manual available in the R documentation called **R Data Import/Export**. It's accessible using help.start() and covers in detail the functionality R has to import and export data. Reading this is highly recommended. This manual covers importing data from spreadsheets, text files, and networks.
 
 ##### Reading text files
 Most instruments put out data in text format: tab-delimited text (.txt) or comma-separated value files (.csv). Both  can be easily opened in R. 
 
 The most convenient method to import data into R is to use the read functions, like read.table(). These functions can read data in a text file. In Notepad you can save such a file as a regular text file (extension .txt). Many spreadsheet programs can save data in this format. Reading means opening the file and storing its content into a data frame.
 ```
-> read.table(file,header=FALSE,sep="",dec=”.”,skip=0,comment.char="#")
+> read.table(file,header=FALSE,sep="",dec=?.?,skip=0,comment.char="#")
 ```
 
 This function has a long list of arguments, the most important ones are:
@@ -92,7 +92,7 @@ Click **Import**.
 
 Behind the scenes RStudio uses the **readxl** package that comes with the tidyverse package. You can also use the functions of this package directly in commands. 
 
-Compared to other packages for reading Excel files (gdata, xlsx, xlsReadWrite) readxl has no external dependencies, so it’s easy to install and use on all operating systems. It supports the  .xls format and the .xlsx format. The easiest way to install it from CRAN is to install the whole tidyverse package but you have to load readxl explicitly, since it is not a core tidyverse package.
+Compared to other packages for reading Excel files (gdata, xlsx, xlsReadWrite) readxl has no external dependencies, so it?s easy to install and use on all operating systems. It supports the  .xls format and the .xlsx format. The easiest way to install it from CRAN is to install the whole tidyverse package but you have to load readxl explicitly, since it is not a core tidyverse package.
 
 Once imported into RStudio the data is stored in a data frame and you can use it as input of commands. The data frame appears in the list of **Data in the Environment tab**.
 
@@ -169,7 +169,7 @@ Also of note is an R package called **foreign**. This package contains functiona
 ### Writing files
 Reversely, to write a data frame to a file you can use the generic function:
 ```
-> write.table(x,file=”name.txt”,quote=TRUE,row.names=TRUE,col.names=TRUE)
+> write.table(x,file=?name.txt?,quote=TRUE,row.names=TRUE,col.names=TRUE)
 ```
 This function has a long list of arguments, the most important ones are:
 - *x*: data frame to be written to a file
@@ -179,9 +179,9 @@ This function has a long list of arguments, the most important ones are:
 - *row.names*: boolean indicating whether the row names of x are to be written or a character vector of row names to be written
 - *col.names*: boolean indicating whether the column names of x are to be written or a character vector of column names to be written
 - *append=FALSE*: if TRUE x is **added** to the file defined by *file*
-- *eol = “\n”*: end-of-line character, default “\n” represents an enter
-- *na=“NA”*: string to use for missing values in the data
-- *dec=“.”*: decimal separator
+- *eol = ?\n?*: end-of-line character, default ?\n? represents an enter
+- *na=?NA?*: string to use for missing values in the data
+- *dec=?.?*: decimal separator
 
 See the help file for a full overview of all arguments. 
 
@@ -197,7 +197,7 @@ Excel can read .csv files but if you really want to write .xls or .xlsx files us
 > 3. How many up- and downregulated genes are there?
 > 4. What is the gene with the highest log2 fold change?
 > 5. What is the data of the gene with the lowest adjusted p-value (= padj)?
-> 6. Write the Ensembl IDs (= row names) of the upregulated genes to a file called up.txt. You will use this file for functional enrichment analysis using online tools like ToppGene,EnrichR… These tools want a file with only Ensembl IDs as input (one per line, no double quotes, no column headers, no row names).
+> 6. Write the Ensembl IDs (= row names) of the upregulated genes to a file called up.txt. You will use this file for functional enrichment analysis using online tools like ToppGene,EnrichR? These tools want a file with only Ensembl IDs as input (one per line, no double quotes, no column headers, no row names).
 >    > ##### {% icon solution %} solution: answer
 >    >
 >    >  ```
