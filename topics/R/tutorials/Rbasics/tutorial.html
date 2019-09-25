@@ -154,7 +154,7 @@
       "url": "https://www.bits.vib.be"
     }
   },
-  "url": "https://vibbits.github.io//training-material/topics/R/tutorials/Rbasics/tutorial.html",
+  "url": "http://10.132.0.3:4000/training-material/topics/R/tutorials/Rbasics/tutorial.html",
   "timeRequired": "PT60M",
   "description": "R basics: installation, help, set up working directory, variables, syntax, scripts\\nThe questions this  addresses are:\n - How to get started in R and RStudio?\n\n\\nThe objectives are:\n - get familiar with the basic R syntax\n - learn how to use the help system in R\n - learn how to define variables\n\n",
   "hasPart": [
@@ -180,7 +180,7 @@
       "@type": "CreativeWork",
       "name": "Introduction to R",
       "description": "Introduction to R",
-      "url": "https://vibbits.github.io//training-material/topics/R/"
+      "url": "http://10.132.0.3:4000/training-material/topics/R/"
     }
   ]
 }
@@ -291,27 +291,33 @@ As R is constantly being updated and new versions are constantly released, it is
 The script editor highlights syntax in scripts making it easy to find and prevent errors. It has many features that will help you write scripts e.g. autocompletion, find/replace, commenting.</p>
 
 <h5 id="autocompletion">Autocompletion</h5>
-<p>It supports the automatic completion of code, e.g. if you have an object named relfreq in your workspace, type rel in the script editor and it will show a list of possibilities to complete the name.
-<img src="../../images/Rautocompletion.png" alt="autocompletion" /></p>
+<p>It supports the automatic completion of code, e.g. if you have an object named relfreq in your workspace, type rel in the script editor and it will show a list of possibilities to complete the name.</p>
+
+<p><img src="../../images/Rautocompletion.png" alt="autocompletion" /></p>
 
 <h5 id="find-and-replace">Find and replace</h5>
 <p>Find and replace can be opened using Ctrl+F.</p>
 
 <h5 id="adding-comments-to-scripts">Adding comments to scripts</h5>
 <p>In scripts you must include comments to help you remember or tell collaborators what you did. Comments are lines that start with a # symbol. This symbol tells R to ignore  this line. Comments are displayed in green.
-You can comment and uncomment large selections of code using: <strong>Comment/Uncomment Lines</strong>
-<img src="../../images/Rcomment_uncomment.png" alt="comment_uncomment" /></p>
+You can comment and uncomment large selections of code using: <strong>Comment/Uncomment Lines</strong></p>
+
+<p><img src="../../images/Rcomment_uncomment.png" alt="comment_uncomment" /></p>
 
 <h5 id="adding-section-headings-to-scripts">Adding section headings to scripts</h5>
 <p>Add section headings to your scripts using the following format:
-#Heading Name####
-<img src="../../images/Rsection_headings.png" alt="section_headings" />
-At the bottom of the script editor you can quickly navigate to sections in your script. Especially in long scripts this is very useful.</p>
+#Heading Name####</p>
+
+<p><img src="../../images/Rsection_headings.png" alt="section_headings" /></p>
+
+<p>At the bottom of the script editor you can quickly navigate to sections in your script. Especially in long scripts this is very useful.</p>
 
 <h5 id="creating-a-new-script">Creating a new script</h5>
-<p>Click <strong>File</strong> in the top menu and select <strong>New File &gt; R Script</strong>.
-<img src="../../images/Rnew_script.png" alt="new_script" />
-Besides a simple R script, there are many other file types you can create:</p>
+<p>Click <strong>File</strong> in the top menu and select <strong>New File &gt; R Script</strong>.</p>
+
+<p><img src="../../images/Rnew_script.png" alt="new_script" /></p>
+
+<p>Besides a simple R script, there are many other file types you can create:</p>
 <ul>
   <li><a href="http://rmarkdown.rstudio.com/">R markdown</a> file: incorporate R-code and its results in a report</li>
   <li>R Notebook: R Markdown file with chunks of code that can be executed interactively, with output visible beneath the code</li>
@@ -324,13 +330,19 @@ Besides a simple R script, there are many other file types you can create:</p>
 <p>Scripts are opened as a tab in the script editor. You can open several scripts at the same time in RStudio.</p>
 
 <h5 id="running-a-script">Running a script</h5>
-<p>To run a script you select the code that you want to execute in the script editor and click the <strong>Run</strong> button at the top right of the script editor. 
-<img src="../../images/Rrun_script.png" alt="run_script" />
-The code will be executed in the console.</p>
+<p>To run a script you select the code that you want to execute in the script editor and click the <strong>Run</strong> button at the top right of the script editor.</p>
+
+<p><img src="../../images/Rrun_script.png" alt="run_script" /></p>
+
+<p>The code will be executed in the console.</p>
 
 <h5 id="saving-a-script">Saving a script</h5>
-<p>If there are unsaved changes in a script, the name of the script will be red and followed by an asterisk. To save the script click the <strong>Save</strong> button: <img src="../../images/Rsave_script.png" alt="save_script" />
-R scripts should have the extension .R 
+
+<p>If there are unsaved changes in a script, the name of the script will be red and followed by an asterisk. To save the script click the <strong>Save</strong> button:</p>
+
+<p><img src="../../images/Rsave_script.png" alt="save_script" /></p>
+
+<p>R scripts should have the extension .R 
 Once it is saved the asterisk disappears and the name becomes black.</p>
 
 <h3 id="the-console">The console</h3>
@@ -405,7 +417,9 @@ To remove all variables that have been generated in the RStudio session:</p>
 
 <h3 id="plots">Plots</h3>
 <p>Plots that are generated by the code you run will appear here.
-To save a plot click the <strong>Export</strong> button: <img src="../../images/Rexport_plot.png" alt="export_plot" /></p>
+To save a plot click the <strong>Export</strong> button:</p>
+
+<p><img src="../../images/Rexport_plot.png" alt="export_plot" /></p>
 
 <h3 id="packages">Packages</h3>
 <p>R is popular because of the enormous diversity of packages. R is essentially a modular environment and you install and load the modules (packages) you need. Packages are available at the <a href="https://cran.r-project.org/web/packages/available_packages_by_name.html">CRAN</a> and <a href="http://www.bioconductor.org/packages/release/BiocViews.html">Bioconductor</a> websites. 
@@ -421,9 +435,12 @@ Installing a package means that a copy of the package is downloaded and unzipped
 
 <h5 id="installing-r-packages">Installing R packages</h5>
 <p>Watch this <a href="https://www.youtube.com/watch?v=u1r5XTqrCTQ">video tutorial</a> on how to install CRAN packages. 
-When you have made changes to the right side of the Rstudio user interface (packages, files tab…), R is sometimes slow to show these changes. In that case hit the refresh button:
-<img src="../../images/Rrefresh_button.png" alt="refresh_button" />
-Some packages are not available on the CRAN site. Download in compressed format (as a .zip or .tar.gz file) from the source site. To install: select <strong>Install from Package Archive File (.zip; .tar.gz)</strong> in the <strong>Install Packages</strong> window and R will put it in the appropriate directory.</p>
+When you have made changes to the right side of the Rstudio user interface (packages, files tab…), R is sometimes slow to show these changes. In that case hit the refresh button:</p>
+
+<p><img src="../../images/Rrefresh_button.png" alt="refresh_button" /></p>
+
+<p>Some packages are not available on the CRAN site. Download in compressed format (as a .zip or .tar.gz file) from the source site. To install: select <strong>Install from Package Archive File (.zip; .tar.gz)</strong> in the <strong>Install Packages</strong> window and R will put it in the appropriate directory.</p>
+
 <figure id="figure-1"><img src="../../images/Rinstall_zip.png" alt="install_zip" /><figcaption><span class="figcaption-prefix">Figure 1:</span> Installing packages downloaded from their source site</figcaption></figure>
 
 <h5 id="installing-bioconductor-packages">Installing Bioconductor packages</h5>
@@ -513,13 +530,17 @@ Additional useful links:</p>
 Impossible values (e.g., dividing by zero) are represented by the symbol NaN (Not A Number).</p>
 
 <h3 id="arithmetic-operators">Arithmetic operators</h3>
-<p><img src="../../images/Rarithmetic_operators.png" alt="arithmetic_operators" />
-Arithmetic operators follow the standard <strong>order of priority</strong>, with exponentiation the highest and addition and subtraction the lowest priority, but you can control the order with <strong>parentheses</strong>. Do not use brackets as these are for other purposes in R.</p>
+
+<p><img src="../../images/Rarithmetic_operators.png" alt="arithmetic_operators" /></p>
+
+<p>Arithmetic operators follow the standard <strong>order of priority</strong>, with exponentiation the highest and addition and subtraction the lowest priority, but you can control the order with <strong>parentheses</strong>. Do not use brackets as these are for other purposes in R.</p>
 
 <h3 id="logical-operators">Logical operators</h3>
-<p>Logical operators can be used to selectively execute code based on certain conditions. They allow to create logical expressions (comparisons) that return TRUE or FALSE. 
-<img src="../../images/Rlogic_operators.png" alt="logic_operators" />
-Logical expressions may be combined using logical operators. The NOT operator (!) can be used to assess whether something is NOT the case.</p>
+<p>Logical operators can be used to selectively execute code based on certain conditions. They allow to create logical expressions (comparisons) that return TRUE or FALSE.</p>
+
+<p><img src="../../images/Rlogic_operators.png" alt="logic_operators" /></p>
+
+<p>Logical expressions may be combined using logical operators. The NOT operator (!) can be used to assess whether something is NOT the case.</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; x = 1
 &gt; y = 2   
@@ -532,25 +553,29 @@ Logical expressions may be combined using logical operators. The NOT operator (!
 &gt; !u             			NOT u: FALSE
 </code></pre></div></div>
 <blockquote class="notranslate hands_on">
-  <h5 id="hands_on-hands-on-exercise-2a"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 2a</h5>
+  <h3 id="hands_on-hands-on-exercise-2a"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 2a</h3>
 
-  <p>What’s the difference between x=2 and x==2 ?</p>
-  <blockquote class="solution">
-    <h5 id="solution-solution-answer"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> solution: answer</h5>
+  <blockquote class="question">
+    <h3 id="question-question"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
+    <p>What’s the difference between x=2 and x==2 ?</p>
 
-    <p>The = operator attributes a value to a variable (see next section), x becomes 2. 
-The == is a logical operator, testing whether the logical expression x equals 2 is TRUE or FALSE.</p>
+    <blockquote class="solution">
+      <h3 id="solution-solution"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+      <p>The = operator attributes a value to a variable (see next section), x becomes 2. 
+ The == is a logical operator, testing whether the logical expression x equals 2 is TRUE or FALSE.</p>
+    </blockquote>
   </blockquote>
+
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <h5 id="hands_on-hands-on-exercise-2b"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 2b</h5>
+  <h3 id="hands_on-hands-on-exercise-2b"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 2b</h3>
 
   <p>Check if the words UseR and user are equal.</p>
 </blockquote>
 
 <blockquote class="comment">
-  <h5 id="comment-r-is-case-sensitive"><i class="fa fa-commenting-o" aria-hidden="true"></i><span class="visually-hidden">comment</span> R is case sensitive</h5>
+  <h3 id="comment-r-is-case-sensitive"><i class="fa fa-commenting-o" aria-hidden="true"></i><span class="visually-hidden">comment</span> R is case sensitive</h3>
 
   <p>As exercise 2b showed R is indeed case sensitive.</p>
 </blockquote>
@@ -608,13 +633,13 @@ For example:</p>
 The function generates a plot so the plot <strong>p</strong> is the <strong>output</strong> of the function.</p>
 
 <blockquote class="notranslate hands_on">
-  <h5 id="hands_on-hands-on-demo-3"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Demo</h5>
+  <h3 id="hands_on-hands-on-demo-3"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Demo</h3>
 
   <p>From the demo script run the <strong>Assigning variables</strong> section</p>
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <h5 id="hands_on-hands-on-exercise-3a"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 3a</h5>
+  <h3 id="hands_on-hands-on-exercise-3a"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 3a</h3>
 
   <ol>
     <li>Create a variable called patients with value 42</li>
@@ -622,21 +647,23 @@ The function generates a plot so the plot <strong>p</strong> is the <strong>outp
     <li>Create a variable called patients_gr2 with value 24</li>
     <li>Print the total number of patients
       <blockquote class="solution">
-        <h5 id="solution-solution-answer-1"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> solution: answer</h5>
+        <h3 id="solution-solution-1"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
 
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &gt; patients &lt;- 42
- &gt; patients/2
- &gt; patients_gr2 &lt;- 24
- &gt; total_patients &lt;- patients + patients_gr2
- &gt; total_patients
-</code></pre></div>        </div>
+        <blockquote>
+          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>patients &lt;- 42
+patients/2
+patients_gr2 &lt;- 24
+total_patients &lt;- patients + patients_gr2
+total_patients
+</code></pre></div>          </div>
+        </blockquote>
       </blockquote>
       <blockquote class="question">
-        <h5 id="question-question"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h5>
+        <h3 id="question-question-1"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
         <p>What will happen when you run this code ?</p>
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &gt; "patients" &lt;- 42
- &gt; "patients"/2
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> "patients" &lt;- 42
+ "patients"/2
 </code></pre></div>        </div>
       </blockquote>
     </li>
@@ -644,13 +671,13 @@ The function generates a plot so the plot <strong>p</strong> is the <strong>outp
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <h5 id="hands_on-hands-on-exercise-3b"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 3b</h5>
+  <h3 id="hands_on-hands-on-exercise-3b"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 3b</h3>
 
   <p>Check the arguments of the mean() function.</p>
   <blockquote class="solution">
-    <h5 id="solution-solution-answer-2"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> solution: answer</h5>
+    <h3 id="solution-solution-2"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
 
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &gt; ?mean
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ?mean
 </code></pre></div>    </div>
   </blockquote>
 </blockquote>
@@ -661,37 +688,37 @@ To show the <strong>examples</strong> section instead of the full documentation 
 </code></pre></div></div>
 
 <blockquote class="notranslate hands_on">
-  <h5 id="hands_on-hands-on-exercise-3c"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 3c</h5>
+  <h3 id="hands_on-hands-on-exercise-3c"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 3c</h3>
 
   <p>Calculate and print the sum of patients and patients_gr2 using the sum() function.</p>
   <blockquote class="solution">
-    <h5 id="solution-solution-answer-3"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> solution: answer</h5>
+    <h3 id="solution-solution-answer"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> solution: answer</h3>
 
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &gt; sum(patients,patients_gr2)
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> sum(patients,patients_gr2)
 </code></pre></div>    </div>
   </blockquote>
   <blockquote class="question">
-    <h5 id="question-question-1"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h5>
+    <h3 id="question-question-2"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
     <p>Replace the sum() function with the mean() function. What happens ?</p>
     <blockquote class="solution">
-      <h5 id="solution-solution-answer-4"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> solution: answer</h5>
+      <h3 id="solution-solution-answer-1"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> solution: answer</h3>
       <p>Look at the help of the sum() function. What’s the first argument ? 
  Compare with the first argument of the mean() function</p>
     </blockquote>
   </blockquote>
   <blockquote class="question">
-    <h5 id="question-question-2"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h5>
+    <h3 id="question-question-3"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
     <p>Will the code below work ?</p>
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &gt; sum (patients,patients_gr2)
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> sum (patients,patients_gr2)
 </code></pre></div>    </div>
   </blockquote>
   <blockquote class="question">
-    <h5 id="question-question-3"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h5>
+    <h3 id="question-question-4"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
     <p>Will the code below work ?</p>
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &gt; sum ( patients , patients_gr2 )
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> sum ( patients , patients_gr2 )
 </code></pre></div>    </div>
   </blockquote>
 </blockquote>
@@ -699,20 +726,20 @@ To show the <strong>examples</strong> section instead of the full documentation 
 <p>Sometimes functions from different packages have the same name. In that case use <strong>package::function</strong> to specify the package you want to use, e.g. ggplot2::ggplot() where ggplot2 is the name of the package and ggplot() is the name of the function.</p>
 
 <blockquote class="notranslate hands_on">
-  <h5 id="hands_on-hands-on-extra-exercise-3d"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Extra exercise 3d</h5>
+  <h3 id="hands_on-hands-on-extra-exercise-3d"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Extra exercise 3d</h3>
 
   <p>Create a variable patients_gr3 with value “twenty” and print the total number of patients</p>
   <blockquote class="solution">
-    <h5 id="solution-solution-answer-5"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> solution: answer</h5>
+    <h3 id="solution-solution-3"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
 
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &gt; patients_gr3 &lt;- "twenty"
- &gt; patients + patients_gr3
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> patients_gr3 &lt;- "twenty"
+ patients + patients_gr3
 </code></pre></div>    </div>
   </blockquote>
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <h5 id="hands_on-hands-on-extra-exercise-3e"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Extra exercise 3e</h5>
+  <h3 id="hands_on-hands-on-extra-exercise-3e"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Extra exercise 3e</h3>
 
   <ol>
     <li>Create variable x with value 5</li>
@@ -721,14 +748,14 @@ To show the <strong>examples</strong> section instead of the full documentation 
     <li>Print x - y</li>
     <li>Print the product of x and y and add 2 to it
       <blockquote class="solution">
-        <h5 id="solution-solution-answer-6"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> solution: answer</h5>
+        <h3 id="solution-solution-4"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
 
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &gt; x &lt;- 5
- &gt; y &lt;- 2
- &gt; z &lt;- x+y
- &gt; z
- &gt; x-y
- &gt; x*y+2
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> x &lt;- 5
+ y &lt;- 2
+ z &lt;- x+y
+ z
+ x-y
+ x*y+2
 </code></pre></div>        </div>
       </blockquote>
     </li>
@@ -736,7 +763,7 @@ To show the <strong>examples</strong> section instead of the full documentation 
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <h5 id="hands_on-hands-on-extra-exercise-3f"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Extra exercise 3f</h5>
+  <h3 id="hands_on-hands-on-extra-exercise-3f"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Extra exercise 3f</h3>
 
   <p>What is the difference between 
 correctLogic &lt;- TRUE<br />
@@ -744,7 +771,7 @@ incorrectLogic &lt;- “TRUE”</p>
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <h5 id="hands_on-hands-on-extra-exercise-3g"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Extra exercise 3g</h5>
+  <h3 id="hands_on-hands-on-extra-exercise-3g"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Extra exercise 3g</h3>
 
   <p>Is there a difference between 
 name &lt;- “Janick” 

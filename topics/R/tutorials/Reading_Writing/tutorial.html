@@ -154,7 +154,7 @@
       "url": "https://www.bits.vib.be"
     }
   },
-  "url": "https://vibbits.github.io//training-material/topics/R/tutorials/Reading_Writing/tutorial.html",
+  "url": "http://10.132.0.3:4000/training-material/topics/R/tutorials/Reading_Writing/tutorial.html",
   "timeRequired": "PT30M",
   "description": "Reading and writing data\\nThe questions this  addresses are:\n - How to import your data into RStudio?\n - How to write a variable to a file?\n\n\\nThe objectives are:\n - learn how to read text files on your computer using R\n - learn how to write variables in R to a file on your computer\n\n",
   "hasPart": [
@@ -180,7 +180,7 @@
       "@type": "CreativeWork",
       "name": "Introduction to R",
       "description": "Introduction to R",
-      "url": "https://vibbits.github.io//training-material/topics/R/"
+      "url": "http://10.132.0.3:4000/training-material/topics/R/"
     }
   ]
 }
@@ -258,11 +258,11 @@
 
 <p>There is a manual available in the R documentation called <strong>R Data Import/Export</strong>. It’s accessible using help.start() and covers in detail the functionality R has to import and export data. Reading this is highly recommended. This manual covers importing data from spreadsheets, text files, and networks.</p>
 
-<h5 id="reading-text-files">Reading text files</h5>
+<h3 id="reading-text-files">Reading text files</h3>
 <p>Most instruments put out data in text format: tab-delimited text (.txt) or comma-separated value files (.csv). Both  can be easily opened in R.</p>
 
 <p>The most convenient method to import data into R is to use the read functions, like read.table(). These functions can read data in a text file. In Notepad you can save such a file as a regular text file (extension .txt). Many spreadsheet programs can save data in this format. Reading means opening the file and storing its content into a data frame.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; read.table(file,header=FALSE,sep="",dec=?.?,skip=0,comment.char="#")
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>read.table(file,header=FALSE,sep="",dec=?.?,skip=0,comment.char="#")
 </code></pre></div></div>
 
 <p>This function has a long list of arguments, the most important ones are:</p>
@@ -280,13 +280,13 @@
 
 <p>There are functions to read specific file formats like .csv or tab-delimited .txt files. In the documentation of read.table() you see that these functions are called read.csv() and read.delim().  Both functions call read.table(), but with a bunch of arguments already set.  Specifically they set up <em>sep</em> to be a tab or a comma, and they set <em>header=TRUE</em>.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; read.delim(file,header=TRUE,sep="\t")
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>read.delim(file,header=TRUE,sep="\t")
 </code></pre></div></div>
 <p>On the documentation page, you see that these functions each have two variants that have different default settings for the arguments they take:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; read.csv(   file,header=TRUE,sep= ",",dec=".", ...)
-&gt; read.csv2(  file,header=TRUE,sep= ";",dec=",", ...)
-&gt; read.delim( file,header=TRUE,sep="\t",dec=".", ...)
-&gt; read.delim2(file,header=TRUE,sep="\t",dec=",", ...)
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>read.csv(   file,header=TRUE,sep= ",",dec=".", ...)
+read.csv2(  file,header=TRUE,sep= ";",dec=",", ...)
+read.delim( file,header=TRUE,sep="\t",dec=".", ...)
+read.delim2(file,header=TRUE,sep="\t",dec=",", ...)
 </code></pre></div></div>
 <p>Originally the CSV format was designed to hold data values separated by commas. In .csv files that are made on American computers this is the case. However, in Europe the comma was already used as a decimal separator. This is why .csv files that are made on a European computer use the semicolon as a separator.</p>
 
@@ -337,7 +337,7 @@
   <p>From the demo script run the <strong>Reading files</strong> section</p>
 </blockquote>
 
-<blockquote>
+<blockquote class="notranslate hands_on">
   <h5 id="hands_on-hands-on-exercise-17a"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 17a</h5>
 
   <ol>
@@ -345,63 +345,55 @@
     <li>Rename the two last columns Ct1 and Ct2</li>
     <li>Create a new column containing the average Ct: (Ct1+Ct2)/2
       <blockquote class="solution">
-        <h5 id="solution-solution-answer"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> solution: answer</h5>
+        <h3 id="solution-solution"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
 
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &gt; GeneEx &lt;- read.csv2("Rdata/GeneEx.csv")
- &gt; colnames(GeneEx)[c(3,4)] &lt;- c("Ct1","Ct2")
- &gt; GeneEx$Average_Ct &lt;- (GeneEx$Ct1 + GeneEx$Ct2)/2
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> GeneEx &lt;- read.csv2("Rdata/GeneEx.csv")
+ colnames(GeneEx)[c(3,4)] &lt;- c("Ct1","Ct2")
+ GeneEx$Average_Ct &lt;- (GeneEx$Ct1 + GeneEx$Ct2)/2
 </code></pre></div>        </div>
       </blockquote>
-      <blockquote>
-        <h5 id="question-question"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h5>
+      <blockquote class="question">
+        <h3 id="question-question"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
-        <p>Which of these 2 commands will work ?
-```</p>
-        <blockquote>
-          <p>GeneEx &lt;- read.csv2(“Rdata/GeneEx”)
-GeneEx &lt;- read.csv2(“http://data.bits.vib.be/pub/trainingen/RIntro/GeneEx.csv”)</p>
-        </blockquote>
+        <p>Which of these 2 commands will work ?</p>
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> GeneEx &lt;- read.csv2("Rdata/GeneEx")
+ GeneEx &lt;- read.csv2("http://data.bits.vib.be/pub/trainingen/RIntro/GeneEx.csv")
+</code></pre></div>        </div>
+      </blockquote>
+      <blockquote class="question">
+        <h3 id="question-question-1"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
+
+        <p>Which of these 2 commands will work ?</p>
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> names(GeneEx[c(3,4)]) &lt;- c("Ct11","Ct21")
+ names(GeneEx)[3:4] &lt;- c("Ct11","Ct21")
+</code></pre></div>        </div>
+      </blockquote>
+      <blockquote class="question">
+        <h3 id="question-question-2"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
+
+        <p>What’s the difference in result between these 2 commands ?</p>
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GeneEx$Average_Ct2 &lt;- (GeneEx$Ct1+GeneEx[4])/2
+GeneEx[5] &lt;- (GeneEx[3]+GeneEx[4])/2
+</code></pre></div>        </div>
+      </blockquote>
+      <blockquote class="question">
+        <h3 id="question-question-3"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
+
+        <p>Can you use sum() instead of + ?</p>
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sum(GeneEx$Ct1,GeneEx$Ct2)
+(GeneEx$Ct1+GeneEx$Ct2)
+</code></pre></div>        </div>
+      </blockquote>
+      <blockquote class="question">
+        <h3 id="question-question-4"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
+
+        <p>Can you use mean() instead of +/2 ?</p>
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mean(GeneEx$Ct1,GeneEx$Ct2)
+mean(GeneEx$Ct1)
+</code></pre></div>        </div>
       </blockquote>
     </li>
   </ol>
-</blockquote>
-
-<blockquote class="notranslate hands_on">
-  <blockquote class="question">
-    <p>```</p>
-  </blockquote>
-  <blockquote class="question">
-    <h5 id="question-question-1"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h5>
-
-    <p>Which of these 2 commands will work ?</p>
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &gt; names(GeneEx[c(3,4)]) &lt;- c("Ct11","Ct21")
- &gt; names(GeneEx)[3:4] &lt;- c("Ct11","Ct21")
-</code></pre></div>    </div>
-  </blockquote>
-  <blockquote class="question">
-    <h5 id="question-question-2"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h5>
-
-    <p>What’s the difference in result between these 2 commands ?</p>
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &gt; GeneEx$Average_Ct2 &lt;- (GeneEx$Ct1+GeneEx[4])/2
- &gt; GeneEx[5] &lt;- (GeneEx[3]+GeneEx[4])/2
-</code></pre></div>    </div>
-  </blockquote>
-  <blockquote class="question">
-    <h5 id="question-question-3"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h5>
-
-    <p>Can you use sum() instead of + ?</p>
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &gt; sum(GeneEx$Ct1,GeneEx$Ct2)
- &gt; (GeneEx$Ct1+GeneEx$Ct2)
-</code></pre></div>    </div>
-  </blockquote>
-  <blockquote class="question">
-    <h5 id="question-question-4"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h5>
-
-    <p>Can you use mean() instead of +/2 ?</p>
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &gt; mean(GeneEx$Ct1,GeneEx$Ct2)
- &gt; mean(GeneEx$Ct1)
-</code></pre></div>    </div>
-  </blockquote>
 </blockquote>
 
 <h5 id="reading-other-files">Reading other files</h5>
@@ -409,7 +401,7 @@ GeneEx &lt;- read.csv2(“http://data.bits.vib.be/pub/trainingen/RIntro/GeneEx.c
 
 <h3 id="writing-files">Writing files</h3>
 <p>Reversely, to write a data frame to a file you can use the generic function:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; write.table(x,file=?name.txt?,quote=TRUE,row.names=TRUE,col.names=TRUE)
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>write.table(x,file=?name.txt?,quote=TRUE,row.names=TRUE,col.names=TRUE)
 </code></pre></div></div>
 <p>This function has a long list of arguments, the most important ones are:</p>
 <ul>
@@ -432,7 +424,7 @@ GeneEx &lt;- read.csv2(“http://data.bits.vib.be/pub/trainingen/RIntro/GeneEx.c
 <p>Excel can read .csv files but if you really want to write .xls or .xlsx files use the openxlsx package.</p>
 
 <blockquote class="notranslate hands_on">
-  <h5 id="hands_on-hands-on-exercise-17b"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 17b</h5>
+  <h3 id="hands_on-hands-on-exercise-17b"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 17b</h3>
 
   <ol>
     <li>Read the file <a href="http://data.bits.vib.be/pub/trainingen/RIntro/RNASeqDE.txt">RNASeqDE.txt</a> into a data frame called DE. It contains the differentially expressed genes from an RNA-Seq experiment.</li>
@@ -442,49 +434,49 @@ GeneEx &lt;- read.csv2(“http://data.bits.vib.be/pub/trainingen/RIntro/GeneEx.c
     <li>What is the data of the gene with the lowest adjusted p-value (= padj)?</li>
     <li>Write the Ensembl IDs (= row names) of the upregulated genes to a file called up.txt. You will use this file for functional enrichment analysis using online tools like ToppGene,EnrichR? These tools want a file with only Ensembl IDs as input (one per line, no double quotes, no column headers, no row names).
       <blockquote class="solution">
-        <h5 id="solution-solution-answer-1"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> solution: answer</h5>
+        <h3 id="solution-solution-1"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
 
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &gt; DE &lt;- read.table("Rdata/RNASeqDE.txt",header=TRUE)
- &gt; up &lt;- DE[DE$log2FoldChange &gt; 0,]
- &gt; down &lt;- DE[DE$log2FoldChange &lt; 0,]
- &gt; nrow(up) 
- &gt; nrow(down)
- &gt; rownames(up[which.max(up$log2FoldChange),])
- &gt; DE[which.min(DE$padj),]
- &gt; write.table(rownames(up),file="up.txt",quote=FALSE,col.names=FALSE,row.names=FALSE)
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> DE &lt;- read.table("Rdata/RNASeqDE.txt",header=TRUE)
+ up &lt;- DE[DE$log2FoldChange &gt; 0,]
+ down &lt;- DE[DE$log2FoldChange &lt; 0,]
+ nrow(up) 
+ nrow(down)
+ rownames(up[which.max(up$log2FoldChange),])
+ DE[which.min(DE$padj),]
+ write.table(rownames(up),file="up.txt",quote=FALSE,col.names=FALSE,row.names=FALSE)
 </code></pre></div>        </div>
       </blockquote>
       <blockquote class="question">
-        <h5 id="question-question-5"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h5>
+        <h3 id="question-question-5"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
         <p>Which of the following 2 commands will not work properly ?</p>
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &gt; DE &lt;- read.table("Rdata/RNASeqDE.txt")
- &gt; file &lt;- file.choose()
- &gt; DE &lt;- read.table(file,header=TRUE)
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> DE &lt;- read.table("Rdata/RNASeqDE.txt")
+ file &lt;- file.choose()
+ DE &lt;- read.table(file,header=TRUE)
 </code></pre></div>        </div>
       </blockquote>
       <blockquote class="question">
-        <h5 id="question-question-6"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h5>
+        <h3 id="question-question-6"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
         <p>Will the following command work ?</p>
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &gt; up &lt;- subset(DE,log2FoldChange &gt; 0)
- &gt; 
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> up &lt;- subset(DE,log2FoldChange &gt; 0)
+ 
 </code></pre></div>        </div>
       </blockquote>
       <blockquote class="question">
-        <h5 id="question-question-7"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h5>
+        <h3 id="question-question-7"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
         <p>What’s the difference between these 2 commands ?</p>
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &gt; which.max(up$log2FoldChange)
- &gt; max(up$log2FoldChange)
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> which.max(up$log2FoldChange)
+ max(up$log2FoldChange)
 </code></pre></div>        </div>
       </blockquote>
       <blockquote class="question">
-        <h5 id="question-question-8"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h5>
+        <h3 id="question-question-8"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
         <p>Will this command write Ensembl IDs and log fold changes ?</p>
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &gt; toprint &lt;- as.data.frame(up$log2FoldChange)
- &gt; write.table(toprint,file="up.txt",quote=FALSE,col.names=FALSE)
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> toprint &lt;- as.data.frame(up$log2FoldChange)
+ write.table(toprint,file="up.txt",quote=FALSE,col.names=FALSE)
 </code></pre></div>        </div>
       </blockquote>
     </li>
@@ -492,17 +484,17 @@ GeneEx &lt;- read.csv2(“http://data.bits.vib.be/pub/trainingen/RIntro/GeneEx.c
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <h5 id="hands_on-hands-on-extra-exercise-17c"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Extra exercise 17c</h5>
+  <h3 id="hands_on-hands-on-extra-exercise-17c"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Extra exercise 17c</h3>
 
   <p>Which type of files are imported by read.delim ?</p>
   <blockquote class="solution">
-    <h5 id="solution-solution-answer-2"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> solution: answer</h5>
+    <h3 id="solution-solution-2"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
     <p>Check the documentation and look at the default for <em>sep</em></p>
   </blockquote>
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <h5 id="hands_on-hands-on-extra-exercise-17d"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Extra exercise 17d</h5>
+  <h3 id="hands_on-hands-on-extra-exercise-17d"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Extra exercise 17d</h3>
 
   <ol>
     <li>Read the file <a href="http://data.bits.vib.be/pub/trainingen/RIntro/ALLphenoData.tsv">ALLphenoData.tsv</a> into a variable called pdata using one of the read functions</li>
@@ -510,14 +502,12 @@ GeneEx &lt;- read.csv2(“http://data.bits.vib.be/pub/trainingen/RIntro/GeneEx.c
     <li>What are the names of the columns of pdata ?</li>
     <li>How many rows and columns are in pdata ?
       <blockquote class="solution">
-        <h5 id="solution-solution-answer-3"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> solution: answer</h5>
-        <p>```</p>
-        <blockquote>
-          <p>pdata &lt;- read.delim(“Rdata/ALLphenoData.tsv”)
-class(pdata)
-colnames(pdata)
-dim(pdata)</p>
-        </blockquote>
+        <h3 id="solution-solution-3"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> pdata &lt;- read.delim("Rdata/ALLphenoData.tsv")
+ class(pdata)
+ colnames(pdata)
+ dim(pdata)
+</code></pre></div>        </div>
       </blockquote>
     </li>
   </ol>
