@@ -29,12 +29,12 @@ Entering data in R can be done by typing the values when you create a variable. 
 
 There is a manual available in the R documentation called **R Data Import/Export**. It's accessible using help.start() and covers in detail the functionality R has to import and export data. Reading this is highly recommended. This manual covers importing data from spreadsheets, text files, and networks.
 
-##### Reading text files
+### Reading text files
 Most instruments put out data in text format: tab-delimited text (.txt) or comma-separated value files (.csv). Both  can be easily opened in R. 
 
 The most convenient method to import data into R is to use the read functions, like read.table(). These functions can read data in a text file. In Notepad you can save such a file as a regular text file (extension .txt). Many spreadsheet programs can save data in this format. Reading means opening the file and storing its content into a data frame.
 ```
-> read.table(file,header=FALSE,sep="",dec=?.?,skip=0,comment.char="#")
+read.table(file,header=FALSE,sep="",dec=?.?,skip=0,comment.char="#")
 ```
 
 This function has a long list of arguments, the most important ones are:
@@ -51,14 +51,14 @@ See the documentation for an overview of all the arguments. The output of every 
 There are functions to read specific file formats like .csv or tab-delimited .txt files. In the documentation of read.table() you see that these functions are called read.csv() and read.delim().  Both functions call read.table(), but with a bunch of arguments already set.  Specifically they set up *sep* to be a tab or a comma, and they set *header=TRUE*.  
 
 ```
-> read.delim(file,header=TRUE,sep="\t")
+read.delim(file,header=TRUE,sep="\t")
 ```
 On the documentation page, you see that these functions each have two variants that have different default settings for the arguments they take:
 ```
-> read.csv(   file,header=TRUE,sep= ",",dec=".", ...)
-> read.csv2(  file,header=TRUE,sep= ";",dec=",", ...)
-> read.delim( file,header=TRUE,sep="\t",dec=".", ...)
-> read.delim2(file,header=TRUE,sep="\t",dec=",", ...)
+read.csv(   file,header=TRUE,sep= ",",dec=".", ...)
+read.csv2(  file,header=TRUE,sep= ";",dec=",", ...)
+read.delim( file,header=TRUE,sep="\t",dec=".", ...)
+read.delim2(file,header=TRUE,sep="\t",dec=",", ...)
 ```
 Originally the CSV format was designed to hold data values separated by commas. In .csv files that are made on American computers this is the case. However, in Europe the comma was already used as a decimal separator. This is why .csv files that are made on a European computer use the semicolon as a separator. 
 
@@ -112,54 +112,53 @@ If you want to view the data frame you can **click its name in the Environment**
 > 1. Import the file [GeneEx.csv](http://data.bits.vib.be/pub/trainingen/RIntro/GeneEx.csv) into a data frame called GeneEx
 > 2. Rename the two last columns Ct1 and Ct2
 > 3. Create a new column containing the average Ct: (Ct1+Ct2)/2
->    > ##### {% icon solution %} solution: answer
+>    > ### {% icon solution %} Solution
 >    >
 >    >  ```
->    >  > GeneEx <- read.csv2("Rdata/GeneEx.csv")
->    >  > colnames(GeneEx)[c(3,4)] <- c("Ct1","Ct2")
->    >  > GeneEx$Average_Ct <- (GeneEx$Ct1 + GeneEx$Ct2)/2
+>    >  GeneEx <- read.csv2("Rdata/GeneEx.csv")
+>    >  colnames(GeneEx)[c(3,4)] <- c("Ct1","Ct2")
+>    >  GeneEx$Average_Ct <- (GeneEx$Ct1 + GeneEx$Ct2)/2
 >    >  ```
 >    {: .solution}
->    >##### {% icon question %} Question
+>    > ### {% icon question %} Question
 >    >
 >    >  Which of these 2 commands will work ?
 >    > ```
->    >  > GeneEx <- read.csv2("Rdata/GeneEx")
->    >  > GeneEx <- read.csv2("http://data.bits.vib.be/pub/trainingen/RIntro/GeneEx.csv")
-
+>    >  GeneEx <- read.csv2("Rdata/GeneEx")
+>    >  GeneEx <- read.csv2("http://data.bits.vib.be/pub/trainingen/RIntro/GeneEx.csv")
 >    >  ```
 >    {: .question}
->    >##### {% icon question %} Question
+>    > ### {% icon question %} Question
 >    >
 >    > Which of these 2 commands will work ?
->    > ```
->    >  > names(GeneEx[c(3,4)]) <- c("Ct11","Ct21")
->    >  > names(GeneEx)[3:4] <- c("Ct11","Ct21")
+>    >  ```
+>    >  names(GeneEx[c(3,4)]) <- c("Ct11","Ct21")
+>    >  names(GeneEx)[3:4] <- c("Ct11","Ct21")
 >    >  ```
 >    {: .question}
->    >##### {% icon question %} Question
+>    > ### {% icon question %} Question
 >    >
 >    > What's the difference in result between these 2 commands ?
 >    > ```
->    >  > GeneEx$Average_Ct2 <- (GeneEx$Ct1+GeneEx[4])/2
->    >  > GeneEx[5] <- (GeneEx[3]+GeneEx[4])/2
->    >  ```
+>    > GeneEx$Average_Ct2 <- (GeneEx$Ct1+GeneEx[4])/2
+>    > GeneEx[5] <- (GeneEx[3]+GeneEx[4])/2
+>    > ```
 >    {: .question}
->    >##### {% icon question %} Question
+>    > ### {% icon question %} Question
 >    >
 >    > Can you use sum() instead of + ?
 >    > ```
->    >  > sum(GeneEx$Ct1,GeneEx$Ct2)
->    >  > (GeneEx$Ct1+GeneEx$Ct2)
->    >  ```
+>    > sum(GeneEx$Ct1,GeneEx$Ct2)
+>    > (GeneEx$Ct1+GeneEx$Ct2)
+>    > ```
 >    {: .question}
->    >##### {% icon question %} Question
+>    > ### {% icon question %} Question
 >    >
 >    > Can you use mean() instead of +/2 ?
 >    > ```
->    >  > mean(GeneEx$Ct1,GeneEx$Ct2)
->    >  > mean(GeneEx$Ct1)
->    >  ```
+>    > mean(GeneEx$Ct1,GeneEx$Ct2)
+>    > mean(GeneEx$Ct1)
+>    > ```
 >    {: .question}
 {: .hands_on}
 
@@ -169,7 +168,7 @@ Also of note is an R package called **foreign**. This package contains functiona
 ### Writing files
 Reversely, to write a data frame to a file you can use the generic function:
 ```
-> write.table(x,file=?name.txt?,quote=TRUE,row.names=TRUE,col.names=TRUE)
+write.table(x,file=?name.txt?,quote=TRUE,row.names=TRUE,col.names=TRUE)
 ```
 This function has a long list of arguments, the most important ones are:
 - *x*: data frame to be written to a file
@@ -190,7 +189,7 @@ To specifically write .csv files use write.csv() or write.csv2(). See the help f
 Excel can read .csv files but if you really want to write .xls or .xlsx files use the openxlsx package.  
 
 
-> ##### {% icon hands_on %} Hands-on: Exercise 17b
+> ### {% icon hands_on %} Hands-on: Exercise 17b
 >
 > 1. Read the file [RNASeqDE.txt](http://data.bits.vib.be/pub/trainingen/RIntro/RNASeqDE.txt) into a data frame called DE. It contains the differentially expressed genes from an RNA-Seq experiment.  
 > 2. Split the table into a table of upregulated genes (log2foldchange > 0) and a table of downregulated genes and store them in data frames called up and down.
@@ -198,73 +197,74 @@ Excel can read .csv files but if you really want to write .xls or .xlsx files us
 > 4. What is the gene with the highest log2 fold change?
 > 5. What is the data of the gene with the lowest adjusted p-value (= padj)?
 > 6. Write the Ensembl IDs (= row names) of the upregulated genes to a file called up.txt. You will use this file for functional enrichment analysis using online tools like ToppGene,EnrichR? These tools want a file with only Ensembl IDs as input (one per line, no double quotes, no column headers, no row names).
->    > ##### {% icon solution %} solution: answer
+>    > ### {% icon solution %} Solution
 >    >
 >    >  ```
->    >  > DE <- read.table("Rdata/RNASeqDE.txt",header=TRUE)
->    >  > up <- DE[DE$log2FoldChange > 0,]
->    >  > down <- DE[DE$log2FoldChange < 0,]
->    >  > nrow(up) 
->    >  > nrow(down)
->    >  > rownames(up[which.max(up$log2FoldChange),])
->    >  > DE[which.min(DE$padj),]
->    >  > write.table(rownames(up),file="up.txt",quote=FALSE,col.names=FALSE,row.names=FALSE)
+>    >  DE <- read.table("Rdata/RNASeqDE.txt",header=TRUE)
+>    >  up <- DE[DE$log2FoldChange > 0,]
+>    >  down <- DE[DE$log2FoldChange < 0,]
+>    >  nrow(up) 
+>    >  nrow(down)
+>    >  rownames(up[which.max(up$log2FoldChange),])
+>    >  DE[which.min(DE$padj),]
+>    >  write.table(rownames(up),file="up.txt",quote=FALSE,col.names=FALSE,row.names=FALSE)
 >    >  ```
 >    {: .solution}
->    > ##### {% icon question %} Question
+>    > ### {% icon question %} Question
 >    >
 >    > Which of the following 2 commands will not work properly ?
 >    > ```
->    >  > DE <- read.table("Rdata/RNASeqDE.txt")
->    >  > file <- file.choose()
->    >  > DE <- read.table(file,header=TRUE)
+>    >  DE <- read.table("Rdata/RNASeqDE.txt")
+>    >  file <- file.choose()
+>    >  DE <- read.table(file,header=TRUE)
 >    >  ```
 >    {: .question}
->    > ##### {% icon question %} Question
+>    > ### {% icon question %} Question
 >    >
 >    > Will the following command work ?
 >    > ```
->    >  > up <- subset(DE,log2FoldChange > 0)
->    >  > 
+>    >  up <- subset(DE,log2FoldChange > 0)
+>    >  
 >    >  ```
 >    {: .question}
->    > ##### {% icon question %} Question
+>    > ### {% icon question %} Question
 >    >
 >    > What's the difference between these 2 commands ?
->    > ```
->    >  > which.max(up$log2FoldChange)
->    >  > max(up$log2FoldChange)
+>    >  ```
+>    >  which.max(up$log2FoldChange)
+>    >  max(up$log2FoldChange)
 >    >  ```
 >    {: .question}
->    > ##### {% icon question %} Question
+>    > ### {% icon question %} Question
 >    >
 >    > Will this command write Ensembl IDs and log fold changes ?
 >    > ```
->    >  > toprint <- as.data.frame(up$log2FoldChange)
->    >  > write.table(toprint,file="up.txt",quote=FALSE,col.names=FALSE)
+>    >  toprint <- as.data.frame(up$log2FoldChange)
+>    >  write.table(toprint,file="up.txt",quote=FALSE,col.names=FALSE)
 >    >  ```
 >    {: .question}
 {: .hands_on}
 
-> ##### {% icon hands_on %} Hands-on: Extra exercise 17c
+> ### {% icon hands_on %} Hands-on: Extra exercise 17c
 >
 > Which type of files are imported by read.delim ? 
->    > ##### {% icon solution %} solution: answer
+>    > ### {% icon solution %} Solution
 >    > Check the documentation and look at the default for *sep* 
 >    {: .solution}
 {: .hands_on}
 
-> ##### {% icon hands_on %} Hands-on: Extra exercise 17d
+> ### {% icon hands_on %} Hands-on: Extra exercise 17d
 >
 > 1. Read the file [ALLphenoData.tsv](http://data.bits.vib.be/pub/trainingen/RIntro/ALLphenoData.tsv) into a variable called pdata using one of the read functions
 > 2. What type of data structure is pdata ?
 > 3. What are the names of the columns of pdata ?
 > 4. How many rows and columns are in pdata ? 
->    > ##### {% icon solution %} solution: answer
+>    > ### {% icon solution %} Solution
 >    >  ```
->    >  > pdata <- read.delim("Rdata/ALLphenoData.tsv")
->    >  > class(pdata)
->    >  > colnames(pdata)
->    >  > dim(pdata)
+>    >  pdata <- read.delim("Rdata/ALLphenoData.tsv")
+>    >  class(pdata)
+>    >  colnames(pdata)
+>    >  dim(pdata)
+>    >  ``` 
 >    {: .solution}
 {: .hands_on}
