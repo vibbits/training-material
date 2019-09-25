@@ -3,7 +3,7 @@ name: "qbase-plus"
 type: "basics"
 category: "software"
 title: "QPCR analysis using qbase+"
-summary: "Bioinformatics Introduction"
+summary: "QPCR analysis using qbase+"
 requirements:
 
 maintainers:
