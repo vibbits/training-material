@@ -119,7 +119,7 @@ You can provide names (labels) for the columns:
 > ##### {% icon comment %} Comment
 >
 > As an argument of data.frame() you use label=vector_to_add: the equals (and not the assignment) operator is used because you are naming columns not creating new variables. 
-If you don’t define labels (as in the first example), the names of the vector names are used as column names. 
+If you don't define labels (as in the first example), the names of the vector names are used as column names. 
 {: .comment}
 
 > ##### {% icon hands_on %} Hands-on: Demo
@@ -198,7 +198,7 @@ To select all values from one dimension leave the index blank, e.g. all elements
 
 > ##### {% icon comment %} Comment
 >
-> If you want to retrieve **all** the rows you don’t write any index before the comma inside the square brackets.
+> If you want to retrieve **all** the rows you don?t write any index before the comma inside the square brackets.
 {: .comment}
 
 You can also use column labels for retrieving elements. Column names have to be written between quotes:

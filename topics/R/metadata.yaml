@@ -1,10 +1,10 @@
 ---
 name: "R"
 type: "basics"
-category: "statistics"
-title: "data analysis in R"
-summary: "Statistics and bioinformatics analyses in R"
+category: "programming"
+title: "Introduction to R"
+summary: "Introduction to R"
 requirements:
 
 maintainers:
-  - janick-bits
+  - janick-bits 
