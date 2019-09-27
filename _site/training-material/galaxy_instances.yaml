@@ -1,0 +1,5 @@
+# You can reference these in the metadata of your tutorial
+---
+galaxies:
+    - name: usegalaxy
+      url: https://usegalaxy.org/

@@ -1,0 +1,1494 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>VIB Bioinformatics Core</title>
+        
+        <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
+        <link rel="stylesheet" href="/training-material/assets/css/bootstrap-toc.min.css">
+        <link rel="stylesheet" href="/training-material/assets/css/main.css?v=2">
+        <link rel="stylesheet" href="/training-material/assets/css/font-awesome.css">
+        <link rel="stylesheet" href="/training-material/assets/css/VIB.css">
+        <link rel="stylesheet" href="/training-material/assets/css/academicons.css">
+        <link rel="stylesheet" href="/training-material/assets/css/syntax_highlighting.css">
+        <link rel="shortcut icon" href="/training-material/favicon.ico" type="image/x-icon" />
+
+        
+        
+        
+        
+        
+        <meta name="description" content="Analyzing the protein structure of your protein-of-intere..." />
+        <meta property="og:title" content="VIB Bioinformatics Training: Protein Structure Analysis" />
+        <meta property="og:description" content="Analyzing the protein structure of your protein-of-intere..." />
+        <meta property="og:image" content="/training-material/assets/images/bioinformatics_core_rgb_neg.png" />
+    </head>
+    <body data-spy="scroll" data-target="#toc">
+        <div class="container main-content">
+
+<header class="well row">
+    <div id="logo" class="col-md-3 col-lg-2 text-center">
+       <a href="/training-material/">
+           <img src="/training-material/assets/images/vib_notag_neg_rgb.jpg" height="50" alt
+="VIB logo" class="margin20">
+       </a>
+    </div>
+    <div class="col-md-3 col-lg-8 text-center">
+                <h2>Bioinformatics Training</h2>
+                <h5>Collection of courses developed and maintained by VIB Bioinformatics Core</h5>
+    </div>
+    <div class="col-md-3 col-lg-2 text-right form-group label-floating" id="help">
+       
+    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Help">
+        <i class="fa fa-life-ring" aria-hidden="true"></i><span class="visually-hidden">help</span> Help
+    </a>
+    <div class="dropdown-menu dropdown-menu-right">
+        <form method="get" action="https://tess.elixir-europe.org/materials">
+            <input type="text" id="search" name="q" value="" style="margin-left: 0.5em;/*! border-radius: 0px; */">
+            <input type="hidden" value="VIB Bioinformatics Core" name="content_provider">
+            <input type="submit" value="Search on TeSS" style="width: 92%;border-radius: 0px;margin: 0.5em;background: #f47d20;border: 0px;padding: 0.25em;" class="">
+        </form>
+
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="https://www.bits.vib.be" title="Contact us">
+            Contact us 
+        </a>
+    </div>
+
+
+    </div>
+</header>
+
+
+
+
+
+
+
+       
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Protein Structure Analysis</h1>
+        <p>Analyzing the protein structure of your protein-of-interest can be advantageous in multiple ways. It can help you discover regions which are good candidates to interact with other proteins. It can help you discover new domains. It can help with identifying differences with homologuous proteins and a lot more.</p>
+
+        
+        
+        
+        <h2 id="extra">Extra</h2>
+        <p>text</p>
+
+        <p>
+            
+additional HTML formatted text could be inserted as well
+
+technical setup of the course could be included or we develop a semiautomated mechanism or we add it as a lesson 
+
+
+        </p>
+        
+
+        <h2 id="material">Material</h2>
+        <table class="table table-responsive table-striped">
+            <tr>
+                <th>Lesson</th>
+                <th>Slides</th>
+                <th>Hands-on</th>
+
+                
+
+                
+            </tr>
+
+            
+                
+                        <script type="application/ld+json">
+                            
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "headline": "Protein Structure Analysis",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "/blob//LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "courseCode": "protein-structure-analysis / introduction / ",
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "Protein Structure Analysis",
+    "description": "Analyzing the protein structure of your protein-of-interest can be advantageous in multiple ways. It can help you discover regions which are good candidates to interact with other proteins. It can help you discover new domains. It can help with identifying differences with homologuous proteins and a lot more.",
+    "url": "http://10.132.0.3:4000/training-material/topics/protein-structure-analysis/"
+  },
+  "learningResourceType": "slides",
+  "name": "Introduction to 'Protein Structure Analysis'",
+  "url": "http://10.132.0.3:4000/training-material",
+  "description": "Protein Structure Analysis",
+  "hasPart": [
+
+  ],
+  "mentions": [
+
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Alexander Botzki"
+    },
+    {
+      "@type": "Person",
+      "name": "Joost Van Durme"
+    },
+    {
+      "@type": "Person",
+      "name": "Janick Mathys"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Alexander Botzki"
+    },
+    {
+      "@type": "Person",
+      "name": "Joost Van Durme"
+    },
+    {
+      "@type": "Person",
+      "name": "Janick Mathys"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "Protein Structure Analysis",
+      "description": "Analyzing the protein structure of your protein-of-interest can be advantageous in multiple ways. It can help you discover regions which are good candidates to interact with other proteins. It can help you discover new domains. It can help with identifying differences with homologuous proteins and a lot more.",
+      "url": "http://10.132.0.3:4000/training-material/topics/protein-structure-analysis/"
+    }
+  ]
+}
+                        </script>
+                    <tr>
+                        <td>
+                            Protein Structure Analysis
+                            <div class="">
+                            
+                            
+                        </div>
+                        </td>
+                        
+                            <td>
+                                
+                                <a class="topic-icon" href="/training-material/topics/protein-structure-analysis/slides/introduction.html">
+                                  <i class="fa fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
+                                </a>
+                                
+                            </td>
+                            <td></td>
+                            
+                            
+                        
+                    </tr>
+                
+            
+                
+                        <script type="application/ld+json">
+                            
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "headline": "01 Exploring the Protein Data Bank exercises",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "/blob//LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "courseCode": "protein-structure-analysis / explore-pdb",
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "Protein Structure Analysis",
+    "description": "Analyzing the protein structure of your protein-of-interest can be advantageous in multiple ways. It can help you discover regions which are good candidates to interact with other proteins. It can help you discover new domains. It can help with identifying differences with homologuous proteins and a lot more.",
+    "url": "http://10.132.0.3:4000/training-material/topics/protein-structure-analysis/"
+  },
+  "learningResourceType": "tutorial",
+  "name": "01 Exploring the Protein Data Bank exercises",
+  "description": "01 Exploring the Protein Data Bank exercises",
+  "hasPart": [
+    {
+      "@type": "Course",
+      "url": "http://10.132.0.3:4000/training-material/topics/protein-structure-analysis/tutorials/explore-pdb/tutorial.html",
+      "name": "Hands-on for '01 Exploring the Protein Data Bank exercises' tutorial",
+      "learningResourceType": "hands-on tutorial",
+      "interactivityType": "expositive"
+    },
+    {
+      "@type": "Course",
+      "url": "http://10.132.0.3:4000/training-material/topics/protein-structure-analysis/tutorials/explore-pdb/slides.html",
+      "name": "Slides for '01 Exploring the Protein Data Bank exercises' tutorial",
+      "learningResourceType": "slides",
+      "interactivityType": "expositive"
+    }
+  ],
+  "mentions": [
+    [
+      {
+        "@type": "Thing",
+        "url": "/blob//topics/protein-structure-analysis/tutorials/explore-pdb/workflows/abotzki",
+        "name": "Workflow for 01 Exploring the Protein Data Bank exercises tutorial"
+      },
+      {
+        "@type": "Thing",
+        "url": "/blob//topics/protein-structure-analysis/tutorials/explore-pdb/workflows/jvdurme",
+        "name": "Workflow for 01 Exploring the Protein Data Bank exercises tutorial"
+      }
+    ]
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Alexander Botzki"
+    },
+    {
+      "@type": "Person",
+      "name": "Joost Van Durme"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Alexander Botzki"
+    },
+    {
+      "@type": "Person",
+      "name": "Joost Van Durme"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "Protein Structure Analysis",
+      "description": "Analyzing the protein structure of your protein-of-interest can be advantageous in multiple ways. It can help you discover regions which are good candidates to interact with other proteins. It can help you discover new domains. It can help with identifying differences with homologuous proteins and a lot more.",
+      "url": "http://10.132.0.3:4000/training-material/topics/protein-structure-analysis/"
+    }
+  ]
+}
+                        </script>
+                    <tr>
+                        <td>
+                            01 Exploring the Protein Data Bank exercises
+                            <div class="">
+                            
+                            
+                        </div>
+                        </td>
+                        
+                            <td>
+                                
+
+                            </td>
+                            <td>
+                                
+    <span class="btn-group">
+        <a href="/training-material/topics/protein-structure-analysis/tutorials/explore-pdb/tutorial.html" class="btn btn-default" title="Where to run the tutorial">
+            <i class="fa fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
+        </a>
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Toggle Dropdown</span>
+        </a>
+        <ul class="dropdown-menu">
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fprotein-structure-analysis%2Ftutorials%2Fexplore-pdb%2Ftutorial.html&edit-text=&act=url" title="">
+                FR
+            </a>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fprotein-structure-analysis%2Ftutorials%2Fexplore-pdb%2Ftutorial.html&edit-text=&act=url" title="">
+                JA
+            </a>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fprotein-structure-analysis%2Ftutorials%2Fexplore-pdb%2Ftutorial.html&edit-text=&act=url" title="">
+                ES
+            </a>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fprotein-structure-analysis%2Ftutorials%2Fexplore-pdb%2Ftutorial.html&edit-text=&act=url" title="">
+                PT
+            </a>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fprotein-structure-analysis%2Ftutorials%2Fexplore-pdb%2Ftutorial.html&edit-text=&act=url" title="">
+                AR
+            </a>
+        
+    </span>
+
+
+                            </td>
+
+                            
+
+                            <td>
+                                
+
+                            </td>
+                        
+                    </tr>
+                
+            
+                
+                        <script type="application/ld+json">
+                            
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "headline": "02 Visualise a structure",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "/blob//LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "courseCode": "protein-structure-analysis / visualise-structures",
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "Protein Structure Analysis",
+    "description": "Analyzing the protein structure of your protein-of-interest can be advantageous in multiple ways. It can help you discover regions which are good candidates to interact with other proteins. It can help you discover new domains. It can help with identifying differences with homologuous proteins and a lot more.",
+    "url": "http://10.132.0.3:4000/training-material/topics/protein-structure-analysis/"
+  },
+  "learningResourceType": "tutorial",
+  "name": "02 Visualise a structure",
+  "description": "02 Visualise a structure",
+  "hasPart": [
+    {
+      "@type": "Course",
+      "url": "http://10.132.0.3:4000/training-material/topics/protein-structure-analysis/tutorials/visualise-structures/tutorial.html",
+      "name": "Hands-on for '02 Visualise a structure' tutorial",
+      "learningResourceType": "hands-on tutorial",
+      "interactivityType": "expositive"
+    },
+    {
+      "@type": "Course",
+      "url": "http://10.132.0.3:4000/training-material/topics/protein-structure-analysis/tutorials/visualise-structures/slides.html",
+      "name": "Slides for '02 Visualise a structure' tutorial",
+      "learningResourceType": "slides",
+      "interactivityType": "expositive"
+    }
+  ],
+  "mentions": [
+    [
+      {
+        "@type": "Thing",
+        "url": "/blob//topics/protein-structure-analysis/tutorials/visualise-structures/workflows/abotzki",
+        "name": "Workflow for 02 Visualise a structure tutorial"
+      },
+      {
+        "@type": "Thing",
+        "url": "/blob//topics/protein-structure-analysis/tutorials/visualise-structures/workflows/jvdurme",
+        "name": "Workflow for 02 Visualise a structure tutorial"
+      }
+    ]
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Alexander Botzki"
+    },
+    {
+      "@type": "Person",
+      "name": "Joost Van Durme"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Alexander Botzki"
+    },
+    {
+      "@type": "Person",
+      "name": "Joost Van Durme"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "Protein Structure Analysis",
+      "description": "Analyzing the protein structure of your protein-of-interest can be advantageous in multiple ways. It can help you discover regions which are good candidates to interact with other proteins. It can help you discover new domains. It can help with identifying differences with homologuous proteins and a lot more.",
+      "url": "http://10.132.0.3:4000/training-material/topics/protein-structure-analysis/"
+    }
+  ]
+}
+                        </script>
+                    <tr>
+                        <td>
+                            02 Visualise a structure
+                            <div class="">
+                            
+                            
+                        </div>
+                        </td>
+                        
+                            <td>
+                                
+
+                            </td>
+                            <td>
+                                
+    <span class="btn-group">
+        <a href="/training-material/topics/protein-structure-analysis/tutorials/visualise-structures/tutorial.html" class="btn btn-default" title="Where to run the tutorial">
+            <i class="fa fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
+        </a>
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Toggle Dropdown</span>
+        </a>
+        <ul class="dropdown-menu">
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fprotein-structure-analysis%2Ftutorials%2Fvisualise-structures%2Ftutorial.html&edit-text=&act=url" title="">
+                FR
+            </a>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fprotein-structure-analysis%2Ftutorials%2Fvisualise-structures%2Ftutorial.html&edit-text=&act=url" title="">
+                JA
+            </a>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fprotein-structure-analysis%2Ftutorials%2Fvisualise-structures%2Ftutorial.html&edit-text=&act=url" title="">
+                ES
+            </a>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fprotein-structure-analysis%2Ftutorials%2Fvisualise-structures%2Ftutorial.html&edit-text=&act=url" title="">
+                PT
+            </a>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fprotein-structure-analysis%2Ftutorials%2Fvisualise-structures%2Ftutorial.html&edit-text=&act=url" title="">
+                AR
+            </a>
+        
+    </span>
+
+
+                            </td>
+
+                            
+
+                            <td>
+                                
+
+                            </td>
+                        
+                    </tr>
+                
+            
+                
+                        <script type="application/ld+json">
+                            
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "headline": "03 Compare Structures",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "/blob//LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "courseCode": "protein-structure-analysis / compare-structures",
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "Protein Structure Analysis",
+    "description": "Analyzing the protein structure of your protein-of-interest can be advantageous in multiple ways. It can help you discover regions which are good candidates to interact with other proteins. It can help you discover new domains. It can help with identifying differences with homologuous proteins and a lot more.",
+    "url": "http://10.132.0.3:4000/training-material/topics/protein-structure-analysis/"
+  },
+  "learningResourceType": "tutorial",
+  "name": "03 Compare Structures",
+  "description": "03 Compare Structures",
+  "hasPart": [
+    {
+      "@type": "Course",
+      "url": "http://10.132.0.3:4000/training-material/topics/protein-structure-analysis/tutorials/compare-structures/tutorial.html",
+      "name": "Hands-on for '03 Compare Structures' tutorial",
+      "learningResourceType": "hands-on tutorial",
+      "interactivityType": "expositive"
+    },
+    {
+      "@type": "Course",
+      "url": "http://10.132.0.3:4000/training-material/topics/protein-structure-analysis/tutorials/compare-structures/slides.html",
+      "name": "Slides for '03 Compare Structures' tutorial",
+      "learningResourceType": "slides",
+      "interactivityType": "expositive"
+    }
+  ],
+  "mentions": [
+    [
+      {
+        "@type": "Thing",
+        "url": "/blob//topics/protein-structure-analysis/tutorials/compare-structures/workflows/abotzki",
+        "name": "Workflow for 03 Compare Structures tutorial"
+      },
+      {
+        "@type": "Thing",
+        "url": "/blob//topics/protein-structure-analysis/tutorials/compare-structures/workflows/jvdurme",
+        "name": "Workflow for 03 Compare Structures tutorial"
+      }
+    ]
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Alexander Botzki"
+    },
+    {
+      "@type": "Person",
+      "name": "Joost Van Durme"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Alexander Botzki"
+    },
+    {
+      "@type": "Person",
+      "name": "Joost Van Durme"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "Protein Structure Analysis",
+      "description": "Analyzing the protein structure of your protein-of-interest can be advantageous in multiple ways. It can help you discover regions which are good candidates to interact with other proteins. It can help you discover new domains. It can help with identifying differences with homologuous proteins and a lot more.",
+      "url": "http://10.132.0.3:4000/training-material/topics/protein-structure-analysis/"
+    }
+  ]
+}
+                        </script>
+                    <tr>
+                        <td>
+                            03 Compare Structures
+                            <div class="">
+                            
+                            
+                        </div>
+                        </td>
+                        
+                            <td>
+                                
+
+                            </td>
+                            <td>
+                                
+    <span class="btn-group">
+        <a href="/training-material/topics/protein-structure-analysis/tutorials/compare-structures/tutorial.html" class="btn btn-default" title="Where to run the tutorial">
+            <i class="fa fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
+        </a>
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Toggle Dropdown</span>
+        </a>
+        <ul class="dropdown-menu">
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fprotein-structure-analysis%2Ftutorials%2Fcompare-structures%2Ftutorial.html&edit-text=&act=url" title="">
+                FR
+            </a>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fprotein-structure-analysis%2Ftutorials%2Fcompare-structures%2Ftutorial.html&edit-text=&act=url" title="">
+                JA
+            </a>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fprotein-structure-analysis%2Ftutorials%2Fcompare-structures%2Ftutorial.html&edit-text=&act=url" title="">
+                ES
+            </a>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fprotein-structure-analysis%2Ftutorials%2Fcompare-structures%2Ftutorial.html&edit-text=&act=url" title="">
+                PT
+            </a>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fprotein-structure-analysis%2Ftutorials%2Fcompare-structures%2Ftutorial.html&edit-text=&act=url" title="">
+                AR
+            </a>
+        
+    </span>
+
+
+                            </td>
+
+                            
+
+                            <td>
+                                
+
+                            </td>
+                        
+                    </tr>
+                
+            
+                
+                        <script type="application/ld+json">
+                            
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "headline": "04 Predicting the effect of a mutation on a protein structure",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "/blob//LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "courseCode": "protein-structure-analysis / mutate-structure",
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "Protein Structure Analysis",
+    "description": "Analyzing the protein structure of your protein-of-interest can be advantageous in multiple ways. It can help you discover regions which are good candidates to interact with other proteins. It can help you discover new domains. It can help with identifying differences with homologuous proteins and a lot more.",
+    "url": "http://10.132.0.3:4000/training-material/topics/protein-structure-analysis/"
+  },
+  "learningResourceType": "tutorial",
+  "name": "04 Predicting the effect of a mutation on a protein structure",
+  "description": "04 Predicting the effect of a mutation on a protein structure",
+  "hasPart": [
+    {
+      "@type": "Course",
+      "url": "http://10.132.0.3:4000/training-material/topics/protein-structure-analysis/tutorials/mutate-structure/tutorial.html",
+      "name": "Hands-on for '04 Predicting the effect of a mutation on a protein structure' tutorial",
+      "learningResourceType": "hands-on tutorial",
+      "interactivityType": "expositive"
+    },
+    {
+      "@type": "Course",
+      "url": "http://10.132.0.3:4000/training-material/topics/protein-structure-analysis/tutorials/mutate-structure/slides.html",
+      "name": "Slides for '04 Predicting the effect of a mutation on a protein structure' tutorial",
+      "learningResourceType": "slides",
+      "interactivityType": "expositive"
+    }
+  ],
+  "mentions": [
+    [
+      {
+        "@type": "Thing",
+        "url": "/blob//topics/protein-structure-analysis/tutorials/mutate-structure/workflows/abotzki",
+        "name": "Workflow for 04 Predicting the effect of a mutation on a protein structure tutorial"
+      },
+      {
+        "@type": "Thing",
+        "url": "/blob//topics/protein-structure-analysis/tutorials/mutate-structure/workflows/jvdurme",
+        "name": "Workflow for 04 Predicting the effect of a mutation on a protein structure tutorial"
+      }
+    ]
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Alexander Botzki"
+    },
+    {
+      "@type": "Person",
+      "name": "Joost Van Durme"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Alexander Botzki"
+    },
+    {
+      "@type": "Person",
+      "name": "Joost Van Durme"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "Protein Structure Analysis",
+      "description": "Analyzing the protein structure of your protein-of-interest can be advantageous in multiple ways. It can help you discover regions which are good candidates to interact with other proteins. It can help you discover new domains. It can help with identifying differences with homologuous proteins and a lot more.",
+      "url": "http://10.132.0.3:4000/training-material/topics/protein-structure-analysis/"
+    }
+  ]
+}
+                        </script>
+                    <tr>
+                        <td>
+                            04 Predicting the effect of a mutation on a protein structure
+                            <div class="">
+                            
+                            
+                        </div>
+                        </td>
+                        
+                            <td>
+                                
+
+                            </td>
+                            <td>
+                                
+    <span class="btn-group">
+        <a href="/training-material/topics/protein-structure-analysis/tutorials/mutate-structure/tutorial.html" class="btn btn-default" title="Where to run the tutorial">
+            <i class="fa fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
+        </a>
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Toggle Dropdown</span>
+        </a>
+        <ul class="dropdown-menu">
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fprotein-structure-analysis%2Ftutorials%2Fmutate-structure%2Ftutorial.html&edit-text=&act=url" title="">
+                FR
+            </a>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fprotein-structure-analysis%2Ftutorials%2Fmutate-structure%2Ftutorial.html&edit-text=&act=url" title="">
+                JA
+            </a>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fprotein-structure-analysis%2Ftutorials%2Fmutate-structure%2Ftutorial.html&edit-text=&act=url" title="">
+                ES
+            </a>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fprotein-structure-analysis%2Ftutorials%2Fmutate-structure%2Ftutorial.html&edit-text=&act=url" title="">
+                PT
+            </a>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fprotein-structure-analysis%2Ftutorials%2Fmutate-structure%2Ftutorial.html&edit-text=&act=url" title="">
+                AR
+            </a>
+        
+    </span>
+
+
+                            </td>
+
+                            
+
+                            <td>
+                                
+
+                            </td>
+                        
+                    </tr>
+                
+            
+                
+                        <script type="application/ld+json">
+                            
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "headline": "05 Predicting a protein structure - homology modelling",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "/blob//LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "courseCode": "protein-structure-analysis / homology-modeling",
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "Protein Structure Analysis",
+    "description": "Analyzing the protein structure of your protein-of-interest can be advantageous in multiple ways. It can help you discover regions which are good candidates to interact with other proteins. It can help you discover new domains. It can help with identifying differences with homologuous proteins and a lot more.",
+    "url": "http://10.132.0.3:4000/training-material/topics/protein-structure-analysis/"
+  },
+  "learningResourceType": "tutorial",
+  "name": "05 Predicting a protein structure - homology modelling",
+  "description": "05 Predicting a protein structure - homology modelling",
+  "hasPart": [
+    {
+      "@type": "Course",
+      "url": "http://10.132.0.3:4000/training-material/topics/protein-structure-analysis/tutorials/homology-modeling/tutorial.html",
+      "name": "Hands-on for '05 Predicting a protein structure - homology modelling' tutorial",
+      "learningResourceType": "hands-on tutorial",
+      "interactivityType": "expositive"
+    },
+    {
+      "@type": "Course",
+      "url": "http://10.132.0.3:4000/training-material/topics/protein-structure-analysis/tutorials/homology-modeling/slides.html",
+      "name": "Slides for '05 Predicting a protein structure - homology modelling' tutorial",
+      "learningResourceType": "slides",
+      "interactivityType": "expositive"
+    }
+  ],
+  "mentions": [
+    [
+      {
+        "@type": "Thing",
+        "url": "/blob//topics/protein-structure-analysis/tutorials/homology-modeling/workflows/abotzki",
+        "name": "Workflow for 05 Predicting a protein structure - homology modelling tutorial"
+      },
+      {
+        "@type": "Thing",
+        "url": "/blob//topics/protein-structure-analysis/tutorials/homology-modeling/workflows/jvdurme",
+        "name": "Workflow for 05 Predicting a protein structure - homology modelling tutorial"
+      }
+    ]
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Alexander Botzki"
+    },
+    {
+      "@type": "Person",
+      "name": "Joost Van Durme"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Alexander Botzki"
+    },
+    {
+      "@type": "Person",
+      "name": "Joost Van Durme"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "Protein Structure Analysis",
+      "description": "Analyzing the protein structure of your protein-of-interest can be advantageous in multiple ways. It can help you discover regions which are good candidates to interact with other proteins. It can help you discover new domains. It can help with identifying differences with homologuous proteins and a lot more.",
+      "url": "http://10.132.0.3:4000/training-material/topics/protein-structure-analysis/"
+    }
+  ]
+}
+                        </script>
+                    <tr>
+                        <td>
+                            05 Predicting a protein structure - homology modelling
+                            <div class="">
+                            
+                            
+                        </div>
+                        </td>
+                        
+                            <td>
+                                
+
+                            </td>
+                            <td>
+                                
+    <span class="btn-group">
+        <a href="/training-material/topics/protein-structure-analysis/tutorials/homology-modeling/tutorial.html" class="btn btn-default" title="Where to run the tutorial">
+            <i class="fa fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
+        </a>
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Toggle Dropdown</span>
+        </a>
+        <ul class="dropdown-menu">
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fprotein-structure-analysis%2Ftutorials%2Fhomology-modeling%2Ftutorial.html&edit-text=&act=url" title="">
+                FR
+            </a>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fprotein-structure-analysis%2Ftutorials%2Fhomology-modeling%2Ftutorial.html&edit-text=&act=url" title="">
+                JA
+            </a>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fprotein-structure-analysis%2Ftutorials%2Fhomology-modeling%2Ftutorial.html&edit-text=&act=url" title="">
+                ES
+            </a>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fprotein-structure-analysis%2Ftutorials%2Fhomology-modeling%2Ftutorial.html&edit-text=&act=url" title="">
+                PT
+            </a>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fprotein-structure-analysis%2Ftutorials%2Fhomology-modeling%2Ftutorial.html&edit-text=&act=url" title="">
+                AR
+            </a>
+        
+    </span>
+
+
+                            </td>
+
+                            
+
+                            <td>
+                                
+
+                            </td>
+                        
+                    </tr>
+                
+            
+                
+                        <script type="application/ld+json">
+                            
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "headline": "06 Protein-ligand interaction - from small molecule to protein",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "/blob//LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "courseCode": "protein-structure-analysis / protein-ligand-interaction",
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "Protein Structure Analysis",
+    "description": "Analyzing the protein structure of your protein-of-interest can be advantageous in multiple ways. It can help you discover regions which are good candidates to interact with other proteins. It can help you discover new domains. It can help with identifying differences with homologuous proteins and a lot more.",
+    "url": "http://10.132.0.3:4000/training-material/topics/protein-structure-analysis/"
+  },
+  "learningResourceType": "tutorial",
+  "name": "06 Protein-ligand interaction - from small molecule to protein",
+  "description": "06 Protein-ligand interaction - from small molecule to protein",
+  "hasPart": [
+    {
+      "@type": "Course",
+      "url": "http://10.132.0.3:4000/training-material/topics/protein-structure-analysis/tutorials/protein-ligand-interaction/tutorial.html",
+      "name": "Hands-on for '06 Protein-ligand interaction - from small molecule to protein' tutorial",
+      "learningResourceType": "hands-on tutorial",
+      "interactivityType": "expositive"
+    },
+    {
+      "@type": "Course",
+      "url": "http://10.132.0.3:4000/training-material/topics/protein-structure-analysis/tutorials/protein-ligand-interaction/slides.html",
+      "name": "Slides for '06 Protein-ligand interaction - from small molecule to protein' tutorial",
+      "learningResourceType": "slides",
+      "interactivityType": "expositive"
+    }
+  ],
+  "mentions": [
+    [
+      {
+        "@type": "Thing",
+        "url": "/blob//topics/protein-structure-analysis/tutorials/protein-ligand-interaction/workflows/abotzki",
+        "name": "Workflow for 06 Protein-ligand interaction - from small molecule to protein tutorial"
+      },
+      {
+        "@type": "Thing",
+        "url": "/blob//topics/protein-structure-analysis/tutorials/protein-ligand-interaction/workflows/jvdurme",
+        "name": "Workflow for 06 Protein-ligand interaction - from small molecule to protein tutorial"
+      }
+    ]
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Alexander Botzki"
+    },
+    {
+      "@type": "Person",
+      "name": "Joost Van Durme"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Alexander Botzki"
+    },
+    {
+      "@type": "Person",
+      "name": "Joost Van Durme"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "Protein Structure Analysis",
+      "description": "Analyzing the protein structure of your protein-of-interest can be advantageous in multiple ways. It can help you discover regions which are good candidates to interact with other proteins. It can help you discover new domains. It can help with identifying differences with homologuous proteins and a lot more.",
+      "url": "http://10.132.0.3:4000/training-material/topics/protein-structure-analysis/"
+    }
+  ]
+}
+                        </script>
+                    <tr>
+                        <td>
+                            06 Protein-ligand interaction - from small molecule to protein
+                            <div class="">
+                            
+                            
+                        </div>
+                        </td>
+                        
+                            <td>
+                                
+
+                            </td>
+                            <td>
+                                
+    <span class="btn-group">
+        <a href="/training-material/topics/protein-structure-analysis/tutorials/protein-ligand-interaction/tutorial.html" class="btn btn-default" title="Where to run the tutorial">
+            <i class="fa fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
+        </a>
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Toggle Dropdown</span>
+        </a>
+        <ul class="dropdown-menu">
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fprotein-structure-analysis%2Ftutorials%2Fprotein-ligand-interaction%2Ftutorial.html&edit-text=&act=url" title="">
+                FR
+            </a>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fprotein-structure-analysis%2Ftutorials%2Fprotein-ligand-interaction%2Ftutorial.html&edit-text=&act=url" title="">
+                JA
+            </a>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fprotein-structure-analysis%2Ftutorials%2Fprotein-ligand-interaction%2Ftutorial.html&edit-text=&act=url" title="">
+                ES
+            </a>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fprotein-structure-analysis%2Ftutorials%2Fprotein-ligand-interaction%2Ftutorial.html&edit-text=&act=url" title="">
+                PT
+            </a>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fprotein-structure-analysis%2Ftutorials%2Fprotein-ligand-interaction%2Ftutorial.html&edit-text=&act=url" title="">
+                AR
+            </a>
+        
+    </span>
+
+
+                            </td>
+
+                            
+
+                            <td>
+                                
+
+                            </td>
+                        
+                    </tr>
+                
+            
+        </table>
+
+        
+
+        <h2 id="maintainers">Maintainers</h2>
+        <p>This material is maintained by:</p>
+        
+        
+
+<a href="/training-material/hall-of-fame#abotzki" class="contributor-badge"><img src="https://avatars.githubusercontent.com/abotzki" alt="Alexander Botzki">Alexander Botzki</a>
+
+
+
+        <p>
+            <em>For any question related to this topic and the content, you can contact us at bits@vib.be</em>
+        </p>
+
+        <h2 id="contributors">Contributors</h2>
+        <p>This material was contributed to by:</p>
+        
+        
+        
+        
+
+<a href="/training-material/hall-of-fame#abotzki" class="contributor-badge"><img src="https://avatars.githubusercontent.com/abotzki" alt="Alexander Botzki">Alexander Botzki</a>, <a href="/training-material/hall-of-fame#jvdurme" class="contributor-badge"><img src="https://avatars.githubusercontent.com/jvdurme" alt="Joost Van Durme">Joost Van Durme</a>, <a href="/training-material/hall-of-fame#janick-bits" class="contributor-badge"><img src="https://avatars.githubusercontent.com/janick-bits" alt="Janick Mathys">Janick Mathys</a>
+
+
+
+        
+        <h2 id="references">References</h2>
+        <ul>
+        
+            <li class="citation">
+                <strong>Switchlab:</strong> <a href="http://foldxyasara.switchlab.org/">Home of FoldX plugin</a>
+                
+                <br><cite>More information about FoldX plugin and troubleshooting</cite>
+                
+            </li>
+        
+            <li class="citation">
+                <strong>Wikipedia:</strong> <a href="https://en.wikipedia.org/wiki/Protein_Data_Bank">Wiki page about PDB</a>
+                
+                <br><cite>wiki page explaining information on PDB</cite>
+                
+            </li>
+        
+            <li class="citation">
+                <strong>YASARA developers:</strong> <a href="http://www.yasara.org/movies.htm">Working with YASARA</a>
+                
+                <br><cite>Movie tutorials on YASARA</cite>
+                
+            </li>
+        
+        </ul>
+        
+   </div>
+   </div>
+
+<footer>
+   <div class="well row">
+       <div class="col-md-3 text-center">				
+         <span class="slogan">SCIENCE MEETS LIFE</span>
+       </div>
+       <div class="col-md-6 text-center">	
+        <a href="https://github.com/vibbits/training-material" title="View on GitHub" class="margin20">
+                            <i class="fa fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> View on GitHub
+                        </a>
+       </div>
+       <div class="col-md-3 text-center">
+		<a href="http://www.bits.vib.be"><img src="/training-material/assets/images/bioinformatics_core_rgb_neg.png"></a>
+       </div>
+   </div>
+</footer>
+
+</div>
+
+    </body>
+    <script type="text/javascript" src="/training-material/assets/js/jquery.slim.min.js"></script>
+    <script type="text/javascript" src="/training-material/assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="/training-material/assets/js/bootstrap.min.js?v=3"></script>
+    <script type="text/javascript" src="/training-material/assets/js/details-element-polyfill.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="/training-material/assets/js/bootstrap-toc.min.js"></script>
+    <script type="text/javascript" src="/training-material/assets/js/main.js"></script>
+    <script type="text/javascript" src="/training-material/assets/js/clipboard.min.js"></script>
+    <script type="text/javascript" src="https://app.cloudsh.com/js/cloudsh.js"></script>
+    <script>
+      var CshConf = {
+      token: "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiMmZiMzRlNDktODA2NC00ZjgwLWI2NzgtY2I0YzEzNzg4ZDUyIiwiaW5kZXhfaWQiOiI4ZDM3Y2E5NC0xMDMxLTRlNWYtOWExZi00MzhkYjc5NTk2YTUiLCJpbmRleF91cmwiOiJodHRwczovL3BoeWQzLmJpdHMudmliLmJlIn0.xzKJX-nJWqbLLirH4QJYutLaRkfLU06e9poPEGztCoQ",
+      formId: "#cloudsh",
+      resultsId: "#results",
+      };
+    </script>
+    <script type="text/javascript">
+    var snippets=document.querySelectorAll('div.highlight');
+    [].forEach.call(snippets,function(snippet){
+        snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+    });
+
+    var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
+        target:function(trigger){return trigger.nextElementSibling;
+    }});
+    </script>
+</html>
