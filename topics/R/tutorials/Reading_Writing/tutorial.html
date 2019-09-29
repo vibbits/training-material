@@ -5,7 +5,7 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="google-site-verification" content="dw_1zBYRNxF7-vYNDXh3Ght_JuqgJt3BD1N_Pynqmv0" />
-        <title>Reading and writing data</title>
+        <title>05 Reading and writing data</title>
         
         <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
         <link rel="stylesheet" href="/training-material/assets/css/bootstrap-toc.min.css">
@@ -22,7 +22,7 @@
         
         
         <meta name="description" content="Introduction to R" />
-        <meta property="og:title" content="VIB Bioinformatics Training: Reading and writing data" />
+        <meta property="og:title" content="VIB Bioinformatics Training: 05 Reading and writing data" />
         <meta property="og:description" content="Introduction to R" />
         <meta property="og:image" content="/training-material/assets/images/bioinformatics_core_rgb_neg.png" />
     </head>
@@ -111,7 +111,7 @@
     "name": "VIB Bioinformatics Core",
     "url": "https://www.bits.vib.be"
   },
-  "headline": "Reading and writing data",
+  "headline": "05 Reading and writing data",
   "inLanguage": {
     "@type": "Language",
     "name": "English",
@@ -140,11 +140,11 @@
   },
   "courseCode": "R / Reading_Writing / hands-on",
   "learningResourceType": "hands-on tutorial",
-  "name": "Hands-on for 'Reading and writing data' tutorial",
+  "name": "Hands-on for '05 Reading and writing data' tutorial",
   "isPartOf": {
     "@type": "Course",
-    "name": "Reading and writing data",
-    "description": "Reading and writing data",
+    "name": "05 Reading and writing data",
+    "description": "05 Reading and writing data",
     "learningResourceType": "tutorial",
     "interactivityType": "expositive",
     "provider": {
@@ -154,9 +154,9 @@
       "url": "https://www.bits.vib.be"
     }
   },
-  "url": "http://10.132.0.3:4000/training-material/topics/R/tutorials/Reading_Writing/tutorial.html",
+  "url": "https://vibbits.github.io//training-material/topics/R/tutorials/Reading_Writing/tutorial.html",
   "timeRequired": "PT30M",
-  "description": "Reading and writing data\\nThe questions this  addresses are:\n - How to import your data into RStudio?\n - How to write a variable to a file?\n\n\\nThe objectives are:\n - learn how to read text files on your computer using R\n - learn how to write variables in R to a file on your computer\n\n",
+  "description": "05 Reading and writing data\\nThe questions this  addresses are:\n - How to import your data into RStudio?\n - How to write a variable to a file?\n\n\\nThe objectives are:\n - learn how to read text files on your computer using R\n - learn how to write variables in R to a file on your computer\n\n",
   "hasPart": [
 
   ],
@@ -180,7 +180,7 @@
       "@type": "CreativeWork",
       "name": "Introduction to R",
       "description": "Introduction to R",
-      "url": "http://10.132.0.3:4000/training-material/topics/R/"
+      "url": "https://vibbits.github.io//training-material/topics/R/"
     }
   ]
 }
@@ -188,7 +188,7 @@
 
     <div class="row tutorial">
       <div class="col-md-12" role="main">
-        <h1 data-toc-skip>Reading and writing data</h1>
+        <h1 data-toc-skip>05 Reading and writing data</h1>
         <div class="contributors-line">By: 
 
 <a href="/training-material/hall-of-fame#janick-bits" class="contributor-badge"><img src="https://avatars.githubusercontent.com/janick-bits" alt="Janick Mathys">Janick Mathys</a>
@@ -298,7 +298,7 @@ read.delim2(file,header=TRUE,sep="\t",dec=",", ...)
 </code></pre></div></div>
 <p>Obviously, the file is a European CSV file, to open it use read.csv2()</p>
 
-<h5 id="reading-excel-files">Reading Excel files</h5>
+<h3 id="reading-excel-files">Reading Excel files</h3>
 <p>To import Excel files via a command the easiest way is to let Excel save the file in .csv or tab delimited text format and use the read functions.</p>
 
 <p>An easy way to import Excel files is to use the RStudio interface although I prefer to use commands. To use the interface go to the <strong>Environment</strong> tab and click the <strong>Import Dataset</strong> button.</p>
@@ -325,20 +325,20 @@ read.delim2(file,header=TRUE,sep="\t",dec=",", ...)
 
 <p>Once imported into RStudio the data is stored in a data frame and you can use it as input of commands. The data frame appears in the list of <strong>Data in the Environment tab</strong>.</p>
 
-<p><img src="../../images/Rfile_imported.png" alt="file_imported" /></p>
+<figure id="figure-1"><img src="../../images/Rfile_imported.png" alt="file_imported" /><figcaption><span class="figcaption-prefix">Figure 1:</span> Inspect Variables and Data Frames in the Environment tab</figcaption></figure>
 
 <p>If you want to view the data frame you can <strong>click its name in the Environment</strong> tab and it will appear in a separate tab in the script editor.</p>
 
-<p><img src="../../images/Rview_file.png" alt="view_file" /></p>
+<figure id="figure-2"><img src="../../images/Rview_file.png" alt="view_file" /><figcaption><span class="figcaption-prefix">Figure 2:</span> View file content</figcaption></figure>
 
 <blockquote class="notranslate hands_on">
-  <h5 id="hands_on-hands-on-demo"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Demo</h5>
+  <h3 id="hands_on-hands-on-demo"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Demo</h3>
 
   <p>From the demo script run the <strong>Reading files</strong> section</p>
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <h5 id="hands_on-hands-on-exercise-17a"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 17a</h5>
+  <h3 id="hands_on-hands-on-exercise-17a"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 17a</h3>
 
   <ol>
     <li>Import the file <a href="http://data.bits.vib.be/pub/trainingen/RIntro/GeneEx.csv">GeneEx.csv</a> into a data frame called GeneEx</li>
@@ -396,7 +396,7 @@ mean(GeneEx$Ct1)
   </ol>
 </blockquote>
 
-<h5 id="reading-other-files">Reading other files</h5>
+<h3 id="reading-other-files">Reading other files</h3>
 <p>Also of note is an R package called <strong>foreign</strong>. This package contains functionality for importing data into R that is formatted by most other statistical software packages, including SAS, SPSS, STRATA and others.</p>
 
 <h3 id="writing-files">Writing files</h3>

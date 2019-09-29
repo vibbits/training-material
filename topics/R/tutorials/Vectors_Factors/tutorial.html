@@ -5,7 +5,7 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="google-site-verification" content="dw_1zBYRNxF7-vYNDXh3Ght_JuqgJt3BD1N_Pynqmv0" />
-        <title>Vectors and factors</title>
+        <title>03 Vectors and factors</title>
         
         <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
         <link rel="stylesheet" href="/training-material/assets/css/bootstrap-toc.min.css">
@@ -22,7 +22,7 @@
         
         
         <meta name="description" content="Introduction to R" />
-        <meta property="og:title" content="VIB Bioinformatics Training: Vectors and factors" />
+        <meta property="og:title" content="VIB Bioinformatics Training: 03 Vectors and factors" />
         <meta property="og:description" content="Introduction to R" />
         <meta property="og:image" content="/training-material/assets/images/bioinformatics_core_rgb_neg.png" />
     </head>
@@ -111,7 +111,7 @@
     "name": "VIB Bioinformatics Core",
     "url": "https://www.bits.vib.be"
   },
-  "headline": "Vectors and factors",
+  "headline": "03 Vectors and factors",
   "inLanguage": {
     "@type": "Language",
     "name": "English",
@@ -140,11 +140,11 @@
   },
   "courseCode": "R / Vectors_Factors / hands-on",
   "learningResourceType": "hands-on tutorial",
-  "name": "Hands-on for 'Vectors and factors' tutorial",
+  "name": "Hands-on for '03 Vectors and factors' tutorial",
   "isPartOf": {
     "@type": "Course",
-    "name": "Vectors and factors",
-    "description": "Vectors and factors",
+    "name": "03 Vectors and factors",
+    "description": "03 Vectors and factors",
     "learningResourceType": "tutorial",
     "interactivityType": "expositive",
     "provider": {
@@ -154,9 +154,9 @@
       "url": "https://www.bits.vib.be"
     }
   },
-  "url": "http://10.132.0.3:4000/training-material/topics/R/tutorials/Vectors_Factors/tutorial.html",
+  "url": "https://vibbits.github.io//training-material/topics/R/tutorials/Vectors_Factors/tutorial.html",
   "timeRequired": "PT75M",
-  "description": "Vectors and factors\\nThe questions this  addresses are:\n - How to work with vectors and factors?\n\n\\nThe objectives are:\n - learn how to create vectors\n - learn how to extract elements from a vector\n - learn how to change elements in a vector\n - learn how to perform logical and arithmetic operations on vectors\n - learn how to create factors\n\n",
+  "description": "03 Vectors and factors\\nThe questions this  addresses are:\n - How to work with vectors and factors?\n\n\\nThe objectives are:\n - learn how to create vectors\n - learn how to extract elements from a vector\n - learn how to change elements in a vector\n - learn how to perform logical and arithmetic operations on vectors\n - learn how to create factors\n\n",
   "hasPart": [
 
   ],
@@ -180,7 +180,7 @@
       "@type": "CreativeWork",
       "name": "Introduction to R",
       "description": "Introduction to R",
-      "url": "http://10.132.0.3:4000/training-material/topics/R/"
+      "url": "https://vibbits.github.io//training-material/topics/R/"
     }
   ]
 }
@@ -188,7 +188,7 @@
 
     <div class="row tutorial">
       <div class="col-md-12" role="main">
-        <h1 data-toc-skip>Vectors and factors</h1>
+        <h1 data-toc-skip>03 Vectors and factors</h1>
         <div class="contributors-line">By: 
 
 <a href="/training-material/hall-of-fame#janick-bits" class="contributor-badge"><img src="https://avatars.githubusercontent.com/janick-bits" alt="Janick Mathys">Janick Mathys</a>
@@ -262,7 +262,7 @@
 <h3 id="vectors">Vectors</h3>
 <p>The simplest data structure is the <em>vector</em>, a single row consisting of data values of the same type, e.g. all numbers, characters, Booleans…</p>
 
-<h5 id="creating-a-vector">Creating a vector</h5>
+<h4 id="creating-a-vector">Creating a vector</h4>
 <p>The function <strong>c()</strong> (short for “combine values” in a vector) is used to create vectors. The only arguments that need to be passed to c() are the  values that you want to combine into a vector. 
 You can create a <strong>numeric</strong> (a), <strong>character</strong> (b) or <strong>logical</strong> (c) vector:</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a &lt;- c(1,2,5.3,6,-2,4)
@@ -454,7 +454,7 @@ c(x1,x2)
   <p>Words used as values have to be written between quotes, words used as variable names do not! If R encounters a word without quotes it will try to find a variable with that name.</p>
 </blockquote>
 
-<h3 id="referring-to-elements-of-a-vector">Referring to elements of a vector</h3>
+<h4 id="referring-to-elements-of-a-vector">Referring to elements of a vector</h4>
 <p>Every element in a vector is assigned an index (= its position in the vector) in the order in which elements were entered. This index starts with one, not zero.</p>
 
 <p>You can extract elements from vectors in two ways:</p>
@@ -575,7 +575,7 @@ x[x &lt; 4]
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <h5 id="hands_on-hands-on-extra-exercise-5c"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Extra exercise 5c</h5>
+  <h3 id="hands_on-hands-on-extra-exercise-5c"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Extra exercise 5c</h3>
 
   <p>Create vector y with elements 9,2,4 and retrieve the second element of y.</p>
   <blockquote class="solution">
@@ -615,7 +615,7 @@ x[x &lt; 4]
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <h5 id="hands_on-hands-on-extra-exercise-5h"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Extra exercise 5h</h5>
+  <h3 id="hands_on-hands-on-extra-exercise-5h"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Extra exercise 5h</h3>
 
   <p>Retrieve elements from newVector (exercise 4b) that are larger than the corresponding elements of vector threes (exercise 4d).</p>
   <blockquote class="solution">
@@ -627,7 +627,7 @@ x[x &lt; 4]
   </blockquote>
 </blockquote>
 
-<h5 id="removing-changing-or-adding-elements-in-a-vector">Removing, changing or adding elements in a vector</h5>
+<h4 id="removing-changing-or-adding-elements-in-a-vector">Removing, changing or adding elements in a vector</h4>
 <p>To remove an element from a vector use a negative index: ?-? indicates ?NOT? followed by the index of the element you want to remove, e.g. to remove the second element of vector z use:</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>z &lt;- z[-2]
 </code></pre></div></div>
@@ -635,13 +635,13 @@ x[x &lt; 4]
 <p>Change or add elements by assigning a new value to that element .</p>
 
 <blockquote class="notranslate hands_on">
-  <h5 id="hands_on-hands-on-demo-3"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Demo</h5>
+  <h3 id="hands_on-hands-on-demo-3"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Demo</h3>
 
   <p>From the demo script run the <strong>Data removal vectors</strong> section</p>
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <h5 id="hands_on-hands-on-exercise-6a"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 6a</h5>
+  <h3 id="hands_on-hands-on-exercise-6a"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 6a</h3>
 
   <p>From vector x (exercise 5a) remove the first 8 elements and store the result in x2.</p>
   <blockquote class="solution">

@@ -5,7 +5,7 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="google-site-verification" content="dw_1zBYRNxF7-vYNDXh3Ght_JuqgJt3BD1N_Pynqmv0" />
-        <title>Data manipulation</title>
+        <title>02 Data manipulation</title>
         
         <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
         <link rel="stylesheet" href="/training-material/assets/css/bootstrap-toc.min.css">
@@ -22,7 +22,7 @@
         
         
         <meta name="description" content="Introduction to R" />
-        <meta property="og:title" content="VIB Bioinformatics Training: Data manipulation" />
+        <meta property="og:title" content="VIB Bioinformatics Training: 02 Data manipulation" />
         <meta property="og:description" content="Introduction to R" />
         <meta property="og:image" content="/training-material/assets/images/bioinformatics_core_rgb_neg.png" />
     </head>
@@ -111,7 +111,7 @@
     "name": "VIB Bioinformatics Core",
     "url": "https://www.bits.vib.be"
   },
-  "headline": "Data manipulation",
+  "headline": "02 Data manipulation",
   "inLanguage": {
     "@type": "Language",
     "name": "English",
@@ -140,11 +140,11 @@
   },
   "courseCode": "R / Functions / hands-on",
   "learningResourceType": "hands-on tutorial",
-  "name": "Hands-on for 'Data manipulation' tutorial",
+  "name": "Hands-on for '02 Data manipulation' tutorial",
   "isPartOf": {
     "@type": "Course",
-    "name": "Data manipulation",
-    "description": "Data manipulation",
+    "name": "02 Data manipulation",
+    "description": "02 Data manipulation",
     "learningResourceType": "tutorial",
     "interactivityType": "expositive",
     "provider": {
@@ -154,9 +154,9 @@
       "url": "https://www.bits.vib.be"
     }
   },
-  "url": "http://10.132.0.3:4000/training-material/topics/R/tutorials/Functions/tutorial.html",
+  "url": "https://vibbits.github.io//training-material/topics/R/tutorials/Functions/tutorial.html",
   "timeRequired": "PT45M",
-  "description": "Data manipulation\\nThe questions this  addresses are:\n - How to manipulate variables?\n\n\\nThe objectives are:\n - get an overview of general functions to manipulate variables\n - get an overview of functions helpful for working on large data sets\n - get an overview of functions to find indices of specific elements\n - learn how to identify and convert data types\n\n",
+  "description": "02 Data manipulation\\nThe questions this  addresses are:\n - How to manipulate variables?\n\n\\nThe objectives are:\n - get an overview of general functions to manipulate variables\n - get an overview of functions helpful for working on large data sets\n - get an overview of functions to find indices of specific elements\n - learn how to identify and convert data types\n\n",
   "hasPart": [
 
   ],
@@ -180,7 +180,7 @@
       "@type": "CreativeWork",
       "name": "Introduction to R",
       "description": "Introduction to R",
-      "url": "http://10.132.0.3:4000/training-material/topics/R/"
+      "url": "https://vibbits.github.io//training-material/topics/R/"
     }
   ]
 }
@@ -188,7 +188,7 @@
 
     <div class="row tutorial">
       <div class="col-md-12" role="main">
-        <h1 data-toc-skip>Data manipulation</h1>
+        <h1 data-toc-skip>02 Data manipulation</h1>
         <div class="contributors-line">By: 
 
 <a href="/training-material/hall-of-fame#janick-bits" class="contributor-badge"><img src="https://avatars.githubusercontent.com/janick-bits" alt="Janick Mathys">Janick Mathys</a>
@@ -267,7 +267,7 @@
 </code></pre></div></div>
 <p>R has built-in functions for virtually any standard mathematical task.</p>
 
-<p><img src="../../images/Rgeneral_functions.png" alt="general_functions" /></p>
+<figure id="figure-1"><img src="../../images/Rgeneral_functions.png" alt="general_functions" /><figcaption><span class="figcaption-prefix">Figure 1:</span> Overview of built-in functions</figcaption></figure>
 
 <p>Arithmetic operators can be used on variables. Provided that the variables have the same dimensions, you can do element-wise addition, subtraction, multiplication and division of two vectors or tables. Element-wise means that the calculation is performed on the equivalent positions between the two variables: first element + first element, second element + second element etc.</p>
 
@@ -378,12 +378,14 @@ To sort a data frame use order() inside square brackets:</p>
 <p>The same is true for match(x,y). It compares x and y and returns a vector with the same length as x containing:</p>
 <ul>
   <li>NA for elements of x that are not in y</li>
-  <li>the index in y for elements in x that are in y
-On data frames it will not do an element-wise comparison but a column-wise comparison:
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>match(D1,D2) 
-</code></pre></div>    </div>
-    <p>will return a vector with length equal to the number of columns in D1 containing:</p>
-  </li>
+  <li>the index in y for elements in x that are in y</li>
+</ul>
+
+<p>On data frames it will not do an element-wise comparison but a column-wise comparison:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>match(D1,D2) 
+</code></pre></div></div>
+<p>will return a vector with length equal to the number of columns in D1 containing:</p>
+<ul>
   <li>NA for columns of D1 that are not in D2</li>
   <li>the index in D2 for columns in D1 that are in D2 (so the complete column has to match, not the individual elements)</li>
 </ul>
@@ -410,7 +412,7 @@ On data frames it will not do an element-wise comparison but a column-wise compa
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> table(cell_phone_data$own, cell_phone_data$grade)
 </code></pre></div></div>
 
-<p><img src="../../images/Rtable_function.png" alt="table_function" /></p>
+<figure id="figure-2"><img src="../../images/Rtable_function.png" alt="table_function" /><figcaption><span class="figcaption-prefix">Figure 2:</span> Example of a contingency table</figcaption></figure>
 
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-hands-on-exercise-13d"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 13d</h3>
@@ -541,7 +543,7 @@ On data frames it will not do an element-wise comparison but a column-wise compa
   </ol>
 </blockquote>
 
-<h5 id="functions-helpful-for-working-with-large-data-sets">Functions helpful for working with large data sets</h5>
+<h3 id="functions-helpful-for-working-with-large-data-sets">Functions helpful for working with large data sets</h3>
 <p>Research in biology/medicine often generates very large data sets. When you work with very large data sets, it is often useful to show only a small part of the data set;</p>
 <ul>
   <li>head() shows the first 6 elements (vector) or rows (table) of a variable</li>
@@ -549,25 +551,26 @@ On data frames it will not do an element-wise comparison but a column-wise compa
 </ul>
 
 <blockquote class="notranslate hands_on">
-  <h5 id="hands_on-hands-on-exercise-14a"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 14a</h5>
+  <h3 id="hands_on-hands-on-exercise-14a"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 14a</h3>
 
   <ol>
     <li>View the first 6 rows of the mtcars data frame</li>
     <li>Return TRUE if mtcars contains cars with 6 gears and FALSE if not</li>
     <li>How many cars with 3 gears are in mtcars?
-      <blockquote class="solution">
-        <h5 id="solution-solution-8"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h5>
-
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> head(mtcars)
+      <blockquote>
+        <blockquote class="solution">
+          <h3 id="solution-solution-8"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> head(mtcars)
  nrow(subset(mtcars,gear==6))!=0
  nrow(subset(mtcars,gear==3))
-</code></pre></div>        </div>
+</code></pre></div>          </div>
+        </blockquote>
       </blockquote>
     </li>
   </ol>
 </blockquote>
 
-<h5 id="functions-for-finding-indices-of-specific-elements">Functions for finding indices of specific elements</h5>
+<h3 id="functions-for-finding-indices-of-specific-elements">Functions for finding indices of specific elements</h3>
 <p>There are functions that help you locate specific values, the which functions:</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>which.min(x)
 which.max(x)
@@ -626,7 +629,7 @@ which(x != 5)
   </ol>
 </blockquote>
 
-<h5 id="checking-and-converting-types-of-variables">Checking and converting types of variables</h5>
+<h3 id="checking-and-converting-types-of-variables">Checking and converting types of variables</h3>
 <p>To check the data structure of an object you can use str() and the generic class() function:</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class(c(10,12,30))
 # [1] "numeric"

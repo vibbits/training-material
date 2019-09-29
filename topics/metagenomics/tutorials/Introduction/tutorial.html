@@ -5,7 +5,7 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="google-site-verification" content="dw_1zBYRNxF7-vYNDXh3Ght_JuqgJt3BD1N_Pynqmv0" />
-        <title>01 qbase+ introduction</title>
+        <title>01 Tools and Data files</title>
         
         <link rel="stylesheet" href="/training-material/assets/css/bootstrap.min.css?v=3">
         <link rel="stylesheet" href="/training-material/assets/css/bootstrap-toc.min.css">
@@ -21,9 +21,9 @@
         
         
         
-        <meta name="description" content="QPCR analysis using qbase+" />
-        <meta property="og:title" content="VIB Bioinformatics Training: 01 qbase+ introduction" />
-        <meta property="og:description" content="QPCR analysis using qbase+" />
+        <meta name="description" content="Metagenomics" />
+        <meta property="og:title" content="VIB Bioinformatics Training: 01 Tools and Data files" />
+        <meta property="og:description" content="Metagenomics" />
         <meta property="og:image" content="/training-material/assets/images/bioinformatics_core_rgb_neg.png" />
     </head>
     <body data-spy="scroll" data-target="#toc">
@@ -50,8 +50,8 @@
            <div class="col-md-4 col-lg-8" id="top-navbar">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="/training-material/topics/qbase-plus" title="Go back to list of tutorials">
-                            <i class="fa fa-folder-o" aria-hidden="true"></i><span class="visually-hidden">topic</span> QPCR analysis using qbase+
+                        <a class="nav-link" href="/training-material/topics/metagenomics" title="Go back to list of tutorials">
+                            <i class="fa fa-folder-o" aria-hidden="true"></i><span class="visually-hidden">topic</span> Metagenomics
                         </a>
                     </li>
             </div>
@@ -111,7 +111,7 @@
     "name": "VIB Bioinformatics Core",
     "url": "https://www.bits.vib.be"
   },
-  "headline": "01 qbase+ introduction",
+  "headline": "01 Tools and Data files",
   "inLanguage": {
     "@type": "Language",
     "name": "English",
@@ -138,13 +138,13 @@
     "name": "VIB Bioinformatics Core",
     "url": "https://www.bits.vib.be"
   },
-  "courseCode": "qbase-plus / qbaseplus-introduction / hands-on",
+  "courseCode": "metagenomics / Introduction / hands-on",
   "learningResourceType": "hands-on tutorial",
-  "name": "Hands-on for '01 qbase+ introduction' tutorial",
+  "name": "Hands-on for '01 Tools and Data files' tutorial",
   "isPartOf": {
     "@type": "Course",
-    "name": "01 qbase+ introduction",
-    "description": "01 qbase+ introduction",
+    "name": "01 Tools and Data files",
+    "description": "01 Tools and Data files",
     "learningResourceType": "tutorial",
     "interactivityType": "expositive",
     "provider": {
@@ -154,9 +154,9 @@
       "url": "https://www.bits.vib.be"
     }
   },
-  "url": "https://vibbits.github.io//training-material/topics/qbase-plus/tutorials/qbaseplus-introduction/tutorial.html",
-  "timeRequired": "PT5M",
-  "description": "01 qbase+ introduction\\nThe questions this  addresses are:\n - How do you perform a qPCR analysis using the qbase+ software?\n\n\\nThe objectives are:\n - Design qPCR experiments\n - Design qPCR primers\n - Use the qbase+ software to analyze the qPCR experiment results.\n\n",
+  "url": "https://vibbits.github.io//training-material/topics/metagenomics/tutorials/Introduction/tutorial.html",
+  "timeRequired": "PT15M",
+  "description": "01 Tools and Data files\\nThe questions this  addresses are:\n - What tools are presented in this training?\n\n\\nThe objectives are:\n - get an overview of tools LotuS pipeline and R package vegan\n\n",
   "hasPart": [
 
   ],
@@ -166,21 +166,29 @@
   "author": [
     {
       "@type": "Person",
-      "name": "Christof De Bo"
+      "name": "Janick Mathys"
+    },
+    {
+      "@type": "Person",
+      "name": "Alexander Botzki"
     }
   ],
   "contributor": [
     {
       "@type": "Person",
-      "name": "Christof De Bo"
+      "name": "Janick Mathys"
+    },
+    {
+      "@type": "Person",
+      "name": "Alexander Botzki"
     }
   ],
   "about": [
     {
       "@type": "CreativeWork",
-      "name": "QPCR analysis using qbase+",
-      "description": "QPCR analysis using qbase+",
-      "url": "https://vibbits.github.io//training-material/topics/qbase-plus/"
+      "name": "Metagenomics",
+      "description": "Metagenomics",
+      "url": "https://vibbits.github.io//training-material/topics/metagenomics/"
     }
   ]
 }
@@ -188,10 +196,10 @@
 
     <div class="row tutorial">
       <div class="col-md-12" role="main">
-        <h1 data-toc-skip>01 qbase+ introduction</h1>
+        <h1 data-toc-skip>01 Tools and Data files</h1>
         <div class="contributors-line">By: 
 
-<a href="/training-material/hall-of-fame#chdeb" class="contributor-badge"><img src="https://avatars.githubusercontent.com/chdeb" alt="Christof De Bo">Christof De Bo</a>
+<a href="/training-material/hall-of-fame#janick-bits" class="contributor-badge"><img src="https://avatars.githubusercontent.com/janick-bits" alt="Janick Mathys">Janick Mathys</a>, <a href="/training-material/hall-of-fame#abotzki" class="contributor-badge"><img src="https://avatars.githubusercontent.com/abotzki" alt="Alexander Botzki">Alexander Botzki</a>
 
 </div>
         <blockquote class="overview">
@@ -199,25 +207,21 @@
             <strong><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</strong>
             <ul>
             
-            <li>How do you perform a qPCR analysis using the qbase+ software?</li>
+            <li>What tools are presented in this training?</li>
             
             </ul>
 
             <strong><i class="fa fa-bullseye" aria-hidden="true"></i><span class="visually-hidden">objectives</span> Objectives</strong>
             <ul>
             
-            <li>Design qPCR experiments</li>
-            
-            <li>Design qPCR primers</li>
-            
-            <li>Use the qbase+ software to analyze the qPCR experiment results.</li>
+            <li>get an overview of tools LotuS pipeline and R package vegan</li>
             
             </ul>
 
             
 
             
-            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 5 minutes</p>
+            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 15 minutes</p>
             
 
             
@@ -251,33 +255,55 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-10" role="main">
-                    <p>qbase+ is software to visualize and analyze qPCR data. It allows you to perform various types of analyses:</p>
+                    <h1 class="no_toc" id="tools">Tools</h1>
+
+<h2 id="lotus-pipeline">Lotus pipeline</h2>
+<p>LotuS offers a lightweight complete 16S/18S/ITS pipeline to</p>
 <ul>
-  <li>statistical analysis of gene expression</li>
-  <li>advanced copy number analysis</li>
-  <li>miRNA profiling</li>
-  <li>ChIP-qPCR analysis
-    <h1 id="installation-and-licensing">Installation and licensing</h1>
-    <p>You can find the installation instructions on <a href="https://www.bits.vib.be/index.php/software-overview/qbaseplus">VIB qbase+ support page</a>
-VIB only offers qbase+ to VIB scientists, you need a valid VIB email address to run the software. Biogazelle (the company who has developed the software) have written a manual with instructions on how to use the software. Download <a href="https://www.biogazelle.com/system/files/manuals/qbaseplus_manual_0.pdf">Biogazelle’s user manual</a>. Before you can download the manual you have to log on to <a href="https://www.qbaseplus.com/">the qbase+ website</a> using your qbase+ account. Use your VIB email address for setting up this account.</p>
-    <h1 id="training-material">Training material</h1>
-  </li>
-  <li><a href="http://data.bits.vib.be/pub/trainingen/qbasePLUS/qbase_2018.pdf">slides</a></li>
+  <li>Demultiplex and filter fasta or fastq sequences</li>
+  <li>Denoise, remove chimeric sequences and cluster sequences into very high quality OTUs that perform at a similar level to mothur / dada2</li>
+  <li>Determine taxonomic origin of each OTU using &gt;5 spezialized and general purpose database or statistical algorithms</li>
+  <li>Construct OTU, genus, family, class, order and phylum abundance tables in .txt or .biom format</li>
+  <li>Reconstruct OTU phylogenetic tree</li>
 </ul>
 
-<p><strong>Extra</strong></p>
-<ul>
-  <li><a href="http://data.bits.vib.be/pub/trainingen/qbasePLUS/Log10CNRQsClean.xlsx">clean log10 transformed CNRQs</a> for checking normality in Prism</li>
-  <li><a href="http://data.bits.vib.be/pub/trainingen/qbasePLUS/CNRQsClean.xlsx">clean untransformed CNRQs</a> for visualization in Prism</li>
-  <li><a href="http://data.bits.vib.be/pub/trainingen/qbasePLUS/qPCR.R">R script</a> for analysis and visualization</li>
-  <li><a href="http://data.bits.vib.be/pub/trainingen/qbasePLUS/resultslog.csv">log10 transformed CNRQs of control samples</a> for analysis and visualization in R</li>
-  <li><a href="http://data.bits.vib.be/pub/trainingen/qbasePLUS/resultslogTreated.csv">log10 transformed CNRQs of treated samples</a> for analysis and visualization in R</li>
-</ul>
+<p>More information at <a href="http://psbweb05.psb.ugent.be/lotus/downloads.html">LotuS home page</a></p>
+
+<h2 id="usearch">usearch</h2>
+
+<p>Download <a href="http://www.drive5.com/usearch/download.html">usearch version 8</a> and copy the executable in a folder e.g. /usr.bin/tools/ which you can reach (you might to be superuser for this)</p>
+
+<p>Make executable:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo chmod +x /usr/bin/tools/usearch8.1.1861_i86linux32
+</code></pre></div></div>
+
+<p>Create a symbolic link into the folder where Lotus will search for it:</p>
+
+<p><code class="highlighter-rouge">
+sudo ln -s /usr/bin/tools/usearch8.1.1861_i86linux32 /usr/bin/tools/lotus_pipeline/bin/usearch_bin
+</code>`</p>
+
+<h2 id="r-package">R package</h2>
+
+<p>You also need R with the vegan package installed.</p>
 
 
 
                     
+                    <blockquote class="key_points">
+                        <h3><i class="fa fa-key" aria-hidden="true"></i><span class="visually-hidden">keypoints</span> Key points</h3>
 
+                        <ul>
+                            
+                            <li>We presented the tools for the training and the data files</li>
+                            
+                        </ul>
+                    </blockquote>
+                    
+
+                    
+                    <h1 data-toc-skip>Useful literature</h1>
+                    <p>Further information, including links to documentation and original publications, regarding the tools, analysis techniques and the interpretation of results described in this tutorial can be found <a href="/training-material/topics/metagenomics#references">here</a>.</p>
                     
 
                     
@@ -310,7 +336,7 @@ VIB only offers qbase+ to VIB scientists, you need a valid VIB email address to 
             <a href="https://www.bits.vib.be">VIB Bioinformatics Core</a>
             and all the <a href="/training-material/hall-of-fame">contributors</a>.
             Found a typo? Something is wrong in this tutorial? Edit it on
-            <a href="https://github.com/vibbits/training-material/tree/master/topics/qbase-plus/tutorials/qbaseplus-introduction/tutorial.md">GitHub</a>.
+            <a href="https://github.com/vibbits/training-material/tree/master/topics/metagenomics/tutorials/Introduction/tutorial.md">GitHub</a>.
           </div>
           <div class="col-md-3 text-center">
                 <a href="http://www.bits.vib.be"><img src="/training-material/assets/images/bioinformatics_core_rgb_neg.png"></a>
