@@ -1,8 +1,8 @@
-Galaxy Project Code of Conduct
+Project Code of Conduct
 ==============================
 
 This code of conduct outlines our expectations for participants within the
-Galaxy community, as well as steps to reporting unacceptable behavior. We are
+community, as well as steps to reporting unacceptable behavior. We are
 committed to providing a welcoming and inspiring community for all and expect
 our code of conduct to be honored. Anyone who violates this code of conduct may
 be banned from the community.
@@ -71,9 +71,9 @@ participants with disabilities.
 ### Reporting Issues
 
 If you experience or witness unacceptable behavior, or have any other concerns,
-please report it by contacting Dave Clements (clementsgalaxy@gmail.com). To
-report an issue involving Dave Clements please email James Taylor
-(james@taylorlab.org). All reports will be handled with discretion. In your
+please report it by contacting Alexander Botzki (bits@vib.be). To
+report an issue involving Alexander Botzki please email hr@vib.be.
+All reports will be handled with discretion. In your
 report please include:
 
 - Your contact information.
