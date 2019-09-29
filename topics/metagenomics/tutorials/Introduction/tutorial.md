@@ -7,10 +7,9 @@ questions:
   - "What tools are presented in this training?"
 
 objectives:
-  - "get an overview of general functions to manipulate variables"
-  - "get an overview of functions helpful for working on large data sets"
+  - "get an overview of tools LotuS pipeline and R package vegan"
 
-time_estimation: "5m"
+time_estimation: "15m"
 
 key_points:
   - "We presented the tools for the training and the data files"

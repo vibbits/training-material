@@ -4,21 +4,22 @@ layout: tutorial_hands_on
 title: "02 OTU creation using LotuS"
 
 questions:
-  - "How to get started in R and RStudio?"
+  - "How to use the LotuS pipeline?"
 
 objectives:
-  - "get familiar with the basic R syntax"
-  - "learn how to use the help system in R"
-  - "learn how to define variables"
+  - "learn how to create a genus abundance tablei with LotuS"
+  - "learn what information is needed in the experiment annotation file"
+  - "learn how to apply quality filters with sdm"
+  - "learn how to demultiplex the raw data files"
+  - "learn how to execute LotuS pipeline"
+  - "learn how to assign various taxonomies"
 
 time_estimation: "60m"
 
 key_points:
-  - "We showed how to install and load packages"
-  - "We showed how to access the help system"
-  - "We showed how to set the folder to work in"
-  - "We showed how to define variables"
-  - "We showed how to write a script"
+  - "We showed how to use the LotuS pipeline with 454 and Miseq raw data"
+  - "We showed how to assign taxonomies to output of LotuS pipeline"
+  - "We showed how to create a genus abundance table"
 
 contributors:
   - hildebra 

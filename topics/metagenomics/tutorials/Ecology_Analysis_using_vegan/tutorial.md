@@ -7,9 +7,10 @@ questions:
   - "How to do an ecology analysis with the R package vegan?"
 
 objectives:
-  - "get familiar with the basic R syntax"
-  - "learn how to use the help system in R"
-  - "learn how to define variables"
+  - "recapitulate the basics of working with R"
+  - "learn how to visualize genus abundance tables"
+  - "learn how to normalize abundances"
+  - "learn how to use the vegan package including clustering and statistical testing"
 
 time_estimation: "75m"
 
@@ -123,7 +124,8 @@ We can use the `apply` command, to apply the density command to every column of 
 >  > > ### {% icon solution %} Solution
 >  > > ```
 >  > > # estimate densities of all samples
->  > > S_densities = apply(M,2,density)>  > > ```
+>  > > S_densities = apply(M,2,density)
+>  > > ```
 >  > {: .solution }
 >  {: .question }
 {: .hands_on }
@@ -465,9 +467,9 @@ Now that you have finished the tutorials, you should be able to analyze any new 
 You can always expand upon these concepts, using this tutorial as starting point. Just remember that R is a very flexible language, and all these commands can be expanded for new purposes and visualizations.
 
 ### Data sources
-All the material provided in this tutorial are from metagenomic study on mice knockouts. Further analysis of the data can be found in: 
+All the material provided in this tutorial are from metagenomic study on mice knockouts. Further analysis of the data can be found in the reference below.
 
-### Useful literature
+### Reference 
 
 Hildebrand, F., Nguyen, A. T. L., Brinkman, B., Yunta, R. G., Cauwe, B., Vandenabeele, P., … Raes, J. (2013). Inflammation-associated enterotypes, host genotype, cage and inter-individual effects drive gut microbiota variation in common laboratory mice. Genome Biology, 14(1), R4. doi:10.1186/gb-2013-14-1-r4
 
