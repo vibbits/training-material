@@ -1,7 +1,7 @@
 ---
 layout: tutorial_hands_on
 
-title: "Vectors and factors"
+title: "03 Vectors and factors"
 
 questions:
   - "How to work with vectors and factors?"
@@ -34,7 +34,7 @@ The power of R lies not in its ability to work with simple numbers but in its ab
 ### Vectors
 The simplest data structure is the *vector*, a single row consisting of data values of the same type, e.g. all numbers, characters, Booleans... 
 
-##### Creating a vector
+#### Creating a vector
 The function **c()** (short for "combine values" in a vector) is used to create vectors. The only arguments that need to be passed to c() are the  values that you want to combine into a vector. 
 You can create a **numeric** (a), **character** (b) or **logical** (c) vector:
 ```
@@ -213,7 +213,7 @@ You tell sample() to return 10 values, each in the range 1:6. Because every roll
 > Words used as values have to be written between quotes, words used as variable names do not! If R encounters a word without quotes it will try to find a variable with that name.
 {: .comment}
 
-### Referring to elements of a vector
+#### Referring to elements of a vector
 Every element in a vector is assigned an index (= its position in the vector) in the order in which elements were entered. This index starts with one, not zero. 
 
 You can extract elements from vectors in two ways:
@@ -332,7 +332,7 @@ Logical operators applied to vectors will result in a vector of the same length 
 {: .hands_on}
 
 
-> ##### {% icon hands_on %} Hands-on: Extra exercise 5c
+> ### {% icon hands_on %} Hands-on: Extra exercise 5c
 >
 > Create vector y with elements 9,2,4 and retrieve the second element of y.
 >    > ### {% icon solution %} Solution
@@ -367,7 +367,7 @@ Logical operators applied to vectors will result in a vector of the same length 
 > From the demo script run the **Logical and arithmetic operations on variables** section
 {: .hands_on}
 
-> ##### {% icon hands_on %} Hands-on: Extra exercise 5h
+> ### {% icon hands_on %} Hands-on: Extra exercise 5h
 >
 > Retrieve elements from newVector (exercise 4b) that are larger than the corresponding elements of vector threes (exercise 4d).
 >    > ### {% icon solution %} Solution
@@ -379,7 +379,7 @@ Logical operators applied to vectors will result in a vector of the same length 
 >    {: .solution}
 {: .hands_on}
 
-##### Removing, changing or adding elements in a vector
+#### Removing, changing or adding elements in a vector
 To remove an element from a vector use a negative index: ?-? indicates ?NOT? followed by the index of the element you want to remove, e.g. to remove the second element of vector z use:
 ```
 z <- z[-2]
@@ -387,12 +387,12 @@ z <- z[-2]
 
 Change or add elements by assigning a new value to that element . 
 
-> ##### {% icon hands_on %} Hands-on: Demo
+> ### {% icon hands_on %} Hands-on: Demo
 >
 > From the demo script run the **Data removal vectors** section
 {: .hands_on}
 
-> ##### {% icon hands_on %} Hands-on: Exercise 6a
+> ### {% icon hands_on %} Hands-on: Exercise 6a
 >
 > From vector x (exercise 5a) remove the first 8 elements and store the result in x2.
 >    > ### {% icon solution %} Solution

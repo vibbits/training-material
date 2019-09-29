@@ -1,7 +1,7 @@
 ---
 layout: tutorial_hands_on
 
-title: "Data manipulation"
+title: "02 Data manipulation"
 
 questions:
   - "How to manipulate variables?"
@@ -39,7 +39,7 @@ The log10() function is written in such a way that it can be applied on a vector
 ```
 R has built-in functions for virtually any standard mathematical task.
  
-![general_functions](../../images/Rgeneral_functions.png)
+![general_functions](../../images/Rgeneral_functions.png "Overview of built-in functions")
 
 Arithmetic operators can be used on variables. Provided that the variables have the same dimensions, you can do element-wise addition, subtraction, multiplication and division of two vectors or tables. Element-wise means that the calculation is performed on the equivalent positions between the two variables: first element + first element, second element + second element etc.
 
@@ -143,6 +143,7 @@ The length() function retrieves the number of elements of a vector. Used on data
 The same is true for match(x,y). It compares x and y and returns a vector with the same length as x containing: 
 -  NA for elements of x that are not in y  
 - the index in y for elements in x that are in y
+
 On data frames it will not do an element-wise comparison but a column-wise comparison: 
 ```
 match(D1,D2) 
@@ -174,7 +175,7 @@ Furthermore there are also functions specific for factors. For instance to selec
  table(cell_phone_data$own, cell_phone_data$grade)
 ```
 
-![table_function](../../images/Rtable_function.png)
+![table_function](../../images/Rtable_function.png "Example of a contingency table")
 
 > ### {% icon hands_on %} Hands-on: Exercise 13d
 >
@@ -288,27 +289,26 @@ Furthermore there are also functions specific for factors. For instance to selec
 >    {: .solution}
 {: .hands_on}
 
-##### Functions helpful for working with large data sets
+### Functions helpful for working with large data sets
 Research in biology/medicine often generates very large data sets. When you work with very large data sets, it is often useful to show only a small part of the data set;
 - head() shows the first 6 elements (vector) or rows (table) of a variable 
 - tail() prints the last 6 elements or rows
 
-> ##### {% icon hands_on %} Hands-on: Exercise 14a
+> ### {% icon hands_on %} Hands-on: Exercise 14a
 >
 > 1. View the first 6 rows of the mtcars data frame
 > 2. Return TRUE if mtcars contains cars with 6 gears and FALSE if not
 > 3. How many cars with 3 gears are in mtcars?
->    > ##### {% icon solution %} Solution
->    >
->    >  ```
->    >  head(mtcars)
->    >  nrow(subset(mtcars,gear==6))!=0
->    >  nrow(subset(mtcars,gear==3))
->    >  ```
->    {: .solution}
+> >   > ### {% icon solution %} Solution
+> >   >  ```
+> >   >  head(mtcars)
+> >   >  nrow(subset(mtcars,gear==6))!=0
+> >   >  nrow(subset(mtcars,gear==3))
+> >   >  ```
+> >   {: .solution}
 {: .hands_on}
 
-##### Functions for finding indices of specific elements
+### Functions for finding indices of specific elements
 There are functions that help you locate specific values, the which functions:
 ```
 which.min(x)
@@ -365,7 +365,7 @@ which(x != 5)
 >    {: .solution}
 {: .hands_on}
 
-##### Checking and converting types of variables
+### Checking and converting types of variables
 To check the data structure of an object you can use str() and the generic class() function:
 ```
 class(c(10,12,30))
