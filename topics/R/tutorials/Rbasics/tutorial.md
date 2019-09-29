@@ -1,7 +1,7 @@
 ---
 layout: tutorial_hands_on
 
-title: "R basics: installation, help, set up working directory, variables, syntax, scripts"
+title: "01 R basics: installation, help, set up working directory, variables, syntax, scripts"
 
 questions:
   - "How to get started in R and RStudio?"
@@ -59,55 +59,52 @@ Watch this [video tutorial](https://www.youtube.com/watch?v=5YmcEYTSN7k) on the 
 A script is a text file that contains all the commands you want to run. You can write and run scripts and you can also save them so next time you need to do a similar analysis you can change and re-run the script with minimal effort. An R project can contain multiple scripts. 
 The script editor highlights syntax in scripts making it easy to find and prevent errors. It has many features that will help you write scripts e.g. autocompletion, find/replace, commenting. 
 
-##### Autocompletion
+### Autocompletion
 It supports the automatic completion of code, e.g. if you have an object named relfreq in your workspace, type rel in the script editor and it will show a list of possibilities to complete the name.
 
-![autocompletion](../../images/Rautocompletion.png)
+![autocompletion](../../images/Rautocompletion.png "Example for autocompletion")
 
-##### Find and replace
+### Find and replace
 Find and replace can be opened using Ctrl+F.
 
-##### Adding comments to scripts
+### Adding comments to scripts
 In scripts you must include comments to help you remember or tell collaborators what you did. Comments are lines that start with a # symbol. This symbol tells R to ignore  this line. Comments are displayed in green.
 You can comment and uncomment large selections of code using: **Comment/Uncomment Lines**
 
-![comment_uncomment](../../images/Rcomment_uncomment.png)
+![comment_uncomment](../../images/Rcomment_uncomment.png "Menu Comment/Uncomment Lines")
 
-##### Adding section headings to scripts
-Add section headings to your scripts using the following format:
-#Heading Name####
+### Adding section headings to scripts
+Add section headings to your scripts using the following format: #Heading Name####
 
-![section_headings](../../images/Rsection_headings.png)
+![section_headings](../../images/Rsection_headings.png "Define section headings")
 
 At the bottom of the script editor you can quickly navigate to sections in your script. Especially in long scripts this is very useful.
 
-##### Creating a new script
+### Creating a new script
 Click **File** in the top menu and select **New File > R Script**.
 
-![new_script](../../images/Rnew_script.png)
+![new_script](../../images/Rnew_script.png "File Menu / New File")
 
 Besides a simple R script, there are many other file types you can create: 
 - [R markdown](http://rmarkdown.rstudio.com/) file: incorporate R-code and its results in a report 
 - R Notebook: R Markdown file with chunks of code that can be executed interactively, with output visible beneath the code
 - R Sweave file: incorporate R-code and its results in a Latex report
 
-##### Opening an existing script
+### Opening an existing script
 Click **File** in the top menu and select **Open File**.
 
 Scripts are opened as a tab in the script editor. You can open several scripts at the same time in RStudio. 
 
-##### Running a script
+### Running a script
 To run a script you select the code that you want to execute in the script editor and click the **Run** button at the top right of the script editor. 
 
 ![run_script](../../images/Rrun_script.png)
 
 The code will be executed in the console.
 
-##### Saving a script
+### Saving a script
 
-If there are unsaved changes in a script, the name of the script will be red and followed by an asterisk. To save the script click the **Save** button: 
-
-![save_script](../../images/Rsave_script.png)
+If there are unsaved changes in a script, the name of the script will be red and followed by an asterisk. To save the script click the **Save** button: ![save_script](../../images/Rsave_script.png)
 
 R scripts should have the extension .R 
 Once it is saved the asterisk disappears and the name becomes black.
@@ -145,7 +142,7 @@ An interface to easily [connect to databases](http://db.rstudio.com/) in R.
 ### Files
 The list of files and folders in the working directory. RStudio has a default working directory, typically your home folder.
 
-##### Changing the working directory
+### Changing the working directory
  Often you want to work in the folder that contains the data. In that case you can change the working directory. 
  Check which folder R is using as a working directory:
 ```
@@ -156,7 +153,7 @@ Change the working directory:
 > setwd("D:/trainingen/zelfgegeven/R/")
 ```
 
-> ##### {% icon comment %} Comment
+> ### {% icon comment %} Comment
 >
 > You need to use / or \\ in paths. Either will work but \ will not since R sees it as the character that represents a division. 
 {: .comment}
@@ -165,14 +162,14 @@ Changing your working directory will make relative file references in your code 
 
 Alternatively you can change the working directory in the **Files** tab, expand **More** and select **Set As Working Directory**.
 
-> ##### {% icon hands_on %} Hands-on: Demo
+> ### {% icon hands_on %} Hands-on: Demo
 >
 > 1. Download the demo script for this lesson and open it in RStudio
 > [`Demo_1.R`](http://data.bits.vib.be/pub/trainingen/RIntro/Demo_1.R)
 > 2. From the demo script run the **Set working directory** section
 {: .hands_on}
 
-> ##### {% icon hands_on %} Hands-on: Exercise 1
+> ### {% icon hands_on %} Hands-on: Exercise 1
 >
 > Set the working directory to the folder that contains the demo script that you have downloaded and check if it was changed. 
 {: .hands_on}
@@ -184,35 +181,33 @@ To list the files in the working directory:
 
 ### Plots
 Plots that are generated by the code you run will appear here.
-To save a plot click the **Export** button: 
-
-![export_plot](../../images/Rexport_plot.png)
+To save a plot click the **Export** button: ![export_plot](../../images/Rexport_plot.png)
 
 ### Packages
 R is popular because of the enormous diversity of packages. R is essentially a modular environment and you install and load the modules (packages) you need. Packages are available at the [CRAN](https://cran.r-project.org/web/packages/available_packages_by_name.html) and [Bioconductor](http://www.bioconductor.org/packages/release/BiocViews.html) websites. 
 Installing a package means that a copy of the package is downloaded and unzipped on your computer. If you want to know in what directory R stores the packages, type:
+
 ```
 >.libPaths()
 [1] "D:/R-3.6.0/library"
 >
 ```
 to see the default path where R stores packages. If you want to change this folder use the *destdir* argument of the install.packages() function:
+
 ```
 > install.packages("car",destdir="C:/Users/Janick/R")
 ```
 You only need to install a package once, as it is saved on your computer.
 
-##### Installing R packages
+### Installing R packages
 Watch this [video tutorial](https://www.youtube.com/watch?v=u1r5XTqrCTQ ) on how to install CRAN packages. 
-When you have made changes to the right side of the Rstudio user interface (packages, files tab...), R is sometimes slow to show these changes. In that case hit the refresh button:
-
-![refresh_button](../../images/Rrefresh_button.png)
+When you have made changes to the right side of the Rstudio user interface (packages, files tab...), R is sometimes slow to show these changes. In that case hit the refresh button: ![refresh_button](../../images/Rrefresh_button.png)
 
 Some packages are not available on the CRAN site. Download in compressed format (as a .zip or .tar.gz file) from the source site. To install: select **Install from Package Archive File (.zip; .tar.gz)** in the **Install Packages** window and R will put it in the appropriate directory. 
 
 ![install_zip](../../images/Rinstall_zip.png "Installing packages downloaded from their source site")
 
-##### Installing Bioconductor packages
+### Installing Bioconductor packages
 Bioconductor is a set of R packages that provides tools for the analysis of high-throughput data, e.g. NGS data.
 Make sure you have the BiocManager package installed:
 ```
@@ -229,7 +224,7 @@ To install additional Bioconductor packages e.g. **GenomicFeatures** you type th
 ```
 Overview of all available Bioconductor [packages](https://www.bioconductor.org/packages/release/BiocViews.html#___Software) and [workflows](https://www.bioconductor.org/packages/release/BiocViews.html#___Workflow).
 
-##### Installing packages from GitHub
+### Installing packages from GitHub
 Git is a free and open source version control system. Version control helps software developers manage changes to code by keeping track of every change in a special database. If a mistake is made, the developer can turn back the clock and compare earlier versions of the code to fix the mistake. 
 There is an install_github() function in the devtools packageto install R packages hosted on GitHub:
 ```
@@ -238,7 +233,7 @@ There is an install_github() function in the devtools packageto install R packag
 > devtools::install_github("statOmics/MSqRob&copy;MSqRob0.7.6")
 ```
 
-##### Loading packages
+### Loading packages
  Each time you want to use a package you have to load it (activate its functions). Loading a package is done by selecting it in the list of installed packages or by typing the following command:
 ```
 > library("name_of_package")
@@ -249,7 +244,7 @@ Error in library(car) : there is no package called 'car'
 ```
 or similar, it means that the car package needs to be installed first.
 
-> ##### {% icon hands_on %} Hands-on: Demo
+> ### {% icon hands_on %} Hands-on: Demo
 >
 > Run commands of the **Installation** section of the demo script
 {: .hands_on}
@@ -265,7 +260,7 @@ Additional useful links:
 
 Access the R documentation in RStudio using commands: help() or ?
 
-> ##### {% icon hands_on %} Hands-on: Demo
+> ### {% icon hands_on %} Hands-on: Demo
 >
 > From the demo script run the **Get help** section
 {: .hands_on}
@@ -292,7 +287,7 @@ Names of packages, files, paths on your computer, urls are all text data and nee
 ### Booleans
 Boolean values are **TRUE** and **FALSE** without quotes because they are Booleans not text. 
 
-> ##### {% icon comment %} Comment
+> ### {% icon comment %} Comment
 >
 > R is case sensitive: true and false are not recognized as Booleans. They have to be written in capitals.
 {: .comment}
@@ -303,14 +298,14 @@ Impossible values (e.g., dividing by zero) are represented by the symbol NaN (No
 
 ### Arithmetic operators
 
-![arithmetic_operators](../../images/Rarithmetic_operators.png)
+![arithmetic_operators](../../images/Rarithmetic_operators.png "Overview of arithmetic operators")
 
 Arithmetic operators follow the standard **order of priority**, with exponentiation the highest and addition and subtraction the lowest priority, but you can control the order with **parentheses**. Do not use brackets as these are for other purposes in R. 
 
 ### Logical operators
 Logical operators can be used to selectively execute code based on certain conditions. They allow to create logical expressions (comparisons) that return TRUE or FALSE. 
 
-![logic_operators](../../images/Rlogic_operators.png)
+![logic_operators](../../images/Rlogic_operators.png "Overview of logical operators")
 
 Logical expressions may be combined using logical operators. The NOT operator (!) can be used to assess whether something is NOT the case. 
 

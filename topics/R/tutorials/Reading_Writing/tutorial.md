@@ -1,7 +1,7 @@
 ---
 layout: tutorial_hands_on
 
-title: "Reading and writing data"
+title: "05 Reading and writing data"
 
 questions:
   - "How to import your data into RStudio?"
@@ -71,7 +71,7 @@ Patient;Drug;Hormone
 ```
 Obviously, the file is a European CSV file, to open it use read.csv2()
 
-##### Reading Excel files
+### Reading Excel files
 To import Excel files via a command the easiest way is to let Excel save the file in .csv or tab delimited text format and use the read functions. 
 
 An easy way to import Excel files is to use the RStudio interface although I prefer to use commands. To use the interface go to the **Environment** tab and click the **Import Dataset** button. 
@@ -96,18 +96,18 @@ Compared to other packages for reading Excel files (gdata, xlsx, xlsReadWrite) r
 
 Once imported into RStudio the data is stored in a data frame and you can use it as input of commands. The data frame appears in the list of **Data in the Environment tab**.
 
-![file_imported](../../images/Rfile_imported.png)
+![file_imported](../../images/Rfile_imported.png "Inspect Variables and Data Frames in the Environment tab")
 
 If you want to view the data frame you can **click its name in the Environment** tab and it will appear in a separate tab in the script editor.
 
-![view_file](../../images/Rview_file.png)
+![view_file](../../images/Rview_file.png "View file content")
 
-> ##### {% icon hands_on %} Hands-on: Demo
+> ### {% icon hands_on %} Hands-on: Demo
 >
 > From the demo script run the **Reading files** section
 {: .hands_on}
 
-> ##### {% icon hands_on %} Hands-on: Exercise 17a
+> ### {% icon hands_on %} Hands-on: Exercise 17a
 >
 > 1. Import the file [GeneEx.csv](http://data.bits.vib.be/pub/trainingen/RIntro/GeneEx.csv) into a data frame called GeneEx
 > 2. Rename the two last columns Ct1 and Ct2
@@ -162,7 +162,7 @@ If you want to view the data frame you can **click its name in the Environment**
 >    {: .question}
 {: .hands_on}
 
-##### Reading other files
+### Reading other files
 Also of note is an R package called **foreign**. This package contains functionality for importing data into R that is formatted by most other statistical software packages, including SAS, SPSS, STRATA and others. 
 
 ### Writing files
