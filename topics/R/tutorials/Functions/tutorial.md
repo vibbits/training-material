@@ -1,7 +1,7 @@
 ---
 layout: tutorial_hands_on
 
-title: "02 Data manipulation"
+title: "04 Data manipulation"
 
 questions:
   - "How to manipulate variables?"
