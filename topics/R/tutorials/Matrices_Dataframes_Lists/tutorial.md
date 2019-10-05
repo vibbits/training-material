@@ -1,7 +1,7 @@
 ---
 layout: tutorial_hands_on
 
-title: "04 Matrices, data frames and lists"
+title: "02 Matrices, data frames and lists"
 
 questions:
   - "How to work with tables and lists?"
