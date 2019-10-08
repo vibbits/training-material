@@ -60,10 +60,14 @@ Some older Windows versions cause problems with the E-Notebook 2014 Client insta
 
 ## MacOS, Linux, mobile devices
 **STEP 1: Citrix Workspace app**
-1. Browse to [http://www.citrix.com www.citrix.com] 
+1. Browse to [https://www.citrix.com www.citrix.com] 
 2. Click on Download
 3. Select Citrix Workspace app from the list of possible downloads
 4. Download and install Citrix Workspace app
+5. After the installation on Linux execute the following command:
+```
+sudo cp -a /usr/share/ca-certificates/mozilla/DigiCert_Assured_ID_ Root_ CA.crt /opt/Citrix/ICAClient/keystore/cacerts/
+```
 
 **STEP 2: Launch ELN online**
 1. Browse to [https://storefront.vib.be](https://storefront.vib.be)
