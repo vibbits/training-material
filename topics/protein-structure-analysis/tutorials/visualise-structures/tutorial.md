@@ -17,8 +17,8 @@ key_points:
 - The take-home messages
 - They will appear at the end of the tutorial
 contributors:
-- abotzki 
-- jvdurme 
+- abotzki
+- jvdurme
 
 ---
 
@@ -51,10 +51,10 @@ Python and PovRay should be installed already, so you can skip this part.
 The programming language Python must be installed to use some very useful YASARA features. Simply start YASARA as administrator. Right click the YASARA icon on the desktop and choose "Run as administrator". Once the program is opened, click
 
 ```
-Help > Install program > Python 
+Help > Install program > Python
 ```
 
-PovRay is used to make high quality publication-ready images and should be downloaded first with: 
+PovRay is used to make high quality publication-ready images and should be downloaded first with:
 
 ```
 Help > Install program > PovRay
@@ -69,7 +69,7 @@ Help > Play help movie > General: Working with YASARA
 
 ```
 
-##Scene styles
+## Scene styles
 
 Open the PDB with code 1TRZ in YASARA.
 ```
@@ -100,7 +100,7 @@ Mostly to do structure analysis, we want to show only the most interesting resid
 The structure of insulin was crystallized together with some water molecules. In many cases, it is no problem to permanently delete those waters. To visualize the waters, select an atom view such as F1, F2 or F3. See the red water (oxygen) atoms floating around the surface?
 ```
 Edit > Delete > Waters
-``` 
+```
 
 Then select the base scene style without any explicit atoms, e.g. tube style (F5). Press F5. This is our representation of the backbone.
 
@@ -111,7 +111,7 @@ There are several ways to show the residues of interest:
    View > Show atoms in > Residue
 ```
    Select Cys7 from Molecule **A** and press OK
-2. From the sequence selector ![seqselector.png](/home/albot/all-images-wiki/Seqselector.png "Seqselector.png")
+2. From the sequence selector ![seqselector.png](../images/Seqselector.png "Seqselector.png")
    Hover the mouse on the bottom of the screen, you will see the sequence selector opening. Open it permanently by pressing the blue nailpin on the left side of it. Search for Cys7 from Molecule **B**, right-click and select:  
 ```
    Show > Residue
