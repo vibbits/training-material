@@ -63,10 +63,8 @@ The script editor highlights syntax in scripts making it easy to find and preven
 It supports the automatic completion of code, e.g. if you have an object named relfreq in your workspace, type rel in the script editor and it will show a list of possibilities to complete the name.
 <img src="../../images/Rautocompletion.png" alt="Example for autocompletion" width="250" align="left" />
 
-<div>
 ### Find and replace
 Find and replace can be opened using Ctrl+F.
-</div>
 
 ### Adding comments to scripts
 In scripts you must include comments to help you remember or tell collaborators what you did. Comments are lines that start with a # symbol. This symbol tells R to ignore  this line. Comments are displayed in green.
