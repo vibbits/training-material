@@ -61,9 +61,7 @@ The script editor highlights syntax in scripts making it easy to find and preven
 
 ### Autocompletion
 It supports the automatic completion of code, e.g. if you have an object named relfreq in your workspace, type rel in the script editor and it will show a list of possibilities to complete the name.
-<p>
-<img src="../../images/Rautocompletion.png" alt="Example for autocompletion" width="250" align="left" />
-</p>
+![Autocompletion](../../images/Rautocompletion.png "Example for autocompletion.png")
 
 ### Find and replace
 Find and replace can be opened using Ctrl+F.
