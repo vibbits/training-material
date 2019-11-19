@@ -62,7 +62,7 @@ The script editor highlights syntax in scripts making it easy to find and preven
 ### Autocompletion
 It supports the automatic completion of code, e.g. if you have an object named relfreq in your workspace, type rel in the script editor and it will show a list of possibilities to complete the name.
 
-![autocompletion](../../images/Rautocompletion.png "Example for autocompletion")
+![autocompletion](../../images/Rautocompletion.png "Example for autocompletion" | width=200)
 
 ### Find and replace
 Find and replace can be opened using Ctrl+F.
