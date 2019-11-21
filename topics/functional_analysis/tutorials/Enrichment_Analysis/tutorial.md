@@ -1,4 +1,4 @@
----
+----
 layout: tutorial_hands_on
 
 title: "Functional enrichment analysis"
@@ -63,6 +63,8 @@ It supports gene symbols, Ensembl, Entrez, RefSeq and UniProt IDs from human. Ho
 >    > - Click the **Display chart** (green) link to visualize the results
 >    > 
 >    > ![ToppGene_Results](../../images/FunTopp_Results.png)
+>    > - If you want to see which genes from your list belong to a certain annotation click the number in the **Genes from innput** column
+>    > 
 >    {: .solution}
 {: .hands_on)
 
@@ -143,11 +145,17 @@ This tool largely overlaps in data-sources with Enrichr but updates them more re
 >    {: .solution)
 {: .hands_on)
 
-The results are shown in different tabs. The Enrichment results tab shows a table with annotations and scores as well as a list of genes responsible for the enrichment for each enriched KEGG pathway
+The **Enrichment results** can be visualized as a table, a bar chart or a Volcano plot. Dark blue bars are considered significantly enriched. 
 
-The results are in a bar chart or a table with annotations and scores as well as a list of genes responsible for the enrichment for each enriched KEGG pathway. Click on a **Gene Set** link to see this list.
+![WebGestalt_Results](../../images/FunWebG_Results1.png)
 
-![WebGestalt_Results](../../images/FunWebG_Results.png)
+Clicking a bar shows the details on the bottom half of the page: 
+- **FDR** is the corrected p-value (blue)
+-**Mapped input** represents your gene list
+- **gene set** is the total group of genes in the genome with this annotation
+- **overlap** is the number of genes from your list with this annotation. They are listed in the table.
+
+![WebGestalt_Results](../../images/FunWebG_Results2.png)
 
 > ##### {% icon hands_on %} Exercise 2 WebGestalt
 > Repeat the enrichment analysis on Wiki pathways
@@ -157,6 +165,8 @@ Again, many more tables can be generated in WebGestalt and you should choose the
 
 #### g:Profiler: many organisms but limited resources
 [g:Profiler](https://biit.cs.ut.ee/gprofiler/) supports a [long list of organisms but has less resources](https://biit.cs.ut.ee/gprofiler/page/organism-list) than the other tools since it only retrieves functional annotations from Ensembl. It is very [regularly updated](https://biit.cs.ut.ee/gprofiler/page/news).
+
+For Enrichment analysis you need to use the 
 
 ### Gene set enrichment analysis
 Some omics experiments generate a ranked list of genes:
@@ -185,4 +195,3 @@ Online enrichment analysis tools often have functional annotation built-in for a
 
 Gene sets based on GO, pathways,omics studies, sequence motifs, chromosomal position, oncogenic and immunological expression
 signatures, and various computational analyses maintained by the GSEA team of [MSigDB](http://www.msigdb.org).
-
