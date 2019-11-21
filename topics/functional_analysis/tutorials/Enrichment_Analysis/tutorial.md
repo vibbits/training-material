@@ -164,14 +164,36 @@ Clicking a bar shows the details on the bottom half of the page:
 Again, many more tables can be generated in WebGestalt and you should choose the type of enrichment that fits your experimental needs. Data can be saved back to disk for further use.
 
 #### g:Profiler: many organisms but limited resources
-[g:Profiler](https://biit.cs.ut.ee/gprofiler/) supports a [long list of organisms but has less resources](https://biit.cs.ut.ee/gprofiler/page/organism-list) than the other tools since it only retrieves functional annotations from Ensembl. It is very [regularly updated](https://biit.cs.ut.ee/gprofiler/page/news).
+[g:Profiler](https://biit.cs.ut.ee/gprofiler/) supports a [long list of organisms but has less resources](https://biit.cs.ut.ee/gprofiler/page/organism-list) than the other tools since it retrieves functional annotations from Ensembl representing GO terms, pathways, networks, regulatory motifs, and disease phenotypes. 
 
-For Enrichment analysis you need to use the 
+It is very [regularly updated](https://biit.cs.ut.ee/gprofiler/page/news).
+
+> ##### {% icon hands_on %} Exercise 1 g:Profiler
+>  How to calculate enrichment in a list of genes ?
+>    > ##### {% icon solution %} answer
+>    > - For Enrichment analysis you need to use the **g:GOSt** tool.
+>    > - **Upload query**: a file with gene IDs (in this example Ensembl IDs - one per line). 
+>    > - In the **Functional Database** boxes select **pathway** and **KEGG**
+>    > - In the **Gene ID type** box select the correct ID type
+>    > - Select the **Organism** you need
+>    > - Click the **Run query** button
+>    > 
+>    > ![g:Profiler_Interface](../../images/FungP_Interface.png)
+>    > 
+>    {: .solution)
+{: .hands_on)
+
+This tool produces visually attractive results. Every dot in the graph represents a functional annotation. Hover your mouse over a dot to show details like the name of the annotation and the corrected p-value. 
+
+![g:Profiler_Results](../../images/FungP_Results.png)
+
+Also the detailed results are very visual. 
 
 ### Gene set enrichment analysis
 Some omics experiments generate a ranked list of genes:
 - genes ranked by differential expression score from a RNA-Seq experiment
 - genes ranked by sensitivity in a genome-wide CRISPR screen
+- mutated genes ranked by a score from a cancer driver prediction method
 - ...
 
 To analyze these lists, the following steps are taken
@@ -182,9 +204,24 @@ Groups of related genes are called gene sets: a *pathway gene set* includes all 
 
 This is why this type of analysis is called GSEA, Gene Set Enrichment Analysis. It assumes a whole-genome ranked list as input. 
 
-It is most often done in R or via software that you install on your computer like  [GSEA](http://software.broadinstitute.org/gsea/). If you only have scores for a subset of the genome you should analyze the data using [g:Profiler](https://biit.cs.ut.ee/gprofiler/)with the **Ordered query** option.
+
+#### GSEA
+GSEA is most often done in R or via software that you install on your computer like  [GSEA](http://software.broadinstitute.org/gsea/) from the Broad Institute. 
+
+GSEA is recommended when ranks are available for all or most of the genes in the genome (e.g. RNA-Seq data). It is not suitable when only a small portion of genes have ranks available (e.g. an experiment that identifies mutated cancer genes).
+
+#### g:Profiler
+If you only have scores for a subset of the genome you should analyze the data using [g:Profiler](https://biit.cs.ut.ee/gprofiler/)with the **Ordered query** option.
 
 ![gProfiler_Ranked](../../images/FungP_Ranked.png)
+
+Your list should now consist of gene IDS ordered according to decreasing importance (in this case increasing corrected p-value for differential expression). 
+
+g:Profiler performs enrichment analysis with increasingly larger numbers of genes starting from the top of the list. This procedure identifies functional annotations that associate to the most dramatic changes, as well as broader terms that characterise the gene set as a whole.
+
+> ##### {% icon hands_on %} Exercise 2 g:Profiler
+> Repeat the enrichment analysis with the ranked gene list
+{: .hands_on)
 
 ### Resources of functional annotation
 Functional annotations can be very diverse: molecular functions, pathways (genes that work together to carry out a biological process), interactions, gene regulation, involvement in disease... 
@@ -195,3 +232,6 @@ Online enrichment analysis tools often have functional annotation built-in for a
 
 Gene sets based on GO, pathways,omics studies, sequence motifs, chromosomal position, oncogenic and immunological expression
 signatures, and various computational analyses maintained by the GSEA team of [MSigDB](http://www.msigdb.org).
+
+### Choosing the right background
+Functional enrichment methods require the definition of background genes for comparison. **All annotated protein-coding genes** are often used as default. This leads to false-positive results if the experiment measured only a subset of all genes. For example, setting a custom background is important in analyzing data from targeted sequencing or phosphoproteomics experiments. The appropriate **custom background** in this example would include all genes in the sequencing panel or all known or all phosphoproteins.
