@@ -1,4 +1,4 @@
-----
+---
 layout: tutorial_hands_on
 
 title: "Functional enrichment analysis"
@@ -17,7 +17,8 @@ key_points:
 contributors:
   - janick-bits
 ---
-## What’s the biology behind a list of genes ?
+
+## What's the biology behind a list of genes ?
 
 Omics experiments typically generate lists of hundreds of interesting genes: 
 - up- or downregulated genes identified in an RNA-Seq experiment
@@ -32,7 +33,7 @@ Since it's impossible to evaluate each gene individually, the most meaningful ap
 Functional characterization of a gene list involves the following steps:
 1. Add functional annotations to the genes in the list
 2. Define a background: typically the full set of all genes in the genome
-3. Perform a  statistical test to identify **enriched** functions, diseases, pathways…
+3. Perform a  statistical test to identify **enriched** functions, diseases, pathways
 
 Enriched means over-represented, occurring more frequently in the list than expected by chance based on the background data. 
 
@@ -47,9 +48,9 @@ The **ToppFun** tool returns enriched terms from GO, phenotypes, pathways, prote
 
 It supports gene symbols, Ensembl, Entrez, RefSeq and UniProt IDs from human. However, since gene symbols for human, mouse and rat are identical the tool can also be used for mouse and rat. 
 
-> ##### {% icon hands_on %} Exercise ToppGene
+> ### {% icon hands_on %} Exercise ToppGene
 >  How to do functional enrichment analysis with ToppFun ?
->    > ##### {% icon solution %} answer
+>    > ### {% icon solution %} answer
 >    > - On the [ToppGene](https://toppgene.cchmc.org/) page click the first link **[ToppFun](https://toppgene.cchmc.org/enrichment.jsp): Transcriptome, ontology, phenotype, proteome...**
 >    > - Enter gene symbols or Ensembl IDs in the box **Training Gene Set**
 >    > - Click **Submit Query**
@@ -66,7 +67,7 @@ It supports gene symbols, Ensembl, Entrez, RefSeq and UniProt IDs from human. Ho
 >    > - If you want to see which genes from your list belong to a certain annotation click the number in the **Genes from innput** column
 >    > 
 >    {: .solution}
-{: .hands_on)
+{: .hands_on}
 
 #### Enrichr: longest list of resources but not so up-to-date
 
@@ -74,20 +75,20 @@ It supports gene symbols, Ensembl, Entrez, RefSeq and UniProt IDs from human. Ho
 
 Enrichr uses a list of gene symbols as input (one per line). It only supports human, mouse and rat. You can upload the list by selecting a text file or by simply pasting the list of gene symbols into the text box. 
 
-> ##### {% icon hands_on %} Exercise 1 Enrichr
+> ### {% icon hands_on %} Exercise 1 Enrichr
 >  How to perform functional enrichment analysis in Enrichr ?
 >  
 >  Browse to [Enrichr submission page](http://amp.pharm.mssm.edu/Enrichr/index.html) and click the **Submit** button
-{: .hands_on)
+{: .hands_on}
 
 The results page consists of multiple tabs, each tab giving an overview of a specific type of annotation (Transcription, Pathways, Ontologies...), e.g. 
 
-> ##### {% icon hands_on %} Exercise 2 Enrichr
+> ### {% icon hands_on %} Exercise 2 Enrichr
 >  How to visualize the results for KEGG pathways as a bar chart ?
->    > ##### {% icon solution %} answer
+>    > ### {% icon solution %} answer
 >    > Go to the **Pathways** tab and expand the results for **KEGG** as a bar chart.
->    {: .solution)
-{: .hands_on)
+>    {: .solution}
+{: .hands_on}
 
 The bar charts are interactive: hover your mouse over the bars to see the enrichment scores. Clicking the bars will order the terms according to different scores.
 
@@ -99,29 +100,29 @@ Enrichr implements three approaches to compute enrichment scores:
 - EnrichR computes enrichment using the hypergeometric test for many random gene sets to compute mean and standard deviation of the expected rank for each annotation. Then it computes an **odds ratio** reflecting the deviation of the actual rank from this expected rank.
 - They combine the p-value of the hypergeometric test with the odds ratio into a **combined score**
  
-> ##### {% icon hands_on %} Exercise 3 Enrichr
+> ### {% icon hands_on %} Exercise 3 Enrichr
 > How to obtain the table containing the actual scores ?
 > Sort the terms according to adjusted p-value
->    > ##### {% icon solution %} answer
+>    > ### {% icon solution %} answer
 >    > - If you want to see the actual scores click the **Table** tab
 >    > - Click the name of the column you want to use for sorting
 >    > 
->    {: .solution)
-{: .hands_on)
+>    {: .solution}
+{: .hands_on}
 
-> ##### {% icon hands_on %} Exercise 4 Enrichr
+> ### {% icon hands_on %} Exercise 4 Enrichr
 > Look at the results for GO Biological processes, OMIM disease, and TargetScan miRNAs
 > 
-{: .hands_on)
+{: .hands_on}
 
-> ##### {% icon hands_on %} Exercise 5 Enrichr
+> ### {% icon hands_on %} Exercise 5 Enrichr
 >  How to visualize enriched Transfac and Jaspar TFBS as a network ?
->    > ##### {% icon solution %} answer
+>    > ### {% icon solution %} answer
 >    > - Go to the **Transcription** tab and click **TRANSFAC and JASPAR PWMs**
 >    > - Visualize the results as a network by clicking then **Network** tab 
 >    > 
->    {: .solution)
-{: .hands_on)
+>    {: .solution}
+{: .hands_on}
 
 Each node in the network represents a term (in this case a Transcription Factor) and a link between two nodes means that the 2 transcription factors have some genes from the list in common. the genes are linked to both transcription factors. Since these transcription factors share target genes from the list they might interact to regulate the process you're studying.
 
@@ -131,9 +132,9 @@ This tool largely overlaps in data-sources with Enrichr but updates them more re
 
 [WebGestalt](http://www.webgestalt.org/) accepts many ID types and supports 12 different model organisms. For other organisms it allows to upload your own functional annotation database (see section 3.1 of the [manual](http://www.webgestalt.org/WebGestalt_2019_Manual.pdf) of this tool).
 
-> ##### {% icon hands_on %} Exercise 1 WebGestalt
+> ### {% icon hands_on %} Exercise 1 WebGestalt
 >  How to calculate enrichment of KEGG pathways in a list of genes ?
->    > ##### {% icon solution %} answer
+>    > ### {% icon solution %} answer
 >    > - In the **Organism** box select the correct organism
 >    > - In the **Method** box select **Over-Representation Analysis**
 >    > - In the **Functional Database** boxes select **pathway** and **KEGG**
@@ -142,8 +143,8 @@ This tool largely overlaps in data-sources with Enrichr but updates them more re
 >    > - In the **Select Reference Set** box select the correct background, for lists generated by RNA-Seq experiments **genome, protein-coding** is a good choice because that is what you have measured
 >    > - Click the **Submit** button
 >    > 
->    {: .solution)
-{: .hands_on)
+>    {: .solution}
+{: .hands_on}
 
 The **Enrichment results** can be visualized as a table, a bar chart or a Volcano plot. Dark blue bars are considered significantly enriched. 
 
@@ -157,20 +158,20 @@ Clicking a bar shows the details on the bottom half of the page:
 
 ![WebGestalt_Results](../../images/FunWebG_Results2.png)
 
-> ##### {% icon hands_on %} Exercise 2 WebGestalt
+> ### {% icon hands_on %} Exercise 2 WebGestalt
 > Repeat the enrichment analysis on Wiki pathways
-{: .hands_on)
+{: .hands_on}
 
 Again, many more tables can be generated in WebGestalt and you should choose the type of enrichment that fits your experimental needs. Data can be saved back to disk for further use.
 
-#### g:Profiler: many organisms but limited resources
+### g:Profiler: many organisms but limited resources
 [g:Profiler](https://biit.cs.ut.ee/gprofiler/) supports a [long list of organisms but has less resources](https://biit.cs.ut.ee/gprofiler/page/organism-list) than the other tools since it retrieves functional annotations from Ensembl representing GO terms, pathways, networks, regulatory motifs, and disease phenotypes. 
 
 It is very [regularly updated](https://biit.cs.ut.ee/gprofiler/page/news).
 
-> ##### {% icon hands_on %} Exercise 1 g:Profiler
+> ### {% icon hands_on %} Exercise 1 g:Profiler
 >  How to calculate enrichment in a list of genes ?
->    > ##### {% icon solution %} answer
+>    > ### {% icon solution %} answer
 >    > - For Enrichment analysis you need to use the **g:GOSt** tool.
 >    > - **Upload query**: a file with gene IDs (in this example Ensembl IDs - one per line). 
 >    > - In the **Functional Database** boxes select **pathway** and **KEGG**
@@ -180,8 +181,8 @@ It is very [regularly updated](https://biit.cs.ut.ee/gprofiler/page/news).
 >    > 
 >    > ![g:Profiler_Interface](../../images/FungP_Interface.png)
 >    > 
->    {: .solution)
-{: .hands_on)
+>    {: .solution}
+{: .hands_on}
 
 This tool produces visually attractive results. Every dot in the graph represents a functional annotation. Hover your mouse over a dot to show details like the name of the annotation and the corrected p-value. 
 
@@ -219,9 +220,9 @@ Your list should now consist of gene IDS ordered according to decreasing importa
 
 g:Profiler performs enrichment analysis with increasingly larger numbers of genes starting from the top of the list. This procedure identifies functional annotations that associate to the most dramatic changes, as well as broader terms that characterise the gene set as a whole.
 
-> ##### {% icon hands_on %} Exercise 2 g:Profiler
+> ### {% icon hands_on %} Exercise 2 g:Profiler
 > Repeat the enrichment analysis with the ranked gene list
-{: .hands_on)
+{: .hands_on}
 
 ### Resources of functional annotation
 Functional annotations can be very diverse: molecular functions, pathways (genes that work together to carry out a biological process), interactions, gene regulation, involvement in disease... 
