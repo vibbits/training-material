@@ -263,7 +263,6 @@ Originally GSEA was created to analyze microarray results but you can use it for
 {: .hands_on)
 
 
-
 #### g:Profiler
 If you only have scores for a subset of the genome you should analyze the data using [g:Profiler](https://biit.cs.ut.ee/gprofiler/)with the **Ordered query** option.
 
