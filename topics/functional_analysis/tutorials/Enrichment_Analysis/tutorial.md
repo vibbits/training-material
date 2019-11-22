@@ -47,9 +47,9 @@ The **ToppFun** tool returns enriched terms from GO, phenotypes, pathways, prote
 
 It supports gene symbols, Ensembl, Entrez, RefSeq and UniProt IDs from human. However, since gene symbols for human, mouse and rat are identical the tool can also be used for mouse and rat. 
 
-> ##### {% icon hands_on %} Exercise ToppGene
+> ### {% icon hands_on %} Exercise ToppGene
 >  How to do functional enrichment analysis with ToppFun ?
->    > ##### {% icon solution %} answer
+>    > ### {% icon solution %} answer
 >    > - On the [ToppGene](https://toppgene.cchmc.org/) page click the first link **[ToppFun](https://toppgene.cchmc.org/enrichment.jsp): Transcriptome, ontology, phenotype, proteome...**
 >    > - Enter gene symbols or Ensembl IDs in the box **Training Gene Set**
 >    > - Click **Submit Query**
@@ -74,7 +74,7 @@ It supports gene symbols, Ensembl, Entrez, RefSeq and UniProt IDs from human. Ho
 
 Enrichr uses a list of gene symbols as input (one per line). It only supports human, mouse and rat. You can upload the list by selecting a text file or by simply pasting the list of gene symbols into the text box. 
 
-> ##### {% icon hands_on %} Exercise 1 Enrichr
+> ### {% icon hands_on %} Exercise 1 Enrichr
 >  How to perform functional enrichment analysis in Enrichr ?
 >  
 >  Browse to [Enrichr submission page](http://amp.pharm.mssm.edu/Enrichr/index.html) and click the **Submit** button
@@ -82,9 +82,9 @@ Enrichr uses a list of gene symbols as input (one per line). It only supports hu
 
 The results page consists of multiple tabs, each tab giving an overview of a specific type of annotation (Transcription, Pathways, Ontologies...), e.g. 
 
-> ##### {% icon hands_on %} Exercise 2 Enrichr
+> ### {% icon hands_on %} Exercise 2 Enrichr
 >  How to visualize the results for KEGG pathways as a bar chart ?
->    > ##### {% icon solution %} answer
+>    > ### {% icon solution %} answer
 >    > Go to the **Pathways** tab and expand the results for **KEGG** as a bar chart.
 >    {: .solution)
 {: .hands_on)
@@ -99,24 +99,24 @@ Enrichr implements three approaches to compute enrichment scores:
 - EnrichR computes enrichment using the hypergeometric test for many random gene sets to compute mean and standard deviation of the expected rank for each annotation. Then it computes an **odds ratio** reflecting the deviation of the actual rank from this expected rank.
 - They combine the p-value of the hypergeometric test with the odds ratio into a **combined score**
  
-> ##### {% icon hands_on %} Exercise 3 Enrichr
+> ### {% icon hands_on %} Exercise 3 Enrichr
 > How to obtain the table containing the actual scores ?
 > Sort the terms according to adjusted p-value
->    > ##### {% icon solution %} answer
+>    > ### {% icon solution %} answer
 >    > - If you want to see the actual scores click the **Table** tab
 >    > - Click the name of the column you want to use for sorting
 >    > 
 >    {: .solution)
 {: .hands_on)
 
-> ##### {% icon hands_on %} Exercise 4 Enrichr
+> ### {% icon hands_on %} Exercise 4 Enrichr
 > Look at the results for GO Biological processes, OMIM disease, and TargetScan miRNAs
 > 
 {: .hands_on)
 
-> ##### {% icon hands_on %} Exercise 5 Enrichr
+> ### {% icon hands_on %} Exercise 5 Enrichr
 >  How to visualize enriched Transfac and Jaspar TFBS as a network ?
->    > ##### {% icon solution %} answer
+>    > ### {% icon solution %} answer
 >    > - Go to the **Transcription** tab and click **TRANSFAC and JASPAR PWMs**
 >    > - Visualize the results as a network by clicking then **Network** tab 
 >    > 
@@ -131,9 +131,9 @@ This tool largely overlaps in data-sources with Enrichr but updates them more re
 
 [WebGestalt](http://www.webgestalt.org/) accepts many ID types and supports 12 different model organisms. For other organisms it allows to upload your own functional annotation database (see section 3.1 of the [manual](http://www.webgestalt.org/WebGestalt_2019_Manual.pdf) of this tool).
 
-> ##### {% icon hands_on %} Exercise 1 WebGestalt
+> ### {% icon hands_on %} Exercise 1 WebGestalt
 >  How to calculate enrichment of KEGG pathways in a list of genes ?
->    > ##### {% icon solution %} answer
+>    > ### {% icon solution %} answer
 >    > - In the **Organism** box select the correct organism
 >    > - In the **Method** box select **Over-Representation Analysis**
 >    > - In the **Functional Database** boxes select **pathway** and **KEGG**
@@ -157,7 +157,7 @@ Clicking a bar shows the details on the bottom half of the page:
 
 ![WebGestalt_Results](../../images/FunWebG_Results2.png)
 
-> ##### {% icon hands_on %} Exercise 2 WebGestalt
+> ### {% icon hands_on %} Exercise 2 WebGestalt
 > Repeat the enrichment analysis on Wiki pathways
 {: .hands_on)
 
@@ -168,9 +168,9 @@ Again, many more tables can be generated in WebGestalt and you should choose the
 
 It is very [regularly updated](https://biit.cs.ut.ee/gprofiler/page/news).
 
-> ##### {% icon hands_on %} Exercise 1 g:Profiler
+> ### {% icon hands_on %} Exercise 1 g:Profiler
 >  How to calculate enrichment in a list of genes ?
->    > ##### {% icon solution %} answer
+>    > ### {% icon solution %} answer
 >    > - For Enrichment analysis you need to use the **g:GOSt** tool.
 >    > - **Upload query**: a file with gene IDs (in this example Ensembl IDs - one per line). 
 >    > - In the **Functional Database** boxes select **pathway** and **KEGG**
@@ -210,6 +210,59 @@ GSEA is most often done in R or via software that you install on your computer l
 
 GSEA is recommended when ranks are available for all or most of the genes in the genome (e.g. RNA-Seq data). It is not suitable when only a small portion of genes have ranks available (e.g. an experiment that identifies mutated cancer genes).
 
+You have to [install the tool on your computer](https://software.broadinstitute.org/gsea/index.jsp). An icon will appear on your desktop. 
+
+##### Input files
+
+The format of the input file is very important. It should be a tab-delimited text file where:
+- column 1 should contain gene IDs
+- column 2 should contain descriptions but may be NAs
+- next columns should contain normalized counts (one column/sample)
+
+Columns must have headers:
+- NAME for column 1
+- Description for column 2
+- Sample names for the next columns
+
+The first line of the file should be: #1.2
+The second line should be: number_of_genes tab number_of_samples
+
+![GSEA_FileFormat](../../images/FunGSEA_FF.png)
+
+Save the file as .gct !
+
+Apart from these data you also need a .cls file with the metadata (grouping info of the samples). This is a space delimited text file:
+- line 1: number_of_samples space number_of_groups space 1
+- line 2: # space class0_name space class1_name
+- line 3: for every sample 0 or 1 separated by spaces
+
+![GSEA_FileFormat](../../images/FunGSEA_FF2.png)
+
+##### Analysis
+Originally GSEA was created to analyze microarray results but you can use it for analyzing RNA-Seq data, albeit with some tweaking of the parameter settings.
+
+> ### {% icon hands_on %} Exercise 1 GSEA
+>  How to perform GSEA on a full list of genes with normalized counts ?
+>    > ### {% icon solution %} answer
+>    > - **Load** the **data** into GSEA. Load both the .gct and the .cls file.  
+>    > - **Run GSEA**: fill in the parameter settings. Click the question mark (red) on the bottom of the page to view descriptions of these parameters. 
+>    > - Use the **GO: all** (green) gene set
+>    > - Use 10 **permutations** (green). If all goes well, repeat the analysis with 1000 permutations. 
+>    > - Select **Collapse** (blue): this is necessary for RNA-Seq data to associate the gene IDs of your list to the probes of the chip platform
+>    > - Use **gene set permutations** (blue). Broad advises phenotype permutations (group labels will be shuffled to create random data to compare with) but they will only work when you have at least 7 samples per group.  
+>    > - Choose **Human_ENSEMBL_Gene_ID_MSigDB.vX.chip** as **ChIP Platform** (blue). Although you didn't actually do chips (microarrays) he needs to map the Ensembl Gene IDs in the data file to functional annotations. 
+>    > - Click the **Run** button at the bottom of the page.
+>    > 
+>    > ![GSEA_Interface](../../images/FunGSEA_Interface.png)
+>    > In the left lower corner of the user interface there's a section called **GSEA reports**. It shows the status of analyses run in this session, including the currently running analysis:
+>    > 
+>    > ![GSEA_Status](../../images/FunGSEA_Status.png)
+>    > Click the green text to display the results in a browser. 
+>    {: .solution)
+{: .hands_on)
+
+
+
 #### g:Profiler
 If you only have scores for a subset of the genome you should analyze the data using [g:Profiler](https://biit.cs.ut.ee/gprofiler/)with the **Ordered query** option.
 
@@ -219,7 +272,7 @@ Your list should now consist of gene IDS ordered according to decreasing importa
 
 g:Profiler performs enrichment analysis with increasingly larger numbers of genes starting from the top of the list. This procedure identifies functional annotations that associate to the most dramatic changes, as well as broader terms that characterise the gene set as a whole.
 
-> ##### {% icon hands_on %} Exercise 2 g:Profiler
+> ### {% icon hands_on %} Exercise 2 g:Profiler
 > Repeat the enrichment analysis with the ranked gene list
 {: .hands_on)
 
@@ -231,7 +284,7 @@ Online enrichment analysis tools often have functional annotation built-in for a
 [Pathguide](http://www.pathguide.org/) contains info about hundreds of pathway and molecular interaction related resources. It allows organism-based searches to find resources that contain functional info on the organism you work on. 
 
 Gene sets based on GO, pathways,omics studies, sequence motifs, chromosomal position, oncogenic and immunological expression
-signatures, and various computational analyses maintained by the GSEA team of [MSigDB](http://www.msigdb.org).
+signatures, and various computational analyses maintained by the GSEA team of [MSigDB](http://www.msigdb.org). The GSEA tool from Broad will use this database by default.
 
 ### Choosing the right background
 Functional enrichment methods require the definition of background genes for comparison. **All annotated protein-coding genes** are often used as default. This leads to false-positive results if the experiment measured only a subset of all genes. For example, setting a custom background is important in analyzing data from targeted sequencing or phosphoproteomics experiments. The appropriate **custom background** in this example would include all genes in the sequencing panel or all known or all phosphoproteins.
