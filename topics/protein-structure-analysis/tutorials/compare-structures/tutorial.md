@@ -13,7 +13,7 @@ objectives:
 - They are single sentences describing what a learner should be able to do once they
   have completed the tutorial
 - You can use Bloom's Taxonomy to write effective learning objectives
-time_estimation: 3H
+time_estimation: 15M
 key_points:
 - The take-home messages
 - They will appear at the end of the tutorial
@@ -22,21 +22,6 @@ contributors:
 - jvdurme 
 
 ---
-
-
-# Introduction
-{:.no_toc}
-
-<!-- This is a comment. -->
-
-General introduction about the topic and then an introduction of the
-tutorial (the questions and the objectives). It is nice also to have a
-scheme to sum up the pipeline used during the tutorial. The idea is to
-give to trainees insight into the content of the tutorial and the (theoretical
-and technical) key concepts they will learn.
-
-**Please follow our
-[tutorial to learn how to fill the Markdown]({{ site.baseurl }}/topics/contributing/tutorials/create-new-tutorial-content/tutorial.html)**
 
 > ### Agenda
 >
@@ -47,113 +32,76 @@ and technical) key concepts they will learn.
 >
 {: .agenda}
 
-# Title for your first section
+# Structural comparison and RMDD 
+We compare structures by superposing (or structurally align) them on top of each other. That is, we
+ superpose structurally equivalent atoms. For now, we will only superpose CA atoms, so backbones. B
+ut Yasara also can superpose on any type of atom you want. You always need to specify:
 
-Give some background about what the trainees will be doing in the section.
+-  source object(s): the structure(s) that needs to be rotated and translated to superpose on anoth
+er structure
+-  target object: the structure to superpose on
 
-Below are a series of hand-on boxes, one for each tool in your workflow file.
-Often you may wish to combine several boxes into one or make other adjustments such
-as breaking the tutorial into sections, we encourage you to make such changes as you
-see fit, this is just a starting point :)
+An optimal superposition is found when the root-mean-square deviation (RMSD) is at a minimum. The R
+MSD is given as:
+![RMSD](../../images/RMSD.gif "calculation of RMSD")
+where R is the distance between two structurally equivalent atom pairs (CA in our case) and n is th
+e total number of atom pairs.Get data
 
-Anywhere you find the word "***TODO***", there is something that needs to be changed
-depending on the specifics of your tutorial.
-
-have fun!
-
-## Get data
-
-> ### {% icon hands_on %} Hands-on: Data upload
+> ### {% icon hands_on %} Hands-on: Data download
 >
-> 1. Create a new history for this tutorial
-> 2. Import the files from [Zenodo]() or from the shared data library
+> 1. Download the following adapted PDB files from [Zenodo](https://zenodo.org/record/3550492#.XdeNL1dKiUk) 
 >
 >    ```
->    
+>     1DKX_1.pdb 1DKY_1.pdb 1DKZ_1.pdb 3DPO_1.pdb 3DPP_1.pdb 
 >    ```
->    ***TODO***: *Add the files by the ones on Zenodo here (if not added)*
->
->    ***TODO***: *Remove the useless files (if added)*
->
->    {% include snippets/import_via_link.md %}
->    {% include snippets/import_from_data_library.md %}
->
-> 3. Rename the datasets
-> 4. Check that the datatype
->
->    {% include snippets/change_datatype.md datatype="datatypes" %}
->
-> 5. Add to each database a tag corresponding to ...
->
->    {% include snippets/add_tag.md %}
 >
 {: .hands_on}
 
-# Title of the section usually corresponding to a big step in the analysis
+# Superimposing multiple structures using YASARA 
 
-It comes first a description of the step: some background and some theory.
-Some image can be added there to support the theory explanation:
+Now load all of them in YASARA:
 
-![Alternative text](../../images/image_name "Legend of the image")
+```
+File > Load > PDB File
+```
 
-The idea is to keep the theory description before quite simple to focus more on the practical part.
-
-***TODO***: *Consider adding a detail box to expand the theory*
-
-> ### {% icon details %} More details about the theory
->
-> But to describe more details, it is possible to use the detail boxes which are expandable
->
-{: .details}
-
-A big step can have several subsections or sub steps:
+and select the CA (C-alpha) view (F4) and superpose with the MUSTANG algorithm:
 
 
-## Sub-step with **My Tool**
+```
+Analyze > Align > Objects with MUSTANG
+```
 
-> ### {% icon hands_on %} Hands-on: Task description
->
-> 1. **My Tool** {% icon tool %} with the following parameters:
->    - {% icon param-file %} *"Input file"*: File
->    - *"Parameter"*: `a value`
->
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > ### {% icon comment %} Comment
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
->
-{: .hands_on}
 
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
+In the first window you have to select the source objects that will be repositioned. Select Objects 2 till 5. In the second window you select the target Object to superpose on. That would then be the first object.
+
+Notice that YASARA prints the RMSD of every superposition in the lower Console. Open the Console by pressing the spacebar once or twice to extend it.
+
+Color the atoms by their B-factor:
+
+```
+View > Color > Atom > Belongs to or has > All
+Then choose BFactor in the next window and press 'Apply unique color'.
+```
+
+High BFactors are yellow, low BFactors are blue.
+
 
 > ### {% icon question %} Questions
 >
-> 1. Question1?
-> 2. Question2?
+> Question: Do you see a correlation between the BFactors and the variability in the structure?
 >
 > > ### {% icon solution %} Solution
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. Yes, add explanation here
+> > **TODO**: add image
 > >
 > {: .solution}
 >
 {: .question}
 
 
-## Re-arrange
-
-To create the template, each step of the workflow had its own subsection.
-
-***TODO***: *Re-arrange the generated subsections into sections or other subsections.
-Consider merging some hands-on boxes to have a meaningful flow of the analyses*
-
 # Conclusion
 {:.no_toc}
 
-Sum up the tutorial and the key takeaways here. We encourage adding an overview image of the
-pipeline used.
+Superimposition of related structures is a very efficient approach to spot similarities and differences of structutally related proteins.
