@@ -1,0 +1,10 @@
+---
+name: "R"
+type: "basics"
+category: "programming"
+title: "Introduction to R"
+summary: "Introduction to R"
+requirements:
+
+maintainers:
+  - janick-bits 

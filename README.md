@@ -1,8 +1,3 @@
-|Build|Links|
-|------|-----|
-[![Build Status](https://travis-ci.org/galaxyproject/training-material.svg?branch=master)](https://travis-ci.org/galaxyproject/training-material) | [![Deploy Status](https://travis-ci.org/galaxyproject/training-material.svg?branch=gh-pages)](https://travis-ci.org/galaxyproject/training-material)|
-
-
 VIB Bioinformatics Core training material
 ========================
 
