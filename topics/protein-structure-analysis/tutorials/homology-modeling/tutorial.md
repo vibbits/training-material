@@ -13,10 +13,10 @@ objectives:
 - They are single sentences describing what a learner should be able to do once they
   have completed the tutorial
 - You can use Bloom's Taxonomy to write effective learning objectives
-time_estimation: 3H
+time_estimation: 30M
 key_points:
-- The take-home messages
-- They will appear at the end of the tutorial
+- Main principles of homology modelling
+- How to build a homology model with Swiss Model 
 contributors:
 - abotzki 
 - jvdurme 
@@ -29,14 +29,13 @@ contributors:
 
 <!-- This is a comment. -->
 
-General introduction about the topic and then an introduction of the
-tutorial (the questions and the objectives). It is nice also to have a
-scheme to sum up the pipeline used during the tutorial. The idea is to
-give to trainees insight into the content of the tutorial and the (theoretical
-and technical) key concepts they will learn.
+The goal of homology modeling is to predict the 3D structure of a protein that comes close to what would be achieved experimentally with X-Ray experiments.
 
-**Please follow our
-[tutorial to learn how to fill the Markdown]({{ site.baseurl }}/topics/contributing/tutorials/create-new-tutorial-content/tutorial.html)**
+Main principles of homology modeling
+
+- We predict the structure of a protein sequence on the basis of the structure of another protein with a similar sequence (the template)
+- If the sequences are similar, the structures will have a similar fold
+- Structure is more conserved than sequence
 
 > ### Agenda
 >
@@ -47,21 +46,23 @@ and technical) key concepts they will learn.
 >
 {: .agenda}
 
-# Title for your first section
+# Main ingredients for homology modelling 
 
-Give some background about what the trainees will be doing in the section.
+## The sequence
 
-Below are a series of hand-on boxes, one for each tool in your workflow file.
-Often you may wish to combine several boxes into one or make other adjustments such
-as breaking the tutorial into sections, we encourage you to make such changes as you
-see fit, this is just a starting point :)
+Last week my colleague sequenced a plant protein. He is not a bioinformatician. Yet, he would like to know what the structure might look like to do some rounds of rational mutagenesis. Let's try to address the problem for him.
+ 
+He came up with this sequence:
 
-Anywhere you find the word "***TODO***", there is something that needs to be changed
-depending on the specifics of your tutorial.
+```
+SVCCPSLVARTNYNVCRLPGTEAALCATFTGCIIIPGATCGGDYAN
+```
 
-have fun!
+## Searching for the template structure
 
-## Get data
+Actually, the first step is to check whether the PDB already contains the structure of this sequence. That would be easy so we don't have to model anything. We will use Blast again to search with the sequence.
+
+**TODO: add hands-on area with Blast search on PDB page**
 
 > ### {% icon hands_on %} Hands-on: Data upload
 >
@@ -69,7 +70,7 @@ have fun!
 > 2. Import the files from [Zenodo]() or from the shared data library
 >
 >    ```
->    
+> 
 >    ```
 >    ***TODO***: *Add the files by the ones on Zenodo here (if not added)*
 >
@@ -89,71 +90,145 @@ have fun!
 >
 {: .hands_on}
 
-# Title of the section usually corresponding to a big step in the analysis
+A suitable template structure to make a high quality model should have following properties:
 
-It comes first a description of the step: some background and some theory.
-Some image can be added there to support the theory explanation:
+- The highest possible sequence identity from all structures in the PDB when aligned to the target sequence
+- A good resolution (and R-factor): if many identical template structures exist with the same sequence, filter by resolution
+- Is solved by X-RAY, not NMR
 
-![Alternative text](../../images/image_name "Legend of the image")
-
-The idea is to keep the theory description before quite simple to focus more on the practical part.
-
-***TODO***: *Consider adding a detail box to expand the theory*
-
-> ### {% icon details %} More details about the theory
+> ### {% icon hands_on %} Hands-on: Data upload
 >
-> But to describe more details, it is possible to use the detail boxes which are expandable
+> 1. Create a new history for this tutorial
+> 2. Import the files from [Zenodo]() or from the shared data library
 >
-{: .details}
-
-A big step can have several subsections or sub steps:
-
-
-## Sub-step with **My Tool**
-
-> ### {% icon hands_on %} Hands-on: Task description
+>    ```
+> 
+>    ```
+>    ***TODO***: *Add the files by the ones on Zenodo here (if not added)*
 >
-> 1. **My Tool** {% icon tool %} with the following parameters:
->    - {% icon param-file %} *"Input file"*: File
->    - *"Parameter"*: `a value`
+>    ***TODO***: *Remove the useless files (if added)*
 >
->    ***TODO***: *Check parameter descriptions*
+>    {% include snippets/import_via_link.md %}
+>    {% include snippets/import_from_data_library.md %}
 >
->    ***TODO***: *Consider adding a comment or tip box*
+> 3. Rename the datasets
+> 4. Check that the datatype
 >
->    > ### {% icon comment %} Comment
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
+>    {% include snippets/change_datatype.md datatype="datatypes" %}
+>
+> 5. Add to each database a tag corresponding to ...
+>
+>    {% include snippets/add_tag.md %}
 >
 {: .hands_on}
 
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
 
 > ### {% icon question %} Questions
 >
-> 1. Question1?
-> 2. Question2?
+> 1. Is there a difference in the number of identities, positives and gaps between the two remaining x-ray structures? 
+> 2. What is the PDB ID with the highest resolution, does not have insertions or deletions and should thus be the better template structure? 
 >
 > > ### {% icon solution %} Solution
 > >
-> > 1. Answer for question1
-> > 2. Answer for question2
+> > 1. **TODO** 
+> > 2. **TODO** 
 > >
 > {: .solution}
 >
 {: .question}
 
 
-## Re-arrange
+## Aligning target and template sequence and template selection
 
-To create the template, each step of the workflow had its own subsection.
+The alignment is the most crucial part of homology modeling. We will not explain what an alignment is and how you make it, this should be known. In an alignment, we put homologous sequences on top of each other in a text file. The point is that amino acids that are on top of each other in the same column are assumed to have the equivalent position in the 3D structure. So if the template sequence has an Ala at position 3, where the target sequence has a Phe, homology modelling tools will use the backbone of the template structure and replace the sidechain at position 3 from Ala to Phe.
 
-***TODO***: *Re-arrange the generated subsections into sections or other subsections.
-Consider merging some hands-on boxes to have a meaningful flow of the analyses*
+> ### {% icon hands_on %} Hands-on: Data upload
+>
+> 1. Create a new history for this tutorial
+> 2. Import the files from [Zenodo]() or from the shared data library
+>
+>    ```
+> 
+>    ```
+>    ***TODO***: *Add the files by the ones on Zenodo here (if not added)*
+>
+>    ***TODO***: *Remove the useless files (if added)*
+>
+>    {% include snippets/import_via_link.md %}
+>    {% include snippets/import_from_data_library.md %}
+>
+> 3. Rename the datasets
+> 4. Check that the datatype
+>
+>    {% include snippets/change_datatype.md datatype="datatypes" %}
+>
+> 5. Add to each database a tag corresponding to ...
+>
+>    {% include snippets/add_tag.md %}
+>
+{: .hands_on}
+
+
+To extract the sequence from the template structure, display the FASTA sequence of the template structure and paste it into the text editor on the first line.
+
+![Alternative text](../../images/image_name "Legend of the image")
+
+The idea is to keep the theory description before quite simple to focus more on the practical part.
+
+![Alternative text](../../images/image_name "Legend of the image")
+
+
+# Building the homology model with Swiss Model 
+
+Our current request for homology modelling is a rather safe one, so we can use an automatic server for homology modelling. There are many automatic tools available and many of them compete in regular competitions like lastly, the 12th Community Wide Experiment on the Critical Assessment of Techniques for Protein Structure Prediction (CASP12) - [1].
+
+In our example, we take the [Swiss Model server](https://swissmodel.expasy.org/interactive). SWISS-MODEL is a fully automated protein structure homology-modelling server, accessible via the ExPASy web server, or from the program DeepView (Swiss Pdb-Viewer). The purpose of this server is to make Protein Modelling accessible to all biochemists and molecular biologists worldwide.
+
+> ### {% icon hands_on %} Hands-on: Template selection step with Swiss Model 
+>
+> 1. Browse to the [Swiss Model server](https://swissmodel.expasy.org/interactive) 
+> 2. On the first page, paste the sequence of our unknown protein in the field 'Target Sequence' and give the project a name. 
+> ![Swiss Model Start page](../../images/Modelling_sequence_template_step1.png "Start page of Swiss Model")
+> 3. Click 'Search templates' to initiate the first step. 
+>    Thereafter, the server identifies structural template(s) and gives an overview list of hits 
+>    which you can select the templates from.
+>
+{: .hands_on}
+
+> ### {% icon question %} Question
+>
+> Which of the 10 (at the time of writing) possible template structures would you select as template for the model building process? 
+>
+> > ### {% icon solution %} Solution
+> >
+> > **TODO: add link with 10 template** 
+> > We suggest as template **1jxx.1.A** given that it is an X-ray structure with high resolution and a very high 
+> > sequence identity (X-ray, 0.9 Å, 78.26 %).
+> >
+> {: .solution}
+>
+{: .question}
+
+
+> ### {% icon hands_on %} Hands-on: Model Building Step and Visualisation 
+>
+> 1. Once you have selected the template, hit 'Build Model' to start the homology modelling procedure. 
+>    The server will alignment of target sequence and template structure(s), build a model and evaluate it. 
+>    These steps require specialized software and integrate up-to-date protein sequence and structure databases. 
+>    Each of the above steps can be repeated interactively until a satisfying modelling result is achieved. 
+>
+> 2. Once the model has been built, you can download it.
+> 3. If the Swiss Model server is too busy at the moment you execute the request, you can download the model from
+>    [here](https://zenodo.org/record/3551850#.Xdqs4ehKiUk).
+> 4. Load the created model into YASARA. 
+>    Perform a structural superposition with your reference e.g. 1CRN 
+>    try to detect the differences through manipulating the visualisations.
+>    ![superposition]( "Superposition of 1CRN with the obtained model")
+>
+{: .hands_on}
+
 
 # Conclusion
 {:.no_toc}
 
-Sum up the tutorial and the key takeaways here. We encourage adding an overview image of the
-pipeline used.
+Homology modelling evolved over the years and many online tools for homology modelling are available. You have used the Swiss Model service with a reasonable simple modelling request. Often, in research projects, homology modelling can be rather difficult and needs expert knowledge depending on the actual situation (sequence conservation, available templates, etc.).
