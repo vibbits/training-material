@@ -5,16 +5,15 @@ layout: base
 {% assign contributors = site.data['contributors'] %}
 {% assign stories = site.pages | where:"layout", "training_philosophy" %}
 
-
-{% include _includes/default-header.html %}
-
 <div class="container main-content">
+
+{% include _includes/default-top-vib.html %}
+          
     <section>
-        <h1>Hall of Fame</h1>
+        <h1>Contributors</h1>
 
         <p class="lead">
-            A big <em>Thank You!</em> to the <strong>{{ contributors|size }}</strong>
-            awesome contributors to the Galaxy training materials!
+            Thanks a lot to all our contributors to the VIB training materials!
         </p>
 
         <div class="hall-of-fame">
@@ -23,11 +22,11 @@ layout: base
                 <div class="hall-of-fame-hero" id="{{ username }}">
                     {% if contributors[username].github != false %}
                         <a href="https://github.com/{{ username }}" class="thumbnail">
-                            <img src="https://avatars.githubusercontent.com/{{ username }}" alt="{{ username }}">
+                            <img src="https://avatars.githubusercontent.com/{{ username }}" alt="{{ username }}" width="100">
                         </a>
                     {% else %}
                         <span class="thumbnail">
-                            <img src="https://avatars.githubusercontent.com/{{ username }}" alt="{{ username }}">
+                            <img src="https://avatars.githubusercontent.com/{{ username }}" alt="{{ username }}" width="100">
                         </span>
                     {% endif %}
 
