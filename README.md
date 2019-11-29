@@ -47,7 +47,9 @@ references:
 Image scaling:
 
 The Markdown for the above could be something like:
+```
 ![Picture of the Beach -fullwidth](beach.jpg)
+```
 
 -20width width:  20%;
 
