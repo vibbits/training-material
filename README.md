@@ -46,6 +46,9 @@ references:
 
 Image scaling:
 
+The Markdown for the above could be something like:
+![Picture of the Beach -fullwidth](beach.jpg)
+
 -20width width:  20%;
 
 -40width width:  40%;
@@ -60,4 +63,4 @@ Image scaling:
 
 -80width width:  80%;
 
--fullwidth" width:  100%;
+-fullwidth" width: 100%;
