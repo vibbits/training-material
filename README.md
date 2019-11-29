@@ -63,4 +63,4 @@ The Markdown for the above could be something like:
 
 -80width width:  80%;
 
--fullwidth" width: 100%;
+-fullwidth width: 100%;
