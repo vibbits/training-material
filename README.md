@@ -43,3 +43,21 @@ references:
   link: link
   summary: ''
 ```
+
+Image scaling:
+
+-20width width:  20%;
+
+-40width width:  40%;
+
+-50width width:  50%;
+
+-60width width:  60%;
+
+-70width width:  70%;
+
+-75width width:  75%;
+
+-80width width:  80%;
+
+-fullwidth" width:  100%;
