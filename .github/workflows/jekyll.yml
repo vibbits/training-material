@@ -3,7 +3,7 @@ name: Jekyll site CI
 on:
   push:
     branches:
-    - 'PSA'
+    - 'gh-pages'
 
 jobs:
   build:
