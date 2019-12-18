@@ -1,11 +1,14 @@
 name: Jekyll site CI
 
-on: [push]
+on:
+  push:
+    branches:
+    - 'PSA'
 
 jobs:
   build:
 
-    runs-on: jekyll/jekyll
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v1
@@ -13,4 +16,4 @@ jobs:
       run: |
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
+        jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future --trace"
