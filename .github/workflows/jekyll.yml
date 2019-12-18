@@ -43,4 +43,5 @@ jobs:
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages
+          BASE_BRANCH: deploy
           FOLDER: '_site'
