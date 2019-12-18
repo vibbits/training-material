@@ -55,6 +55,12 @@ The way of searching for a specific protein structure depends on the data you al
 
 #### Via the Protein Data Bank by PDB ID
 
+<iframe src="https://h5p.org/h5p/embed/577970" width="699" height="418" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+<script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js" charset="UTF-8"></script>
+
+<iframe src=" https://docs.google.com/presentation/d/1lgEeigU8M45xF2BjQgPumgxalzfiHZeD/preview" width="640" height="480"></iframe> 
+
+
 You can find structural information directly at the PDB database. The web site of the PDB consortium is located at <http://www.wwpdb.org>. This web site provides links to all members of the PDB (left side). It is a question of taste which resource you start off with. For X-ray structures, it is currently PDBe, RCSB PDB, PDBj. For NMR structres, you find the BMRB. In today's course, we focus on the PDB resources only.
 
 Below is an image of the RCSB search box <http://www.rcsb.org/pdb/home/home.do> where you can start your search for structures.

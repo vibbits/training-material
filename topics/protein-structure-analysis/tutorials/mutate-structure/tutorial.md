@@ -91,8 +91,7 @@ Load the scene with:
 ```
 File > Load > YASARA Scene
 ```
-
-![P53 monomer bound to DNA](../../images/Training_1.png "P53 monomer bound to DNA")
+![monomer bound to DNA -80width](../../images/Training_1.png "P53 monomer bound to DNA")
 
 To Repair (or minimize) the structure with FoldX go to:
 ```

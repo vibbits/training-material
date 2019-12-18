@@ -378,6 +378,38 @@ form .pagination
     color: #1b2944;
 }
 
+img[alt$="-20width"]{
+  width:  20%;
+}
+
+img[alt$="-40width"]{
+  width:  40%;
+}
+
+img[alt$="-50width"]{
+  width:  50%;
+}
+
+img[alt$="-60width"]{
+  width:  60%;
+}
+
+img[alt$="-70width"]{
+  width:  70%;
+}
+
+img[alt$="-75width"]{
+  width:  75%;
+}
+
+img[alt$="-80width"]{
+  width:  80%;
+}
+
+img[alt$="-fullwidth"]{
+  width:  100%;
+}
+
 p img
 {
     margin-left: 0px;
