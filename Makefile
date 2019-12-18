@@ -4,10 +4,10 @@ PORT?=4000
 HOST?=10.132.0.3
 FLAGS?=""
 CHROME=google-chrome-stable
-TUTORIALS=$(shell find _site/training-material -name 'tutorial.html' | sed 's/_site\/training-material\///')
-SLIDES=$(shell find _site/training-material -name 'slides.html' | sed 's/_site\/training-material\///')
-SLIDES+=$(shell find _site/training-material/*/*/slides/* | sed 's/_site\/training-material\///')
-SITE_URL=http://${HOST}:${PORT}/training-material
+TUTORIALS=$(shell find _site/ -name 'tutorial.html' | sed 's/_site\///')
+SLIDES=$(shell find _site/ -name 'slides.html' | sed 's/_site\///')
+SLIDES+=$(shell find _site/*/*/slides/* | sed 's/_site\///')
+SITE_URL=http://${HOST}:${PORT}
 PDF_DIR=_pdf
 REPO=$(shell echo "$${ORIGIN_REPO:-galaxyproject/training-material}")
 BRANCH=$(shell echo "$${ORIGIN_BRANCH:-master}")
@@ -53,17 +53,17 @@ install: clean ## install dependencies
 
 serve: ## run a local server (You can specify PORT=, HOST=, and FLAGS= to set the port, host or to pass additional flags)
 	$(ACTIVATE_ENV) && \
-		${JEKYLL} serve -V --strict_front_matter -d _site/training-material -P ${PORT} -H ${HOST} ${FLAGS}
+		${JEKYLL} serve -V --strict_front_matter -d _site/ -P ${PORT} -H ${HOST} ${FLAGS}
 .PHONY: serve
 
 detached-serve: ## run a local server in detached mode (You can specify PORT=, HOST=, and FLAGS= to set the port, host or to pass additional flags to Jekyll)
 	$(ACTIVATE_ENV) && \
-		${JEKYLL} serve --strict_front_matter --detach -d _site/training-material -P ${PORT} -H ${HOST} ${FLAGS}
+		${JEKYLL} serve --strict_front_matter --detach -d _site/ -P ${PORT} -H ${HOST} ${FLAGS}
 .PHONY: detached-serve
 
 build: clean ## build files but do not run a server (You can specify FLAGS= to pass additional flags to Jekyll)
 	$(ACTIVATE_ENV) && \
-		${JEKYLL} build --trace --strict_front_matter -d _site/training-material ${FLAGS}
+		${JEKYLL} build -V --trace --strict_front_matter -d _site/ ${FLAGS}
 .PHONY: build
 
 check-frontmatter: build ## Validate the frontmatter

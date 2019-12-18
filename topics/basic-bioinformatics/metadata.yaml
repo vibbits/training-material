@@ -1,0 +1,10 @@
+---
+name: "basic-bioinformatics"
+type: "basics"
+category: "basics"
+title: "Basic Bioinformatics Concepts, Databases and Tools"
+summary: "Bioinformatics Introduction"
+requirements:
+
+maintainers:
+  - abotzki 

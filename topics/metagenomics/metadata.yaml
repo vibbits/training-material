@@ -1,0 +1,28 @@
+---
+name: "metagenomics"
+type: "basics"
+category: "omics"
+title: "Metagenomics"
+summary: "Metagenomics"
+
+maintainers:
+  - janick-bits
+  - abotzki
+
+references:
+  -
+    authors: "Falk Hildebrand"
+    title: "Lotus pipeline"
+    link: "http://psbweb05.psb.ugent.be/lotus/downloads.html"
+    summary: "More information about the Lotus pipeline"
+  -
+    authors: "Robert Edgar"
+    title: "usearch version"
+    link: "http://www.drive5.com/usearch/download.html"
+    summary: "usearch version has to be downloaded seperately due to licensing."
+  -
+    authors: "vegan"
+    title: "R package vegan"
+    link: "https://cran.r-project.org/web/packages/vegan/index.html"
+    summary: "further analysis with R package vegan"
+
