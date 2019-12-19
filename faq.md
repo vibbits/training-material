@@ -9,9 +9,7 @@ layout: faq
 
 ## What is this website?
 
-This website is a collection of hands-on tutorials that are designed to be interactive:
-
-![Interactive training](shared/images/interactive_training.png "The hands-on nature of our training material.")
+This website is a collection of hands-on tutorials that are designed to be interactive.
 
 This material is developed and maintained by the [VIB Bioinformatics Core](https://www.bits.vib.be/).
 
@@ -52,9 +50,8 @@ Spend some time exploring the different tutorials and the different resources th
 
 ## How can I fix mistakes or expand an existing tutorial using the GitHub interface?
 
-Check our tutorial to learn how to use the GitHub interface (soon...)
+Please submit an issue via github.
 
 ## Sustainability of the training-material and metadata
 
 This repository is hosted on [GitHub](https://github.com/) using git as a [DVCS](https://en.wikipedia.org/wiki/Distributed_version_control). Therefore the community is hosting backups of this repository in a decentralised way. The repository is self-contained and contains all needed content and all metadata.
-In addition we mirror snapshops of this repo on [Zenodo](http://zenodo.org).

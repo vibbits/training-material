@@ -18,7 +18,7 @@ This repository is the VIB training material.
 
 By contributing, you agree that we may redistribute your work under [this repository's license](LICENSE.md).
 
-We will address your issues and/or assess your change proposal as promptly as we can, and help you become a member of our community.
+We will address your issues and/or assess your change proposal as promptly as we can.
 
 If you have any questions, you can reach us using at bits@vib.be. 
 
@@ -32,9 +32,9 @@ You can contact us at bits@vib.be for more details.
 
 ## Maintainers
 
-Each training topic and tutorial has one or two maintainers who act as editors.
+Each training topic and tutorial has one or two maintainers who work at VIB Bioinformatics Core and act as editors.
 
-They are responsible for making sure issues and change requests are looked at. They have the final say over what is included in the training material. But they are not responsible for writing/keeping up-to-date training material content or deciding what lessons ought to exist, both will be coming from the community.
+They are responsible for making sure issues and change requests are looked at. They have the final say over what is included in the training material.
 
 ## Labels
 

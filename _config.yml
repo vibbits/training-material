@@ -21,7 +21,7 @@ url: "https://vibbits.github.io/"
 baseurl: "/training-material"
 repository: vibbits/training-material
 repository_branch: "master"
-logo: "assets/images/vib_notag_neg_rgb.jpg"
+logo: "assets/images/logo.svg"
 small_logo: "assets/images/bioinformatics_core_rgb_neg.png"
 help_url: https://www.bits.vib.be
 other_languages: "fr, ja, es, pt, ar"
@@ -159,4 +159,5 @@ plugins:
   - jekyll-environment-variables
   - jekyll-github-metadata
   - jekyll-scholar
+  - jekyll-sitemap
 
