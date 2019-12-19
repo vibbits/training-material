@@ -4,12 +4,11 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="google-site-verification" content="dw_1zBYRNxF7-vYNDXh3Ght_JuqgJt3BD1N_Pynqmv0" />
+        <meta name="google-site-verification" content="hA2THcUT50TVfGM3VQppZL3e4jBG3a2lo2lqN5k2pys" />
         <title>05 Reading and writing data</title>
         
         <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=3">
         <link rel="stylesheet" href="/assets/css/bootstrap-toc.min.css">
-        <link rel="stylesheet" href="/assets/css/main.css?v=2">
         <link rel="stylesheet" href="/assets/css/font-awesome.css">
         <link rel="stylesheet" href="/assets/css/VIB.css">
         <link rel="stylesheet" href="/assets/css/academicons.css">
@@ -27,55 +26,57 @@
         <meta property="og:image" content="/assets/images/bioinformatics_core_rgb_neg.png" />
     </head>
     <body data-spy="scroll" data-target="#toc">
-        <div class="container main-content">
+        <div class="top-bar-vib">
+ <a href="http://vib.be/en" target="_blank" style="font-size:14px">VIB Home </a>
+</div>
 
+<div class="container main-content">
 
-
-
-
-
-
-
-
-
-
-
-
-<header class="well row">
-           <div id="logo" class="col-md-4 col-lg-2 text-center">
-              <a href="/">
-                <img src="/assets/images/vib_notag_neg_rgb.jpg" height="50" alt="VIB logo" class="margin20">
-              </a>
-           </div> 
-           <div class="col-md-4 col-lg-8" id="top-navbar">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/topics/R" title="Go back to list of tutorials">
-                            <i class="fa fa-folder-o" aria-hidden="true"></i><span class="visually-hidden">topic</span> Introduction to R
-                        </a>
-                    </li>
-            </div>
-            <div class="col-md-4 col-lg-2 text-right form-group label-floating" id="help">
-                       
-    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Help">
-        <i class="fa fa-life-ring" aria-hidden="true"></i><span class="visually-hidden">help</span> Help
-    </a>
-    <div class="dropdown-menu dropdown-menu-right">
-        <form method="get" action="https://tess.elixir-europe.org/materials">
-            <input type="text" id="search" name="q" value="" style="margin-left: 0.5em;/*! border-radius: 0px; */">
-            <input type="hidden" value="VIB Bioinformatics Core" name="content_provider">
-            <input type="submit" value="Search on TeSS" style="width: 92%;border-radius: 0px;margin: 0.5em;background: #f47d20;border: 0px;padding: 0.25em;" class="">
-        </form>
-
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="https://www.bits.vib.be" title="Contact us">
-            Contact us 
-        </a>
+<div class="container page-top__container">
+          <div class="region region-top">
+  <div id="logo" class="col-md-3 col-lg-3 text-left" style="padding-left:0px;margin-top:20px">
+       <a href="/">
+           <img src="/assets/images/logo.svg" height="60" alt="VIB logo" class="margin20">
+       </a>
     </div>
+    <div class="col-md-9 col-lg-9 text-right" style="margin-top:50px;">
+    <nav role="navigation" aria-labelledby="block-mainnavigation-menu" id="block-mainnavigation" class="block block-menu navigation menu--main">
+  
 
 
-            </div>
-</header>
+        <a href="/" id="topmenu" class="is-active">Home</a>
+
+
+        <a href="/about.html" id="topmenu" >About</a>
+
+
+        <a href="/hall-of-fame.html" id="topmenu">Contribute</a>
+
+
+        <a href="/faq.html" id="topmenu">Faq</a>
+
+
+        <a href="/search.html" id="topmenu">Search</a>
+
+
+  </nav>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <script type="application/ld+json">
         
@@ -154,7 +155,7 @@
       "url": "https://www.bits.vib.be"
     }
   },
-  "url": "https://material.bits.vib.be/topics/R/tutorials/Reading_Writing/tutorial.html",
+  "url": "https://vibbits.github.io//topics/R/tutorials/Reading_Writing/tutorial.html",
   "timeRequired": "PT30M",
   "description": "05 Reading and writing data\\nThe questions this  addresses are:\n - How to import your data into RStudio?\n - How to write a variable to a file?\n\n\\nThe objectives are:\n - learn how to read text files on your computer using R\n - learn how to write variables in R to a file on your computer\n\n",
   "hasPart": [
@@ -180,7 +181,7 @@
       "@type": "CreativeWork",
       "name": "Introduction to R",
       "description": "Introduction to R",
-      "url": "https://material.bits.vib.be/topics/R/"
+      "url": "https://vibbits.github.io//topics/R/"
     }
   ]
 }
@@ -191,11 +192,12 @@
         <h1 data-toc-skip>05 Reading and writing data</h1>
         <div class="contributors-line">By: 
 
-<a href="/hall-of-fame#janick-bits" class="contributor-badge"><img src="https://avatars.githubusercontent.com/janick-bits" alt="Janick Mathys">Janick Mathys</a>
+<a href="/hall-of-fame#janick-bits" class="contributor-badge">Janick Mathys</a>
+
 
 </div>
         <blockquote class="overview">
-            <h3>Overview</h3>
+
             <strong><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</strong>
             <ul>
             
@@ -549,26 +551,23 @@ mean(GeneEx$Ct1)
 
 </div>
 </div>
-
-
+</div>
 <footer>
-        <div class="well row">
-         <div class="col-md-3 text-center">             
-            <span class="slogan">SCIENCE MEETS LIFE</span>
-         </div>
-         <div class="col-md-6">
-            This material is the result of a collaborative work. Thanks to the
-            <a href="https://www.bits.vib.be">VIB Bioinformatics Core</a>
-            and all the <a href="/hall-of-fame">contributors</a>.
-            Found a typo? Something is wrong in this tutorial? Edit it on
-            <a href="https://github.com/vibbits/training-material/tree/master/topics/R/tutorials/Reading_Writing/tutorial.md">GitHub</a>.
-          </div>
-          <div class="col-md-3 text-center">
-                <a href="http://www.bits.vib.be"><img src="/assets/images/bioinformatics_core_rgb_neg.png"></a>
+   <div class="well row">
+       <div class="col-md-2 text-center" style="padding: 25px 20px 25px 20px;">				
+         <a href="https://www.bits.vib.be" target="_blank"><img src="/assets/images/bioinformatics_core_rgb_neg.png" width="200"></a>
+       </div>
+       <div class="col-md-8 text-center" style="padding-top: 20px;">	
+        <a href="https://github.com/vibbits/training-material" title="View on GitHub" class="margin20" target="_blank">
+                            <i class="fa fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> View on GitHub
+                        </a>
+       </div>
+       <div class="col-md-2 text-center" style="padding-top: 30px;">
+         <span class="slogan"><br>SCIENCE MEETS LIFE</span>
        </div>
    </div>
-   </footer>
-</div>
+</footer>
+
 
     </body>
     <script type="text/javascript" src="/assets/js/jquery.slim.min.js"></script>
