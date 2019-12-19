@@ -1,3 +1,0 @@
----
-layout: hall-of-fame
----
