@@ -1,1 +1,1 @@
-Sitemap: https://vibbits.github.io//sitemap.xml
+Sitemap: https://material.bits.vib.be//sitemap.xml
