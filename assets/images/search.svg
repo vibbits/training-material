@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="39px" height="39px" viewBox="0 0 39 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 2 Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="V4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="V4-frontpage-mobile" transform="translate(-181.000000, -37.000000)">
+            <rect id="Rectangle-2-Copy" stroke="#1B2944" stroke-width="0.85" transform="translate(200.201562, 56.577197) rotate(45.000000) translate(-200.201562, -56.577197) " x="187.026563" y="43.4021973" width="26.35" height="26.35"></rect>
+            <g id="search-left-thin" transform="translate(201.051562, 57.427197) scale(-1, 1) translate(-201.051562, -57.427197) translate(188.726562, 45.102197)" stroke="#4D4D4F">
+                <g id="search-right-copy">
+                    <g id="Oval-1-+-Line-Copy-2" transform="translate(12.254673, 12.273439) rotate(-315.000000) translate(-12.254673, -12.273439) translate(5.454673, 2.498439)" stroke-width="0.85">
+                        <circle id="Oval-1" cx="6.84297339" cy="6.84297339" r="6.41585727"></circle>
+                        <path d="M7.00698052,13.4544833 L7.00698052,19.0596961" id="Line" stroke-linecap="square"></path>
+                    </g>
+                </g>
+            </g>
+            <g id="account" transform="translate(219.629149, 36.577197)"></g>
+        </g>
+    </g>
+</svg>
