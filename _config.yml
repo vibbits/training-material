@@ -159,4 +159,5 @@ plugins:
   - jekyll-environment-variables
   - jekyll-github-metadata
   - jekyll-scholar
+  - jekyll-sitemap
 
