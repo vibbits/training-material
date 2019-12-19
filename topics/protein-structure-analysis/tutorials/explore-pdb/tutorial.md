@@ -32,10 +32,6 @@ The way of searching for a specific protein structure depends on the data you al
 
 ![uniprotsearchbox.png](../../images/uniprotsearchbox.png "Search box")
 
-<iframe src="https://h5p.org/h5p/embed/568148" width="699" height="489" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js" charset="UTF-8"></script>
-
-<iframe src="https://docs.google.com/presentation/d/1YH3Z9Nv6XmhUxHm0ElY3vrEzYJQQ2lYs/preview" width="640" height="480"></iframe>
-
 > ### {% icon hands_on %} Explore a PDB structure on the Uniprot web site
 >
 > 1. Go to the UniProt website and search for the DnaK protein

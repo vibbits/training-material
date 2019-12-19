@@ -1,0 +1,853 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="google-site-verification" content="dw_1zBYRNxF7-vYNDXh3Ght_JuqgJt3BD1N_Pynqmv0" />
+        <title>04 Matrices, data frames and lists</title>
+        
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=3">
+        <link rel="stylesheet" href="/assets/css/bootstrap-toc.min.css">
+        <link rel="stylesheet" href="/assets/css/main.css?v=2">
+        <link rel="stylesheet" href="/assets/css/font-awesome.css">
+        <link rel="stylesheet" href="/assets/css/VIB.css">
+        <link rel="stylesheet" href="/assets/css/academicons.css">
+        <link rel="stylesheet" href="/assets/css/syntax_highlighting.css">
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+        
+        
+        
+        
+        
+        <meta name="description" content="Introduction to R" />
+        <meta property="og:title" content="VIB Bioinformatics Training: 04 Matrices, data frames and lists" />
+        <meta property="og:description" content="Introduction to R" />
+        <meta property="og:image" content="/assets/images/bioinformatics_core_rgb_neg.png" />
+    </head>
+    <body data-spy="scroll" data-target="#toc">
+        <div class="container main-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="well row">
+           <div id="logo" class="col-md-4 col-lg-2 text-center">
+              <a href="/">
+                <img src="/assets/images/vib_notag_neg_rgb.jpg" height="50" alt="VIB logo" class="margin20">
+              </a>
+           </div> 
+           <div class="col-md-4 col-lg-8" id="top-navbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/topics/R" title="Go back to list of tutorials">
+                            <i class="fa fa-folder-o" aria-hidden="true"></i><span class="visually-hidden">topic</span> Introduction to R
+                        </a>
+                    </li>
+            </div>
+            <div class="col-md-4 col-lg-2 text-right form-group label-floating" id="help">
+                       
+    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Help">
+        <i class="fa fa-life-ring" aria-hidden="true"></i><span class="visually-hidden">help</span> Help
+    </a>
+    <div class="dropdown-menu dropdown-menu-right">
+        <form method="get" action="https://tess.elixir-europe.org/materials">
+            <input type="text" id="search" name="q" value="" style="margin-left: 0.5em;/*! border-radius: 0px; */">
+            <input type="hidden" value="VIB Bioinformatics Core" name="content_provider">
+            <input type="submit" value="Search on TeSS" style="width: 92%;border-radius: 0px;margin: 0.5em;background: #f47d20;border: 0px;padding: 0.25em;" class="">
+        </form>
+
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="https://www.bits.vib.be" title="Contact us">
+            Contact us 
+        </a>
+    </div>
+
+
+            </div>
+</header>
+
+    <script type="application/ld+json">
+        
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "headline": "04 Matrices, data frames and lists",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "/blob//LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "courseCode": "R / Matrices_Dataframes_Lists / hands-on",
+  "learningResourceType": "hands-on tutorial",
+  "name": "Hands-on for '04 Matrices, data frames and lists' tutorial",
+  "isPartOf": {
+    "@type": "Course",
+    "name": "04 Matrices, data frames and lists",
+    "description": "04 Matrices, data frames and lists",
+    "learningResourceType": "tutorial",
+    "interactivityType": "expositive",
+    "provider": {
+      "@type": "Organization",
+      "email": "bits@vib.be",
+      "name": "VIB Bioinformatics Core",
+      "url": "https://www.bits.vib.be"
+    }
+  },
+  "url": "https://material.bits.vib.be/topics/R/tutorials/Matrices_Dataframes_Lists/tutorial.html",
+  "timeRequired": "PT90M",
+  "description": "04 Matrices, data frames and lists\\nThe questions this  addresses are:\n - How to work with tables and lists?\n\n\\nThe objectives are:\n - learn how to create a matrix\n - learn how to create a data frame\n - learn how to extract elements from a data frame\n - learn how to change elements in a data frame\n - learn how to reorder columns in a data frame\n - learn how to create a list\n - learn how to extract elements from a list\n\n",
+  "hasPart": [
+
+  ],
+  "mentions": [
+
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Janick Mathys"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Janick Mathys"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "Introduction to R",
+      "description": "Introduction to R",
+      "url": "https://material.bits.vib.be/topics/R/"
+    }
+  ]
+}
+    </script>
+
+    <div class="row tutorial">
+      <div class="col-md-12" role="main">
+        <h1 data-toc-skip>04 Matrices, data frames and lists</h1>
+        <div class="contributors-line">By: 
+
+<a href="/hall-of-fame#janick-bits" class="contributor-badge"><img src="https://avatars.githubusercontent.com/janick-bits" alt="Janick Mathys">Janick Mathys</a>
+
+</div>
+        <blockquote class="overview">
+            <h3>Overview</h3>
+            <strong><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</strong>
+            <ul>
+            
+            <li>How to work with tables and lists?</li>
+            
+            </ul>
+
+            <strong><i class="fa fa-bullseye" aria-hidden="true"></i><span class="visually-hidden">objectives</span> Objectives</strong>
+            <ul>
+            
+            <li>learn how to create a matrix</li>
+            
+            <li>learn how to create a data frame</li>
+            
+            <li>learn how to extract elements from a data frame</li>
+            
+            <li>learn how to change elements in a data frame</li>
+            
+            <li>learn how to reorder columns in a data frame</li>
+            
+            <li>learn how to create a list</li>
+            
+            <li>learn how to extract elements from a list</li>
+            
+            </ul>
+
+            
+
+            
+            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 90 minutes</p>
+            
+
+            
+
+
+
+            <div>
+                <div><strong><i class="fa fa-external-link" aria-hidden="true"></i> Supporting Materials</strong></div>
+                <div id="supporting_materials">
+                    <ul>
+                        <li>
+                            <div>
+                    
+
+                    
+
+                    
+                    
+
+
+                    
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </blockquote>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-10" role="main">
+                    <h1 class="no_toc" id="data-structures-in-r">Data structures in R</h1>
+
+<p>The power of R lies not in its ability to work with simple numbers but in its ability to work with large datasets.  R has a wide variety of data structures including scalars, vectors, matrices, data frames, and lists.</p>
+
+<h3 id="matrices">Matrices</h3>
+<p>A matrix is a table, the columns are vectors of equal length. 
+All columns in a matrix must contain the same type of data. The top row, called the header, contains column labels. Rows can also have labels. Data values are called elements. Indices are often used as column and row labels.</p>
+
+<h3 id="creating-a-matrix">Creating a matrix</h3>
+<p>To create a matrix M use the matrix() function</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>M &lt;- matrix(data,nrow=r,ncol=c,byrow=FALSE))
+</code></pre></div></div>
+
+<p>It takes a long list of arguments:</p>
+<ul>
+  <li><em>data</em> usually is a vector of elements to will fill the matrix</li>
+  <li><em>nrow</em> and <em>ncol</em>: dimensions (number of rows and columns). Only one dimension argument is needed. If there are 20 elements in the <em>data</em> vector and <em>ncol=4</em> then R will automatically calculate that there should be 5 rows.</li>
+  <li><em>byrow</em>: how the matrix is filled, <em>byrow=TRUE</em> fills the matrix row by row whereas <em>byrow=FALSE</em> fills the matrix column by column</li>
+</ul>
+
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-hands-on-demo"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Demo</h3>
+
+  <p>From the demo script run the <strong>Data creation: matrices</strong> section</p>
+</blockquote>
+
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-hands-on-extra-exercise-8a"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Extra exercise 8a</h3>
+
+  <ol>
+    <li>Create a 2x2 matrix named mat containing numbers 2,3,1,5</li>
+    <li>Print the matrix
+      <blockquote class="solution">
+        <h3 id="solution-solution"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> mat&lt;-matrix(c(2,3,1,5),nrow=2,ncol=2)
+ mat
+</code></pre></div>        </div>
+      </blockquote>
+    </li>
+  </ol>
+</blockquote>
+
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-hands-on-extra-exercise-8b"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Extra exercise 8b</h3>
+
+  <ol>
+    <li>Create a 2x3 matrix named onemat consisting of all ones</li>
+    <li>Print the matrix
+      <blockquote class="solution">
+        <h3 id="solution-solution-1"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> onemat&lt;-matrix(1,nrow=2,ncol=3)
+ onemat
+</code></pre></div>        </div>
+      </blockquote>
+    </li>
+  </ol>
+</blockquote>
+
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-hands-on-extra-exercise-8c"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Extra exercise 8c</h3>
+
+  <ol>
+    <li>Create a 3x3 matrix containing numbers 1,2,3,4,5,6,7</li>
+    <li>Retrieve all elements that are larger than 3
+      <blockquote class="solution">
+        <h3 id="solution-solution-2"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> m &lt;- matrix(c(1,2,3,4,5,6,7),ncol=3) 
+ m[m &gt; 3]
+</code></pre></div>        </div>
+      </blockquote>
+    </li>
+  </ol>
+</blockquote>
+
+<h3 id="data-frames">Data frames</h3>
+<p>Just like a matrix, a data frame is a table where each column is a vector. But a data frame is more general than a matrix: they are used when columns contain different data types, while matrices are used when all data is of the same type.</p>
+
+<blockquote class="comment">
+  <h3 id="comment-comment"><i class="fa fa-commenting-o" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comment</h3>
+
+  <p>R has a number of built-in data frames like mtcars.</p>
+</blockquote>
+
+<h3 id="creating-a-data-frame">Creating a data frame</h3>
+<p>To create a data frame D use the function data.frame() with the vectors we want to use as columns:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>D &lt;- data.frame(column1,column2,column3)
+</code></pre></div></div>
+
+<blockquote class="comment">
+  <h3 id="comment-comment-1"><i class="fa fa-commenting-o" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comment</h3>
+
+  <p>The columns of a data frame are all of equal length</p>
+</blockquote>
+
+<p>You can provide names (labels) for the columns:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>D &lt;- data.frame(label1=column1,label2=column2,label3=column3)
+</code></pre></div></div>
+
+<blockquote class="comment">
+  <h3 id="comment-comment-2"><i class="fa fa-commenting-o" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comment</h3>
+
+  <p>As an argument of data.frame() you use label=vector_to_add: the equals (and not the assignment) operator is used because you are naming columns not creating new variables. 
+If you don’t define labels (as in the first example), the names of the vector names are used as column names.</p>
+</blockquote>
+
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-hands-on-demo-1"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Demo</h3>
+
+  <p>From the demo script run the <strong>Data creation: data frames</strong> section</p>
+</blockquote>
+
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-hands-on-exercise-9a"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 9a</h3>
+
+  <p>Create a data frame called Plant_study containing days and Plants_with_lesions. Name the columns Days and Plants.</p>
+  <blockquote class="solution">
+    <h3 id="solution-solution-3"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Plant_study &lt;- data.frame(Days=days,Plants=Plants_with_lesions)
+ Plant_study
+</code></pre></div>    </div>
+  </blockquote>
+</blockquote>
+
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-hands-on-exercise-9b"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 9b</h3>
+
+  <p>Create a data frame called Drug_study consisting of three columns: ID, treatment and smoking</p>
+  <blockquote class="solution">
+    <h3 id="solution-solution-4"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Drug_study &lt;- data.frame(ID,treatment,smoking)
+ Drug_study
+</code></pre></div>    </div>
+  </blockquote>
+</blockquote>
+
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-hands-on-exercise-9c"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 9c</h3>
+
+  <p>Create a data frame genomeSize containing genome sizes and print it.</p>
+  <ul>
+    <li>The first column is called organism and contains Human,Mouse,Fruit Fly, Roundworm,Yeast</li>
+    <li>The second column size contains 3000000000,3000000000,135600000,97000000,12100000</li>
+    <li>The third column geneCount contains 30000,30000,13061,19099,6034
+      <blockquote class="solution">
+        <h3 id="solution-solution-5"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> organism &lt;- c("Human","Mouse","Fruit Fly", "Roundworm","Yeast")
+ size &lt;- c(3000000000,3000000000,135600000,97000000,12100000)
+ geneCount &lt;- c(30000,30000,13061,19099,6034) 
+ genomeSize &lt;- data.frame(organism,size,geneCount)
+</code></pre></div>        </div>
+      </blockquote>
+    </li>
+  </ul>
+</blockquote>
+
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-hands-on-extra-exercise-9d"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Extra exercise 9d</h3>
+
+  <p>Create a data frame ab and print it.</p>
+  <ul>
+    <li>The first column is called a and contains 1,3,2,1</li>
+    <li>The second column is called b and contains 2,3,4,1
+      <blockquote class="solution">
+        <h3 id="solution-solution-6"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> a &lt;- c(1,3,2,1)
+ b &lt;- c(2,3,4,1)
+ ab &lt;- data.frame(a,b)
+</code></pre></div>        </div>
+      </blockquote>
+    </li>
+  </ul>
+</blockquote>
+
+<h5 id="referring-to-the-elements-of-a-data-frame">Referring to the elements of a data frame</h5>
+<p>Referring to elements of a data frame can be done in the same way as for matrices, using row and column <strong>indices</strong> in between square brackets. The only difference is that in data frames you can also use the <strong>labels</strong> of the columns to retrieve them.</p>
+
+<p>To retrieve the element on the second row, first column:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>D[2,1]
+</code></pre></div></div>
+
+<p>To select all values from one dimension leave the index blank, e.g. all elements of the first column:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>D[,1]
+</code></pre></div></div>
+
+<blockquote class="comment">
+  <h3 id="comment-comment-3"><i class="fa fa-commenting-o" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comment</h3>
+
+  <p>If you want to retrieve <strong>all</strong> the rows you don?t write any index before the comma inside the square brackets.</p>
+</blockquote>
+
+<p>You can also use column labels for retrieving elements. Column names have to be written between quotes:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>D[,"label1"]
+</code></pre></div></div>
+
+<p>You can also use the range function to select elements:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>D[2:4,1]
+</code></pre></div></div>
+
+<p>The <strong>$</strong> symbol can be used to retrieve a column based on its label e.g. to retrieve column label1 from D:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>D$label1
+</code></pre></div></div>
+
+<blockquote class="comment">
+  <h3 id="comment-comment-4"><i class="fa fa-commenting-o" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comment</h3>
+  <p>With $ you do not have to put quotes around the column name</p>
+</blockquote>
+
+<p>Since the result of $ is a vector, you can address a specific element of a column using its index:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>D$label1[2]
+</code></pre></div></div>
+<p>retrieves the second element of the column called label1</p>
+
+<p>Specific for data frames is the <strong>subset()</strong> function that can be used to select columns that satisfy a logical operation:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>subset(D,select=columns to extract)
+subset(D,logical expression,columns to extract)
+</code></pre></div></div>
+
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-hands-on-demo-2"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Demo</h3>
+
+  <p>From the demo script run the <strong>Data extraction: data frames</strong> section</p>
+</blockquote>
+
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-hands-on-exercise-10a"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 10a</h3>
+
+  <ol>
+    <li>Retrieve the data for the Volvo 142E from mtcars</li>
+    <li>Retrieve the gas usage (mpg column) for the Volvo 142E
+      <blockquote class="solution">
+        <h3 id="solution-solution-7"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> mtcars["Volvo 142E",]
+ mtcars["Volvo 142E","mpg"]
+</code></pre></div>        </div>
+      </blockquote>
+      <blockquote class="question">
+        <h3 id="question-question"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
+
+        <p>What will happen when you run this code ?</p>
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> mtcars["Volvo 142E"]
+ 
+</code></pre></div>        </div>
+      </blockquote>
+      <blockquote class="question">
+        <h5 id="question-question-1"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h5>
+
+        <p>What will happen when you run this code ?</p>
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> mtcars[Volvo 142E,]
+  
+</code></pre></div>        </div>
+      </blockquote>
+    </li>
+  </ol>
+</blockquote>
+
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-hands-on-exercise-10b"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 10b</h3>
+
+  <ol>
+    <li>Retrieve the IDs of the smoking patients in Drug_study</li>
+    <li>Retrieve ID and treatment of the smoking patients</li>
+    <li>Retrieve the smoking behavior of all the patients</li>
+    <li>Change the treatment of the fourth patient to A</li>
+    <li>Add a column called activity with values: 4, NA, 12.1, 2.5</li>
+    <li>Use subset() to retrieve the full ID and treatment columns
+      <blockquote class="solution">
+        <h3 id="solution-solution-8"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> subset(Drug_study,smoking==TRUE,ID)
+ subset(Drug_study,smoking==TRUE,c(ID,treament))
+ Drug_study$smoking
+ Drug_study$treatment[4] &lt;- "A"
+ Drug_study$activity &lt;- c(4,NA,12.1,2.5)
+ subset(Drug_study,select=c(ID,treatment))
+</code></pre></div>        </div>
+      </blockquote>
+      <blockquote class="question">
+        <h3 id="question-question-2"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
+
+        <p>What will happen when you run this code ?</p>
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Drug_study[Drug_study$smoking==TRUE,"ID"]
+  
+</code></pre></div>        </div>
+      </blockquote>
+      <blockquote class="question">
+        <h3 id="question-question-3"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
+
+        <p>What will happen when you run this code ?</p>
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Drug_study[Drug_study$smoking==TRUE,ID]
+  
+</code></pre></div>        </div>
+      </blockquote>
+      <blockquote class="question">
+        <h3 id="question-question-4"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
+
+        <p>What will happen when you run this code ?</p>
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Drug_study[,"smoking"]
+ 
+</code></pre></div>        </div>
+      </blockquote>
+      <blockquote class="question">
+        <h5 id="question-question-5"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h5>
+
+        <p>What will happen when you run this code ?</p>
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Drug_study[4,"treatment"] &lt;- "B"
+</code></pre></div>        </div>
+      </blockquote>
+      <blockquote class="question">
+        <h3 id="question-question-6"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
+
+        <p>What will happen when you run this code ?</p>
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Drug_study["activity"] &lt;- c(4,NA,12.1,2.5)
+  
+</code></pre></div>        </div>
+      </blockquote>
+      <blockquote class="question">
+        <h3 id="question-question-7"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
+
+        <p>What will happen when you run this code ?</p>
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> subset(Drug_study,c(ID,treatment))
+  
+</code></pre></div>        </div>
+      </blockquote>
+      <blockquote class="question">
+        <h3 id="question-question-8"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
+
+        <p>What will happen when you run this code ?</p>
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> subset(Drug_study,,c(ID,treatment))
+  
+</code></pre></div>        </div>
+      </blockquote>
+    </li>
+  </ol>
+</blockquote>
+
+<blockquote class="comment">
+  <h3 id="comment-comment-5"><i class="fa fa-commenting-o" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comment</h3>
+
+  <p>The order of the arguments is important except when you specify their names.</p>
+</blockquote>
+
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-hands-on-extra-exercise-10c"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Extra exercise 10c</h3>
+
+  <p>On which days did we observe more than 2 infected plants in the plant experiment? Answer this question with and without using the subset() function.</p>
+  <blockquote class="solution">
+    <h3 id="solution-solution-9"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &gt; Plant_study[Plant_study$Plants &gt; 2,"Days"]
+ &gt; subset(Plant_study,Plants &gt; 2,Days)
+</code></pre></div>    </div>
+  </blockquote>
+  <blockquote class="question">
+    <h3 id="question-question-9"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
+
+    <p>What will happen when you run this code ?</p>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Plant_study[Plant_study["Plants"] &gt; 2,"Days"]
+  
+</code></pre></div>    </div>
+  </blockquote>
+</blockquote>
+
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-hands-on-extra-exercise-10d"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Extra exercise 10d</h3>
+
+  <ol>
+    <li>Create vector q by extracting the a column of data frame ab (exercise 9) with and without subset().</li>
+    <li>Retrieve the second element of column a of data frame ab</li>
+    <li>Add column c with elements 2,1,4,7 to data frame ab
+      <blockquote class="solution">
+        <h3 id="solution-solution-10"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> q &lt;- ab$a
+ subset(q,select=a)
+ ab$a[2]
+ ab$c &lt;- c(2,1,4,7)
+</code></pre></div>        </div>
+      </blockquote>
+    </li>
+  </ol>
+</blockquote>
+
+<h5 id="removing-elements-from-a-data-frame">Removing elements from a data frame</h5>
+<p>To remove elements from a data frame use negative indices just as in a vector e.g. to remove the second row from data frame D use:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>D &lt;- D[-2,]
+</code></pre></div></div>
+
+<blockquote class="comment">
+  <h3 id="comment-comment-6"><i class="fa fa-commenting-o" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comment</h3>
+
+  <p>The minus sign only works with numbers not with column labels.</p>
+</blockquote>
+
+<p>To remove columns based on labels assign them to NULL:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>D$genome &lt;- NULL
+</code></pre></div></div>
+
+<blockquote class="comment">
+  <h3 id="comment-comment-7"><i class="fa fa-commenting-o" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comment</h3>
+
+  <p>Setting a column to NULL is done via an assignment so the removal is permanent.</p>
+</blockquote>
+
+<blockquote class="comment">
+  <h3 id="comment-comment-8"><i class="fa fa-commenting-o" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comment</h3>
+
+  <p>Insteading of removing elements you can also define the elements you want to keep.</p>
+</blockquote>
+
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-hands-on-demo-3"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Demo</h3>
+
+  <p>From the demo script run the <strong>Data removal: data frames</strong> section</p>
+</blockquote>
+
+<h5 id="reordering-columns-in-a-data-frame">Reordering columns in a data frame</h5>
+<p>Reordering columns is a special case of retrieving columns, e.g. for a data frame that has 4 columns you can switch the position of the second and third column as follows:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>D2 &lt;- D[ ,c(1,3,2,4)]
+</code></pre></div></div>
+
+<blockquote class="comment">
+  <h3 id="comment-comment-9"><i class="fa fa-commenting-o" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comment</h3>
+
+  <p>The first comma means keep all the rows, and the 1,3,2,4 refer to column indices. 
+You can use indices or labels to refer to the columns.</p>
+</blockquote>
+
+<p>You can also use subset():</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>D2 &lt;- subset(D,select=c(1,3,2,4))
+</code></pre></div></div>
+
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-hands-on-demo-4"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Demo</h3>
+
+  <p>From the demo script run the <strong>Column reordering: data frames</strong> section</p>
+</blockquote>
+
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-hands-on-exercise-11a"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 11a</h3>
+
+  <p>Switch the position of the second and the third column of Drug_study</p>
+  <blockquote class="solution">
+    <h3 id="solution-solution-11"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Drug_study[,c(1,3,2)]
+  
+</code></pre></div>    </div>
+  </blockquote>
+  <blockquote class="question">
+    <h3 id="question-question-10"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
+
+    <p>What will happen when you run this code ?</p>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> subset(Drug_study,select=c(1,3,2))
+  
+</code></pre></div>    </div>
+  </blockquote>
+</blockquote>
+
+<h3 id="lists">Lists</h3>
+<p>A list is an ordered collection of objects (of any data type: string, numbers, vectors, matrices, data frames). Lists can even contain other lists as objects! A list allows you to gather a variety of objects under one name. It is not mandatory but very useful to give each object in a list a label.</p>
+
+<h5 id="creating-a-list">Creating a list</h5>
+<p>To create a list L use the list() function:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>L &lt;- list(label1=object1,label2=object2,label3=object3)
+</code></pre></div></div>
+
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-hands-on-extra-exercise-12a"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Extra exercise 12a</h3>
+
+  <ol>
+    <li>Create a list called myList with the following objects: 5, 6, the word seven, the matrix mat.</li>
+    <li>Print the list.
+      <blockquote class="solution">
+        <h3 id="solution-solution-12"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> myList&lt;-list(5,6,"seven",mat)
+  
+</code></pre></div>        </div>
+      </blockquote>
+      <blockquote class="question">
+        <h3 id="question-question-11"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
+
+        <p>What will happen when you run this code ?</p>
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> subset(Drug_study,select=c(1,3,2))
+  
+</code></pre></div>        </div>
+      </blockquote>
+    </li>
+  </ol>
+</blockquote>
+
+<h5 id="referring-to-the-elements-of-a-list">Referring to the elements of a list</h5>
+<p>Referring to the elements of a list can be done in exactly the same way as for data frames, using row and column <strong>indices or labels</strong> in between square brackets. However, since a list can contain other lists or data frames you have to use <strong>double square brackets</strong> [[ ]] to retrieve elements.</p>
+
+<blockquote class="comment">
+  <h3 id="comment-comment-10"><i class="fa fa-commenting-o" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comment</h3>
+
+  <p>The $ operator also works to access the objects of a list.</p>
+</blockquote>
+
+
+
+                    
+                    <blockquote class="key_points">
+                        <h3><i class="fa fa-key" aria-hidden="true"></i><span class="visually-hidden">keypoints</span> Key points</h3>
+
+                        <ul>
+                            
+                            <li>We showed how to create a matrix</li>
+                            
+                            <li>We showed how to create a data frame</li>
+                            
+                            <li>We showed how to refer to the elements of a data frame</li>
+                            
+                            <li>We showed how to remove elements from a data frame</li>
+                            
+                            <li>We showed how to reorder columns in a data frame</li>
+                            
+                        </ul>
+                    </blockquote>
+                    
+
+                    
+
+                    
+
+                </div>
+                <!-- sidebar, which will move to the top on a small screen -->
+                <div class="col-sm-2" role="supplementary">
+                    <nav id="toc" data-toggle="toc" class="sticky-top bs-docs-sidebar hidden-print hidden-xs hidden-sm"></nav>
+                </div>
+            </div>
+        </div>
+
+        <h3><i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
+
+        
+
+        
+
+</div>
+</div>
+
+
+<footer>
+        <div class="well row">
+         <div class="col-md-3 text-center">             
+            <span class="slogan">SCIENCE MEETS LIFE</span>
+         </div>
+         <div class="col-md-6">
+            This material is the result of a collaborative work. Thanks to the
+            <a href="https://www.bits.vib.be">VIB Bioinformatics Core</a>
+            and all the <a href="/hall-of-fame">contributors</a>.
+            Found a typo? Something is wrong in this tutorial? Edit it on
+            <a href="https://github.com/vibbits/training-material/tree/master/topics/R/tutorials/Matrices_Dataframes_Lists/tutorial.md">GitHub</a>.
+          </div>
+          <div class="col-md-3 text-center">
+                <a href="http://www.bits.vib.be"><img src="/assets/images/bioinformatics_core_rgb_neg.png"></a>
+       </div>
+   </div>
+   </footer>
+</div>
+
+    </body>
+    <script type="text/javascript" src="/assets/js/jquery.slim.min.js"></script>
+    <script type="text/javascript" src="/assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.min.js?v=3"></script>
+    <script type="text/javascript" src="/assets/js/details-element-polyfill.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap-toc.min.js"></script>
+    <script type="text/javascript" src="/assets/js/main.js"></script>
+    <script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
+    <script type="text/javascript" src="https://app.cloudsh.com/js/cloudsh.js"></script>
+    <script type="text/javascript">
+    var snippets=document.querySelectorAll('div.highlight');
+    [].forEach.call(snippets,function(snippet){
+        snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+    });
+
+    var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
+        target:function(trigger){return trigger.nextElementSibling;
+    }});
+    </script>
+</html>
