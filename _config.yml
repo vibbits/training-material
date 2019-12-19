@@ -17,7 +17,7 @@
 title: "VIB Bioinformatics Core"
 email: bits@vib.be
 description: A collection of tutorials generated and maintained by VIB Bioinformatics Core 
-url: "https://vibbits.github.io/"
+url: "https://material.bits.vib.be/"
 baseurl: ""
 repository: vibbits/training-material
 repository_branch: "master"
