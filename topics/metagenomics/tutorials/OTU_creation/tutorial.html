@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="google-site-verification" content="dw_1zBYRNxF7-vYNDXh3Ght_JuqgJt3BD1N_Pynqmv0" />
+        <title>02 OTU creation using LotuS</title>
+        
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=3">
+        <link rel="stylesheet" href="/assets/css/bootstrap-toc.min.css">
+        <link rel="stylesheet" href="/assets/css/main.css?v=2">
+        <link rel="stylesheet" href="/assets/css/font-awesome.css">
+        <link rel="stylesheet" href="/assets/css/VIB.css">
+        <link rel="stylesheet" href="/assets/css/academicons.css">
+        <link rel="stylesheet" href="/assets/css/syntax_highlighting.css">
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+        
+        
+        
+        
+        
+        <meta name="description" content="Metagenomics" />
+        <meta property="og:title" content="VIB Bioinformatics Training: 02 OTU creation using LotuS" />
+        <meta property="og:description" content="Metagenomics" />
+        <meta property="og:image" content="/assets/images/bioinformatics_core_rgb_neg.png" />
+    </head>
+    <body data-spy="scroll" data-target="#toc">
+        <div class="container main-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="well row">
+           <div id="logo" class="col-md-4 col-lg-2 text-center">
+              <a href="/">
+                <img src="/assets/images/vib_notag_neg_rgb.jpg" height="50" alt="VIB logo" class="margin20">
+              </a>
+           </div> 
+           <div class="col-md-4 col-lg-8" id="top-navbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/topics/metagenomics" title="Go back to list of tutorials">
+                            <i class="fa fa-folder-o" aria-hidden="true"></i><span class="visually-hidden">topic</span> Metagenomics
+                        </a>
+                    </li>
+            </div>
+            <div class="col-md-4 col-lg-2 text-right form-group label-floating" id="help">
+                       
+    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Help">
+        <i class="fa fa-life-ring" aria-hidden="true"></i><span class="visually-hidden">help</span> Help
+    </a>
+    <div class="dropdown-menu dropdown-menu-right">
+        <form method="get" action="https://tess.elixir-europe.org/materials">
+            <input type="text" id="search" name="q" value="" style="margin-left: 0.5em;/*! border-radius: 0px; */">
+            <input type="hidden" value="VIB Bioinformatics Core" name="content_provider">
+            <input type="submit" value="Search on TeSS" style="width: 92%;border-radius: 0px;margin: 0.5em;background: #f47d20;border: 0px;padding: 0.25em;" class="">
+        </form>
+
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="https://www.bits.vib.be" title="Contact us">
+            Contact us 
+        </a>
+    </div>
+
+
+            </div>
+</header>
+
+    <script type="application/ld+json">
+        
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "headline": "02 OTU creation using LotuS",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "/blob//LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "courseCode": "metagenomics / OTU_creation / hands-on",
+  "learningResourceType": "hands-on tutorial",
+  "name": "Hands-on for '02 OTU creation using LotuS' tutorial",
+  "isPartOf": {
+    "@type": "Course",
+    "name": "02 OTU creation using LotuS",
+    "description": "02 OTU creation using LotuS",
+    "learningResourceType": "tutorial",
+    "interactivityType": "expositive",
+    "provider": {
+      "@type": "Organization",
+      "email": "bits@vib.be",
+      "name": "VIB Bioinformatics Core",
+      "url": "https://www.bits.vib.be"
+    }
+  },
+  "url": "https://material.bits.vib.be/topics/metagenomics/tutorials/OTU_creation/tutorial.html",
+  "timeRequired": "PT60M",
+  "description": "02 OTU creation using LotuS\\nThe questions this  addresses are:\n - How to use the LotuS pipeline?\n\n\\nThe objectives are:\n - learn how to create a genus abundance tablei with LotuS\n - learn what information is needed in the experiment annotation file\n - learn how to apply quality filters with sdm\n - learn how to demultiplex the raw data files\n - learn how to execute LotuS pipeline\n - learn how to assign various taxonomies\n\n",
+  "hasPart": [
+
+  ],
+  "mentions": [
+
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Falk Hildebrand"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Falk Hildebrand"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "Metagenomics",
+      "description": "Metagenomics",
+      "url": "https://material.bits.vib.be/topics/metagenomics/"
+    }
+  ]
+}
+    </script>
+
+    <div class="row tutorial">
+      <div class="col-md-12" role="main">
+        <h1 data-toc-skip>02 OTU creation using LotuS</h1>
+        <div class="contributors-line">By: 
+
+<a href="/hall-of-fame#hildebra" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hildebra" alt="Falk Hildebrand">Falk Hildebrand</a>
+
+</div>
+        <blockquote class="overview">
+            <h3>Overview</h3>
+            <strong><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</strong>
+            <ul>
+            
+            <li>How to use the LotuS pipeline?</li>
+            
+            </ul>
+
+            <strong><i class="fa fa-bullseye" aria-hidden="true"></i><span class="visually-hidden">objectives</span> Objectives</strong>
+            <ul>
+            
+            <li>learn how to create a genus abundance tablei with LotuS</li>
+            
+            <li>learn what information is needed in the experiment annotation file</li>
+            
+            <li>learn how to apply quality filters with sdm</li>
+            
+            <li>learn how to demultiplex the raw data files</li>
+            
+            <li>learn how to execute LotuS pipeline</li>
+            
+            <li>learn how to assign various taxonomies</li>
+            
+            </ul>
+
+            
+
+            
+            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 60 minutes</p>
+            
+
+            
+
+
+
+            <div>
+                <div><strong><i class="fa fa-external-link" aria-hidden="true"></i> Supporting Materials</strong></div>
+                <div id="supporting_materials">
+                    <ul>
+                        <li>
+                            <div>
+                    
+
+                    
+
+                    
+                    
+
+
+                    
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </blockquote>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-10" role="main">
+                    <h1 class="no_toc" id="otu-creation-using-lotus">OTU creation using LotuS</h1>
+
+<p>In this tutorial we will create a genus abundance table from two 454 sequencer runs using a pipeline called LotuS. A genus abundance table contains counts of different genera in a several of samples – Rows are the different genera and columns the samples. As a simple example, take a look at this table:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left"> </th>
+      <th style="text-align: left"> </th>
+      <th style="text-align: left"> </th>
+      <th style="text-align: left"> </th>
+      <th style="text-align: left"> </th>
+      <th style="text-align: left"> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Genus</td>
+      <td style="text-align: left">bl10</td>
+      <td style="text-align: left">bl11</td>
+      <td style="text-align: left">bl12</td>
+      <td style="text-align: left">bl128</td>
+      <td style="text-align: left">bl13</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Bacteria</td>
+      <td style="text-align: left">24</td>
+      <td style="text-align: left">52</td>
+      <td style="text-align: left">39</td>
+      <td style="text-align: left">63</td>
+      <td style="text-align: left">181</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Bacteroides</td>
+      <td style="text-align: left">169</td>
+      <td style="text-align: left">27</td>
+      <td style="text-align: left">7</td>
+      <td style="text-align: left">42</td>
+      <td style="text-align: left">6</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Porphyromonadacea</td>
+      <td style="text-align: left">370</td>
+      <td style="text-align: left">346</td>
+      <td style="text-align: left">621</td>
+      <td style="text-align: left">565</td>
+      <td style="text-align: left">224</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>This table tells us how often we observe unclassified Bacteria, Bacteroides and unclassified Porphyromonadaceae in the 5 samples bl10, bl11, bl12, bl128 and bl13. A matrix like this will be used for the next tutorial on numerical ecology and created from raw sequence data within this tutorial.</p>
+
+<h2 id="the-data">The data</h2>
+
+<p>In a recent experiment, we sequenced 73 samples in two 454 runs, the raw fasta and quality files are in <code class="highlighter-rouge">/home/VIBTrainingX/metagenomics/</code> on the bits server. For each run we have a fasta (.fna) and quality (.qual) file. Go to this directory using the command <code class="highlighter-rouge">cd</code> and become aware of the files required from the experimenter (command <code class="highlighter-rouge">ls</code>). You can always take a look at files and their contents using viewing commands like <code class="highlighter-rouge">less</code>.</p>
+
+<p>The sequence files were multiplexed before the experiment, that is a small nucleotide sequence – the barcode - was attached to each read, specific for each experiment. A mapping file is typically used, containing the link between a sequence barcode and the name of the experiment and is essential to demultiplex the fasta files.</p>
+
+<h2 id="the-tools">The tools</h2>
+
+<p>LotuS is actually a set of tools that were installed in the <code class="highlighter-rouge">/opt/</code> folder. First go to <a href="http://psbweb05.psb.ugent.be/lotus/">the lotus website</a> and familiarize yourself with the basic documentation.</p>
+
+<p>To start the exercises, go to the directory where Lotus is installed.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /opt/lotus-1.62/lotus_pipeline/
+</code></pre></div></div>
+
+<p>From this directory you can run all the tools. To reach all data files (e.g. input files) you have to provide the path to the files: <code class="highlighter-rouge">~/metagenomics/</code></p>
+
+<h2 id="the-analysis">The analysis</h2>
+
+<h3 id="creation-of-mapping-file">Creation of Mapping file.</h3>
+
+<p><a href="http://data.bits.vib.be/pub/trainingen/metagenomics/Mice_experiment.xlsx">An Excel</a> is provided, with some basic experiment annotation. The fwd primer is given as <code class="highlighter-rouge">ACTYAAAKGAATTGACGG</code>, but if you search for the primer sequence in the reads (in one of the .fna files) you will not find it because you need to reverse translate the primer sequence first using [http://www.bioinformatics.org/sms/rev_comp.html this tool]. So you see annotation provided by the provider is not always correct.</p>
+
+<p>Lotus needs experiment annotation to map input files to barcodes. Based on the documentation on [http://psbweb05.psb.ugent.be/lotus/documentation.html#MapFile the Lotus website], create a mapping file for this experiment. This means that you need to replace the column headers of the Excel file to terms that are accepted by Lotus and that you have to indicate that there is a .fna and a .qual file for each run. The header line should be preceeded by a <code class="highlighter-rouge">#</code>. The mapping file should at least contain four columns with the following headers:</p>
+
+<ul>
+  <li>SampleID</li>
+  <li>BarcodeSequence</li>
+  <li>fnaFile</li>
+  <li>qualFile</li>
+</ul>
+
+<p>Save the file as a tab-delimited text file.</p>
+
+<p>You can always test the validity of your mapping file with the command</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./lotus.pl -check_map [your mapping file]
+</code></pre></div></div>
+
+<p>If you have fastq files as input the fnaFile and qualFile columns would be replaced by one fastqFile column.</p>
+
+<h3 id="changing--the-data-format-of-the-input-files">Changing  the data format of the input files.</h3>
+
+<p>Sometimes you need to transcribe data from one format to another. For instance we could transform the fasta files (.fna) to fastq files (.fq). This can be done with the program <code class="highlighter-rouge">sdm</code>, that is part of the LotuS pipeline. Take a look at the sdm help by typing <code class="highlighter-rouge">./sdm</code> and exploring the options, e.g.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./sdm -help_commands
+</code></pre></div></div>
+
+<p>Then, using command line arguments, transcribe the fasta + qual files of the Anh experiment into fastq files. Take a look at output and log files created by sdm.</p>
+
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-hands-on-exercise-1"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 1</h3>
+
+  <blockquote class="question">
+    <h3 id="question-question"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
+
+    <p>How to transform fasta + qual files into fastq files ?</p>
+
+    <blockquote class="solution">
+      <h3 id="solution-solution"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo ./sdm -i_fna ~/metagenomics/Anh.1.fna -i_qual ~/metagenomics/Anh.1.qual -o_fastq t1.fq
+</code></pre></div>      </div>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<p>In the lotus_pipeline folder the fastq file t1.fq was generated, to take a look at the file use</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>head t1.fq
+</code></pre></div></div>
+
+<p>Do the same for the t1.log file: you see that sdm is not only used to transform fasta into fastq files but it is also capable of doing quality filtering on the raw reads files.</p>
+
+<h3 id="setting-up-a-quality-filter-of-the-input-sequence-files">Setting up a quality filter of the input sequence files.</h3>
+
+<p>Since we want to make sure the quality filtering of the input file is strict, LotuS offers several quality filtering options. Quality settings are different for different data formats, that´s why Lotus offers a file with specific settings for each platform. Since we have 454 data we will take a look at the file sdm_454.txt.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>less sdm_454.txt
+</code></pre></div></div>
+
+<p>Read the comments (line starting with “#”) to each option and think which quality filtering options might be important in order to create OTUs from the raw sequences. (Hint: an OTU is a clustering of similar sequences with the aim to have one cluster of sequences for each species that was originally present in the samples. Take into account that sequencing machines make errors and that PCR amplification of the 16S rDNA is similarly with errors). Think about a set of parameters, including the statistical information from step 2, and save these in your copy of sdm_options.txt for later use.</p>
+
+<p>Check the sdm <a href="http://psbweb05.psb.ugent.be/lotus/documentation.html#SDMconfig">quality filter settings</a>. Some of the default filter settings are:</p>
+
+<ul>
+  <li>MinSeqLength=250 : Only use reads of at least 250 nt long after processing (remember we are working with long reads from 454 sequencing)</li>
+  <li>TruncateSequenceLength = 250 : Cut all reads after 250 nt</li>
+  <li>QualWindowWidth = 50 and QualWindowThreshold = 25 : Remove all reads where average quality is &lt;= 25 over a 50bp window</li>
+  <li>maxAccumulatedError = 0,5 : Remove all remaining bases when accumulated error score &gt;= 0,5&lt;/li&gt;</li>
+  <li>maxHomonucleotide = 8 : Remove all reads with a homonucleotide run (repeat of same nt) &gt;= 8</li>
+  <li>RejectSeqWithoutFwdPrim = TRUE : Remove all reads that do not contain the forward primer</li>
+</ul>
+
+<h3 id="demultiplexing--and-quality-filter-the-input-files">Demultiplexing  and quality filter the input files.</h3>
+
+<p>For this step you will need the mapping file from Step 1 and the file with the quality filtering settings for 454 data. Use the sdm command to demultiplex and filter all input files at the same time into a local folder ‘‘demultDir’’. First create the folder where the demultiplexed files will be written in ~/metagenomics/:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir ~/metagenomics/demultDir
+</code></pre></div></div>
+
+<p>Since the mapping file contains information on all files, you have to provide an input path to the folder that contains the input files (.fna + .qual) to sdm.</p>
+
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-hands-on-exercise-2"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 2</h3>
+
+  <blockquote class="question">
+    <h3 id="question-question-1"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
+    <p>How to demultiplex and quality filter files ?</p>
+
+    <blockquote class="solution">
+      <h3 id="solution-solution-1"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./sdm -i_path ~/metagenomics/ -o_fastq t1.fq -o_demultiplex ~/metagenomics/demultDir/ -map ~/metagenomics/map.txt -options sdm_454.txt 
+</code></pre></div>      </div>
+      <p>Input is the folder containing the .fna and .qual files. The demultiplexing will fill the demultDir folder with fastq files.</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<p>Discuss the output files and what each of these represents. In this experiment multiple samples were sequenced in the same lane. Two lanes were used, each containing 37 samples. After sequencing, this results in two files with reads. To know which sample a read comes from, unique bar codes are incorporated into the adapter sequences. One specific bar code for each sample. In this step reads from different samples (but from the same lane thus in the same fasta file) are split over separate fastq files, one for each sample.</p>
+
+<h3 id="mapping-file-creation-when-sequence-provider-provides-demultiplexed-files">Mapping file creation when sequence provider provides demultiplexed files.</h3>
+
+<p>Now that you have demultiplexed the files into a single folder, you might be aware that sequence providers often deliver files in this format: already demultiplexed into single files. In this case slight modifications to the mapping file are enough to change the input from non-demultiplexed large file(s) to demultiplexed-many-small-files.</p>
+
+<p>Note that lotus has a special script that creates the mapping file for you in this case. The script is autoMap.pl. It is used to link SampleIDs to demultiplexed files. Run autoMap.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./autoMap.pl ~/metagenomics/demultDir/ ~/metagenomics/automap.txt 1,1
+</code></pre></div></div>
+
+<h3 id="running-lotus">Running Lotus.</h3>
+
+<p>We will run Lotus on the demultiplexed files. Use the mapping file you generated in Step 5 and the settings file sdm_454.txt. Use the utax taxonomy to assign a phylogeny to the derived OTUs. Run lotus from out the /opt/lotus_pipeline/ and save the output in the folder ‘‘testR’’</p>
+
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-hands-on-exercise-3"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 3</h3>
+
+  <blockquote class="question">
+    <h3 id="question-question-2"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
+    <p>How to run lotus</p>
+
+    <blockquote class="solution">
+      <h3 id="solution-solution-2"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo ./lotus.pl -i ~/metagenomics/demultDir/ -o ~/metagenomics/testR/ -m ~/metagenomics/automap.txt 
+</code></pre></div>      </div>
+      <p>Input is the folder containing the .fna and .qual files. The demultiplexing will fill the demultDir folder with fastq files.</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<p>In case you haven’t done any quality filtering yet, you can still do it now. The command would then be:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo ./lotus.pl -i ~/metagenomics/demultDir/ -o ~/metagenomics/testR/ -m ~/metagenomics/automap.txt -s sdm_454.txt
+</code></pre></div></div>
+
+<ul>
+  <li>Peek at the file hiera_RDP (using <code class="highlighter-rouge">head</code>). The file maps eachg OTU to a genus.</li>
+  <li>Peek at the file OTU.txt (using <code class="highlighter-rouge">head</code>). The first line contains the number of reads that represent OTU_1 in each sample.</li>
+  <li>Peek at the file otus.fa (using <code class="highlighter-rouge">head</code>). It contains the reads representing each OTU. You can use this file to blast the sequences to check if they are really from the OTU they were assigned to.</li>
+  <li>Go to the folder higherLvl. This contains the data that we are going to use in the Ecology analysis.</li>
+  <li>Go to the folder LotuSLogs. This contains the settings of the analysis. For instance, peek a the file demulti.log: it shows how many reads were rejected… The file citations.txt contains the references for reporting your LotuS results.</li>
+</ul>
+
+<h3 id="using-a-different-taxonomy-assignment-on-a-finished-run">Using a different taxonomy assignment on a finished run.</h3>
+
+<p>In this step we want to reassign the taxonomy to a LotuS run, but keep exactly the same OTUs. In this exercise, assign the OTUs to the Silva taxonomy.</p>
+
+<p>This option is useful, if e.g. you want to keep your work on a given OTU set (as well as the phylogenetic tree), but want to try out what would have happened if you had used e.g. Silva as reference database instead of utax.</p>
+
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-hands-on-exercise-4"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 4</h3>
+
+  <blockquote class="question">
+    <h3 id="question-question-3"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
+    <p>How to reassign the taxonomy with Silva as reference database?</p>
+
+    <blockquote class="solution">
+      <h3 id="solution-solution-3"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo ./lotus.pl -i ~/metagenomics/demultDir/ -o ~/metagenomics/testR2/ -m ~/metagenomics/automap.txt -s sdm_454.txt -refDB SLV -redoTaxOnly 1
+</code></pre></div>      </div>
+      <p>Input is the folder containing the .fna and .qual files. The demultiplexing will fill the demultDir folder with fastq files.</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h3 id="using--a-custom-database">Using  a custom database.</h3>
+
+<p>The research of honey bee gut communities have very specific taxonomic names for already known bacteria. In order to accomodate for their naming sheme, we will use a very specific database that contains 16S sequences of bacteria mostly found in the honey bee gut. Download the <a href="http://psbweb05.psb.ugent.be/lotus/packs/DB/beeTax/beeTax.tax">bee taxonomy in tax format</a> and [http://psbweb05.psb.ugent.be/lotus/packs/DB/beeTax/beeTax.fna bee taxonomy in fna format].</p>
+
+<p>Use the two provided files (fna, tax) to again redo the taxonomy, but this time assigning first using the honey bee DB and secondly everything with low hit should be assigned with the SILVA database.</p>
+
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-hands-on-exercise-5"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 5</h3>
+
+  <blockquote class="question">
+    <h3 id="question-question-4"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
+    <p>Use honey bee taxonomy database ?</p>
+
+    <blockquote class="solution">
+      <h3 id="solution-solution-4"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo ./lotus.pl -i XX -o ~/metagenomics/testR3/ -redoTaxOnly 1 \
+-m ~/metagenomics/LASI_Spring_2_bees_barn_3_map_lts_5.txt \
+-refDB ~/metagenomics/beeTax.fna,SLV -tax4refDB ~/metagenomics/beeTax.tax 
+</code></pre></div>      </div>
+      <p>Input is the folder containing the .fna and .qual files. The demultiplexing will fill the demultDir folder with fastq files.</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h3 id="get--everything-assigned">Get  everything assigned!</h3>
+
+<p>In this step we want to assign every OTU sequence to a database target – and we don’t care about false positive assignments! Of course this is per se wrong, but in some cases you just want to know what the best hit would be, even if it is only 90% similar to your OTU sequence. LotuS provides several options that allow tweaking towards more lenient assignments. Find all options related to this and try to create the most extreme case with these options, by reassigning the taxonomy again as in the previous step.</p>
+
+<h3 id="try-a-different-sequence-clustering-algorithm">Try a different sequence clustering algorithm.</h3>
+
+<p>Now rerun lotus, but try to optimize for a lot of small, hard defined OTUs (that might correspond to something like strain level). Which clustering algorithm might be suitable? Which clustering cutoffs make sense? For this specific run, use the first mapping file you created (step 1) and the non-demultiplexed input files. Save this output in the folder ‘‘testR4’’</p>
+
+<h3 id="your-own-best-run">Your own best run.</h3>
+
+<p>Now that you have run LotuS with various databases and options, go back and look at the output folder of the different runs, look at the statistics provided in the ‘‘LotuSLogS’’ subfolder. Based on this, tune the sdm filtering parameter file from step 3 (again), choose the database you think best suited/most interesting, and choose a clustering algorithm. With this create run the sample set again, saving the output in folder ‘‘testrun1.3’’. This output folder you can use in the following session on numerical ecology.</p>
+
+<p>If LotuS run has finished, go to the specified output folder and copy the genus.txt from the output folder to your home folder:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cp testrun1.3/ higherLvl/genus.txt ~
+</code></pre></div></div>
+
+<h3 id="using-illumina-data-as-input">Using Illumina data as input.</h3>
+
+<p>In all the analysis before we were using 2 x 454 runs from an outdated next generation sequencing technology. For the next exercise we will look at the output of an Illumina miSeq sequencing platform, that is still being used a lot nowadays.</p>
+
+<p>Set up the mapping file, using [http://data.bits.vib.be/pub/trainingen/metagenomics/Miseq.xlsx the provided Miseq.xlsx file]. Run LotuS, after you set up a custom sdm configuration file and using a combination of parameters you learned about in previous steps.</p>
+
+<p>This run might take some time longer to finish. Be sure you set it to use all the cores of your computer and let it run over the lunch break.</p>
+
+<p>Congratulations, now you know how to process raw sequence files to meaningful summary tables, that can be directly analyzed in R or even Excel! In the next tutorial this matrix will be analyzed with the help of R, after the lunch break.</p>
+
+
+
+
+                    
+                    <blockquote class="key_points">
+                        <h3><i class="fa fa-key" aria-hidden="true"></i><span class="visually-hidden">keypoints</span> Key points</h3>
+
+                        <ul>
+                            
+                            <li>We showed how to use the LotuS pipeline with 454 and Miseq raw data</li>
+                            
+                            <li>We showed how to assign taxonomies to output of LotuS pipeline</li>
+                            
+                            <li>We showed how to create a genus abundance table</li>
+                            
+                        </ul>
+                    </blockquote>
+                    
+
+                    
+                    <h1 data-toc-skip>Useful literature</h1>
+                    <p>Further information, including links to documentation and original publications, regarding the tools, analysis techniques and the interpretation of results described in this tutorial can be found <a href="/topics/metagenomics#references">here</a>.</p>
+                    
+
+                    
+
+                </div>
+                <!-- sidebar, which will move to the top on a small screen -->
+                <div class="col-sm-2" role="supplementary">
+                    <nav id="toc" data-toggle="toc" class="sticky-top bs-docs-sidebar hidden-print hidden-xs hidden-sm"></nav>
+                </div>
+            </div>
+        </div>
+
+        <h3><i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
+
+        
+
+        
+
+</div>
+</div>
+
+
+<footer>
+        <div class="well row">
+         <div class="col-md-3 text-center">             
+            <span class="slogan">SCIENCE MEETS LIFE</span>
+         </div>
+         <div class="col-md-6">
+            This material is the result of a collaborative work. Thanks to the
+            <a href="https://www.bits.vib.be">VIB Bioinformatics Core</a>
+            and all the <a href="/hall-of-fame">contributors</a>.
+            Found a typo? Something is wrong in this tutorial? Edit it on
+            <a href="https://github.com/vibbits/training-material/tree/master/topics/metagenomics/tutorials/OTU_creation/tutorial.md">GitHub</a>.
+          </div>
+          <div class="col-md-3 text-center">
+                <a href="http://www.bits.vib.be"><img src="/assets/images/bioinformatics_core_rgb_neg.png"></a>
+       </div>
+   </div>
+   </footer>
+</div>
+
+    </body>
+    <script type="text/javascript" src="/assets/js/jquery.slim.min.js"></script>
+    <script type="text/javascript" src="/assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.min.js?v=3"></script>
+    <script type="text/javascript" src="/assets/js/details-element-polyfill.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap-toc.min.js"></script>
+    <script type="text/javascript" src="/assets/js/main.js"></script>
+    <script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
+    <script type="text/javascript" src="https://app.cloudsh.com/js/cloudsh.js"></script>
+    <script type="text/javascript">
+    var snippets=document.querySelectorAll('div.highlight');
+    [].forEach.call(snippets,function(snippet){
+        snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+    });
+
+    var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
+        target:function(trigger){return trigger.nextElementSibling;
+    }});
+    </script>
+</html>

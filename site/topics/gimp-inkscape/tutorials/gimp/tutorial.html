@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="google-site-verification" content="hA2THcUT50TVfGM3VQppZL3e4jBG3a2lo2lqN5k2pys" />
+        <title>02 GIMP</title>
+        
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=3">
+        <link rel="stylesheet" href="/assets/css/bootstrap-toc.min.css">
+        <link rel="stylesheet" href="/assets/css/main.css?v=2">
+        <link rel="stylesheet" href="/assets/css/font-awesome.css">
+        <link rel="stylesheet" href="/assets/css/VIB.css">
+        <link rel="stylesheet" href="/assets/css/academicons.css">
+        <link rel="stylesheet" href="/assets/css/syntax_highlighting.css">
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+        
+        
+        
+        
+        
+        <meta name="description" content="This course aims at introducing GIMP and Inkscape (free a..." />
+        <meta property="og:title" content="VIB Bioinformatics Training: 02 GIMP" />
+        <meta property="og:description" content="This course aims at introducing GIMP and Inkscape (free a..." />
+        <meta property="og:image" content="/assets/images/bioinformatics_core_rgb_neg.png" />
+    </head>
+    <body data-spy="scroll" data-target="#toc">
+        <div class="container main-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="well row">
+           <div id="logo" class="col-md-4 col-lg-2 text-center">
+              <a href="/">
+                <img src="/assets/images/vib_notag_neg_rgb.jpg" height="50" alt="VIB logo" class="margin20">
+              </a>
+           </div> 
+           <div class="col-md-4 col-lg-8" id="top-navbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/topics/gimp-inkscape" title="Go back to list of tutorials">
+                            <i class="fa fa-folder-o" aria-hidden="true"></i><span class="visually-hidden">topic</span> Initiation GIMP and Inkscape
+                        </a>
+                    </li>
+            </div>
+            <div class="col-md-4 col-lg-2 text-right form-group label-floating" id="help">
+                       
+    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Help">
+        <i class="fa fa-life-ring" aria-hidden="true"></i><span class="visually-hidden">help</span> Help
+    </a>
+    <div class="dropdown-menu dropdown-menu-right">
+        <form method="get" action="https://tess.elixir-europe.org/materials">
+            <input type="text" id="search" name="q" value="" style="margin-left: 0.5em;/*! border-radius: 0px; */">
+            <input type="hidden" value="VIB Bioinformatics Core" name="content_provider">
+            <input type="submit" value="Search on TeSS" style="width: 92%;border-radius: 0px;margin: 0.5em;background: #f47d20;border: 0px;padding: 0.25em;" class="">
+        </form>
+
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="https://www.bits.vib.be" title="Contact us">
+            Contact us 
+        </a>
+    </div>
+
+
+            </div>
+</header>
+
+    <script type="application/ld+json">
+        
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "headline": "02 GIMP",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "/blob//LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "courseCode": "gimp-inkscape / gimp / hands-on",
+  "learningResourceType": "hands-on tutorial",
+  "name": "Hands-on for '02 GIMP' tutorial",
+  "isPartOf": {
+    "@type": "Course",
+    "name": "02 GIMP",
+    "description": "02 GIMP",
+    "learningResourceType": "tutorial",
+    "interactivityType": "expositive",
+    "provider": {
+      "@type": "Organization",
+      "email": "bits@vib.be",
+      "name": "VIB Bioinformatics Core",
+      "url": "https://www.bits.vib.be"
+    }
+  },
+  "url": "https://vibbits.github.io//topics/gimp-inkscape/tutorials/gimp/tutorial.html",
+  "timeRequired": "PT90M",
+  "description": "02 GIMP\\nThe questions this  addresses are:\n - What is GIMP?\n\n\\nThe objectives are:\n - Learn how to use the software\n - What image file types can I import and export\n - How can I get my image publication-ready?\n\n",
+  "hasPart": [
+
+  ],
+  "mentions": [
+
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Christof De Bo"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Christof De Bo"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "Initiation GIMP and Inkscape",
+      "description": "This course aims at introducing GIMP and Inkscape (free alternatives for Adobe Photoshop and Illustrator) to prepare images for publication, annotate plots and images, and create figures (diagrams, infographics, ...). It is also a prerequisite for the 'Image Ethics and Poster Design' course.",
+      "url": "https://vibbits.github.io//topics/gimp-inkscape/"
+    }
+  ]
+}
+    </script>
+
+    <div class="row tutorial">
+      <div class="col-md-12" role="main">
+        <h1 data-toc-skip>02 GIMP</h1>
+        <div class="contributors-line">By: 
+
+<a href="/hall-of-fame#chdeb" class="contributor-badge"><img src="https://avatars.githubusercontent.com/chdeb" alt="Christof De Bo">Christof De Bo</a>
+
+</div>
+        <blockquote class="overview">
+            <h3>Overview</h3>
+            <strong><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</strong>
+            <ul>
+            
+            <li>What is GIMP?</li>
+            
+            </ul>
+
+            <strong><i class="fa fa-bullseye" aria-hidden="true"></i><span class="visually-hidden">objectives</span> Objectives</strong>
+            <ul>
+            
+            <li>Learn how to use the software</li>
+            
+            <li>What image file types can I import and export</li>
+            
+            <li>How can I get my image publication-ready?</li>
+            
+            </ul>
+
+            
+
+            
+            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 90 minutes</p>
+            
+
+            
+
+
+
+            <div>
+                <div><strong><i class="fa fa-external-link" aria-hidden="true"></i> Supporting Materials</strong></div>
+                <div id="supporting_materials">
+                    <ul>
+                        <li>
+                            <div>
+                    
+
+                    
+
+                    
+                    
+
+
+                    
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </blockquote>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-10" role="main">
+                    <h1 id="what-is-gimp">What is GIMP?</h1>
+<p>GIMP is short for <strong>GNU Image Manipulation Program</strong>. It is a free and Open-source, cross-platform image editor available for GNU/Linux, MacOS and Windows operating systems. During this training we will use <strong>GIMP 2.10</strong> on Windows. To download the most recent version for your OS, browse to the <a href="https://www.gimp.org/downloads/">GIMP Download page</a>.</p>
+<h2 id="external-training-material">External training material</h2>
+<ul>
+  <li><a href="https://www.gimp.org/docs/">GIMP Manual page</a>.</li>
+  <li><a href="https://www.youtube.com/watch?v=2EPIUyFJ4ag">GIMP 2.10 Basics on YouTube</a></li>
+  <li><a href="https://www.youtube.com/playlist?list=PLynG8gQD-n8Dl23X0o1HFu_5PmBl79niz">Nick Saporito GIMP Tutorials</a></li>
+</ul>
+
+<h2 id="user-interface">User Interface</h2>
+<p>GIMP has a ‘Single-window’ mode, this allows you to switch from multiple windows (for e.g. multiple monitors) to a single window. When the ‘Single-window’ mode is disabled, you have separate windows for toolboxes, view area and dockable dialogs. When enabled you have one window with all tools, options and dockable dialogs attached to the central view area. For beginners, we would advise the ‘Single-window’ enabled.
+On the left panel you have the ‘Toolbox’ (if not present: <strong>Windows - Toolbox</strong> or press <strong>Ctrl + B</strong>) and underneath the ‘Tool Options’ dialog. Selecting a tool will result in a different Tool Option bar. Every tool has his own set of parameters and functions, best to keep them close to each other. 
+On the right-hand panel you can find other ‘dockable dialogs’. These are easy to move, remove and re-introduce if necessary. To get a list of all ‘dockable dialog’ go to <strong>Windows – Dockable Dialogs - …</strong> . If you want a full screen view of your image select <strong>Windows – Hide Docks</strong>.</p>
+
+<h2 id="import-data-and-image-properties">Import data and image properties</h2>
+<p>To import an image: <strong>File – Open</strong>
+When you select an image (any file type) in the import window, you get a preview and information on the right side. Click <strong>Open</strong> and the image(s) will be displayed in the middle box at zoom level 100% (1 pixel image = 1 pixel screen) or fitted to your windows. To zoom use Ctrl + mouse scroll up or down. Multiple images in GIMP are displayed in different tabs on top of the View Area.
+Before you export your image, make sure it has the right resolution and pixel density. <strong>Image - Image Properties</strong> will give you all the information your image holds. This information can be very useful when you open an image from an unknown source.</p>
+
+<h2 id="selection">Selection</h2>
+<p>Rectangular selection has several options and shortcut keys. The first icons in the tool options are the selection modes: add to selection (Shift), subtract from selection (Ctrl) and intersect with selection (Shift+Ctrl). More options are: feathering edges, rounding of the corners, expand from center, lock aspect ratio, size and position and if necessary to highlight the selection). The Ellipse selection tool has more or less the same options.
+There are other selection tools available: Free Selection, Select by Color, Fuzzy Selection, Scissor Selection, Foreground Selection. Those tools have different tool options and are only used in specific cases.</p>
+
+<h2 id="transforming">Transforming</h2>
+<p>There are several ways to transform your image or selection; rotating, scaling, shearing and flipping. You can transform a selection, a layer or the image. When using the rotation tool, you have several options in the dockable dialog below. An important option is “Clipping” this will change the aspect ratio of your image after rotating. 
+Another way of rotating an entire image is: <strong>Image – Transform – …</strong> then you have the option to flip (horizontal/vertical) or rotate (90°/180°). The entire image will be rotated including the selection and image orientation.</p>
+
+<h2 id="layers">Layers</h2>
+<p>Make sure you have the dockable dialog ‘Layers’ in your window. All options for layers can be found in the menu bar “Layer”. You can make a new blank layer or duplicate the current layer (e.g. copy of original image to compare or as back-up). In the dockable dialog you can hide or show a layer (eye button), rename them or move them up and down in the layer stack. If you want to link/connect two or more layers, you can use the chain button (next to the eye button).
+To copy a selection to a new layer, perform a regular copy/past action of that selection (Ctrl+C and then Ctrl+V) and select <strong>Layer - To New Layer</strong>
+If you want to merge all layers into one layer you can select <strong>Image – Merge Visible Layers</strong>.</p>
+
+<h2 id="brightness-and-contrast">Brightness and contrast</h2>
+<p>In the menu bar you can find <strong>Colors</strong> . This menu has multiple option to manipulate your image;</p>
+<ul>
+  <li>Color Balance will change the cyan, magenta and yellow color levels of your image</li>
+  <li>Brightness and Contrast will change brightness and contrast and you can save these settings as a favorite</li>
+  <li>Threshold will reduce your image to two colors by using a threshold value</li>
+  <li>Adjust color curve will change the gamma setting of your image</li>
+  <li>Posterize will change the number of colors (2-256)</li>
+</ul>
+
+<h2 id="guides-and-cropping">Guides and cropping</h2>
+<p>You can split your image in different sub-images. This can be done by using ‘Guides’. To create such a break-line, go to <strong>Image - Guides - New Guide… or (by Percent)…</strong>. You can create a horizontal or vertical guide at the value/percentage you enter. A guide will be displayed as a blue dashed line. To chop your image in multiple parts, go to <strong>Filters- Web- Slice</strong> (Older versions: Image - Transform - Guillotine). The sub-images will be generates in the folder you selected.
+If you only want a selection of your image without all the rest you can crop by clicking <strong>Image – Crop to Selection</strong> or use the Crop tool from the Toolbox.</p>
+
+<h2 id="scaling-and-print-size">Scaling and print size</h2>
+<p>When you want to scale your image to a smaller resolution you can select <strong>Image – Scale Image</strong>. There you can scale in pixels (or another unit) and you can lock the aspect ratio (chain symbols).
+If you want to change the print size to make your image suitable for publication you can select <strong>Image - Print Size…</strong>. There you can change the dimension/resolution and pixel density of your image.</p>
+
+<h2 id="remove-background-color">Remove background color</h2>
+<p>If you download an image of a company or university logo, it might have a white (or any other color) background. This can be very annoying when the destination background is different. In order to remove the background color, we first have to add an alpha channel to this image: <strong>Layer - Transparency - Add Alpha Channel</strong> - If the Alpha channel is already present, skip this step. Now you’re able to get a transparent background using the option: <strong>Image - Color to Alpha</strong>. In the new window you can select the color which you would like to convert to transparent pixels. You can either select by clicking the color bar or use the color picker icon.</p>
+
+<h2 id="exporting">Exporting</h2>
+<p>Select <strong>File – Export as…</strong>
+If you click on the ‘+’ next to Select File Type, you have a list of all possible extensions in which you can export your image. Each of those file formats has different compression options.</p>
+
+<h1 id="exercises-on-image-manipulations-in-gimp">Exercises on image manipulations in GIMP</h1>
+
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-hands-on-exercise-1"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 1</h3>
+  <p>Source file: [http://data.bits.vib.be/pub/trainingen/GIMP_Inkscape/original_file.tif Image 1]
+Task: Split this image in 2 parts, one for each gel. Make sure the band are horizontal and export the 2 new images in the same file format as the original. You can adjust brightness and contrast to make all the band more visible.</p>
+</blockquote>
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-hands-on-exercise-2"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 2</h3>
+  <p>Source file: [http://data.bits.vib.be/pub/trainingen/GIMP_Inkscape/Exercise1.1.jpg Image 2]
+Task: Rotate this image 45 degrees and crop an image of 500x500 pixels out of the original. Make sure the printing resolution is set to 300 ppi and export this image as a PNG file. Adjust brightness and contrast to make this image look better.</p>
+</blockquote>
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-hands-on-exercise-3"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 3</h3>
+  <p>Source file: [http://data.bits.vib.be/pub/trainingen/GIMP_Inkscape/Exercise1.2.jpg Image 3]
+Task: Cut this image in 4 equal parts. Know that the printing width is 150 mm and the journal demands a minimum op 300 ppi for all 4 images. Also export each of them in a different file formats without losing image quality. Adjust brightness and contrast to your own opinion.</p>
+</blockquote>
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-hands-on-exercise-4"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 4</h3>
+  <p>Source file: [http://data.bits.vib.be/pub/trainingen/GIMP_Inkscape/Exercise1.3.jpg Image 4]
+Task: Adjust brightness and contract of this images and export it in a way to make the file as small as possible. Use preferably lossless compression (try lossy compression to compare file size), there is no restriction on file formats. Be sure your image is exported with at least 300 ppi.</p>
+</blockquote>
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-hands-on-exercise-5"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 5</h3>
+  <p>Source file: select from the internet
+Task: Download an image from your most favorite brand and remove the white (or other color) background. Export this new image in a format that support transparent pixels.</p>
+</blockquote>
+
+
+
+                    
+
+                    
+
+                    
+
+                </div>
+                <!-- sidebar, which will move to the top on a small screen -->
+                <div class="col-sm-2" role="supplementary">
+                    <nav id="toc" data-toggle="toc" class="sticky-top bs-docs-sidebar hidden-print hidden-xs hidden-sm"></nav>
+                </div>
+            </div>
+        </div>
+
+        <h3><i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
+
+        
+
+        
+
+</div>
+</div>
+
+
+<footer>
+        <div class="well row">
+         <div class="col-md-3 text-center">             
+            <span class="slogan">SCIENCE MEETS LIFE</span>
+         </div>
+         <div class="col-md-6">
+            This material is the result of a collaborative work. Thanks to the
+            <a href="https://www.bits.vib.be">VIB Bioinformatics Core</a>
+            and all the <a href="/hall-of-fame">contributors</a>.
+            Found a typo? Something is wrong in this tutorial? Edit it on
+            <a href="https://github.com/vibbits/training-material/tree/master/topics/gimp-inkscape/tutorials/gimp/tutorial.md">GitHub</a>.
+          </div>
+          <div class="col-md-3 text-center">
+                <a href="http://www.bits.vib.be"><img src="/assets/images/bioinformatics_core_rgb_neg.png"></a>
+       </div>
+   </div>
+   </footer>
+</div>
+
+    </body>
+    <script type="text/javascript" src="/assets/js/jquery.slim.min.js"></script>
+    <script type="text/javascript" src="/assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.min.js?v=3"></script>
+    <script type="text/javascript" src="/assets/js/details-element-polyfill.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap-toc.min.js"></script>
+    <script type="text/javascript" src="/assets/js/main.js"></script>
+    <script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
+    <script type="text/javascript" src="https://app.cloudsh.com/js/cloudsh.js"></script>
+    <script type="text/javascript">
+    var snippets=document.querySelectorAll('div.highlight');
+    [].forEach.call(snippets,function(snippet){
+        snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+    });
+
+    var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
+        target:function(trigger){return trigger.nextElementSibling;
+    }});
+    </script>
+</html>

@@ -1,0 +1,1105 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="google-site-verification" content="dw_1zBYRNxF7-vYNDXh3Ght_JuqgJt3BD1N_Pynqmv0" />
+        <title>VIB Bioinformatics Core</title>
+        
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=3">
+        <link rel="stylesheet" href="/assets/css/bootstrap-toc.min.css">
+        <link rel="stylesheet" href="/assets/css/main.css?v=2">
+        <link rel="stylesheet" href="/assets/css/font-awesome.css">
+        <link rel="stylesheet" href="/assets/css/VIB.css">
+        <link rel="stylesheet" href="/assets/css/academicons.css">
+        <link rel="stylesheet" href="/assets/css/syntax_highlighting.css">
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+        
+        
+        
+        
+        
+        <meta name="description" content="QPCR analysis using qbase+" />
+        <meta property="og:title" content="VIB Bioinformatics Training: QPCR analysis using qbase+" />
+        <meta property="og:description" content="QPCR analysis using qbase+" />
+        <meta property="og:image" content="/assets/images/bioinformatics_core_rgb_neg.png" />
+    </head>
+    <body data-spy="scroll" data-target="#toc">
+        <div class="container main-content">
+
+<header class="well row">
+    <div id="logo" class="col-md-3 col-lg-2 text-center">
+       <a href="/">
+           <img src="/assets/images/vib_notag_neg_rgb.jpg" height="60" alt="VIB logo" class="margin20">
+       </a>
+    </div>
+    <div class="col-md-3 col-lg-8 text-center">
+                <h2>Bioinformatics Training</h2>
+                <h5>Collection of courses developed and maintained by VIB Bioinformatics Core</h5>
+    </div>
+    <div class="col-md-3 col-lg-2 text-right form-group label-floating" id="help">
+       
+    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Help">
+        <i class="fa fa-life-ring" aria-hidden="true"></i><span class="visually-hidden">help</span> Help
+    </a>
+    <div class="dropdown-menu dropdown-menu-right">
+        <form method="get" action="https://tess.elixir-europe.org/materials">
+            <input type="text" id="search" name="q" value="" style="margin-left: 0.5em;/*! border-radius: 0px; */">
+            <input type="hidden" value="VIB Bioinformatics Core" name="content_provider">
+            <input type="submit" value="Search on TeSS" style="width: 92%;border-radius: 0px;margin: 0.5em;background: #f47d20;border: 0px;padding: 0.25em;" class="">
+        </form>
+
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="https://www.bits.vib.be" title="Contact us">
+            Contact us 
+        </a>
+    </div>
+
+
+    </div>
+</header>
+
+
+
+
+
+
+
+       
+    <div class="row">
+      <div class="col-md-12">
+        <h1>QPCR analysis using qbase+</h1>
+        <p>QPCR analysis using qbase+</p>
+
+        
+        
+        
+
+        <h2 id="material">Material</h2>
+        <table class="table table-responsive table-striped">
+            <tr>
+                <th>Lesson</th>
+                <th>Slides</th>
+                <th>Hands-on</th>
+
+                
+
+                
+            </tr>
+
+            
+                
+                        <script type="application/ld+json">
+                            
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "headline": "01 qbase+ introduction",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "/blob//LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "courseCode": "qbase-plus / qbaseplus-introduction",
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "QPCR analysis using qbase+",
+    "description": "QPCR analysis using qbase+",
+    "url": "https://material.bits.vib.be/topics/qbase-plus/"
+  },
+  "learningResourceType": "tutorial",
+  "name": "01 qbase+ introduction",
+  "description": "01 qbase+ introduction",
+  "hasPart": [
+    {
+      "@type": "Course",
+      "url": "https://material.bits.vib.be/topics/qbase-plus/tutorials/qbaseplus-introduction/tutorial.html",
+      "name": "Hands-on for '01 qbase+ introduction' tutorial",
+      "learningResourceType": "hands-on tutorial",
+      "interactivityType": "expositive"
+    },
+    {
+      "@type": "Course",
+      "url": "https://material.bits.vib.be/topics/qbase-plus/tutorials/qbaseplus-introduction/slides.html",
+      "name": "Slides for '01 qbase+ introduction' tutorial",
+      "learningResourceType": "slides",
+      "interactivityType": "expositive"
+    }
+  ],
+  "mentions": [
+    [
+      {
+        "@type": "Thing",
+        "url": "/blob//topics/qbase-plus/tutorials/qbaseplus-introduction/workflows/chdeb",
+        "name": "Workflow for 01 qbase+ introduction tutorial"
+      }
+    ]
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Christof De Bo"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Christof De Bo"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "QPCR analysis using qbase+",
+      "description": "QPCR analysis using qbase+",
+      "url": "https://material.bits.vib.be/topics/qbase-plus/"
+    }
+  ]
+}
+                        </script>
+                    <tr>
+                        <td>
+                            01 qbase+ introduction
+                            <div class="">
+                            
+                            
+                        </div>
+                        </td>
+                        
+                            <td>
+                                
+
+                            </td>
+                            <td>
+                                
+    <span class="btn-group">
+        <a href="/topics/qbase-plus/tutorials/qbaseplus-introduction/tutorial.html" class="btn btn-default" title="Where to run the tutorial">
+            <i class="fa fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
+        </a>
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Toggle Dropdown</span>
+        </a>
+        <ul class="dropdown-menu">
+    </span>
+
+
+                            </td>
+
+                            
+
+                            <td>
+                                
+
+                            </td>
+                        
+                    </tr>
+                
+            
+                
+                        <script type="application/ld+json">
+                            
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "headline": "02 Experiment design exercises",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "/blob//LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "courseCode": "qbase-plus / experiment-design",
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "QPCR analysis using qbase+",
+    "description": "QPCR analysis using qbase+",
+    "url": "https://material.bits.vib.be/topics/qbase-plus/"
+  },
+  "learningResourceType": "tutorial",
+  "name": "02 Experiment design exercises",
+  "description": "02 Experiment design exercises",
+  "hasPart": [
+    {
+      "@type": "Course",
+      "url": "https://material.bits.vib.be/topics/qbase-plus/tutorials/experiment-design/tutorial.html",
+      "name": "Hands-on for '02 Experiment design exercises' tutorial",
+      "learningResourceType": "hands-on tutorial",
+      "interactivityType": "expositive"
+    },
+    {
+      "@type": "Course",
+      "url": "https://material.bits.vib.be/topics/qbase-plus/tutorials/experiment-design/slides.html",
+      "name": "Slides for '02 Experiment design exercises' tutorial",
+      "learningResourceType": "slides",
+      "interactivityType": "expositive"
+    }
+  ],
+  "mentions": [
+    [
+      {
+        "@type": "Thing",
+        "url": "/blob//topics/qbase-plus/tutorials/experiment-design/workflows/chdeb",
+        "name": "Workflow for 02 Experiment design exercises tutorial"
+      }
+    ]
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Christof De Bo"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Christof De Bo"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "QPCR analysis using qbase+",
+      "description": "QPCR analysis using qbase+",
+      "url": "https://material.bits.vib.be/topics/qbase-plus/"
+    }
+  ]
+}
+                        </script>
+                    <tr>
+                        <td>
+                            02 Experiment design exercises
+                            <div class="">
+                            
+                            
+                        </div>
+                        </td>
+                        
+                            <td>
+                                
+
+                            </td>
+                            <td>
+                                
+    <span class="btn-group">
+        <a href="/topics/qbase-plus/tutorials/experiment-design/tutorial.html" class="btn btn-default" title="Where to run the tutorial">
+            <i class="fa fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
+        </a>
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Toggle Dropdown</span>
+        </a>
+        <ul class="dropdown-menu">
+    </span>
+
+
+                            </td>
+
+                            
+
+                            <td>
+                                
+
+                            </td>
+                        
+                    </tr>
+                
+            
+                
+                        <script type="application/ld+json">
+                            
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "headline": "03 Primer design exercises",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "/blob//LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "courseCode": "qbase-plus / primer-design",
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "QPCR analysis using qbase+",
+    "description": "QPCR analysis using qbase+",
+    "url": "https://material.bits.vib.be/topics/qbase-plus/"
+  },
+  "learningResourceType": "tutorial",
+  "name": "03 Primer design exercises",
+  "description": "03 Primer design exercises",
+  "hasPart": [
+    {
+      "@type": "Course",
+      "url": "https://material.bits.vib.be/topics/qbase-plus/tutorials/primer-design/tutorial.html",
+      "name": "Hands-on for '03 Primer design exercises' tutorial",
+      "learningResourceType": "hands-on tutorial",
+      "interactivityType": "expositive"
+    },
+    {
+      "@type": "Course",
+      "url": "https://material.bits.vib.be/topics/qbase-plus/tutorials/primer-design/slides.html",
+      "name": "Slides for '03 Primer design exercises' tutorial",
+      "learningResourceType": "slides",
+      "interactivityType": "expositive"
+    }
+  ],
+  "mentions": [
+    [
+      {
+        "@type": "Thing",
+        "url": "/blob//topics/qbase-plus/tutorials/primer-design/workflows/chdeb",
+        "name": "Workflow for 03 Primer design exercises tutorial"
+      }
+    ]
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Christof De Bo"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Christof De Bo"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "QPCR analysis using qbase+",
+      "description": "QPCR analysis using qbase+",
+      "url": "https://material.bits.vib.be/topics/qbase-plus/"
+    }
+  ]
+}
+                        </script>
+                    <tr>
+                        <td>
+                            03 Primer design exercises
+                            <div class="">
+                            
+                            
+                        </div>
+                        </td>
+                        
+                            <td>
+                                
+
+                            </td>
+                            <td>
+                                
+    <span class="btn-group">
+        <a href="/topics/qbase-plus/tutorials/primer-design/tutorial.html" class="btn btn-default" title="Where to run the tutorial">
+            <i class="fa fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
+        </a>
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Toggle Dropdown</span>
+        </a>
+        <ul class="dropdown-menu">
+    </span>
+
+
+                            </td>
+
+                            
+
+                            <td>
+                                
+
+                            </td>
+                        
+                    </tr>
+                
+            
+                
+                        <script type="application/ld+json">
+                            
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "headline": "04 Gene expression analysis",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "/blob//LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "courseCode": "qbase-plus / gene-expression",
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "QPCR analysis using qbase+",
+    "description": "QPCR analysis using qbase+",
+    "url": "https://material.bits.vib.be/topics/qbase-plus/"
+  },
+  "learningResourceType": "tutorial",
+  "name": "04 Gene expression analysis",
+  "description": "04 Gene expression analysis",
+  "hasPart": [
+    {
+      "@type": "Course",
+      "url": "https://material.bits.vib.be/topics/qbase-plus/tutorials/gene-expression/tutorial.html",
+      "name": "Hands-on for '04 Gene expression analysis' tutorial",
+      "learningResourceType": "hands-on tutorial",
+      "interactivityType": "expositive"
+    },
+    {
+      "@type": "Course",
+      "url": "https://material.bits.vib.be/topics/qbase-plus/tutorials/gene-expression/slides.html",
+      "name": "Slides for '04 Gene expression analysis' tutorial",
+      "learningResourceType": "slides",
+      "interactivityType": "expositive"
+    }
+  ],
+  "mentions": [
+    [
+      {
+        "@type": "Thing",
+        "url": "/blob//topics/qbase-plus/tutorials/gene-expression/workflows/chdeb",
+        "name": "Workflow for 04 Gene expression analysis tutorial"
+      }
+    ]
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Christof De Bo"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Christof De Bo"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "QPCR analysis using qbase+",
+      "description": "QPCR analysis using qbase+",
+      "url": "https://material.bits.vib.be/topics/qbase-plus/"
+    }
+  ]
+}
+                        </script>
+                    <tr>
+                        <td>
+                            04 Gene expression analysis
+                            <div class="">
+                            
+                            
+                        </div>
+                        </td>
+                        
+                            <td>
+                                
+
+                            </td>
+                            <td>
+                                
+    <span class="btn-group">
+        <a href="/topics/qbase-plus/tutorials/gene-expression/tutorial.html" class="btn btn-default" title="Where to run the tutorial">
+            <i class="fa fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
+        </a>
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Toggle Dropdown</span>
+        </a>
+        <ul class="dropdown-menu">
+    </span>
+
+
+                            </td>
+
+                            
+
+                            <td>
+                                
+
+                            </td>
+                        
+                    </tr>
+                
+            
+                
+                        <script type="application/ld+json">
+                            
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "headline": "05 Analyzing data from different qPCR experiments over time",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "/blob//LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "courseCode": "qbase-plus / multiple-experiments",
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "QPCR analysis using qbase+",
+    "description": "QPCR analysis using qbase+",
+    "url": "https://material.bits.vib.be/topics/qbase-plus/"
+  },
+  "learningResourceType": "tutorial",
+  "name": "05 Analyzing data from different qPCR experiments over time",
+  "description": "05 Analyzing data from different qPCR experiments over time",
+  "hasPart": [
+    {
+      "@type": "Course",
+      "url": "https://material.bits.vib.be/topics/qbase-plus/tutorials/multiple-experiments/tutorial.html",
+      "name": "Hands-on for '05 Analyzing data from different qPCR experiments over time' tutorial",
+      "learningResourceType": "hands-on tutorial",
+      "interactivityType": "expositive"
+    },
+    {
+      "@type": "Course",
+      "url": "https://material.bits.vib.be/topics/qbase-plus/tutorials/multiple-experiments/slides.html",
+      "name": "Slides for '05 Analyzing data from different qPCR experiments over time' tutorial",
+      "learningResourceType": "slides",
+      "interactivityType": "expositive"
+    }
+  ],
+  "mentions": [
+    [
+      {
+        "@type": "Thing",
+        "url": "/blob//topics/qbase-plus/tutorials/multiple-experiments/workflows/chdeb",
+        "name": "Workflow for 05 Analyzing data from different qPCR experiments over time tutorial"
+      }
+    ]
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Christof De Bo"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Christof De Bo"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "QPCR analysis using qbase+",
+      "description": "QPCR analysis using qbase+",
+      "url": "https://material.bits.vib.be/topics/qbase-plus/"
+    }
+  ]
+}
+                        </script>
+                    <tr>
+                        <td>
+                            05 Analyzing data from different qPCR experiments over time
+                            <div class="">
+                            
+                            
+                        </div>
+                        </td>
+                        
+                            <td>
+                                
+
+                            </td>
+                            <td>
+                                
+    <span class="btn-group">
+        <a href="/topics/qbase-plus/tutorials/multiple-experiments/tutorial.html" class="btn btn-default" title="Where to run the tutorial">
+            <i class="fa fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
+        </a>
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Toggle Dropdown</span>
+        </a>
+        <ul class="dropdown-menu">
+    </span>
+
+
+                            </td>
+
+                            
+
+                            <td>
+                                
+
+                            </td>
+                        
+                    </tr>
+                
+            
+                
+                        <script type="application/ld+json">
+                            
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "headline": "05 Selecting reference genes: exercises",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "/blob//LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "courseCode": "qbase-plus / reference-genes",
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "QPCR analysis using qbase+",
+    "description": "QPCR analysis using qbase+",
+    "url": "https://material.bits.vib.be/topics/qbase-plus/"
+  },
+  "learningResourceType": "tutorial",
+  "name": "05 Selecting reference genes: exercises",
+  "description": "05 Selecting reference genes: exercises",
+  "hasPart": [
+    {
+      "@type": "Course",
+      "url": "https://material.bits.vib.be/topics/qbase-plus/tutorials/reference-genes/tutorial.html",
+      "name": "Hands-on for '05 Selecting reference genes: exercises' tutorial",
+      "learningResourceType": "hands-on tutorial",
+      "interactivityType": "expositive"
+    },
+    {
+      "@type": "Course",
+      "url": "https://material.bits.vib.be/topics/qbase-plus/tutorials/reference-genes/slides.html",
+      "name": "Slides for '05 Selecting reference genes: exercises' tutorial",
+      "learningResourceType": "slides",
+      "interactivityType": "expositive"
+    }
+  ],
+  "mentions": [
+    [
+      {
+        "@type": "Thing",
+        "url": "/blob//topics/qbase-plus/tutorials/reference-genes/workflows/chdeb",
+        "name": "Workflow for 05 Selecting reference genes: exercises tutorial"
+      }
+    ]
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Christof De Bo"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Christof De Bo"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "QPCR analysis using qbase+",
+      "description": "QPCR analysis using qbase+",
+      "url": "https://material.bits.vib.be/topics/qbase-plus/"
+    }
+  ]
+}
+                        </script>
+                    <tr>
+                        <td>
+                            05 Selecting reference genes: exercises
+                            <div class="">
+                            
+                            
+                        </div>
+                        </td>
+                        
+                            <td>
+                                
+
+                            </td>
+                            <td>
+                                
+    <span class="btn-group">
+        <a href="/topics/qbase-plus/tutorials/reference-genes/tutorial.html" class="btn btn-default" title="Where to run the tutorial">
+            <i class="fa fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
+        </a>
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Toggle Dropdown</span>
+        </a>
+        <ul class="dropdown-menu">
+    </span>
+
+
+                            </td>
+
+                            
+
+                            <td>
+                                
+
+                            </td>
+                        
+                    </tr>
+                
+            
+        </table>
+
+        
+
+        <h2 id="maintainers">Maintainers</h2>
+        <p>This material is maintained by:</p>
+        
+        
+
+<a href="/hall-of-fame#chdeb" class="contributor-badge"><img src="https://avatars.githubusercontent.com/chdeb" alt="Christof De Bo">Christof De Bo</a>
+
+
+
+        <p>
+            <em>For any question related to this topic and the content, you can contact us at bits@vib.be</em>
+        </p>
+
+        <h2 id="contributors">Contributors</h2>
+        <p>This material was contributed to by:</p>
+        
+        
+        
+        
+
+<a href="/hall-of-fame#chdeb" class="contributor-badge"><img src="https://avatars.githubusercontent.com/chdeb" alt="Christof De Bo">Christof De Bo</a>
+
+
+
+        
+   </div>
+   </div>
+
+<footer>
+   <div class="well row">
+       <div class="col-md-2 text-center">				
+         <a href="https://www.bits.vib.be"><img src="/assets/images/bioinformatics_core_rgb_neg.png"></a>
+       </div>
+       <div class="col-md-8 text-center">	
+        <a href="https://github.com/vibbits/training-material" title="View on GitHub" class="margin20">
+                            <i class="fa fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> View on GitHub
+                        </a>
+       </div>
+       <div class="col-md-2 text-center">
+         <span class="slogan"><br>SCIENCE MEETS LIFE</span>
+       </div>
+   </div>
+</footer>
+
+</div>
+
+    </body>
+    <script type="text/javascript" src="/assets/js/jquery.slim.min.js"></script>
+    <script type="text/javascript" src="/assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.min.js?v=3"></script>
+    <script type="text/javascript" src="/assets/js/details-element-polyfill.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap-toc.min.js"></script>
+    <script type="text/javascript" src="/assets/js/main.js"></script>
+    <script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
+    <script type="text/javascript" src="https://app.cloudsh.com/js/cloudsh.js"></script>
+    <script type="text/javascript">
+    var snippets=document.querySelectorAll('div.highlight');
+    [].forEach.call(snippets,function(snippet){
+        snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+    });
+
+    var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
+        target:function(trigger){return trigger.nextElementSibling;
+    }});
+    </script>
+</html>
