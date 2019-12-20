@@ -482,18 +482,66 @@ Sort the terms according to adjusted p-value</p>
 
 <p>GSEA is recommended when ranks are available for all or most of the genes in the genome (e.g. RNA-Seq data). It is not suitable when only a small portion of genes have ranks available (e.g. an experiment that identifies mutated cancer genes).</p>
 
-<h4 id="gprofiler">g:Profiler</h4>
-<p>If you only have scores for a subset of the genome you should analyze the data using <a href="https://biit.cs.ut.ee/gprofiler/">g:Profiler</a>with the <strong>Ordered query</strong> option.</p>
+<p>You have to <a href="https://software.broadinstitute.org/gsea/index.jsp">install the tool on your computer</a>. An icon will appear on your desktop.</p>
 
-<p><img src="../../images/FungP_Ranked.png" alt="gProfiler_Ranked" /></p>
+<h5 id="input-files">Input files</h5>
 
-<p>Your list should now consist of gene IDS ordered according to decreasing importance (in this case increasing corrected p-value for differential expression).</p>
+<p>The format of the input file is very important. It should be a tab-delimited text file where:</p>
+<ul>
+  <li>column 1 should contain gene IDs</li>
+  <li>column 2 should contain descriptions but may be NAs</li>
+  <li>next columns should contain normalized counts (one column/sample)</li>
+</ul>
 
-<p>g:Profiler performs enrichment analysis with increasingly larger numbers of genes starting from the top of the list. This procedure identifies functional annotations that associate to the most dramatic changes, as well as broader terms that characterise the gene set as a whole.</p>
+<p>Columns must have headers:</p>
+<ul>
+  <li>NAME for column 1</li>
+  <li>Description for column 2</li>
+  <li>Sample names for the next columns</li>
+</ul>
 
-<blockquote class="notranslate hands_on">
-  <h3 id="hands_on-exercise-2-gprofiler"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Exercise 2 g:Profiler</h3>
-  <p>Repeat the enrichment analysis with the ranked gene list</p>
+<p>The first line of the file should be: #1.2
+The second line should be: number_of_genes tab number_of_samples</p>
+
+<p><img src="../../images/FunGSEA_FF.png" alt="GSEA_FileFormat" /></p>
+
+<p>Save the file as .gct !</p>
+
+<p>Apart from these data you also need a .cls file with the metadata (grouping info of the samples). This is a space delimited text file:</p>
+<ul>
+  <li>line 1: number_of_samples space number_of_groups space 1</li>
+  <li>line 2: # space class0_name space class1_name</li>
+  <li>line 3: for every sample 0 or 1 separated by spaces</li>
+</ul>
+
+<p><img src="../../images/FunGSEA_FF2.png" alt="GSEA_FileFormat" /></p>
+
+<h5 id="analysis">Analysis</h5>
+<p>Originally GSEA was created to analyze microarray results but you can use it for analyzing RNA-Seq data, albeit with some tweaking of the parameter settings.</p>
+
+<blockquote class="fa fa-pencil hands_on">
+  <h3 id="hands_on-exercise-1-gsea"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Exercise 1 GSEA</h3>
+  <p>How to perform GSEA on a full list of genes with normalized counts ?</p>
+  <blockquote>
+    <h3 id="solution-answer-6"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> answer</h3>
+    <ul>
+      <li><strong>Load</strong> the <strong>data</strong> into GSEA. Load both the .gct and the .cls file.</li>
+      <li><strong>Run GSEA</strong>: fill in the parameter settings. Click the question mark (red) on the bottom of the page to view descriptions of these parameters.</li>
+      <li>Use the <strong>GO: all</strong> (green) gene set</li>
+      <li>Use 10 <strong>permutations</strong> (green). If all goes well, repeat the analysis with 1000 permutations.</li>
+      <li>Select <strong>Collapse</strong> (blue): this is necessary for RNA-Seq data to associate the gene IDs of your list to the probes of the chip platform</li>
+      <li>Use <strong>gene set permutations</strong> (blue). Broad advises phenotype permutations (group labels will be shuffled to create random data to compare with) but they will only work when you have at least 7 samples per group.</li>
+      <li>Choose <strong>Human_ENSEMBL_Gene_ID_MSigDB.vX.chip</strong> as <strong>ChIP Platform</strong> (blue). Although you didn’t actually do chips (microarrays) he needs to map the Ensembl Gene IDs in the data file to functional annotations.</li>
+      <li>Click the <strong>Run</strong> button at the bottom of the page.</li>
+    </ul>
+
+    <p><img src="../../images/FunGSEA_Interface.png" alt="GSEA_Interface" />
+In the left lower corner of the user interface there’s a section called <strong>GSEA reports</strong>. It shows the status of analyses run in this session, including the currently running analysis:</p>
+
+    <p><img src="../../images/FunGSEA_Status.png" alt="GSEA_Status" />
+Click the green text to display the results in a browser. 
+   {: .solution)</p>
+  </blockquote>
 </blockquote>
 
 <h3 id="resources-of-functional-annotation">Resources of functional annotation</h3>
@@ -504,7 +552,7 @@ Sort the terms according to adjusted p-value</p>
 <p><a href="http://www.pathguide.org/">Pathguide</a> contains info about hundreds of pathway and molecular interaction related resources. It allows organism-based searches to find resources that contain functional info on the organism you work on.</p>
 
 <p>Gene sets based on GO, pathways,omics studies, sequence motifs, chromosomal position, oncogenic and immunological expression
-signatures, and various computational analyses maintained by the GSEA team of <a href="http://www.msigdb.org">MSigDB</a>.</p>
+signatures, and various computational analyses maintained by the GSEA team of <a href="http://www.msigdb.org">MSigDB</a>. The GSEA tool from Broad will use this database by default.</p>
 
 <h3 id="choosing-the-right-background">Choosing the right background</h3>
 <p>Functional enrichment methods require the definition of background genes for comparison. <strong>All annotated protein-coding genes</strong> are often used as default. This leads to false-positive results if the experiment measured only a subset of all genes. For example, setting a custom background is important in analyzing data from targeted sequencing or phosphoproteomics experiments. The appropriate <strong>custom background</strong> in this example would include all genes in the sequencing panel or all known or all phosphoproteins.</p>
