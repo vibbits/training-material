@@ -6,34 +6,20 @@ zenodo_link: ''
 questions:
 - How to visualize a protein structures?
 objectives:
-- The learning objectives are the goals of the tutorial
-- They will be informed by your audience and will communicate to them and to yourself
-  what you should focus on during the course
-- They are single sentences describing what a learner should be able to do once they
-  have completed the tutorial
-- You can use Bloom's Taxonomy to write effective learning objectives
-time_estimation: 3H
+- Get to know the user interface of YASARA  
+- Use various styles to render secondary structures of a protein 
+- Measure distances, angles and dihedrals 
+- Calculate hydrogen bonds and surfaces
+- Create high quality figures 
+time_estimation: 1H
 key_points:
-- The take-home messages
-- They will appear at the end of the tutorial
+- Use YASARA for visualisation of protein structures 
+- Create high quality images of potein structures 
 contributors:
 - abotzki
 - jvdurme
 
 ---
-
-<!--
-# Introduction
-{:.no_toc}
-
-<!-- This is a comment. -->
-
-General introduction about the topic and then an introduction of the
-tutorial (the questions and the objectives). It is nice also to have a
-scheme to sum up the pipeline used during the tutorial. The idea is to
-give to trainees insight into the content of the tutorial and the (theoretical
-and technical) key concepts they will learn.
--->
 
 > ### Agenda
 >
@@ -43,6 +29,8 @@ and technical) key concepts they will learn.
 > {:toc}
 >
 {: .agenda}
+
+# YASARA for protein structure exploration
 
 ## Install Python and PovRay
 
@@ -111,7 +99,8 @@ There are several ways to show the residues of interest:
    View > Show atoms in > Residue
 ```
    Select Cys7 from Molecule **A** and press OK
-2. From the sequence selector ![seqselector.png](../images/Seqselector.png "Seqselector.png")
+2. From the sequence selector 
+   ![seqselector.png](../../images/Seqselector.png "Seqselector.png")
    Hover the mouse on the bottom of the screen, you will see the sequence selector opening. Open it permanently by pressing the blue nailpin on the left side of it. Search for Cys7 from Molecule **B**, right-click and select:  
 ```
    Show > Residue
@@ -175,7 +164,7 @@ In the name column select all the metals and ions you can find.
 
 Et voilà, a publication ready image!
 
-![center](/home/albot/all-images-wiki/Insulin_hires.jpg "Insuline")
+![Insuline publication](../../images/Insulin_hires.jpg "Insuline publication ready figure")
 
 ## Labels
 
@@ -299,8 +288,8 @@ show the molecular surface of one monomer of dimeric insulin, go to:
     View > Show surface of > Molecule
 
 Select in the *Name* column A and B (these are the two chains in 1
-subunit). Press *Continue with surface color* and make sure Alpha is
-100. Any number lower than 100 will create transparency in the surface
+subunit). Press *Continue with surface color* and make sure Alpha is 100. 
+Any number lower than 100 will create transparency in the surface
 (could be nice as well).
 
 ## Molecular graphics exercise
@@ -308,7 +297,7 @@ subunit). Press *Continue with surface color* and make sure Alpha is
 Try to reproduce the following image of the 1TRZ insulin structure
 (hints below):
 
-[image:insulin.png](image:insulin.png "wikilink")
+![insulin.png](../../images/Insulin.png "Representation of Insulin")
 
 Hints:
 
@@ -331,7 +320,7 @@ Download GroEL via PDB code 1WE3 in YASARA.
 
 Try to reproduce (approximately) the following image (hints below):
 
-[image:groel.png](image:groel.png "wikilink")
+![groel.png](../../images/Groel.png "GroEL")
 
 Hints:
 
@@ -346,103 +335,10 @@ Hints:
   - choose a second color (eg. color with code 300, so you go over the
     entire color wheel spectrum)
 
-More exercises can be found on the [basic bioinformatics exercises
-page](http://wiki.bits.vib.be/index.php/Exercises_on_Protein_Structure).
-
-
-## Get data
-
-> ### {% icon hands_on %} Hands-on: Data upload
->
-> 1. Create a new history for this tutorial
-> 2. Import the files from [Zenodo]() or from the shared data library
->
->    ```
->    
->    ```
->    ***TODO***: *Add the files by the ones on Zenodo here (if not added)*
->
->    ***TODO***: *Remove the useless files (if added)*
->
->    {% include snippets/import_via_link.md %}
->    {% include snippets/import_from_data_library.md %}
->
-> 3. Rename the datasets
-> 4. Check that the datatype
->
->    {% include snippets/change_datatype.md datatype="datatypes" %}
->
-> 5. Add to each database a tag corresponding to ...
->
->    {% include snippets/add_tag.md %}
->
-{: .hands_on}
-
-# Title of the section usually corresponding to a big step in the analysis
-
-It comes first a description of the step: some background and some theory.
-Some image can be added there to support the theory explanation:
-
-![Alternative text](../../images/image_name "Legend of the image")
-
-The idea is to keep the theory description before quite simple to focus more on the practical part.
-
-***TODO***: *Consider adding a detail box to expand the theory*
-
-> ### {% icon details %} More details about the theory
->
-> But to describe more details, it is possible to use the detail boxes which are expandable
->
-{: .details}
-
-A big step can have several subsections or sub steps:
-
-
-## Sub-step with **My Tool**
-
-> ### {% icon hands_on %} Hands-on: Task description
->
-> 1. **My Tool** {% icon tool %} with the following parameters:
->    - {% icon param-file %} *"Input file"*: File
->    - *"Parameter"*: `a value`
->
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > ### {% icon comment %} Comment
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
->
-{: .hands_on}
-
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
-
-> ### {% icon question %} Questions
->
-> 1. Question1?
-> 2. Question2?
->
-> > ### {% icon solution %} Solution
-> >
-> > 1. Answer for question1
-> > 2. Answer for question2
-> >
-> {: .solution}
->
-{: .question}
-
-
-## Re-arrange
-
-To create the template, each step of the workflow had its own subsection.
-
-***TODO***: *Re-arrange the generated subsections into sections or other subsections.
-Consider merging some hands-on boxes to have a meaningful flow of the analyses*
-
 # Conclusion
 {:.no_toc}
 
-Sum up the tutorial and the key takeaways here. We encourage adding an overview image of the
-pipeline used.
+We have explored the basic functionality of YASARA for protein structure visualisation. Furthermore, we are now able to create high quality figures for publication purposes.
+
+More exercises can be found on the [basic bioinformatics exercises
+page](http://wiki.bits.vib.be/index.php/Exercises_on_Protein_Structure).

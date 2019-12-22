@@ -9,9 +9,8 @@ objectives:
   - "Basic knowledge of working with the PDB database"
 time_estimation: "30m"
 key_points:
-  - "Protein ID"
-  - "Uniprot"
-  - "PDB file format"
+  - "Use the Uniprot web site to search and explore crystal structures"
+  - "Understand the columns of the classical PDB file format"
 contributors:
   - abotzki
   - jvdurme
@@ -27,10 +26,10 @@ contributors:
 {: .agenda}
 
 # Search for a structure
-#### Via [UniProt](http://www.uniprot.org/)
+## Via [UniProt](http://www.uniprot.org/)
 The way of searching for a specific protein structure depends on the data you already have. You might already have the PDB ID (a unique identifier), that's an easy one. But mostly you have the protein name or you just have a sequence. In the last cases I recommend to start from the UniProt website at <http://www.uniprot.org>, which is the best annotated protein database in the world. Our first model protein will be the molecular chaperone DnaK from *E. coli*. Below is an image of the UniProt search box where you can start your search for proteins.
 
-![uniprotsearchbox.png](../../images/uniprotsearchbox.png "Search box")
+![uniprotsearchbox.png -80width](../../images/uniprotsearchbox.png "Search box")
 
 > ### {% icon hands_on %} Explore a PDB structure on the Uniprot web site
 >
@@ -53,19 +52,13 @@ The way of searching for a specific protein structure depends on the data you al
 {: .question }
 
 
-#### Via the Protein Data Bank by PDB ID
-
-<iframe src="https://h5p.org/h5p/embed/577970" width="699" height="418" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-<script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js" charset="UTF-8"></script>
-
-<iframe src=" https://docs.google.com/presentation/d/1lgEeigU8M45xF2BjQgPumgxalzfiHZeD/preview" width="640" height="480"></iframe> 
-
+## Via the Protein Data Bank by PDB ID
 
 You can find structural information directly at the PDB database. The web site of the PDB consortium is located at <http://www.wwpdb.org>. This web site provides links to all members of the PDB (left side). It is a question of taste which resource you start off with. For X-ray structures, it is currently PDBe, RCSB PDB, PDBj. For NMR structres, you find the BMRB. In today's course, we focus on the PDB resources only.
 
 Below is an image of the RCSB search box <http://www.rcsb.org/pdb/home/home.do> where you can start your search for structures.
 
-![Pdbsearchbox_RCSB.png](../../images/Pdbsearchbox_RCSB.png)
+![Pdbsearchbox_RCSB.png -80width](../../images/Pdbsearchbox_RCSB.png "RCSB Search Box"")
 
 The PDB file with ID **1DKX** contains the atomic coordinates of the molecular chaperone (DnaK) from *E. coli*.
 
@@ -77,7 +70,7 @@ The PDB file with ID **1DKX** contains the atomic coordinates of the molecular c
 
 This will lead you to the same page we got earlier through UniProt.
 
-#### Via the Protein Data Bank by sequence
+## Via the Protein Data Bank by sequence
 
 In lots of cases we only have a sequence of which we would like to find out if there is structural information. The PDB can be searched using a sequence as input. Here is the sequence of the C-terminal substrate binding domain of DnaK:
 ```
@@ -89,11 +82,11 @@ In lots of cases we only have a sequence of which we would like to find out if t
 ```
 The PDB allows sequence searches through the same search box we used before.
 
-![Pdbsearchbox_RCSB.png](../../images/Pdbsearchbox_RCSB.png)
+![Pdbsearchbox_RCSB.png -80width](../../images/Pdbsearchbox_RCSB.png "RCSB Search Box")
 
 There is also an Advanced Search section, with a Blast/Fasta option in the Sequence Features section.
 
-![Blastpdb.png](../../images/Blastpdb.png)
+![Blastpdb.png -80width](../../images/Blastpdb.png "Advanced BLAST Search")
 
 > ### {% icon hands_on %} Hands-on: BLAST search for PDB structure
 >
@@ -134,7 +127,7 @@ molecular chaperone (DnaK) from *E coli*.
 > 4. What is the atomic resolution and R-factor?
 >
 > > ### {% icon solution %} Solution
-> > 1. Two, called polymers or chains: they are polypeptides ![Type](../../images/Mol_desc_1DKX.png)
+> > 1. Two, called polymers or chains: they are polypeptides ![Type -80width](../../images/Mol_desc_1DKX.png)
 > > 2. To answer this question you can go to the sequence tab at the top:
 > >    - ![Uniprot view](../../images/Pdb_firstresiduesmissing_1dkx.png)
 > >    - Summary: a large chunk of the N-terminus is missing from the structure, the C-terminus is virtually complete.
@@ -151,7 +144,7 @@ The file that holds the 3D coordinates can be downloaded by clicking on
 For convenience, save this file on your desktop. The filename is the
 4-character unique PDB ID.
 
-![Pdbdownloadfile1.png](../../images/Pdbdownloadfile1.png)
+![Pdbdownloadfile1.png](../../images/Pdbdownloadfile1.png "Download menu with PDB formats")
 
 > ### {% icon hands_on %} Hands-on: Open downloaded PDB file in an editor
 > 1.   Open this file with a text editor, e.g. WordPad is an excellent tool for that.
