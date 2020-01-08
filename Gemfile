@@ -15,4 +15,4 @@ gem 'awesome_bot'
 gem 'html-proofer'
 gem 'pkg-config'
 gem 'kwalify'
-
+gem 'faraday', "0.17.1"
