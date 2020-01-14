@@ -57,39 +57,48 @@ It takes a long list of arguments:
 >
 > 1. Create a 2x2 matrix named mat containing numbers 2,3,1,5
 > 2. Print the matrix
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  mat<-matrix(c(2,3,1,5),nrow=2,ncol=2)
 >    >  mat
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 {: .hands_on}
 
 > ### {% icon hands_on %} Hands-on: Extra exercise 8b
 >
 > 1. Create a 2x3 matrix named onemat consisting of all ones
 > 2. Print the matrix
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  onemat<-matrix(1,nrow=2,ncol=3)
 >    >  onemat
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 {: .hands_on}
 
 > ### {% icon hands_on %} Hands-on: Extra exercise 8c
 >
 > 1. Create a 3x3 matrix containing numbers 1,2,3,4,5,6,7 
 > 2. Retrieve all elements that are larger than 3
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  m <- matrix(c(1,2,3,4,5,6,7),ncol=3) 
 >    >  m[m > 3]
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 {: .hands_on}
 
 ### Data frames
@@ -130,25 +139,31 @@ If you don't define labels (as in the first example), the names of the vector na
 > ### {% icon hands_on %} Hands-on: Exercise 9a
 >
 > Create a data frame called Plant_study containing days and Plants_with_lesions. Name the columns Days and Plants.
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  Plant_study <- data.frame(Days=days,Plants=Plants_with_lesions)
 >    >  Plant_study
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 {: .hands_on}
 
 > ### {% icon hands_on %} Hands-on: Exercise 9b
 >
 > Create a data frame called Drug_study consisting of three columns: ID, treatment and smoking
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  Drug_study <- data.frame(ID,treatment,smoking)
 >    >  Drug_study
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 {: .hands_on}
 
 > ### {% icon hands_on %} Hands-on: Exercise 9c
@@ -157,7 +172,9 @@ If you don't define labels (as in the first example), the names of the vector na
 > - The first column is called organism and contains Human,Mouse,Fruit Fly, Roundworm,Yeast 
 > - The second column size contains 3000000000,3000000000,135600000,97000000,12100000
 > - The third column geneCount contains 30000,30000,13061,19099,6034
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  organism <- c("Human","Mouse","Fruit Fly", "Roundworm","Yeast")
@@ -165,7 +182,8 @@ If you don't define labels (as in the first example), the names of the vector na
 >    >  geneCount <- c(30000,30000,13061,19099,6034) 
 >    >  genomeSize <- data.frame(organism,size,geneCount)
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 {: .hands_on}
 
 > ### {% icon hands_on %} Hands-on: Extra exercise 9d
@@ -173,14 +191,17 @@ If you don't define labels (as in the first example), the names of the vector na
 > Create a data frame ab and print it. 
 > - The first column is called a and contains 1,3,2,1
 > - The second column is called b and contains 2,3,4,1
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  a <- c(1,3,2,1)
 >    >  b <- c(2,3,4,1)
 >    >  ab <- data.frame(a,b)
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 {: .hands_on}
 
 ##### Referring to the elements of a data frame
@@ -241,13 +262,16 @@ subset(D,logical expression,columns to extract)
 >
 > 1. Retrieve the data for the Volvo 142E from mtcars 
 > 2. Retrieve the gas usage (mpg column) for the Volvo 142E 
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  mtcars["Volvo 142E",]
 >    >  mtcars["Volvo 142E","mpg"]
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 >    > ### {% icon question %} Question
 >    >
 >    >  What will happen when you run this code ?
@@ -256,7 +280,7 @@ subset(D,logical expression,columns to extract)
 >    >  
 >    >  ```
 >    {: .question}
->    > ##### {% icon question %} Question
+>    > ### {% icon question %} Question
 >    >
 >    >  What will happen when you run this code ?
 >    > ```
@@ -274,7 +298,9 @@ subset(D,logical expression,columns to extract)
 > 4. Change the treatment of the fourth patient to A
 > 5. Add a column called activity with values: 4, NA, 12.1, 2.5
 > 6. Use subset() to retrieve the full ID and treatment columns
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  subset(Drug_study,smoking==TRUE,ID)
@@ -284,7 +310,8 @@ subset(D,logical expression,columns to extract)
 >    >  Drug_study$activity <- c(4,NA,12.1,2.5)
 >    >  subset(Drug_study,select=c(ID,treatment))
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 >    > ### {% icon question %} Question
 >    >
 >    >  What will happen when you run this code ?
@@ -309,7 +336,7 @@ subset(D,logical expression,columns to extract)
 >    >  
 >    >  ```
 >    {: .question}
->    > ##### {% icon question %} Question
+>    > ### {% icon question %} Question
 >    >
 >    >  What will happen when you run this code ?
 >    >  ```
@@ -351,13 +378,16 @@ subset(D,logical expression,columns to extract)
 > ### {% icon hands_on %} Hands-on: Extra exercise 10c
 >
 > On which days did we observe more than 2 infected plants in the plant experiment? Answer this question with and without using the subset() function.
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  > Plant_study[Plant_study$Plants > 2,"Days"]
 >    >  > subset(Plant_study,Plants > 2,Days)
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 >    > ### {% icon question %} Question
 >    >
 >    >  What will happen when you run this code ?
@@ -373,7 +403,9 @@ subset(D,logical expression,columns to extract)
 > 1. Create vector q by extracting the a column of data frame ab (exercise 9) with and without subset().
 > 2. Retrieve the second element of column a of data frame ab
 > 3. Add column c with elements 2,1,4,7 to data frame ab
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  q <- ab$a
@@ -381,7 +413,8 @@ subset(D,logical expression,columns to extract)
 >    >  ab$a[2]
 >    >  ab$c <- c(2,1,4,7)
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 {: .hands_on}
 
 ##### Removing elements from a data frame
@@ -440,13 +473,16 @@ D2 <- subset(D,select=c(1,3,2,4))
 > ### {% icon hands_on %} Hands-on: Exercise 11a
 >
 > Switch the position of the second and the third column of Drug_study
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  Drug_study[,c(1,3,2)]
 >    >   
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 >    > ### {% icon question %} Question
 >    >
 >    >  What will happen when you run this code ?
@@ -470,13 +506,16 @@ L <- list(label1=object1,label2=object2,label3=object3)
 >
 > 1. Create a list called myList with the following objects: 5, 6, the word seven, the matrix mat.
 > 2. Print the list.
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  myList<-list(5,6,"seven",mat)
 >    >   
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 >    > ### {% icon question %} Question
 >    >
 >    >  What will happen when you run this code ?

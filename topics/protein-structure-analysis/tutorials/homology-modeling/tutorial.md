@@ -128,12 +128,15 @@ A suitable template structure to make a high quality model should have following
 > 1. Is there a difference in the number of identities, positives and gaps between the two remaining x-ray structures? 
 > 2. What is the PDB ID with the highest resolution, does not have insertions or deletions and should thus be the better template structure? 
 >
-> > ### {% icon solution %} Solution
+> > <details markdown="1">
+> > <summary>{% icon solution %} Solution
+> > </summary>
 > >
 > > 1. **TODO** 
 > > 2. **TODO** 
 > >
-> {: .solution}
+> > </details>
+>
 >
 {: .question}
 
@@ -199,13 +202,16 @@ In our example, we take the [Swiss Model server](https://swissmodel.expasy.org/i
 >
 > Which of the 10 (at the time of writing) possible template structures would you select as template for the model building process? 
 >
-> > ### {% icon solution %} Solution
+> > <details markdown="1">
+> > <summary>{% icon solution %} Solution
+> > </summary>
 > >
 > > **TODO: add link with 10 template** 
 > > We suggest as template **1jxx.1.A** given that it is an X-ray structure with high resolution and a very high 
 > > sequence identity (X-ray, 0.9 Å, 78.26 %).
 > >
-> {: .solution}
+> > </details>
+>
 >
 {: .question}
 

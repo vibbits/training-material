@@ -65,12 +65,15 @@ We will start with exploring one crystal structure of the β2 adrenoceptor. Toge
 > 1. How many molecules are present in the crystallized structures? 
 > 2. And how many chain identifiers are used? 
 >
-> > ### {% icon solution %} Solution
+> > <details markdown="1">
+> > <summary>{% icon solution %} Solution
+> > </summary>
 > >
 > > 1. Answer for question1
 > > 2. Answer for question2
 > >
-> {: .solution}
+> > </details>
+>
 >
 {: .question}
 
@@ -110,11 +113,14 @@ In order to do so, we first have to add Hydrogens to all present molecules.
 >
 > Between which amino acids and the ligand do you see hydrogen bonds?
 >
-> > ### {% icon solution %} Solution
+> > <details markdown="1">
+> > <summary>{% icon solution %} Solution
+> > </summary>
 > >
 > > 1. Answer for question1
 > >
-> {: .solution}
+> > </details>
+>
 >
 {: .question}
 
@@ -133,13 +139,16 @@ We do not go into great detail on all the tools but only mention PoseView. With 
 >
 > Between which amino acids and the ligand do you see hydrogen bonds? 
 >
-> > ### {% icon solution %} Solution
+> > <details markdown="1">
+> > <summary>{% icon solution %} Solution
+> > </summary>
 > >
 > > 1. According to PoseView, between which amino acids and the ligand do you see hydrogen bonds?
 > > 2. What other interactions are presented in the sketch? 
 > > 3. Inspect the visualisation in Yasara: Do you see the interactions in Yasara as well? 
 > >
-> {: .solution}
+> > </details>
+>
 >
 {: .question}
 
@@ -169,12 +178,15 @@ In order to estimate the binding energy between the nanobody and the β2 adrenoc
 > 1. What is the dG in the two cases? 
 > 2. Any idea why the difference is rather hugh?
 >
-> > ### {% icon solution %} Solution
+> > <details markdown="1">
+> > <summary>{% icon solution %} Solution
+> > </summary>
 > >
 > > 1. Answer for question1
 > > 2. Answer for question2
 > >
-> {: .solution}
+> > </details>
+>
 >
 {: .question}
 

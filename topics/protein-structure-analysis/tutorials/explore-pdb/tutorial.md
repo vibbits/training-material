@@ -43,12 +43,14 @@ The way of searching for a specific protein structure depends on the data you al
 > ### {% icon question %} Guidelines which PDB structures to select
 >
 > Which structures (give the 4-character PDB ID) of the C-terminal domain of DnaK should preferentially be use for analysis and why?
-> > ### {% icon solution %} Solution
+> > <details markdown="1">
+> > <summary>{% icon solution %} Solution
+> > </summary>
 > > Usually, the recommended selection criteria are using an X-ray structure with low resolution and low Rfree factor. Furthermore, the PDB database has pre-calculated a validation report for all of the structures.
 > > As an example, have a look at https://www.ebi.ac.uk/pdbe/entry/pdb/4EZX under the section 'Experiments and Validation'. For many PDB structures, there is also a re-done structure available with a vast amount of informaton on the quality of the X-ray structure and suggested 'better' models e.g. (https://pdb-redo.eu/db/4ezx). In our case, we could opt for the structures 1DKX and 4EZX.
 > >
 > > This is a difficult example since there are so many high resolution structures available. So, it is recommended to study the articles and compare the available structures to find your favorite structure for further analysis.
-> >
+> > </details>
 > {: .solution}
 {: .question }
 
@@ -133,14 +135,17 @@ molecular chaperone (DnaK) from *E coli*.
 > 3. Was this structure solved by X-Ray or NMR?
 > 4. What is the atomic resolution and R-factor?
 >
-> > ### {% icon solution %} Solution
+> > <details markdown="1">
+> > <summary>{% icon solution %} Solution
+> > </summary>
 > > 1. Two, called polymers or chains: they are polypeptides ![Type](../../images/Mol_desc_1DKX.png)
 > > 2. To answer this question you can go to the sequence tab at the top:
 > >    - ![Uniprot view](../../images/Pdb_firstresiduesmissing_1dkx.png)
 > >    - Summary: a large chunk of the N-terminus is missing from the structure, the C-terminus is virtually complete.
 > > 3. X-RAY diffraction, as shown by Experimental Details
 > > 4. Atomic resolution: 2.00 Ångstrom and R-factor of 0.206
-> {: .solution }
+> > </details>
+>
 {: .question}
 
 
