@@ -51,6 +51,9 @@ rect.node {
     margin-top: 20px;
 }
 
+.visually-hidden {
+    display: none;
+}
 
 .form-group label.control-label {
     margin-top: 5px;
