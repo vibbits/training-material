@@ -312,12 +312,12 @@ module Jekyll
       end
 
       #Interactive tour
-      if material.key?('galaxy_tour') then
-        parts.push(material['galaxy_tour'].map{ |x|
+      if material.key?('tour') then
+        parts.push(material['tour'].map{ |x|
           {
             "@type": "CreativeWork",
             "url": "#{site['github_repository']}/blob/#{site['github_repository_branch']}/topics/#{material['topic_name']}/tutorials/#{material['tutorial_name']}/tours/#{x}",
-            "name": "Galaxy Interactive Tour for '#{material['title']}' tutorial",
+            "name": "Interactive Tour for '#{material['title']}' tutorial",
             "learningResourceType": "interactive-tour",
             "interactivityType": "active"
           }

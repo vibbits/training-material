@@ -1,7 +1,7 @@
-Contributing to Galaxy Training material
+Contributing to the VIB training material
 ===
 
-:+1::tada: First off, thanks for taking the time to contribute! :tada::+1:
+First off, thanks for taking the time to contribute!
 
 The following is a set of guidelines for contributing to this training material on GitHub.
 
@@ -14,27 +14,27 @@ The following is a set of guidelines for contributing to this training material 
 
 # What should I know before I get started?
 
-This repository is a project of unification of the Galaxy training material. You can find more information about this project in this [small presentation](https://galaxyproject.github.io/training-material/topics/training/slides/)
+This repository is the VIB training material. 
 
 By contributing, you agree that we may redistribute your work under [this repository's license](LICENSE.md).
 
-We will address your issues and/or assess your change proposal as promptly as we can, and help you become a member of our community.
+We will address your issues and/or assess your change proposal as promptly as we can.
 
-If you have any questions, you can reach us using the [Gitter chat](https://gitter.im/Galaxy-Training-Network/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link).
+If you have any questions, you can reach us using at bits@vib.be. 
 
 # How can I contribute?
 
 You can report mistakes or errors, create more contents, etc. Whatever is your background, there is probably a way to do it: via the GitHub website, via command-line. If you feel it is too much, you can even write it with any text editor and contact us: we will work together to integrate it.
 
-You can check our [Frequently Asked Questions](http://galaxyproject.github.io/training-material/faq#how-can-i-contribute) and our [dedicated tutorials](http://galaxyproject.github.io/training-material/topics/contributing) for more details.
+You can contact us at bits@vib.be for more details.
 
 # How is the training material maintained?
 
 ## Maintainers
 
-Each training topic and tutorial has one or two maintainers who act as editors.
+Each training topic and tutorial has one or two maintainers who work at VIB Bioinformatics Core and act as editors.
 
-They are responsible for making sure issues and change requests are looked at. They have the final say over what is included in the training material. But they are not responsible for writing/keeping up-to-date training material content or deciding what lessons ought to exist, both will be coming from the community.
+They are responsible for making sure issues and change requests are looked at. They have the final say over what is included in the training material.
 
 ## Labels
 

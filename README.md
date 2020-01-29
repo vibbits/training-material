@@ -1,8 +1,3 @@
-|Build|Links|
-|------|-----|
-[![Build Status](https://travis-ci.org/galaxyproject/training-material.svg?branch=master)](https://travis-ci.org/galaxyproject/training-material) | [![Deploy Status](https://travis-ci.org/galaxyproject/training-material.svg?branch=gh-pages)](https://travis-ci.org/galaxyproject/training-material)|
-
-
 VIB Bioinformatics Core training material
 ========================
 
@@ -48,3 +43,26 @@ references:
   link: link
   summary: ''
 ```
+
+Image scaling:
+
+The Markdown for the above could be something like:
+```
+![Picture of the Beach -fullwidth](beach.jpg)
+```
+
+-20width width:  20%;
+
+-40width width:  40%;
+
+-50width width:  50%;
+
+-60width width:  60%;
+
+-70width width:  70%;
+
+-75width width:  75%;
+
+-80width width:  80%;
+
+-fullwidth width: 100%;
