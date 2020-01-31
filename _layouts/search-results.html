@@ -10,17 +10,12 @@ layout: base
 
 {% jekyll_pages_api_search_interface %}
 
+<br/>
+
 {% jekyll_pages_api_search_results %}
 
-<script>
-var JEKYLL_PAGES_API_SEARCH_UI_OPTIONS = {
-  inputElementId: 'search-input',
-  searchResultsId: 'search-results',
-  emptyResultsMessagePrefix: 'No pages found matching'
-};
-</script>
+</div>
 
+{% include _includes/default-footer.html %}
 {% jekyll_pages_api_search_load %}
 
-</div>
-{% include _includes/default-footer.html %}
