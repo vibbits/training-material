@@ -424,12 +424,15 @@ A big step can have several subsections or sub steps:
 > 1. Question1?
 > 2. Question2?
 >
-> > ### {% icon solution %} Solution
+> > <details markdown="1">
+> > <summary>{% icon solution %} Solution
+> > </summary>
 > >
 > > 1. Answer for question1
 > > 2. Answer for question2
 > >
-> {: .solution}
+> > </details>
+>
 >
 {: .question}
 

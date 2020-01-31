@@ -325,10 +325,13 @@ Logical expressions may be combined using logical operators. The NOT operator (!
 >    > ### {% icon question %} Question 
 >    > What's the difference between x=2 and x==2 ? 
 >    >
->    > > ### {% icon solution %} Solution
+>    > > <details markdown="1">
+>    > > <summary>{% icon solution %} Solution
+>    > > </summary>
 >    > >  The = operator attributes a value to a variable (see next section), x becomes 2. 
 >    > >  The == is a logical operator, testing whether the logical expression x equals 2 is TRUE or FALSE.
->    > {: .solution }
+>    > > </details>
+>    >
 >    {: .question }
 >
 {: .hands_on }
@@ -412,16 +415,19 @@ The function generates a plot so the plot **p** is the **output** of the functio
 > 2. Print the value of patients divided by 2
 > 3. Create a variable called patients_gr2 with value 24
 > 4. Print the total number of patients
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
->    >  > ```
->    >  > patients <- 42
->    >  > patients/2
->    >  > patients_gr2 <- 24
->    >  > total_patients <- patients + patients_gr2
->    >  > total_patients
->    >  >```
->    {: .solution}
+>    >  ```
+>    >  patients <- 42
+>    >  patients/2
+>    >  patients_gr2 <- 24
+>    >  total_patients <- patients + patients_gr2
+>    >  total_patients
+>    > ```
+>    > </details>
+>
 >    > ### {% icon question %} Question
 >    >
 >    >  What will happen when you run this code ?
@@ -435,12 +441,15 @@ The function generates a plot so the plot **p** is the **output** of the functio
 > ### {% icon hands_on %} Hands-on: Exercise 3b
 >
 > Check the arguments of the mean() function. 
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  ?mean
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 {: .hands_on}
 
 The mean() function has many arguments and each argument has a default value. To use the default values simply do not specify these arguments in the function call. You only have to specify the arguments for which you want to use a value other than the default.
@@ -452,19 +461,24 @@ To show the **examples** section instead of the full documentation page:
 > ### {% icon hands_on %} Hands-on: Exercise 3c
 >
 > Calculate and print the sum of patients and patients_gr2 using the sum() function.
->    > ### {% icon solution %} solution: answer
->    >
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} solution: answer
+>    > </summary>
 >    >  ```
 >    >  sum(patients,patients_gr2)
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 >    > ### {% icon question %} Question
 >    >
 >    >  Replace the sum() function with the mean() function. What happens ?
->    >    > ### {% icon solution %} solution: answer
+>    >    > <details markdown="1">
+>    >    > <summary>{% icon solution %} solution: answer
+>    >    > </summary>
 >    >    >  Look at the help of the sum() function. What's the first argument ? 
 >    >    >  Compare with the first argument of the mean() function
->    >   {: .solution}
+>    >    > </details>
+>    >
 >    {: .question}
 >    > ### {% icon question %} Question
 >    >
@@ -482,28 +496,33 @@ To show the **examples** section instead of the full documentation page:
 >    {: .question}
 {: .hands_on}
 
-Sometimes functions from different packages have the same name. In that case use **package::function** to specify the package you want to use, e.g. ggplot2::ggplot() where ggplot2 is the name of the package and ggplot() is the name of the function.
+Sometimes functions from different packages have the same name. In that case use **package::function** to specify the package you want to use, e.g. `ggplot2::ggplot()` where `ggplot2` is the name of the package and `ggplot()` is the name of the function.
 
 > ### {% icon hands_on %} Hands-on: Extra exercise 3d
 >
-> Create a variable patients_gr3 with value "twenty" and print the total number of patients
->    > ### {% icon solution %} Solution
+> Create a variable `patients_gr3` with value "twenty" and print the total number of patients
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  patients_gr3 <- "twenty"
 >    >  patients + patients_gr3
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 {: .hands_on}
 
 > ### {% icon hands_on %} Hands-on: Extra exercise 3e
 >
-> 1. Create variable x with value 5
-> 2. Create variable y with value 2
-> 3. Create variable z as the sum of x and y and print the value of z
-> 4. Print x - y
-> 5. Print the product of x and y and add 2 to it
->    > ### {% icon solution %} Solution
+> 1. Create variable `x` with value `5`
+> 2. Create variable `y` with value `2`
+> 3. Create variable `z` as the sum of `x` and `y` and print the value of `z`
+> 4. Print `x - y`
+> 5. Print the product of `x` and `y` and add `2` to it
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  x <- 5
@@ -513,20 +532,21 @@ Sometimes functions from different packages have the same name. In that case use
 >    >  x-y
 >    >  x*y+2
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 {: .hands_on}
 
 > ### {% icon hands_on %} Hands-on: Extra exercise 3f
 >
-> What is the difference between 
-> correctLogic <- TRUE  
-> incorrectLogic <- "TRUE"
+> What is the difference between:
+> 1. `correctLogic <- TRUE`
+> 2. `incorrectLogic <- "TRUE"`
 {: .hands_on}
 
 > ### {% icon hands_on %} Hands-on: Extra exercise 3g
 >
-> Is there a difference between 
-> name <- "Janick" 
-> name <- 'Janick'
-> name <- Janick
+> Is there a difference between:
+> 1. `name <- "Janick"`
+> 2. `name <- 'Janick'`
+> 3. `name <- Janick`
 {: .hands_on}

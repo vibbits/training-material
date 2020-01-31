@@ -112,14 +112,16 @@ If you want to view the data frame you can **click its name in the Environment**
 > 1. Import the file [GeneEx.csv](http://data.bits.vib.be/pub/trainingen/RIntro/GeneEx.csv) into a data frame called GeneEx
 > 2. Rename the two last columns Ct1 and Ct2
 > 3. Create a new column containing the average Ct: (Ct1+Ct2)/2
->    > ### {% icon solution %} Solution
->    >
+>    > <details markdown="1">
+>    > <summary> {% icon solution %} Solution
+>    > </summary>
 >    >  ```
 >    >  GeneEx <- read.csv2("Rdata/GeneEx.csv")
 >    >  colnames(GeneEx)[c(3,4)] <- c("Ct1","Ct2")
 >    >  GeneEx$Average_Ct <- (GeneEx$Ct1 + GeneEx$Ct2)/2
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 >    > ### {% icon question %} Question
 >    >
 >    >  Which of these 2 commands will work ?
@@ -197,8 +199,9 @@ Excel can read .csv files but if you really want to write .xls or .xlsx files us
 > 4. What is the gene with the highest log2 fold change?
 > 5. What is the data of the gene with the lowest adjusted p-value (= padj)?
 > 6. Write the Ensembl IDs (= row names) of the upregulated genes to a file called up.txt. You will use this file for functional enrichment analysis using online tools like ToppGene,EnrichR? These tools want a file with only Ensembl IDs as input (one per line, no double quotes, no column headers, no row names).
->    > ### {% icon solution %} Solution
->    >
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >  ```
 >    >  DE <- read.table("Rdata/RNASeqDE.txt",header=TRUE)
 >    >  up <- DE[DE$log2FoldChange > 0,]
@@ -209,7 +212,8 @@ Excel can read .csv files but if you really want to write .xls or .xlsx files us
 >    >  DE[which.min(DE$padj),]
 >    >  write.table(rownames(up),file="up.txt",quote=FALSE,col.names=FALSE,row.names=FALSE)
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 >    > ### {% icon question %} Question
 >    >
 >    > Which of the following 2 commands will not work properly ?
@@ -248,9 +252,12 @@ Excel can read .csv files but if you really want to write .xls or .xlsx files us
 > ### {% icon hands_on %} Hands-on: Extra exercise 17c
 >
 > Which type of files are imported by read.delim ? 
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    > Check the documentation and look at the default for *sep* 
->    {: .solution}
+>    > </details>
+>
 {: .hands_on}
 
 > ### {% icon hands_on %} Hands-on: Extra exercise 17d
@@ -258,13 +265,16 @@ Excel can read .csv files but if you really want to write .xls or .xlsx files us
 > 1. Read the file [ALLphenoData.tsv](http://data.bits.vib.be/pub/trainingen/RIntro/ALLphenoData.tsv) into a variable called pdata using one of the read functions
 > 2. What type of data structure is pdata ?
 > 3. What are the names of the columns of pdata ?
-> 4. How many rows and columns are in pdata ? 
->    > ### {% icon solution %} Solution
+> 4. How many rows and columns are in pdata ?
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >  ```
 >    >  pdata <- read.delim("Rdata/ALLphenoData.tsv")
 >    >  class(pdata)
 >    >  colnames(pdata)
 >    >  dim(pdata)
 >    >  ``` 
->    {: .solution}
+>    > </details>
+>
 {: .hands_on}

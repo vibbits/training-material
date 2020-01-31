@@ -123,7 +123,9 @@ FoldX has mutated the Ala to Trp and the structure with the Trp mutation has bee
 > Van der Waals clashes are red colored atoms. 
 > Do you see a difference around the mutation site between WT and mutant? 
 >
-> > ### {% icon solution %} Solution
+> > <details markdown="1">
+> > <summary>{% icon solution %} Solution
+> > </summary>
 > >
 > > Toggle the Visibility of WT and mutant to see the differences. 
 > > Open the Console by pressing the spacebar twice and see the free energy change of the mutation. 
@@ -131,7 +133,8 @@ FoldX has mutated the Ala to Trp and the structure with the Trp mutation has bee
 > > In the console - to open press spacebar twice - we see an energy change of +29 kcal/mol.
 > > This is clearly a destabilizing mutation.
 > >
-> {: .solution}
+> > </details>
+>
 >
 {: .question}
 
@@ -177,7 +180,9 @@ A number of menus is now presented and here is what you need to do in each menu:
 > 2. Why doesn't the mutation affect the interaction with DNA chain H?
 >
 >
-> > ### {% icon solution %} Solution
+> > <details markdown="1">
+> > <summary>{% icon solution %} Solution
+> > </summary>
 > >
 > > 1. Toggle the Visibility between this mutant and the WT structure and see how the hydrogen bonding changes and check the output in the Console. 
 > >    ![Mutation](../../images/Training_12.png "Change in interaction energy")
@@ -186,7 +191,8 @@ A number of menus is now presented and here is what you need to do in each menu:
 > >
 > > 2. ***TODO***  
 > >
-> {: .solution}
+> > </details>
+>
 >
 {: .question}
 
