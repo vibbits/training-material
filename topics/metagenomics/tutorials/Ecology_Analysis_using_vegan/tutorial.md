@@ -46,12 +46,14 @@ The gene abundance table (Genus.txt) can be found in the folder /home/VIBTrainin
 >  > ### {% icon question %} Question
 >  >
 >  > How to set the working directory in R 
+>  >    > <details markdown="1">
+>  >    > <summary>{% icon solution %} Solution
+>  >    > </summary>
+>  >    > ```R
+>  >    > setwd("dir_to_data")
+>  >    > ```
+>  >    > </details>
 >  >
->  > > ### {% icon solution %} Solution
->  > > ```
->  > > setwd(“dir_to_data”) 
->  > > ```
->  > {: .solution }
 >  {: .question }
 {: .hands_on }
 
@@ -63,13 +65,16 @@ The gene abundance table (Genus.txt) can be found in the folder /home/VIBTrainin
 >  >
 >  > How to read in data as matrix ? 
 >  >
->  > > ### {% icon solution %} Solution
->  > > ```
+>  > > <details markdown="1">
+>  > > <summary>{% icon solution %} Solution
+>  > > </summary>
+>  > > ```R
 >  > > # read in data as matrix
 >  > > M = read.delim(file="Genus.txt",row.names=1)
 >  > > M = as.matrix(M) 
 >  > > ```
->  > {: .solution }
+>  > > </details>
+>  >
 >  {: .question }
 {: .hands_on }
 
@@ -84,12 +89,15 @@ Use the function `edit(M)` to better view the abundance matrix.
 >  >
 >  > How to estimate density of first sample ? 
 >  >
->  > > ### {% icon solution %} Solution
->  > > ```
+>  > > <details markdown="1">
+>  > > <summary>{% icon solution %} Solution
+>  > > </summary>
+>  > > ```R
 >  > > # estimate density of first sample
 >  > > densityOfSample1 = density(M[,1])
 >  > > ```
->  > {: .solution }
+>  > > </details>
+>  >
 >  {: .question }
 {: .hands_on }
 
@@ -104,12 +112,15 @@ Alternatively you can also use the function `hist`, to plot a histogram of the a
 >  >
 >  > How to plot histogram of abundances ?
 >  >
->  > > ### {% icon solution %} Solution
->  > > ```
+>  > > <details markdown="1">
+>  > > <summary>{% icon solution %} Solution
+>  > > </summary>
+>  > > ```R
 >  > > # plot histogram of abundances
 >  > > hist(M[,1], nclass = 50)
 >  > > ```
->  > {: .solution }
+>  > > </details>
+>  >
 >  {: .question }
 {: .hands_on }
 
@@ -121,19 +132,22 @@ We can use the `apply` command, to apply the density command to every column of 
 >  >
 >  > How to estimate densities of all samples ? 
 >  >
->  > > ### {% icon solution %} Solution
->  > > ```
+>  > > <details markdown="1">
+>  > > <summary>{% icon solution %} Solution
+>  > > </summary>
+>  > > ```R
 >  > > # estimate densities of all samples
 >  > > S_densities = apply(M,2,density)
 >  > > ```
->  > {: .solution }
+>  > > </details>
+>  >
 >  {: .question }
 {: .hands_on }
 
 
 
 To plot this start with:
-```
+```R
 # open a new plot window and set range of x and y axis
 plot(1,1,type="n",ylim=c(0,3),xlim=c(0,5000)) 
 ```
@@ -146,12 +160,15 @@ This will open a new plotting window, already set to the range of x and y coordi
 >  >
 >  > How to plot density distributions of all samples ? 
 >  >
->  > > ### {% icon solution %} Solution
->  > > ```
+>  > > <details markdown="1">
+>  > > <summary>{% icon solution %} Solution
+>  > > </summary>
+>  > > ```R
 >  > > # plot density distributions of all samples
 >  > > lapply(S_densities,lines)
 > > > ```
->  > {: .solution }
+>  > > </details>
+>  >
 >  {: .question }
 {: .hands_on }
 
@@ -160,7 +177,7 @@ What you should see now in the plot window is the density distribution of all sa
 
 4. Maybe you noticed that the `colSums` command showed that the totals are not equal. What does this mean? In this state the data is actually not comparable among each other. One way to `correct` the data for this shortcoming is to normalize the matrix. In this step we will normalize the abundance matrix into variable M1: 
 
-```
+```R
 # normalize matrix: divide each column by the total of that column
 M1 = sweep(M,2,colSums(M),"/")
 ```
@@ -168,7 +185,7 @@ M1 = sweep(M,2,colSums(M),"/")
 The `sweep` command is extremely useful, as it will apply a simple arithmetic operation (like divide) in a matrix column- or row-wise with a vector of your choice. So it is very similar to `apply`, but takes more basic functions. In this case we will divide each column by the sum of the column, this is called normalization.
 
 Now we will compare these matrices using the `barplot` function. For this we need to open another graphical window, using the `X11` function:
-```
+```R
 # create barplot of original and normalized data
 barplot(M)
 X11()
@@ -181,7 +198,7 @@ Close all open plots.
 
 Now replot the sample-wise density plot (as you did in step 3), but start the plot with these adapted x and y ranges. Additionally we will this time label the x- and y-axis:
 
-```
+```R
 # open a new plot and define ranges and titles of x and y axis
 plot(1,1,type="n",ylim=c(0,80),xlim=c(0,1),xlab="relative genus abundance", ylab="Frequency of genera") 
 ``` 
@@ -199,12 +216,15 @@ For the next step the R-library vegan is required. It is a set of functions spec
 >  >
 >  > How to load the vegan package ?
 >  >
->  > > ### {% icon solution %} Solution
->  > > ```
+>  > > <details markdown="1">
+>  > > <summary>{% icon solution %} Solution
+>  > > </summary>
+>  > > ```R
 >  > > # load vegan package
 >  > > library(vegan)
 >  > > ```
->  > {: .solution }
+>  > > </details>
+>  >
 >  {: .question }
 {: .hands_on }
 
@@ -217,12 +237,15 @@ Let’s try to put the differences we observed in sample density into numbers. T
 >  >
 >  > How to calculate Shannon diversity index for each sample using the normalized data ? 
 >  >
->  > > ### {% icon solution %} Solution
->  > > ```
+>  > > <details markdown="1">
+>  > > <summary>{% icon solution %} Solution
+>  > > </summary>
+>  > > ```R
 >  > > # calculate Shannon diversity index for each sample using the normalized data 
 >  > > div = apply(M1,2,diversity,index="shannon")
 >  > > ```
->  > {: .solution }
+>  > > </details>
+>  >
 >  {: .question }
 {: .hands_on }
 
@@ -234,15 +257,18 @@ Now we can see in action what these indices are actually doing for us. Plot the 
 >  >
 >  > Find samples with lowest and highest Shannon diversity index and add them to the density plot ? 
 >  >
->  > > ### {% icon solution %} Solution
->  > > ```
+>  > > <details markdown="1">
+>  > > <summary>{% icon solution %} Solution
+>  > > </summary>
+>  > > ```R
 >  > > # find samples with lowest and highest Shannon diversity index and add them to the density plot
 >  > > which.min(div) #should be bl16
 >  > > which.max(div) #should be bl48
 >  > > lines(density(M1[,"bl16"],adjust =0.5),col="blue")
 >  > > lines(density(M1[,"bl48"],adjust =0.5),col="red")&
 >  > > ```
->  > {: .solution }
+>  > > </details>
+>  >
 >  {: .question }
 {: .hands_on }
 
@@ -257,12 +283,15 @@ A different way to normalize the data is to sample exactly equal amounts of 16S 
 >  >
 >  > How to normalize via rarefaction ?
 >  >
->  > > ### {% icon solution %} Solution
->  > > ```
+>  > > <details markdown="1">
+>  > > <summary>{% icon solution %} Solution
+>  > > </summary>
+>  > > ```R
 >  > > # Alternative way of normalization
 >  > > M2 = t(rrarefy(t(M),sample=2000))  #vegan needs transformed matrix, and we need it back-transformed
 >  > > ```
->  > {: .solution }
+>  > > </details>
+>  >
 >  {: .question }
 {: .hands_on }
 
@@ -270,7 +299,7 @@ Use `colSums(M2)` to check if the rarefaction worked. The main use of rarefactio
 
 The concept of observed richness within a sample is pretty simple (but useful): richness describes the number of different species that occur at least once in a sample. This can be calculated in two steps:
 
-```
+```R
 # Species present in sample: TRUE or 1 if species is present, FALSE or 0 if species is absent
 OnceOrMoreOftenPresent = M1>0
 ``` 
@@ -283,26 +312,29 @@ The sum of each column in this matrix will tell us how many species were detecte
 >  >
 >  > How to calculate the sum of each column ?
 >  >
->  > > ### {% icon solution %} Solution
->  > > ```
+>  > > <details markdown="1">
+>  > > <summary>{% icon solution %} Solution
+>  > > </summary>
+>  > > ```R
 >  > > # Calculate sum of each column
 >  > > rich1 = apply(OnceOrMoreOftenPresent,2,sum)
 >  > > ```
->  > {: .solution }
+>  > > </details>
+>  >
 >  {: .question }
 {: .hands_on }
 
 
 Compare the richness values in `rich1` to the richness obtained on the rarefied matrix `M2`, calculated with a shortened command:
 
-```
+```R
 # Calculate number of present species in each sample using the rarefied data
 rich2 = apply(M2>0,2,sum)
 ``` 
 
 Compare rich1 and rich2 in a matrix value by value. We use the `cbind` command to bind two vectors column wise together, so we get a matrix with 2 columns. Order this matrix by the richness values in rich1, using the `order` command and accessing the vector representation with `[]` square brackets.
 
-```
+```R
 # Create new matrix with two columns: rich1 and rich2 and order rows according to rich1 values
 cbind(rich1,rich2)[order(rich1),]
 ```
@@ -324,14 +356,17 @@ Take a guess of how many groups there might be in this clustering?
 >  >
 >  > How to cluster samples and plot results ?
 >  >
->  > > ### {% icon solution %} Solution
->  > > ```
+>  > > <details markdown="1">
+>  > > <summary>{% icon solution %} Solution
+>  > > </summary>
+>  > > ```R
 >  > > # cluster samples and plot results
 >  > > BCD = vegdist(t(M1), dist="bray")
 >  > > cluster = hclust(BCD)
 >  > > plot(cluster)
 >  > > ```
->  > {: .solution }
+>  > > </details>
+>  >
 >  {: .question }
 {: .hands_on }
 
@@ -345,17 +380,20 @@ Start by calculating a 2-dimensional NMDS of the data using M1, using the Bray-C
 >  >
 >  > How to calculate the NMDS ?
 >  >
->  > > ### {% icon solution %} Solution
->  > > ```
+>  > > <details markdown="1">
+>  > > <summary>{% icon solution %} Solution
+>  > > </summary>
+>  > > ```R
 >  > > # calculate NMDS
 >  > > nmds = metaMDS(t(M1),distance = "bray") #actual NMDS command, matrix needs to be transformed to conform with vegan’s standards
 >  > > ```
->  > {: .solution }
+>  > > </details>
+>  >
 >  {: .question }
 {: .hands_on }
 
 Take a look at the `nmds` object and explore some of its features (e.g. type `str(nmds)` to see what variables are stored within the NMDS object). Try to find out what the `stress` of your ordination is. What does stress stand for (tip: go to the R help on metaMDS)? Next we can visualize the NMDS, similar to what you get out of PCA’s, displaying samples only:
-```
+```R
 # plot NMDS
 plot(nmds,display ="sites")
 ```
@@ -364,7 +402,7 @@ The important difference of NMDS compared to PCA is, that NMDS works with any ki
 
 You might have noticed that you see two clusters, similar to the hierarchical clustering of the data. We can get for each sample the identity within the two clusters using the `cutree` commands, specifying k=2 (2 clusters). This can be plotted into the NMDS with the following command:
 
-```
+```R
 # identify clusters
 memb = cutree(cluster, k = 2)
 ordispider(nmds,memb)
@@ -380,12 +418,15 @@ In the last step, we will test for all the genera in the matrix whether they sho
 >  >
 >  > How to test if there is a difference between the two clusters for the first genus ? 
 >  >
->  > > ### {% icon solution %} Solution
->  > > ```
+>  > > <details markdown="1">
+>  > > <summary>{% icon solution %} Solution
+>  > > </summary>
+>  > > ```R
 >  > > # Test if there is a difference between the two clusters for the first genus
 >  > > Kt = kruskal.test(M1[1,],memb)
 >  > > ```
->  > {: .solution }
+>  > > </details>
+>  >
 >  {: .question }
 {: .hands_on }
 
@@ -394,7 +435,7 @@ Look at the output of this function. This will show you a human readable summary
 
 Once you know how, we can start to calculate the significance for every genus in the M1 matrix,. These p-values we will store in a newly created vector `pvals`. Let’s add the first 2 p-values to the vector:
 
-```
+```R
 # Test if there is a difference between the two clusters for the first and second genera. Store p-values in a vector.
 pvals = c()
 pvals[1] = kruskal.test(M1[1,], memb)$p.value
@@ -409,21 +450,24 @@ Since doing this 73 times takes a long time, we will be using a for-loop to `loo
 >  >
 >  > How to test if there is a difference between the two clusters for all genera ? 
 >  >
->  > > ### {% icon solution %} Solution
->  > > ```
+>  > > <details markdown="1">
+>  > > <summary>{% icon solution %} Solution
+>  > > </summary>
+>  > > ```R
 >  > > # Test if there is a difference between the two clusters for all genera
 >  > > for (i in 1:dim(M1)[1])
 >  > > {
 >  > >         pvals[i] = kruskal.test(M1[i,], memb)$p.value
 >  > > }
 >  > > ```
->  > {: .solution }
+>  > > </details>
+>  >
 >  {: .question }
 {: .hands_on }
 
 As an additional help, you can add the name of the taxa to the pvals vector using the names command (that will name a vector):
 
-```
+```R
 # Add names to the vector
 names(pvals) = dimnames(M1)[[1]] 
 ```
@@ -442,19 +486,22 @@ To avoid statistical errors of this kind, we will use a Benjamini-Hochberg multi
 >  >
 >  > How to perform multiple testing correction of p-values using Benjamini-Hochberg method ? 
 >  >
->  > > ### {% icon solution %} Solution
->  > > ```
+>  > > <details markdown="1">
+>  > > <summary>{% icon solution %} Solution
+>  > > </summary>
+>  > > ```R
 >  > > # Multiple testing correction of p-values using Benjamini-Hochberg method
->  > > qvals = p.adjust(pvals,method ="hochberg")
+>  > > qvals = p.adjust(pvals,method = "hochberg")
 >  > > ```
->  > {: .solution }
+>  > > </details>
+>  >
 >  {: .question }
 {: .hands_on }
 
 What do you see in this test? What would you report on this dataset, based on these values?
 
 Try sorting the q-values to see the most significant differences first:
-```
+```R
 # Sorting q-values
 sort(qvals)
 ```

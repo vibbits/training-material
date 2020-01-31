@@ -60,26 +60,32 @@ c(x1,x2)
 > 
 > 1. Create a vector called Plants_with_lesions containing the results of your counts: 1,3,4,2,6
 > 2. Create a vector days containing the days of the week in the following format: Mon, Tues, Wednes, Thurs, Fri.
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  > Plants_with_lesions <- c(1,3,4,2,6)
 >    >  > days <-  c("Mon","Tues","Wednes","Thurs","Fri")
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 {: .hands_on}
 
 
 > ### {% icon hands_on %} Hands-on: Extra exercise 4b
 >
 > Create a vector newVector with the following elements: 2,5,5,3,3,6,2 and print its content.
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  newVector <- c(2,5,5,3,3,6,2)
 >    >  newVector
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 {: .hands_on}
 
 If you need a sequence of consecutive integers you can create it with the **start:end** notation, e.g. a vector with values from 5 through 9
@@ -156,14 +162,17 @@ You tell sample() to return 10 values, each in the range 1:6. Because every roll
 > 1. Create a vector named ID containing numerical values 1,2,3,4
 > 2. Create a vector named treatment containing values A, placebo, B, and a missing value.
 > 3.  Use the rep() function to create a vector called smoking containing booleans true, true, true, and false. Check the documentation and the examples of usage of rep(). 
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  ID <- 1:4
 >    >  treatment <- c("A","placebo","B",NA)
 >    >  smoking <- c(rep(TRUE,3),FALSE)
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 >    > ### {% icon question %} Question
 >    >
 >    >  What will happen when you run this code ?
@@ -183,24 +192,30 @@ You tell sample() to return 10 values, each in the range 1:6. Because every roll
 > ### {% icon hands_on %} Hands-on: Extra exercise 4d
 >
 > Create vector threes consisting of 3,3,3,3,3,3,3 and print the content of threes
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  threes<-rep(3,7)
 >    >  threes
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 {: .hands_on}
 
 > ### {% icon hands_on %} Hands-on: Extra exercise 4e
 >
 > Print ha ha ha ha
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  rep("ha",4) 
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 {: .hands_on}
 
 > ### {% icon comment %} Comment
@@ -264,13 +279,16 @@ Logical operators applied to vectors will result in a vector of the same length 
 > ### {% icon hands_on %} Hands-on: Exercise 5a
 >
 > Create a vector named x containing the numbers 20 to 2. Retrieve elements that are larger than 5 and smaller than 15.
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  x <- 20:2
 >    >  x[x > 5 & x < 15]
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 >    > ### {% icon question %} Question
 >    >
 >    >  What will happen when you run this code ?
@@ -298,13 +316,16 @@ Logical operators applied to vectors will result in a vector of the same length 
 >
 > 1. Retrieve the 4th and 5th elements from the days vector.
 > 2. Retrieve elements from Plants_with_lesions that are larger than 2.
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  days[c(4,5)]
 >    >  Plants_with_lesions[Plants_with_lesions > 2]
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 >    > ### {% icon question %} Question
 >    >
 >    >  What will happen when you run this code ?
@@ -335,13 +356,16 @@ Logical operators applied to vectors will result in a vector of the same length 
 > ### {% icon hands_on %} Hands-on: Extra exercise 5c
 >
 > Create vector y with elements 9,2,4 and retrieve the second element of y.
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  y <-c (9,2,4)
 >    >  y[2] 
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 {: .hands_on}
 
 > ### {% icon hands_on %} Hands-on: Extra exercise 5d
@@ -350,7 +374,9 @@ Logical operators applied to vectors will result in a vector of the same length 
 > 2. Retrieve the 3rd, 4th, 5th, 6th and 7th element
 > 3. Retrieve the 2nd and 4th element
 > 4. Retrieve elements from z that are larger than 100
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  z <- c(1,2,3,4,12,31,2,51,23,1,23,2341,23,512,32,312,123,21,3)
@@ -358,7 +384,8 @@ Logical operators applied to vectors will result in a vector of the same length 
 >    >  z[c(2,4)]
 >    >  z[z > 100] 
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 {: .hands_on}
 
 
@@ -370,13 +397,16 @@ Logical operators applied to vectors will result in a vector of the same length 
 > ### {% icon hands_on %} Hands-on: Extra exercise 5h
 >
 > Retrieve elements from newVector (exercise 4b) that are larger than the corresponding elements of vector threes (exercise 4d).
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  newVector[newVector > threes]
 >    >   
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 {: .hands_on}
 
 #### Removing, changing or adding elements in a vector
@@ -395,13 +425,16 @@ Change or add elements by assigning a new value to that element .
 > ### {% icon hands_on %} Hands-on: Exercise 6a
 >
 > From vector x (exercise 5a) remove the first 8 elements and store the result in x2.
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  x2 <- x[-(1:8)]
 >    >  x2
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 >    > ### {% icon question %} Question
 >    >
 >    >  What will happen when you run this code ?
@@ -416,13 +449,16 @@ Change or add elements by assigning a new value to that element .
 > ### {% icon hands_on %} Hands-on: Extra exercise 6b
 >
 > Retrieve the same elements from z as in exercise 5d2 but first replace the 3rd element by 7.
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  z[3] <- 7
 >    >  z[3:7] 
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 {: .hands_on}
 
 ### Factors
@@ -478,12 +514,15 @@ If the categories are ranked, you have to create an ordered factor, you have to 
 > 1. Create a vector gender with the following elements: Male, Female, male. 
 > 2. Convert gender into a factor with levels: Male and Female
 > 3. Print the content of the factor. What happens?
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  gender <- c("Male","Female","male")
 >    >  gender <- factor(gender,levels=c("Male","Female"))
 >    >  gender
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 {: .hands_on}

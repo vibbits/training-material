@@ -86,19 +86,18 @@ Then choose BFactor in the next window and press 'Apply unique color'.
 
 High BFactors are yellow, low BFactors are blue.
 
-
 > ### {% icon question %} Questions
 >
 > Question: Do you see a correlation between the BFactors and the variability in the structure?
 >
-> > ### {% icon solution %} Solution
-> >
+> > <details markdown="1">
+> > <summary>{% icon solution %} Solution
+> > </summary>
+> > ### A Header
 > > 1. Yes, add explanation here
-> > **TODO**: add image
 > >
-> {: .solution}
->
-{: .question}
+> > **TODO**: add image
+> > </details>
 
 
 # Conclusion

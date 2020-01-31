@@ -73,13 +73,15 @@ In x1 + x2:
 >
 > 1. Calculate log base2 of the activity in Drug_study
 > 2. Round the result to the nearest integer
->    > ### {% icon solution %} Solution
->    >
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >  ```
 >    >  log.act <- (log2(Drug_study$activity))
 >    >  round(log.act)
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 {: .hands_on}
 
 > ### {% icon hands_on %} Hands-on: Extra exercise 13b
@@ -88,8 +90,9 @@ In x1 + x2:
 > 2. Print the content of v
 > 3. Do the same for newVector and vector x2 with elements 3,1
 > 4. Join the elements of newVector and threes into 1 vector q
->    > ### {% icon solution %} Solution
->    >
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >  ```
 >    >  v <- newVector + threes
 >    >  v
@@ -97,20 +100,24 @@ In x1 + x2:
 >    >  newVector + x2 
 >    >   q <- c(newVector,threes)
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 {: .hands_on}
 
 > ### {% icon hands_on %} Hands-on: Exercise 13c
 >
 > 1. Add a column called geneDensity to genomeSize containing the number of bp per gene for every organism 
 > 2. Round the numbers to the nearest integer
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  dens.fl <- genomeSize$size / genomeSize$geneCount
 >    >  genomeSize$geneDensity <- round(dens.fl)
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 {: .hands_on}
 
 Some functions only work on vectors. For instance sort() will sort data from smallest to largest (arguments allow other ordering) and order() returns the indices of the sorted elements:
@@ -183,7 +190,9 @@ Furthermore there are also functions specific for factors. For instance to selec
 > 1. Add these data as a third column to the data frame 
 > 2. Relabel columns to Day, Infected and Repeat
 > 3. Use paste() to add the word ?day? to the elements of the Day column. Look at the documentation first !
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  Plant_study$repeated <- c(1,6,6,5,4)
@@ -191,7 +200,8 @@ Furthermore there are also functions specific for factors. For instance to selec
 >    >  ?paste
 >    >  Plant_study$Day <- paste(Plant_study$Day,"day",sep="")
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 >    > ### {% icon question %} Question
 >    >
 >    >  What will happen when you run this code ?
@@ -206,14 +216,17 @@ Furthermore there are also functions specific for factors. For instance to selec
 > 1. Change the label of the second column of Drug_study to drug
 > 2. How many rows does Drug_study contain?
 > 3. Order the rows according to decreasing activity
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  colnames(Drug_study)[2] <- "drug"
 >    >  nrow(Drug_study)
 >    >  Drug_study[order(Drug_study$activity,decreasing=TRUE),]
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 >    > ### {% icon question %} Question
 >    >
 >    >  What happens when you run this code ?
@@ -250,26 +263,32 @@ Furthermore there are also functions specific for factors. For instance to selec
 > 1. Sort the elements of z from smallest to largest
 > 2. Now use order(z). What's the difference with the previous exercise?
 > 3. How many elements does z contain?
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  sort(z)
 >    >  order(z)
 >    >  length(z) 
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 {: .hands_on}
 
 > ### {% icon hands_on %} Hands-on: Extra exercise 13g
 >
 > Add a new row to data frame ab containing values: 3,4,7
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  d <- c(3,4,7)
 >    >  ab <- rbind(ab,d)
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 {: .hands_on}
 
 > ### {% icon hands_on %} Hands-on: Extra exercise 13h
@@ -278,7 +297,9 @@ Furthermore there are also functions specific for factors. For instance to selec
 > 2. Use levels() to retrieve the names of the Treatment categories
 > 3. Create a contingency table with counts (number of plants) in every category of CO2 that is defined by Type and Treatment
 > 4. Use unique() to count how many plants were studied
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  dim(CO2)
@@ -286,7 +307,8 @@ Furthermore there are also functions specific for factors. For instance to selec
 >    >  table(CO2$Type,CO2$Treatment)
 >    >  length(unique(CO2$Plant))
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 {: .hands_on}
 
 ### Functions helpful for working with large data sets
@@ -299,13 +321,16 @@ Research in biology/medicine often generates very large data sets. When you work
 > 1. View the first 6 rows of the mtcars data frame
 > 2. Return TRUE if mtcars contains cars with 6 gears and FALSE if not
 > 3. How many cars with 3 gears are in mtcars?
-> >   > ### {% icon solution %} Solution
-> >   >  ```
-> >   >  head(mtcars)
-> >   >  nrow(subset(mtcars,gear==6))!=0
-> >   >  nrow(subset(mtcars,gear==3))
-> >   >  ```
-> >   {: .solution}
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
+>    >  ```
+>    >  head(mtcars)
+>    >  nrow(subset(mtcars,gear==6))!=0
+>    >  nrow(subset(mtcars,gear==3))
+>    >  ```
+>    > </details>
+>
 {: .hands_on}
 
 ### Functions for finding indices of specific elements
@@ -330,13 +355,16 @@ which(x != 5)
 > ### {% icon hands_on %} Hands-on: Exercise 15a
 >
 > Get the data of the patient with the highest activity in Drug_study
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  Drug_study[which.max(Drug_study$activity),]
 >    >  
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 >    >    {: .question}
 >    > ### {% icon question %} Question
 >    >
@@ -352,7 +380,9 @@ which(x != 5)
 >
 > 1. Get the index of the column called cyl in mtcars
 > 2. Create a data frame that contains the car with the lowest mpg for each category of cyl
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  which(names(mtcars)=="cyl")
@@ -362,7 +392,8 @@ which(x != 5)
 >    >  C8m <- mtcars[order(-mtcars$cyl,mtcars$mpg),][1,]
 >    >  rbind(C4m,C6m,C8m)
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 {: .hands_on}
 
 ### Checking and converting types of variables
@@ -418,7 +449,9 @@ as.data.frame() etc.
 > 2. What type of data is Plant_study ?
 > 3. Convert Plant_study into a matrix called PS
 > 4. Did the conversion work? Look at the matrix to see if there is a problem. 
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  Plant_study$Days <- as.Date(c("2019-01-09","2019-01-10","2019-01-11","2019-01-12","2019-01-13"))
@@ -426,7 +459,8 @@ as.data.frame() etc.
 >    >  PS <- as.matrix(Plant_study)
 >    >  PS
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 {: .hands_on}
 
 > ### {% icon hands_on %} Hands-on: Extra exercise 16b
@@ -434,14 +468,17 @@ as.data.frame() etc.
 > 1. Check the data type of the second column of Drug_study. Retrieve the column using a comma.
 > 2. Convert the second column into a vector. 
 > 3. What is different now? Look at the vector.
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  class(Drug_study[,2])
 >    >  v <- as.vector(Drug_study[,2])
 >    >  v
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 {: .hands_on}
 
 > ### {% icon hands_on %} Hands-on: Exercise 16c
@@ -451,7 +488,9 @@ as.data.frame() etc.
 > 2. Multiply all elements with 2. What happens?
 > 3. Check if the 2nd element is missing
 > 4. Delete the missing value using is.na() and the strategy above
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  x <- c(1,2,3,NA)
@@ -459,7 +498,8 @@ as.data.frame() etc.
 >    >  is.na(x[2])
 >    >  x[!is.na(x)]
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 {: .hands_on}
 
 > ### {% icon hands_on %} Hands-on: Extra exercise 16d
@@ -468,7 +508,9 @@ as.data.frame() etc.
 > 2. Check if z contains numbers or characters
 > 3. Convert z into a matrix
 > 4. Convert the elements of z into characters
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  is.vector(z)
@@ -478,20 +520,24 @@ as.data.frame() etc.
 >    >  as.matrix(z) 
 >    >  as.character(z)
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 {: .hands_on}
 
 > ### {% icon hands_on %} Hands-on: Extra exercise 16e
 >
 > 1. Create a vector called words containing Hello, Hi 
 > 2. Convert the words into numbers. What happens?
->    > ### {% icon solution %} Solution
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
 >    >  ```
 >    >  words <- c("Hello","Hi")
 >    >  as.numeric(words) 
 >    >  ```
->    {: .solution}
+>    > </details>
+>
 {: .hands_on}
 
 R is smart enough to catch you if you try to do an illogical conversion, such as convert characters to numbers. It does the conversion but the data is converted to NA values.
