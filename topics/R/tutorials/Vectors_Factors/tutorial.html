@@ -291,28 +291,36 @@ c(x1,x2)
   <ol>
     <li>Create a vector called Plants_with_lesions containing the results of your counts: 1,3,4,2,6</li>
     <li>Create a vector days containing the days of the week in the following format: Mon, Tues, Wednes, Thurs, Fri.
-      <blockquote class="solution">
-        <h3 id="solution-solution"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+      <blockquote>
+        <details>
+          <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
 
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &gt; Plants_with_lesions &lt;- c(1,3,4,2,6)
+          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &gt; Plants_with_lesions &lt;- c(1,3,4,2,6)
  &gt; days &lt;-  c("Mon","Tues","Wednes","Thurs","Fri")
-</code></pre></div>        </div>
+</code></pre></div>          </div>
+        </details>
       </blockquote>
     </li>
   </ol>
+
 </blockquote>
 
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-hands-on-extra-exercise-4b"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Extra exercise 4b</h3>
 
   <p>Create a vector newVector with the following elements: 2,5,5,3,3,6,2 and print its content.</p>
-  <blockquote class="solution">
-    <h3 id="solution-solution-1"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+  <blockquote>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
 
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> newVector &lt;- c(2,5,5,3,3,6,2)
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> newVector &lt;- c(2,5,5,3,3,6,2)
  newVector
-</code></pre></div>    </div>
+</code></pre></div>      </div>
+    </details>
   </blockquote>
+
 </blockquote>
 
 <p>If you need a sequence of consecutive integers you can create it with the <strong>start:end</strong> notation, e.g. a vector with values from 5 through 9</p>
@@ -389,20 +397,24 @@ c(x1,x2)
 
   <p>For a study checking the effect of a drug on a disease, we want to store patient info.</p>
 
-  <ol class="solution">
+  <ol>
     <li>Create a vector named ID containing numerical values 1,2,3,4</li>
     <li>Create a vector named treatment containing values A, placebo, B, and a missing value.</li>
     <li>Use the rep() function to create a vector called smoking containing booleans true, true, true, and false. Check the documentation and the examples of usage of rep().
       <blockquote>
-        <h3 id="solution-solution-2"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+        <details>
+          <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
 
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ID &lt;- 1:4
+          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ID &lt;- 1:4
  treatment &lt;- c("A","placebo","B",NA)
  smoking &lt;- c(rep(TRUE,3),FALSE)
-</code></pre></div>        </div>
+</code></pre></div>          </div>
+        </details>
       </blockquote>
     </li>
   </ol>
+
   <blockquote class="question">
     <h3 id="question-question"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
@@ -423,25 +435,33 @@ c(x1,x2)
   <h3 id="hands_on-hands-on-extra-exercise-4d"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Extra exercise 4d</h3>
 
   <p>Create vector threes consisting of 3,3,3,3,3,3,3 and print the content of threes</p>
-  <blockquote class="solution">
-    <h3 id="solution-solution-3"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+  <blockquote>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
 
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> threes&lt;-rep(3,7)
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> threes&lt;-rep(3,7)
  threes
-</code></pre></div>    </div>
+</code></pre></div>      </div>
+    </details>
   </blockquote>
+
 </blockquote>
 
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-hands-on-extra-exercise-4e"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Extra exercise 4e</h3>
 
   <p>Print ha ha ha ha</p>
-  <blockquote class="solution">
-    <h3 id="solution-solution-4"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+  <blockquote>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
 
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> rep("ha",4) 
-</code></pre></div>    </div>
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> rep("ha",4) 
+</code></pre></div>      </div>
+    </details>
   </blockquote>
+
 </blockquote>
 
 <blockquote class="comment">
@@ -505,13 +525,17 @@ x[x &lt; 4]
   <h3 id="hands_on-hands-on-exercise-5a"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 5a</h3>
 
   <p>Create a vector named x containing the numbers 20 to 2. Retrieve elements that are larger than 5 and smaller than 15.</p>
-  <blockquote class="solution">
-    <h3 id="solution-solution-5"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+  <blockquote>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
 
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> x &lt;- 20:2
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> x &lt;- 20:2
  x[x &gt; 5 &amp; x &lt; 15]
-</code></pre></div>    </div>
+</code></pre></div>      </div>
+    </details>
   </blockquote>
+
   <blockquote class="question">
     <h3 id="question-question-2"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
@@ -541,13 +565,17 @@ x[x &lt; 4]
   <ol>
     <li>Retrieve the 4th and 5th elements from the days vector.</li>
     <li>Retrieve elements from Plants_with_lesions that are larger than 2.
-      <blockquote class="solution">
-        <h3 id="solution-solution-6"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+      <blockquote>
+        <details>
+          <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
 
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> days[c(4,5)]
+          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> days[c(4,5)]
  Plants_with_lesions[Plants_with_lesions &gt; 2]
-</code></pre></div>        </div>
+</code></pre></div>          </div>
+        </details>
       </blockquote>
+
       <blockquote class="question">
         <h3 id="question-question-5"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
@@ -580,13 +608,17 @@ x[x &lt; 4]
   <h3 id="hands_on-hands-on-extra-exercise-5c"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Extra exercise 5c</h3>
 
   <p>Create vector y with elements 9,2,4 and retrieve the second element of y.</p>
-  <blockquote class="solution">
-    <h3 id="solution-solution-7"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+  <blockquote>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
 
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> y &lt;-c (9,2,4)
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> y &lt;-c (9,2,4)
  y[2] 
-</code></pre></div>    </div>
+</code></pre></div>      </div>
+    </details>
   </blockquote>
+
 </blockquote>
 
 <blockquote class="notranslate hands_on">
@@ -597,17 +629,21 @@ x[x &lt; 4]
     <li>Retrieve the 3rd, 4th, 5th, 6th and 7th element</li>
     <li>Retrieve the 2nd and 4th element</li>
     <li>Retrieve elements from z that are larger than 100
-      <blockquote class="solution">
-        <h3 id="solution-solution-8"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+      <blockquote>
+        <details>
+          <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
 
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> z &lt;- c(1,2,3,4,12,31,2,51,23,1,23,2341,23,512,32,312,123,21,3)
+          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> z &lt;- c(1,2,3,4,12,31,2,51,23,1,23,2341,23,512,32,312,123,21,3)
  z[3:7] 
  z[c(2,4)]
  z[z &gt; 100] 
-</code></pre></div>        </div>
+</code></pre></div>          </div>
+        </details>
       </blockquote>
     </li>
   </ol>
+
 </blockquote>
 
 <blockquote class="notranslate hands_on">
@@ -620,13 +656,17 @@ x[x &lt; 4]
   <h3 id="hands_on-hands-on-extra-exercise-5h"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Extra exercise 5h</h3>
 
   <p>Retrieve elements from newVector (exercise 4b) that are larger than the corresponding elements of vector threes (exercise 4d).</p>
-  <blockquote class="solution">
-    <h3 id="solution-solution-9"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+  <blockquote>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
 
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> newVector[newVector &gt; threes]
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> newVector[newVector &gt; threes]
   
-</code></pre></div>    </div>
+</code></pre></div>      </div>
+    </details>
   </blockquote>
+
 </blockquote>
 
 <h4 id="removing-changing-or-adding-elements-in-a-vector">Removing, changing or adding elements in a vector</h4>
@@ -646,13 +686,17 @@ x[x &lt; 4]
   <h3 id="hands_on-hands-on-exercise-6a"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 6a</h3>
 
   <p>From vector x (exercise 5a) remove the first 8 elements and store the result in x2.</p>
-  <blockquote class="solution">
-    <h3 id="solution-solution-10"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+  <blockquote>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
 
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> x2 &lt;- x[-(1:8)]
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> x2 &lt;- x[-(1:8)]
  x2
-</code></pre></div>    </div>
+</code></pre></div>      </div>
+    </details>
   </blockquote>
+
   <blockquote class="question">
     <h3 id="question-question-8"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
@@ -667,13 +711,17 @@ x[x &lt; 4]
   <h3 id="hands_on-hands-on-extra-exercise-6b"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Extra exercise 6b</h3>
 
   <p>Retrieve the same elements from z as in exercise 5d2 but first replace the 3rd element by 7.</p>
-  <blockquote class="solution">
-    <h3 id="solution-solution-11"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+  <blockquote>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
 
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> z[3] &lt;- 7
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> z[3] &lt;- 7
  z[3:7] 
-</code></pre></div>    </div>
+</code></pre></div>      </div>
+    </details>
   </blockquote>
+
 </blockquote>
 
 <h3 id="factors">Factors</h3>
@@ -736,16 +784,20 @@ f
     <li>Create a vector gender with the following elements: Male, Female, male.</li>
     <li>Convert gender into a factor with levels: Male and Female</li>
     <li>Print the content of the factor. What happens?
-      <blockquote class="solution">
-        <h3 id="solution-solution-12"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+      <blockquote>
+        <details>
+          <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
 
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> gender &lt;- c("Male","Female","male")
+          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> gender &lt;- c("Male","Female","male")
  gender &lt;- factor(gender,levels=c("Male","Female"))
  gender
-</code></pre></div>        </div>
+</code></pre></div>          </div>
+        </details>
       </blockquote>
     </li>
   </ol>
+
 </blockquote>
 
 

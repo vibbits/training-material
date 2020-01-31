@@ -286,30 +286,34 @@
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-exercise-toppgene"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Exercise ToppGene</h3>
   <p>How to do functional enrichment analysis with ToppFun ?</p>
-  <blockquote class="solution">
-    <h3 id="solution-answer"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> answer</h3>
-    <ul>
-      <li>On the <a href="https://toppgene.cchmc.org/">ToppGene</a> page click the first link <strong><a href="https://toppgene.cchmc.org/enrichment.jsp">ToppFun</a>: Transcriptome, ontology, phenotype, proteome…</strong></li>
-      <li>Enter gene symbols or Ensembl IDs in the box <strong>Training Gene Set</strong></li>
-      <li>Click <strong>Submit Query</strong></li>
-      <li>If the gene list contains non-approved symbols or duplicates, they are listed under <strong>Genes Not found</strong>.</li>
-    </ul>
+  <blockquote>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> answer
+</summary>
+      <ul>
+        <li>On the <a href="https://toppgene.cchmc.org/">ToppGene</a> page click the first link <strong><a href="https://toppgene.cchmc.org/enrichment.jsp">ToppFun</a>: Transcriptome, ontology, phenotype, proteome…</strong></li>
+        <li>Enter gene symbols or Ensembl IDs in the box <strong>Training Gene Set</strong></li>
+        <li>Click <strong>Submit Query</strong></li>
+        <li>If the gene list contains non-approved symbols or duplicates, they are listed under <strong>Genes Not found</strong>.</li>
+      </ul>
 
-    <p><img src="../../images/FunTopp_NF.png" alt="ToppGene_Not_Found" /></p>
-    <ul>
-      <li>In the section <strong>Calculations</strong> select the functional annotation types you want to test (all in our case) and select the multiple correction method (default FDR is ok) and the significance cut-off level (default 0.05 is ok)</li>
-      <li>Click <strong>Start</strong></li>
-      <li><strong>Input Parameters</strong> summarizes the input parameters of the search. Click the <strong>Show Detail</strong> (red) link to see them.</li>
-      <li><strong>Training results</strong> contains the enrichment analysis results. <strong>Download all</strong> (blue) will download the analysis results as a text file.</li>
-      <li>Click the <strong>Display chart</strong> (green) link to visualize the results</li>
-    </ul>
+      <p><img src="../../images/FunTopp_NF.png" alt="ToppGene_Not_Found" /></p>
+      <ul>
+        <li>In the section <strong>Calculations</strong> select the functional annotation types you want to test (all in our case) and select the multiple correction method (default FDR is ok) and the significance cut-off level (default 0.05 is ok)</li>
+        <li>Click <strong>Start</strong></li>
+        <li><strong>Input Parameters</strong> summarizes the input parameters of the search. Click the <strong>Show Detail</strong> (red) link to see them.</li>
+        <li><strong>Training results</strong> contains the enrichment analysis results. <strong>Download all</strong> (blue) will download the analysis results as a text file.</li>
+        <li>Click the <strong>Display chart</strong> (green) link to visualize the results</li>
+      </ul>
 
-    <p><img src="../../images/FunTopp_Results.png" alt="ToppGene_Results" /></p>
-    <ul>
-      <li>If you want to see which genes from your list belong to a certain annotation click the number in the <strong>Genes from innput</strong> column</li>
-    </ul>
+      <p><img src="../../images/FunTopp_Results.png" alt="ToppGene_Results" /></p>
+      <ul>
+        <li>If you want to see which genes from your list belong to a certain annotation click the number in the <strong>Genes from innput</strong> column</li>
+      </ul>
 
+    </details>
   </blockquote>
+
 </blockquote>
 
 <h4 id="enrichr-longest-list-of-resources-but-not-so-up-to-date">Enrichr: longest list of resources but not so up-to-date</h4>
@@ -330,10 +334,14 @@
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-exercise-2-enrichr"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Exercise 2 Enrichr</h3>
   <p>How to visualize the results for KEGG pathways as a bar chart ?</p>
-  <blockquote class="solution">
-    <h3 id="solution-answer-1"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> answer</h3>
-    <p>Go to the <strong>Pathways</strong> tab and expand the results for <strong>KEGG</strong> as a bar chart.</p>
+  <blockquote>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> answer
+</summary>
+      <p>Go to the <strong>Pathways</strong> tab and expand the results for <strong>KEGG</strong> as a bar chart.</p>
+    </details>
   </blockquote>
+
 </blockquote>
 
 <p>The bar charts are interactive: hover your mouse over the bars to see the enrichment scores. Clicking the bars will order the terms according to different scores.</p>
@@ -352,14 +360,18 @@
   <h3 id="hands_on-exercise-3-enrichr"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Exercise 3 Enrichr</h3>
   <p>How to obtain the table containing the actual scores ?
 Sort the terms according to adjusted p-value</p>
-  <blockquote class="solution">
-    <h3 id="solution-answer-2"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> answer</h3>
-    <ul>
-      <li>If you want to see the actual scores click the <strong>Table</strong> tab</li>
-      <li>Click the name of the column you want to use for sorting</li>
-    </ul>
+  <blockquote>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> answer
+</summary>
+      <ul>
+        <li>If you want to see the actual scores click the <strong>Table</strong> tab</li>
+        <li>Click the name of the column you want to use for sorting</li>
+      </ul>
 
+    </details>
   </blockquote>
+
 </blockquote>
 
 <blockquote class="notranslate hands_on">
@@ -371,14 +383,18 @@ Sort the terms according to adjusted p-value</p>
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-exercise-5-enrichr"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Exercise 5 Enrichr</h3>
   <p>How to visualize enriched Transfac and Jaspar TFBS as a network ?</p>
-  <blockquote class="solution">
-    <h3 id="solution-answer-3"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> answer</h3>
-    <ul>
-      <li>Go to the <strong>Transcription</strong> tab and click <strong>TRANSFAC and JASPAR PWMs</strong></li>
-      <li>Visualize the results as a network by clicking then <strong>Network</strong> tab</li>
-    </ul>
+  <blockquote>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> answer
+</summary>
+      <ul>
+        <li>Go to the <strong>Transcription</strong> tab and click <strong>TRANSFAC and JASPAR PWMs</strong></li>
+        <li>Visualize the results as a network by clicking then <strong>Network</strong> tab</li>
+      </ul>
 
+    </details>
   </blockquote>
+
 </blockquote>
 
 <p>Each node in the network represents a term (in this case a Transcription Factor) and a link between two nodes means that the 2 transcription factors have some genes from the list in common. the genes are linked to both transcription factors. Since these transcription factors share target genes from the list they might interact to regulate the process you’re studying.</p>
@@ -392,19 +408,23 @@ Sort the terms according to adjusted p-value</p>
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-exercise-1-webgestalt"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Exercise 1 WebGestalt</h3>
   <p>How to calculate enrichment of KEGG pathways in a list of genes ?</p>
-  <blockquote class="solution">
-    <h3 id="solution-answer-4"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> answer</h3>
-    <ul>
-      <li>In the <strong>Organism</strong> box select the correct organism</li>
-      <li>In the <strong>Method</strong> box select <strong>Over-Representation Analysis</strong></li>
-      <li>In the <strong>Functional Database</strong> boxes select <strong>pathway</strong> and <strong>KEGG</strong></li>
-      <li>In the <strong>Gene ID type</strong> box select the correct ID type</li>
-      <li>Upload the list of IDs</li>
-      <li>In the <strong>Select Reference Set</strong> box select the correct background, for lists generated by RNA-Seq experiments <strong>genome, protein-coding</strong> is a good choice because that is what you have measured</li>
-      <li>Click the <strong>Submit</strong> button</li>
-    </ul>
+  <blockquote>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> answer
+</summary>
+      <ul>
+        <li>In the <strong>Organism</strong> box select the correct organism</li>
+        <li>In the <strong>Method</strong> box select <strong>Over-Representation Analysis</strong></li>
+        <li>In the <strong>Functional Database</strong> boxes select <strong>pathway</strong> and <strong>KEGG</strong></li>
+        <li>In the <strong>Gene ID type</strong> box select the correct ID type</li>
+        <li>Upload the list of IDs</li>
+        <li>In the <strong>Select Reference Set</strong> box select the correct background, for lists generated by RNA-Seq experiments <strong>genome, protein-coding</strong> is a good choice because that is what you have measured</li>
+        <li>Click the <strong>Submit</strong> button</li>
+      </ul>
 
+    </details>
   </blockquote>
+
 </blockquote>
 
 <p>The <strong>Enrichment results</strong> can be visualized as a table, a bar chart or a Volcano plot. Dark blue bars are considered significantly enriched.</p>
@@ -436,20 +456,24 @@ Sort the terms according to adjusted p-value</p>
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-exercise-1-gprofiler"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Exercise 1 g:Profiler</h3>
   <p>How to calculate enrichment in a list of genes ?</p>
-  <blockquote class="solution">
-    <h3 id="solution-answer-5"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> answer</h3>
-    <ul>
-      <li>For Enrichment analysis you need to use the <strong>g:GOSt</strong> tool.</li>
-      <li><strong>Upload query</strong>: a file with gene IDs (in this example Ensembl IDs - one per line).</li>
-      <li>In the <strong>Functional Database</strong> boxes select <strong>pathway</strong> and <strong>KEGG</strong></li>
-      <li>In the <strong>Gene ID type</strong> box select the correct ID type</li>
-      <li>Select the <strong>Organism</strong> you need</li>
-      <li>Click the <strong>Run query</strong> button</li>
-    </ul>
+  <blockquote>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> answer
+</summary>
+      <ul>
+        <li>For Enrichment analysis you need to use the <strong>g:GOSt</strong> tool.</li>
+        <li><strong>Upload query</strong>: a file with gene IDs (in this example Ensembl IDs - one per line).</li>
+        <li>In the <strong>Functional Database</strong> boxes select <strong>pathway</strong> and <strong>KEGG</strong></li>
+        <li>In the <strong>Gene ID type</strong> box select the correct ID type</li>
+        <li>Select the <strong>Organism</strong> you need</li>
+        <li>Click the <strong>Run query</strong> button</li>
+      </ul>
 
-    <p><img src="../../images/FungP_Interface.png" alt="g:Profiler_Interface" /></p>
+      <p><img src="../../images/FungP_Interface.png" alt="g:Profiler_Interface" /></p>
 
+    </details>
   </blockquote>
+
 </blockquote>
 
 <p>This tool produces visually attractive results. Every dot in the graph represents a functional annotation. Hover your mouse over a dot to show details like the name of the annotation and the corrected p-value.</p>
@@ -523,25 +547,28 @@ The second line should be: number_of_genes tab number_of_samples</p>
   <h3 id="hands_on-exercise-1-gsea"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Exercise 1 GSEA</h3>
   <p>How to perform GSEA on a full list of genes with normalized counts ?</p>
   <blockquote>
-    <h3 id="solution-answer-6"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> answer</h3>
-    <ul>
-      <li><strong>Load</strong> the <strong>data</strong> into GSEA. Load both the .gct and the .cls file.</li>
-      <li><strong>Run GSEA</strong>: fill in the parameter settings. Click the question mark (red) on the bottom of the page to view descriptions of these parameters.</li>
-      <li>Use the <strong>GO: all</strong> (green) gene set</li>
-      <li>Use 10 <strong>permutations</strong> (green). If all goes well, repeat the analysis with 1000 permutations.</li>
-      <li>Select <strong>Collapse</strong> (blue): this is necessary for RNA-Seq data to associate the gene IDs of your list to the probes of the chip platform</li>
-      <li>Use <strong>gene set permutations</strong> (blue). Broad advises phenotype permutations (group labels will be shuffled to create random data to compare with) but they will only work when you have at least 7 samples per group.</li>
-      <li>Choose <strong>Human_ENSEMBL_Gene_ID_MSigDB.vX.chip</strong> as <strong>ChIP Platform</strong> (blue). Although you didn’t actually do chips (microarrays) he needs to map the Ensembl Gene IDs in the data file to functional annotations.</li>
-      <li>Click the <strong>Run</strong> button at the bottom of the page.</li>
-    </ul>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> answer
+</summary>
+      <ul>
+        <li><strong>Load</strong> the <strong>data</strong> into GSEA. Load both the .gct and the .cls file.</li>
+        <li><strong>Run GSEA</strong>: fill in the parameter settings. Click the question mark (red) on the bottom of the page to view descriptions of these parameters.</li>
+        <li>Use the <strong>GO: all</strong> (green) gene set</li>
+        <li>Use 10 <strong>permutations</strong> (green). If all goes well, repeat the analysis with 1000 permutations.</li>
+        <li>Select <strong>Collapse</strong> (blue): this is necessary for RNA-Seq data to associate the gene IDs of your list to the probes of the chip platform</li>
+        <li>Use <strong>gene set permutations</strong> (blue). Broad advises phenotype permutations (group labels will be shuffled to create random data to compare with) but they will only work when you have at least 7 samples per group.</li>
+        <li>Choose <strong>Human_ENSEMBL_Gene_ID_MSigDB.vX.chip</strong> as <strong>ChIP Platform</strong> (blue). Although you didn’t actually do chips (microarrays) he needs to map the Ensembl Gene IDs in the data file to functional annotations.</li>
+        <li>Click the <strong>Run</strong> button at the bottom of the page.</li>
+      </ul>
 
-    <p><img src="../../images/FunGSEA_Interface.png" alt="GSEA_Interface" />
+      <p><img src="../../images/FunGSEA_Interface.png" alt="GSEA_Interface" />
 In the left lower corner of the user interface there’s a section called <strong>GSEA reports</strong>. It shows the status of analyses run in this session, including the currently running analysis:</p>
 
-    <p><img src="../../images/FunGSEA_Status.png" alt="GSEA_Status" />
-Click the green text to display the results in a browser. 
-   {: .solution)</p>
+      <p><img src="../../images/FunGSEA_Status.png" alt="GSEA_Status" />
+Click the green text to display the results in a browser.</p>
+    </details>
   </blockquote>
+
 </blockquote>
 
 <h3 id="resources-of-functional-annotation">Resources of functional annotation</h3>

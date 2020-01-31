@@ -1,14 +1,3 @@
-// Handle foldable challenges and solutions (on click and at start).
-$(".solution>h3,.details>h3,.tip>h3").click(function(event) {
-    $(">*:not(h3)", $(this).parent()).toggle(400);
-    $(">span.fold-unfold", this).toggleClass("fa-plus-square fa-minus-square");
-});
-
-$(".solution,.details,.tip").each(function() {
-    $(">*:not(h3)", this).toggle();
-    var h3 = $("h3:first", this);
-    h3.append("<span class='fold-unfold fa fa-plus-square'></span>");
-});
 
 (function (window, document) {
     function onDocumentReady(fn) {
@@ -20,6 +9,11 @@ $(".solution,.details,.tip").each(function() {
     }
 
     onDocumentReady(function () {
+        $("details>summary").append("<span class='fold-unfold fa fa-plus-square'></span>")
+        .click(function(event){$(">span.fold-unfold", this)
+                               .toggleClass("fa-plus-square fa-minus-square");})
+
+
         // If you pass `?with-answers` to an URL, it will automatically open
         // the `<details>` blocks (i.e. the Q&A sections most of the time).
         if (window.location.search.match(/\?with-answers/gi)) {

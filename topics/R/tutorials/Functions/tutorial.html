@@ -304,15 +304,18 @@ In x1 + x2:
   <ol>
     <li>Calculate log base2 of the activity in Drug_study</li>
     <li>Round the result to the nearest integer
-      <blockquote class="solution">
-        <h3 id="solution-solution"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
-
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> log.act &lt;- (log2(Drug_study$activity))
+      <blockquote>
+        <details>
+          <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
+          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> log.act &lt;- (log2(Drug_study$activity))
  round(log.act)
-</code></pre></div>        </div>
+</code></pre></div>          </div>
+        </details>
       </blockquote>
     </li>
   </ol>
+
 </blockquote>
 
 <blockquote class="notranslate hands_on">
@@ -323,18 +326,21 @@ In x1 + x2:
     <li>Print the content of v</li>
     <li>Do the same for newVector and vector x2 with elements 3,1</li>
     <li>Join the elements of newVector and threes into 1 vector q
-      <blockquote class="solution">
-        <h3 id="solution-solution-1"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
-
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> v &lt;- newVector + threes
+      <blockquote>
+        <details>
+          <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
+          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> v &lt;- newVector + threes
  v
  x2 &lt;- c(3,1)
  newVector + x2 
   q &lt;- c(newVector,threes)
-</code></pre></div>        </div>
+</code></pre></div>          </div>
+        </details>
       </blockquote>
     </li>
   </ol>
+
 </blockquote>
 
 <blockquote class="notranslate hands_on">
@@ -343,15 +349,19 @@ In x1 + x2:
   <ol>
     <li>Add a column called geneDensity to genomeSize containing the number of bp per gene for every organism</li>
     <li>Round the numbers to the nearest integer
-      <blockquote class="solution">
-        <h3 id="solution-solution-2"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+      <blockquote>
+        <details>
+          <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
 
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> dens.fl &lt;- genomeSize$size / genomeSize$geneCount
+          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> dens.fl &lt;- genomeSize$size / genomeSize$geneCount
  genomeSize$geneDensity &lt;- round(dens.fl)
-</code></pre></div>        </div>
+</code></pre></div>          </div>
+        </details>
       </blockquote>
     </li>
   </ol>
+
 </blockquote>
 
 <p>Some functions only work on vectors. For instance sort() will sort data from smallest to largest (arguments allow other ordering) and order() returns the indices of the sorted elements:</p>
@@ -424,15 +434,19 @@ To sort a data frame use order() inside square brackets:</p>
     <li>Add these data as a third column to the data frame</li>
     <li>Relabel columns to Day, Infected and Repeat</li>
     <li>Use paste() to add the word ?day? to the elements of the Day column. Look at the documentation first !
-      <blockquote class="solution">
-        <h3 id="solution-solution-3"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+      <blockquote>
+        <details>
+          <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
 
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Plant_study$repeated &lt;- c(1,6,6,5,4)
+          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Plant_study$repeated &lt;- c(1,6,6,5,4)
  names(Plant_study) &lt;- c("Day","Infected","Repeat")
  ?paste
  Plant_study$Day &lt;- paste(Plant_study$Day,"day",sep="")
-</code></pre></div>        </div>
+</code></pre></div>          </div>
+        </details>
       </blockquote>
+
       <blockquote class="question">
         <h3 id="question-question"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
@@ -451,14 +465,18 @@ To sort a data frame use order() inside square brackets:</p>
     <li>Change the label of the second column of Drug_study to drug</li>
     <li>How many rows does Drug_study contain?</li>
     <li>Order the rows according to decreasing activity
-      <blockquote class="solution">
-        <h3 id="solution-solution-4"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+      <blockquote>
+        <details>
+          <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
 
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> colnames(Drug_study)[2] &lt;- "drug"
+          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> colnames(Drug_study)[2] &lt;- "drug"
  nrow(Drug_study)
  Drug_study[order(Drug_study$activity,decreasing=TRUE),]
-</code></pre></div>        </div>
+</code></pre></div>          </div>
+        </details>
       </blockquote>
+
       <blockquote class="question">
         <h3 id="question-question-1"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
@@ -499,29 +517,37 @@ To sort a data frame use order() inside square brackets:</p>
     <li>Sort the elements of z from smallest to largest</li>
     <li>Now use order(z). What’s the difference with the previous exercise?</li>
     <li>How many elements does z contain?
-      <blockquote class="solution">
-        <h3 id="solution-solution-5"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+      <blockquote>
+        <details>
+          <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
 
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> sort(z)
+          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> sort(z)
  order(z)
  length(z) 
-</code></pre></div>        </div>
+</code></pre></div>          </div>
+        </details>
       </blockquote>
     </li>
   </ol>
+
 </blockquote>
 
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-hands-on-extra-exercise-13g"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Extra exercise 13g</h3>
 
   <p>Add a new row to data frame ab containing values: 3,4,7</p>
-  <blockquote class="solution">
-    <h3 id="solution-solution-6"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+  <blockquote>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
 
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> d &lt;- c(3,4,7)
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> d &lt;- c(3,4,7)
  ab &lt;- rbind(ab,d)
-</code></pre></div>    </div>
+</code></pre></div>      </div>
+    </details>
   </blockquote>
+
 </blockquote>
 
 <blockquote class="notranslate hands_on">
@@ -532,17 +558,21 @@ To sort a data frame use order() inside square brackets:</p>
     <li>Use levels() to retrieve the names of the Treatment categories</li>
     <li>Create a contingency table with counts (number of plants) in every category of CO2 that is defined by Type and Treatment</li>
     <li>Use unique() to count how many plants were studied
-      <blockquote class="solution">
-        <h3 id="solution-solution-7"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+      <blockquote>
+        <details>
+          <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
 
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> dim(CO2)
+          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> dim(CO2)
  levels(CO2$Treatment)
  table(CO2$Type,CO2$Treatment)
  length(unique(CO2$Plant))
-</code></pre></div>        </div>
+</code></pre></div>          </div>
+        </details>
       </blockquote>
     </li>
   </ol>
+
 </blockquote>
 
 <h3 id="functions-helpful-for-working-with-large-data-sets">Functions helpful for working with large data sets</h3>
@@ -560,16 +590,18 @@ To sort a data frame use order() inside square brackets:</p>
     <li>Return TRUE if mtcars contains cars with 6 gears and FALSE if not</li>
     <li>How many cars with 3 gears are in mtcars?
       <blockquote>
-        <blockquote class="solution">
-          <h3 id="solution-solution-8"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+        <details>
+          <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
           <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> head(mtcars)
  nrow(subset(mtcars,gear==6))!=0
  nrow(subset(mtcars,gear==3))
 </code></pre></div>          </div>
-        </blockquote>
+        </details>
       </blockquote>
     </li>
   </ol>
+
 </blockquote>
 
 <h3 id="functions-for-finding-indices-of-specific-elements">Functions for finding indices of specific elements</h3>
@@ -593,13 +625,17 @@ which(x != 5)
   <h3 id="hands_on-hands-on-exercise-15a"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 15a</h3>
 
   <p>Get the data of the patient with the highest activity in Drug_study</p>
-  <blockquote class="solution">
-    <h3 id="solution-solution-9"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+  <blockquote>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
 
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Drug_study[which.max(Drug_study$activity),]
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Drug_study[which.max(Drug_study$activity),]
  
-</code></pre></div>    </div>
+</code></pre></div>      </div>
+    </details>
   </blockquote>
+
   <blockquote class="question">
     <h3 class="question" id="question-question-5"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
@@ -616,19 +652,23 @@ which(x != 5)
   <ol>
     <li>Get the index of the column called cyl in mtcars</li>
     <li>Create a data frame that contains the car with the lowest mpg for each category of cyl
-      <blockquote class="solution">
-        <h3 id="solution-solution-10"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+      <blockquote>
+        <details>
+          <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
 
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> which(names(mtcars)=="cyl")
+          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> which(names(mtcars)=="cyl")
  C4m &lt;- mtcars[order(mtcars$cyl,mtcars$mpg),][1,]
  C6 &lt;- subset(mtcars,cyl==6)
  C6m &lt;- C6[which.min(C6$mpg),]
  C8m &lt;- mtcars[order(-mtcars$cyl,mtcars$mpg),][1,]
  rbind(C4m,C6m,C8m)
-</code></pre></div>        </div>
+</code></pre></div>          </div>
+        </details>
       </blockquote>
     </li>
   </ol>
+
 </blockquote>
 
 <h3 id="checking-and-converting-types-of-variables">Checking and converting types of variables</h3>
@@ -678,24 +718,28 @@ as.data.frame() etc.</p>
   <ul>
     <li>define the date as a string in the following format: 1970-01-01</li>
     <li>transform the string into a date by using as.Date()
-      <ol class="solution">
+      <ol>
         <li>Replace the days of the week by the dates of this week</li>
         <li>What type of data is Plant_study ?</li>
         <li>Convert Plant_study into a matrix called PS</li>
         <li>Did the conversion work? Look at the matrix to see if there is a problem.
           <blockquote>
-            <h3 id="solution-solution-11"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+            <details>
+              <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
 
-            <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Plant_study$Days &lt;- as.Date(c("2019-01-09","2019-01-10","2019-01-11","2019-01-12","2019-01-13"))
+              <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Plant_study$Days &lt;- as.Date(c("2019-01-09","2019-01-10","2019-01-11","2019-01-12","2019-01-13"))
  class(Plant_study)
  PS &lt;- as.matrix(Plant_study)
  PS
-</code></pre></div>            </div>
+</code></pre></div>              </div>
+            </details>
           </blockquote>
         </li>
       </ol>
     </li>
   </ul>
+
 </blockquote>
 
 <blockquote class="notranslate hands_on">
@@ -705,16 +749,20 @@ as.data.frame() etc.</p>
     <li>Check the data type of the second column of Drug_study. Retrieve the column using a comma.</li>
     <li>Convert the second column into a vector.</li>
     <li>What is different now? Look at the vector.
-      <blockquote class="solution">
-        <h3 id="solution-solution-12"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+      <blockquote>
+        <details>
+          <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
 
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> class(Drug_study[,2])
+          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> class(Drug_study[,2])
  v &lt;- as.vector(Drug_study[,2])
  v
-</code></pre></div>        </div>
+</code></pre></div>          </div>
+        </details>
       </blockquote>
     </li>
   </ol>
+
 </blockquote>
 
 <blockquote class="notranslate hands_on">
@@ -726,17 +774,21 @@ as.data.frame() etc.</p>
     <li>Multiply all elements with 2. What happens?</li>
     <li>Check if the 2nd element is missing</li>
     <li>Delete the missing value using is.na() and the strategy above
-      <blockquote class="solution">
-        <h3 id="solution-solution-13"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+      <blockquote>
+        <details>
+          <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
 
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> x &lt;- c(1,2,3,NA)
+          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> x &lt;- c(1,2,3,NA)
  x*2
  is.na(x[2])
  x[!is.na(x)]
-</code></pre></div>        </div>
+</code></pre></div>          </div>
+        </details>
       </blockquote>
     </li>
   </ol>
+
 </blockquote>
 
 <blockquote class="notranslate hands_on">
@@ -747,19 +799,23 @@ as.data.frame() etc.</p>
     <li>Check if z contains numbers or characters</li>
     <li>Convert z into a matrix</li>
     <li>Convert the elements of z into characters
-      <blockquote class="solution">
-        <h3 id="solution-solution-14"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+      <blockquote>
+        <details>
+          <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
 
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> is.vector(z)
+          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> is.vector(z)
  is.data.frame(z) 
  is.character(z)
  is.numeric(z)
  as.matrix(z) 
  as.character(z)
-</code></pre></div>        </div>
+</code></pre></div>          </div>
+        </details>
       </blockquote>
     </li>
   </ol>
+
 </blockquote>
 
 <blockquote class="notranslate hands_on">
@@ -768,15 +824,19 @@ as.data.frame() etc.</p>
   <ol>
     <li>Create a vector called words containing Hello, Hi</li>
     <li>Convert the words into numbers. What happens?
-      <blockquote class="solution">
-        <h3 id="solution-solution-15"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+      <blockquote>
+        <details>
+          <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
 
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> words &lt;- c("Hello","Hi")
+          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> words &lt;- c("Hello","Hi")
  as.numeric(words) 
-</code></pre></div>        </div>
+</code></pre></div>          </div>
+        </details>
       </blockquote>
     </li>
   </ol>
+
 </blockquote>
 
 <p>R is smart enough to catch you if you try to do an illogical conversion, such as convert characters to numbers. It does the conversion but the data is converted to NA values.</p>

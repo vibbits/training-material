@@ -346,14 +346,17 @@ read.delim2(file,header=TRUE,sep="\t",dec=",", ...)
     <li>Import the file <a href="http://data.bits.vib.be/pub/trainingen/RIntro/GeneEx.csv">GeneEx.csv</a> into a data frame called GeneEx</li>
     <li>Rename the two last columns Ct1 and Ct2</li>
     <li>Create a new column containing the average Ct: (Ct1+Ct2)/2
-      <blockquote class="solution">
-        <h3 id="solution-solution"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
-
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> GeneEx &lt;- read.csv2("Rdata/GeneEx.csv")
+      <blockquote>
+        <details>
+          <summary> <i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
+          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> GeneEx &lt;- read.csv2("Rdata/GeneEx.csv")
  colnames(GeneEx)[c(3,4)] &lt;- c("Ct1","Ct2")
  GeneEx$Average_Ct &lt;- (GeneEx$Ct1 + GeneEx$Ct2)/2
-</code></pre></div>        </div>
+</code></pre></div>          </div>
+        </details>
       </blockquote>
+
       <blockquote class="question">
         <h3 id="question-question"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
@@ -435,10 +438,11 @@ mean(GeneEx$Ct1)
     <li>What is the gene with the highest log2 fold change?</li>
     <li>What is the data of the gene with the lowest adjusted p-value (= padj)?</li>
     <li>Write the Ensembl IDs (= row names) of the upregulated genes to a file called up.txt. You will use this file for functional enrichment analysis using online tools like ToppGene,EnrichR? These tools want a file with only Ensembl IDs as input (one per line, no double quotes, no column headers, no row names).
-      <blockquote class="solution">
-        <h3 id="solution-solution-1"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
-
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> DE &lt;- read.table("Rdata/RNASeqDE.txt",header=TRUE)
+      <blockquote>
+        <details>
+          <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
+          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> DE &lt;- read.table("Rdata/RNASeqDE.txt",header=TRUE)
  up &lt;- DE[DE$log2FoldChange &gt; 0,]
  down &lt;- DE[DE$log2FoldChange &lt; 0,]
  nrow(up) 
@@ -446,8 +450,10 @@ mean(GeneEx$Ct1)
  rownames(up[which.max(up$log2FoldChange),])
  DE[which.min(DE$padj),]
  write.table(rownames(up),file="up.txt",quote=FALSE,col.names=FALSE,row.names=FALSE)
-</code></pre></div>        </div>
+</code></pre></div>          </div>
+        </details>
       </blockquote>
+
       <blockquote class="question">
         <h3 id="question-question-5"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
@@ -489,10 +495,14 @@ mean(GeneEx$Ct1)
   <h3 id="hands_on-hands-on-extra-exercise-17c"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Extra exercise 17c</h3>
 
   <p>Which type of files are imported by read.delim ?</p>
-  <blockquote class="solution">
-    <h3 id="solution-solution-2"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
-    <p>Check the documentation and look at the default for <em>sep</em></p>
+  <blockquote>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
+      <p>Check the documentation and look at the default for <em>sep</em></p>
+    </details>
   </blockquote>
+
 </blockquote>
 
 <blockquote class="notranslate hands_on">
@@ -503,16 +513,20 @@ mean(GeneEx$Ct1)
     <li>What type of data structure is pdata ?</li>
     <li>What are the names of the columns of pdata ?</li>
     <li>How many rows and columns are in pdata ?
-      <blockquote class="solution">
-        <h3 id="solution-solution-3"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> pdata &lt;- read.delim("Rdata/ALLphenoData.tsv")
+      <blockquote>
+        <details>
+          <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
+          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> pdata &lt;- read.delim("Rdata/ALLphenoData.tsv")
  class(pdata)
  colnames(pdata)
  dim(pdata)
-</code></pre></div>        </div>
+</code></pre></div>          </div>
+        </details>
       </blockquote>
     </li>
   </ol>
+
 </blockquote>
 
 

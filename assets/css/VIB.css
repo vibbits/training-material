@@ -791,3 +791,8 @@ a:hover{
 color:#3cbbba;
 text-decoration:none;
 }
+
+details > summary {
+    font-family: Dense;
+    font-size: 2em;
+}

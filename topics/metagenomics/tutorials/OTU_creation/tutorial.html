@@ -323,7 +323,7 @@
 <p>LotuS is actually a set of tools that were installed in the <code class="highlighter-rouge">/opt/</code> folder. First go to <a href="http://psbweb05.psb.ugent.be/lotus/">the lotus website</a> and familiarize yourself with the basic documentation.</p>
 
 <p>To start the exercises, go to the directory where Lotus is installed.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /opt/lotus-1.62/lotus_pipeline/
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> /opt/lotus-1.62/lotus_pipeline/
 </code></pre></div></div>
 
 <p>From this directory you can run all the tools. To reach all data files (e.g. input files) you have to provide the path to the files: <code class="highlighter-rouge">~/metagenomics/</code></p>
@@ -346,7 +346,7 @@
 <p>Save the file as a tab-delimited text file.</p>
 
 <p>You can always test the validity of your mapping file with the command</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./lotus.pl -check_map [your mapping file]
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./lotus.pl <span class="nt">-check_map</span> <span class="o">[</span>your mapping file]
 </code></pre></div></div>
 
 <p>If you have fastq files as input the fnaFile and qualFile columns would be replaced by one fastqFile column.</p>
@@ -355,7 +355,7 @@
 
 <p>Sometimes you need to transcribe data from one format to another. For instance we could transform the fasta files (.fna) to fastq files (.fq). This can be done with the program <code class="highlighter-rouge">sdm</code>, that is part of the LotuS pipeline. Take a look at the sdm help by typing <code class="highlighter-rouge">./sdm</code> and exploring the options, e.g.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./sdm -help_commands
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./sdm <span class="nt">-help_commands</span>
 </code></pre></div></div>
 
 <p>Then, using command line arguments, transcribe the fasta + qual files of the Anh experiment into fastq files. Take a look at output and log files created by sdm.</p>
@@ -368,16 +368,20 @@
 
     <p>How to transform fasta + qual files into fastq files ?</p>
 
-    <blockquote class="solution">
-      <h3 id="solution-solution"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
-      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo ./sdm -i_fna ~/metagenomics/Anh.1.fna -i_qual ~/metagenomics/Anh.1.qual -o_fastq t1.fq
-</code></pre></div>      </div>
+    <blockquote>
+      <details>
+        <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo</span> ./sdm <span class="nt">-i_fna</span> ~/metagenomics/Anh.1.fna <span class="nt">-i_qual</span> ~/metagenomics/Anh.1.qual <span class="nt">-o_fastq</span> t1.fq
+</code></pre></div>        </div>
+      </details>
     </blockquote>
+
   </blockquote>
 </blockquote>
 
 <p>In the lotus_pipeline folder the fastq file t1.fq was generated, to take a look at the file use</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>head t1.fq
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">head </span>t1.fq
 </code></pre></div></div>
 
 <p>Do the same for the t1.log file: you see that sdm is not only used to transform fasta into fastq files but it is also capable of doing quality filtering on the raw reads files.</p>
@@ -385,7 +389,7 @@
 <h3 id="setting-up-a-quality-filter-of-the-input-sequence-files">Setting up a quality filter of the input sequence files.</h3>
 
 <p>Since we want to make sure the quality filtering of the input file is strict, LotuS offers several quality filtering options. Quality settings are different for different data formats, that´s why Lotus offers a file with specific settings for each platform. Since we have 454 data we will take a look at the file sdm_454.txt.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>less sdm_454.txt
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>less sdm_454.txt
 </code></pre></div></div>
 
 <p>Read the comments (line starting with “#”) to each option and think which quality filtering options might be important in order to create OTUs from the raw sequences. (Hint: an OTU is a clustering of similar sequences with the aim to have one cluster of sequences for each species that was originally present in the samples. Take into account that sequencing machines make errors and that PCR amplification of the 16S rDNA is similarly with errors). Think about a set of parameters, including the statistical information from step 2, and save these in your copy of sdm_options.txt for later use.</p>
@@ -404,7 +408,7 @@
 <h3 id="demultiplexing--and-quality-filter-the-input-files">Demultiplexing  and quality filter the input files.</h3>
 
 <p>For this step you will need the mapping file from Step 1 and the file with the quality filtering settings for 454 data. Use the sdm command to demultiplex and filter all input files at the same time into a local folder ‘‘demultDir’’. First create the folder where the demultiplexed files will be written in ~/metagenomics/:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir ~/metagenomics/demultDir
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> ~/metagenomics/demultDir
 </code></pre></div></div>
 
 <p>Since the mapping file contains information on all files, you have to provide an input path to the folder that contains the input files (.fna + .qual) to sdm.</p>
@@ -416,12 +420,16 @@
     <h3 id="question-question-1"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
     <p>How to demultiplex and quality filter files ?</p>
 
-    <blockquote class="solution">
-      <h3 id="solution-solution-1"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
-      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./sdm -i_path ~/metagenomics/ -o_fastq t1.fq -o_demultiplex ~/metagenomics/demultDir/ -map ~/metagenomics/map.txt -options sdm_454.txt 
-</code></pre></div>      </div>
-      <p>Input is the folder containing the .fna and .qual files. The demultiplexing will fill the demultDir folder with fastq files.</p>
+    <blockquote>
+      <details>
+        <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./sdm <span class="nt">-i_path</span> ~/metagenomics/ <span class="nt">-o_fastq</span> t1.fq <span class="nt">-o_demultiplex</span> ~/metagenomics/demultDir/ <span class="nt">-map</span> ~/metagenomics/map.txt <span class="nt">-options</span> sdm_454.txt 
+</code></pre></div>        </div>
+        <p>Input is the folder containing the .fna and .qual files. The demultiplexing will fill the demultDir folder with fastq files.</p>
+      </details>
     </blockquote>
+
   </blockquote>
 </blockquote>
 
@@ -433,7 +441,7 @@
 
 <p>Note that lotus has a special script that creates the mapping file for you in this case. The script is autoMap.pl. It is used to link SampleIDs to demultiplexed files. Run autoMap.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./autoMap.pl ~/metagenomics/demultDir/ ~/metagenomics/automap.txt 1,1
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./autoMap.pl ~/metagenomics/demultDir/ ~/metagenomics/automap.txt 1,1
 </code></pre></div></div>
 
 <h3 id="running-lotus">Running Lotus.</h3>
@@ -447,17 +455,21 @@
     <h3 id="question-question-2"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
     <p>How to run lotus</p>
 
-    <blockquote class="solution">
-      <h3 id="solution-solution-2"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
-      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo ./lotus.pl -i ~/metagenomics/demultDir/ -o ~/metagenomics/testR/ -m ~/metagenomics/automap.txt 
-</code></pre></div>      </div>
-      <p>Input is the folder containing the .fna and .qual files. The demultiplexing will fill the demultDir folder with fastq files.</p>
+    <blockquote>
+      <details>
+        <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo</span> ./lotus.pl <span class="nt">-i</span> ~/metagenomics/demultDir/ <span class="nt">-o</span> ~/metagenomics/testR/ <span class="nt">-m</span> ~/metagenomics/automap.txt 
+</code></pre></div>        </div>
+        <p>Input is the folder containing the .fna and .qual files. The demultiplexing will fill the demultDir folder with fastq files.</p>
+      </details>
     </blockquote>
+
   </blockquote>
 </blockquote>
 
 <p>In case you haven’t done any quality filtering yet, you can still do it now. The command would then be:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo ./lotus.pl -i ~/metagenomics/demultDir/ -o ~/metagenomics/testR/ -m ~/metagenomics/automap.txt -s sdm_454.txt
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo</span> ./lotus.pl <span class="nt">-i</span> ~/metagenomics/demultDir/ <span class="nt">-o</span> ~/metagenomics/testR/ <span class="nt">-m</span> ~/metagenomics/automap.txt <span class="nt">-s</span> sdm_454.txt
 </code></pre></div></div>
 
 <ul>
@@ -481,12 +493,16 @@
     <h3 id="question-question-3"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
     <p>How to reassign the taxonomy with Silva as reference database?</p>
 
-    <blockquote class="solution">
-      <h3 id="solution-solution-3"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
-      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo ./lotus.pl -i ~/metagenomics/demultDir/ -o ~/metagenomics/testR2/ -m ~/metagenomics/automap.txt -s sdm_454.txt -refDB SLV -redoTaxOnly 1
-</code></pre></div>      </div>
-      <p>Input is the folder containing the .fna and .qual files. The demultiplexing will fill the demultDir folder with fastq files.</p>
+    <blockquote>
+      <details>
+        <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo</span> ./lotus.pl <span class="nt">-i</span> ~/metagenomics/demultDir/ <span class="nt">-o</span> ~/metagenomics/testR2/ <span class="nt">-m</span> ~/metagenomics/automap.txt <span class="nt">-s</span> sdm_454.txt <span class="nt">-refDB</span> SLV <span class="nt">-redoTaxOnly</span> 1
+</code></pre></div>        </div>
+        <p>Input is the folder containing the .fna and .qual files. The demultiplexing will fill the demultDir folder with fastq files.</p>
+      </details>
     </blockquote>
+
   </blockquote>
 </blockquote>
 
@@ -503,14 +519,18 @@
     <h3 id="question-question-4"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
     <p>Use honey bee taxonomy database ?</p>
 
-    <blockquote class="solution">
-      <h3 id="solution-solution-4"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
-      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo ./lotus.pl -i XX -o ~/metagenomics/testR3/ -redoTaxOnly 1 \
--m ~/metagenomics/LASI_Spring_2_bees_barn_3_map_lts_5.txt \
--refDB ~/metagenomics/beeTax.fna,SLV -tax4refDB ~/metagenomics/beeTax.tax 
-</code></pre></div>      </div>
-      <p>Input is the folder containing the .fna and .qual files. The demultiplexing will fill the demultDir folder with fastq files.</p>
+    <blockquote>
+      <details>
+        <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo</span> ./lotus.pl <span class="nt">-i</span> XX <span class="nt">-o</span> ~/metagenomics/testR3/ <span class="nt">-redoTaxOnly</span> 1 <span class="se">\</span>
+<span class="nt">-m</span> ~/metagenomics/LASI_Spring_2_bees_barn_3_map_lts_5.txt <span class="se">\</span>
+<span class="nt">-refDB</span> ~/metagenomics/beeTax.fna,SLV <span class="nt">-tax4refDB</span> ~/metagenomics/beeTax.tax 
+</code></pre></div>        </div>
+        <p>Input is the folder containing the .fna and .qual files. The demultiplexing will fill the demultDir folder with fastq files.</p>
+      </details>
     </blockquote>
+
   </blockquote>
 </blockquote>
 

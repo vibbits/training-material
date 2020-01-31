@@ -556,11 +556,15 @@ Impossible values (e.g., dividing by zero) are represented by the symbol NaN (No
     <h3 id="question-question"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
     <p>What’s the difference between x=2 and x==2 ?</p>
 
-    <blockquote class="solution">
-      <h3 id="solution-solution"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
-      <p>The = operator attributes a value to a variable (see next section), x becomes 2. 
+    <blockquote>
+      <details>
+        <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
+        <p>The = operator attributes a value to a variable (see next section), x becomes 2. 
  The == is a logical operator, testing whether the logical expression x equals 2 is TRUE or FALSE.</p>
+      </details>
     </blockquote>
+
   </blockquote>
 
 </blockquote>
@@ -643,18 +647,20 @@ The function generates a plot so the plot <strong>p</strong> is the <strong>outp
     <li>Print the value of patients divided by 2</li>
     <li>Create a variable called patients_gr2 with value 24</li>
     <li>Print the total number of patients
-      <blockquote class="solution">
-        <h3 id="solution-solution-1"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+      <blockquote>
+        <details>
+          <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
 
-        <blockquote>
-          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>patients &lt;- 42
-patients/2
-patients_gr2 &lt;- 24
-total_patients &lt;- patients + patients_gr2
-total_patients
+          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> patients &lt;- 42
+ patients/2
+ patients_gr2 &lt;- 24
+ total_patients &lt;- patients + patients_gr2
+ total_patients
 </code></pre></div>          </div>
-        </blockquote>
+        </details>
       </blockquote>
+
       <blockquote class="question">
         <h3 id="question-question-1"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
@@ -671,12 +677,16 @@ total_patients
   <h3 id="hands_on-hands-on-exercise-3b"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 3b</h3>
 
   <p>Check the arguments of the mean() function.</p>
-  <blockquote class="solution">
-    <h3 id="solution-solution-2"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+  <blockquote>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
 
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ?mean
-</code></pre></div>    </div>
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ?mean
+</code></pre></div>      </div>
+    </details>
   </blockquote>
+
 </blockquote>
 
 <p>The mean() function has many arguments and each argument has a default value. To use the default values simply do not specify these arguments in the function call. You only have to specify the arguments for which you want to use a value other than the default.
@@ -688,21 +698,28 @@ To show the <strong>examples</strong> section instead of the full documentation 
   <h3 id="hands_on-hands-on-exercise-3c"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 3c</h3>
 
   <p>Calculate and print the sum of patients and patients_gr2 using the sum() function.</p>
-  <blockquote class="solution">
-    <h3 id="solution-solution-answer"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> solution: answer</h3>
-
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> sum(patients,patients_gr2)
-</code></pre></div>    </div>
+  <blockquote>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> solution: answer
+</summary>
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> sum(patients,patients_gr2)
+</code></pre></div>      </div>
+    </details>
   </blockquote>
+
   <blockquote class="question">
     <h3 id="question-question-2"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
     <p>Replace the sum() function with the mean() function. What happens ?</p>
-    <blockquote class="solution">
-      <h3 id="solution-solution-answer-1"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> solution: answer</h3>
-      <p>Look at the help of the sum() function. What’s the first argument ? 
+    <blockquote>
+      <details>
+        <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> solution: answer
+</summary>
+        <p>Look at the help of the sum() function. What’s the first argument ? 
  Compare with the first argument of the mean() function</p>
+      </details>
     </blockquote>
+
   </blockquote>
   <blockquote class="question">
     <h3 id="question-question-3"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
@@ -720,60 +737,72 @@ To show the <strong>examples</strong> section instead of the full documentation 
   </blockquote>
 </blockquote>
 
-<p>Sometimes functions from different packages have the same name. In that case use <strong>package::function</strong> to specify the package you want to use, e.g. ggplot2::ggplot() where ggplot2 is the name of the package and ggplot() is the name of the function.</p>
+<p>Sometimes functions from different packages have the same name. In that case use <strong>package::function</strong> to specify the package you want to use, e.g. <code class="highlighter-rouge">ggplot2::ggplot()</code> where <code class="highlighter-rouge">ggplot2</code> is the name of the package and <code class="highlighter-rouge">ggplot()</code> is the name of the function.</p>
 
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-hands-on-extra-exercise-3d"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Extra exercise 3d</h3>
 
-  <p>Create a variable patients_gr3 with value “twenty” and print the total number of patients</p>
-  <blockquote class="solution">
-    <h3 id="solution-solution-3"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+  <p>Create a variable <code class="highlighter-rouge">patients_gr3</code> with value “twenty” and print the total number of patients</p>
+  <blockquote>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
 
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> patients_gr3 &lt;- "twenty"
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> patients_gr3 &lt;- "twenty"
  patients + patients_gr3
-</code></pre></div>    </div>
+</code></pre></div>      </div>
+    </details>
   </blockquote>
+
 </blockquote>
 
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-hands-on-extra-exercise-3e"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Extra exercise 3e</h3>
 
   <ol>
-    <li>Create variable x with value 5</li>
-    <li>Create variable y with value 2</li>
-    <li>Create variable z as the sum of x and y and print the value of z</li>
-    <li>Print x - y</li>
-    <li>Print the product of x and y and add 2 to it
-      <blockquote class="solution">
-        <h3 id="solution-solution-4"><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+    <li>Create variable <code class="highlighter-rouge">x</code> with value <code class="highlighter-rouge">5</code></li>
+    <li>Create variable <code class="highlighter-rouge">y</code> with value <code class="highlighter-rouge">2</code></li>
+    <li>Create variable <code class="highlighter-rouge">z</code> as the sum of <code class="highlighter-rouge">x</code> and <code class="highlighter-rouge">y</code> and print the value of <code class="highlighter-rouge">z</code></li>
+    <li>Print <code class="highlighter-rouge">x - y</code></li>
+    <li>Print the product of <code class="highlighter-rouge">x</code> and <code class="highlighter-rouge">y</code> and add <code class="highlighter-rouge">2</code> to it
+      <blockquote>
+        <details>
+          <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
 
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> x &lt;- 5
+          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> x &lt;- 5
  y &lt;- 2
  z &lt;- x+y
  z
  x-y
  x*y+2
-</code></pre></div>        </div>
+</code></pre></div>          </div>
+        </details>
       </blockquote>
     </li>
   </ol>
+
 </blockquote>
 
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-hands-on-extra-exercise-3f"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Extra exercise 3f</h3>
 
-  <p>What is the difference between 
-correctLogic &lt;- TRUE<br />
-incorrectLogic &lt;- “TRUE”</p>
+  <p>What is the difference between:</p>
+  <ol>
+    <li><code class="highlighter-rouge">correctLogic &lt;- TRUE</code></li>
+    <li><code class="highlighter-rouge">incorrectLogic &lt;- "TRUE"</code></li>
+  </ol>
 </blockquote>
 
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-hands-on-extra-exercise-3g"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Extra exercise 3g</h3>
 
-  <p>Is there a difference between 
-name &lt;- “Janick” 
-name &lt;- ‘Janick’
-name &lt;- Janick</p>
+  <p>Is there a difference between:</p>
+  <ol>
+    <li><code class="highlighter-rouge">name &lt;- "Janick"</code></li>
+    <li><code class="highlighter-rouge">name &lt;- 'Janick'</code></li>
+    <li><code class="highlighter-rouge">name &lt;- Janick</code></li>
+  </ol>
 </blockquote>
 
 
