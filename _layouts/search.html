@@ -8,7 +8,22 @@ layout: base
 
 <h2>Search</h2>
 <script async src="https://cse.google.com/cse.js?cx=017739800329524378694:s0qnewct9yu"></script>
-<div class="gcse-searchbox-only" data-resultsUrl="{{ site.baseurl }}/search.html"></div>
+<div class="gcse-searchbox-only" data-resultsUrl="{{ site.baseurl }}/search.html"></div>	    
 <div class="gcse-searchresults-only"></div>
+<style>
+    #opensolr-content{
+        width:100%;
+        position:relative;
+        height:92vh;
+    }
+    #opensolr-content iframe{
+        position:absolute;
+        height: 100%;
+        width:100%;
+        border: none;
+    }
+</style>
+<div id="opensolr-content">
+    <iframe style="position: absolute; height: 90%; width:100%; border: none" width="100%" height="90%" frameborder="0" src="https://solr5de.solrcluster.com/solr/BITS_Material" />
 </div>
 {% include _includes/default-footer.html %}
