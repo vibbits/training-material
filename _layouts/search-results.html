@@ -1,0 +1,21 @@
+---
+layout: base
+---
+{% include _includes/default-header-vib.html %}
+<div class="container main-content">
+
+{% include _includes/default-top-vib.html %}
+
+<h2>Search</h2>
+
+{% jekyll_pages_api_search_interface %}
+
+<br/>
+
+{% jekyll_pages_api_search_results %}
+
+</div>
+
+{% include _includes/default-footer.html %}
+{% jekyll_pages_api_search_load %}
+
