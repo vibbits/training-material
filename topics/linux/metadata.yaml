@@ -1,0 +1,10 @@
+---
+name: "linux"
+type: "basics"
+category: "basics"
+title: "Initiation to Linux Command Line"
+summary: "Command Line Introduction"
+requirements:
+
+maintainers:
+  - chdeb 
