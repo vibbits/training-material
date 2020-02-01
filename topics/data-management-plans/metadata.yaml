@@ -63,9 +63,15 @@ subtopics:
   - id: introduction 
     title: "Introduction"
     description: "We are giving overviews on why it is important to manage your research data, user stories about data loss, funder requirements, and RDM Support."
-  - id: functional
-    title: "Functional Analysis"
-    description: "In the previous chapters of the tutorial, starting from the raw spectra, we established a list of proteins validated at a certain level of confidence. After all these efforts, all we have is just a list of protein accessions! How do we go about drawing any meaningful biological conclusions from this? As mentioned in the general introduction, many resources are available online. In this chapter, we are going to look for additional protein information, conduct a pathway analysis, view 3D structures of the proteins and finally inspect the Gene Ontology (GO) of our dataset."
+  - id: prepare 
+    title: "Preparatory steps for Data collection and Documentation"
+    description: "
+- Will you use existing data?
+- What data will you collect or create?
+- How will the data be collected or created?
+- How will you manage rights issues?
+- What are the costs involved in managing and storing your data?
+"
   - id: sharing
     title: "Data sharing"
     description: "In the previous chapters we identified proteins using curated database sequences and enriched our results with knowledge from external resources. In order to allow the community to benefit from your results in turn, online repositories are available to enable the exchange of data. Moreover, making the data public is now required by most journals prior to publication.

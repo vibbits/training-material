@@ -13,7 +13,7 @@ objectives:
 - They are single sentences describing what a learner should be able to do once they
   have completed the tutorial
 - You can use Bloom's Taxonomy to write effective learning objectives
-time_estimation: 3H
+time_estimation: 45M 
 subtopic: introduction
 key_points:
 - The take-home messages
@@ -44,9 +44,7 @@ contributors:
 
 In this video Katarzyna Biernacka explains what data in a research context is.
 
-!?[Why manage data?](https://www.youtube.com/watch?v=XCckz_4mlhU)
-<iframe src="https://h5p.org/h5p/embed/581076" width="699" height="571" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-<script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js" charset="UTF-8"></script>
+<iframe src="https://www.youtube.com/watch?v=XCckz_4mlhU" width="699" height="571" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
 CC-BY-4.0: Katarzyna Biernacka, HU Berlin & [Discipline Workshops 2019](http://www.discipline-workshops.com/)
 
@@ -114,7 +112,8 @@ More and more research funders explicitly require you to consider the management
 
 The European Commission wants “Horizon 2020 beneficiaries to make their research data findable, accessible, interoperable and reusable (FAIR), to ensure it is soundly managed. Good research data management is not a goal in itself, but rather the key conduit leading to knowledge discovery and innovation, and to subsequent data and knowledge integration and reuse.” Horizon 2020 is the biggest research and innovation program of the European Commission.
 
-[![European Commission - Horizon 2020](img/O_Funders_Screenshot_H2020guidelines.JPG "European Commission - Horizon 2020")](https://www.nwo.nl/en/policies/open+science/data+management)
+![European Commission - Horizon 2020](../../images/O_Funders_Screenshot_H2020guidelines.JPG "European Commission - Horizon 2020")
+(https://www.nwo.nl/en/policies/open+science/data+management)
 
 **FWO**
 
@@ -170,8 +169,3 @@ RDM Support provides all kinds of research data management assistance to researc
 
 TODO: add links Flemish Universities
 
-# Conclusion
-{:.no_toc}
-
-Sum up the tutorial and the key takeaways here. We encourage adding an overview image of the
-pipeline used.
