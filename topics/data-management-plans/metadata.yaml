@@ -1,0 +1,106 @@
+---
+name: data-management-plans
+type: basics 
+category: basics
+title: "How to write your Data management Plan" 
+summary: "
+Welcome to this self-study course about research data management. In this course you will learn more about how you can manage your research data.
+
+
+A lot of material of that version of the **Learn to write your DMP** course has been developed by RDM Support of University of Utrecht.
+
+
+With all questions about this course you can contact: info.rdm@vib.be.
+
+
+__By VIB Bioinformatics Core, ELIXIR Belgium and Helis Academy__
+
+
+* LiaScript: [this course as e-learning resource](https://material.bits.vib.be/courses/?https://raw.githubusercontent.com/vibbits/material-liascript/master/README.md#1)
+
+
+The course consists of 6 chapters, divided in three categories.
+
+
+- Prepare
+  - Data collection
+  - Data documentation
+
+- Handle
+  - Data storage
+  - Data security
+
+- Share
+  - Data selection and preservation
+  - Data availability for reuse
+
+
+Each chapter starts with an introduction and ends with an assignment to write that part of your data management plan that corresponds with what you have just learned. You are currently in the introd
+uction chapter. In this chapter you will learn more about the course and the learning environment. The course ends with chapter 7, 'Rounding up'.
+
+
+**Data Management Plans**
+The assignment throughout the course is to fill your own data management plan. At the end of each chapter you will be asked to log into DMPonline. With the content in this course, you should be able to apply this to your research project.
+
+
+**Questions about the course**
+If you have technical questions, please contact bits@vib.be.
+If you have content related questions, please contact RDM Support: info.rdm@vib.be. All feedback is welcome, as this is still a beta version. Based on feedback from users, more content may be added 
+or existing content may be changed to a different form.
+
+
+**Technical requirements**
+Some activities use HTML5. Make sure your browser has installed the latest updates. If an activity doesn't work, we recommend you use another browser.
+
+
+**Licenses and credits**
+We wish you a lot of fun with the course and we hope it turns out to be a useful learning experience.
+The content of the course is adapted from an online course of [University of Utrecht](https://lll-platform-uu.nl/).
+
+" 
+
+subtopics:
+  - id: introduction 
+    title: "Introduction"
+    description: "We are giving overviews on why it is important to manage your research data, user stories about data loss, funder requirements, and RDM Support."
+  - id: functional
+    title: "Functional Analysis"
+    description: "In the previous chapters of the tutorial, starting from the raw spectra, we established a list of proteins validated at a certain level of confidence. After all these efforts, all we have is just a list of protein accessions! How do we go about drawing any meaningful biological conclusions from this? As mentioned in the general introduction, many resources are available online. In this chapter, we are going to look for additional protein information, conduct a pathway analysis, view 3D structures of the proteins and finally inspect the Gene Ontology (GO) of our dataset."
+  - id: sharing
+    title: "Data sharing"
+    description: "In the previous chapters we identified proteins using curated database sequences and enriched our results with knowledge from external resources. In order to allow the community to benefit from your results in turn, online repositories are available to enable the exchange of data. Moreover, making the data public is now required by most journals prior to publication.
+
+The proteomics identifications database (PRIDE, www.ebi.ac.uk/pride) and ProteomeXchange (www.proteomexchange.org) are the repositories of choice for protein identification data. PRIDE stores proteomics identification results while ProteomeXchange allows you to store additional information as well. For both of them, the identification results first have to be converted into standard formats. We will here use the PRIDE XML format, however in the near future this will be updated to the new standard format called mzIdentML."
+
+
+maintainers:
+- abotzki 
+
+references:
+- authors: RDM training by the University of Edinburgh 
+  title: MANTRA 
+  link: http://mantra.edina.ac.uk/ 
+- authors: RDM training by the University of Melbourne 
+  title: Managing Data @ Melbourne  
+  link: http://library.unimelb.edu.au/Digital-Scholarship/training_and_outreach/data 
+- authors: RDM website of University of Amsterdam                            
+  title: "Essentials for Data Support" 
+  link: http://rdm.uva.nl/ 
+- authors: Delft University of Technology 
+  title: "Research Data Services"
+  link: https://www.tudelft.nl/en/library/current-topics/research-data-management/  
+- authors: Wageningen University & Research 
+  title: "Essentials for Data Support"
+  link: https://www.wur.nl/en/Expertise-Services/Data-Management-Support-Hub.htm 
+- authors: Digital Curation Centre 
+  title: "Essentials for Data Support"
+  link: http://www.dcc.ac.uk/ 
+- authors: UK Data Archive 
+  title: "Essentials for Data Support"
+  link: http://data-archive.ac.uk/ 
+- authors: Australian Networked Data Services (ANDS) 
+  title: "Essentials for Data Support"
+  link: http://www.ands.org.au/working-with-data/data-management 
+- authors: ORION e-learning course 
+  title: "Essentials for Data Support"
+  link: https://www.orion-openscience.org/news/201912/new-launch-orion-mooc-open-science-life-sciences 
