@@ -23,6 +23,20 @@ layout: base
           <div class="col-md-12" role="main">
 	    <div class="bs-docs-section">
               <div id="results"></div>
+<h3 id="basics" class="page-header">Research Data Management</h3>
+<table><tr><td>
+        {% for topic in sorted_topics %}
+        {% if topic[1].category == "rdm" %}
+        {% assign tutorial_number = site.pages | topic_filter:topic[1].name | topic_count %}
+<div id="TutorialBox">
+    <div class="BoxName">
+      <a class="BoxName"  href="{{ site.baseurl }}/topics/{{ topic[1].name }}/">{{ topic[1].title }}</a>
+          </div>
+    <div class="BoxNumber1" style="padding-left:5px">TUTORIALS</div>
+    <div class="BoxNumber2">{{ tutorial_number }}</div>
+</div>
+        {% endif %}
+        {% endfor %}</td></tr></table>
          <h3 id="basics" class="page-header">Basic Bioinformatics</h3>
 <table><tr><td>
 	{% for topic in sorted_topics %}

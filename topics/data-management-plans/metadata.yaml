@@ -1,7 +1,7 @@
 ---
 name: data-management-plans
 type: basics 
-category: basics
+category: rdm 
 title: "How to write your Data management Plan" 
 summary: "
 Welcome to this self-study course about research data management. In this course you will learn more about how you can manage your research data.
@@ -72,12 +72,12 @@ subtopics:
 - How will you manage rights issues?
 - What are the costs involved in managing and storing your data?
 "
-  - id: sharing
+  - id: handle 
+    title: "Data handling"
+    description: "Data sharing"
+  - id: share
     title: "Data sharing"
-    description: "In the previous chapters we identified proteins using curated database sequences and enriched our results with knowledge from external resources. In order to allow the community to benefit from your results in turn, online repositories are available to enable the exchange of data. Moreover, making the data public is now required by most journals prior to publication.
-
-The proteomics identifications database (PRIDE, www.ebi.ac.uk/pride) and ProteomeXchange (www.proteomexchange.org) are the repositories of choice for protein identification data. PRIDE stores proteomics identification results while ProteomeXchange allows you to store additional information as well. For both of them, the identification results first have to be converted into standard formats. We will here use the PRIDE XML format, however in the near future this will be updated to the new standard format called mzIdentML."
-
+    description: "Data sharing"
 
 maintainers:
 - abotzki 
