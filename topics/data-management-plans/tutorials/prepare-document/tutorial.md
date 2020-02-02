@@ -4,15 +4,17 @@ layout: tutorial_hands_on
 title: "Prepare: Data documentation"
 zenodo_link: ''
 questions:
-- Which biological questions are addressed by the tutorial?
-- Which bioinformatics techniques are important to know for this type of data?
+- What important tasks do you have to do to document data?
+- What is metadata?
 objectives:
-- The learning objectives are the goals of the tutorial
-- They will be informed by your audience and will communicate to them and to yourself
-  what you should focus on during the course
-- They are single sentences describing what a learner should be able to do once they
-  have completed the tutorial
-- You can use Bloom's Taxonomy to write effective learning objectives
+- Understand why your research data needs to be documented and why other researchers rely on this documentation;
+- Understand why metadata is used and when you need to use this;
+- List different descriptions of data (record, study, code);
+- Describe the purpose/goals of descriptions of data;
+- State why standards are important and how to find and apply them;
+- Name and apply the do’s and don’ts in arranging folders and naming files;
+- Recognise the importance of managing data files;
+- Apply the gained knowledge about data documentation to your own research data and write the data documentation section for your data management plan.
 time_estimation: 50M 
 subtopic: prepare 
 key_points:
@@ -44,17 +46,6 @@ By now you understand how to describe your data collection in terms of, for exam
 
 Now we will look into the documentation and metadata which will accompany your data. Documentation and metadata are essential to understand what a dataset means and to make it reusable in the future.
 
-In this part of the course you will learn to:
-
-* Understand why your research data needs to be documented and why other researchers rely on this documentation;
-* Understand why metadata is used and when you need to use this;
-* List different descriptions of data (record, study, code);
-* Describe the purpose/goals of descriptions of data;
-* State why standards are important and how to find and apply them;
-* Name and apply the do’s and don’ts in arranging folders and naming files;  
-* Recognise the importance of managing data files;
-* Apply the gained knowledge about data documentation to your own research data and write the data documentation section for your data management plan.
-
 ### Introduction to documentation and metadata
 
 ![Introduction ](../../images/00_Metadata.png)
@@ -64,7 +55,7 @@ In this part of the course you will learn to:
 
 Tips for data documentation - John MacInnes, professor of Sociology of the University of Edinburgh, explains why it is necessary to document each step of your research and how this will benefit you in the long term.
 
-!?[John MacInnes Tips on Documentation](https://youtu.be/EIZsxT-fIiQ)
+<iframe src="https://www.youtube.com/embed/EIZsxT-fIiQ" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
 
 **Examples of data documentation**
 
@@ -109,7 +100,7 @@ John MacInnes, professor of Sociology of the University of Edinburgh, speaks abo
 
 **On the necessity of data documentation in secondary data analysis**
 
-!?[John MacInnes, Data documentation in secondary analysis](https://youtu.be/Ebaiwg08CW8)
+<iframe src="https://www.youtube.com/embed/Ebaiwg08CW8" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
 
 Looking back at your previous research project: Did you ever have problems reusing other people's data because of lack of documentation?
 
@@ -128,7 +119,7 @@ TODO: Link to eLab Notebook
 
 Watch this web lecture to learn about the different types of metadata and how metadata can help make your research data better findable. You are pointed to useful sources for metadata standards.
 
-!?[Ins and outs of metadata and data documentation](https://youtu.be/h0oZ3swbTJ0)
+<iframe src="https://www.youtube.com/embed/h0oZ3swbTJ0" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
 
 **identify different types of metadata**
 
@@ -138,7 +129,7 @@ TODO: HP5 quiz or matrix quiz
 
 Different disciplines like biology, earth sciences, physical sciences and social sciences and humanities have their own standards. By choosing a well-supported standard, you will maximise the chance that your data can be re)used and understood by other researchers.
 
-!?[Metadata standards](https://youtu.be/AvL7hEk8RJQ)
+<iframe src="https://www.youtube.com/embed/AvL7hEk8RJQ" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
 
 **Metadata for different disciplines**
 
@@ -217,7 +208,7 @@ Correct! It is not clear what is meant by length. Also a unit for the values is 
 Take a look at the record descriptions n the table below and answer the question below and in the following pages.
 
 | Soil Sample       | Condition     | Length| Classx |
-| ----------------- |:-------------:| -----:|:-------|
+| ----------------- | :-----------: | ----: | :----- |
 | A1                | low           | $458  | III    |
 | A2                | low           | $391  | II     |
 | A3                | medium        | $422  | IV     |
@@ -275,7 +266,7 @@ CC BY: [https://mantra.edina.ac.uk/](https://mantra.edina.ac.uk/)
 
 Trying to find a data file taht you need which has been stored or named incorrectly or inaccurately can be both frustrating and a waste of valuable time. In this short video Jeff Haywood, professor at the University of Edinburg, explains his experiences with good and bad file management.
 
-!?[Jeff Haywood Importance of good file management](https://youtu.be/i2jcOJOFUZg)
+<iframe src="https://www.youtube.com/embed/i2jcOJOFUZg" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
 
 **Project level**
 

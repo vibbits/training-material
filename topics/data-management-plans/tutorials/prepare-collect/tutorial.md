@@ -4,15 +4,18 @@ layout: tutorial_hands_on
 title: "Prepare: Data collection" 
 zenodo_link: ''
 questions:
-- Which biological questions are addressed by the tutorial?
-- Which bioinformatics techniques are important to know for this type of data?
+- What items are important during the data collection step?
+- What data types are most common in research?
 objectives:
-- The learning objectives are the goals of the tutorial
-- They will be informed by your audience and will communicate to them and to yourself
-  what you should focus on during the course
-- They are single sentences describing what a learner should be able to do once they
-  have completed the tutorial
-- You can use Bloom's Taxonomy to write effective learning objectives
+- identify preferred file formats for your research data;
+- transform your files into a preferred format;
+- discover sources for existing data;
+- discover existing data yourself 
+- assess the usefulness of existing data;
+- understand how a workflow leads to data products;
+- estimate costs involved with managing your data;
+- check the current and expected costs for your research data;
+- write the data collection section for your data management plan.
 time_estimation: 1H
 subtopic: prepare 
 key_points:
@@ -50,36 +53,15 @@ Your data may be physical (paper records or archival forms) or digital (database
 
 When you write your data management plan you will need to take into account the type of data you collect, the source of the data, and how you will process and analyse your data.
 
-**In this part of the course you will learn to:**
-
-* identify preferred file formats for your research data;
-transform your files into a preferred format;
-discover sources for existing data;
-
-* discover existing data yourself;
-
-* how to assess the usefulness of existing data;
-understand how a workflow leads to data products;
-
-* estimate costs involved with managing your data;
-
-* check the current and expected costs for your research data;
-
-* write the data collection section for your data management plan.
-
 You can watch the video below, provided by TU Delft, about data collection. The video stops at 1:12.
 
-!?[Data collection](https://www.youtube.com/watch?v=AqnVrnVdv2Y)
+<iframe src="https://www.youtube.com/embed/AqnVrnVdv2Y" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
 
 ### Preferred formats for your research data
 
-![Introduction ](../../images/00_Preferred-formats.png)
+This e-module is based on the online Research Data Management training 'MANTRA' of The University of Edinburgh (CC BY: [https://mantra.edina.ac.uk/](https://mantra.edina.ac.uk/)) and Managing Data @ Melbourne
 
-This e-module is based on the online Research Data Management training 'MANTRA' of The University of Edinburgh and Managing Data @ Melbourne
-
-![Introduction ](../../images/01_Preferred-formats_Learning_Objective.png)
-
-CC BY: [https://mantra.edina.ac.uk/](https://mantra.edina.ac.uk/)
+![Introduction ](../../images/01_Preferred-formats_Learning_Objective.png "Learning objectives")
 
 The file formats you use to generate your research data will influence how you can manage them over time, i.e. a program or application must be able to recognise the file format in order to access your data within the file.
 For example, a web browser is able to process and display a file in the HTML file format so that it appears as a web page. If the browser encounters another file type, it may need to call on a special plug-in to view it. Or it may simply let you download the file to view if it can recognise it in another program.
@@ -135,9 +117,6 @@ Open the following .docx file to the preferred format .txt: [PreferredFormatsExc
 [( )] Yes
 [(X)] No
 
-![image](https://upload.wikimedia.org/wikipedia/commons/d/d0/Creative-Tail-Animal-lion.svg)
-
-
 Open the following .docx file to the preferred format .txt: [PreferredFormatsExcersizePenguinDOC.docx](img/PreferredFormatsExcersizePenguinDOC.docx)
 
 1. Convert this docx file to the preferred format .odt
@@ -159,7 +138,7 @@ Having a clear view of what data you will generate will enable you to plan its m
 
 Please watch the video below. Tessa Pronk will explain to you how to describe your data.
 
-!?[Describing your data](https://www.youtube.com/watch?v=KE2UpZY4wYA&feature=youtu.be)
+<iframe src="https://www.youtube.com/embed/KE2UpZY4wYA" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
 
 ### Order elements in your data flow
 

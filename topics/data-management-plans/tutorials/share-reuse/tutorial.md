@@ -4,15 +4,13 @@ layout: tutorial_hands_on
 title: "Share: Data availability for reuse" 
 zenodo_link: ''
 questions:
-- Which biological questions are addressed by the tutorial?
-- Which bioinformatics techniques are important to know for this type of data?
+- What does Open Science entail?
+- What is FAIR data?
 objectives:
-- The learning objectives are the goals of the tutorial
-- They will be informed by your audience and will communicate to them and to yourself
-  what you should focus on during the course
-- They are single sentences describing what a learner should be able to do once they
-  have completed the tutorial
-- You can use Bloom's Taxonomy to write effective learning objectives
+- Discern various repositories to store and/or share your data;
+- Understand that you should manage a license for use of data yourself;
+- Identify ways to ensure that privacy-sensitive data can be shared
+- Understand how shared datasets can be cited.
 time_estimation: 35M
 subtopic: share 
 key_points:
@@ -48,18 +46,12 @@ Open data is a part of this movement towards open science. It is the ambition of
 
 There are different reasons why you may not be able to share your research data. Thinking about these issues and challenges when developing your data management plan will help you reflect on such reasons in an early stage.
 
-In this part of the course you will learn to:
-
-* Discern various repositories to store and/or share your data;
-* Understand that you should manage a license for use of data yourself;
-* Identify ways to ensure that privacy-sensitive data can be shared
-* Understand how shared datasets can be cited.
-
 **How frustrating a data request can be**
 
 Not being prepared to share your data can lead to problems in using the data. In this short video, you see what shouldn't happen when a researcher makes a data sharing request! Topics include storage, documentation, and file formats. A made up, yet not unrealistic story.
 
-!?[Data Sharing 3 Short Acts](https://youtu.be/66oNv_DJuPc)
+
+<iframe src="https://www.youtube.com/embed/66oNv_DJuPc" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
 
 ### Introduction to data repositories
 
@@ -73,7 +65,7 @@ TODO: add repositories from Elixir
 
 There is a wide variety of data repositories. Most have the option to publish your dataset using a persistent identifier and some provide the service of long-term preservation. Some repositories host data from various disciplines and others are domain- or discipline specific.
 
-** Choosing a data repository**
+**Choosing a data repository**
 
 When choosing a repository for your data be sure to check if the repository meets your criteria or the criteria set by your funder or journal editors.
 
@@ -129,7 +121,7 @@ In order to publish your data and make it reusable, you require a license. A lic
 
 Licenses such as the [Creative Commons](https://creativecommons.org/share-your-work/licensing-types-examples/) (CC) licenses replace 'all rights reserved' copyright with 'some rights reserved'. There are seven standard CC licenses. CC-BY is the most commonly used license, in which attribution is mandatory when using data. You can also choose restrictions like non-commercial, no derivatives, or share alike. Creative Commons offers a [guide](https://creativecommons.org/choose/?lang=en) to help you determine your preferred license.
 
-![Creative Commons](../../images/CC.png)
+![Creative Commons](../../images/CC.png "Creative Commons")
 
 **Assigning a license to your data**
 

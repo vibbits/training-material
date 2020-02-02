@@ -4,15 +4,11 @@ layout: tutorial_hands_on
 title: "Share: Data selection and preservation" 
 zenodo_link: ''
 questions:
-- Which biological questions are addressed by the tutorial?
-- Which bioinformatics techniques are important to know for this type of data?
+- Which techniques can be applied to preserve your data?
 objectives:
-- The learning objectives are the goals of the tutorial
-- They will be informed by your audience and will communicate to them and to yourself
-  what you should focus on during the course
-- They are single sentences describing what a learner should be able to do once they
-  have completed the tutorial
-- You can use Bloom's Taxonomy to write effective learning objectives
+- Select what part of your data should be  preserved for verification purposes;
+- Understand the benefits of preserving your data in a public data repository;
+- Preserve you data technically correct.
 time_estimation: 3H
 subtopic: share 
 key_points:
@@ -45,12 +41,6 @@ contributors:
 Research should be transparent and you should always be able to revert back to your data if necessary and be able to show others how you came to your results. Therefore, your research data with all information reasonably necessary for verification needs to be preserved.
 
 With well-managed and preserved research data, you can defend yourself against allegations of mistakes. You can also prevent wrong conclusions from further spreading into the scientific community if there really are mistakes.
-
-In this part of the course you will learn to:
-
-* Select what part of your data should be  preserved for verification purposes;
-* Understand the benefits of preserving your data in a public data repository;
-* Preserve you data technically correct.
 
 ### Long term data preservation
 
@@ -151,7 +141,7 @@ There are five main ways your data can be lost:
 
 In this video below you will learn how to minimise the risk of losing data. You are also given good preservation practices.
 
-!?[Preserving data](https://www.youtube.com/watch?v=qENaO0Lk6eo)
+<iframe src="https://www.youtube.com/embed/qENaO0Lk6eo" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
 
 ### Match the solutions to the data loss
 

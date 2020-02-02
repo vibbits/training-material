@@ -4,17 +4,12 @@ layout: tutorial_hands_on
 title: "Round up" 
 zenodo_link: ''
 questions:
-- Which biological questions are addressed by the tutorial?
+- What are good practices of data management?
 - Which bioinformatics techniques are important to know for this type of data?
 objectives:
-- The learning objectives are the goals of the tutorial
-- They will be informed by your audience and will communicate to them and to yourself
-  what you should focus on during the course
-- They are single sentences describing what a learner should be able to do once they
-  have completed the tutorial
-- You can use Bloom's Taxonomy to write effective learning objectives
+- where to get a DMP review service.
+- describe good practices of data management with you;
 time_estimation: 20M
-subtopic: introduction
 key_points:
 - The take-home messages
 - They will appear at the end of the tutorial
@@ -52,7 +47,6 @@ To round up:
 
 * We want to remind you of the DMP review service of RDM Support;
 * We want to share some good practices of data management with you;
-* We are collecting experiences of researchers at Utrecht University of how a DMP has helped them with their research. Please read their stories and/or share your story;
 * We invite you to fill out the evaluation of this online training. This will help us to further develop this training and future learners can benefit from this. Thank you very much!
 
 ### DMP review service
@@ -84,7 +78,8 @@ by John-Alan Pascoe of Delft University of Technology
 
 John-Alan Pascoe, researcher at the Faculty of Aerospace Engineering at Delft University of Technology, explains the advantages he experienced after sharing his raw and derived data in the data archive of 4TU.ResearchData.
 
-!?[John-Alan Pascoe](https://youtu.be/Q7vC0v988R4)
+
+<iframe src="https://www.youtube.com/embed/Q7vC0v988R4" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
 
 ### Evaluation of training
 

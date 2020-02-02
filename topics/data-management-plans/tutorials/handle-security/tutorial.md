@@ -4,15 +4,14 @@ layout: tutorial_hands_on
 title: "Handle: Data Security"
 zenodo_link: ''
 questions:
-- Which biological questions are addressed by the tutorial?
-- Which bioinformatics techniques are important to know for this type of data?
+- What measures are important to keep your data safe and secure?
 objectives:
-- The learning objectives are the goals of the tutorial
-- They will be informed by your audience and will communicate to them and to yourself
-  what you should focus on during the course
-- They are single sentences describing what a learner should be able to do once they
-  have completed the tutorial
-- You can use Bloom's Taxonomy to write effective learning objectives
+- Understand different ways data breaches can happen so you know how to avoid this;
+- Understand different ways to achieve data security and reasons for access restrictions;
+- Link situations to different legal contracts that arrange access and security;
+- Recognise indirectly identifiable data;
+- Store and manage privacy-sensitive data;
+- Apply the gained knowledge about data security to your own research data and write the data security section for your data management plan.
 time_estimation: 40M
 subtopic: handle 
 key_points:
@@ -46,20 +45,11 @@ By now you know more about how to manage your data collection, how to organise a
 
 Now we will take you into the world of keeping data safe and secure.
 
-In this part of the course you will learn to:
-
-* Understand different ways data breaches can happen so you know how to avoid this;
-* Understand different ways to achieve data security and reasons for access restrictions;
-* Link situations to different legal contracts that arrange access and security;
-* Recognise indirectly identifiable data;
-* Store and manage privacy-sensitive data;
-* Apply the gained knowledge about data security to your own research data and write the data security section for your data management plan.
-
 **Loss of data, loss of academic career**
 
 The loss of scientific data can have a devastating impact on careers. Imagine that you loose all of the research data you've been diligently collecting for four years. Now imagine the knock-on effect: you won't get the PhD you've been working towards, affecting your future career. This nightmare happened to Billy Hinchen, a biologist at Cambridge University. Listen to his story.
 
-!?[Billy Hinchen data loss](https://youtu.be/3xlax_Iin0Y)
+<iframe src="https://www.youtube.com/embed/3xlax_Iin0Y" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
 
 ### Data breaches
 
@@ -67,7 +57,8 @@ There are several examples of (mainly online) data storage going wrong, leading 
 
 The picture below shows the biggest cases of data breaches in the past 10 years. They involve some well-known, highly regarded and trusted companies as well as some practices from the academic world.
 
-[![examples about data breaches](img/data-breaches.png)](http://www.informationisbeautiful.net/visualizations/worlds-biggest-data-breaches-hacks/)
+![examples about data breaches](../../images/data-breaches.png "Biggest data breaches")
+[Link](http://www.informationisbeautiful.net/visualizations/worlds-biggest-data-breaches-hacks/)
 
 ### Prevent unauthorised access
 
@@ -75,16 +66,13 @@ Data security may be needed to protect intellectual property rights, commercial 
 
 Learn about different measures depending on the kind of security you need.
 
-            {{1}}
 **Security of data files**
-
-            {{2-3}}
 
 The information in data files can be protected by:
 
 * Controlling access to restricted materials with encryption. By coding your data, your files will become unreadable to anyone who does not have the correct encryption key. You may code an individual file, but also (part of) a hard disk or USB stick
 * Procedural arrangements like imposing non-disclosure agreements for managers or users of confidential data
-* Not sending personal or confidential data via email or through File Transfer Protocol (FTP), but rather by transmitting it as encrypted data (eg. [FileSender](https://filesender.belnet.be) )
+* Not sending personal or confidential data via email or through File Transfer Protocol (FTP), but rather by transmitting it as encrypted data e.g. [FileSender](https://filesender.belnet.be)
 * Destroying data in a consistent and reliable manner when needed
 * Authorisation and authentication: for personal data you have to give very selective access rights to specified individuals.
 
@@ -134,7 +122,7 @@ To arrange the security of the research data you work with, in many cases you ha
 
 For tailored advice and templates, contact Legal Affairs via your faculty Research Support Officer (RSO)
 TODO: add link
-![Legal Agreement contacts](img/AgreementsPicture.png)
+![Legal Agreement contacts -80width](../../images/AgreementsPicture.png)
 
 ### When to use which legal contract?
 
@@ -144,9 +132,9 @@ TODO: add quiz or H5P quiz
 
 ### Privacy-sensitive data
 
-![start privacy-sensitive data](img/00_privacy-sensitive-data.png)
+![start privacy-sensitive data](../../images/00_privacy-sensitive-data.png)
 
-![start privacy-sensitive data](img/01_privacy-sensitive-data-learning-objectives.png)
+![start privacy-sensitive data](../../images/01_privacy-sensitive-data-learning-objectives.png)
 
 **Privacy in a nutshell**
 
@@ -158,7 +146,7 @@ Privacy is a fundamental right. With regards to privacy, we all have two perspec
 2. How can we, as a researcher, protect the privacy of the people involved in our research (the data subjects)?
 
 TODO: add link to document and image screenshot
-![privacy reference card](img/LCRDM-privacy-reference-card -why-Version-02.pdf)
+![privacy reference card](../../images/LCRDM-privacy-reference-card -why-Version-02.pdf)
 
 **Six principles from the European General Data Protection Regulation 1/2**
 
@@ -188,7 +176,7 @@ TODO: H5P quiz 7 cases
 
 **Storing personal data 1/2**
 
-![storing personal data](img/02_privacy-sensitive-data-personal-data-01.png)
+![storing personal data](../../images/02_privacy-sensitive-data-personal-data-01.png)
 
 **Storing personal data 2/2**
 

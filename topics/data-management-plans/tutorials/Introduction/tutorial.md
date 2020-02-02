@@ -4,20 +4,16 @@ layout: tutorial_hands_on
 title: Introduction to Data Management Plans
 zenodo_link: ''
 questions:
-- Which biological questions are addressed by the tutorial?
-- Which bioinformatics techniques are important to know for this type of data?
+- What is data in a research context?
+- Why manage your research data?
 objectives:
-- The learning objectives are the goals of the tutorial
-- They will be informed by your audience and will communicate to them and to yourself
-  what you should focus on during the course
-- They are single sentences describing what a learner should be able to do once they
-  have completed the tutorial
-- You can use Bloom's Taxonomy to write effective learning objectives
+- Understand that data loss happens everywhere and very frequently 
+- Understand funders' requirements
+- Discover funders' data management templates 
 time_estimation: 45M 
 subtopic: introduction
 key_points:
-- The take-home messages
-- They will appear at the end of the tutorial
+- Importance of access, re-use of research data 
 contributors:
 - abotzki 
 
@@ -44,7 +40,7 @@ contributors:
 
 In this video Katarzyna Biernacka explains what data in a research context is.
 
-<iframe src="https://www.youtube.com/watch?v=XCckz_4mlhU" width="699" height="571" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+<iframe src="https://www.youtube.com/embed/XCckz_4mlhU" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
 
 CC-BY-4.0: Katarzyna Biernacka, HU Berlin & [Discipline Workshops 2019](http://www.discipline-workshops.com/)
 
@@ -83,6 +79,9 @@ The following are real examples where researchers or data centers have lost cruc
 
 TODO: add H5P 
 
+<iframe src="https://lll-platform.uu.nl/mod/hvp/embed.php?id=2295" width="800px" height="664" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="https://lll-platform.uu.nl/mod/hvp/library/js/h5p-resizer.js" charset="UTF-8"></script>
+<script src="https://lll-platform.uu.nl/mod/hvp/library/js/h5p-resizer.js" charset="UTF-8"></script>
+
 # University policy framework for research data
 
 For the Flemish universities, it is important that all researchers honour scientific standards, including the meticulous and ethical treatment of research data.
@@ -102,7 +101,9 @@ TODO: add link to policy
 
 In this short video Prof. dr. Chantal Kemner explains the importance of good data management for Utrecht University. Chantal is full professor of Biological Developmental Psychology in Utrecht at the faculty of social sciences and since 2013 also at the UMCU.
 
-!?[Data Management at UU](https://youtu.be/f48l4Uca9nA)
+<iframe src="https://www.youtube.com/embed/f48l4Uca9nA" allowfullscreen="" allow="accelerometer; au
+toplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block
+;" width="800px" title=""></iframe>
 
 # Funder requirements
 
@@ -126,7 +127,7 @@ FWO states that “FWO has made data management a key element of its policy for 
 Most funders require you to write a Data Management Plan. A DMP outlines all key aspects of collecting, storing and managing research data during and after a project. For this they provide you with guidelines, forms, templates and examples. For more information you can download the documents under Resources or check out the websites. You can also contact your faculty Research Support Office:
 
 - [EC – Horizon 2020: guidelines](https://ec.europa.eu/research/openscience/index.cfm)
-- [FWO template]()
+- [FWO template](https://www.fwo.be/media/1023898/fwo-dmp-templatedocx.docx)
 
 # Writing a data management plan
 
@@ -161,11 +162,21 @@ With DMPonline you can:
 
 We recommend that graduate researchers share their data management plans with their supervisor(s).
 
-!?[DMPonline introduction](https://player.vimeo.com/video/251506151)
+<iframe src="https://player.vimeo.com/video/251506151" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
 
 # About RDM Support
 
 RDM Support provides all kinds of research data management assistance to researchers of VIB in all stages of their research. This can range from one-off individual advice to large-scale infrastructure coordination.
 
-TODO: add links Flemish Universities
+You can find an overview of the contact details of the main host institutions for DMP related questions and guidance are as follows:
 
+* AMS: Bart Cambré (bart.cambre@ams.ac.be)
+* Hogere Zeevaartschool: Marc Vervoort (marc.vervoort@hzs.be)
+* ITG: Ann Verlinden (averlinden@itg.be)
+* KU Leuven: RDM.ub@kuleuven.be
+* UAntwerpen: RDM-support@uantwerpen.be
+* UGent: Myriam Mertens and Annik Leyman (rdm.support@ugent.be)
+* UHasselt: Sadia Vancauwenbergh (rdm@uhasselt.be)
+* Vlerick: Eva Cools (eva.cools@vlerick.com)
+* VUB: dmp@vub.be
+* VIB: bits@vib.be
