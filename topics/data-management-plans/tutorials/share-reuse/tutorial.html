@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="google-site-verification" content="dw_1zBYRNxF7-vYNDXh3Ght_JuqgJt3BD1N_Pynqmv0" />
+        <title>Share: Data availability for reuse</title>
+        
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=3">
+        <link rel="stylesheet" href="/assets/css/bootstrap-toc.min.css">
+        <link rel="stylesheet" href="/assets/css/font-awesome.css">
+        <link rel="stylesheet" href="/assets/css/VIB.css">
+        <link rel="stylesheet" href="/assets/css/academicons.css">
+        <link rel="stylesheet" href="/assets/css/syntax_highlighting.css">
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+        
+        
+        
+        
+        
+        <meta name="description" content=" Welcome to this self-study course about research data ma..." />
+        <meta property="og:title" content="VIB Bioinformatics Training: Share: Data availability for reuse" />
+        <meta property="og:description" content=" Welcome to this self-study course about research data ma..." />
+        <meta property="og:image" content="/assets/images/bioinformatics_core_rgb_neg.png" />
+    </head>
+    <body data-spy="scroll" data-target="#toc">
+        <div class="top-bar-vib">
+ <a href="http://vib.be/en" target="_blank" style="font-size:14px">VIB Home </a>
+</div>
+
+<div class="container main-content">
+
+<div class="container page-top__container">
+          <div class="region region-top">
+  <div id="logo" class="col-md-3 col-lg-3 text-left" style="padding-left:0px;margin-top:20px">
+       <a href="/">
+           <img src="/assets/images/logo.svg" height="60" alt="VIB logo" class="margin20">
+       </a>
+    </div>
+    <div class="col-md-9 col-lg-9 text-right" style="margin-top:50px;">
+    <nav role="navigation" aria-labelledby="block-mainnavigation-menu" id="block-mainnavigation" class="block block-menu navigation menu--main">
+  
+
+
+        <a href="/" id="topmenu" class="is-active">Home</a>
+
+
+        <a href="/about.html" id="topmenu" >About</a>
+
+
+        <a href="/hall-of-fame.html" id="topmenu">Contribute</a>
+
+
+        <a href="/faq.html" id="topmenu">Faq</a>
+
+
+        <a href="/search/index.html" id="topmenu">Search</a>
+
+
+  </nav>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="application/ld+json">
+        
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "headline": "Share: Data availability for reuse",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "/blob//LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "courseCode": "data-management-plans / share-reuse / hands-on",
+  "learningResourceType": "hands-on tutorial",
+  "name": "Hands-on for 'Share: Data availability for reuse' tutorial",
+  "isPartOf": {
+    "@type": "Course",
+    "name": "Share: Data availability for reuse",
+    "description": "Share: Data availability for reuse",
+    "learningResourceType": "tutorial",
+    "interactivityType": "expositive",
+    "provider": {
+      "@type": "Organization",
+      "email": "bits@vib.be",
+      "name": "VIB Bioinformatics Core",
+      "url": "https://www.bits.vib.be"
+    }
+  },
+  "url": "https://material.bits.vib.be//topics/data-management-plans/tutorials/share-reuse/tutorial.html",
+  "timeRequired": "PT35M",
+  "description": "Share: Data availability for reuse\\nThe questions this  addresses are:\n - What does Open Science entail?\n - What is FAIR data?\n\n\\nThe objectives are:\n - Discern various repositories to store and/or share your data;\n - Understand that you should manage a license for use of data yourself;\n - Identify ways to ensure that privacy-sensitive data can be shared\n - Understand how shared datasets can be cited.\n\n",
+  "hasPart": [
+
+  ],
+  "mentions": [
+    {
+      "@type": "Thing",
+      "url": "",
+      "name": "Training data for Share: Data availability for reuse tutorial"
+    }
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Alexander Botzki"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Alexander Botzki"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "How to write your Data management Plan",
+      "description": " Welcome to this self-study course about research data management. In this course you will learn more about how you can manage your research data.\n\nA lot of material of that version of the **Learn to write your DMP** course has been developed by RDM Support of University of Utrecht.\n\nWith all questions about this course you can contact: info.rdm@vib.be.\n\n__By VIB Bioinformatics Core, ELIXIR Belgium and Helis Academy__\n\n* LiaScript: [this course as e-learning resource](https://material.bits.vib.be/courses/?https://raw.githubusercontent.com/vibbits/material-liascript/master/README.md#1)\n\nThe course consists of 6 chapters, divided in three categories.\n\n- Prepare - Data collection - Data documentation\n- Handle - Data storage - Data security\n- Share - Data selection and preservation - Data availability for reuse\n\nEach chapter starts with an introduction and ends with an assignment to write that part of your data management plan that corresponds with what you have just learned. You are currently in the introd uction chapter. In this chapter you will learn more about the course and the learning environment. The course ends with chapter 7, 'Rounding up'.\n\n**Data Management Plans** The assignment throughout the course is to fill your own data management plan. At the end of each chapter you will be asked to log into DMPonline. With the content in this course, you should be able to apply this to your research project.\n\n**Questions about the course** If you have technical questions, please contact bits@vib.be. If you have content related questions, please contact RDM Support: info.rdm@vib.be. All feedback is welcome, as this is still a beta version. Based on feedback from users, more content may be added or existing content may be changed to a different form.\n\n**Technical requirements** Some activities use HTML5. Make sure your browser has installed the latest updates. If an activity doesn't work, we recommend you use another browser.\n\n**Licenses and credits** We wish you a lot of fun with the course and we hope it turns out to be a useful learning experience. The content of the course is adapted from an online course of [University of Utrecht](https://lll-platform-uu.nl/).\n",
+      "url": "https://material.bits.vib.be//topics/data-management-plans/"
+    }
+  ]
+}
+    </script>
+
+    <div class="row tutorial">
+      <div class="col-md-12" role="main">
+        <h1 data-toc-skip>Share: Data availability for reuse</h1>
+        <div class="contributors-line">By: 
+
+<a href="/hall-of-fame#abotzki" class="contributor-badge">Alexander Botzki</a>
+
+
+</div>
+        <blockquote class="overview">
+
+            <strong><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</strong>
+            <ul>
+            
+            <li>What does Open Science entail?</li>
+            
+            <li>What is FAIR data?</li>
+            
+            </ul>
+
+            <strong><i class="fa fa-bullseye" aria-hidden="true"></i><span class="visually-hidden">objectives</span> Objectives</strong>
+            <ul>
+            
+            <li>Discern various repositories to store and/or share your data;</li>
+            
+            <li>Understand that you should manage a license for use of data yourself;</li>
+            
+            <li>Identify ways to ensure that privacy-sensitive data can be shared</li>
+            
+            <li>Understand how shared datasets can be cited.</li>
+            
+            </ul>
+
+            
+
+            
+            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 35 minutes</p>
+            
+
+            
+
+
+
+            <div>
+                <div><strong><i class="fa fa-external-link" aria-hidden="true"></i> Supporting Materials</strong></div>
+                <div id="supporting_materials">
+                    <ul>
+                        <li>
+                            <div>
+                    
+
+                    
+
+                    
+                    
+
+
+                    
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </blockquote>
+
+        <div class="container" data-field="body">
+            <div class="row">
+                <div class="col-sm-10" role="main">
+                    <h1 class="no_toc" id="introduction">Introduction</h1>
+
+<!-- This is a comment. -->
+
+<details>
+  <summary>Click to expand!</summary>
+
+*Heading*
+1. A
+2. list
+   * With some
+   * Sub bullets
+
+<figure id="figure-1"><img src="../../images/Seqselector.png" alt="seqselector.png" /><figcaption><span class="figcaption-prefix">Figure 1:</span> Seqselector.png</figcaption></figure>
+</details>
+
+<h3 id="introduction-to-data-availability-for-reuse">Introduction to data availability for reuse</h3>
+
+<p>Thanks to information and communication technology and globalisation new opportunities arise to exchange results of scientific research - publications and research data - and even of scientific methods and practices. This new way of practising science is called ‘open science’.</p>
+
+<p>Open data is a part of this movement towards open science. It is the ambition of universities, governments, funders and publishers to make research data optimally suited for reuse.</p>
+
+<p>There are different reasons why you may not be able to share your research data. Thinking about these issues and challenges when developing your data management plan will help you reflect on such reasons in an early stage.</p>
+
+<p><strong>How frustrating a data request can be</strong></p>
+
+<p>Not being prepared to share your data can lead to problems in using the data. In this short video, you see what shouldn’t happen when a researcher makes a data sharing request! Topics include storage, documentation, and file formats. A made up, yet not unrealistic story.</p>
+
+<iframe src="https://www.youtube.com/embed/66oNv_DJuPc" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
+
+<h3 id="introduction-to-data-repositories">Introduction to data repositories</h3>
+
+<p>In order to preserve, manage, and provide access to your research data, you can deposit your data in a data repository. Data repositories allow permanent access to datasets in a trustworthy environment and enable search, discovery, and reuse of the data they host.</p>
+
+<p>Click on the topics below to find out more about data repositories.</p>
+
+<p>TODO: add repositories from Elixir</p>
+
+<p><strong>A wide variety</strong></p>
+
+<p>There is a wide variety of data repositories. Most have the option to publish your dataset using a persistent identifier and some provide the service of long-term preservation. Some repositories host data from various disciplines and others are domain- or discipline specific.</p>
+
+<p><strong>Choosing a data repository</strong></p>
+
+<p>When choosing a repository for your data be sure to check if the repository meets your criteria or the criteria set by your funder or journal editors.</p>
+
+<p>Criteria to select a certain repository can be:</p>
+
+<ul>
+  <li>Is the repository certified with a <a href="https://www.coretrustseal.org/">CoreTrustSeal</a> or Data Seal of Approval?
+Repositories with a Data Seal of Approval are recognised in the community as a trustworthy source of data.</li>
+  <li>Is long term archiving guaranteed or not?
+Some repositories will guarantee the legibility of the data, even if the hardware and software become obsolete.</li>
+  <li>What are the costs per dataset or gigabyte?
+Repositories differ in their cost model, some allow free deposits up to a certain amount of storage</li>
+  <li>What is the physical storage location of data?
+The location of your data determines under which data protection law it falls. Some repositories store data in the US and others in the EU.</li>
+  <li>What is the default license?
+Some repositories allow for open or restricted access, or you can specify which license for use you want for your data.</li>
+</ul>
+
+<p>You can use this <a href="https://www.uu.nl/en/research/research-data-management/tools-services/tools-for-storing-and-managing-data/decision-aid-data-repositories">repository selection tool</a> to help you select a suitable repository.</p>
+
+<p><strong>Registry of research data repositories</strong></p>
+
+<p>You can browse or search for a data repository in re3data.org. This is a global registry of research data repositories covering different academic disciplines. You can search or browse by subject, content type or country. You can filter the search and browse results on criteria for choosing a data repository as described above.</p>
+
+<p><a href="https://www.re3data.org/">https://www.re3data.org/</a></p>
+
+<p><strong>Some well-known and more generic repositories</strong></p>
+
+<ul>
+  <li><a href="https://zenodo.org/">Zenodo</a> – a repository that enables researchers, scientists, EU projects and institutions to share and showcase multidisciplinary research results (data and publications) that are not part of the existing institutional or subject-based repositories of the research communities;</li>
+  <li><a href="http://www.datadryad.org/">Dryad</a> – a curated general-purpose repository that makes the data underlying scientific publications discoverable, freely reusable and citable. Dryad has integrated data submission for a growing list of journals;</li>
+  <li><a href="https://osf.io/">Open Science Framework (OSF)</a> - a scholarly commons to connect the entire research cycle. It is part network of research materials, part version control system, and part collaboration software;</li>
+  <li><a href="https://figshare.com/">Figshare</a> – a repository that allows researchers to publish all of their research outputs in an easily citable, sharable and discoverable manner.</li>
+</ul>
+
+<h3 id="explore-data-repositories">Explore data repositories</h3>
+
+<p>You have just learned about the existence of a global registry of research data repositories that covers repositories from different academic disciplines.</p>
+
+<p>Re3data.org makes it possible to search for a repository that meets your criteria.</p>
+
+<p>Go to <a href="http://www.re3data.org/search">www.re3data.org/search</a> and find a repository that meets all three of the following criteria:</p>
+
+<ul>
+  <li>Certificate → CoreTrustSeal</li>
+  <li>Data licenses → CC0 (Creative Commons 0)</li>
+  <li>Persistent identifier (PID systems) → DOI (Digital Object Identifier)</li>
+</ul>
+
+<p>Make use of the filters offered on the left side of the screen, as visualized here:</p>
+
+<p>TODO: quiz with ELIXIR resources</p>
+
+<h3 id="give-clarity-with-creative-commons-licenses">Give clarity with (Creative Commons) licenses</h3>
+
+<p>In order to publish your data and make it reusable, you require a license. A license creates clarity and certainty for potential users of your data. A license is not an option for all data; some of it may be too confidential or privacy-sensitive to be published.</p>
+
+<p><strong>Creative Commons licenses</strong></p>
+
+<p>Licenses such as the <a href="https://creativecommons.org/share-your-work/licensing-types-examples/">Creative Commons</a> (CC) licenses replace ‘all rights reserved’ copyright with ‘some rights reserved’. There are seven standard CC licenses. CC-BY is the most commonly used license, in which attribution is mandatory when using data. You can also choose restrictions like non-commercial, no derivatives, or share alike. Creative Commons offers a <a href="https://creativecommons.org/choose/?lang=en">guide</a> to help you determine your preferred license.</p>
+
+<figure id="figure-2"><img src="../../images/CC.png" alt="Creative Commons" /><figcaption><span class="figcaption-prefix">Figure 2:</span> Creative Commons</figcaption></figure>
+
+<p><strong>Assigning a license to your data</strong></p>
+
+<p>Assigning licenses to data can also have disadvantages. Licenses are static and do not change with the quick developments in the field of research data. Therefore, some data repositories work with a CC0 license whereby no rights are reserved. Instructions regarding use are completed with codes of conduct, which may be adapted more easily.</p>
+
+<p>A short movie explaining the different Creative Commons elements is shown below. Remember that sharing without a license can still lead to conflicts.</p>
+
+<p>TODO: add video on CC licenses?</p>
+
+<p><strong>Question</strong></p>
+
+<p>We are very interested to know what license you would choose if you were to share the underlying research data of your most recent publication.</p>
+
+<p>An explanation for each license can be found by clicking on the links below.</p>
+
+<ol>
+  <li>CC BY: <a href="https://creativecommons.org/share-your-work/licensing-types-examples/licensing-examples/#by">Attribution</a></li>
+  <li>CC BY-SA: <a href="https://creativecommons.org/share-your-work/licensing-types-examples/licensing-examples/#sa">Attribution ShareAlike</a></li>
+  <li>CC BY-ND: <a href="https://creativecommons.org/share-your-work/licensing-types-examples/licensing-examples/#nd">Attribution-NoDerivs</a></li>
+  <li>CC BY-NC: <a href="https://creativecommons.org/share-your-work/licensing-types-examples/licensing-examples/#nc">Attribution-NonCommercial</a></li>
+  <li>CC BY-NC-SA: <a href="https://creativecommons.org/share-your-work/licensing-types-examples/licensing-examples/#by-nc-sa">Attribution-NonCommercial-ShareAlike</a></li>
+  <li>CC BY-NC-ND: <a href="https://creativecommons.org/share-your-work/licensing-types-examples/licensing-examples/#by-nc-nd">Attribution-NonCommercial-NoDerivs</a></li>
+  <li>CC0: <a href="https://creativecommons.org/share-your-work/public-domain/">Public Domain</a></li>
+</ol>
+
+<h3 id="publishing-in-a-data-journal">Publishing in a data journal</h3>
+
+<p>Data journals are publications whose primary purpose is to publish datasets. They enable you as an author to focus on the data itself, rather than producing an extensive analysis of the data which occurs in the traditional journal model. Fundamentally, data journals seek to:</p>
+
+<ul>
+  <li>Promote scientific accreditation and reuse;</li>
+  <li>Improve transparency of scientific methods and results;</li>
+  <li>Support good data management practices;</li>
+  <li>Provide an accessible and permanent route to the dataset.</li>
+</ul>
+
+<p><strong>The benefits of publishing in a data journal</strong></p>
+
+<p>Publishing in a data journal may be of interest to researchers and data producers for whom data is a primary research output. In some cases, the publication cycle may be quicker than that of traditional journals, and where there is a requirement to deposit data in an “approved repository”, long-term curation and access to the data is assured.</p>
+
+<p>Publishing a data paper may be regarded as best practice in data management as it:</p>
+
+<ul>
+  <li>Includes an element of peer review of the dataset;</li>
+  <li>Maximises opportunities for reuse of the dataset;</li>
+  <li>Provides academic accreditation for data scientists as well as for front-line researchers.
+(source: <a href="http://www.ands.org.au/working-with-data/publishing-and-reusing-data/data-journals">ANDS Guide</a>)</li>
+</ul>
+
+<p><strong>General and disciplinary data journals</strong></p>
+
+<p>There are data journals for various disciplines and also more general data journals exist. A widespread standard PID is the DOI. DOI stands for ‘Digital Object Identifier’. A DOI is an alphanumeric string assigned to an object which allows for an object to be identified over time. Often a DOI will be presented as a link which looks like: https://doi.org/10.1109/5.771073. There are other identifiers available which some repositories may use instead. If you are depositing in a reputable repository then you should be given some type of persistent identifier which you can use to cite and link to your data.</p>
+
+<p>Examples of generic data journals:</p>
+
+<ul>
+  <li><a href="http://www.nature.com/sdata/about">Scientific Data</a></li>
+  <li><a href="http://www.journals.elsevier.com/data-in-brief">Data in Brief</a></li>
+  <li><a href="http://www.codata.org/publications/data-science-journal">Data Science Journal</a></li>
+</ul>
+
+<p>Examples of disciplinary data journals:</p>
+
+<p>TODO: check for life science additions</p>
+
+<p>Open archaeology data;
+Earth System Science Data;
+Research Data Journal for the Humanities and Social Sciences.</p>
+
+<h3 id="how-to-cite-a-dataset">How to cite a dataset</h3>
+
+<p>Citations to your data can add to your academic impact.</p>
+
+<p>A citation should include enough information so that the exact version of the data being cited can be located. Including a Persistent Identifier (PID) in the citation ensures that even if the location of the data changes, the PID will always link to the data that were used.</p>
+
+<p>You can indicate in your (Creative Commons) license or user agreement that you want your data cited when reused.</p>
+
+<p>Data citations work just like book or journal article citations and can include the following information:</p>
+
+<ul>
+  <li>Author;</li>
+  <li>Year;</li>
+  <li>Dataset title;</li>
+  <li>Repository;</li>
+  <li>Version;</li>
+  <li>Persistent IDentifier (PID), often works as a functional link/URL.</li>
+</ul>
+
+<p><strong>Examples</strong></p>
+
+<p>A widespread standard PID is the DOI. DOI stands for ‘Digital Object Identifier’. A DOI is an alphanumeric string assigned to an object which allows for an object to be identified over time. Often a DOI will be presented as a link which looks like: https://doi.org/10.1109/5.771073. There are other identifiers available which some repositories may use instead. If you are depositing in a reputable repository then you should be given some type of persistent identifier which you can use to cite and link to your data.</p>
+
+<p>Irino, T; Tada, R (2009): Chemical and mineral compositions of sediments from ODP Site 127‐797. Geological Institute, University of Tokyo. http://dx.doi.org/10.1594/PANGAEA.726855</p>
+
+<p><strong>Tips</strong></p>
+
+<p>Tip1: Get a PID at the data repository of your choice.
+Tip2: Is your PID a DOI and do you want to cite it in the format of a specific journal? Use the <a href="https://citation.crosscite.org/">DOI formatter</a> from CrossCite.</p>
+
+<p>TODO: add short quiz</p>
+
+<h3 id="fair-data">FAIR data</h3>
+
+<p>FAIR stands for ‘Findable, Accessible, Interoperable, and Reusable’. The FAIR data principles act as an international guideline for the result of high-quality data management.</p>
+
+<p>With the increase in volume, complexity and creation speed of data, humans are more and more relying on computational support for dealing with data. The principles were defined with the focus on machine-actionability, i.e. the capacity of computational systems to find, access, interoperate and reuse data with none or minimal human intervention.</p>
+
+<ul>
+  <li>F – Findable</li>
+</ul>
+
+<p>By using correct metadata to describe the data, it will be findable. By using a persistent identifier the data can be found by computer systems automatically.</p>
+
+<ul>
+  <li>A – Accessible</li>
+</ul>
+
+<p>The data should be accessible for the long term. Even when underlying data is not accessible, the describing metadata should remain available.</p>
+
+<ul>
+  <li>I – Interoperable</li>
+</ul>
+
+<p>The data can be used and combined with other datasets. To achieve this, the data should be stored in generic file types, not in software specific file types.</p>
+
+<ul>
+  <li>R – Reusable</li>
+</ul>
+
+<p>The options for reuse should be stated clearly in a license. Without a license there is no certainty about the options for reuse and creator rights are implicit.</p>
+
+<p><strong>How to achieve FAIR data</strong></p>
+
+<p>In general, having a good data management plan will lead to FAIR data. In the case of privacy-sensitive data, it is possible to meet the criteria, but not to share the data openly. In this case you can make sure that a well-described dataset can be found online, while preventing the underlying data to be downloaded and used without permission.</p>
+
+<p>If you anonymise your data, presuming the data is of limited sensitivity and you are very sure the data cannot lead back to the persons involved, you can share your data openly.</p>
+
+<p>The FAIR Guiding Principles were put together and published in Scientific Data (Mark D. Wilkinson et al., “The FAIR Guiding Principles for Scientific Data Management and Stewardship,” Scientific Data 3 (March 15, 2016): 160018.).</p>
+
+<p>TODO: add question H5P quiz?</p>
+
+<h3 id="open-science">Open science</h3>
+
+<p>“Open Science is the practice of science in such a way that others can collaborate and contribute, where research data, lab notes and other research processes are freely available, under terms that enable reuse, redistribution and reproduction of the research and its underlying data and methods.”</p>
+
+<p>(Source: ]FOSTER](https://www.fosteropenscience.eu/foster-taxonomy/open-science-definition)).</p>
+
+<p>You have learned that good data management contributes to the findability, accessibility, interoperability and reusability of your research data. This does not necessarily mean that you should make your data openly available. But to open up data, you do need good data management from the earliest possible stage of your research project.</p>
+
+<p>TODO: add links to ORION course or other relevant elements
+Flemish open science plan?</p>
+
+<h3 id="write-your-data-management-plan-for-your-data-reuse">Write your data management plan for your data reuse</h3>
+
+<p>Go to DMPonline and open your draft data management plan created in the Introduction.</p>
+
+<p>You have now completed the module on data sharing and availability for reuse. You should be able to complete the following questions in the section ‘Data availability for reuse’:</p>
+
+<ul>
+  <li>What secondary use of your data is intended or foreseeable?</li>
+  <li>Where will you make your data available?</li>
+  <li>What access and usage conditions will apply?</li>
+</ul>
+
+
+
+                    
+                    <blockquote class="key_points">
+                        <h3><i class="fa fa-key" aria-hidden="true"></i><span class="visually-hidden">keypoints</span> Key points</h3>
+
+                        <ul>
+                            
+                            <li>The take-home messages</li>
+                            
+                            <li>They will appear at the end of the tutorial</li>
+                            
+                        </ul>
+                    </blockquote>
+                    
+
+                    
+                    <h1 data-toc-skip>Useful literature</h1>
+                    <p>Further information, including links to documentation and original publications, regarding the tools, analysis techniques and the interpretation of results described in this tutorial can be found <a href="/topics/data-management-plans#references">here</a>.</p>
+                    
+
+                    
+
+                </div>
+                <!-- sidebar, which will move to the top on a small screen -->
+                <div class="col-sm-2" role="supplementary">
+                    <nav id="toc" data-toggle="toc" class="sticky-top bs-docs-sidebar hidden-print hidden-xs hidden-sm"></nav>
+                </div>
+            </div>
+        </div>
+
+        <h3><i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
+
+        
+
+        
+
+</div>
+</div>
+</div>
+<footer>
+   <div class="well row">
+       <div class="col-md-2 text-center" style="padding: 25px 20px 25px 20px;">				
+         <a href="https://www.bits.vib.be" target="_blank"><img src="/assets/images/bioinformatics_core_rgb_neg.png" width="200"></a>
+       </div>
+       <div class="col-md-8 text-center" style="padding-top: 20px;">	
+        <a href="https://github.com/vibbits/training-material" title="View on GitHub" class="margin20" target="_blank">
+                            <i class="fa fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> View on GitHub
+                        </a>
+       </div>
+       <div class="col-md-2 text-center" style="padding-top: 30px;">
+         <span class="slogan"><br>SCIENCE MEETS LIFE</span>
+       </div>
+   </div>
+</footer>
+
+
+    </body>
+    <script type="text/javascript" src="/assets/js/jquery.slim.min.js"></script>
+    <script type="text/javascript" src="/assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.min.js?v=3"></script>
+    <script type="text/javascript" src="/assets/js/details-element-polyfill.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap-toc.min.js"></script>
+    <script type="text/javascript" src="/assets/js/main.js"></script>
+    <script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
+    <script type="text/javascript" src="https://app.cloudsh.com/js/cloudsh.js"></script>
+    <script type="text/javascript">
+    var snippets=document.querySelectorAll('div.highlight');
+    [].forEach.call(snippets,function(snippet){
+        snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+    });
+
+    var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
+        target:function(trigger){return trigger.nextElementSibling;
+    }});
+    </script>
+</html>

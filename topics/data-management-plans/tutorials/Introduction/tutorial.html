@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="google-site-verification" content="dw_1zBYRNxF7-vYNDXh3Ght_JuqgJt3BD1N_Pynqmv0" />
+        <title>Introduction to Data Management Plans</title>
+        
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=3">
+        <link rel="stylesheet" href="/assets/css/bootstrap-toc.min.css">
+        <link rel="stylesheet" href="/assets/css/font-awesome.css">
+        <link rel="stylesheet" href="/assets/css/VIB.css">
+        <link rel="stylesheet" href="/assets/css/academicons.css">
+        <link rel="stylesheet" href="/assets/css/syntax_highlighting.css">
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+        
+        
+        
+        
+        
+        <meta name="description" content=" Welcome to this self-study course about research data ma..." />
+        <meta property="og:title" content="VIB Bioinformatics Training: Introduction to Data Management Plans" />
+        <meta property="og:description" content=" Welcome to this self-study course about research data ma..." />
+        <meta property="og:image" content="/assets/images/bioinformatics_core_rgb_neg.png" />
+    </head>
+    <body data-spy="scroll" data-target="#toc">
+        <div class="top-bar-vib">
+ <a href="http://vib.be/en" target="_blank" style="font-size:14px">VIB Home </a>
+</div>
+
+<div class="container main-content">
+
+<div class="container page-top__container">
+          <div class="region region-top">
+  <div id="logo" class="col-md-3 col-lg-3 text-left" style="padding-left:0px;margin-top:20px">
+       <a href="/">
+           <img src="/assets/images/logo.svg" height="60" alt="VIB logo" class="margin20">
+       </a>
+    </div>
+    <div class="col-md-9 col-lg-9 text-right" style="margin-top:50px;">
+    <nav role="navigation" aria-labelledby="block-mainnavigation-menu" id="block-mainnavigation" class="block block-menu navigation menu--main">
+  
+
+
+        <a href="/" id="topmenu" class="is-active">Home</a>
+
+
+        <a href="/about.html" id="topmenu" >About</a>
+
+
+        <a href="/hall-of-fame.html" id="topmenu">Contribute</a>
+
+
+        <a href="/faq.html" id="topmenu">Faq</a>
+
+
+        <a href="/search/index.html" id="topmenu">Search</a>
+
+
+  </nav>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="application/ld+json">
+        
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "headline": "Introduction to Data Management Plans",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "/blob//LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "courseCode": "data-management-plans / Introduction / hands-on",
+  "learningResourceType": "hands-on tutorial",
+  "name": "Hands-on for 'Introduction to Data Management Plans' tutorial",
+  "isPartOf": {
+    "@type": "Course",
+    "name": "Introduction to Data Management Plans",
+    "description": "Introduction to Data Management Plans",
+    "learningResourceType": "tutorial",
+    "interactivityType": "expositive",
+    "provider": {
+      "@type": "Organization",
+      "email": "bits@vib.be",
+      "name": "VIB Bioinformatics Core",
+      "url": "https://www.bits.vib.be"
+    }
+  },
+  "url": "https://material.bits.vib.be//topics/data-management-plans/tutorials/Introduction/tutorial.html",
+  "timeRequired": "PT45M",
+  "description": "Introduction to Data Management Plans\\nThe questions this  addresses are:\n - What is data in a research context?\n - Why manage your research data?\n\n\\nThe objectives are:\n - Understand that data loss happens everywhere and very frequently\n - Understand funders' requirements\n - Discover funders' data management templates\n\n",
+  "hasPart": [
+
+  ],
+  "mentions": [
+    {
+      "@type": "Thing",
+      "url": "",
+      "name": "Training data for Introduction to Data Management Plans tutorial"
+    }
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Alexander Botzki"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Alexander Botzki"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "How to write your Data management Plan",
+      "description": " Welcome to this self-study course about research data management. In this course you will learn more about how you can manage your research data.\n\nA lot of material of that version of the **Learn to write your DMP** course has been developed by RDM Support of University of Utrecht.\n\nWith all questions about this course you can contact: info.rdm@vib.be.\n\n__By VIB Bioinformatics Core, ELIXIR Belgium and Helis Academy__\n\n* LiaScript: [this course as e-learning resource](https://material.bits.vib.be/courses/?https://raw.githubusercontent.com/vibbits/material-liascript/master/README.md#1)\n\nThe course consists of 6 chapters, divided in three categories.\n\n- Prepare - Data collection - Data documentation\n- Handle - Data storage - Data security\n- Share - Data selection and preservation - Data availability for reuse\n\nEach chapter starts with an introduction and ends with an assignment to write that part of your data management plan that corresponds with what you have just learned. You are currently in the introd uction chapter. In this chapter you will learn more about the course and the learning environment. The course ends with chapter 7, 'Rounding up'.\n\n**Data Management Plans** The assignment throughout the course is to fill your own data management plan. At the end of each chapter you will be asked to log into DMPonline. With the content in this course, you should be able to apply this to your research project.\n\n**Questions about the course** If you have technical questions, please contact bits@vib.be. If you have content related questions, please contact RDM Support: info.rdm@vib.be. All feedback is welcome, as this is still a beta version. Based on feedback from users, more content may be added or existing content may be changed to a different form.\n\n**Technical requirements** Some activities use HTML5. Make sure your browser has installed the latest updates. If an activity doesn't work, we recommend you use another browser.\n\n**Licenses and credits** We wish you a lot of fun with the course and we hope it turns out to be a useful learning experience. The content of the course is adapted from an online course of [University of Utrecht](https://lll-platform-uu.nl/).\n",
+      "url": "https://material.bits.vib.be//topics/data-management-plans/"
+    }
+  ]
+}
+    </script>
+
+    <div class="row tutorial">
+      <div class="col-md-12" role="main">
+        <h1 data-toc-skip>Introduction to Data Management Plans</h1>
+        <div class="contributors-line">By: 
+
+<a href="/hall-of-fame#abotzki" class="contributor-badge">Alexander Botzki</a>
+
+
+</div>
+        <blockquote class="overview">
+
+            <strong><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</strong>
+            <ul>
+            
+            <li>What is data in a research context?</li>
+            
+            <li>Why manage your research data?</li>
+            
+            </ul>
+
+            <strong><i class="fa fa-bullseye" aria-hidden="true"></i><span class="visually-hidden">objectives</span> Objectives</strong>
+            <ul>
+            
+            <li>Understand that data loss happens everywhere and very frequently</li>
+            
+            <li>Understand funders' requirements</li>
+            
+            <li>Discover funders' data management templates</li>
+            
+            </ul>
+
+            
+
+            
+            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 45 minutes</p>
+            
+
+            
+
+
+
+            <div>
+                <div><strong><i class="fa fa-external-link" aria-hidden="true"></i> Supporting Materials</strong></div>
+                <div id="supporting_materials">
+                    <ul>
+                        <li>
+                            <div>
+                    
+
+                    
+
+                    
+                    
+
+
+                    
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </blockquote>
+
+        <div class="container" data-field="body">
+            <div class="row">
+                <div class="col-sm-10" role="main">
+                    <h1 class="no_toc" id="introduction">Introduction</h1>
+
+<!-- This is a comment. -->
+
+<details>
+  <summary>Click to expand!</summary>
+
+*Heading*
+1. A
+2. list
+   * With some
+   * Sub bullets
+
+<figure id="figure-1"><img src="../../images/Seqselector.png" alt="seqselector.png" /><figcaption><span class="figcaption-prefix">Figure 1:</span> Seqselector.png</figcaption></figure>
+</details>
+
+<h1 id="why-manage-your-research-data">Why manage your research data?</h1>
+
+<p>In this video Katarzyna Biernacka explains what data in a research context is.</p>
+
+<iframe src="https://www.youtube.com/embed/XCckz_4mlhU" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
+
+<p>CC-BY-4.0: Katarzyna Biernacka, HU Berlin &amp; <a href="http://www.discipline-workshops.com/">Discipline Workshops 2019</a></p>
+
+<p>Managing your data effectively is crucial to the success of your research. This doesn’t only apply to the immediate context of your thesis or publications. Managing your data is a practice that will benefit you throughout your research career. The following list gives an overview of what benefits are evident.</p>
+
+<ol>
+  <li><strong>Access, Re-use &amp; Recognition</strong>
+    <ul>
+      <li>Facilitating future research by allowing others to build on or add to your research data.</li>
+      <li>Increased citations of research data and of publications based on that data.</li>
+    </ul>
+  </li>
+  <li><strong>Efficiency</strong>
+    <ul>
+      <li>Increasing your research efficiency by saving time and resources.</li>
+      <li>Preventing duplication of effort by enabling others to use your data.</li>
+    </ul>
+  </li>
+  <li><strong>Quality &amp; Security</strong>
+    <ul>
+      <li>Ensuring the integrity and reproducibility of your research.</li>
+      <li>Ensuring that research data and records are accurate, complete, authentic and reliable.</li>
+      <li>Enhancing data security and minimising the risk of data loss.</li>
+    </ul>
+  </li>
+  <li><strong>Compliance</strong>
+    <ul>
+      <li>Meeting legal obligations, restrictions and codes of conduct.</li>
+      <li>Meeting the University policy for research data requirements.</li>
+      <li>Meeting funding body grant requirements.</li>
+      <li>Meeting publisher requirements for data access.</li>
+    </ul>
+  </li>
+</ol>
+
+<h1 id="a-case-to-consider">A case to consider</h1>
+
+<p>Marleen is an early career researcher. She completed her PhD about four years ago and is now a postdoctoral research fellow at a different university. Since she obtained her PhD, she has published a number of journal articles based on her doctoral research. Her papers have been cited widely in the literature of her field. But just recently a fellow researcher has questioned her findings. He has gone so far as to suggest that the data on which her research was based is inaccurate. One implication is that the data could even have been falsified. Marleen is confident that her research is valid and that her data is accurate.</p>
+
+<ul>
+  <li>What steps could Marleen take to verify her research findings?</li>
+  <li>What evidence would she need to demonstrate that she hasn’t falsified her data?</li>
+</ul>
+
+<p>Think about your own research. If someone accused you of research misconduct, would you be in a position to defend your research and reputation? List some strategies you could implement right now that would assist you, should you ever find yourself in Marleen’s situation.</p>
+
+<h1 id="data-disasters--postcards-from-the-edge">Data disasters – postcards from the edge</h1>
+
+<p>The following are real examples where researchers or data centers have lost crucial data. Could any of these ever happen to you? With good planning you could avoid or reduce the impact of such occurrences.</p>
+
+<p>TODO: add H5P</p>
+
+<iframe src="https://lll-platform.uu.nl/mod/hvp/embed.php?id=2295" width="800px" height="664" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+<script src="https://lll-platform.uu.nl/mod/hvp/library/js/h5p-resizer.js" charset="UTF-8"></script>
+
+<script src="https://lll-platform.uu.nl/mod/hvp/library/js/h5p-resizer.js" charset="UTF-8"></script>
+
+<h1 id="university-policy-framework-for-research-data">University policy framework for research data</h1>
+
+<p>For the Flemish universities, it is important that all researchers honour scientific standards, including the meticulous and ethical treatment of research data.
+This policy is intended to set out parameters to safeguard the quality, availability and accessibility of research data within any Flemish university. It provides a basis for evaluating compliance with laws, regulations and codes of conduct. The policy also clarifies the various roles and responsibilities of university staff in managing research data.</p>
+
+<p>The highlights of the policy are:</p>
+<ul>
+  <li>Archive (relevant and valuable) research data for a minimum of ten years;</li>
+  <li>Store data in a structure that is suitable for long-term preservation and later consultation;</li>
+  <li>Provide metadata to describe the data with sufficient clarity to ensure they are findable for further research;</li>
+  <li>Make archived research data available for access and reuse at and outside VIB insofar as is reasonably possible;</li>
+  <li>Each individual researcher / research leader is responsible to draw up a Data Management Plan (DMP) at the start of the research project and to follow up the agreements made in this plan;</li>
+  <li>Scientific directors are responsible for the implementation and monitoring of the University policy framework and for drawing up additional faculty guidelines to this end if needed.</li>
+</ul>
+
+<p>TODO: add link to policy</p>
+
+<h1 id="policy-in-practise">Policy in Practise</h1>
+
+<p>In this short video Prof. dr. Chantal Kemner explains the importance of good data management for Utrecht University. Chantal is full professor of Biological Developmental Psychology in Utrecht at the faculty of social sciences and since 2013 also at the UMCU.</p>
+
+<iframe src="https://www.youtube.com/embed/f48l4Uca9nA" allowfullscreen="" allow="accelerometer; au
+toplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block
+;" width="800px" title=""></iframe>
+
+<h1 id="funder-requirements">Funder requirements</h1>
+
+<p>More and more research funders explicitly require you to consider the management and publication of your research data, both during and after your research project. The European Commission and the Flemish funders FWO have explicit policies on research data management.</p>
+
+<p><strong>European Commission - Horizon 2020</strong></p>
+
+<p>The European Commission wants “Horizon 2020 beneficiaries to make their research data findable, accessible, interoperable and reusable (FAIR), to ensure it is soundly managed. Good research data management is not a goal in itself, but rather the key conduit leading to knowledge discovery and innovation, and to subsequent data and knowledge integration and reuse.” Horizon 2020 is the biggest research and innovation program of the European Commission.</p>
+
+<figure id="figure-2"><img src="../../images/O_Funders_Screenshot_H2020guidelines.JPG" alt="European Commission - Horizon 2020" /><figcaption><span class="figcaption-prefix">Figure 2:</span> European Commission - Horizon 2020</figcaption></figure>
+<p>(https://www.nwo.nl/en/policies/open+science/data+management)</p>
+
+<p><strong>FWO</strong></p>
+
+<p>FWO states that “FWO has made data management a key element of its policy for all support channels provided by the FWO. The FWO expects researchers to pay due attention to this dimension before, during and for at least five years after their research.”</p>
+
+<p><a href="https://www.fwo.be/en/the-fwo/organisation/data-management-plan/">FWO Overview Data Management Plan</a></p>
+
+<h1 id="funder-guidelines-and-templates">Funder guidelines and templates</h1>
+
+<p>Most funders require you to write a Data Management Plan. A DMP outlines all key aspects of collecting, storing and managing research data during and after a project. For this they provide you with guidelines, forms, templates and examples. For more information you can download the documents under Resources or check out the websites. You can also contact your faculty Research Support Office:</p>
+
+<ul>
+  <li><a href="https://ec.europa.eu/research/openscience/index.cfm">EC – Horizon 2020: guidelines</a></li>
+  <li><a href="https://www.fwo.be/media/1023898/fwo-dmp-templatedocx.docx">FWO template</a></li>
+</ul>
+
+<h1 id="writing-a-data-management-plan">Writing a data management plan</h1>
+
+<p>By now it should be clear that data needs to be properly managed throughout its lifecycle. The most effective way to do this is to create a Data Management Plan (DMP). This will take into account all the stages of the research data lifecycle. As outlined earlier, each individual researcher or research leader is responsible to draw up a data management plan. He or she should do this at the start of the research project. And during the research you should actively follow up on the agreements made in this plan.</p>
+
+<p>Think about our early career researcher Sasha (introduced in ‘Why manage your research materials and data?’) who needs to defend herself against accusations of researcher misconduct. As well as defending against misconduct accusations, some additional benefits of creating a data management plan include:</p>
+
+<ul>
+  <li>Accessing your data more easily;</li>
+  <li>Prioritising and balancing activities relating to research data collection and storage;</li>
+  <li>Mitigating data loss;</li>
+  <li>Reaching agreement between stakeholders about ownership of data;</li>
+  <li>Reducing time and effort in the long term.
+The good news is that this online training will take you through the necessary steps to create a plan during the subsequent modules.</li>
+</ul>
+
+<h1 id="getting-started-with-dmponline">Getting started with DMPonline</h1>
+
+<p>We offer you DMPonline to create your Data Management Plan. DMPonline is an international online service that guides you in creating a DMP by answering a series of questions about your research project. It allows you to create, share, store, and revise your data management plans online. You will be asked to complete different sections of your DMP as we go through the other modules. As a result you will have written your own data management plan at the end of this course.</p>
+
+<p>With DMPonline you can:</p>
+
+<ul>
+  <li>Write your plan and keep it up-to-date
+    <ul>
+      <li>You can easily update your DMP throughout the lifecycle of a project</li>
+    </ul>
+  </li>
+  <li>Share plans online
+    <ul>
+      <li>DMPonline allows collaborative access, so you can share your DMP with other researchers, within and outside of Utrecht University.</li>
+    </ul>
+  </li>
+  <li>Create multiple plans
+    <ul>
+      <li>You can store different DMPs for different projects. And you can make a copy of a previous plan as the basis for writing a new one.</li>
+    </ul>
+  </li>
+  <li>Download plans
+    <ul>
+      <li>You can download your DMP in a variety of formats.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>We recommend that graduate researchers share their data management plans with their supervisor(s).</p>
+
+<iframe src="https://player.vimeo.com/video/251506151" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
+
+<h1 id="about-rdm-support">About RDM Support</h1>
+
+<p>RDM Support provides all kinds of research data management assistance to researchers of VIB in all stages of their research. This can range from one-off individual advice to large-scale infrastructure coordination.</p>
+
+<p>You can find an overview of the contact details of the main host institutions for DMP related questions and guidance are as follows:</p>
+
+<ul>
+  <li>AMS: Bart Cambré (bart.cambre@ams.ac.be)</li>
+  <li>Hogere Zeevaartschool: Marc Vervoort (marc.vervoort@hzs.be)</li>
+  <li>ITG: Ann Verlinden (averlinden@itg.be)</li>
+  <li>KU Leuven: RDM.ub@kuleuven.be</li>
+  <li>UAntwerpen: RDM-support@uantwerpen.be</li>
+  <li>UGent: Myriam Mertens and Annik Leyman (rdm.support@ugent.be)</li>
+  <li>UHasselt: Sadia Vancauwenbergh (rdm@uhasselt.be)</li>
+  <li>Vlerick: Eva Cools (eva.cools@vlerick.com)</li>
+  <li>VUB: dmp@vub.be</li>
+  <li>VIB: bits@vib.be</li>
+</ul>
+
+
+
+                    
+                    <blockquote class="key_points">
+                        <h3><i class="fa fa-key" aria-hidden="true"></i><span class="visually-hidden">keypoints</span> Key points</h3>
+
+                        <ul>
+                            
+                            <li>Importance of access, re-use of research data</li>
+                            
+                        </ul>
+                    </blockquote>
+                    
+
+                    
+                    <h1 data-toc-skip>Useful literature</h1>
+                    <p>Further information, including links to documentation and original publications, regarding the tools, analysis techniques and the interpretation of results described in this tutorial can be found <a href="/topics/data-management-plans#references">here</a>.</p>
+                    
+
+                    
+
+                </div>
+                <!-- sidebar, which will move to the top on a small screen -->
+                <div class="col-sm-2" role="supplementary">
+                    <nav id="toc" data-toggle="toc" class="sticky-top bs-docs-sidebar hidden-print hidden-xs hidden-sm"></nav>
+                </div>
+            </div>
+        </div>
+
+        <h3><i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
+
+        
+
+        
+
+</div>
+</div>
+</div>
+<footer>
+   <div class="well row">
+       <div class="col-md-2 text-center" style="padding: 25px 20px 25px 20px;">				
+         <a href="https://www.bits.vib.be" target="_blank"><img src="/assets/images/bioinformatics_core_rgb_neg.png" width="200"></a>
+       </div>
+       <div class="col-md-8 text-center" style="padding-top: 20px;">	
+        <a href="https://github.com/vibbits/training-material" title="View on GitHub" class="margin20" target="_blank">
+                            <i class="fa fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> View on GitHub
+                        </a>
+       </div>
+       <div class="col-md-2 text-center" style="padding-top: 30px;">
+         <span class="slogan"><br>SCIENCE MEETS LIFE</span>
+       </div>
+   </div>
+</footer>
+
+
+    </body>
+    <script type="text/javascript" src="/assets/js/jquery.slim.min.js"></script>
+    <script type="text/javascript" src="/assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.min.js?v=3"></script>
+    <script type="text/javascript" src="/assets/js/details-element-polyfill.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap-toc.min.js"></script>
+    <script type="text/javascript" src="/assets/js/main.js"></script>
+    <script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
+    <script type="text/javascript" src="https://app.cloudsh.com/js/cloudsh.js"></script>
+    <script type="text/javascript">
+    var snippets=document.querySelectorAll('div.highlight');
+    [].forEach.call(snippets,function(snippet){
+        snippet.firstChild.insertAdjacentHTML('beforebegin','<button class="btn btn-light" data-clipboard-snippet><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+    });
+
+    var clipboardSnippets=new ClipboardJS('[data-clipboard-snippet]',{
+        target:function(trigger){return trigger.nextElementSibling;
+    }});
+    </script>
+</html>
