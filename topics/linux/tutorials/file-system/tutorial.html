@@ -251,57 +251,60 @@
         <div class="container" data-field="body">
             <div class="row">
                 <div class="col-sm-10" role="main">
-                    <h1 id="tutorial-on-the-linux-file-system">Tutorial on the linux file system</h1>
-<h2 id="which-protocol-achieves-highest-compression-ratio-">Which protocol achieves highest compression ratio? =</h2>
+                    <h2 id="tutorial-on-the-linux-file-system">Tutorial on the linux file system</h2>
+
+<h3 id="which-protocol-achieves-highest-compression-ratio">Which protocol achieves highest compression ratio?</h3>
 <p>Let’s do a little test. Download <a href="http://data.bits.vib.be/pub/trainingmaterial/introduction_to_linux_for_bioinformatics/data_linux_training.tar.gz">this compressed file</a>.</p>
 
 <blockquote>
   <p>Create a folder named ‘Compression_exercise’ in your home. Copy the downloaded tar.gz to it.</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ cd
- $ mkdir Compression_exercise
- $ cp Downloads/data_linux_training.tar.gz Compression_exercise/
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd
+$ mkdir Compression_exercise
+$ cp Downloads/data_linux_training.tar.gz Compression_exercise/
 </code></pre></div>  </div>
 </blockquote>
 
 <blockquote>
   <p>Unpack the data_linux_training.tar.gz  file.</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ tar -xvzf data_linux_training.tar.gz 
-</code></pre></div>  </div>
-  <p>Alternative: you can specify the options without the ‘-‘ sign.</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ tar xvfz data_linux_training.tar.gz 
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ tar -xvzf data_linux_training.tar.gz 
 </code></pre></div>  </div>
 </blockquote>
+
+<p>Alternative: you can specify the options without the ‘-‘ sign.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ tar xvfz data_linux_training.tar.gz 
+</code></pre></div></div>
 
 <blockquote>
   <p>Decompress the file DRR000542_1.fastq.subset.gz</p>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ gunzip DRR000542_1.fastq.subset.gz
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gunzip DRR000542_1.fastq.subset.gz
 </code></pre></div></div>
 
 <blockquote>
   <p>Copy the DRR000542_1.fastq.subset file to a new file called ‘bzip2_test.fastq’. Compress this file with bzip2.</p>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ bzip2 bzip2_test.fastq
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ bzip2 bzip2_test.fastq
 </code></pre></div></div>
+
 <p>’'’Tip’’’ If you would like to know how long the command took to finish, use ‘'’time’’’</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ time bzip2 bzip2_test.fastq
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ time bzip2 bzip2_test.fastq
 real	0m5.878s
 user	0m5.728s
 sys	0m0.112s
 </code></pre></div></div>
+
 <p>Three different times are given. What matters to you is the line ‘real’, also called the wall-clock time.</p>
 
 <blockquote>
   <p>Copy DRR000542_1.fastq.subset file to a new file called gzip_test.fastq and compress with gzip.</p>
-</blockquote>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ time gzip gzip_test.fastq
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ time gzip gzip_test.fastq
 real	0m5.878s
 user	0m5.728s
 sys	0m0.112s
-</code></pre></div></div>
+</code></pre></div>  </div>
+</blockquote>
 
 <p>A relatively unknown package is lrzip, ‘long range zip’, which achieves very good results on big files. Let’s try that one also!</p>
 
@@ -309,12 +312,12 @@ sys	0m0.112s
   <p>Copy DRR000542_1.fastq.subset file to a new file called lrzip_test.fastq and compress with lrzip.</p>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ lrzip lrzip_test.fastq
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ lrzip lrzip_test.fastq
 The program 'lrzip' is currently not installed.  You can install it by typing:
 sudo apt-get install lrzip
 </code></pre></div></div>
 <p>’'’apt-get’’’ is the command line tool to install software on Debian distro’s. Equivalent to the software center.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ sudo apt-get install lrzip
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt-get install lrzip
 [sudo] password for joachim: 
 Reading package lists... Done
 Building dependency tree       
@@ -337,11 +340,11 @@ Unpacking lrzip (from .../lrzip_0.608-1_amd64.deb) ...
 Processing triggers for man-db ...
 Setting up lrzip (0.608-1) ...
 </code></pre></div></div>
+
 <p>Now we can compress:</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Output filename is: lrzip_test.fastq.lrz
 lrzip_test.fastq - Compression Ratio: 6.724. Average Compression Speed:  0.563MB/s.
 Total time: 00:03:02.97
-
 real	3m3.026s
 user	3m1.947s
 sys	0m0.804s
@@ -364,13 +367,13 @@ sys	0m0.804s
   <p>Put the three files in a newly created folder ‘results’, and make an archive of it.</p>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ mkdir results
- $ mv  *{bz2,q.gz,lrz} results/
- $ ls results/
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mkdir results
+$ mv  *{bz2,q.gz,lrz} results/
+$ ls results/
 bzip2_test.fastq.bz2  gzip_test.fastq.gz  lrzip_test.fastq.lrz
- $ tar cvf results.tar results/
- $ rm -rf results/
- $ ls -lh
+$ tar cvf results.tar results/
+$ rm -rf results/
+$ ls -lh
 total 281M
 -rw------- 1 bits bits 104M May  4  2011 ERX000016.test.fastq
 -rw-r--r-- 1 bits bits 21M Oct 22 14:02 ERX000016.test.fastq.tar.gz
@@ -378,61 +381,93 @@ total 281M
 -rw-r--r-- 1 bits bits 53M Oct 22 14:28 results.tar
 </code></pre></div></div>
 
-<p>’’‘&lt;blockquote&gt;Go back to parent page [[Introduction to Linux for bioinformatics]] &lt;/blockquote&gt;’’’
-‘’‘&lt;blockquote&gt;Go back to parent page [[Introduction to Linux for bioinformatics]] &lt;/blockquote&gt;’’’</p>
-
-<p>= Symbolic links =
-Symbolic links (‘'’symlinks’’) point to a file, making the file accessible in another directory than where the file is. So you can avoid copying! When the original file is deleted, the symlink is dead. When you remove the symlink, the original file is still present.</p>
-
-<p>The syntax for symbolic links is:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ ln -s /home/bits /data/large.fastq /home/bits /Projects/ProjectA/
+<h3 id="symbolic-links">Symbolic links</h3>
+<p>Symbolic links (symlinks) point to a file, making the file accessible in another directory than where the file is. So you can avoid copying! When the original file is deleted, the symlink is dead. When you remove the symlink, the original file is still present. 
+The syntax for symbolic links is:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ln -s /home/bits /data/large.fastq /home/bits /Projects/ProjectA/
 </code></pre></div></div>
 
-<p>Tip: when using ‘'’ln’’’, preferably provide absolute paths. If you want to use relative paths, make sure first going to the directory you want the link to be in, and create the link using a relative path (using ‘.’ and ‘..’ to make the path).</p>
+<p>Tip: when using <strong>ln</strong>, preferably provide absolute paths. If you want to use relative paths, make sure first going to the directory you want the link to be in, and create the link using a relative path (using ‘.’ and ‘..’ to make the path).</p>
 
 <p>Removing symbolic links as such:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ unlink /home/bits /Projects/ProjectA
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ unlink /home/bits /Projects/ProjectA
 </code></pre></div></div>
 
-<p>In contrast, there is also something as a ‘'’hard link’’’ (ln without the -s option). When you delete a hard link, the file to which it referred is gone. So ‘ln -s’ is mostly used.</p>
+<p>In contrast, there is also something as a “hard link” (ln without the -s option). When you delete a hard link, the file to which it referred is gone. So ‘ln -s’ is mostly used.</p>
 
-<p>= Linking data instead of copying =
-In the Rice Example directory (should be available under your home): download [http://rice.plantbiology.msu.edu/pub/data/Eukaryotic_Projects/o_sativa/annotation_dbs/pseudomolecules/version_7.0/all.dir/all.gff33 this annotation file] into the ‘Genome data’/’Annotation’ directory. Make a symbolic link to this file in the ‘Genome data’/’Sequence’ directory. Read the first 10 lines from the symbolic link file.</p>
+<h3 id="linking-data-instead-of-copying">Linking data instead of copying</h3>
+<p>In the Rice Example directory (should be available under your home): download [http://rice.plantbiology.msu.edu/pub/data/Eukaryotic_Projects/o_sativa/annotation_dbs/pseudomolecules/version_7.0/all.dir/all.gff33 this annotation file] into the ‘Genome data’/’Annotation’ directory. Make a symbolic link to this file in the ‘Genome data’/’Sequence’ directory. Read the first 10 lines from the symbolic link file.</p>
+<blockquote>
+  <p>When you have tried yourself, see the solution.</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd Rice\ Example/
+~/Rice Example $ ls
+bin  Genome data
+~/Rice Example $ cd Genome\ data/Annotation/
+~/Rice Example/Genome data/Annotation $ ls
+~/Rice Example/Genome data/Annotation $ wget http://rice.plantbiology.msu.edu/pub/data/Eukaryotic_Projects/o_sativa/annotation_dbs/pseudomolecules/version_7.0/all.dir/all.gff3
+--2013-10-28 11:45:26--  http://rice.plantbiology.msu.edu/pub/data/Eukaryotic_Projects/o_sativa/annotation_dbs/pseudomolecules/version_7.0/all.dir/all.gff3
+           =&gt; `all.gff3'
+Resolving http://rice.plantbiology.msu.edu (http://rice.plantbiology.msu.edu)... 35.8.196.190
+Connecting to http://rice.plantbiology.msu.edu (http://rice.plantbiology.msu.edu)|35.8.196.190|:21... connected.
+Logging in as anonymous ... Logged in!
+==&gt; SYST ... done.    ==&gt; PWD ... done.
+==&gt; TYPE I ... done.  ==&gt; CWD (1) /pub/data/Eukaryotic_Projects/o_sativa/annotation_dbs/pseudomolecules/version_7.0/all.dir ... done.
+==&gt; SIZE all.gff3 ... 81498659
+==&gt; PASV ... done.    ==&gt; RETR all.gff3 ... done.
+Length: 81498659 (78M) (unauthoritative)
+100%[======================================&gt;] 81,498,659  1.34M/s   in 65s     
+2013-10-28 11:46:33 (1.20 MB/s) - `all.gff3' saved [81498659]
+~/Rice Example/Genome data/Annotation $ ls ..
+Annotation  Sequence
+~/Rice Example/Genome data/Annotation $ cd ../Sequence/
+~/Rice Example/Genome data/Sequence $ ln -s ../Annotation/all.gff3 .
+~/Rice Example/Genome data/Sequence $ ls -l
+total 381300
+lrwxrwxrwx 1 bits bits 22 Oct 28 11:49 all.gff3 -&gt; ../Annotation/all.gff3
+-rw-r--r-- 1 bits bits 390444160 Mar  8  2013 IRGSPb5.fa.masked
+-rw-r--r-- 1 bits bits 55 Mar  8  2013 IRGSPb5.fa.masked.gz.md5
+~/Rice Example/Genome data/Sequence $ head all.gff3 
+##gff-version 3
+Chr1	MSU_osa1r7	gene	2903	10817	.	+	.	ID=LOC_Os01g01010;Name=LOC_Os01g01010;Note=TBC%20domain%20containing%20protein%2C%20expressed
+Chr1	MSU_osa1r7	mRNA	2903	10817	.	+	.	ID=LOC_Os01g01010.1;Name=LOC_Os01g01010.1;Parent=LOC_Os01g01010
+Chr1	MSU_osa1r7	exon	2903	3268	.	+	.	ID=LOC_Os01g01010.1:exon_1;Parent=LOC_Os01g01010.1
+Chr1	MSU_osa1r7	exon	3354	3616	.	+	.	ID=LOC_Os01g01010.1:exon_2;Parent=LOC_Os01g01010.1
+Chr1	MSU_osa1r7	exon	4357	4455	.	+	.	ID=LOC_Os01g01010.1:exon_3;Parent=LOC_Os01g01010.1
+Chr1	MSU_osa1r7	exon	5457	5560	.	+	.	ID=LOC_Os01g01010.1:exon_4;Parent=LOC_Os01g01010.1
+Chr1	MSU_osa1r7	exon	7136	7944	.	+	.	ID=LOC_Os01g01010.1:exon_5;Parent=LOC_Os01g01010.1
+Chr1	MSU_osa1r7	exon	8028	8150	.	+	.	ID=LOC_Os01g01010.1:exon_6;Parent=LOC_Os01g01010.1
+Chr1	MSU_osa1r7	exon	8232	8320	.	+	.	ID=LOC_Os01g01010.1:exon_7;Parent=LOC_Os01g01010.1
+</code></pre></div>  </div>
+</blockquote>
 
-<p>= Introduction: symbolic links to easily install manually applications =
-If a package is not available via a package manager, manual installation might be an option. I put manually applications in ‘’‘/opt’’’. Next, I link them to a correct location on our system, usually ‘’‘/usr/local/bin’’’. Below you have some examples of this, which you can try out yourself.</p>
+<h3 id="introduction-symbolic-links-to-easily-install-manually-applications">Introduction: symbolic links to easily install manually applications</h3>
+<p>If a package is not available via a package manager, manual installation might be an option. I put manually applications in ‘’‘/opt’’’. Next, I link them to a correct location on our system, usually ‘’‘/usr/local/bin’’’. Below you have some examples of this, which you can try out yourself.</p>
 
-<p>If you want to manually install apps, ‘’‘/opt’’’ is the advised directory. However, only the administrator (‘root’) can access /opt.</p>
+<p>If you want to manually install apps, ‘’‘/opt’’’ is the advised directory. However, only the administrator (‘root’) can access /opt. You can check that the /opt directory belongs to root with &lt;pre&gt;ls -l /opt&lt;/pre&gt;
+To be able to copy and write stuff into /opt, we need root permissions. To do so, precede your commands with ‘'’sudo’’’, as exemplified in the next exercise below. When we do that, our password will first be asked. Next, the command is executed with root permissions. In this way, we can edit contents in root-owned directories! You are a sudoer!</p>
 
-<p>You can check that the /opt directory belongs to root with &lt;pre&gt;ls -l /opt&lt;/pre&gt;</p>
-
-<p>To be able to copy and write stuff into /opt, we need root permissions. To do so, precede your commands with ‘'’sudo’’’, as exemplified in the next exercise below. When we do that, our password will first be asked. Next, the command is executed with root permissions. In this way, we can edit contents in root-owned directories! You are a sudoer!</p>
-
-<p>== Transpose, a tool to transpose ==
-Transpose is an extremely convenient text tool to transpose tabular data. We will use it later. The code is hosted on [http://sourceforge.net/projects/transpose/ SourceForge].</p>
+<h3 id="transpose-a-tool-to-transpose">Transpose, a tool to transpose</h3>
+<p>Transpose is an extremely convenient text tool to transpose tabular data. We will use it later. The code is hosted on [http://sourceforge.net/projects/transpose/ SourceForge].</p>
 
 <blockquote>
-  <p>Download transpose installation file (zip) via the browser. Copy them to /opt using ‘'’sudo cp’’’.
-Go to the Sourceforce website with the browser, and click on the Download button.
-[[file:download_transpose2.png]]
-|-
-|</p>
+  <p>Download transpose installation file (zip) via the browser. Copy them to /opt using <strong>sudo cp</strong>.
+Go to the Sourceforce website with the browser, and click on the Download button.</p>
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Downloads $ sudo cp transpose-2.0.zip /opt
 [sudo] password for joachim: 
  Downloads $
 </code></pre></div>  </div>
-  <p>We need to precede the ‘‘cp’’ command with the ‘‘sudo’’ command, since only the root user can copy into ‘‘/opt’’.</p>
 </blockquote>
 
+<p>We need to precede the ‘‘cp’’ command with the ‘‘sudo’’ command, since only the root user can copy into ‘‘/opt’’.</p>
 <blockquote>
   <p>Unpack the installation in /opt, compile the binary and test it with ‘tranpose –help’. Use sudo to do so.</p>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ pwd
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ pwd
 /opt
- $ ls trans*
+$ ls trans*
 transpose-2.0.zip
- $ sudo unzip transpose-2.0.zip 
+$ sudo unzip transpose-2.0.zip 
 Archive:  transpose-2.0.zip
    creating: transpose-2.0/
    creating: transpose-2.0/win32-bin/
@@ -441,42 +476,36 @@ Archive:  transpose-2.0.zip
   inflating: transpose-2.0/src/transpose.c  
   inflating: transpose-2.0/README 
 </code></pre></div></div>
-<p>The zip file is now unpacked. Let us now compile the code. ALWAYS have a look at the README file for this.
-|-
-|</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ cd transpose-2.0
- $ head README
+
+<p>The zip file is now unpacked. Let us now compile the code. ALWAYS have a look at the README file for this.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd transpose-2.0
+$ head README
 To Compile:
 	gcc transpose.c -o transpose
-
 To Install - Just copy into your path. e.g.:
 	cp transpose /usr/local/bin/
-
- $ cd src/
- $ sudo gcc transpose.c -o transpose
+$ cd src/
+$ sudo gcc transpose.c -o transpose
 </code></pre></div></div>
-<p>The program ‘‘gcc’’ compiles the human readable code in the file ‘‘transpose.c’’ and produces a binary file out of it, called ‘‘transpose’’.
-We can now run the binary file from within the directory.
-|-
-|</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ ./transpose --help
 
-
-        Description:     
- 	This software is released under the GPL license
- 	Reshapes delimited text data - amongst other things, it can transpose a matrix of plain text data.
-
-</code></pre></div></div>
-<p>Jippie!</p>
+<p>The program <strong>gcc</strong> compiles the human readable code in the file <strong>transpose.c</strong> and produces a binary file out of it, called <strong>transpose</strong>.</p>
+<blockquote>
+  <p>We can now run the binary file from within the directory.</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./transpose --help
+       Description:     
+	This software is released under the GPL license
+	Reshapes delimited text data - amongst other things, it can transpose a matrix of plain text data.
+</code></pre></div>  </div>
+</blockquote>
 
 <blockquote>
   <p>Create a symbolic link to the newly created binary to /usr/local/bin. This directory collects binaries/commands to be used on the command line.</p>
-</blockquote>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ sudo ln -s /opt/transpose-2.0/src/transpose /usr/local/bin
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ sudo ln -s /opt/transpose-2.0/src/transpose /usr/local/bin
  $ which transpose 
 /usr/local/bin/transpose
-</code></pre></div></div>
+</code></pre></div>  </div>
+</blockquote>
+
 
 
 

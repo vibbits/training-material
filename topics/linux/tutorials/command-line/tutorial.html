@@ -253,7 +253,7 @@
         <div class="container" data-field="body">
             <div class="row">
                 <div class="col-sm-10" role="main">
-                    <h1 id="tutorial-on-the-linux-command-line">Tutorial on the linux command line</h1>
+                    <h2 id="tutorial-on-the-linux-command-line">Tutorial on the linux command line</h2>
 <p>We will first hold your hand: type over these commands below step by step, and watch what they do. 
 Use <strong>cd</strong> to change the current working directory (user bits). To create your own directories use the <strong>mkdir</strong> (make directory) command.</p>
 
@@ -335,49 +335,43 @@ $
 
 <p>The commands covered so far represent a small but useful subset of the many commands available on a typical Linux system.</p>
 
-<h2 id="make-a-project-folder-structure">Make a project folder structure</h2>
+<h3 id="make-a-project-folder-structure">Make a project folder structure</h3>
 <p>We assume that start from your home folder.</p>
 
 <blockquote>
   <p>Create the following directory structure
 [[file:dirstructureex1.png]]</p>
-  <blockquote>
 
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $mkdir -p docs/{pdf/{man,readme},html/{man,readme}}
-</code></pre></div>    </div>
-    <p>The ‘{‘ and ‘}’ can group arguments but you can also create the structure step by step.</p>
-  </blockquote>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $mkdir -p docs/{pdf/{man,readme},html/{man,readme}}
+</code></pre></div>  </div>
+  <p>The ‘{‘ and ‘}’ can group arguments but you can also create the structure step by step.</p>
 </blockquote>
 
 <blockquote>
   <p>The little tree figure above is created with the ‘tree’ command. Display such a tree.</p>
-  <blockquote>
 
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tree /home/bits/docs/
-</code></pre></div>    </div>
-  </blockquote>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tree /home/bits/docs/
+</code></pre></div>  </div>
 </blockquote>
 
-<h1 id="downloading-and-storing-bioinformatics-data">Downloading and storing bioinformatics data</h1>
-<h2 id="create-a-project-folder">Create a project folder</h2>
+<h2 id="downloading-and-storing-bioinformatics-data">Downloading and storing bioinformatics data</h2>
+<h3 id="create-a-project-folder">Create a project folder</h3>
 <p>The first thing to do when you start a bioinformatics project, is to create a structure of folders to put your data in an organised fashion.</p>
 
-<h2 id="downloading">Downloading</h2>
+<h3 id="downloading">Downloading</h3>
 <p>As an example, we will download the rice genome from the Rice Annotation Project database. But first create the folder structure.</p>
 
 <blockquote>
   <p>Create following folder structure.</p>
-  <blockquote>
 
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ mkdir "Rice Example"
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ mkdir "Rice Example"
  $ cd Rice\ Example
  $ mkdir Genome\ data
  $ cd Genome\ data
  $ mkdir Sequence
  $ mkdir Annotation
  $ cd
-</code></pre></div>    </div>
-  </blockquote>
+</code></pre></div>  </div>
 </blockquote>
 
 <p>** Be aware of white spaces on the command line!**
@@ -385,69 +379,66 @@ On the command line, programs, options and arguments are separated by <strong>wh
 
 <p>Hence, you might save yourself some trouble (and typing!) by putting _ instead of white spaces in names. Also make sure to use tab expansion, wherever possible!</p>
 
-<h2 id="download-the-genome-data-directly-on-the-command-line">Download the genome data directly on the command line</h2>
+<h3 id="download-the-genome-data-directly-on-the-command-line">Download the genome data directly on the command line</h3>
 <p>You can fetch the rice genome <a href="http://rapdb.dna.affrc.go.jp/download/archive/build5/IRGSPb5.fa.masked.gz">from this link</a>.</p>
 
 <blockquote>
-  <p>Download the genome data to the “Rice example”/”Genome data”/Sequence folder. Use <strong>wget</strong> to download from the link.</p>
-  <blockquote>
-    <p>Right-click on the download link, and copy the download link. The download link is: http://rapdb.dna.affrc.go.jp/download/archive/build5/IRGSPb5.fa.masked.gz
-Go the directory and execute wget
-```
- $ cd      # to go back to the home directory
- $ cd Ric<tab>
- $ cd Gen<tab>/Seq<tab>
+  <p>Download the genome data to the “Rice example”/”Genome data”/Sequence folder. Use <strong>wget</strong> to download from the link.
+Right-click on the download link, and copy the download link. The download link is: http://rapdb.dna.affrc.go.jp/download/archive/build5/IRGSPb5.fa.masked.gz
+Go the directory and execute wget</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ cd      ## to go back to the home directory
+ $ cd Ric&lt;tab&gt;
+ $ cd Gen&lt;tab&gt;/Seq&lt;tab&gt;
  $ wget http://rapdb.dna.affrc.go.jp/download/archive/build5/IRGSPb5.fa.masked.gz
 --2013-10-15 09:36:01--  http://rapdb.dna.affrc.go.jp/download/archive/build5/IRGSPb5.fa.masked.gz
 Resolving rapdb.dna.affrc.go.jp (rapdb.dna.affrc.go.jp)... 150.26.230.179
 Connecting to rapdb.dna.affrc.go.jp (rapdb.dna.affrc.go.jp)|150.26.230.179|:80... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 122168025 (117M) [application/x-gzip]
-Saving to: `IRGSPb5.fa.masked.gz'</tab></tab></tab></p>
-  </blockquote>
+Saving to: `IRGSPb5.fa.masked.gz'
+100%[======================================&gt;] 122,168,025  973K/s   in 2m 40s  
+2013-10-15 09:38:42 (747 KB/s) - `IRGSP-1.0_genome.fasta.gz' saved [122168025/122168025]
+ $ ls
+IRGSPb5.fa.masked.gz
+</code></pre></div>  </div>
 </blockquote>
 
-<p>100%[======================================&gt;] 122,168,025  973K/s   in 2m 40s</p>
+<p>Allright. We have fetched our first genome sequence!</p>
 
-<p>2013-10-15 09:38:42 (747 KB/s) - `IRGSP-1.0_genome.fasta.gz’ saved [122168025/122168025]</p>
+<h3 id="did-your-data-get-through-correctly">Did your data get through correctly?</h3>
+<p>Large downloads or slow downloads like this can take a long time. Plenty of opportunity for the transfer to go wrong. Therefore, large downloads should always have a <strong>checksum</strong> mentioned. You can find the md5 checksum on the downloads page. The md5 checksum is an unique string identifying (and calculated from) this data. Once downloaded, you should calculate this string yourself with <strong>md5sum</strong>.</p>
 
-<p>$ ls
-IRGSPb5.fa.masked.gz</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-Allright. We have fetched our first genome sequence!
-
-## Did your data get through correctly?
-Large downloads or slow downloads like this can take a long time. Plenty of opportunity for the transfer to go wrong. Therefore, large downloads should always have a **checksum** mentioned. You can find the md5 checksum on the downloads page. The md5 checksum is an unique string identifying (and calculated from) this data. Once downloaded, you should calculate this string yourself with **md5sum**.
-
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ md5sum IRGSPb5.fa.masked.gz
+7af391c32450de873f80806bbfaedf05  IRGSPb5.fa.masked.gz
 </code></pre></div></div>
-<p>$ md5sum IRGSPb5.fa.masked.gz
-7af391c32450de873f80806bbfaedf05  IRGSPb5.fa.masked.gz</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-You should go to the rice genome download page, and compare this string with the MD5 checksum mentioned over there. You can do this manually. Now that you know the concept of checksums, there is an easier way to verify the data using **md5sum**. Can you find the easier way?
 
-&gt;  Search how to use md5sum to check the downloaded files with the .md5 file from the website. Check the man page
-&gt; &gt;
-</code></pre></div></div>
-<p>$ man md5sum</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>It does not say much: in the end it refers to 
-</code></pre></div></div>
-<p>$ info coreutils ‘md5sum invocation’</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Reading the options, there is one option sounding promising:
-</code></pre></div></div>
-<p><code class="highlighter-rouge">-c'
-</code>–check’
+<p>You should go to the rice genome download page, and compare this string with the MD5 checksum mentioned over there. You can do this manually. Now that you know the concept of checksums, there is an easier way to verify the data using <strong>md5sum</strong>. Can you find the easier way?</p>
+
+<blockquote>
+  <p>Search how to use md5sum to check the downloaded files with the .md5 file from the website. Check the man page</p>
+
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ man md5sum
+</code></pre></div>  </div>
+  <p>It does not say much: in the end it refers to</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ info coreutils 'md5sum invocation'
+</code></pre></div>  </div>
+  <p>Reading the options, there is one option sounding promising:</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>`-c'
+`--check'
      Read file names and checksum information (not data) from each FILE
      (or from stdin if no FILE was specified) and report whether the
-     checksums match the contents of the named files.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> This way we can check the download:
-</code></pre></div></div>
-<p>$ wget http://rapdb.dna.affrc.go.jp/download/archive/build5/IRGSPb5.fa.masked.gz.md5
+     checksums match the contents of the named files. 
+</code></pre></div>  </div>
+  <p>This way we can check the download:
+```
+ $ wget http://rapdb.dna.affrc.go.jp/download/archive/build5/IRGSPb5.fa.masked.gz.md5
 –2013-10-15 09:47:02–  http://rapdb.dna.affrc.go.jp/download/archive/build5/IRGSPb5.fa.masked.gz.md5
 Resolving rapdb.dna.affrc.go.jp (rapdb.dna.affrc.go.jp)… 150.26.230.179
 Connecting to rapdb.dna.affrc.go.jp (rapdb.dna.affrc.go.jp)|150.26.230.179|:80… connected.
 HTTP request sent, awaiting response… 200 OK
 Length: 55 [application/x-gzip]
 Saving to: `IRGSPb5.fa.masked.gz.md5’</p>
+</blockquote>
 
 <p>100%[======================================&gt;] 55          –.-K/s   in 0s</p>
 
@@ -457,17 +448,17 @@ IRGSPb5.fa.masked.gz  IRGSPb5.fa.masked.gz.md5
  $ md5sum -c IRGSPb5.fa.masked.gz.md5 
 IRGSPb5.fa.masked.gz: OK</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-==# Ensuring integrity of downloads==
+## Ensuring integrity of downloads
 A handy tool to use is the [DownThemAll](https://addons.mozilla.org/nl/firefox/addon/downthemall/) addon for Firefox, in which you have to provide the checksum at the time of download. It will automatically check whether the download is finished.
 
 The Short Read Archive (SRA), storing NGS data sets, makes use of [Aspera](http://asperasoft.com/technology/transport/fasp/) to download data a great speeds, ensuring integrity. To download from SRA using aspera in linux, follow the [this guide from EBI](http://www.ebi.ac.uk/ena/about/read_download).
 
-## Extracting the data
-&gt;  What type of file have you downloaded?
+### Extracting the data
+&gt; What type of file have you downloaded?
 </code></pre></div></div>
 <p>$ file IRGSPb5.fa.masked.gz
 IRGSPb5.fa.masked.gz: gzip compressed data, was “IRGSPb5.fa.masked”, from Unix, last modified: Wed Aug 18 03:45:47 2010</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> It is a compressed file. Files are compressed to save storage space. Before using these files, you have to decompress them. What can you do with this type of file? Check the command apropos.
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>It is a compressed file. Files are compressed to save storage space. Before using these files, you have to decompress them. What can you do with this type of file? Check the command apropos.
 </code></pre></div></div>
 <p>$ apropos gzip
 gzip (1)             - compress or expand files
@@ -478,11 +469,11 @@ zforce (1)           - force a ‘.gz’ extension on all gzip files</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 **apropos** is a command that helps you discover new commands. In case you have a type of file that you don't know about, use apropos to search for corresponding programs.
 
-&gt;  Decompress the file. Check the man page of gzip. From the man page:&lt;pre&gt;gunzip [ -acfhlLnNrtvV ] [-S suffix] [ name ...  ]&lt;/pre&gt;
+&gt; Decompress the file. Check the man page of gzip. From the man page:&lt;pre&gt;gunzip [ -acfhlLnNrtvV ] [-S suffix] [ name ...  ]&lt;/pre&gt;
 
 </code></pre></div></div>
 <p>$ gunzip IRGSPb5.fa.masked.gz 
- $ ls
+$ ls
 IRGSPb5.fa.masked  IRGSPb5.fa.masked.gz.md5
 ```</p>
 

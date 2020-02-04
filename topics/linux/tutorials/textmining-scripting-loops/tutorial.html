@@ -255,250 +255,172 @@
         <div class="container" data-field="body">
             <div class="row">
                 <div class="col-sm-10" role="main">
-                    <h1 id="a-script">A script</h1>
+                    <h2 id="a-script">A script</h2>
 <p>A script is just a plain text file. I will show this below. It contains written instructions, that can be understood by a programming language, in our case <strong>bash</strong> .</p>
 
-<h2 id="an-example-script">An example script</h2>
+<h3 id="an-example-script">An example script</h3>
 
 <blockquote>
   <p>Create a text file named ‘buddy’ in your home with following content:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>badday# "Cheer up"
-goodday# "Doing great"
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>badday## "Cheer up"
+goodday## "Doing great"
 echo "$badday, $USER !"
 echo "$goodday, $USER !"
 </code></pre></div>  </div>
 </blockquote>
 
-<p>| One way of doing this is:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> nano buddy
-</code></pre></div></div>
-<p>and copy of the contents of the header above.</p>
+<blockquote>
+  <p>One way of doing this is:</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> nano buddy
+</code></pre></div>  </div>
+</blockquote>
 
-<table>
-  <tbody>
-    <tr>
-      <td>Save the contents by pressing <ctrl>+O</ctrl></td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
-    <tr>
-      <td>Close nano with <ctrl>+x</ctrl></td>
-    </tr>
-  </tbody>
-</table>
+<blockquote>
+  <p>and copy of the contents of the header above.
+Save the contents by pressing <ctrl>+O
+Close nano with <ctrl>+x</ctrl></ctrl></p>
+</blockquote>
 
 <blockquote>
   <p>What type of file did you create?</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  file buddy
+buddy: ASCII text
+</code></pre></div>  </div>
 </blockquote>
 
-<p>|</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  file buddy
-buddy: ASCII text
-</code></pre></div></div>
-
-<table>
-  <tbody>
-    <tr>
-      <td>That file contains plain text.</td>
-    </tr>
-  </tbody>
-</table>
+<blockquote>
+  <p>That file contains plain text.</p>
+</blockquote>
 
 <blockquote>
   <p>To execute the commands in that file, feed it as an argument to the program ‘bash’.</p>
-</blockquote>
-
-<p>|</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  bash buddy
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash buddy
 Cheer up, bits !
 Doing great, bits !
-</code></pre></div></div>
+</code></pre></div>  </div>
+</blockquote>
 
 <p>Few things to notice:</p>
-<h1 id="in-the-script-we-have-defined-2-variables-badday-and-goodday">in the script, we have defined 2 <strong>variables</strong> ‘badday’ and ‘goodday’</h1>
-<h1 id="their-values-can-be-displayed-by-the-program-echo-which-takes-as-an-argument-the-name-of-the-variable-preceded-by-a--sign">their values can be displayed by the program <strong>echo</strong> which takes as an argument the name of the variable preceded by a <strong>$</strong> sign.</h1>
-<h1 id="the-user-variable-is-an-environment-variable-they-can-be-used-in-scripts-env-variables-are-typically-written-in-capitals">the $USER variable, is an <strong>environment variable</strong>. They can be used in scripts. Env variables are typically written in capitals.</h1>
+<ul>
+  <li>in the script, we have defined 2 <strong>variables</strong> ‘badday’ and ‘goodday’</li>
+  <li>their values can be displayed by the program <strong>echo</strong> which takes as an argument the name of the variable preceded by a <strong>$</strong> sign.</li>
+  <li>the $USER variable, is an <strong>environment variable</strong>. They can be used in scripts. Env variables are typically written in capitals.</li>
+</ul>
 
-<h1 id="getting-more-professional">Getting more professional</h1>
+<h3 id="getting-more-professional">Getting more professional</h3>
 <p>We can make this easier. If you start your script with the symbol ‘#’ and next specify the path to the interpreter, the terminal will feed this script automatically to the right interpreter for you! To see what this means, follow these steps.</p>
 
 <blockquote>
   <p>Find out the path to the program bash</p>
-</blockquote>
-
-<p>|</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> which bash
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>which bash
 /bin/bash
-</code></pre></div></div>
+</code></pre></div>  </div>
+</blockquote>
 
 <p>Now we know the path to bash, we have to provide this path, on the very first line, preceded by <strong>#!</strong> (shebang or crunchbang). If you have another type of script, let’s say perl, you find out the path to perl, and at this path behind a #! on the very first line.</p>
 
 <blockquote>
   <p>Open the text file ‘buddy’, and add at the start of the file ‘#!’ followed by the path to bash:</p>
-</blockquote>
-
-<p>|</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  nano buddy
-</code></pre></div></div>
-<p>… edit the text</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cat buddy
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nano buddy
+</code></pre></div>  </div>
+  <p>… edit the text</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cat buddy
 #!/bin/bash
-badday# "Cheer up"
-goodday# "Doing great"
+badday## "Cheer up"
+goodday## "Doing great"
 echo "$badday, $USER !"
 echo "$goodday, $USER !"
-</code></pre></div></div>
+</code></pre></div>  </div>
+</blockquote>
 
 <blockquote>
   <p>Before turning the text file into a script, set the execute permission (to allow execution) with chmod</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chmod +x buddy
+</code></pre></div>  </div>
 </blockquote>
-
-<p>|</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  chmod +x buddy
-</code></pre></div></div>
 
 <blockquote>
   <p>What type of file is your script?</p>
-</blockquote>
-
-<p>|</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  file buddy 
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>file buddy 
 buddy: Bourne-Again shell script, ASCII text executable
-</code></pre></div></div>
+</code></pre></div>  </div>
+</blockquote>
 
 <p>By setting the <strong>shebang</strong>, the interpreter on the command line knows that this is a bash script!</p>
-
 <blockquote>
   <p>Now run your script as if it were a program (./<script_name>)</script_name></p>
-</blockquote>
-
-<p>|</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  ./buddy
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./buddy
 Cheer up, bits !
 Doing great, bits !
-</code></pre></div></div>
+</code></pre></div>  </div>
+</blockquote>
 
 <p>To make it more readable, often the extension <strong>.sh</strong> is given to the text file. Note that this is not necessary! Linux does not define file types by extensions.</p>
 
 <blockquote>
   <p>Rename your script to ‘buddy.sh’</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mv buddy buddy.sh
+</code></pre></div>  </div>
 </blockquote>
 
-<p>|</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ mv buddy buddy.sh
-</code></pre></div></div>
-
-<p>| Alternative (less typing!) <br /></p>
+<p><strong>Alternative (less typing!)</strong><br /></p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ mv buddy{,.sh}
 </code></pre></div></div>
 
-<h1 id="a-good-habit">A good habit</h1>
+<h3 id="a-good-habit">A good habit</h3>
 
 <blockquote>
   <p>The last line of your script should be ‘exit 0’. If bash reaches this lines, it means that the script was successfully executed.</p>
 </blockquote>
 
-<p>| Add it by opening the file with ‘nano’ and modifying its contents.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ cat buddy.sh 
+<blockquote>
+  <p>Add it by opening the file with ‘nano’ and modifying its contents.</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ cat buddy.sh 
 #!/bin/bash
-badday# "Cheer up"
-goodday# "Doing great"
+badday## "Cheer up"
+goodday## "Doing great"
 echo "$badday, $USER !"
 echo "$goodday, $USER !"
 exit 0
-</code></pre></div></div>
+</code></pre></div>  </div>
+</blockquote>
 
-<p>| Alternative. Less typing!</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo "exit 0" &gt;&gt; buddy.sh
-</code></pre></div></div>
+<blockquote>
+  <p>Alternative. Less typing!</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo "exit 0" &gt;&gt; buddy.sh
+</code></pre></div>  </div>
+</blockquote>
 
 <p>This was our first bash script! I hope it was a painless experience.</p>
 
 <hr />
 
-<p><strong>&lt;blockquote&gt;Go back to parent page [[Introduction to Linux for bioinformatics]] &lt;/blockquote&gt;</strong>
-<strong>&lt;blockquote&gt;Go back to parent page [[Introduction to Linux for bioinformatics]] &lt;/blockquote&gt;</strong></p>
-<hr />
+<h2 id="download-a-perl-script">Download a Perl script</h2>
+<p>Many bioinformatics programs are written in python or perl. It’s quick to type some python or perl code in a text file, and get your job done. Those scripts are <strong>text files</strong>. You can download and store scripts on your computer. Usually these files have .py or .pl extension. As long as you have python or perl on your system (by default in Linux!), you can run the scripts.</p>
 
-<h2 id="intro">Intro</h2>
-<p>Many bioinformatics programs are written in python or perl. It’s quick to type some python or perl code in a text file, and get your job done.</p>
-
-<p>Those scripts are <strong>text files</strong>. You can download and store scripts on your computer. Usually these files have .py or .pl extension. As long as you have python or perl on your system (by default in Linux!), you can run the scripts.</p>
-
-<h2 id="run-perl-code">Run perl code</h2>
+<h3 id="run-perl-code">Run perl code</h3>
 <p>Let’s try a small script below.</p>
 
-<h1 id="download-a-simple-perl-script-from-httpdatabitsvibbepubtrainingmaterialintroduction_to_linux_for_bioinformaticsmotifs_newpl">Download a simple perl script from http://data.bits.vib.be/pub/trainingmaterial/introduction_to_linux_for_bioinformatics/motifs_new.pl</h1>
-<h1 id="download-the-dna-file-from-httpdatabitsvibbepubtrainingmaterialintroduction_to_linux_for_bioinformaticsdnatxt">Download the dna file from http://data.bits.vib.be/pub/trainingmaterial/introduction_to_linux_for_bioinformatics/dna.txt</h1>
-<h1 id="open-geany-on-your-computer-and-copy-the-script-code-to-geany">Open Geany on your computer, and copy the script code to Geany.</h1>
-<p>[[file:openperlscriptwithgeany.jpg]]
-<br /></p>
 <ul>
-  <li>Save the file, under ~/Downloads for now.
-<br /></li>
-  <li>Execute the script by clicking the little ‘gear’ box. For this script, you will need to download the dna.txt file as input.
-[[file:Runperlscriptingeany.jpg]]
-<br /></li>
-  <li>The results of the script appear in a small window. It will ask for an input (depending on your script). Enter the required details.
-[[file:resultsperlscriptingenany.jpg]]
-<br /></li>
+  <li>Download a simple perl script from http://data.bits.vib.be/pub/trainingmaterial/introduction_to_linux_for_bioinformatics/motifs_new.pl</li>
+  <li>Download the dna file from http://data.bits.vib.be/pub/trainingmaterial/introduction_to_linux_for_bioinformatics/dna.txt</li>
+  <li>Save the file, under ~/Downloads for now.</li>
+  <li>Open Geany on your computer, and copy the script code to Geany.</li>
+  <li>Execute the script by clicking the little ‘gear’ box. For this script, you will need to download the dna.txt file as input.</li>
+  <li>The results of the script appear in a small window. It will ask for an input (depending on your script). Enter the required details.</li>
 </ul>
 
-<blockquote>Scripting is covered in other BITS training sessions as well. Check them out in the [http://wiki.bits.vib.be/index.php/Category:Training Training session of this wiki].</blockquote>
+<h3 id="extract-some-lines">Extract some lines</h3>
 
-<hr />
+<blockquote>
+  <p>Download the bed file from http://data.bits.vib.be/pub/trainingen/Linux/TAIR9_mRNA.bed via command line</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget https://dl.dropbox.com/u/18352887/TAIR9_mRNA.bed
+</code></pre></div>  </div>
+</blockquote>
 
-<p><strong>&lt;blockquote&gt;Go back to parent page [[Introduction to Linux for bioinformatics]] &lt;/blockquote&gt;</strong>
-<strong>&lt;blockquote&gt;Go back to parent page [[Introduction to Linux for bioinformatics]] &lt;/blockquote&gt;</strong></p>
-<hr />
-
-<h1 id="extract-some-lines">Extract some lines</h1>
-
-<table>
-  <tbody>
-    <tr>
-      <td>{</td>
-      <td>class# “collapsible collapsed wikitable”</td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
-    <tr>
-      <td>! align# “left”</td>
-      <td>Download the bed file from http://data.bits.vib.be/pub/trainingen/Linux/TAIR9_mRNA.bed via command line</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>|</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget https://dl.dropbox.com/u/18352887/TAIR9_mRNA.bed
-</code></pre></div></div>
-
-<table>
-  <tbody>
-    <tr>
-      <td>{</td>
-      <td>class# “collapsible collapsed wikitable”</td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
-    <tr>
-      <td>! align# “left”</td>
-      <td>Look at the first 10 lines of this file.</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>|</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ head TAIR9_mRNA.bed 
+<blockquote>
+  <p>Look at the first 10 lines of this file.</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ head TAIR9_mRNA.bed 
 chr1	2025600	2027271	AT1G06620.1	0	+	2025617	2027094	0	3	541,322,429,	0,833,1242,
 chr5	2625558	2628110	AT5G08160.1	0	-	2625902	2627942	0	6	385,143,144,186,125,573,	2167,1523,1269,928,659,0,
 chr5	2625558	2628110	AT5G08160.2	0	-	2625902	2627942	0	7	258,19,143,144,186,125,573,	2294,2167,1523,1269,928,659,0,
@@ -509,182 +431,99 @@ chr4	12006985	12009520	AT4G22890.4	0	+	12007156	12009175	0	10	370,104,97,101,57,
 chr4	12006985	12009520	AT4G22890.1	0	+	12007156	12009175	0	10	370,113,97,101,57,77,163,98,80,263,	0,796,1007,1196,1392,1533,1703,1945,2120,2272,
 chr2	14578539	14581727	AT2G34630.2	0	+	14578688	14581632	0	11	293,93,81,72,132,87,72,86,133,189,275,	0,797,1120,1320,1488,1711,1898,2165,2435,2649,2913,
 chr2	14578629	14581727	AT2G34630.1	0	+	14579725	14581632	0	11	203,96,81,72,132,87,72,86,133,189,275,	0,704,1030,1230,1398,1621,1808,2075,2345,2559,2823,
-</code></pre></div></div>
+</code></pre></div>  </div>
+</blockquote>
 
 <p>This is a typical bioinformatics text file, with every row divided in field by tabs.</p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>{</td>
-      <td>class# “collapsible collapsed wikitable”</td>
-    </tr>
-  </tbody>
-</table>
+<blockquote>
+  <p>Extract all lines that start with chr1 from the TAIR9_mRNA.bed and put them in a new text file “chr1_TAIR9_mRNA.bed”.</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ grep "^chr1" TAIR9_mRNA.bed &gt; chr1_TAIR9_mRNA.bed
+</code></pre></div>  </div>
+</blockquote>
 
-<table>
-  <tbody>
-    <tr>
-      <td>! align# “left”</td>
-      <td>Extract all lines that start with chr1 from the TAIR9_mRNA.bed and put them in a new text file “chr1_TAIR9_mRNA.bed”.</td>
-    </tr>
-  </tbody>
-</table>
+<h3 id="checking-the-data">Checking the data</h3>
+<blockquote>
+  <p>Download human chromosome 21 from https://data.bits.vib.be/pub/trainingen/Linux/Homo_sapiens.dna.chromosome21.zip</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget ftp://ftp.ensembl.org/pub/release-73/fasta/homo_sapiens/dna/Homo_sapiens.GRCh37.73.dna.chromosome.21.fa.gz
+</code></pre></div>  </div>
+</blockquote>
 
-<p>|</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ grep "^chr1" TAIR9_mRNA.bed &gt; chr1_TAIR9_mRNA.bed
-</code></pre></div></div>
-
-<p><br /></p>
-
-<h1 id="checking-the-data">Checking the data</h1>
-<p>{| class# “collapsible collapsed wikitable”</p>
-
-<table>
-  <tbody>
-    <tr>
-      <td>! align# “left”</td>
-      <td>Download human chromosome 21 from https://data.bits.vib.be/pub/trainingen/Linux/Homo_sapiens.dna.chromosome21.zip</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>|</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget ftp://ftp.ensembl.org/pub/release-73/fasta/homo_sapiens/dna/Homo_sapiens.GRCh37.73.dna.chromosome.21.fa.gz
-</code></pre></div></div>
-
-<table>
-  <tbody>
-    <tr>
-      <td>{</td>
-      <td>class# “collapsible collapsed wikitable”</td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
-    <tr>
-      <td>! align# “left”</td>
-      <td>Unzip the file</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>|</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gunzip Homo_sapiens.GRCh37.73.dna.chromosome.21.fa.gz
-</code></pre></div></div>
+<blockquote>
+  <p>Unzip the file</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gunzip Homo_sapiens.GRCh37.73.dna.chromosome.21.fa.gz
+</code></pre></div>  </div>
+</blockquote>
 
 <p>Entries in a fasta file start with &gt;</p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>{</td>
-      <td>class# “collapsible collapsed wikitable”</td>
-    </tr>
-  </tbody>
-</table>
+<blockquote>
+  <p>How many entries are in that fasta file? Remember you can combine commands with a |.</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grep "^&gt;" Homo_sapiens.GRCh37.73.dna.chromosome.21.fa | wc -l
+</code></pre></div>  </div>
+</blockquote>
 
-<table>
-  <tbody>
-    <tr>
-      <td>! align# “left”</td>
-      <td>How many entries are in that fasta file? Remember you can combine commands with a</td>
-      <td>.</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>|</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grep "^&gt;" Homo_sapiens.GRCh37.73.dna.chromosome.21.fa | wc -l
-</code></pre></div></div>
-
-<p><br /></p>
-
-<h1 id="how-many-">How many ?</h1>
-<p>Use the TAIR9_mRNA.bed file used in the first exercise. Remember it looks like this
-&lt;syntaxhighlight lang# “text”&gt;
-chr1	2025600	2027271	AT1G06620.1	0	+	2025617	2027094	0	3	
+<h3 id="how-many">How many?</h3>
+<p>Use the TAIR9_mRNA.bed file used in the first exercise. Remember it looks like this</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chr1	2025600	2027271	AT1G06620.1	0	+	2025617	2027094	0	3	
 chr5	2625558	2628110	AT5G08160.1	0	-	2625902	2627942	0	6	
 chr5	2625558	2628110	AT5G08160.2	0	-	2625902	2627942	0	7	
 chr4	12006985	12009520	AT4G22890.5	0	+	12007156	12009175	0	10	
-chr4	12007040	12009206	AT4G22890.2	0	+	12007156	12009175	0	9</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-If you want to find entries that lie on the + strand of a certain chromosome, you need to find lines that start with the chromosome number and that contain a + sign. The number of characters between the chromosome number and the + sign is variable.
-
-{| class# "collapsible collapsed wikitable" 
-
-! align# "left" |  How many genes are lying on the + strand of the first chromosome ?
-
-|Since you need to use the + sign to represent a set of characters of variable length you need to use egrep for this:
+chr4	12007040	12009206	AT4G22890.2	0	+	12007156	12009175	0	9	
 </code></pre></div></div>
-<p>grep “^chr1.++” TAIR9_mRNA.bed | wc -l</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 
-&lt;br&gt;
+<p>If you want to find entries that lie on the + strand of a certain chromosome, you need to find lines that start with the chromosome number and that contain a + sign. The number of characters between the chromosome number and the + sign is variable.</p>
+<blockquote>
+  <p>How many genes are lying on the + strand of the first chromosome ?
+Since you need to use the + sign to represent a set of characters of variable length you need to use egrep for this:</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grep "^chr1.+\+" TAIR9_mRNA.bed | wc -l
+</code></pre></div>  </div>
+</blockquote>
 
-#  More complex extraction #  
+<h3 id="more-complex-extraction">More complex extraction</h3>
 
-Get the last exon size for all mRNA records in Arabidopsis. Use TAIR9_mRNA.bed for this: this file contains the exon sizes. See the [[.bed|BED page]] to check that the field we need is field 11. This contains a comma separated list of the sizes of all the exons of a mRNA
+<p>Get the last exon size for all mRNA records in Arabidopsis. Use TAIR9_mRNA.bed for this: this file contains the exon sizes. See the [[.bed|BED page]] to check that the field we need is field 11. This contains a comma separated list of the sizes of all the exons of a mRNA</p>
+<blockquote>
+  <p>Get the exon sizes for all mRNA records in Arabidopsis. Write them to a file called exons.txt</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>awk '{ print $11 }' TAIR9_mRNA.bed &gt; exons.txt
+</code></pre></div>  </div>
+</blockquote>
 
-{| class# "collapsible collapsed wikitable" 
+<blockquote>
+  <p>Take a look at the first 10 lines of exons.txt</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>head exons.txt
+</code></pre></div>  </div>
+</blockquote>
 
-! align# "left" | Get the exon sizes for all mRNA records in Arabidopsis. Write them to a file called exons.txt
-
-| 
+<p>If we try to print the last field with awk, using ‘,’ as a delimiter, things go wrong:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>awk -F',' '{ print $NF }' &gt; lastexons.txt
 </code></pre></div></div>
-<p>awk ‘{ print $11 }’ TAIR9_mRNA.bed &gt; exons.txt</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 
-{| class# "collapsible collapsed wikitable" 
+<p>The reason is that the last field is empty, because the lines end with a ‘,’. We need to remove the last ‘,’ and can use sed for this.</p>
+<blockquote>
+  <p>Remove the last comma from the lines and save in a file called exonsclean.txt
+You want to substitute the comma at the end of the line by nothing:</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sed 's/,$//' exons.txt &gt; exonsclean.txt
+head exonsclean.txt
+</code></pre></div>  </div>
+</blockquote>
 
-! align# "left" | Take a look at the first 10 lines of exons.txt
+<blockquote>
+  <p>Fetch the last field from exonsclean.txt and save in a file called lastexons.txt</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>awk -F',' '{ print $NF }' exonsclean.txt &gt; lastexons.txt
+head lastexons.txt
+</code></pre></div>  </div>
+</blockquote>
 
-| 
-</code></pre></div></div>
-<p>head exons.txt</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<blockquote>
+  <p>Sort exonsizes from largest to smallest into a file called lastexonssort.txt</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sort -nr lastexons.txt &gt; lastexonssort.txt
+head lastexonssort.txt
+</code></pre></div>  </div>
+</blockquote>
 
-If we try to print the last field with awk, using ',' as a delimiter, things go wrong:
-</code></pre></div></div>
-<p>awk -F’,’ ‘{ print $NF }’ &gt; lastexons.txt</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-The reason is that the last field is empty, because the lines end with a ','. We need to remove the last ',' and can use sed for this.
-
-{| class# "collapsible collapsed wikitable" 
-
-! align# "left" | Remove the last comma from the lines and save in a file called exonsclean.txt
-
-|You want to substitute the comma at the end of the line by nothing:
-</code></pre></div></div>
-<p>sed ‘s/,$//’ exons.txt &gt; exonsclean.txt
-head exonsclean.txt</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-
-{| class# "collapsible collapsed wikitable" 
-
-! align# "left" | Fetch the last field from exonsclean.txt and save in a file called lastexons.txt
-
-|
-</code></pre></div></div>
-<p>awk -F’,’ ‘{ print $NF }’ exonsclean.txt &gt; lastexons.txt
-head lastexons.txt</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-
-{| class# "collapsible collapsed wikitable" 
-
-! align# "left" | Sort exonsizes from largest to smallest into a file called lastexonssort.txt
-
-|
-</code></pre></div></div>
-<p>sort -nr lastexons.txt &gt; lastexonssort.txt
-head lastexonssort.txt</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-
-You can use uniq to summarize the results
-</code></pre></div></div>
-<p>uniq -c lastexonssort.txt | head
+<p>You can use uniq to summarize the results</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>uniq -c lastexonssort.txt | head
       2 6885
       1 5616
       1 5601
@@ -694,225 +533,171 @@ You can use uniq to summarize the results
       2 4470
       1 4446
       1 4443
-      1 4275</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;br&gt;&lt;br&gt;
-
-#  Analyzing a short read alignment # 
-SAM ('sequence alignment map') file format is the format which summarizes the alignment of reads to a reference genome. Is is one of the key files in NGS analysis, and you can learn a lot from it. See [[.sam]] for a description of this format.
-
-{| class# "collapsible collapsed wikitable" 
-
-! align# "left" | Download the sam file from http://data.bits.vib.be/pub/trainingen/Linux/sample.sam 
-
-| 
+      1 4275
 </code></pre></div></div>
-<p>wget http://data.bits.vib.be/pub/trainingen/Linux/sample.sam</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 
-{| class# "collapsible collapsed wikitable" 
+<h3 id="analyzing-a-short-read-alignment">Analyzing a short read alignment</h3>
+<p>SAM (‘sequence alignment map’) file format is the format which summarizes the alignment of reads to a reference genome. Is is one of the key files in NGS analysis, and you can learn a lot from it. See [[.sam]] for a description of this format.</p>
+<blockquote>
+  <p>Download the sam file from http://data.bits.vib.be/pub/trainingen/Linux/sample.sam</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget http://data.bits.vib.be/pub/trainingen/Linux/sample.sam 
+</code></pre></div>  </div>
+</blockquote>
 
-! align# "left" | How many lines has the SAM file?
+<blockquote>
+  <p>How many lines has the SAM file?</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wc -l sample.sam
+</code></pre></div>  </div>
+</blockquote>
 
-| 
+<p>100015 lines</p>
+
+<blockquote>
+  <p>How many lines start with ‘@’, which is the comment symbol in the SAM format.</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grep '^@' sample.sam | wc -l
+</code></pre></div>  </div>
+  <p>15 lines</p>
+</blockquote>
+
+<p>You can use grep to skip the lines starting with ‘@’, since they are comment lines.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grep -v '^@' sample.sam | head
 </code></pre></div></div>
-<p>wc -l sample.sam</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 
-100015 lines
+<blockquote>
+  <p>Write the FLAG field (second field) to a file called flags.txt
+Pipe the grep results to awk to print the second field.</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grep -v '@' sample.sam | awk '{ print $2 }' &gt; flags.txt
+head flags.txt
+</code></pre></div>  </div>
+</blockquote>
 
-{| class# "collapsible collapsed wikitable" 
+<blockquote>
+  <p>Sort and summarize (using uniq) flags.txt
+Pipe the grep results to awk to print the second field.</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sort -nr flags.txt | uniq -c
+</code></pre></div>  </div>
+</blockquote>
 
-! align# "left" | How many lines start with '@', which is the comment symbol in the SAM format.
+<blockquote>
+  <p>Sort the results on number of times observed (the first field)
+We build on the previous command, and just pipe the output to sort -nr. We do not have to use the option -k, since sort always takes the first field.</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sort -nr flags.txt | uniq -c | sort -nr 
+</code></pre></div>  </div>
+</blockquote>
 
-| 
+<h3 id="advanced">Advanced</h3>
+<p>We use the TAIR9_mRNA.bed to answer this.
+First we check how many different genes are in the file. A gene has the code AT<number>G<number>. Splice variants have to same AT number but different version number (the numbers after the . are different. We are not interested in splice variants so want to remove the .1, .2... before counting. You can do this by using the . as a field delimiter</number></number></p>
+<blockquote>
+  <p>Remove everything after the . and save in a file called TAIRpart.txt</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>awk -F'.' '{ print $1 }' TAIR9_mRNA.bed &gt; TAIRpart.txt
+head TAIRpart.txt
+</code></pre></div>  </div>
+</blockquote>
+
+<p>Now you need to summarize the fourth column of this file and count the lines of the result</p>
+<blockquote>
+  <p>How many different genes are in the file.</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cut -f4  TAIRpart.txt | sort | uniq | wc -l
+</code></pre></div>  </div>
+</blockquote>
+
+<p>27379
+When you look at TAIR9_mRNA.bed you see that the the fifth column contains 0.</p>
+<blockquote>
+  <p>Check if there is any entry that contains another number in that column ? (summarize will give you the answer)</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cut -f5 TAIR9_mRNA.bed | sort -nr | uniq -c
+</code></pre></div>  </div>
+</blockquote>
+
+<p>No
+Another example: Show all Arabidopsis mRNA with more than 50 exons</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>awk '{ if ($10&gt;50) print $4 }' TAIR9_mRNA.bed
 </code></pre></div></div>
-<p>grep ‘^@’ sample.sam | wc -l</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 
-15
+<blockquote>
+  <p>Print the number of exons (field number 10) of mRNAs from the first chromosome.</p>
+</blockquote>
 
-You can use grep to skip the lines starting with '@', since they are comment lines.
-
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grep '^chr1'  TAIR9_mRNA.bed | awk '{ print $10 }' 
 </code></pre></div></div>
-<p>grep -v ‘^@’ sample.sam | head</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-{| class# "collapsible collapsed wikitable" 
 
-! align# "left" | Write the FLAG field (second field) to a file called flags.txt
+<blockquote>
+  <p>Obtain AT numbers (field 4) and exon info (field 11)</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>awk '{ print $4,",",$11 }'  TAIR9_mRNA.bed 
+</code></pre></div>  </div>
+</blockquote>
 
+<h2 id="bash-aliases-to-enhance-your-productivity">Bash Aliases to enhance your productivity</h2>
 
-| Pipe the grep results to awk to print the second field.
+<p>You specify aliases in the <strong>.bashrc file</strong> in your home directory.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>alias myalias## "&lt;my fancy command&gt;"
 </code></pre></div></div>
-<p>grep -v ‘@’ sample.sam | awk ‘{ print $2 }’ &gt; flags.txt
-head flags.txt</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 
-{| class# "collapsible collapsed wikitable" 
-
-! align# "left" | Sort and summarize (using uniq) flags.txt
-
-
-| Pipe the grep results to awk to print the second field.
+<p>Change ‘my fancy command’ to a real command!!
+Before you can use your new aliases, you have to reload the .bashrc file. You do this by</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ source ~/.bashrc
 </code></pre></div></div>
-<p>sort -nr flags.txt | uniq -c</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 
-{| class# "collapsible collapsed wikitable" 
-
-! align# "left" | Sort the results on number of times observed (the first field)
-
-| We build on the previous command, and just pipe the output to sort -nr. We do not have to use the option -k, since sort always takes the first field.
+<p>or</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ . ~/.bashrc
 </code></pre></div></div>
-<p>sort -nr flags.txt | uniq -c | sort -nr</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-&lt;br&gt;
 
-#  Advanced # 
-&lt;p&gt;We use the TAIR9_mRNA.bed to answer this.&lt;/p&gt;
-First we check how many different genes are in the file. A gene has the code AT&lt;number&gt;G&lt;number&gt;. Splice variants have to same AT number but different version number (the numbers after the . are different. We are not interested in splice variants so want to remove the .1, .2... before counting. You can do this by using the . as a field delimiter
+<p>Now, let’s do this exercise.
+Sometimes you might want to open a big text file from the end on, and start scrolling towards the top. We will create an <strong>alias</strong> for this in this exercise.</p>
+<blockquote>
+  <p>Create an alias that starts scrolling from the bottom. Tip: it’s less and the appropriate option you must configure.
+Read through the man page of less. To help you: you can search for the string “at the end”. Open the man page of less</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ man less
+</code></pre></div>  </div>
+</blockquote>
 
-{| class# "collapsible collapsed wikitable" 
+<blockquote>
+  <p>Type “/at the end” and <ENTER>. Less will search in the content for "at the end". Examine the entries with the string./ Go to the following result by typing "/" followed by ENTER.
+The option is:
+Add the alias by opening .bashrc with an editor, and adding the line:</ENTER></p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>alias sell## "less +G"
+</code></pre></div>  </div>
+  <p>When you have changed the content of .bashrc, it needs to be reloaded. Close your terminal and fire it up again. OR execute:</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ . ~/.bashrc
+</code></pre></div>  </div>
+</blockquote>
 
-! align# "left" | Remove everything after the . and save in a file called TAIRpart.txt
-
-| 
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ source ~/.bashrc
 </code></pre></div></div>
-<p>awk -F’.’ ‘{ print $1 }’ TAIR9_mRNA.bed &gt; TAIRpart.txt
-head TAIRpart.txt</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 
-Now you need to summarize the fourth column of this file and count the lines of the result
+<blockquote>
+  <p>We now have <strong>sell</strong> to our disposal, which starts scrolling large text files from the end of the file.</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sell /var/log/syslog
+</code></pre></div>  </div>
+</blockquote>
 
-{| class# "collapsible collapsed wikitable" 
+<h3 id="show-all-aliases-on-your-system">Show all aliases on your system</h3>
+<p>Forgot an alias? To see all your aliases, run the command
+<code class="highlighter-rouge">$ alias</code>.</p>
 
-! align# "left" | How many different genes are in the file. 
+<h2 id="writing-loops">Writing loops</h2>
 
-| 
-</code></pre></div></div>
-<p>cut -f4  TAIRpart.txt | sort | uniq | wc -l</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-
-&lt;p&gt;27379&lt;/p&gt;
-When you look at TAIR9_mRNA.bed you see that the the fifth column contains 0.
-
-{| class# "collapsible collapsed wikitable" 
-
-! align# "left" | Check if there is any entry that contains another number in that column ? (summarize will give you the answer)
-
-|
-</code></pre></div></div>
-<p>cut -f5 TAIR9_mRNA.bed | sort -nr | uniq -c</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-
-&lt;p&gt;No&lt;/p&gt;
-Another example: Show all Arabidopsis mRNA with more than 50 exons
-</code></pre></div></div>
-<p>awk ‘{ if ($10&gt;50) print $4 }’ TAIR9_mRNA.bed</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-{| class# "collapsible collapsed wikitable" 
-
-! align# "left" | Print the number of exons (field number 10) of mRNAs from the first chromosome.
-
-| 
-</code></pre></div></div>
-<p>grep ‘^chr1’  TAIR9_mRNA.bed | awk ‘{ print $10 }’</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-
-{| class# "collapsible collapsed wikitable" 
-
-! align# "left" |  Obtain AT numbers (field 4) and exon info (field 11)
-
-| 
-</code></pre></div></div>
-<p>awk ‘{ print $4,”,”,$11 }’  TAIR9_mRNA.bed</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-
-&lt;hr&gt;
-**&lt;blockquote&gt;Go back to parent page [[Introduction to Linux for bioinformatics]] &lt;/blockquote&gt;**
-**&lt;blockquote&gt;Go back to parent page [[Introduction to Linux for bioinformatics]] &lt;/blockquote&gt;**
-&lt;hr&gt;
-
-#  IO# ntro# 
-
-You specify aliases in the **.bashrc file** in your home directory. 
-</code></pre></div></div>
-<p>alias myalias# “<my fancy="" command="">"</my></p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Change 'my fancy command' to a real command!!
-
-Before you can use your new aliases, you have to reload the .bashrc file. You do this by 
-</code></pre></div></div>
-<p>$ source ~/.bashrc</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>or 
-```$ . ~/.bashrc```
-
-Now, let's do this exercise.
-
-Sometimes you might want to open a big text file from the end on, and start scrolling towards the top. We will create an **alias** for this in this exercise.
-
-
-{| class# "collapsible collapsed wikitable" 
-
-! align# "left" | Create an alias that starts scrolling from the bottom. Tip: it's less and the appropriate option you must configure.
-
-| Read through the man page of less. To help you: you can search for the string "at the end". Open the man page of less 
-</code></pre></div></div>
-<p>$ man less</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-| Type "/at the end" and &lt;ENTER&gt;. Less will search in the content for "at the end". Examine the entries with the string./ Go to the following result by typing "/" followed by ENTER.
-
-| 
-
-| Add the alias by opening .bashrc with an editor, and adding the line:
-</code></pre></div></div>
-<p>alias sell# “less +G”</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-| When you have changed the content of .bashrc, it needs to be reloaded. Close your terminal and fire it up again. OR execute:
-</code></pre></div></div>
-<p>$ . ~/.bashrc</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
-<p>$ source ~/.bashrc</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-| We now have **sell** to our disposal, which starts scrolling large text files from the end of the file.
-</code></pre></div></div>
-<p>$ sell /var/log/syslog</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-
-#  Show all aliases on your system # 
-Forgot an alias? To see all your aliases, run the command 
-```$ alias```.
-
-&lt;hr/&gt;
-**&lt;blockquote&gt;Go back to parent page [[Introduction to Linux for bioinformatics]] &lt;/blockquote&gt;**
-**&lt;blockquote&gt;Go back to parent page [[Introduction to Linux for bioinformatics]] &lt;/blockquote&gt;**
-&lt;hr&gt;
-
-For loops are used to repeat commands a number of times. We will start with two simple examples.
-
-{| class# "collapsible collapsed wikitable" 
-
-! align# "left" | Write a for loop to create 3 files: test1.txt, test2.txt, test3.txt
-
-| 
-</code></pre></div></div>
-<p>for i in 1 2 3
+<p><strong>For</strong> loops are used to repeat commands a number of times. We will start with two simple examples.</p>
+<blockquote>
+  <p>Write a for loop to create 3 files: test1.txt, test2.txt, test3.txt</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for i in 1 2 3
 do
 touch test$i.txt
 done
-ls -l</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+ls -l
+</code></pre></div>  </div>
+</blockquote>
 
-{| class# "collapsible collapsed wikitable" 
-
-! align# "left" | Write a for loop to create 3 folders: folder1, folder2, folder3
-
-| 
-</code></pre></div></div>
-<p>for i in 1 2 3
+<blockquote>
+  <p>Write a for loop to create 3 folders: folder1, folder2, folder3</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for i in 1 2 3
 do
 mkdir folder$i
 done
 ls -l
-```</p>
+</code></pre></div>  </div>
+</blockquote>
 
 
 
