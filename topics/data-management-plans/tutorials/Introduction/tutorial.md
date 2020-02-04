@@ -24,18 +24,6 @@ contributors:
 
 <!-- This is a comment. -->
 
-<details>
-  <summary>Click to expand!</summary>
-
-*Heading*
-1. A
-2. list
-   * With some
-   * Sub bullets
-
-![seqselector.png](../../images/Seqselector.png "Seqselector.png")
-</details>
-
 # Why manage your research data?
 
 In this video Katarzyna Biernacka explains what data in a research context is.
@@ -95,7 +83,15 @@ The highlights of the policy are:
 * Each individual researcher / research leader is responsible to draw up a Data Management Plan (DMP) at the start of the research project and to follow up the agreements made in this plan;
 * Scientific directors are responsible for the implementation and monitoring of the University policy framework and for drawing up additional faculty guidelines to this end if needed.
 
-TODO: add link to policy
+Links to the Policy Frameworks of the Flemish Universities
+
+* [Policy Framework from Ghent University](https://www.ugent.be/en/research/datamanagement/rdm-policy.pdf/at_download/file)
+
+* [Policy Framework from KU Leuven](https://www.kuleuven.be/english/research/scholcomm/rdm/policy-plan-rdm-ku-leuven-2014)
+
+* [Policy Framework from UHasselt](https://bibliotheek.uhasselt.be/sites/default/files/uploads/RDM/20180517_UH_RDM_PolicyPlan_NL.pdf)
+
+* [Policy Framework from VUB](https://vub.sharepoint.com/sites/ORG-RandD/SitePages/RESEARCH-DATA-MANAGEMENT.aspx?web=1)
 
 # Policy in Practise
 
@@ -113,8 +109,7 @@ More and more research funders explicitly require you to consider the management
 
 The European Commission wants “Horizon 2020 beneficiaries to make their research data findable, accessible, interoperable and reusable (FAIR), to ensure it is soundly managed. Good research data management is not a goal in itself, but rather the key conduit leading to knowledge discovery and innovation, and to subsequent data and knowledge integration and reuse.” Horizon 2020 is the biggest research and innovation program of the European Commission.
 
-![European Commission - Horizon 2020](../../images/O_Funders_Screenshot_H2020guidelines.JPG "European Commission - Horizon 2020")
-(https://www.nwo.nl/en/policies/open+science/data+management)
+[![European Commission - Horizon 2020](../../images/O_Funders_Screenshot_H2020guidelines.JPG)](https://www.nwo.nl/en/policies/open+science/data+management)
 
 **FWO**
 

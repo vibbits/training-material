@@ -22,24 +22,9 @@ contributors:
 
 ---
 
-# Introduction
-{:.no_toc}
+## Introduction to data security
 
 <!-- This is a comment. -->
-
-<details>
-  <summary>Click to expand!</summary>
-
-*Heading*
-1. A
-2. list
-   * With some
-   * Sub bullets
-
-![seqselector.png](../../images/Seqselector.png "Seqselector.png")
-</details>
-
-### Introduction to data security
 
 By now you know more about how to manage your data collection, how to organise and document your research data and where and how to store your data.
 
@@ -56,11 +41,11 @@ The loss of scientific data can have a devastating impact on careers. Imagine th
 There are several examples of (mainly online) data storage going wrong, leading to leaks of sensitive and personal information.
 
 The picture below shows the biggest cases of data breaches in the past 10 years. They involve some well-known, highly regarded and trusted companies as well as some practices from the academic world.
+[Read about the story:](http://www.informationisbeautiful.net/visualizations/worlds-biggest-data-breaches-hacks/)
 
 ![examples about data breaches](../../images/data-breaches.png "Biggest data breaches")
-[Link](http://www.informationisbeautiful.net/visualizations/worlds-biggest-data-breaches-hacks/)
 
-### Prevent unauthorised access
+## Prevent unauthorised access
 
 Data security may be needed to protect intellectual property rights, commercial interests, or to keep personal or sensitive information safe. Data security involves security of data files, computer system security and physical data security. All three need to be considered to ensure the security of your data files and to prevent unauthorised access, changes, disclosure or even destruction. Data security arrangements need to be proportionate to the nature of the data and the risks involved. Attention to security is also needed when data are to be destroyed.  If data destruction is in order, you need to make sure that the destruction process is irreversible.
 
@@ -105,7 +90,7 @@ TODO: what to do with classified data
 
 These data should be treated with higher levels of security than data which do not. You will learn more about privacy-sensitive data in the e-module.
 
-### What is your experience with unauthorised access to your research data?
+## What is your experience with unauthorised access to your research data?
 
 We are interested to know if you have ever experienced unauthorized access to any of your research data. When you give your reply, we will show you an overview with the responses of other researchers in this course. All responses will be processed anonymously.
 
