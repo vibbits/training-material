@@ -37,26 +37,14 @@ layout: base
 
         {% unless topic.subtopics %}<div id="tutorial_list">{% endunless %}
             <h2 id="material">Material</h2>
-            {% unless topic.subtopics %}
-            <div class="search_box">
-                {% icon search %}
-                <input data-search-type="tutorial_title" class="search" id="tutorial_search" placeholder="Search" />
-                <span id="clear_search" title="Clear filters"> {% icon galaxy-cross %} </span>
-            </div>
-            {% endunless %}
             {% if topic.subtopics %}
               {% for subtopic in topic.subtopics %}
                 <h3>{{ subtopic.title}}</h3>
-                {{ subtopic.description }} </br></br>
+                {{ subtopic.description | markdownify }} </br></br>
                 {% include _includes/tutorial_list.html sub=subtopic %}
               {% endfor %}
               <div id="tutorial_list">
               <h3> Other </h3>
-              <div class="search_box">
-                {% icon search %}
-                <input data-search-type="tutorial_title" class="search" id="tutorial_search" placeholder="Search" />
-                <span id="clear_search" title="Clear filters"> {% icon galaxy-cross %} </span>
-              </div></br>
               Assorted other tutorials </br></br>
               {% include _includes/tutorial_list.html sub="other" %}
             {% else %}
