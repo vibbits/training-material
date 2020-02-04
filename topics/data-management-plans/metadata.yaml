@@ -16,23 +16,26 @@ With all questions about this course you can contact: info.rdm@vib.be.
 __By VIB Bioinformatics Core, ELIXIR Belgium and Helis Academy__
 
 
+![http://www.vib.be/ -20width](https://corefacilities.vib.be/images/logos/bioinformatics_core_rgb_pos.png)
+
+
 * LiaScript: [this course as e-learning resource](https://material.bits.vib.be/courses/?https://raw.githubusercontent.com/vibbits/material-liascript/master/README.md#1)
 
 
 The course consists of 6 chapters, divided in three categories.
 
 
-- Prepare
-  - Data collection
-  - Data documentation
+* Prepare Data collection
 
-- Handle
-  - Data storage
-  - Data security
+* Prepare Data documentation
 
-- Share
-  - Data selection and preservation
-  - Data availability for reuse
+- Handle Data storage
+
+- Handle Data security
+
+- Share Data selection and preservation
+
+- Share Data availability for reuse
 
 
 Each chapter starts with an introduction and ends with an assignment to write that part of your data management plan that corresponds with what you have just learned. You are currently in the introd
@@ -66,11 +69,15 @@ subtopics:
   - id: prepare 
     title: "Preparatory steps for Data collection and Documentation"
     description: "
-- Will you use existing data?
-- What data will you collect or create?
-- How will the data be collected or created?
-- How will you manage rights issues?
-- What are the costs involved in managing and storing your data?
+* Will you use existing data?
+
+* What data will you collect or create?
+
+* How will the data be collected or created?
+
+* How will you manage rights issues?
+
+* What are the costs involved in managing and storing your data?
 "
   - id: handle 
     title: "Data handling"
