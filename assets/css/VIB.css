@@ -47,6 +47,15 @@ rect.node {
     src: url(../fonts/MaterialIcons.woff) format('woff');
 }
 
+table tr {
+	     background: #fff !important;
+	     border-radius: 10px;
+	     box-shadow: 0 2px 4px 0 rgba(0,0,0,.05)
+}
+tr th {
+	color: rgba(59,58,57,.75);
+}
+
 .margin20 {
     margin-top: 20px;
 }
@@ -234,9 +243,18 @@ body
     cursor: pointer;
 }
 
-a
+a {
+    color: #3cbbba;
+}
+
+a:hover{
+color:#3cbbba;
+text-decoration:none;
+}
+
+a .topmenu 
 {
-    color: #1f2a44;
+   color: #1f2a44 !important;
 }
 
 a .material-icons
@@ -254,6 +272,12 @@ nav
     text-align:right;
     margin-bottom:30px;
     margin-top:20px;
+}
+
+.sticky-toc 
+{
+    position: sticky;
+    top: 3rem;
 }
 
 .btn a
@@ -778,18 +802,16 @@ display: block;
     text-align: center;
     padding: 120px 20px 150px 20px;
 }
-#topmenu{
+
+.topmenu{
 margin-right:20px;
 }
+
 .hall-of-fame-hero{
 width: 130px;
 float:left;
 display:inline-block;
 margin-right: 30px;
-}
-a:hover{
-color:#3cbbba;
-text-decoration:none;
 }
 
 details > summary {
