@@ -41,7 +41,7 @@ The loss of scientific data can have a devastating impact on careers. Imagine th
 There are several examples of (mainly online) data storage going wrong, leading to leaks of sensitive and personal information.
 
 The picture below shows the biggest cases of data breaches in the past 10 years. They involve some well-known, highly regarded and trusted companies as well as some practices from the academic world.
-[Read about the story:](http://www.informationisbeautiful.net/visualizations/worlds-biggest-data-breaches-hacks/)
+[Read about the story](http://www.informationisbeautiful.net/visualizations/worlds-biggest-data-breaches-hacks/)
 
 ![examples about data breaches](../../images/data-breaches.png "Biggest data breaches")
 
@@ -92,6 +92,8 @@ These data should be treated with higher levels of security than data which do n
 
 ## What is your experience with unauthorised access to your research data?
 
+TODO: implementation form widget
+
 We are interested to know if you have ever experienced unauthorized access to any of your research data. When you give your reply, we will show you an overview with the responses of other researchers in this course. All responses will be processed anonymously.
 
 [(1)] No, I am sure about that
@@ -106,8 +108,10 @@ Often other people are required to handle your data, or you might be the person 
 To arrange the security of the research data you work with, in many cases you have to make a (legal) agreement with other people involved. These agreements will make explicit permitted uses, retention time, and agreed upon security measures. Find out what legal contracts you can use by studying the figure below.  TODO: Visit the Guide 'Legal instruments and agreements' for more information
 
 For tailored advice and templates, contact Legal Affairs via your faculty Research Support Officer (RSO)
+
 TODO: add link
-![Legal Agreement contacts -80width](../../images/AgreementsPicture.png)
+
+![Legal Agreement contacts -80width](../../images/AgreementsPicture.png "Agreements types for data")
 
 ### When to use which legal contract?
 
@@ -117,13 +121,11 @@ TODO: add quiz or H5P quiz
 
 ### Privacy-sensitive data
 
-![start privacy-sensitive data](../../images/00_privacy-sensitive-data.png)
-
-![start privacy-sensitive data](../../images/01_privacy-sensitive-data-learning-objectives.png)
-
-**Privacy in a nutshell**
+![start privacy-sensitive data](../../images/01_privacy-sensitive-data-learning-objectives.png "Personal data - learning objectives")
 
 ---
+
+**Privacy in a nutshell**
 
 Privacy is a fundamental right. With regards to privacy, we all have two perspectives:
 
@@ -131,27 +133,35 @@ Privacy is a fundamental right. With regards to privacy, we all have two perspec
 2. How can we, as a researcher, protect the privacy of the people involved in our research (the data subjects)?
 
 TODO: add link to document and image screenshot
-![privacy reference card](../../images/LCRDM-privacy-reference-card -why-Version-02.pdf)
+![privacy reference card](../../images/LCRDM-privacy-reference-card-why-Version-02.pdf "Privacy reference card")
 
 **Six principles from the European General Data Protection Regulation 1/2**
 
 The European General Data Protection Regulation (GDPR) outlines how we should work with privacy-sensitive data.
 
-TODO: create working infographics
+TODO: create working infographics with images
 see http://gdprcoalition.ie/infographics
 
 **Six principles from the European General Data Protection Regulation 2/2**
 
-According to the GDPR  processing of personal data must be done according to 6 principles.
+According to the GDPR processing of personal data must be done according to 6 principles.
 
 TODO: create HP5 document
-see UU learn and Understanding the GDPR University Groningen
+
+The GDPR outlines six data protection principles you must comply with when processing personal data. These principles relate to:
+
+- Lawfulness, fairness and transparency - you must process personal data lawfully, fairly and in a transparent manner in relation to the data subject.
+- Purpose limitation - you must only collect personal data for a specific, explicit and legitimate purpose. You must clearly state what this purpose is, and only collect data for as long as necessary to complete that purpose.
+- Data minimisation - you must ensure that personal data you process is adequate, relevant and limited to what is necessary in relation to your processing purpose.
+- Accuracy - you must take every reasonable step to update or remove data that is inaccurate or incomplete. Individuals have the right to request that you erase or rectify erroneous data that relates to them, and you must do so within a month.
+- Storage limitation - You must delete personal data when you no longer need it. The timescales in most cases aren't set. They will depend on your business’ circumstances and the reasons why you collect this data.
+- Integrity and confidentiality - You must keep personal data safe and protected against unauthorised or unlawful processing and against accidental loss, destruction or damage, using appropriate technical or organisational measures. 
 
 **Privacy by design**
 
 To comply with the six principles from the GDPR, you can implement privacy by design. This means that you design a data management plan with measures on both IT and procedural level.
 
-TODO: Video privacy by design?
+<iframe src="https://www.youtube.com/embed/iZRcePnhS5I" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
 
 **Which data breach is breached?**
 
@@ -161,7 +171,7 @@ TODO: H5P quiz 7 cases
 
 **Storing personal data 1/2**
 
-![storing personal data](../../images/02_privacy-sensitive-data-personal-data-01.png)
+![storing personal data](../../images/02_privacy-sensitive-data-personal-data-01.png "Storing personal data")
 
 **Storing personal data 2/2**
 
@@ -169,27 +179,38 @@ Only if the access can be unambiguously be restricted to authorised persons, can
 
 Should you want an elaborate visualisation of what is considered identifiable data, check out the information sheet at the Future Privacy Forum.
 
-[visual guide to practical data de-identification](https://fpf.org/2016/04/25/a-visual-guide-to-practical-data-de-identification/)
+[Download the visual guide to practical data de-identification](https://fpf.org/2016/04/25/a-visual-guide-to-practical-data-de-identification/)
 
 **Can you recognize identifiable data?**
 
-[[X]] a collection of GPS data of daily routines
-[[ ]] a list of households sizes associated with number of pets
-[[X]] MRI scans without identifying metadata.
-[[X]] audio recordings with no metadata and no names of the recorded persons
-[[ ]] transcripts of interviews without any directly identifying information
-[[ ]] a list of gender and grades for a de-identified course
 
-Correct! GPS data holds information on where people go. In a daily routine, the track ends at a particular location which is likely the home of the subject. AN MRI scan from the profile of the head can be identifiable. Audio recordings can be identifiable from the tone of the voice. A list of surnames in itself is not identifying nor personal information.
+### {% icon question %} Can you recognize identifiable data?  
+
+1. a collection of GPS data of daily routines
+2.  a list of households sizes associated with number of pets
+3.  MRI scans without identifying metadata.
+4.  audio recordings with no metadata and no names of the recorded persons
+5. transcripts of interviews without any directly identifying information
+6.  a list of gender and grades for a de-identified course
+
+<details markdown='1'>
+  <summary>Check the answers.</summary>
+
+Answer 1,3, and 4 are correct!
+
+GPS data holds information on where people go. In a daily routine, the track ends at a particular location which is likely the home of the subject. AN MRI scan from the profile of the head can be identifiable. Audio recordings can be identifiable from the tone of the voice. A list of surnames in itself is not identifying nor personal information.
+</details>
+{: .question }
 
 **Access to privacy-sensitive data**
 
 If and how you can make personal data available, depends n the level of sensitivity of your data. The more sensitive, the more restrictions and safeguards need to be put in place to make sure the data does not fall into the hands of unauthorised persons both during and after research.
 
 To determine where the privacy risks lie for your data you will have to do a Data Privacy Impact Assessment (DPIA).
+
 For more information:
-TODO:
-link to: https://www.uu.nl/en/research/research-data-management/guides/handling-personal-data
+
+TODO: link to: https://www.uu.nl/en/research/research-data-management/guides/handling-personal-data
 
 Towards the data subjects, you need to be transparent regarding the possible reuse, or retaining of the data for verification requirements, and get their prior consent.
 
@@ -210,7 +231,7 @@ Case 2: TODO: other example from Wings?
 
 **An introduction to informed consent**
 
-In the module 'Legal agreements and contracts' you learned about informed consent. Informed consetn is very important when working with data which is in any way related to people.
+In the module 'Legal agreements and contracts' you learned about informed consent. Informed consent is very important when working with data which is in any way related to people.
 
 TODO: add graphics on informed consent
 
@@ -220,18 +241,26 @@ One thing to arrange in your informed consent is the possibility for future use,
 
 One thing to arrange and to be crystal clear about in your informed consent is the possibility for future use of your data, for verification or reuse.
 
+### {% icon question %} Question  
+
 Check the sentences that do permit data sharing if used as a single statement.
 
-[[X]] Any personal information that reasonably could identify you will be removed or changed before files are shared with other researchers or results are made public.
-[[X]] Other genuine researchers (may) have acces to tis data only if they agree to preserve the confidentiality on the information as requested in this form.
-[[ ]] Any data that could identify you will be accessible only to the researchers responsible for performing this study.
-[[ ]] All personally identifying information collected about you will be destroyed after the study.
+1. Any personal information that reasonably could identify you will be removed or changed before files are shared with other researchers or results are made public.
+2. Other genuine researchers (may) have acces to tis data only if they agree to preserve the confidentiality on the information as requested in this form.
+3. Any data that could identify you will be accessible only to the researchers responsible for performing this study.
+4. All personally identifying information collected about you will be destroyed after the study.
 
-Correct!
+<details markdown='1'>
+  <summary>Check the answers.</summary>
+
+Answer 1 and 2 are both correct!
 
 Sharing of research data that relates to people can often be achieved using a combination of obtaining consent, anonymizing data and regulating data access. If the statement towards the data only mentions the current study, sharing is not explicitly possible. You should add some sentence to make it clear to participants that the data could be used for further research, deidentified where possible, or identifiable with enough safeguards and security measures, if it is not.
 
-### Write your data management plan for your data security
+</details>
+{: .question }
+
+## Write your data management plan for your data security
 
 Go to DMPonline and open your draft data management plan created in the Introduction.
 
@@ -239,5 +268,4 @@ You have now completed the module on data security. You should be able to comple
 
 * Will you use or collect any confidential or privacy-sensitive data?
 * What measures will you take to ensure the security of any confidential or privacy-sensitive data?
-* What measures will you take to comply with security requirements and mitigate risks?
-To whom will access be granted/restricted?
+* What measures will you take to comply with security requirements and mitigate risks? To whom will access be granted/restricted?

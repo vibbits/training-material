@@ -1,0 +1,15 @@
+{% if include.material.hands_on == "external" %}
+<a class="topic-icon" href="{{ include.material.hands_on_url }}">
+    {% icon tutorial %}
+</a>
+{% elsif include.material.hands_on == "github" %}
+<a href="{{ site.github.repository_url }}/tree/master/topics/{{ include.topic }}/tutorials/{{ include.material.tutorial_name }}/tutorial.md">
+    {% icon tutorial %}
+</a>
+{% elsif include.material.hands_on %}
+    <span class="btn-group">
+        <a href="{{ site.baseurl }}/topics/{{ include.topic }}/tutorials/{{ include.material.tutorial_name }}/tutorial.html" class="btn btn-default" title="Where to run the tutorial">
+        {{ include.material.time_estimation }}            
+        </a>
+    </span>
+{% endif %}
