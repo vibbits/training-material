@@ -3,7 +3,7 @@ name: "linux"
 type: "basics"
 category: "basics"
 title: "Initiation to Linux Command Line"
-summary: "Command Line Introduction"
+summary: "This training is a prerequisite for all Linux novices who want to follow a training that requires the use of Linux command line (e.g. metagenomics or GATK training)."
 requirements:
 
 maintainers:
