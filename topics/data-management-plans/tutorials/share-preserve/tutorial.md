@@ -9,7 +9,7 @@ objectives:
 - Select what part of your data should be  preserved for verification purposes;
 - Understand the benefits of preserving your data in a public data repository;
 - Preserve you data technically correct.
-time_estimation: 3H
+time_estimation: 30M
 subtopic: share 
 key_points:
 - The take-home messages
@@ -24,25 +24,13 @@ contributors:
 
 <!-- This is a comment. -->
 
-<details>
-  <summary>Click to expand!</summary>
-
-*Heading*
-1. A
-2. list
-   * With some
-   * Sub bullets
-
-![seqselector.png](../../images/Seqselector.png "Seqselector.png")
-</details>
-
-### Introduction to data selection and preservation
+## Introduction to data selection and preservation
 
 Research should be transparent and you should always be able to revert back to your data if necessary and be able to show others how you came to your results. Therefore, your research data with all information reasonably necessary for verification needs to be preserved.
 
 With well-managed and preserved research data, you can defend yourself against allegations of mistakes. You can also prevent wrong conclusions from further spreading into the scientific community if there really are mistakes.
 
-### Long term data preservation
+## Long term data preservation
 
 Research data can be preserved for different reasons such as verification and/or possible reuse. It can be your own wish or that of your university, funder or journal.
 
@@ -56,9 +44,9 @@ It may be worthwhile to make (part of) your data available for a longer period o
 
 On the one hand, making research data reusable will need extra effort. On the other hand, possible reuse, even by your future self, might bring you lots of benefits and credits. Consider if your data is worth the effort of making it reusable or if preserving and archiving for verification is enough.
 
-Reuse is explained more in depth in the next part of this course; ‘Availability for reuse’. In this part we will focus on selection and preservation of research data for verification purposes.
+Reuse is explained more in depth in the next part of this course: ‘Availability for reuse’. In this part we will focus on selection and preservation of research data for verification purposes.
 
-### Data package
+## Data package
 
 Keeping data for verification serves the specific goal of having transparent, reproducible research.
 
@@ -94,7 +82,7 @@ This is especially practical if the data package can be found and used on its ow
 
 Do not forget to explicitly state who is responsible for the content of the data package, who is to be contacted in case of a request for access, and under what conditions access is granted.
 
-### Where to preserve what type of data?
+## Where to preserve what type of data?
 
 During your research, you generate research results that can be made available for others.
 
@@ -112,12 +100,12 @@ If you are permitted to use data from other parties, you will have to account fo
 
 You have the following options:
 
-If the used data is preserved correctly somewhere for the coming ten years, refer to the data repository in question;
+If the used data is preserved correctly somewhere for the coming ten years, refer to the data repository in question.
 If it is not taken care of, contact the responsible persons, negotiate correct preservation in a data repository for ten years, and refer to that repository.
 If this isn’t possible, try to arrange a local copy that you preserve yourself;
 If this isn’t allowed, you will not be able to present the data in case of questions. Therefore, you should question yourself whether you can actually use the data.
 
-![alt-t](../../images/Cont_5_Share_SelectPreserve_Chart10years.png)
+![alt-t](../../images/Cont_5_Share_SelectPreserve_Chart10years.png "Preserve for 10 years")
 
 **Accounting for data of others on websites**
 
@@ -127,7 +115,7 @@ The link or web address might change over time (link rot). Or the information on
 
 It is possible to archive web pages on a web archive like the [Internet Archive](https://archive.org/web/). You can capture a web page as it appears now for use as a trusted citation in the future (save a page). You will get an alternative link, pointing to the archived, static version of the page. Use this alternative link as a reference to the online information.
 
-### How to preserve your data correctly
+## How to preserve your data correctly
 
 In order for the data to survive for the long term, an active preservation regime has to be applied. The bad news is, data automatically gets lost over time.
 
@@ -143,7 +131,7 @@ In this video below you will learn how to minimise the risk of losing data. You 
 
 <iframe src="https://www.youtube.com/embed/qENaO0Lk6eo" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
 
-### Match the solutions to the data loss
+## Match the solutions to the data loss
 
 From the weblecture you learned how to prevent data loss. Can you recall all applicable active regimes, as explained in the weblecture?
 
