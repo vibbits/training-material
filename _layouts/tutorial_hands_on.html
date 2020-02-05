@@ -74,9 +74,14 @@ layout: base
             {% endif %}
 
 
-
+            {% if associated_slides %}
             <div>
-                <div><strong><i class="fa fa-external-link" aria-hidden="true"></i> Supporting Materials</strong></div>
+                <div>
+                     <strong>
+                        <i class="fa fa-external-link" aria-hidden="true"></i> 
+                             Supporting Materials
+                     </strong>
+                </div>
                 <div id="supporting_materials">
                     <ul>
                         <li>
@@ -126,12 +131,13 @@ layout: base
                 </div>
 
             </div>
+            {% endif %}
 
         </blockquote>
 
         <div class="container" data-field="body">
             <div class="row">
-                <div class="col-sm-10" role="main">
+                <div class="col-md-10" role="main">
                     {{ content
                         | replace: '<blockquote class="hands_on">', '<blockquote class="notranslate hands_on">' }}
 
@@ -159,10 +165,8 @@ layout: base
                     {% endif %}
 
                 </div>
-                <!-- sidebar, which will move to the top on a small screen -->
-                <div class="col-sm-2" role="supplementary">
-                    <nav id="toc" data-toggle="toc" class="sticky-top bs-docs-sidebar hidden-print hidden-xs hidden-sm"></nav>
-                </div>
+                <!-- sidebar, which will be hidden on a small screen -->
+                <nav class="col-md-2 sticky-toc bs-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary" id="toc" data-toggle="toc"</nav>
             </div>
         </div>
 
