@@ -28,9 +28,9 @@
         
         
         
-        <meta name="description" content="Command Line Introduction" />
+        <meta name="description" content="This training is a prerequisite for all Linux novices who..." />
         <meta property="og:title" content="VIB Bioinformatics Training: 04 Text mining, scripting and loops" />
-        <meta property="og:description" content="Command Line Introduction" />
+        <meta property="og:description" content="This training is a prerequisite for all Linux novices who..." />
         <meta property="og:image" content="/assets/images/bioinformatics_core_rgb_neg.png" />
     </head>
     <body data-spy="scroll" data-target="#toc">
@@ -52,19 +52,19 @@
   
 
 
-        <a href="/" id="topmenu" class="is-active">Home</a>
+        <a href="/" class="topmenu">Home</a>
 
 
-        <a href="/about.html" id="topmenu" >About</a>
+        <a href="/about.html" class="topmenu" >About</a>
 
 
-        <a href="/hall-of-fame.html" id="topmenu">Contribute</a>
+        <a href="/hall-of-fame.html" class="topmenu">Contribute</a>
 
 
-        <a href="/faq.html" id="topmenu">Faq</a>
+        <a href="/faq.html" class="topmenu">Faq</a>
 
 
-        <a href="/search/index.html" id="topmenu">Search</a>
+        <a href="/search/index.html" class="topmenu">Search</a>
 
 
   </nav>
@@ -188,7 +188,7 @@
     {
       "@type": "CreativeWork",
       "name": "Initiation to Linux Command Line",
-      "description": "Command Line Introduction",
+      "description": "This training is a prerequisite for all Linux novices who want to follow a training that requires the use of Linux command line (e.g. metagenomics or GATK training).",
       "url": "https://material.bits.vib.be//topics/linux/"
     }
   ]
@@ -235,34 +235,13 @@
             
 
 
-
-            <div>
-                <div><strong><i class="fa fa-external-link" aria-hidden="true"></i> Supporting Materials</strong></div>
-                <div id="supporting_materials">
-                    <ul>
-                        <li>
-                            <div>
-                    
-
-                    
-
-                    
-                    
-
-
-                    
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
+            
 
         </blockquote>
 
         <div class="container" data-field="body">
             <div class="row">
-                <div class="col-sm-10" role="main">
+                <div class="col-md-10" role="main">
                     <h2 id="a-script">A script</h2>
 <p>A script is just a plain text file. I will show this below. It contains written instructions, that can be understood by a programming language, in our case <strong>bash</strong> .</p>
 
@@ -270,8 +249,8 @@
 
 <blockquote>
   <p>Create a text file named ‘buddy’ in your home with following content:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>badday## "Cheer up"
-goodday## "Doing great"
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>badday="Cheer up"
+goodday="Doing great"
 echo "$badday, $USER !"
 echo "$goodday, $USER !"
 </code></pre></div>  </div>
@@ -284,24 +263,15 @@ echo "$goodday, $USER !"
 </blockquote>
 
 <blockquote>
-  <p>and copy of the contents of the header above.
-Save the contents by pressing <ctrl>+O
-Close nano with <ctrl>+x</ctrl></ctrl></p>
-</blockquote>
-
-<blockquote>
-  <p>What type of file did you create?</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  file buddy
+  <p>and copy of the contents of the header above. Save the contents by pressing <ctrl>+O. Close nano with <ctrl>+x
+What type of file did you create?</ctrl></ctrl></p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>file buddy
 buddy: ASCII text
 </code></pre></div>  </div>
 </blockquote>
 
 <blockquote>
-  <p>That file contains plain text.</p>
-</blockquote>
-
-<blockquote>
-  <p>To execute the commands in that file, feed it as an argument to the program ‘bash’.</p>
+  <p>That file contains plain text. To execute the commands in that file, feed it as an argument to the program ‘bash’.</p>
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash buddy
 Cheer up, bits !
 Doing great, bits !
@@ -317,7 +287,6 @@ Doing great, bits !
 
 <h3 id="getting-more-professional">Getting more professional</h3>
 <p>We can make this easier. If you start your script with the symbol ‘#’ and next specify the path to the interpreter, the terminal will feed this script automatically to the right interpreter for you! To see what this means, follow these steps.</p>
-
 <blockquote>
   <p>Find out the path to the program bash</p>
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>which bash
@@ -326,20 +295,20 @@ Doing great, bits !
 </blockquote>
 
 <p>Now we know the path to bash, we have to provide this path, on the very first line, preceded by <strong>#!</strong> (shebang or crunchbang). If you have another type of script, let’s say perl, you find out the path to perl, and at this path behind a #! on the very first line.</p>
-
 <blockquote>
   <p>Open the text file ‘buddy’, and add at the start of the file ‘#!’ followed by the path to bash:</p>
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nano buddy
 </code></pre></div>  </div>
-  <p>… edit the text</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cat buddy
+</blockquote>
+
+<p>… edit the text</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cat buddy
 #!/bin/bash
-badday## "Cheer up"
-goodday## "Doing great"
+badday="Cheer up"
+goodday="Doing great"
 echo "$badday, $USER !"
 echo "$goodday, $USER !"
-</code></pre></div>  </div>
-</blockquote>
+</code></pre></div></div>
 
 <blockquote>
   <p>Before turning the text file into a script, set the execute permission (to allow execution) with chmod</p>
@@ -364,29 +333,26 @@ Doing great, bits !
 </blockquote>
 
 <p>To make it more readable, often the extension <strong>.sh</strong> is given to the text file. Note that this is not necessary! Linux does not define file types by extensions.</p>
-
 <blockquote>
   <p>Rename your script to ‘buddy.sh’</p>
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mv buddy buddy.sh
 </code></pre></div>  </div>
 </blockquote>
 
-<p><strong>Alternative (less typing!)</strong><br /></p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ mv buddy{,.sh}
-</code></pre></div></div>
+<blockquote>
+  <p><strong>Alternative (less typing!)</strong></p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mv buddy{,.sh}
+</code></pre></div>  </div>
+</blockquote>
 
 <h3 id="a-good-habit">A good habit</h3>
 
 <blockquote>
-  <p>The last line of your script should be ‘exit 0’. If bash reaches this lines, it means that the script was successfully executed.</p>
-</blockquote>
-
-<blockquote>
-  <p>Add it by opening the file with ‘nano’ and modifying its contents.</p>
+  <p>The last line of your script should be ‘exit 0’. If bash reaches this lines, it means that the script was successfully executed. Add it by opening the file with ‘nano’ and modifying its contents.</p>
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ cat buddy.sh 
 #!/bin/bash
-badday## "Cheer up"
-goodday## "Doing great"
+badday="Cheer up"
+goodday="Doing great"
 echo "$badday, $USER !"
 echo "$goodday, $USER !"
 exit 0
@@ -401,8 +367,6 @@ exit 0
 
 <p>This was our first bash script! I hope it was a painless experience.</p>
 
-<hr />
-
 <h2 id="download-a-perl-script">Download a Perl script</h2>
 <p>Many bioinformatics programs are written in python or perl. It’s quick to type some python or perl code in a text file, and get your job done. Those scripts are <strong>text files</strong>. You can download and store scripts on your computer. Usually these files have .py or .pl extension. As long as you have python or perl on your system (by default in Linux!), you can run the scripts.</p>
 
@@ -410,8 +374,8 @@ exit 0
 <p>Let’s try a small script below.</p>
 
 <ul>
-  <li>Download a simple perl script from http://data.bits.vib.be/pub/trainingmaterial/introduction_to_linux_for_bioinformatics/motifs_new.pl</li>
-  <li>Download the dna file from http://data.bits.vib.be/pub/trainingmaterial/introduction_to_linux_for_bioinformatics/dna.txt</li>
+  <li>Download a simple perl script <a href="http://data.bits.vib.be/pub/trainingmaterial/introduction_to_linux_for_bioinformatics/motifs_new.pl">here</a></li>
+  <li>Download the dna file <a href="http://data.bits.vib.be/pub/trainingmaterial/introduction_to_linux_for_bioinformatics/dna.txt">here</a></li>
   <li>Save the file, under ~/Downloads for now.</li>
   <li>Open Geany on your computer, and copy the script code to Geany.</li>
   <li>Execute the script by clicking the little ‘gear’ box. For this script, you will need to download the dna.txt file as input.</li>
@@ -421,7 +385,7 @@ exit 0
 <h3 id="extract-some-lines">Extract some lines</h3>
 
 <blockquote>
-  <p>Download the bed file from http://data.bits.vib.be/pub/trainingen/Linux/TAIR9_mRNA.bed via command line</p>
+  <p>Download the bed file <a href="http://data.bits.vib.be/pub/trainingen/Linux/TAIR9_mRNA.bed">here</a> via command line</p>
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget https://dl.dropbox.com/u/18352887/TAIR9_mRNA.bed
 </code></pre></div>  </div>
 </blockquote>
@@ -443,7 +407,6 @@ chr2	14578629	14581727	AT2G34630.1	0	+	14579725	14581632	0	11	203,96,81,72,132,8
 </blockquote>
 
 <p>This is a typical bioinformatics text file, with every row divided in field by tabs.</p>
-
 <blockquote>
   <p>Extract all lines that start with chr1 from the TAIR9_mRNA.bed and put them in a new text file “chr1_TAIR9_mRNA.bed”.</p>
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ grep "^chr1" TAIR9_mRNA.bed &gt; chr1_TAIR9_mRNA.bed
@@ -451,20 +414,17 @@ chr2	14578629	14581727	AT2G34630.1	0	+	14579725	14581632	0	11	203,96,81,72,132,8
 </blockquote>
 
 <h3 id="checking-the-data">Checking the data</h3>
+
 <blockquote>
-  <p>Download human chromosome 21 from https://data.bits.vib.be/pub/trainingen/Linux/Homo_sapiens.dna.chromosome21.zip</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget ftp://ftp.ensembl.org/pub/release-73/fasta/homo_sapiens/dna/Homo_sapiens.GRCh37.73.dna.chromosome.21.fa.gz
+  <p>Download human chromosome 21 from <a href="https://data.bits.vib.be/pub/trainingen/Linux/Homo_sapiens.dna.chromosome21.zip">this link</a> and unzip the file.</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget https://data.bits.vib.be/pub/trainingen/Linux/Homo_sapiens.dna.chromosome21.zip
 </code></pre></div>  </div>
 </blockquote>
 
-<blockquote>
-  <p>Unzip the file</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gunzip Homo_sapiens.GRCh37.73.dna.chromosome.21.fa.gz
-</code></pre></div>  </div>
-</blockquote>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gunzip Homo_sapiens.dna.chromosome21.zip
+</code></pre></div></div>
 
 <p>Entries in a fasta file start with &gt;</p>
-
 <blockquote>
   <p>How many entries are in that fasta file? Remember you can combine commands with a |.</p>
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grep "^&gt;" Homo_sapiens.GRCh37.73.dna.chromosome.21.fa | wc -l
@@ -472,6 +432,7 @@ chr2	14578629	14581727	AT2G34630.1	0	+	14579725	14581632	0	11	203,96,81,72,132,8
 </blockquote>
 
 <h3 id="how-many">How many?</h3>
+
 <p>Use the TAIR9_mRNA.bed file used in the first exercise. Remember it looks like this</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chr1	2025600	2027271	AT1G06620.1	0	+	2025617	2027094	0	3	
 chr5	2625558	2628110	AT5G08160.1	0	-	2625902	2627942	0	6	
@@ -490,7 +451,7 @@ Since you need to use the + sign to represent a set of characters of variable le
 
 <h3 id="more-complex-extraction">More complex extraction</h3>
 
-<p>Get the last exon size for all mRNA records in Arabidopsis. Use TAIR9_mRNA.bed for this: this file contains the exon sizes. See the [[.bed|BED page]] to check that the field we need is field 11. This contains a comma separated list of the sizes of all the exons of a mRNA</p>
+<p>Get the last exon size for all mRNA records in Arabidopsis. Use TAIR9_mRNA.bed for this: this file contains the exon sizes. See the <a href="https://wiki.bits.vib.be/index.php/.bed">.BED page</a> to check that the field we need is field 11. This contains a comma separated list of the sizes of all the exons of a mRNA</p>
 <blockquote>
   <p>Get the exon sizes for all mRNA records in Arabidopsis. Write them to a file called exons.txt</p>
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>awk '{ print $11 }' TAIR9_mRNA.bed &gt; exons.txt
@@ -509,8 +470,7 @@ Since you need to use the + sign to represent a set of characters of variable le
 
 <p>The reason is that the last field is empty, because the lines end with a ‘,’. We need to remove the last ‘,’ and can use sed for this.</p>
 <blockquote>
-  <p>Remove the last comma from the lines and save in a file called exonsclean.txt
-You want to substitute the comma at the end of the line by nothing:</p>
+  <p>Remove the last comma from the lines and save in a file called exonsclean.txt. You want to substitute the comma at the end of the line by nothing:</p>
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sed 's/,$//' exons.txt &gt; exonsclean.txt
 head exonsclean.txt
 </code></pre></div>  </div>
@@ -545,9 +505,10 @@ head lastexonssort.txt
 </code></pre></div></div>
 
 <h3 id="analyzing-a-short-read-alignment">Analyzing a short read alignment</h3>
-<p>SAM (‘sequence alignment map’) file format is the format which summarizes the alignment of reads to a reference genome. Is is one of the key files in NGS analysis, and you can learn a lot from it. See [[.sam]] for a description of this format.</p>
+
+<p>SAM (‘sequence alignment map’) file format is the format which summarizes the alignment of reads to a reference genome. Is is one of the key files in NGS analysis, and you can learn a lot from it. See the <a href="https://wiki.bits.vib.be/index.php/.sam">SAM page</a> for a description of this format.</p>
 <blockquote>
-  <p>Download the sam file from http://data.bits.vib.be/pub/trainingen/Linux/sample.sam</p>
+  <p>Download the sam file from <a href="http://data.bits.vib.be/pub/trainingen/Linux/sample.sam">here</a></p>
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget http://data.bits.vib.be/pub/trainingen/Linux/sample.sam 
 </code></pre></div>  </div>
 </blockquote>
@@ -564,38 +525,36 @@ head lastexonssort.txt
   <p>How many lines start with ‘@’, which is the comment symbol in the SAM format.</p>
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grep '^@' sample.sam | wc -l
 </code></pre></div>  </div>
-  <p>15 lines</p>
 </blockquote>
+
+<p>15 lines</p>
 
 <p>You can use grep to skip the lines starting with ‘@’, since they are comment lines.</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grep -v '^@' sample.sam | head
 </code></pre></div></div>
 
 <blockquote>
-  <p>Write the FLAG field (second field) to a file called flags.txt
-Pipe the grep results to awk to print the second field.</p>
+  <p>Write the FLAG field (second field) to a file called flags.txt and pipe the grep results to awk to print the second field.</p>
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grep -v '@' sample.sam | awk '{ print $2 }' &gt; flags.txt
 head flags.txt
 </code></pre></div>  </div>
 </blockquote>
 
 <blockquote>
-  <p>Sort and summarize (using uniq) flags.txt
-Pipe the grep results to awk to print the second field.</p>
+  <p>Sort and summarize (using uniq) flags.txt and pipe the grep results to awk to print the second field.</p>
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sort -nr flags.txt | uniq -c
 </code></pre></div>  </div>
 </blockquote>
 
 <blockquote>
-  <p>Sort the results on number of times observed (the first field)
-We build on the previous command, and just pipe the output to sort -nr. We do not have to use the option -k, since sort always takes the first field.</p>
+  <p>Sort the results on number of times observed (the first field). We build on the previous command, and just pipe the output to sort -nr. We do not have to use the option -k, since sort always takes the first field.</p>
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sort -nr flags.txt | uniq -c | sort -nr 
 </code></pre></div>  </div>
 </blockquote>
 
 <h3 id="advanced">Advanced</h3>
 <p>We use the TAIR9_mRNA.bed to answer this.
-First we check how many different genes are in the file. A gene has the code AT<number>G<number>. Splice variants have to same AT number but different version number (the numbers after the . are different. We are not interested in splice variants so want to remove the .1, .2... before counting. You can do this by using the . as a field delimiter</number></number></p>
+First we check how many different genes are in the file. A gene has the code ATG. Splice variants have to same AT number but different version number (the numbers after the . are different. We are not interested in splice variants so want to remove the .1, .2… before counting. You can do this by using the . as a field delimiter</p>
 <blockquote>
   <p>Remove everything after the . and save in a file called TAIRpart.txt</p>
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>awk -F'.' '{ print $1 }' TAIR9_mRNA.bed &gt; TAIRpart.txt
@@ -605,13 +564,14 @@ head TAIRpart.txt
 
 <p>Now you need to summarize the fourth column of this file and count the lines of the result</p>
 <blockquote>
-  <p>How many different genes are in the file.</p>
+  <p>How many different genes are in the file?</p>
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cut -f4  TAIRpart.txt | sort | uniq | wc -l
 </code></pre></div>  </div>
 </blockquote>
 
-<p>27379
-When you look at TAIR9_mRNA.bed you see that the the fifth column contains 0.</p>
+<p>27379</p>
+
+<p>When you look at TAIR9_mRNA.bed you see that the the fifth column contains 0.</p>
 <blockquote>
   <p>Check if there is any entry that contains another number in that column ? (summarize will give you the answer)</p>
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cut -f5 TAIR9_mRNA.bed | sort -nr | uniq -c
@@ -625,10 +585,9 @@ Another example: Show all Arabidopsis mRNA with more than 50 exons</p>
 
 <blockquote>
   <p>Print the number of exons (field number 10) of mRNAs from the first chromosome.</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grep '^chr1'  TAIR9_mRNA.bed | awk '{ print $10 }' 
+</code></pre></div>  </div>
 </blockquote>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grep '^chr1'  TAIR9_mRNA.bed | awk '{ print $10 }' 
-</code></pre></div></div>
 
 <blockquote>
   <p>Obtain AT numbers (field 4) and exon info (field 11)</p>
@@ -654,18 +613,19 @@ Before you can use your new aliases, you have to reload the .bashrc file. You do
 <p>Now, let’s do this exercise.
 Sometimes you might want to open a big text file from the end on, and start scrolling towards the top. We will create an <strong>alias</strong> for this in this exercise.</p>
 <blockquote>
-  <p>Create an alias that starts scrolling from the bottom. Tip: it’s less and the appropriate option you must configure.
-Read through the man page of less. To help you: you can search for the string “at the end”. Open the man page of less</p>
+  <p>Create an alias that starts scrolling from the bottom. Tip: it’s less and the appropriate option you must configure. Read through the man page of less. To help you: you can search for the string “at the end”. Open the man page of less</p>
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ man less
 </code></pre></div>  </div>
 </blockquote>
 
 <blockquote>
   <p>Type “/at the end” and <ENTER>. Less will search in the content for "at the end". Examine the entries with the string./ Go to the following result by typing "/" followed by ENTER.
-The option is:
-Add the alias by opening .bashrc with an editor, and adding the line:</ENTER></p>
+The option is: add the alias by opening .bashrc with an editor, and adding the line:</ENTER></p>
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>alias sell## "less +G"
 </code></pre></div>  </div>
+</blockquote>
+
+<blockquote>
   <p>When you have changed the content of .bashrc, it needs to be reloaded. Close your terminal and fire it up again. OR execute:</p>
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ . ~/.bashrc
 </code></pre></div>  </div>
@@ -681,6 +641,7 @@ Add the alias by opening .bashrc with an editor, and adding the line:</ENTER></p
 </blockquote>
 
 <h3 id="show-all-aliases-on-your-system">Show all aliases on your system</h3>
+
 <p>Forgot an alias? To see all your aliases, run the command
 <code class="highlighter-rouge">$ alias</code>.</p>
 
@@ -729,10 +690,8 @@ ls -l
                     
 
                 </div>
-                <!-- sidebar, which will move to the top on a small screen -->
-                <div class="col-sm-2" role="supplementary">
-                    <nav id="toc" data-toggle="toc" class="sticky-top bs-docs-sidebar hidden-print hidden-xs hidden-sm"></nav>
-                </div>
+                <!-- sidebar, which will be hidden on a small screen -->
+                <nav class="col-md-2 sticky-toc bs-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary" id="toc" data-toggle="toc"</nav>
             </div>
         </div>
 

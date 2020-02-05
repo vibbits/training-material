@@ -28,9 +28,9 @@
         
         
         
-        <meta name="description" content="Command Line Introduction" />
+        <meta name="description" content="This training is a prerequisite for all Linux novices who..." />
         <meta property="og:title" content="VIB Bioinformatics Training: 02 Linux command line" />
-        <meta property="og:description" content="Command Line Introduction" />
+        <meta property="og:description" content="This training is a prerequisite for all Linux novices who..." />
         <meta property="og:image" content="/assets/images/bioinformatics_core_rgb_neg.png" />
     </head>
     <body data-spy="scroll" data-target="#toc">
@@ -52,19 +52,19 @@
   
 
 
-        <a href="/" id="topmenu" class="is-active">Home</a>
+        <a href="/" class="topmenu">Home</a>
 
 
-        <a href="/about.html" id="topmenu" >About</a>
+        <a href="/about.html" class="topmenu" >About</a>
 
 
-        <a href="/hall-of-fame.html" id="topmenu">Contribute</a>
+        <a href="/hall-of-fame.html" class="topmenu">Contribute</a>
 
 
-        <a href="/faq.html" id="topmenu">Faq</a>
+        <a href="/faq.html" class="topmenu">Faq</a>
 
 
-        <a href="/search/index.html" id="topmenu">Search</a>
+        <a href="/search/index.html" class="topmenu">Search</a>
 
 
   </nav>
@@ -188,7 +188,7 @@
     {
       "@type": "CreativeWork",
       "name": "Initiation to Linux Command Line",
-      "description": "Command Line Introduction",
+      "description": "This training is a prerequisite for all Linux novices who want to follow a training that requires the use of Linux command line (e.g. metagenomics or GATK training).",
       "url": "https://material.bits.vib.be//topics/linux/"
     }
   ]
@@ -233,36 +233,15 @@
             
 
 
-
-            <div>
-                <div><strong><i class="fa fa-external-link" aria-hidden="true"></i> Supporting Materials</strong></div>
-                <div id="supporting_materials">
-                    <ul>
-                        <li>
-                            <div>
-                    
-
-                    
-
-                    
-                    
-
-
-                    
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
+            
 
         </blockquote>
 
         <div class="container" data-field="body">
             <div class="row">
-                <div class="col-sm-10" role="main">
+                <div class="col-md-10" role="main">
                     <h2 id="tutorial-on-the-linux-command-line">Tutorial on the linux command line</h2>
-<p>We will first hold your hand: type over these commands below step by step, and watch what they do. 
+<p>We will first hold your hand: type over these commands below step by step, and watch what they do.
 Use <strong>cd</strong> to change the current working directory (user bits). To create your own directories use the <strong>mkdir</strong> (make directory) command.</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd ~
@@ -278,16 +257,14 @@ $ pwd
 </code></pre></div></div>
 
 <p>To create a new file, use the <strong>touch</strong> command:</p>
-
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd ~/sequences/proteins/
 $ touch my_sequence.txt
 $ ls -l
 -rw-r--r-- 1 bits users 0 Sep 19 15:56 my_sequence.txt
 </code></pre></div></div>
 
-<p>In the last command above, the <strong>-l</strong> (a lowercase “L”, not a “1” (one)) option was used with the ls command. The -l indicates that you want the directory contents shown in the “long listing” format.</p>
-
-<p>Most commands accept options. But which options can you use? The command <strong>man</strong> helps you. Type <strong>man</strong> followed by the command name. E.g. <strong>man ls</strong> to see what options are available for the ls command. You get a the list of options. Keep pressing Space until the page stops scrolling, then enter “q” to return to the command prompt.
+<p>In the last command above, the <strong>-l</strong> (a lowercase “L”, not a “1” (one)) option was used with the ls command. The -l indicates that you want the directory contents shown in the “long listing” format.
+Most commands accept options. But which options can you use? The command <strong>man</strong> helps you. Type <strong>man</strong> followed by the command name. E.g. <strong>man ls</strong> to see what options are available for the ls command. You get a the list of options. Keep pressing Space until the page stops scrolling, then enter “q” to return to the command prompt.
 Luckily, most tools have the <strong>–help</strong> option. (ls –help for example). These 2 methods should help you further. To see what options can be used with ls, enter <strong>man ls</strong>.</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ man ls
@@ -304,7 +281,6 @@ $
 </code></pre></div></div>
 
 <p>To remove a directory, use the <strong>rmdir</strong> (remove directory) command. The directory needs to be empty to do this.</p>
-
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd ~/sequences/
 $ ls
 proteins
@@ -345,33 +321,29 @@ $
 
 <h3 id="make-a-project-folder-structure">Make a project folder structure</h3>
 <p>We assume that start from your home folder.</p>
-
 <blockquote>
-  <p>Create the following directory structure
-[[file:dirstructureex1.png]]</p>
-
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $mkdir -p docs/{pdf/{man,readme},html/{man,readme}}
+  <p>Create the following directory structure</p>
+  <figure id="figure-1"><img src="https://wiki.bits.vib.be/images/c/c4/Dirstructureex1.png" alt="tree-structure" /><figcaption><span class="figcaption-prefix">Figure 1:</span> Tree</figcaption></figure>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$mkdir -p docs/{pdf/{man,readme},html/{man,readme}}
 </code></pre></div>  </div>
-  <p>The ‘{‘ and ‘}’ can group arguments but you can also create the structure step by step.</p>
 </blockquote>
 
+<p>The ‘{‘ and ‘}’ can group arguments but you can also create the structure step by step.</p>
 <blockquote>
   <p>The little tree figure above is created with the ‘tree’ command. Display such a tree.</p>
-
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tree /home/bits/docs/
 </code></pre></div>  </div>
 </blockquote>
 
 <h2 id="downloading-and-storing-bioinformatics-data">Downloading and storing bioinformatics data</h2>
+
 <h3 id="create-a-project-folder">Create a project folder</h3>
 <p>The first thing to do when you start a bioinformatics project, is to create a structure of folders to put your data in an organised fashion.</p>
 
 <h3 id="downloading">Downloading</h3>
 <p>As an example, we will download the rice genome from the Rice Annotation Project database. But first create the folder structure.</p>
-
 <blockquote>
   <p>Create following folder structure.</p>
-
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ mkdir "Rice Example"
  $ cd Rice\ Example
  $ mkdir Genome\ data
@@ -383,21 +355,19 @@ $
 </blockquote>
 
 <p>** Be aware of white spaces on the command line!**
-On the command line, programs, options and arguments are separated by <strong>white spaces</strong>. If you choose to use a folder name containing a white space, it will interpret every word as an option or argument. So you have to tell Bash to <strong>ignore the white space</strong>. This can be done by: putting <strong>strings between quotes</strong> like ‘ or “ <strong>escape</strong> a white space with . See the examples above.</p>
-
-<p>Hence, you might save yourself some trouble (and typing!) by putting _ instead of white spaces in names. Also make sure to use tab expansion, wherever possible!</p>
+On the command line, programs, options and arguments are separated by <strong>white spaces</strong>. If you choose to use a folder name containing a white space, it will interpret every word as an option or argument. So you have to tell Bash to <strong>ignore the white space</strong>. This can be done by: putting <strong>strings between quotes</strong> like ‘ or “ <strong>escape</strong> a white space with . See the examples above.
+Hence, you might save yourself some trouble (and typing!) by putting _ instead of white spaces in names. Also make sure to use tab expansion, wherever possible!</p>
 
 <h3 id="download-the-genome-data-directly-on-the-command-line">Download the genome data directly on the command line</h3>
 <p>You can fetch the rice genome <a href="http://rapdb.dna.affrc.go.jp/download/archive/build5/IRGSPb5.fa.masked.gz">from this link</a>.</p>
-
 <blockquote>
   <p>Download the genome data to the “Rice example”/”Genome data”/Sequence folder. Use <strong>wget</strong> to download from the link.
 Right-click on the download link, and copy the download link. The download link is: http://rapdb.dna.affrc.go.jp/download/archive/build5/IRGSPb5.fa.masked.gz
 Go the directory and execute wget</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ cd      ## to go back to the home directory
- $ cd Ric&lt;tab&gt;
- $ cd Gen&lt;tab&gt;/Seq&lt;tab&gt;
- $ wget http://rapdb.dna.affrc.go.jp/download/archive/build5/IRGSPb5.fa.masked.gz
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd      ## to go back to the home directory
+$ cd Ric&lt;tab&gt;
+$ cd Gen&lt;tab&gt;/Seq&lt;tab&gt;
+$ wget http://rapdb.dna.affrc.go.jp/download/archive/build5/IRGSPb5.fa.masked.gz
 --2013-10-15 09:36:01--  http://rapdb.dna.affrc.go.jp/download/archive/build5/IRGSPb5.fa.masked.gz
 Resolving rapdb.dna.affrc.go.jp (rapdb.dna.affrc.go.jp)... 150.26.230.179
 Connecting to rapdb.dna.affrc.go.jp (rapdb.dna.affrc.go.jp)|150.26.230.179|:80... connected.
@@ -406,7 +376,7 @@ Length: 122168025 (117M) [application/x-gzip]
 Saving to: `IRGSPb5.fa.masked.gz'
 100%[======================================&gt;] 122,168,025  973K/s   in 2m 40s  
 2013-10-15 09:38:42 (747 KB/s) - `IRGSP-1.0_genome.fasta.gz' saved [122168025/122168025]
- $ ls
+$ ls
 IRGSPb5.fa.masked.gz
 </code></pre></div>  </div>
 </blockquote>
@@ -415,75 +385,75 @@ IRGSPb5.fa.masked.gz
 
 <h3 id="did-your-data-get-through-correctly">Did your data get through correctly?</h3>
 <p>Large downloads or slow downloads like this can take a long time. Plenty of opportunity for the transfer to go wrong. Therefore, large downloads should always have a <strong>checksum</strong> mentioned. You can find the md5 checksum on the downloads page. The md5 checksum is an unique string identifying (and calculated from) this data. Once downloaded, you should calculate this string yourself with <strong>md5sum</strong>.</p>
-
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ md5sum IRGSPb5.fa.masked.gz
 7af391c32450de873f80806bbfaedf05  IRGSPb5.fa.masked.gz
 </code></pre></div></div>
 
 <p>You should go to the rice genome download page, and compare this string with the MD5 checksum mentioned over there. You can do this manually. Now that you know the concept of checksums, there is an easier way to verify the data using <strong>md5sum</strong>. Can you find the easier way?</p>
-
 <blockquote>
   <p>Search how to use md5sum to check the downloaded files with the .md5 file from the website. Check the man page</p>
-
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ man md5sum
 </code></pre></div>  </div>
-  <p>It does not say much: in the end it refers to</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ info coreutils 'md5sum invocation'
-</code></pre></div>  </div>
-  <p>Reading the options, there is one option sounding promising:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>`-c'
+</blockquote>
+
+<p>It does not say much: in the end it refers to</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ info coreutils 'md5sum invocation'
+</code></pre></div></div>
+
+<p>Reading the options, there is one option sounding promising:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>`-c'
 `--check'
      Read file names and checksum information (not data) from each FILE
      (or from stdin if no FILE was specified) and report whether the
      checksums match the contents of the named files. 
-</code></pre></div>  </div>
-  <p>This way we can check the download:
-```
- $ wget http://rapdb.dna.affrc.go.jp/download/archive/build5/IRGSPb5.fa.masked.gz.md5
-–2013-10-15 09:47:02–  http://rapdb.dna.affrc.go.jp/download/archive/build5/IRGSPb5.fa.masked.gz.md5
-Resolving rapdb.dna.affrc.go.jp (rapdb.dna.affrc.go.jp)… 150.26.230.179
-Connecting to rapdb.dna.affrc.go.jp (rapdb.dna.affrc.go.jp)|150.26.230.179|:80… connected.
-HTTP request sent, awaiting response… 200 OK
+</code></pre></div></div>
+
+<p>This way we can check the download:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ wget http://rapdb.dna.affrc.go.jp/download/archive/build5/IRGSPb5.fa.masked.gz.md5
+--2013-10-15 09:47:02--  http://rapdb.dna.affrc.go.jp/download/archive/build5/IRGSPb5.fa.masked.gz.md5
+Resolving rapdb.dna.affrc.go.jp (rapdb.dna.affrc.go.jp)... 150.26.230.179
+Connecting to rapdb.dna.affrc.go.jp (rapdb.dna.affrc.go.jp)|150.26.230.179|:80... connected.
+HTTP request sent, awaiting response... 200 OK
 Length: 55 [application/x-gzip]
-Saving to: `IRGSPb5.fa.masked.gz.md5’</p>
+Saving to: `IRGSPb5.fa.masked.gz.md5'
+100%[======================================&gt;] 55          --.-K/s   in 0s      
+2013-10-15 09:47:03 (757 KB/s) - `IRGSPb5.fa.masked.gz.md5' saved [55/55]
+$ ls
+IRGSPb5.fa.masked.gz  IRGSPb5.fa.masked.gz.md5
+$ md5sum -c IRGSPb5.fa.masked.gz.md5 
+IRGSPb5.fa.masked.gz: OK
+</code></pre></div></div>
+
+<h2 id="ensuring-integrity-of-downloads">Ensuring integrity of downloads</h2>
+<p>A handy tool to use is the <a href="https://addons.mozilla.org/nl/firefox/addon/downthemall/">DownThemAll</a> addon for Firefox, in which you have to provide the checksum at the time of download. It will automatically check whether the download is finished.
+The Short Read Archive (SRA), storing NGS data sets, makes use of <a href="http://asperasoft.com/technology/transport/fasp/">Aspera</a> to download data a great speeds, ensuring integrity. To download from SRA using aspera in linux, follow the <a href="http://www.ebi.ac.uk/ena/about/read_download">this guide from EBI</a>.</p>
+
+<h3 id="extracting-the-data">Extracting the data</h3>
+<blockquote>
+  <p>What type of file have you downloaded?</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ file IRGSPb5.fa.masked.gz
+IRGSPb5.fa.masked.gz: gzip compressed data, was "IRGSPb5.fa.masked", from Unix, last modified: Wed Aug 18 03:45:47 2010
+</code></pre></div>  </div>
 </blockquote>
 
-<p>100%[======================================&gt;] 55          –.-K/s   in 0s</p>
-
-<p>2013-10-15 09:47:03 (757 KB/s) - `IRGSPb5.fa.masked.gz.md5’ saved [55/55]
- $ ls
-IRGSPb5.fa.masked.gz  IRGSPb5.fa.masked.gz.md5
- $ md5sum -c IRGSPb5.fa.masked.gz.md5 
-IRGSPb5.fa.masked.gz: OK</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-## Ensuring integrity of downloads
-A handy tool to use is the [DownThemAll](https://addons.mozilla.org/nl/firefox/addon/downthemall/) addon for Firefox, in which you have to provide the checksum at the time of download. It will automatically check whether the download is finished.
-
-The Short Read Archive (SRA), storing NGS data sets, makes use of [Aspera](http://asperasoft.com/technology/transport/fasp/) to download data a great speeds, ensuring integrity. To download from SRA using aspera in linux, follow the [this guide from EBI](http://www.ebi.ac.uk/ena/about/read_download).
-
-### Extracting the data
-&gt; What type of file have you downloaded?
-</code></pre></div></div>
-<p>$ file IRGSPb5.fa.masked.gz
-IRGSPb5.fa.masked.gz: gzip compressed data, was “IRGSPb5.fa.masked”, from Unix, last modified: Wed Aug 18 03:45:47 2010</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>It is a compressed file. Files are compressed to save storage space. Before using these files, you have to decompress them. What can you do with this type of file? Check the command apropos.
-</code></pre></div></div>
-<p>$ apropos gzip
+<p>It is a compressed file. Files are compressed to save storage space. Before using these files, you have to decompress them. What can you do with this type of file? Check the command apropos.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ apropos gzip
 gzip (1)             - compress or expand files
-lz (1)               - gunzips and shows a listing of a gzip’d tar’d archive
-tgz (1)              - makes a gzip’d tar archive
-uz (1)               - gunzips and extracts a gzip’d tar’d archive
-zforce (1)           - force a ‘.gz’ extension on all gzip files</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-**apropos** is a command that helps you discover new commands. In case you have a type of file that you don't know about, use apropos to search for corresponding programs.
-
-&gt; Decompress the file. Check the man page of gzip. From the man page:&lt;pre&gt;gunzip [ -acfhlLnNrtvV ] [-S suffix] [ name ...  ]&lt;/pre&gt;
-
+lz (1)               - gunzips and shows a listing of a gzip'd tar'd archive
+tgz (1)              - makes a gzip'd tar archive
+uz (1)               - gunzips and extracts a gzip'd tar'd archive
+zforce (1)           - force a '.gz' extension on all gzip files
 </code></pre></div></div>
-<p>$ gunzip IRGSPb5.fa.masked.gz 
+
+<p><strong>apropos</strong> is a command that helps you discover new commands. In case you have a type of file that you don’t know about, use apropos to search for corresponding programs.</p>
+<blockquote>
+  <p>Decompress the file. Check the man page of gzip. From the man page:&lt;pre&gt;gunzip [ -acfhlLnNrtvV ] [-S suffix] [ name …  ]&lt;/pre&gt;</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gunzip IRGSPb5.fa.masked.gz 
 $ ls
 IRGSPb5.fa.masked  IRGSPb5.fa.masked.gz.md5
-```</p>
+</code></pre></div>  </div>
+</blockquote>
+
 
 
 
@@ -506,10 +476,8 @@ IRGSPb5.fa.masked  IRGSPb5.fa.masked.gz.md5
                     
 
                 </div>
-                <!-- sidebar, which will move to the top on a small screen -->
-                <div class="col-sm-2" role="supplementary">
-                    <nav id="toc" data-toggle="toc" class="sticky-top bs-docs-sidebar hidden-print hidden-xs hidden-sm"></nav>
-                </div>
+                <!-- sidebar, which will be hidden on a small screen -->
+                <nav class="col-md-2 sticky-toc bs-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary" id="toc" data-toggle="toc"</nav>
             </div>
         </div>
 

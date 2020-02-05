@@ -28,9 +28,9 @@
         
         
         
-        <meta name="description" content="Command Line Introduction" />
+        <meta name="description" content="This training is a prerequisite for all Linux novices who..." />
         <meta property="og:title" content="VIB Bioinformatics Training: 01 Linux installation and training material" />
-        <meta property="og:description" content="Command Line Introduction" />
+        <meta property="og:description" content="This training is a prerequisite for all Linux novices who..." />
         <meta property="og:image" content="/assets/images/bioinformatics_core_rgb_neg.png" />
     </head>
     <body data-spy="scroll" data-target="#toc">
@@ -52,19 +52,19 @@
   
 
 
-        <a href="/" id="topmenu" class="is-active">Home</a>
+        <a href="/" class="topmenu">Home</a>
 
 
-        <a href="/about.html" id="topmenu" >About</a>
+        <a href="/about.html" class="topmenu" >About</a>
 
 
-        <a href="/hall-of-fame.html" id="topmenu">Contribute</a>
+        <a href="/hall-of-fame.html" class="topmenu">Contribute</a>
 
 
-        <a href="/faq.html" id="topmenu">Faq</a>
+        <a href="/faq.html" class="topmenu">Faq</a>
 
 
-        <a href="/search/index.html" id="topmenu">Search</a>
+        <a href="/search/index.html" class="topmenu">Search</a>
 
 
   </nav>
@@ -188,7 +188,7 @@
     {
       "@type": "CreativeWork",
       "name": "Initiation to Linux Command Line",
-      "description": "Command Line Introduction",
+      "description": "This training is a prerequisite for all Linux novices who want to follow a training that requires the use of Linux command line (e.g. metagenomics or GATK training).",
       "url": "https://material.bits.vib.be//topics/linux/"
     }
   ]
@@ -233,34 +233,13 @@
             
 
 
-
-            <div>
-                <div><strong><i class="fa fa-external-link" aria-hidden="true"></i> Supporting Materials</strong></div>
-                <div id="supporting_materials">
-                    <ul>
-                        <li>
-                            <div>
-                    
-
-                    
-
-                    
-                    
-
-
-                    
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
+            
 
         </blockquote>
 
         <div class="container" data-field="body">
             <div class="row">
-                <div class="col-sm-10" role="main">
+                <div class="col-md-10" role="main">
                     <h2 id="what-is-linux">What is Linux?</h2>
 <p>Linux is a very popular operating system in bioinformatics. In this training you will learn why that is and how it can help you with your bioinformatics analysis. After this training you will be able to:</p>
 <ul>
@@ -329,10 +308,8 @@ When you launch the application, you have to enter an IP address, this will be m
                     
 
                 </div>
-                <!-- sidebar, which will move to the top on a small screen -->
-                <div class="col-sm-2" role="supplementary">
-                    <nav id="toc" data-toggle="toc" class="sticky-top bs-docs-sidebar hidden-print hidden-xs hidden-sm"></nav>
-                </div>
+                <!-- sidebar, which will be hidden on a small screen -->
+                <nav class="col-md-2 sticky-toc bs-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary" id="toc" data-toggle="toc"</nav>
             </div>
         </div>
 

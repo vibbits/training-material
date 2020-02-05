@@ -28,9 +28,9 @@
         
         
         
-        <meta name="description" content="Command Line Introduction" />
+        <meta name="description" content="This training is a prerequisite for all Linux novices who..." />
         <meta property="og:title" content="VIB Bioinformatics Training: 03 Linux file system" />
-        <meta property="og:description" content="Command Line Introduction" />
+        <meta property="og:description" content="This training is a prerequisite for all Linux novices who..." />
         <meta property="og:image" content="/assets/images/bioinformatics_core_rgb_neg.png" />
     </head>
     <body data-spy="scroll" data-target="#toc">
@@ -52,19 +52,19 @@
   
 
 
-        <a href="/" id="topmenu" class="is-active">Home</a>
+        <a href="/" class="topmenu">Home</a>
 
 
-        <a href="/about.html" id="topmenu" >About</a>
+        <a href="/about.html" class="topmenu" >About</a>
 
 
-        <a href="/hall-of-fame.html" id="topmenu">Contribute</a>
+        <a href="/hall-of-fame.html" class="topmenu">Contribute</a>
 
 
-        <a href="/faq.html" id="topmenu">Faq</a>
+        <a href="/faq.html" class="topmenu">Faq</a>
 
 
-        <a href="/search/index.html" id="topmenu">Search</a>
+        <a href="/search/index.html" class="topmenu">Search</a>
 
 
   </nav>
@@ -188,7 +188,7 @@
     {
       "@type": "CreativeWork",
       "name": "Initiation to Linux Command Line",
-      "description": "Command Line Introduction",
+      "description": "This training is a prerequisite for all Linux novices who want to follow a training that requires the use of Linux command line (e.g. metagenomics or GATK training).",
       "url": "https://material.bits.vib.be//topics/linux/"
     }
   ]
@@ -231,34 +231,13 @@
             
 
 
-
-            <div>
-                <div><strong><i class="fa fa-external-link" aria-hidden="true"></i> Supporting Materials</strong></div>
-                <div id="supporting_materials">
-                    <ul>
-                        <li>
-                            <div>
-                    
-
-                    
-
-                    
-                    
-
-
-                    
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
+            
 
         </blockquote>
 
         <div class="container" data-field="body">
             <div class="row">
-                <div class="col-sm-10" role="main">
+                <div class="col-md-10" role="main">
                     <h2 id="tutorial-on-the-linux-file-system">Tutorial on the linux file system</h2>
 
 <h3 id="which-protocol-achieves-highest-compression-ratio">Which protocol achieves highest compression ratio?</h3>
@@ -284,19 +263,17 @@ $ cp Downloads/data_linux_training.tar.gz Compression_exercise/
 
 <blockquote>
   <p>Decompress the file DRR000542_1.fastq.subset.gz</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gunzip DRR000542_1.fastq.subset.gz
+</code></pre></div>  </div>
 </blockquote>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gunzip DRR000542_1.fastq.subset.gz
-</code></pre></div></div>
 
 <blockquote>
   <p>Copy the DRR000542_1.fastq.subset file to a new file called ‘bzip2_test.fastq’. Compress this file with bzip2.</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ bzip2 bzip2_test.fastq
+</code></pre></div>  </div>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ bzip2 bzip2_test.fastq
-</code></pre></div></div>
-
-<p>’'’Tip’’’ If you would like to know how long the command took to finish, use ‘'’time’’’</p>
+<p><strong>Tip!</strong> If you would like to know how long the command took to finish, use “time”</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ time bzip2 bzip2_test.fastq
 real	0m5.878s
 user	0m5.728s
@@ -304,7 +281,6 @@ sys	0m0.112s
 </code></pre></div></div>
 
 <p>Three different times are given. What matters to you is the line ‘real’, also called the wall-clock time.</p>
-
 <blockquote>
   <p>Copy DRR000542_1.fastq.subset file to a new file called gzip_test.fastq and compress with gzip.</p>
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ time gzip gzip_test.fastq
@@ -315,28 +291,27 @@ sys	0m0.112s
 </blockquote>
 
 <p>A relatively unknown package is lrzip, ‘long range zip’, which achieves very good results on big files. Let’s try that one also!</p>
-
 <blockquote>
   <p>Copy DRR000542_1.fastq.subset file to a new file called lrzip_test.fastq and compress with lrzip.</p>
-</blockquote>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ lrzip lrzip_test.fastq
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ lrzip lrzip_test.fastq
 The program 'lrzip' is currently not installed.  You can install it by typing:
 sudo apt-get install lrzip
-</code></pre></div></div>
-<p>’'’apt-get’’’ is the command line tool to install software on Debian distro’s. Equivalent to the software center.</p>
+</code></pre></div>  </div>
+</blockquote>
+
+<p><strong>apt-get</strong> is the command line tool to install software on Debian distro’s. Equivalent to the software center.</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt-get install lrzip
 [sudo] password for joachim: 
 Reading package lists... Done
 Building dependency tree       
 Reading state information... Done
 The following packages were automatically installed and are no longer required:
-  libnet-ip-perl diffstat libnet-dns-perl libparse-debianchangelog-perl
-  gir1.2-unique-3.0 kde-l10n-engb python-webpy libnet-domain-tld-perl
-  libemail-valid-perl libapt-pkg-perl python-flup kde-l10n-zhcn
+libnet-ip-perl diffstat libnet-dns-perl libparse-debianchangelog-perl
+gir1.2-unique-3.0 kde-l10n-engb python-webpy libnet-domain-tld-perl
+libemail-valid-perl libapt-pkg-perl python-flup kde-l10n-zhcn
 Use 'apt-get autoremove' to remove them.
 The following NEW packages will be installed:
-  lrzip
+lrzip
 0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
 Need to get 159 kB of archives.
 After this operation, 313 kB of additional disk space will be used.
@@ -360,22 +335,18 @@ sys	0m0.804s
 
 <blockquote>
   <p>Compare the sizes of the different resulting compressed files.</p>
-</blockquote>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ ls -lh *zip*
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ls -lh *zip*
 -rw------- 1 bits bits 17M Oct 22 14:06 bzip2_test.fastq.bz2
 -rw------- 1 bits bits 21M Oct 22 14:06 gzip_test.fastq.gz
 -rw------- 1 bits bits 104M Oct 22 14:06 lrzip_test.fastq
 -rw------- 1 bits bits 16M Oct 22 14:10 lrzip_test.fastq.lrz
-</code></pre></div></div>
-
-<p>Decide for yourself whether the extra time needed for higher compression is worth the gain in compression.</p>
-
-<blockquote>
-  <p>Put the three files in a newly created folder ‘results’, and make an archive of it.</p>
+</code></pre></div>  </div>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mkdir results
+<p>Decide for yourself whether the extra time needed for higher compression is worth the gain in compression.</p>
+<blockquote>
+  <p>Put the three files in a newly created folder ‘results’, and make an archive of it.</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mkdir results
 $ mv  *{bz2,q.gz,lrz} results/
 $ ls results/
 bzip2_test.fastq.bz2  gzip_test.fastq.gz  lrzip_test.fastq.lrz
@@ -387,7 +358,8 @@ total 281M
 -rw-r--r-- 1 bits bits 21M Oct 22 14:02 ERX000016.test.fastq.tar.gz
 -rw------- 1 bits bits 104M Oct 22 14:06 lrzip_test.fastq
 -rw-r--r-- 1 bits bits 53M Oct 22 14:28 results.tar
-</code></pre></div></div>
+</code></pre></div>  </div>
+</blockquote>
 
 <h3 id="symbolic-links">Symbolic links</h3>
 <p>Symbolic links (symlinks) point to a file, making the file accessible in another directory than where the file is. So you can avoid copying! When the original file is deleted, the symlink is dead. When you remove the symlink, the original file is still present. 
@@ -395,16 +367,15 @@ The syntax for symbolic links is:</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ln -s /home/bits /data/large.fastq /home/bits /Projects/ProjectA/
 </code></pre></div></div>
 
-<p>Tip: when using <strong>ln</strong>, preferably provide absolute paths. If you want to use relative paths, make sure first going to the directory you want the link to be in, and create the link using a relative path (using ‘.’ and ‘..’ to make the path).</p>
-
-<p>Removing symbolic links as such:</p>
+<p>Tip: when using <strong>ln</strong>, preferably provide absolute paths. If you want to use relative paths, make sure first going to the directory you want the link to be in, and create the link using a relative path (using ‘.’ and ‘..’ to make the path).
+Removing symbolic links as such:</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ unlink /home/bits /Projects/ProjectA
 </code></pre></div></div>
 
 <p>In contrast, there is also something as a “hard link” (ln without the -s option). When you delete a hard link, the file to which it referred is gone. So ‘ln -s’ is mostly used.</p>
 
 <h3 id="linking-data-instead-of-copying">Linking data instead of copying</h3>
-<p>In the Rice Example directory (should be available under your home): download [http://rice.plantbiology.msu.edu/pub/data/Eukaryotic_Projects/o_sativa/annotation_dbs/pseudomolecules/version_7.0/all.dir/all.gff33 this annotation file] into the ‘Genome data’/’Annotation’ directory. Make a symbolic link to this file in the ‘Genome data’/’Sequence’ directory. Read the first 10 lines from the symbolic link file.</p>
+<p>In the Rice Example directory (should be available under your home): download <a href="http://rice.plantbiology.msu.edu/pub/data/Eukaryotic_Projects/o_sativa/annotation_dbs/pseudomolecules/version_7.0/all.dir/all.gff3">this annotation file</a> into the ‘Genome data’/’Annotation’ directory. Make a symbolic link to this file in the ‘Genome data’/’Sequence’ directory. Read the first 10 lines from the symbolic link file.</p>
 <blockquote>
   <p>When you have tried yourself, see the solution.</p>
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd Rice\ Example/
@@ -455,8 +426,7 @@ Chr1	MSU_osa1r7	exon	8232	8320	.	+	.	ID=LOC_Os01g01010.1:exon_7;Parent=LOC_Os01g
 To be able to copy and write stuff into /opt, we need root permissions. To do so, precede your commands with ‘'’sudo’’’, as exemplified in the next exercise below. When we do that, our password will first be asked. Next, the command is executed with root permissions. In this way, we can edit contents in root-owned directories! You are a sudoer!</p>
 
 <h3 id="transpose-a-tool-to-transpose">Transpose, a tool to transpose</h3>
-<p>Transpose is an extremely convenient text tool to transpose tabular data. We will use it later. The code is hosted on [http://sourceforge.net/projects/transpose/ SourceForge].</p>
-
+<p>Transpose is an extremely convenient text tool to transpose tabular data. We will use it later. The code is hosted on <a href="http://sourceforge.net/projects/transpose/">SourceForge</a>.</p>
 <blockquote>
   <p>Download transpose installation file (zip) via the browser. Copy them to /opt using <strong>sudo cp</strong>.
 Go to the Sourceforce website with the browser, and click on the Download button.</p>
@@ -469,9 +439,7 @@ Go to the Sourceforce website with the browser, and click on the Download button
 <p>We need to precede the ‘‘cp’’ command with the ‘‘sudo’’ command, since only the root user can copy into ‘‘/opt’’.</p>
 <blockquote>
   <p>Unpack the installation in /opt, compile the binary and test it with ‘tranpose –help’. Use sudo to do so.</p>
-</blockquote>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ pwd
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ pwd
 /opt
 $ ls trans*
 transpose-2.0.zip
@@ -483,7 +451,8 @@ Archive:  transpose-2.0.zip
    creating: transpose-2.0/src/
   inflating: transpose-2.0/src/transpose.c  
   inflating: transpose-2.0/README 
-</code></pre></div></div>
+</code></pre></div>  </div>
+</blockquote>
 
 <p>The zip file is now unpacked. Let us now compile the code. ALWAYS have a look at the README file for this.</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd transpose-2.0
@@ -508,8 +477,8 @@ $ sudo gcc transpose.c -o transpose
 
 <blockquote>
   <p>Create a symbolic link to the newly created binary to /usr/local/bin. This directory collects binaries/commands to be used on the command line.</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ sudo ln -s /opt/transpose-2.0/src/transpose /usr/local/bin
- $ which transpose 
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo ln -s /opt/transpose-2.0/src/transpose /usr/local/bin
+$ which transpose 
 /usr/local/bin/transpose
 </code></pre></div>  </div>
 </blockquote>
@@ -536,10 +505,8 @@ $ sudo gcc transpose.c -o transpose
                     
 
                 </div>
-                <!-- sidebar, which will move to the top on a small screen -->
-                <div class="col-sm-2" role="supplementary">
-                    <nav id="toc" data-toggle="toc" class="sticky-top bs-docs-sidebar hidden-print hidden-xs hidden-sm"></nav>
-                </div>
+                <!-- sidebar, which will be hidden on a small screen -->
+                <nav class="col-md-2 sticky-toc bs-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary" id="toc" data-toggle="toc"</nav>
             </div>
         </div>
 

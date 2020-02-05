@@ -52,19 +52,19 @@
   
 
 
-        <a href="/" id="topmenu" class="is-active">Home</a>
+        <a href="/" class="topmenu">Home</a>
 
 
-        <a href="/about.html" id="topmenu" >About</a>
+        <a href="/about.html" class="topmenu" >About</a>
 
 
-        <a href="/hall-of-fame.html" id="topmenu">Contribute</a>
+        <a href="/hall-of-fame.html" class="topmenu">Contribute</a>
 
 
-        <a href="/faq.html" id="topmenu">Faq</a>
+        <a href="/faq.html" class="topmenu">Faq</a>
 
 
-        <a href="/search/index.html" id="topmenu">Search</a>
+        <a href="/search/index.html" class="topmenu">Search</a>
 
 
   </nav>
@@ -237,34 +237,13 @@
             
 
 
-
-            <div>
-                <div><strong><i class="fa fa-external-link" aria-hidden="true"></i> Supporting Materials</strong></div>
-                <div id="supporting_materials">
-                    <ul>
-                        <li>
-                            <div>
-                    
-
-                    
-
-                    
-                    
-
-
-                    
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
+            
 
         </blockquote>
 
         <div class="container" data-field="body">
             <div class="row">
-                <div class="col-sm-10" role="main">
+                <div class="col-md-10" role="main">
                     <h1 class="no_toc" id="data-structures-in-r">Data structures in R</h1>
 
 <p>The power of R lies not in its ability to work with simple numbers but in its ability to work with large datasets. R has a wide variety of data structures including scalars, vectors, matrices, data frames, and lists.</p>
@@ -835,10 +814,8 @@ f
                     
 
                 </div>
-                <!-- sidebar, which will move to the top on a small screen -->
-                <div class="col-sm-2" role="supplementary">
-                    <nav id="toc" data-toggle="toc" class="sticky-top bs-docs-sidebar hidden-print hidden-xs hidden-sm"></nav>
-                </div>
+                <!-- sidebar, which will be hidden on a small screen -->
+                <nav class="col-md-2 sticky-toc bs-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary" id="toc" data-toggle="toc"</nav>
             </div>
         </div>
 
