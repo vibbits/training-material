@@ -11,6 +11,21 @@ The content of the material is developed in Markdown and a templating system ([J
 
 This work is licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0).
 
+# Development
+## Materials
+Ensure you have `docker` and `docker-compose` installed.
+Login to docker hub (using the vibbioinfocore credentials) using `docker login`.
+Then, from this directory, run:
+```bash
+docker-compose up
+```
+Jekyll build logs will be displayed. Once completed point your browser to `localhost:8080`.
+When you make local changes they should update in your browser automatically.
+When you want to quit, type `Ctrl+c`.
+
+## Docker image
+[Publishing](https://docs.docker.com/docker-hub/repos/)
+
 # Acknowledgment and Funding
 
 We would like to thank all contributors, especially those mentioned in the [Contributors list](CONTRIBUTORS.yaml).
