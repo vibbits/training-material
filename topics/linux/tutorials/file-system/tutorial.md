@@ -41,18 +41,16 @@ $ tar xvfz data_linux_training.tar.gz
 ```
 
 > Decompress the file DRR000542_1.fastq.subset.gz
-
 ```
 $ gunzip DRR000542_1.fastq.subset.gz
 ```
 
 > Copy the DRR000542_1.fastq.subset file to a new file called 'bzip2_test.fastq'. Compress this file with bzip2.
-
 ```
 $ bzip2 bzip2_test.fastq
 ```
 
-'''Tip''' If you would like to know how long the command took to finish, use '''time'''
+**Tip!** If you would like to know how long the command took to finish, use "time"
 ```
 $ time bzip2 bzip2_test.fastq
 real	0m5.878s
@@ -61,7 +59,6 @@ sys	0m0.112s
 ```
 
 Three different times are given. What matters to you is the line 'real', also called the wall-clock time.
-
 > Copy DRR000542_1.fastq.subset file to a new file called gzip_test.fastq and compress with gzip.
 ```
 $ time gzip gzip_test.fastq
@@ -71,15 +68,14 @@ sys	0m0.112s
 ```
 
 A relatively unknown package is lrzip, 'long range zip', which achieves very good results on big files. Let's try that one also!
-
 > Copy DRR000542_1.fastq.subset file to a new file called lrzip_test.fastq and compress with lrzip.
-
 ```
 $ lrzip lrzip_test.fastq
 The program 'lrzip' is currently not installed.  You can install it by typing:
 sudo apt-get install lrzip
 ```
-'''apt-get''' is the command line tool to install software on Debian distro's. Equivalent to the software center.
+
+**apt-get** is the command line tool to install software on Debian distro's. Equivalent to the software center.
 ```
 $ sudo apt-get install lrzip
 [sudo] password for joachim: 
@@ -87,12 +83,12 @@ Reading package lists... Done
 Building dependency tree       
 Reading state information... Done
 The following packages were automatically installed and are no longer required:
-  libnet-ip-perl diffstat libnet-dns-perl libparse-debianchangelog-perl
-  gir1.2-unique-3.0 kde-l10n-engb python-webpy libnet-domain-tld-perl
-  libemail-valid-perl libapt-pkg-perl python-flup kde-l10n-zhcn
+libnet-ip-perl diffstat libnet-dns-perl libparse-debianchangelog-perl
+gir1.2-unique-3.0 kde-l10n-engb python-webpy libnet-domain-tld-perl
+libemail-valid-perl libapt-pkg-perl python-flup kde-l10n-zhcn
 Use 'apt-get autoremove' to remove them.
 The following NEW packages will be installed:
-  lrzip
+lrzip
 0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
 Need to get 159 kB of archives.
 After this operation, 313 kB of additional disk space will be used.
@@ -116,9 +112,8 @@ sys	0m0.804s
 ```
 
 > Compare the sizes of the different resulting compressed files.
-
 ```
- $ ls -lh *zip*
+$ ls -lh *zip*
 -rw------- 1 bits bits 17M Oct 22 14:06 bzip2_test.fastq.bz2
 -rw------- 1 bits bits 21M Oct 22 14:06 gzip_test.fastq.gz
 -rw------- 1 bits bits 104M Oct 22 14:06 lrzip_test.fastq
@@ -126,9 +121,7 @@ sys	0m0.804s
 ```
 
 Decide for yourself whether the extra time needed for higher compression is worth the gain in compression.
-
 > Put the three files in a newly created folder 'results', and make an archive of it.
-
 ```
 $ mkdir results
 $ mv  *{bz2,q.gz,lrz} results/
@@ -152,7 +145,6 @@ $ ln -s /home/bits /data/large.fastq /home/bits /Projects/ProjectA/
 ```
 
 Tip: when using **ln**, preferably provide absolute paths. If you want to use relative paths, make sure first going to the directory you want the link to be in, and create the link using a relative path (using '.' and '..' to make the path).
-
 Removing symbolic links as such:
 ```
 $ unlink /home/bits /Projects/ProjectA
@@ -161,7 +153,7 @@ $ unlink /home/bits /Projects/ProjectA
 In contrast, there is also something as a "hard link" (ln without the -s option). When you delete a hard link, the file to which it referred is gone. So 'ln -s' is mostly used.
 
 ### Linking data instead of copying
-In the Rice Example directory (should be available under your home): download [http://rice.plantbiology.msu.edu/pub/data/Eukaryotic_Projects/o_sativa/annotation_dbs/pseudomolecules/version_7.0/all.dir/all.gff33 this annotation file] into the 'Genome data'/'Annotation' directory. Make a symbolic link to this file in the 'Genome data'/'Sequence' directory. Read the first 10 lines from the symbolic link file.
+In the Rice Example directory (should be available under your home): download [this annotation file](http://rice.plantbiology.msu.edu/pub/data/Eukaryotic_Projects/o_sativa/annotation_dbs/pseudomolecules/version_7.0/all.dir/all.gff3) into the 'Genome data'/'Annotation' directory. Make a symbolic link to this file in the 'Genome data'/'Sequence' directory. Read the first 10 lines from the symbolic link file.
 > When you have tried yourself, see the solution.
 ```
 $ cd Rice\ Example/
@@ -211,8 +203,7 @@ If you want to manually install apps, '''/opt''' is the advised directory. Howev
 To be able to copy and write stuff into /opt, we need root permissions. To do so, precede your commands with '''sudo''', as exemplified in the next exercise below. When we do that, our password will first be asked. Next, the command is executed with root permissions. In this way, we can edit contents in root-owned directories! You are a sudoer!
 
 ### Transpose, a tool to transpose
-Transpose is an extremely convenient text tool to transpose tabular data. We will use it later. The code is hosted on [http://sourceforge.net/projects/transpose/ SourceForge].
-
+Transpose is an extremely convenient text tool to transpose tabular data. We will use it later. The code is hosted on [SourceForge](http://sourceforge.net/projects/transpose/).
 > Download transpose installation file (zip) via the browser. Copy them to /opt using **sudo cp**.
 Go to the Sourceforce website with the browser, and click on the Download button.
 ```
@@ -223,7 +214,6 @@ Downloads $ sudo cp transpose-2.0.zip /opt
 
 We need to precede the ''cp'' command with the ''sudo'' command, since only the root user can copy into ''/opt''.
 > Unpack the installation in /opt, compile the binary and test it with 'tranpose --help'. Use sudo to do so.
-
 ```
 $ pwd
 /opt
@@ -262,8 +252,8 @@ $ ./transpose --help
 
 > Create a symbolic link to the newly created binary to /usr/local/bin. This directory collects binaries/commands to be used on the command line.
 ```
- $ sudo ln -s /opt/transpose-2.0/src/transpose /usr/local/bin
- $ which transpose 
+$ sudo ln -s /opt/transpose-2.0/src/transpose /usr/local/bin
+$ which transpose 
 /usr/local/bin/transpose
 ```
 
