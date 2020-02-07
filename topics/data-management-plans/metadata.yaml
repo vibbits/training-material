@@ -2,7 +2,7 @@
 name: data-management-plans
 type: basics 
 category: rdm 
-title: "How to write your Data management Plan" 
+title: "How to write your Data Management Plan" 
 summary: "
 Welcome to this self-study course about research data management. In this course you will learn more about how you can manage your research data.
 
@@ -81,10 +81,12 @@ subtopics:
 "
   - id: handle 
     title: "Data handling"
-    description: "Data sharing"
+    description: "Storing your data properly can save you a lot of time (in finding and interpreting) and frustration (in not losing it). Moreover, when properly structured and annotated during research, you’ll have your data preserved and/or shared with minimal effort at the end of your research."
   - id: share
     title: "Data sharing"
-    description: "Data sharing"
+    description: "Research should be transparent and you should always be able to revert back to your data if necessary and be able to show others how you came to your results. Therefore, your research data with all information reasonably necessary for verification needs to be preserved.
+
+With well-managed and preserved research data, you can defend yourself against allegations of mistakes. You can also prevent wrong conclusions from further spreading into the scientific community if there really are mistakes."
 
 maintainers:
 - abotzki 

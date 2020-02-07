@@ -21,24 +21,9 @@ contributors:
 
 ---
 
-# Introduction
-{:.no_toc}
-
 <!-- This is a comment. -->
 
-<details>
-  <summary>Click to expand!</summary>
-
-*Heading*
-1. A
-2. list
-   * With some
-   * Sub bullets
-
-![seqselector.png](../../images/Seqselector.png "Seqselector.png")
-</details>
-
-### Introduction to data availability for reuse
+## Introduction to data availability for reuse
 
 Thanks to information and communication technology and globalisation new opportunities arise to exchange results of scientific research - publications and research data - and even of scientific methods and practices. This new way of practising science is called ‘open science’.
 
@@ -53,7 +38,7 @@ Not being prepared to share your data can lead to problems in using the data. In
 
 <iframe src="https://www.youtube.com/embed/66oNv_DJuPc" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
 
-### Introduction to data repositories
+## Introduction to data repositories
 
 In order to preserve, manage, and provide access to your research data, you can deposit your data in a data repository. Data repositories allow permanent access to datasets in a trustworthy environment and enable search, discovery, and reuse of the data they host.
 
@@ -97,7 +82,7 @@ You can browse or search for a data repository in re3data.org. This is a global 
 * [Open Science Framework (OSF)](https://osf.io/) - a scholarly commons to connect the entire research cycle. It is part network of research materials, part version control system, and part collaboration software;
 * [Figshare](https://figshare.com/) – a repository that allows researchers to publish all of their research outputs in an easily citable, sharable and discoverable manner.
 
-### Explore data repositories
+## Explore data repositories
 
 You have just learned about the existence of a global registry of research data repositories that covers repositories from different academic disciplines.
 
@@ -145,7 +130,7 @@ An explanation for each license can be found by clicking on the links below.
 6. CC BY-NC-ND: [Attribution-NonCommercial-NoDerivs](https://creativecommons.org/share-your-work/licensing-types-examples/licensing-examples/#by-nc-nd)
 7. CC0: [Public Domain](https://creativecommons.org/share-your-work/public-domain/)
 
-### Publishing in a data journal
+## Publishing in a data journal
 
 Data journals are publications whose primary purpose is to publish datasets. They enable you as an author to focus on the data itself, rather than producing an extensive analysis of the data which occurs in the traditional journal model. Fundamentally, data journals seek to:
 
@@ -183,7 +168,7 @@ Open archaeology data;
 Earth System Science Data;
 Research Data Journal for the Humanities and Social Sciences.
 
-### How to cite a dataset
+## How to cite a dataset
 
 Citations to your data can add to your academic impact.
 
@@ -251,7 +236,7 @@ TODO: add question H5P quiz?
 
 “Open Science is the practice of science in such a way that others can collaborate and contribute, where research data, lab notes and other research processes are freely available, under terms that enable reuse, redistribution and reproduction of the research and its underlying data and methods.”
 
-(Source: ]FOSTER](https://www.fosteropenscience.eu/foster-taxonomy/open-science-definition)).
+(Source:[ FOSTER](https://www.fosteropenscience.eu/foster-taxonomy/open-science-definition)).
 
 You have learned that good data management contributes to the findability, accessibility, interoperability and reusability of your research data. This does not necessarily mean that you should make your data openly available. But to open up data, you do need good data management from the earliest possible stage of your research project.
 
