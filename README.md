@@ -23,8 +23,25 @@ Jekyll build logs will be displayed. Once completed point your browser to `local
 When you make local changes they should update in your browser automatically.
 When you want to quit, type `Ctrl+c`.
 
+By default this process will produce a lot of debug log messages. This is to help you
+in diagnosing any problems in the site. If you want to silence most of these messages
+then you will need to edit the `docker-compose.yml` file. Change the line that reads:
+> `image: vibbioinfocore/training-material:devel`
+
+Replace "`devel`" with "`clean`". Save. Then run `docker-compose up` as before.
+
 ## Docker image
-[Publishing](https://docs.docker.com/docker-hub/repos/)
+There are two images that are built from `Dockerfile.devel` and `Dockerfile.clean`.
+The following commands will build and publish both tags:
+```bash
+docker build -t vibbioinfocore/training-material:clean -f Dockerfile.clean .
+docker push vibbioinfocore/training-material:clean
+
+docker build -t vibbioinfocore/training-material:devel -f Dockerfile.devel .
+docker push vibbioinfocore/training-material:devel
+```
+
+For reference, see the [Docker documentation on publishing images](https://docs.docker.com/docker-hub/repos/).
 
 # Acknowledgment and Funding
 
