@@ -11,6 +11,38 @@ The content of the material is developed in Markdown and a templating system ([J
 
 This work is licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0).
 
+# Development
+## Materials
+Ensure you have `docker` and `docker-compose` installed.
+Login to docker hub (using the vibbioinfocore credentials) using `docker login`.
+Then, from this directory, run:
+```bash
+docker-compose up
+```
+Jekyll build logs will be displayed. Once completed point your browser to `localhost:8080`.
+When you make local changes they should update in your browser automatically.
+When you want to quit, type `Ctrl+c`.
+
+By default this process will produce a lot of debug log messages. This is to help you
+in diagnosing any problems in the site. If you want to silence most of these messages
+then you will need to edit the `docker-compose.yml` file. Change the line that reads:
+> `image: vibbioinfocore/training-material:devel`
+
+Replace "`devel`" with "`clean`". Save. Then run `docker-compose up` as before.
+
+## Docker image
+There are two images that are built from `Dockerfile.devel` and `Dockerfile.clean`.
+The following commands will build and publish both tags:
+```bash
+docker build -t vibbioinfocore/training-material:clean -f Dockerfile.clean .
+docker push vibbioinfocore/training-material:clean
+
+docker build -t vibbioinfocore/training-material:devel -f Dockerfile.devel .
+docker push vibbioinfocore/training-material:devel
+```
+
+For reference, see the [Docker documentation on publishing images](https://docs.docker.com/docker-hub/repos/).
+
 # Acknowledgment and Funding
 
 We would like to thank all contributors, especially those mentioned in the [Contributors list](CONTRIBUTORS.yaml).

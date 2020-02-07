@@ -3,10 +3,36 @@ version: '3'
 services:
   jekyll:
     container_name: training-material
-    build:
-      context: .
-      dockerfile: ./.docker/Dockerfile
+    image: vibbioinfocore/training-material:devel
     volumes:
-      - .:/site
+      - ./404.md:/site/404.md
+      - ./about.md:/site/about.md
+      - ./app.json:/site/app.json
+      - ./assets:/site/assets
+      - ./badges:/site/badges
+      - ./bin:/site/bin
+      - ./_config.yml:/site/_config.yml
+      - ./CONTRIBUTORS.yaml:/site/CONTRIBUTORS.yaml
+      - ./courses:/site/courses
+      - ./environment.yml:/site/environment.yml
+      - ./faq.md:/site/faq.md
+      - ./favicon.ico:/site/favicon.ico
+      - ./feed.xml:/site/feed.xml
+      - ./galaxy_instances.yaml:/site/galaxy-instances.yaml
+      - ./Gemfile:/site/Gemfile
+      - ./hall-of-fame.md:/site/hall-of-fame.md
+      - ./_includes:/site/_includes
+      - ./index.md:/site/index.md
+      - ./_layouts:/site/_layouts
+      - ./.nojekyll:/site/.nojekyll
+      - ./package.json:/site/package.json
+      - ./package-lock.json:/site/package-lock.json
+      - ./_plugins:/site/_plugins
+      - ./Procfile:/site/Procfile
+      - ./search:/site/search
+      - ./shared:/site/shared
+      - ./snippets:/site/snippets
+      - ./topics:/site/topics
     ports:
-      - '8080:4000'
+      - '8080:8080'
+
