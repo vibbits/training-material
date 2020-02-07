@@ -24,7 +24,9 @@ contributors:
 
 In this video Katarzyna Biernacka explains what data in a research context is.
 
+<div>
 <iframe src="https://www.youtube.com/embed/XCckz_4mlhU" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
+</div>
 
 CC-BY-4.0: Katarzyna Biernacka, HU Berlin & [Discipline Workshops 2019](http://www.discipline-workshops.com/)
 

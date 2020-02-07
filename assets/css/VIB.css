@@ -448,6 +448,7 @@ img[alt$="-fullwidth"]{
 p img
 {
     margin-left: -30px;
+    width: 95%;
 }
 
 .links-panel
@@ -818,3 +819,9 @@ details > summary {
     font-family: Dense;
     font-size: 2em;
 }
+
+div > iframe {
+    width: 95%;
+    overflow: hidden;
+}
+
