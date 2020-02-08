@@ -51,6 +51,13 @@ tr th {
     color: rgba(59, 58, 57, .75);
 }
 
+.tutorial blockquote.overview {
+    margin-top: 3rem;
+    padding: 1rem 0.89rem 1rem;
+    border-left: 5px solid #3abbba;
+    font-size: 14px;
+}
+
 .contributors-line {
     font-size: 1.2em;
     margin-bottom: 5rem;
@@ -752,7 +759,7 @@ details>summary {
     font-size: 2em;
 }
 
-div > iframe {
+div>iframe {
     width: 95%;
     overflow: hidden;
 }
