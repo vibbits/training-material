@@ -58,6 +58,34 @@ tr th {
     font-size: 14px;
 }
 
+.tutorial blockquote.solution {
+    margin-top: 3rem;
+    padding: 1rem 0.89rem 1rem;
+    border-left: 5px solid #3abbba;
+    font-size: 14px;
+}
+
+.tutorial blockquote.hands_on {
+    margin-top: 3rem;
+    padding: 1rem 0.89rem 1rem;
+    border-left: 5px solid #3abbba;
+    font-size: 14px;
+}
+
+.tutorial blockquote.key_points {
+    margin-top: 3rem;
+    padding: 1rem 0.89rem 1rem;
+    border-left: 5px solid #3abbba;
+    font-size: 14px;
+}
+
+.tutorial blockquote.question {
+    margin-top: 3rem;
+    padding: 1rem 0.89rem 1rem;
+    border-left: 5px solid #3abbba;
+    font-size: 14px;
+}
+
 .contributors-line {
     font-size: 1.2em;
     margin-bottom: 5rem;
