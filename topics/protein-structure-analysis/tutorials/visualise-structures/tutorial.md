@@ -6,43 +6,17 @@ zenodo_link: ''
 questions:
 - How to visualize a protein structures?
 objectives:
-- The learning objectives are the goals of the tutorial
-- They will be informed by your audience and will communicate to them and to yourself
-  what you should focus on during the course
-- They are single sentences describing what a learner should be able to do once they
-  have completed the tutorial
-- You can use Bloom's Taxonomy to write effective learning objectives
-time_estimation: 3H
+- Learn how to load structures in YASARA
+- Describe important structural elements of proteins
+- Create publication-ready figures of structural representations of proteins
+time_estimation: 1H
 key_points:
-- The take-home messages
-- They will appear at the end of the tutorial
+- YASARA is a powerful visualisation tool for protein structures. 
 contributors:
 - abotzki
 - jvdurme
 
 ---
-
-<!--
-# Introduction
-{:.no_toc}
-
-<!-- This is a comment. -->
-
-General introduction about the topic and then an introduction of the
-tutorial (the questions and the objectives). It is nice also to have a
-scheme to sum up the pipeline used during the tutorial. The idea is to
-give to trainees insight into the content of the tutorial and the (theoretical
-and technical) key concepts they will learn.
--->
-
-> ### Agenda
->
-> In this tutorial, we will cover:
->
-> 1. TOC
-> {:toc}
->
-{: .agenda}
 
 ## Install Python and PovRay
 
@@ -111,7 +85,7 @@ There are several ways to show the residues of interest:
    View > Show atoms in > Residue
 ```
    Select Cys7 from Molecule **A** and press OK
-2. From the sequence selector ![seqselector.png](../images/Seqselector.png "Seqselector.png")
+2. From the sequence selector ![seqselector.png](../../images/Seqselector.png)
    Hover the mouse on the bottom of the screen, you will see the sequence selector opening. Open it permanently by pressing the blue nailpin on the left side of it. Search for Cys7 from Molecule **B**, right-click and select:  
 ```
    Show > Residue
@@ -167,6 +141,7 @@ right-click and select:
 
 The nasty dative bonds and metals can be removed simply by deleting all
 of them:
+
 ```
    Edit > Delete > Residue > Name
 ```
@@ -175,16 +150,18 @@ In the name column select all the metals and ions you can find.
 
 Et voilà, a publication ready image!
 
-![center](/home/albot/all-images-wiki/Insulin_hires.jpg "Insuline")
+![Insuline](../../images/Insulin_hires.jpg "Insuline")
 
 ## Labels
 
 You can put labels on the residues you want to highlight by going to the
 main menu or selecting an atom from a residue and right-click. In the
 latter case you select:
+
 ```
    Label > Residue
 ```
+
 Note that *residue name* and *residue number* is automatically selected.
 Change the height to 0.5 or so and select a nice color for the label.
 Presto\!
@@ -202,12 +179,12 @@ colors. So we shouldn't color entire residues, but only a selected atom
 set. Therefore our selection will be at the atom level, not the residue
 level. Go to:
 
+```
     View > Color > Atom > Belongs to or has > Backbone
+```
 
 Then select the orange color (color code 150) and select 'Apply unique
-color'.
-
-Beautiful, isn't it?
+color'. Hopefully, it is a satisfying result.
 
 ## Saving all the beautiful work
 
@@ -217,22 +194,28 @@ the next day. That's why YASARA can save the entire Scene including
 orientations, colors, views, everything. To save the current scene, go
 to:
 
+```
     File > Save as > YASARA Scene
+```
 
-    Choose a filename such as MyInsulin.sce
+Choose a filename such as MyInsulin.sce
 
 To load the work again in YASARA go to:
 
+```
     File > Load > YASARA Scene
-
-    Careful: loading a Scene will erase everything else!
+```
+    
+Careful: loading a Scene will erase everything else!
 
 ## Creating high quality images
 
 To save the current view to a high quality publication ready image file,
 go to:
 
-    File > Save as > Ray-traced hires screenshot
+```
+File > Save as > Ray-traced hires screenshot
+```
 
 This requires that the PovRay program has been installed. See the first
 item on this page.
@@ -250,14 +233,21 @@ respective box.
 
 <!-- end list -->
 
-    What is the distance between the C-alpha (CA) atoms of Tyr19 and Leu16?
+### {% icon question %} Questions
 
-To solve the question you need to select a view that shows you atoms
+What is the distance between the C-alpha (CA) atoms of Tyr19 and Leu16?
+
+> <details markdown="1">
+> <summary>{% icon solution %} Solution
+> </summary>
+> To solve the question you need to select a view that shows you atoms
 including C-alphas. Possible views or scene styles that show these atoms
 can be F1 (ball), F2 (stick), F3 (ball\&stick) and F4 (C-alpha). The
 views F5-F8 won't show you any CA's explicitly. Try it.
-
-    So you've probably noticed that pressing the CTRL button allows you to select multiple atoms. This is important for the next exercise.
+> So you've probably noticed that pressing the CTRL button allows you to select multiple atoms. This is important for the next exercise.
+> The distance is 5.8 Ångstrom.
+> </details>
+{: .question}
 
 ## Hydrogen bonds
 
@@ -265,30 +255,49 @@ To show hydrogen bonds, YASARA needs the actual hydrogens to be present.
 In NMR structures these are normally there. But in X-Ray structures
 hydrogens are missing. Luckily YASARA can add the hydrogens for you.
 
-    Select tube view (F5) and toggle on the sidechains with F8.
+Select tube view (F5) and toggle on the sidechains with F8.
 
 Add hydrogens with:
 
-    Edit > Add > Hydrogens to all
+```
+Edit > Add > Hydrogens to all
+```
 
 Then show the hydrogen-bonds:
 
-    View > Show interactions > Hydrogen bonds of> All > OK
+```
+View > Show interactions > Hydrogen bonds of> All > OK
+```
 
 If the view is to chaotic for you, toggle off the sidechains with F8
 (press untill the sidechains are hidden).
 
+### {% icon question %} Questions
+
 Do you see the typical helix and beta sheet pattern?
 
-    Arg22 from Molecule/Chain B is making an hydrogen bonded electrostatic interaction (salt bridge) with another residue. Which residue?
+Arg22 from Molecule/Chain B is making an hydrogen bonded electrostatic interaction (salt bridge) with another residue. Which residue?
+
+> <details markdown="1">
+> <summary>{% icon solution %} Solution
+> </summary>
+> The interaction partner is Glu17 from chain A.
+> </details>
+{: .question}
+
+
 
 To remove the hydrogen bonds, you have multiple choices:
 
-    View > Hide hydrogen bonds of > All
+```
+View > Hide hydrogen bonds of > All
+```
 
 or just delete all hydrogens (this will also delete all hydrogen bonds):
 
-    Edit > Delete > Hydrogens
+```
+Edit > Delete > Hydrogens
+```
 
 ## Surfaces
 
@@ -296,7 +305,9 @@ It can be very useful and informative to show the molecular surface of a
 protein. you can visualize cavities, ligand binding sites, etc ... To
 show the molecular surface of one monomer of dimeric insulin, go to:
 
-    View > Show surface of > Molecule
+```
+View > Show surface of > Molecule
+```
 
 Select in the *Name* column A and B (these are the two chains in 1
 subunit). Press *Continue with surface color* and make sure Alpha is
@@ -308,7 +319,7 @@ subunit). Press *Continue with surface color* and make sure Alpha is
 Try to reproduce the following image of the 1TRZ insulin structure
 (hints below):
 
-[image:insulin.png](image:insulin.png "wikilink")
+![insulin.png](../../images/Insulin.png "Insuline")
 
 Hints:
 
@@ -331,7 +342,7 @@ Download GroEL via PDB code 1WE3 in YASARA.
 
 Try to reproduce (approximately) the following image (hints below):
 
-[image:groel.png](image:groel.png "wikilink")
+![groel.png](../../images/Groel.png "GroEL")
 
 Hints:
 
@@ -349,103 +360,7 @@ Hints:
 More exercises can be found on the [basic bioinformatics exercises
 page](http://wiki.bits.vib.be/index.php/Exercises_on_Protein_Structure).
 
-
-## Get data
-
-> ### {% icon hands_on %} Hands-on: Data upload
->
-> 1. Create a new history for this tutorial
-> 2. Import the files from [Zenodo]() or from the shared data library
->
->    ```
->    
->    ```
->    ***TODO***: *Add the files by the ones on Zenodo here (if not added)*
->
->    ***TODO***: *Remove the useless files (if added)*
->
->    {% include snippets/import_via_link.md %}
->    {% include snippets/import_from_data_library.md %}
->
-> 3. Rename the datasets
-> 4. Check that the datatype
->
->    {% include snippets/change_datatype.md datatype="datatypes" %}
->
-> 5. Add to each database a tag corresponding to ...
->
->    {% include snippets/add_tag.md %}
->
-{: .hands_on}
-
-# Title of the section usually corresponding to a big step in the analysis
-
-It comes first a description of the step: some background and some theory.
-Some image can be added there to support the theory explanation:
-
-![Alternative text](../../images/image_name "Legend of the image")
-
-The idea is to keep the theory description before quite simple to focus more on the practical part.
-
-***TODO***: *Consider adding a detail box to expand the theory*
-
-> ### {% icon details %} More details about the theory
->
-> But to describe more details, it is possible to use the detail boxes which are expandable
->
-{: .details}
-
-A big step can have several subsections or sub steps:
-
-
-## Sub-step with **My Tool**
-
-> ### {% icon hands_on %} Hands-on: Task description
->
-> 1. **My Tool** {% icon tool %} with the following parameters:
->    - {% icon param-file %} *"Input file"*: File
->    - *"Parameter"*: `a value`
->
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > ### {% icon comment %} Comment
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
->
-{: .hands_on}
-
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
-
-> ### {% icon question %} Questions
->
-> 1. Question1?
-> 2. Question2?
->
-> > <details markdown="1">
-> > <summary>{% icon solution %} Solution
-> > </summary>
-> >
-> > 1. Answer for question1
-> > 2. Answer for question2
-> >
-> > </details>
->
->
-{: .question}
-
-
-## Re-arrange
-
-To create the template, each step of the workflow had its own subsection.
-
-***TODO***: *Re-arrange the generated subsections into sections or other subsections.
-Consider merging some hands-on boxes to have a meaningful flow of the analyses*
-
 # Conclusion
 {:.no_toc}
 
-Sum up the tutorial and the key takeaways here. We encourage adding an overview image of the
-pipeline used.
+Now, you have explored the YASARA interface and acquainted with basic visualisations. You have identified how you can visualise secondary structure elements, surfaces, and hydrogen bonds. And most importantly, you can create publication-ready figures using Yasara.
