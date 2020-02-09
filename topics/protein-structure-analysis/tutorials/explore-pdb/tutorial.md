@@ -17,17 +17,9 @@ contributors:
   - jvdurme
 ---
 
-> ### Agenda
->
-> In this tutorial, we will deal with:
->
-> 1. TOC
-> {:toc}
->
-{: .agenda}
+## Search for a structure
 
-# Search for a structure
-#### Via [UniProt](http://www.uniprot.org/)
+### Via [UniProt](http://www.uniprot.org/)
 The way of searching for a specific protein structure depends on the data you already have. You might already have the PDB ID (a unique identifier), that's an easy one. But mostly you have the protein name or you just have a sequence. In the last cases I recommend to start from the UniProt website at <http://www.uniprot.org>, which is the best annotated protein database in the world. Our first model protein will be the molecular chaperone DnaK from *E. coli*. Below is an image of the UniProt search box where you can start your search for proteins.
 
 ![uniprotsearchbox.png](../../images/uniprotsearchbox.png "Search box")
@@ -40,46 +32,42 @@ The way of searching for a specific protein structure depends on the data you al
 > 3. Click on *Structure* in the left-side menu and then look at the *3D structure databases* table.
 {: .hands_on }
 
-> ### {% icon question %} Guidelines which PDB structures to select
+### {% icon question %} Guidelines which PDB structures to select
+
+Which structures (give the 4-character PDB ID) of the C-terminal domain of DnaK should preferentially be use for analysis and why?
+> <details markdown="1">
+> <summary>{% icon solution %} Solution
+> </summary>
 >
-> Which structures (give the 4-character PDB ID) of the C-terminal domain of DnaK should preferentially be use for analysis and why?
-> > <details markdown="1">
-> > <summary>{% icon solution %} Solution
-> > </summary>
-> > Usually, the recommended selection criteria are using an X-ray structure with low resolution and low Rfree factor. Furthermore, the PDB database has pre-calculated a validation report for all of the structures.
-> > As an example, have a look at https://www.ebi.ac.uk/pdbe/entry/pdb/4EZX under the section 'Experiments and Validation'. For many PDB structures, there is also a re-done structure available with a vast amount of informaton on the quality of the X-ray structure and suggested 'better' models e.g. (https://pdb-redo.eu/db/4ezx). In our case, we could opt for the structures 1DKX and 4EZX.
-> >
-> > This is a difficult example since there are so many high resolution structures available. So, it is recommended to study the articles and compare the available structures to find your favorite structure for further analysis.
-> > </details>
-> {: .solution}
+> Usually, the recommended selection criteria are using an X-ray structure with low resolution and low $R_{free}$ factor. Furthermore, the PDB database has pre-calculated a validation report for all of the structures.
+>
+> As an example, have a look at https://www.ebi.ac.uk/pdbe/entry/pdb/4EZX under the section 'Experiments and Validation'. For many PDB structures, there is also a re-done structure available with a vast amount of information on the quality of the X-ray structure and suggested 'better' models e.g. (https://pdb-redo.eu/db/4ezx). In our case, we could opt for the structures 1DKX and 4EZX.
+>
+> This is a difficult example since there are so many high resolution structures available. So, it is recommended to study the articles and compare the available structures to find your favorite structure for further analysis.
+> </details>
+{: .solution}
 {: .question }
 
 
-#### Via the Protein Data Bank by PDB ID
-
-<iframe src="https://h5p.org/h5p/embed/577970" width="699" height="418" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-<script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js" charset="UTF-8"></script>
-
-<iframe src=" https://docs.google.com/presentation/d/1lgEeigU8M45xF2BjQgPumgxalzfiHZeD/preview" width="640" height="480"></iframe> 
-
+### Via the Protein Data Bank by PDB ID
 
 You can find structural information directly at the PDB database. The web site of the PDB consortium is located at <http://www.wwpdb.org>. This web site provides links to all members of the PDB (left side). It is a question of taste which resource you start off with. For X-ray structures, it is currently PDBe, RCSB PDB, PDBj. For NMR structres, you find the BMRB. In today's course, we focus on the PDB resources only.
 
 Below is an image of the RCSB search box <http://www.rcsb.org/pdb/home/home.do> where you can start your search for structures.
 
-![Pdbsearchbox_RCSB.png](../../images/Pdbsearchbox_RCSB.png)
+![Pdbsearchbox_RCSB.png](../../images/pdbsearchbox_RCSB.png "PDB Search Box")
 
 The PDB file with ID **1DKX** contains the atomic coordinates of the molecular chaperone (DnaK) from *E. coli*.
 
-> ### {% icon hands_on %} Search a structure on the RCSB web site
->
-> 1. Go to the PDB website and type 1DKX in the search box
+### {% icon hands_on %} Search a structure on the RCSB web site
+
+1. Go to the PDB website and type 1DKX in the search box
 {: .hands_on }
 
 
 This will lead you to the same page we got earlier through UniProt.
 
-#### Via the Protein Data Bank by sequence
+### Via the Protein Data Bank by sequence
 
 In lots of cases we only have a sequence of which we would like to find out if there is structural information. The PDB can be searched using a sequence as input. Here is the sequence of the C-terminal substrate binding domain of DnaK:
 ```
@@ -91,11 +79,11 @@ In lots of cases we only have a sequence of which we would like to find out if t
 ```
 The PDB allows sequence searches through the same search box we used before.
 
-![Pdbsearchbox_RCSB.png](../../images/Pdbsearchbox_RCSB.png)
+![Pdbsearchbox_RCSB.png](../../images/pdbsearchbox_RCSB.png "PDB Search Box")
 
 There is also an Advanced Search section, with a Blast/Fasta option in the Sequence Features section.
 
-![Blastpdb.png](../../images/Blastpdb.png)
+![Blastpdb.png](../../images/blastpdb.png "BLAST")
 
 > ### {% icon hands_on %} Hands-on: BLAST search for PDB structure
 >
@@ -128,24 +116,23 @@ molecular chaperone (DnaK) from *E coli*.
 > 2. Type 1DKX in the search and try to answer the following questions.
 {: .hands_on}
 
-> ### {% icon question %} Questions
->
-> 1. How many molecules were solved in this PDB file? What kind of molecules are these (proteins, peptides, DNA, ...)?
-> 2. Does the structure represent the full protein? If not, how many residues are missing? Hint: Click on the UniProt KB link in the Sequence tab to see the full sequence.
-> 3. Was this structure solved by X-Ray or NMR?
-> 4. What is the atomic resolution and R-factor?
->
-> > <details markdown="1">
-> > <summary>{% icon solution %} Solution
-> > </summary>
-> > 1. Two, called polymers or chains: they are polypeptides ![Type](../../images/Mol_desc_1DKX.png)
-> > 2. To answer this question you can go to the sequence tab at the top:
-> >    - ![Uniprot view](../../images/Pdb_firstresiduesmissing_1dkx.png)
-> >    - Summary: a large chunk of the N-terminus is missing from the structure, the C-terminus is virtually complete.
-> > 3. X-RAY diffraction, as shown by Experimental Details
-> > 4. Atomic resolution: 2.00 Ångstrom and R-factor of 0.206
-> > </details>
->
+### {% icon question %} Questions
+
+1. How many molecules were solved in this PDB file? What kind of molecules are these (proteins, peptides, DNA, ...)?
+2. Does the structure represent the full protein? If not, how many residues are missing? Hint: Click on the UniProt KB link in the Sequence tab to see the full sequence.
+3. Was this structure solved by X-Ray or NMR?
+4. What is the atomic resolution and R-factor?
+
+> <details markdown="1">
+> <summary>{% icon solution %} Solution
+> </summary>
+> 1. Two, called polymers or chains: they are polypeptides ![Type](../../images/Mol_desc_1DKX.png)
+> 2. To answer this question you can go to the sequence tab at the top:
+>    - ![Uniprot view](../../images/Pdb_firstresiduesmissing_1dkx.png)
+>    - Summary: a large chunk of the N-terminus is missing from the structure, the C-terminus is virtually complete.
+> 3. X-RAY diffraction, as shown by Experimental Details
+> 4. Atomic resolution: 2.00 Ångstrom and R-factor of 0.206
+> </details>
 {: .question}
 
 
@@ -156,7 +143,7 @@ The file that holds the 3D coordinates can be downloaded by clicking on
 For convenience, save this file on your desktop. The filename is the
 4-character unique PDB ID.
 
-![Pdbdownloadfile1.png](../../images/Pdbdownloadfile1.png)
+![Pdbdownloadfile1.png](../../images/pdbdownloadfile1.png)
 
 > ### {% icon hands_on %} Hands-on: Open downloaded PDB file in an editor
 > 1.   Open this file with a text editor, e.g. WordPad is an excellent tool for that.
