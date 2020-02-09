@@ -24,18 +24,18 @@
         ga('create', 'UA-61194136-18', 'auto');
         ga('send', 'pageview');
     </script>
-    <link rel="stylesheet" href=" /assets/css/bootstrap.min.css?v=3 ">
-    <link rel="stylesheet" href=" /assets/css/bootstrap-toc.min.css ">
-    <link rel="stylesheet" href=" /assets/css/font-awesome.css ">
-    <link rel="stylesheet" href=" /assets/css/main.css ">
-    <link rel="stylesheet" href=" /assets/css/VIB.css ">
-    <link rel="stylesheet" href=" /assets/css/academicons.css ">
-    <link rel="stylesheet" href=" /assets/css/syntax_highlighting.css ">
-    <link rel="shortcut icon" href=" /favicon.ico " type="image/x-icon" />     
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=3">
+    <link rel="stylesheet" href="/assets/css/bootstrap-toc.min.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="/assets/css/main.scss">
+    <link rel="stylesheet" href="/assets/css/VIB.css">
+    <link rel="stylesheet" href="/assets/css/academicons.css">
+    <link rel="stylesheet" href="/assets/css/syntax_highlighting.css">
+    <link rel="shortcut icon" href="/favicon.ico " type="image/x-icon" />     
     <meta name="description" content="Analyzing the protein structure of your protein-of-intere..." />
     <meta property="og:title" content="VIB Bioinformatics Training: 04 Predicting the effect of a mutation on a protein struc..." />
     <meta property="og:description" content="Analyzing the protein structure of your protein-of-intere..." />
-    <meta property="og:image" content=" /assets/images/bioinformatics_core_rgb_neg.png " />
+    <meta property="og:image" content="/assets/images/bioinformatics_core_rgb_neg.png" />
 </head>
 
 <body data-spy="scroll" data-target="#toc">
@@ -262,7 +262,7 @@
         <div class="container" data-field="body">
             <div class="row">
                 <div class="col-md-10" role="main">
-                    <h1 class="no_toc" id="introduction">Introduction</h1>
+                    <h2 class="no_toc" id="introduction">Introduction</h2>
 
 <!-- This is a comment. -->
 
@@ -272,37 +272,20 @@
 
 <p>FoldX is a molecular modeling tool that can quantitatively predict the change in free energy (kcal/mol) upon mutation. These values approach experimental determined values. FoldX is a non-interactive command line program. In other words, not user friendly. But the bright news is that I recently developed a YASARA plugin for FoldX, so that all predictions are just a few clicks away. And the nice thing is, it’s all free!</p>
 
-<blockquote class="agenda">
-
-  <p>In this tutorial, we will cover:</p>
-
-<ol id="markdown-toc">
-  <li><a href="#p53-as-example-protein" id="markdown-toc-p53-as-example-protein">P53 as example protein</a>    <ol>
-      <li><a href="#get-data" id="markdown-toc-get-data">Get data</a></li>
-    </ol>
-  </li>
-  <li><a href="#what-do-foldx-energies-mean" id="markdown-toc-what-do-foldx-energies-mean">What do FoldX energies mean?</a></li>
-  <li><a href="#how-to-minimize-the-structure-with-foldx" id="markdown-toc-how-to-minimize-the-structure-with-foldx">How to minimize the structure with FoldX</a></li>
-  <li><a href="#how-to-analyze-a-mutation" id="markdown-toc-how-to-analyze-a-mutation">How to analyze a mutation</a></li>
-  <li><a href="#study-the-effect-of-a-second-mutation" id="markdown-toc-study-the-effect-of-a-second-mutation">Study the effect of a second mutation</a></li>
-</ol>
-
-</blockquote>
-
-<h1 id="p53-as-example-protein">P53 as example protein</h1>
+<h2 id="p53-as-example-protein">P53 as example protein</h2>
 
 <p>In this section we will let the FoldX plugin loose on some real world examples and give you step-by-step instructions on how to proceed and analyze the results. We will use the P53 tumor suppressor protein as our example molecule. In a first exercise you will make a point mutation with FoldX and determine if the mutation is stabilizing or destabilizing for the P53 structure. In a second exercise you will design a mutation in the P53 structure at the DNA binding interface and determine how the mutation affects the interaction energy of P53 with the DNA strand.</p>
 
 <h2 id="get-data">Get data</h2>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-data-upload"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Data upload</h3>
+  <h3 id="hands_on-hands-on-data-download"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Data download</h3>
 
   <p>Download the file <a href="https://zenodo.org/record/3551686/files/2AC0.sce?download=1">2AC0.sce</a>.</p>
 
 </blockquote>
 
-<h1 id="what-do-foldx-energies-mean">What do FoldX energies mean?</h1>
+<h2 id="what-do-foldx-energies-mean">What do FoldX energies mean?</h2>
 
 <p>Before we start, some basic information about FoldX energies is necessary.</p>
 
@@ -313,36 +296,39 @@
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ddG(change) = dG(MT) - dG(WT)
 </code></pre></div></div>
 
-<p>FoldX is trained to make ddG(change) approach experimental values. It is important to realize that dG(WT) and dG(MT) are meaningless numbers as such. These do not correlate with experimental values. Only ddG(change) does.</p>
+<p>FoldX is trained using experimental values to predict ddG(change). It is important to realize that dG(WT) and dG(MT) are meaningless numbers as such. These do not correlate with experimental values. Only ddG(change) does.</p>
 
 <p>As a rule of thumb we use:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ddG(change) &gt; 0 : the mutation is destabilizing
+<p><strong>ddG(change) &gt; 0 : the mutation is destabilizing</strong></p>
 
-ddG(change) &lt; 0 : the mutation is stabilizing
-</code></pre></div></div>
+<p><strong>ddG(change) &lt; 0 : the mutation is stabilizing</strong></p>
 
 <p>The error margin of FoldX is approximately 0.5 kcal/mol, so changes in that range are insignificant.</p>
 
-<h1 id="how-to-minimize-the-structure-with-foldx">How to minimize the structure with FoldX</h1>
+<h2 id="how-to-minimize-the-structure-with-foldx">How to minimize the structure with FoldX</h2>
 
 <p>FoldX assumes that the starting structure has been energy minimized. Although crystal structures with high resolution represent the form with a low energy, FoldX performs best when we minimize it just before we do the predictions. This FoldX procedure is called RepairPDB and should be done on each structure you want to perform calculations on.</p>
 
-<p>Open the YASARA scene 2AC0.sce in YASARA. This is a part of a tetrameric complex of the transcription factor P53 bound to DNA. I removed 3 of the 4 P53 structures for simplicity and visualized some nice features.</p>
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-energetically-minimise-the-structure-of-p53-bound-to-dna"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Energetically minimise the structure of P53 bound to DNA</h3>
 
-<p>Load the scene with:</p>
+  <p>Open the YASARA scene 2AC0.sce in YASARA. This is a part of a tetrameric complex of the transcription factor P53 bound to DNA. I removed 3 of the 4 P53 structures for simplicity and visualized some nice features.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>File &gt; Load &gt; YASARA Scene
-</code></pre></div></div>
-<figure id="figure-1"><img src="../../images/Training_1.png" alt="monomer bound to DNA -80width" /><figcaption><span class="figcaption-prefix">Figure 1:</span> P53 monomer bound to DNA</figcaption></figure>
+  <p>Load the scene with:</p>
 
-<p>To Repair (or minimize) the structure with FoldX go to:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Analyse &gt; FoldX &gt; Repair object 
-</code></pre></div></div>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>File &gt; Load &gt; YASARA Scene
+</code></pre></div>  </div>
+  <figure id="figure-1"><img src="../../images/Training_1.png" alt="monomer bound to DNA -80width" /><figcaption><span class="figcaption-prefix">Figure 1:</span> P53 monomer bound to DNA</figcaption></figure>
 
-<figure id="figure-2"><img src="../../images/Training_2.png" alt="Select the object for repairing" /><figcaption><span class="figcaption-prefix">Figure 2:</span> Select the object for repairing</figcaption></figure>
+  <p>To Repair (or minimize) the structure with FoldX go to:</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Analyse &gt; FoldX &gt; Repair object 
+</code></pre></div>  </div>
 
-<p>And select the only object in the list.</p>
+  <figure id="figure-2"><img src="../../images/Training_2.png" alt="Select the object for repairing" /><figcaption><span class="figcaption-prefix">Figure 2:</span> Select the object for repairing</figcaption></figure>
+
+  <p>And select the only object in the list.</p>
+</blockquote>
 
 <p>When the Repair is finished, the Repaired Object is placed in Object 2 (see top right corner) and superposed with the original Object 1. Take a look at the sidechains and see what FoldX has done while Repairing.</p>
 
@@ -351,6 +337,8 @@ ddG(change) &lt; 0 : the mutation is stabilizing
 <p>Because we will continue working with this Repaired Object, we can now hide the entire Object 1 by toggling the Visibility column in the top right corner head-up display (HUD).</p>
 
 <h1 id="how-to-analyze-a-mutation">How to analyze a mutation</h1>
+
+<p>TODO: text is missing</p>
 
 <p>FoldX has mutated the Ala to Trp and the structure with the Trp mutation has been loaded in the next Object (3) and is superposed with the wild type (WT, Object 2). We selected an option to show the VdW clashes in WT and mutant. The atoms that give rise to steric clashes are colored in red. Toggle the Visibility of Object 2 (WT) and Object 3 (mutant) and see how many clashes we introduced by mutating the Ala to Trp.</p>
 
@@ -364,23 +352,18 @@ ddG(change) &lt; 0 : the mutation is stabilizing
   <p>Van der Waals clashes are red colored atoms. 
 Do you see a difference around the mutation site between WT and mutant?</p>
 
-  <blockquote>
-    <details>
-      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+  <details>
+    <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
 
-      <p>Toggle the Visibility of WT and mutant to see the differences. 
+    <p>Toggle the Visibility of WT and mutant to see the differences. 
 Open the Console by pressing the spacebar twice and see the free energy change of the mutation. 
 Anything above a change of +0.5kcal/mol is already assumed to be destabilizing.
-In the console - to open press spacebar twice - we see an energy change of +29 kcal/mol.
-This is clearly a destabilizing mutation.</p>
-
-    </details>
-  </blockquote>
-
+In the console - to open press spacebar twice - we see an energy change of +29 kcal/mol.</p>
+    <figure id="figure-5"><img src="../../images/Training_9.png" alt="In the console - to open press spacebar twice - we see an energy change of +29 kcal/mol." /><figcaption><span class="figcaption-prefix">Figure 5:</span> Open the console to explore the situation.</figcaption></figure>
+    <p>This is clearly a destabilizing mutation.</p>
+  </details>
 </blockquote>
-
-<figure id="figure-5"><img src="../../images/Training_9.png" alt="In the console - to open press spacebar twice - we see an energy change of +29 kcal/mol." /><figcaption><span class="figcaption-prefix">Figure 5:</span> Open the console to explore the situation.</figcaption></figure>
 
 <h1 id="study-the-effect-of-a-second-mutation">Study the effect of a second mutation</h1>
 
@@ -423,22 +406,20 @@ And what is the reason?</li>
     <li>Why doesn’t the mutation affect the interaction with DNA chain H?</li>
   </ol>
 
-  <blockquote>
-    <details>
-      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+  <details>
+    <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
 
-      <ol>
-        <li>Toggle the Visibility between this mutant and the WT structure and see how the hydrogen bonding changes and check the output in the Console.
-          <figure id="figure-8"><img src="../../images/Training_12.png" alt="Mutation" /><figcaption><span class="figcaption-prefix">Figure 8:</span> Change in interaction energy</figcaption></figure>
-          <p>We see that the mutation decreases the interaction with DNA strand G by approximately 1 kcal/mol
-since we lost 1 hydrogen bond.</p>
-        </li>
-        <li><strong><em>TODO</em></strong></li>
-      </ol>
+    <ol>
+      <li>Toggle the Visibility between this mutant and the WT structure and see how the hydrogen bonding changes and check the output in the Console.
+        <figure id="figure-8"><img src="../../images/Training_12.png" alt="Mutation" /><figcaption><span class="figcaption-prefix">Figure 8:</span> Change in interaction energy</figcaption></figure>
+        <p>We see that the mutation decreases the interaction with DNA strand G by approximately 1 kcal/mol
+ since we lost 1 hydrogen bond.</p>
+      </li>
+      <li><strong><em>TODO</em></strong></li>
+    </ol>
 
-    </details>
-  </blockquote>
+  </details>
 
 </blockquote>
 
@@ -503,15 +484,14 @@ since we lost 1 hydrogen bond.</p>
 
 
 </body>
-<script type="text/javascript" src=" /assets/js/jquery.slim.min.js "></script>
-<script type="text/javascript" src=" /assets/js/popper.min.js "></script>
-<script type="text/javascript" src=" /assets/js/bootstrap.min.js?v=3 "></script>
-<script type="text/javascript" src=" /assets/js/details-element-polyfill.js "></script>
+<script type="text/javascript" src="/assets/js/jquery.slim.min.js"></script>
+<script type="text/javascript" src="/assets/js/popper.min.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.min.js?v=3"></script>
+<script type="text/javascript" src="/assets/js/details-element-polyfill.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script type="text/javascript" src=" /assets/js/bootstrap-toc.min.js "></script>
-<script type="text/javascript" src=" /assets/js/main.js "></script>
-<script type="text/javascript" src=" /assets/js/clipboard.min.js "></script>
-<script type="text/javascript" src="https://app.cloudsh.com/js/cloudsh.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap-toc.min.js"></script>
+<script type="text/javascript" src="/assets/js/main.js"></script>
+<script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
 <script type="text/javascript">
     var snippets = document.querySelectorAll('div.highlight');
     [].forEach.call(snippets, function(snippet) {

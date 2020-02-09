@@ -24,18 +24,18 @@
         ga('create', 'UA-61194136-18', 'auto');
         ga('send', 'pageview');
     </script>
-    <link rel="stylesheet" href=" /assets/css/bootstrap.min.css?v=3 ">
-    <link rel="stylesheet" href=" /assets/css/bootstrap-toc.min.css ">
-    <link rel="stylesheet" href=" /assets/css/font-awesome.css ">
-    <link rel="stylesheet" href=" /assets/css/main.css ">
-    <link rel="stylesheet" href=" /assets/css/VIB.css ">
-    <link rel="stylesheet" href=" /assets/css/academicons.css ">
-    <link rel="stylesheet" href=" /assets/css/syntax_highlighting.css ">
-    <link rel="shortcut icon" href=" /favicon.ico " type="image/x-icon" />     
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=3">
+    <link rel="stylesheet" href="/assets/css/bootstrap-toc.min.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="/assets/css/main.scss">
+    <link rel="stylesheet" href="/assets/css/VIB.css">
+    <link rel="stylesheet" href="/assets/css/academicons.css">
+    <link rel="stylesheet" href="/assets/css/syntax_highlighting.css">
+    <link rel="shortcut icon" href="/favicon.ico " type="image/x-icon" />     
     <meta name="description" content="Analyzing the protein structure of your protein-of-intere..." />
     <meta property="og:title" content="VIB Bioinformatics Training: 02 Visualize a structure" />
     <meta property="og:description" content="Analyzing the protein structure of your protein-of-intere..." />
-    <meta property="og:image" content=" /assets/images/bioinformatics_core_rgb_neg.png " />
+    <meta property="og:image" content="/assets/images/bioinformatics_core_rgb_neg.png" />
 </head>
 
 <body data-spy="scroll" data-target="#toc">
@@ -169,8 +169,8 @@
     }
   },
   "url": "https://material.bits.vib.be//topics/protein-structure-analysis/tutorials/visualise-structures/tutorial.html",
-  "timeRequired": "PT3H",
-  "description": "02 Visualize a structure\\nThe questions this  addresses are:\n - How to visualize a protein structures?\n\n\\nThe objectives are:\n - The learning objectives are the goals of the tutorial\n - They will be informed by your audience and will communicate to them and to yourself what you should focus on during the course\n - They are single sentences describing what a learner should be able to do once they have completed the tutorial\n - You can use Bloom's Taxonomy to write effective learning objectives\n\n",
+  "timeRequired": "PT1H",
+  "description": "02 Visualize a structure\\nThe questions this  addresses are:\n - How to visualize a protein structures?\n\n\\nThe objectives are:\n - Learn how to load structures in YASARA\n - Describe important structural elements of proteins\n - Create publication-ready figures of structural representations of proteins\n\n",
   "hasPart": [
 
   ],
@@ -234,20 +234,18 @@
             <strong><i class="fa fa-bullseye" aria-hidden="true"></i><span class="visually-hidden">objectives</span> Objectives</strong>
             <ul>
             
-            <li>The learning objectives are the goals of the tutorial</li>
+            <li>Learn how to load structures in YASARA</li>
             
-            <li>They will be informed by your audience and will communicate to them and to yourself what you should focus on during the course</li>
+            <li>Describe important structural elements of proteins</li>
             
-            <li>They are single sentences describing what a learner should be able to do once they have completed the tutorial</li>
-            
-            <li>You can use Bloom's Taxonomy to write effective learning objectives</li>
+            <li>Create publication-ready figures of structural representations of proteins</li>
             
             </ul>
 
             
 
             
-            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 3 hours</p>
+            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 1 hour</p>
             
 
             
@@ -260,50 +258,7 @@
         <div class="container" data-field="body">
             <div class="row">
                 <div class="col-md-10" role="main">
-                    <!--
-# Introduction
-{:.no_toc}
-
-<!-- This is a comment. -->
-
-<p>General introduction about the topic and then an introduction of the
-tutorial (the questions and the objectives). It is nice also to have a
-scheme to sum up the pipeline used during the tutorial. The idea is to
-give to trainees insight into the content of the tutorial and the (theoretical
-and technical) key concepts they will learn.
-–&gt;</p>
-
-<blockquote class="agenda">
-  <h3 id="agenda">Agenda</h3>
-
-  <p>In this tutorial, we will cover:</p>
-
-<ol id="markdown-toc">
-  <li><a href="#install-python-and-povray" id="markdown-toc-install-python-and-povray">Install Python and PovRay</a></li>
-  <li><a href="#tutorial-movie" id="markdown-toc-tutorial-movie">Tutorial movie</a></li>
-  <li><a href="#scene-styles" id="markdown-toc-scene-styles">Scene styles</a></li>
-  <li><a href="#showing-and-hiding-residues" id="markdown-toc-showing-and-hiding-residues">Showing and hiding residues</a></li>
-  <li><a href="#showing-and-hiding-secondary-structure" id="markdown-toc-showing-and-hiding-secondary-structure">Showing and hiding secondary structure</a></li>
-  <li><a href="#labels" id="markdown-toc-labels">Labels</a></li>
-  <li><a href="#colors" id="markdown-toc-colors">Colors</a></li>
-  <li><a href="#saving-all-the-beautiful-work" id="markdown-toc-saving-all-the-beautiful-work">Saving all the beautiful work</a></li>
-  <li><a href="#creating-high-quality-images" id="markdown-toc-creating-high-quality-images">Creating high quality images</a></li>
-  <li><a href="#distances" id="markdown-toc-distances">Distances</a></li>
-  <li><a href="#hydrogen-bonds" id="markdown-toc-hydrogen-bonds">Hydrogen bonds</a></li>
-  <li><a href="#surfaces" id="markdown-toc-surfaces">Surfaces</a></li>
-  <li><a href="#molecular-graphics-exercise" id="markdown-toc-molecular-graphics-exercise">Molecular graphics exercise</a></li>
-  <li><a href="#more-coloring" id="markdown-toc-more-coloring">More coloring</a></li>
-  <li><a href="#get-data" id="markdown-toc-get-data">Get data</a></li>
-  <li><a href="#title-of-the-section-usually-corresponding-to-a-big-step-in-the-analysis" id="markdown-toc-title-of-the-section-usually-corresponding-to-a-big-step-in-the-analysis">Title of the section usually corresponding to a big step in the analysis</a>    <ol>
-      <li><a href="#sub-step-with-my-tool" id="markdown-toc-sub-step-with-my-tool">Sub-step with <strong>My Tool</strong></a></li>
-      <li><a href="#re-arrange" id="markdown-toc-re-arrange">Re-arrange</a></li>
-    </ol>
-  </li>
-</ol>
-
-</blockquote>
-
-<h2 id="install-python-and-povray">Install Python and PovRay</h2>
+                    <h2 id="install-python-and-povray">Install Python and PovRay</h2>
 
 <p>Python and PovRay should be installed already, so you can skip this part.</p>
 
@@ -368,7 +323,7 @@ Mostly to do structure analysis, we want to show only the most interesting resid
 </code></pre></div>    </div>
     <p>Select Cys7 from Molecule <strong>A</strong> and press OK</p>
   </li>
-  <li>From the sequence selector <figure id="figure-1"><img src="../images/Seqselector.png" alt="seqselector.png" />&lt;figcaption&gt;<span class="figcaption-prefix">Figure 1:</span> Seqselector.png&lt;/figcaption&gt;</figure>
+  <li>From the sequence selector <img src="../../images/Seqselector.png" alt="seqselector.png" />
 Hover the mouse on the bottom of the screen, you will see the sequence selector opening. Open it permanently by pressing the blue nailpin on the left side of it. Search for Cys7 from Molecule <strong>B</strong>, right-click and select:
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Show &gt; Residue
 </code></pre></div>    </div>
@@ -422,6 +377,7 @@ right-click and select:</p>
 
 <p>The nasty dative bonds and metals can be removed simply by deleting all
 of them:</p>
+
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   Edit &gt; Delete &gt; Residue &gt; Name
 </code></pre></div></div>
 
@@ -429,15 +385,17 @@ of them:</p>
 
 <p>Et voilà, a publication ready image!</p>
 
-<figure id="figure-2"><img src="/home/albot/all-images-wiki/Insulin_hires.jpg" alt="center" /><figcaption><span class="figcaption-prefix">Figure 2:</span> Insuline</figcaption></figure>
+<figure id="figure-1"><img src="../../images/Insulin_hires.jpg" alt="Insuline" /><figcaption><span class="figcaption-prefix">Figure 1:</span> Insuline</figcaption></figure>
 
 <h2 id="labels">Labels</h2>
 
 <p>You can put labels on the residues you want to highlight by going to the
 main menu or selecting an atom from a residue and right-click. In the
 latter case you select:</p>
+
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   Label &gt; Residue
 </code></pre></div></div>
+
 <p>Note that <em>residue name</em> and <em>residue number</em> is automatically selected.
 Change the height to 0.5 or so and select a nice color for the label.
 Presto!</p>
@@ -455,13 +413,11 @@ colors. So we shouldn’t color entire residues, but only a selected atom
 set. Therefore our selection will be at the atom level, not the residue
 level. Go to:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>View &gt; Color &gt; Atom &gt; Belongs to or has &gt; Backbone
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    View &gt; Color &gt; Atom &gt; Belongs to or has &gt; Backbone
 </code></pre></div></div>
 
 <p>Then select the orange color (color code 150) and select ‘Apply unique
-color’.</p>
-
-<p>Beautiful, isn’t it?</p>
+color’. Hopefully, it is a satisfying result.</p>
 
 <h2 id="saving-all-the-beautiful-work">Saving all the beautiful work</h2>
 
@@ -471,17 +427,17 @@ the next day. That’s why YASARA can save the entire Scene including
 orientations, colors, views, everything. To save the current scene, go
 to:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>File &gt; Save as &gt; YASARA Scene
-
-Choose a filename such as MyInsulin.sce
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    File &gt; Save as &gt; YASARA Scene
 </code></pre></div></div>
+
+<p>Choose a filename such as MyInsulin.sce</p>
 
 <p>To load the work again in YASARA go to:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>File &gt; Load &gt; YASARA Scene
-
-Careful: loading a Scene will erase everything else!
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    File &gt; Load &gt; YASARA Scene
 </code></pre></div></div>
+
+<p>Careful: loading a Scene will erase everything else!</p>
 
 <h2 id="creating-high-quality-images">Creating high quality images</h2>
 
@@ -509,16 +465,22 @@ respective box.</p>
 
 <!-- end list -->
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>What is the distance between the C-alpha (CA) atoms of Tyr19 and Leu16?
-</code></pre></div></div>
+<h3 id="question-questions"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</h3>
 
-<p>To solve the question you need to select a view that shows you atoms
+<p>What is the distance between the C-alpha (CA) atoms of Tyr19 and Leu16?</p>
+
+<blockquote class="question">
+  <details>
+    <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
+    <p>To solve the question you need to select a view that shows you atoms
 including C-alphas. Possible views or scene styles that show these atoms
 can be F1 (ball), F2 (stick), F3 (ball\&amp;stick) and F4 (C-alpha). The
-views F5-F8 won’t show you any CA’s explicitly. Try it.</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>So you've probably noticed that pressing the CTRL button allows you to select multiple atoms. This is important for the next exercise.
-</code></pre></div></div>
+views F5-F8 won’t show you any CA’s explicitly. Try it.
+So you’ve probably noticed that pressing the CTRL button allows you to select multiple atoms. This is important for the next exercise.
+The distance is 5.8 Ångstrom.</p>
+  </details>
+</blockquote>
 
 <h2 id="hydrogen-bonds">Hydrogen bonds</h2>
 
@@ -526,8 +488,7 @@ views F5-F8 won’t show you any CA’s explicitly. Try it.</p>
 In NMR structures these are normally there. But in X-Ray structures
 hydrogens are missing. Luckily YASARA can add the hydrogens for you.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Select tube view (F5) and toggle on the sidechains with F8.
-</code></pre></div></div>
+<p>Select tube view (F5) and toggle on the sidechains with F8.</p>
 
 <p>Add hydrogens with:</p>
 
@@ -542,10 +503,19 @@ hydrogens are missing. Luckily YASARA can add the hydrogens for you.</p>
 <p>If the view is to chaotic for you, toggle off the sidechains with F8
 (press untill the sidechains are hidden).</p>
 
+<h3 id="question-questions-1"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</h3>
+
 <p>Do you see the typical helix and beta sheet pattern?</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Arg22 from Molecule/Chain B is making an hydrogen bonded electrostatic interaction (salt bridge) with another residue. Which residue?
-</code></pre></div></div>
+<p>Arg22 from Molecule/Chain B is making an hydrogen bonded electrostatic interaction (salt bridge) with another residue. Which residue?</p>
+
+<blockquote class="question">
+  <details>
+    <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
+    <p>The interaction partner is Glu17 from chain A.</p>
+  </details>
+</blockquote>
 
 <p>To remove the hydrogen bonds, you have multiple choices:</p>
 
@@ -578,7 +548,7 @@ subunit). Press <em>Continue with surface color</em> and make sure Alpha is</p>
 <p>Try to reproduce the following image of the 1TRZ insulin structure
 (hints below):</p>
 
-<p><a href="image:insulin.png" title="wikilink">image:insulin.png</a></p>
+<figure id="figure-2"><img src="../../images/Insulin.png" alt="insulin.png" /><figcaption><span class="figcaption-prefix">Figure 2:</span> Insuline</figcaption></figure>
 
 <p>Hints:</p>
 
@@ -603,7 +573,7 @@ Commands / Index</li>
 
 <p>Try to reproduce (approximately) the following image (hints below):</p>
 
-<p><a href="image:groel.png" title="wikilink">image:groel.png</a></p>
+<figure id="figure-3"><img src="../../images/Groel.png" alt="groel.png" /><figcaption><span class="figcaption-prefix">Figure 3:</span> GroEL</figcaption></figure>
 
 <p>Hints:</p>
 
@@ -623,184 +593,9 @@ entire color wheel spectrum)</li>
 <p>More exercises can be found on the <a href="http://wiki.bits.vib.be/index.php/Exercises_on_Protein_Structure">basic bioinformatics exercises
 page</a>.</p>
 
-<h2 id="get-data">Get data</h2>
-
-<blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-data-upload"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Data upload</h3>
-
-  <ol>
-    <li>Create a new history for this tutorial</li>
-    <li>
-      <p>Import the files from <a href="">Zenodo</a> or from the shared data library</p>
-
-      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   
-</code></pre></div>      </div>
-      <p><strong><em>TODO</em></strong>: <em>Add the files by the ones on Zenodo here (if not added)</em></p>
-
-      <p><strong><em>TODO</em></strong>: <em>Remove the useless files (if added)</em></p>
-
-      <blockquote class="tip">
-
-        <h3 id="tip-tip-importing-data-via-links"><i class="fa fa-lightbulb-o" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Importing data via links</h3>
-
-        <ul>
-          <li>Copy the link location</li>
-          <li>
-            <p>Open the Galaxy Upload Manager (<i class="fa fa fa-upload" aria-hidden="true"></i><span class="visually-hidden">galaxy-upload</span> on the top-right of the tool panel)</p>
-          </li>
-          <li>Select <strong>Paste/Fetch Data</strong></li>
-          <li>
-            <p>Paste the link into the text field</p>
-          </li>
-          <li>
-            <p>Press <strong>Start</strong></p>
-          </li>
-          <li><strong>Close</strong> the window</li>
-        </ul>
-
-        <p>By default, Galaxy uses the URL as the name, so rename the files with a more useful name.</p>
-      </blockquote>
-
-      <blockquote class="tip">
-
-        <h3 id="tip-tip-importing-data-from-a-data-library"><i class="fa fa-lightbulb-o" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Importing data from a data library</h3>
-
-        <p>As an alternative to uploading the data from a URL or your computer, the files may also have been made available from a <em>shared data library</em>:</p>
-
-        <ul>
-          <li>
-            <p>Go into <strong>Shared data</strong> (top panel) then <strong>Data libraries</strong></p>
-          </li>
-          <li>
-            <p>Find the correct folder (ask your instructor)</p>
-          </li>
-          <li>Select the desired files</li>
-          <li>Click on the <strong>To History</strong> button near the top and select <strong>as Datasets</strong> from the dropdown menu</li>
-          <li>In the pop-up window, select the history you want to import the files to (or create a new one)</li>
-          <li>Click on <strong>Import</strong></li>
-        </ul>
-      </blockquote>
-    </li>
-    <li>Rename the datasets</li>
-    <li>
-      <p>Check that the datatype</p>
-
-      <blockquote class="tip">
-
-        <h3 id="tip-tip-changing-the-datatype"><i class="fa fa-lightbulb-o" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Changing the datatype</h3>
-        <ul>
-          <li>Click on the <i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">galaxy-pencil</span> <strong>pencil icon</strong> for the dataset to edit its attributes</li>
-          <li>In the central panel, click on the <i class="fa fa fa-database" aria-hidden="true"></i><span class="visually-hidden">galaxy-chart-select-data</span> <strong>Datatypes</strong> tab on the top</li>
-          <li>Select <code class="highlighter-rouge">datatypes</code></li>
-          <li>Click the <strong>Change datatype</strong> button</li>
-        </ul>
-      </blockquote>
-    </li>
-    <li>
-      <p>Add to each database a tag corresponding to …</p>
-
-      <blockquote class="tip">
-
-        <h3 id="tip-tip-adding-a-tag"><i class="fa fa-lightbulb-o" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Adding a tag</h3>
-        <ul>
-          <li>Click on the dataset</li>
-          <li>Click on <i class="fa fa-tags" aria-hidden="true"></i><span class="visually-hidden">galaxy-tags</span> <strong>Edit dataset tags</strong></li>
-          <li>
-            <p>Add a tag starting with <code class="highlighter-rouge">#</code></p>
-
-            <p>Tags starting with <code class="highlighter-rouge">#</code> will be automatically propagated to the outputs of tools using this dataset.</p>
-          </li>
-          <li>Check that the tag is appearing below the dataset name</li>
-        </ul>
-
-      </blockquote>
-    </li>
-  </ol>
-
-</blockquote>
-
-<h1 id="title-of-the-section-usually-corresponding-to-a-big-step-in-the-analysis">Title of the section usually corresponding to a big step in the analysis</h1>
-
-<p>It comes first a description of the step: some background and some theory.
-Some image can be added there to support the theory explanation:</p>
-
-<figure id="figure-3"><img src="../../images/image_name" alt="Alternative text" /><figcaption><span class="figcaption-prefix">Figure 3:</span> Legend of the image</figcaption></figure>
-
-<p>The idea is to keep the theory description before quite simple to focus more on the practical part.</p>
-
-<p><strong><em>TODO</em></strong>: <em>Consider adding a detail box to expand the theory</em></p>
-
-<blockquote class="details">
-  <h3 id="details-more-details-about-the-theory"><i class="fa fa-info-circle" aria-hidden="true"></i><span class="visually-hidden">details</span> More details about the theory</h3>
-
-  <p>But to describe more details, it is possible to use the detail boxes which are expandable</p>
-
-</blockquote>
-
-<p>A big step can have several subsections or sub steps:</p>
-
-<h2 id="sub-step-with-my-tool">Sub-step with <strong>My Tool</strong></h2>
-
-<blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-task-description"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Task description</h3>
-
-  <ol>
-    <li><strong>My Tool</strong> <i class="fa fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
-      <ul>
-        <li><i class="fa fa-file-o" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input file”</em>: File</li>
-        <li><em>“Parameter”</em>: <code class="highlighter-rouge">a value</code></li>
-      </ul>
-
-      <p><strong><em>TODO</em></strong>: <em>Check parameter descriptions</em></p>
-
-      <p><strong><em>TODO</em></strong>: <em>Consider adding a comment or tip box</em></p>
-
-      <blockquote class="comment">
-        <h3 id="comment-comment"><i class="fa fa-commenting-o" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comment</h3>
-
-        <p>A comment about the tool or something else. This box can also be in the main text</p>
-      </blockquote>
-    </li>
-  </ol>
-
-</blockquote>
-
-<p><strong><em>TODO</em></strong>: <em>Consider adding a question to test the learners understanding of the previous exercise</em></p>
-
-<blockquote class="question">
-  <h3 id="question-questions"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</h3>
-
-  <ol>
-    <li>Question1?</li>
-    <li>Question2?</li>
-  </ol>
-
-  <blockquote>
-    <details>
-      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
-</summary>
-
-      <ol>
-        <li>Answer for question1</li>
-        <li>Answer for question2</li>
-      </ol>
-
-    </details>
-  </blockquote>
-
-</blockquote>
-
-<h2 id="re-arrange">Re-arrange</h2>
-
-<p>To create the template, each step of the workflow had its own subsection.</p>
-
-<p><strong><em>TODO</em></strong>: <em>Re-arrange the generated subsections into sections or other subsections.
-Consider merging some hands-on boxes to have a meaningful flow of the analyses</em></p>
-
 <h1 class="no_toc" id="conclusion">Conclusion</h1>
 
-<p>Sum up the tutorial and the key takeaways here. We encourage adding an overview image of the
-pipeline used.</p>
+<p>Now, you have explored the YASARA interface and acquainted with basic visualisations. You have identified how you can visualise secondary structure elements, surfaces, and hydrogen bonds. And most importantly, you can create publication-ready figures using Yasara.</p>
 
 
 
@@ -810,9 +605,7 @@ pipeline used.</p>
 
                         <ul>
                             
-                            <li>The take-home messages</li>
-                            
-                            <li>They will appear at the end of the tutorial</li>
+                            <li>YASARA is a powerful visualisation tool for protein structures.</li>
                             
                         </ul>
                     </blockquote>
@@ -858,15 +651,14 @@ pipeline used.</p>
 
 
 </body>
-<script type="text/javascript" src=" /assets/js/jquery.slim.min.js "></script>
-<script type="text/javascript" src=" /assets/js/popper.min.js "></script>
-<script type="text/javascript" src=" /assets/js/bootstrap.min.js?v=3 "></script>
-<script type="text/javascript" src=" /assets/js/details-element-polyfill.js "></script>
+<script type="text/javascript" src="/assets/js/jquery.slim.min.js"></script>
+<script type="text/javascript" src="/assets/js/popper.min.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.min.js?v=3"></script>
+<script type="text/javascript" src="/assets/js/details-element-polyfill.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script type="text/javascript" src=" /assets/js/bootstrap-toc.min.js "></script>
-<script type="text/javascript" src=" /assets/js/main.js "></script>
-<script type="text/javascript" src=" /assets/js/clipboard.min.js "></script>
-<script type="text/javascript" src="https://app.cloudsh.com/js/cloudsh.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap-toc.min.js"></script>
+<script type="text/javascript" src="/assets/js/main.js"></script>
+<script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
 <script type="text/javascript">
     var snippets = document.querySelectorAll('div.highlight');
     [].forEach.call(snippets, function(snippet) {

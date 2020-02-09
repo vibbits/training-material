@@ -24,18 +24,18 @@
         ga('create', 'UA-61194136-18', 'auto');
         ga('send', 'pageview');
     </script>
-    <link rel="stylesheet" href=" /assets/css/bootstrap.min.css?v=3 ">
-    <link rel="stylesheet" href=" /assets/css/bootstrap-toc.min.css ">
-    <link rel="stylesheet" href=" /assets/css/font-awesome.css ">
-    <link rel="stylesheet" href=" /assets/css/main.css ">
-    <link rel="stylesheet" href=" /assets/css/VIB.css ">
-    <link rel="stylesheet" href=" /assets/css/academicons.css ">
-    <link rel="stylesheet" href=" /assets/css/syntax_highlighting.css ">
-    <link rel="shortcut icon" href=" /favicon.ico " type="image/x-icon" />     
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=3">
+    <link rel="stylesheet" href="/assets/css/bootstrap-toc.min.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="/assets/css/main.scss">
+    <link rel="stylesheet" href="/assets/css/VIB.css">
+    <link rel="stylesheet" href="/assets/css/academicons.css">
+    <link rel="stylesheet" href="/assets/css/syntax_highlighting.css">
+    <link rel="shortcut icon" href="/favicon.ico " type="image/x-icon" />     
     <meta name="description" content="Analyzing the protein structure of your protein-of-intere..." />
     <meta property="og:title" content="VIB Bioinformatics Training: 01 Exploring the Protein Data Bank exercises" />
     <meta property="og:description" content="Analyzing the protein structure of your protein-of-intere..." />
-    <meta property="og:image" content=" /assets/images/bioinformatics_core_rgb_neg.png " />
+    <meta property="og:image" content="/assets/images/bioinformatics_core_rgb_neg.png" />
 </head>
 
 <body data-spy="scroll" data-target="#toc">
@@ -254,24 +254,9 @@
         <div class="container" data-field="body">
             <div class="row">
                 <div class="col-md-10" role="main">
-                    <blockquote class="agenda">
-  <h3 id="agenda">Agenda</h3>
+                    <h2 id="search-for-a-structure">Search for a structure</h2>
 
-  <p>In this tutorial, we will deal with:</p>
-
-<ol id="markdown-toc">
-  <li><a href="#search-for-a-structure" id="markdown-toc-search-for-a-structure">Search for a structure</a></li>
-  <li><a href="#the-pdb-file" id="markdown-toc-the-pdb-file">The PDB file</a>    <ol>
-      <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
-      <li><a href="#downloading-the-structure" id="markdown-toc-downloading-the-structure">Downloading the structure</a></li>
-    </ol>
-  </li>
-</ol>
-
-</blockquote>
-
-<h1 id="search-for-a-structure">Search for a structure</h1>
-<h4 id="via-uniprot">Via <a href="http://www.uniprot.org/">UniProt</a></h4>
+<h3 id="via-uniprot">Via <a href="http://www.uniprot.org/">UniProt</a></h3>
 <p>The way of searching for a specific protein structure depends on the data you already have. You might already have the PDB ID (a unique identifier), that’s an easy one. But mostly you have the protein name or you just have a sequence. In the last cases I recommend to start from the UniProt website at <a href="http://www.uniprot.org">http://www.uniprot.org</a>, which is the best annotated protein database in the world. Our first model protein will be the molecular chaperone DnaK from <em>E. coli</em>. Below is an image of the UniProt search box where you can start your search for proteins.</p>
 
 <figure id="figure-1"><img src="../../images/uniprotsearchbox.png" alt="uniprotsearchbox.png" /><figcaption><span class="figcaption-prefix">Figure 1:</span> Search box</figcaption></figure>
@@ -290,48 +275,41 @@
   </ol>
 </blockquote>
 
-<blockquote class="question">
-  <h3 id="question-guidelines-which-pdb-structures-to-select"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Guidelines which PDB structures to select</h3>
+<h3 id="question-guidelines-which-pdb-structures-to-select"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Guidelines which PDB structures to select</h3>
 
-  <p>Which structures (give the 4-character PDB ID) of the C-terminal domain of DnaK should preferentially be use for analysis and why?</p>
-  <blockquote class="solution">
-    <details>
-      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+<p>Which structures (give the 4-character PDB ID) of the C-terminal domain of DnaK should preferentially be use for analysis and why?</p>
+<blockquote class="solution question">
+  <details>
+    <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
-      <p>Usually, the recommended selection criteria are using an X-ray structure with low resolution and low Rfree factor. Furthermore, the PDB database has pre-calculated a validation report for all of the structures.
-As an example, have a look at https://www.ebi.ac.uk/pdbe/entry/pdb/4EZX under the section ‘Experiments and Validation’. For many PDB structures, there is also a re-done structure available with a vast amount of informaton on the quality of the X-ray structure and suggested ‘better’ models e.g. (https://pdb-redo.eu/db/4ezx). In our case, we could opt for the structures 1DKX and 4EZX.</p>
 
-      <p>This is a difficult example since there are so many high resolution structures available. So, it is recommended to study the articles and compare the available structures to find your favorite structure for further analysis.</p>
-    </details>
-  </blockquote>
+    <p>Usually, the recommended selection criteria are using an X-ray structure with low resolution and low $R_{free}$ factor. Furthermore, the PDB database has pre-calculated a validation report for all of the structures.</p>
+
+    <p>As an example, have a look at https://www.ebi.ac.uk/pdbe/entry/pdb/4EZX under the section ‘Experiments and Validation’. For many PDB structures, there is also a re-done structure available with a vast amount of information on the quality of the X-ray structure and suggested ‘better’ models e.g. (https://pdb-redo.eu/db/4ezx). In our case, we could opt for the structures 1DKX and 4EZX.</p>
+
+    <p>This is a difficult example since there are so many high resolution structures available. So, it is recommended to study the articles and compare the available structures to find your favorite structure for further analysis.</p>
+  </details>
 </blockquote>
 
-<h4 id="via-the-protein-data-bank-by-pdb-id">Via the Protein Data Bank by PDB ID</h4>
-
-<iframe src="https://h5p.org/h5p/embed/577970" width="699" height="418" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-<script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js" charset="UTF-8"></script>
-
-<iframe src=" https://docs.google.com/presentation/d/1lgEeigU8M45xF2BjQgPumgxalzfiHZeD/preview" width="640" height="480"></iframe>
+<h3 id="via-the-protein-data-bank-by-pdb-id">Via the Protein Data Bank by PDB ID</h3>
 
 <p>You can find structural information directly at the PDB database. The web site of the PDB consortium is located at <a href="http://www.wwpdb.org">http://www.wwpdb.org</a>. This web site provides links to all members of the PDB (left side). It is a question of taste which resource you start off with. For X-ray structures, it is currently PDBe, RCSB PDB, PDBj. For NMR structres, you find the BMRB. In today’s course, we focus on the PDB resources only.</p>
 
 <p>Below is an image of the RCSB search box <a href="http://www.rcsb.org/pdb/home/home.do">http://www.rcsb.org/pdb/home/home.do</a> where you can start your search for structures.</p>
 
-<p><img src="../../images/Pdbsearchbox_RCSB.png" alt="Pdbsearchbox_RCSB.png" /></p>
+<figure id="figure-2"><img src="../../images/pdbsearchbox_RCSB.png" alt="Pdbsearchbox_RCSB.png" /><figcaption><span class="figcaption-prefix">Figure 2:</span> PDB Search Box</figcaption></figure>
 
 <p>The PDB file with ID <strong>1DKX</strong> contains the atomic coordinates of the molecular chaperone (DnaK) from <em>E. coli</em>.</p>
 
-<blockquote class="notranslate hands_on">
-  <h3 id="hands_on-search-a-structure-on-the-rcsb-web-site"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Search a structure on the RCSB web site</h3>
+<h3 id="hands_on-search-a-structure-on-the-rcsb-web-site"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Search a structure on the RCSB web site</h3>
 
-  <ol>
-    <li>Go to the PDB website and type 1DKX in the search box</li>
-  </ol>
-</blockquote>
+<ol class="hands_on">
+  <li>Go to the PDB website and type 1DKX in the search box</li>
+</ol>
 
 <p>This will lead you to the same page we got earlier through UniProt.</p>
 
-<h4 id="via-the-protein-data-bank-by-sequence">Via the Protein Data Bank by sequence</h4>
+<h3 id="via-the-protein-data-bank-by-sequence">Via the Protein Data Bank by sequence</h3>
 
 <p>In lots of cases we only have a sequence of which we would like to find out if there is structural information. The PDB can be searched using a sequence as input. Here is the sequence of the C-terminal substrate binding domain of DnaK:</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    DVKDVLLLDVTPLSLGIETMGGVMTTLIAKNTTIPTKHSQVFSTAEDNQSAVTIHVLQGE
@@ -342,11 +320,11 @@ As an example, have a look at https://www.ebi.ac.uk/pdbe/entry/pdb/4EZX under th
 </code></pre></div></div>
 <p>The PDB allows sequence searches through the same search box we used before.</p>
 
-<p><img src="../../images/Pdbsearchbox_RCSB.png" alt="Pdbsearchbox_RCSB.png" /></p>
+<figure id="figure-3"><img src="../../images/pdbsearchbox_RCSB.png" alt="Pdbsearchbox_RCSB.png" /><figcaption><span class="figcaption-prefix">Figure 3:</span> PDB Search Box</figcaption></figure>
 
 <p>There is also an Advanced Search section, with a Blast/Fasta option in the Sequence Features section.</p>
 
-<p><img src="../../images/Blastpdb.png" alt="Blastpdb.png" /></p>
+<figure id="figure-4"><img src="../../images/blastpdb.png" alt="Blastpdb.png" /><figcaption><span class="figcaption-prefix">Figure 4:</span> BLAST</figcaption></figure>
 
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-hands-on-blast-search-for-pdb-structure"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: BLAST search for PDB structure</h3>
@@ -385,34 +363,31 @@ molecular chaperone (DnaK) from <em>E coli</em>.</p>
   </ol>
 </blockquote>
 
+<h3 id="question-questions"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</h3>
+
+<ol>
+  <li>How many molecules were solved in this PDB file? What kind of molecules are these (proteins, peptides, DNA, …)?</li>
+  <li>Does the structure represent the full protein? If not, how many residues are missing? Hint: Click on the UniProt KB link in the Sequence tab to see the full sequence.</li>
+  <li>Was this structure solved by X-Ray or NMR?</li>
+  <li>What is the atomic resolution and R-factor?</li>
+</ol>
+
 <blockquote class="question">
-  <h3 id="question-questions"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</h3>
-
-  <ol>
-    <li>How many molecules were solved in this PDB file? What kind of molecules are these (proteins, peptides, DNA, …)?</li>
-    <li>Does the structure represent the full protein? If not, how many residues are missing? Hint: Click on the UniProt KB link in the Sequence tab to see the full sequence.</li>
-    <li>Was this structure solved by X-Ray or NMR?</li>
-    <li>What is the atomic resolution and R-factor?</li>
-  </ol>
-
-  <blockquote>
-    <details>
-      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+  <details>
+    <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
-      <ol>
-        <li>Two, called polymers or chains: they are polypeptides <img src="../../images/Mol_desc_1DKX.png" alt="Type" /></li>
-        <li>To answer this question you can go to the sequence tab at the top:
-          <ul>
-            <li><img src="../../images/Pdb_firstresiduesmissing_1dkx.png" alt="Uniprot view" /></li>
-            <li>Summary: a large chunk of the N-terminus is missing from the structure, the C-terminus is virtually complete.</li>
-          </ul>
-        </li>
-        <li>X-RAY diffraction, as shown by Experimental Details</li>
-        <li>Atomic resolution: 2.00 Ångstrom and R-factor of 0.206</li>
-      </ol>
-    </details>
-  </blockquote>
-
+    <ol>
+      <li>Two, called polymers or chains: they are polypeptides <img src="../../images/Mol_desc_1DKX.png" alt="Type" /></li>
+      <li>To answer this question you can go to the sequence tab at the top:
+        <ul>
+          <li><img src="../../images/Pdb_firstresiduesmissing_1dkx.png" alt="Uniprot view" /></li>
+          <li>Summary: a large chunk of the N-terminus is missing from the structure, the C-terminus is virtually complete.</li>
+        </ul>
+      </li>
+      <li>X-RAY diffraction, as shown by Experimental Details</li>
+      <li>Atomic resolution: 2.00 Ångstrom and R-factor of 0.206</li>
+    </ol>
+  </details>
 </blockquote>
 
 <h2 id="downloading-the-structure">Downloading the structure</h2>
@@ -422,7 +397,7 @@ molecular chaperone (DnaK) from <em>E coli</em>.</p>
 For convenience, save this file on your desktop. The filename is the
 4-character unique PDB ID.</p>
 
-<p><img src="../../images/Pdbdownloadfile1.png" alt="Pdbdownloadfile1.png" /></p>
+<p><img src="../../images/pdbdownloadfile1.png" alt="Pdbdownloadfile1.png" /></p>
 
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-hands-on-open-downloaded-pdb-file-in-an-editor"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Open downloaded PDB file in an editor</h3>
@@ -492,15 +467,14 @@ For convenience, save this file on your desktop. The filename is the
 
 
 </body>
-<script type="text/javascript" src=" /assets/js/jquery.slim.min.js "></script>
-<script type="text/javascript" src=" /assets/js/popper.min.js "></script>
-<script type="text/javascript" src=" /assets/js/bootstrap.min.js?v=3 "></script>
-<script type="text/javascript" src=" /assets/js/details-element-polyfill.js "></script>
+<script type="text/javascript" src="/assets/js/jquery.slim.min.js"></script>
+<script type="text/javascript" src="/assets/js/popper.min.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.min.js?v=3"></script>
+<script type="text/javascript" src="/assets/js/details-element-polyfill.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script type="text/javascript" src=" /assets/js/bootstrap-toc.min.js "></script>
-<script type="text/javascript" src=" /assets/js/main.js "></script>
-<script type="text/javascript" src=" /assets/js/clipboard.min.js "></script>
-<script type="text/javascript" src="https://app.cloudsh.com/js/cloudsh.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap-toc.min.js"></script>
+<script type="text/javascript" src="/assets/js/main.js"></script>
+<script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
 <script type="text/javascript">
     var snippets = document.querySelectorAll('div.highlight');
     [].forEach.call(snippets, function(snippet) {

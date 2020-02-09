@@ -24,18 +24,18 @@
         ga('create', 'UA-61194136-18', 'auto');
         ga('send', 'pageview');
     </script>
-    <link rel="stylesheet" href=" /assets/css/bootstrap.min.css?v=3 ">
-    <link rel="stylesheet" href=" /assets/css/bootstrap-toc.min.css ">
-    <link rel="stylesheet" href=" /assets/css/font-awesome.css ">
-    <link rel="stylesheet" href=" /assets/css/main.css ">
-    <link rel="stylesheet" href=" /assets/css/VIB.css ">
-    <link rel="stylesheet" href=" /assets/css/academicons.css ">
-    <link rel="stylesheet" href=" /assets/css/syntax_highlighting.css ">
-    <link rel="shortcut icon" href=" /favicon.ico " type="image/x-icon" />     
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=3">
+    <link rel="stylesheet" href="/assets/css/bootstrap-toc.min.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="/assets/css/main.scss">
+    <link rel="stylesheet" href="/assets/css/VIB.css">
+    <link rel="stylesheet" href="/assets/css/academicons.css">
+    <link rel="stylesheet" href="/assets/css/syntax_highlighting.css">
+    <link rel="shortcut icon" href="/favicon.ico " type="image/x-icon" />     
     <meta name="description" content="Analyzing the protein structure of your protein-of-intere..." />
     <meta property="og:title" content="VIB Bioinformatics Training: 05 Predicting a protein structure - homology modelling" />
     <meta property="og:description" content="Analyzing the protein structure of your protein-of-intere..." />
-    <meta property="og:image" content=" /assets/images/bioinformatics_core_rgb_neg.png " />
+    <meta property="og:image" content="/assets/images/bioinformatics_core_rgb_neg.png" />
 </head>
 
 <body data-spy="scroll" data-target="#toc">
@@ -170,7 +170,7 @@
   },
   "url": "https://material.bits.vib.be//topics/protein-structure-analysis/tutorials/homology-modeling/tutorial.html",
   "timeRequired": "PT30M",
-  "description": "05 Predicting a protein structure - homology modelling\\nThe questions this  addresses are:\n - Which biological questions are addressed by the tutorial?\n - Which bioinformatics techniques are important to know for this type of data?\n\n\\nThe objectives are:\n - The learning objectives are the goals of the tutorial\n - They will be informed by your audience and will communicate to them and to yourself what you should focus on during the course\n - They are single sentences describing what a learner should be able to do once they have completed the tutorial\n - You can use Bloom's Taxonomy to write effective learning objectives\n\n",
+  "description": "05 Predicting a protein structure - homology modelling\\nThe questions this  addresses are:\n - Which are the main principles of homology modelling?\n - Which highly automated tool can be used to do 3-click homology modelling?\n\n\\nThe objectives are:\n - Understand the importance of sequence alignment and careful template selection as key ingredients for homology modelling.\n - Homology modelling can be a tedious task but Swiss Model allows for high automation of homology modelling tasks.\n\n",
   "hasPart": [
 
   ],
@@ -227,22 +227,18 @@
             <strong><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</strong>
             <ul>
             
-            <li>Which biological questions are addressed by the tutorial?</li>
+            <li>Which are the main principles of homology modelling?</li>
             
-            <li>Which bioinformatics techniques are important to know for this type of data?</li>
+            <li>Which highly automated tool can be used to do 3-click homology modelling?</li>
             
             </ul>
 
             <strong><i class="fa fa-bullseye" aria-hidden="true"></i><span class="visually-hidden">objectives</span> Objectives</strong>
             <ul>
             
-            <li>The learning objectives are the goals of the tutorial</li>
+            <li>Understand the importance of sequence alignment and careful template selection as key ingredients for homology modelling.</li>
             
-            <li>They will be informed by your audience and will communicate to them and to yourself what you should focus on during the course</li>
-            
-            <li>They are single sentences describing what a learner should be able to do once they have completed the tutorial</li>
-            
-            <li>You can use Bloom's Taxonomy to write effective learning objectives</li>
+            <li>Homology modelling can be a tedious task but Swiss Model allows for high automation of homology modelling tasks.</li>
             
             </ul>
 
@@ -262,7 +258,7 @@
         <div class="container" data-field="body">
             <div class="row">
                 <div class="col-md-10" role="main">
-                    <h1 class="no_toc" id="introduction">Introduction</h1>
+                    <h2 class="no_toc" id="introduction">Introduction</h2>
 
 <!-- This is a comment. -->
 
@@ -276,26 +272,9 @@
   <li>Structure is more conserved than sequence</li>
 </ul>
 
-<blockquote class="agenda">
-  <h3 id="agenda">Agenda</h3>
+<h2 id="main-ingredients-for-homology-modelling">Main ingredients for homology modelling</h2>
 
-  <p>In this tutorial, we will cover:</p>
-
-<ol id="markdown-toc">
-  <li><a href="#main-ingredients-for-homology-modelling" id="markdown-toc-main-ingredients-for-homology-modelling">Main ingredients for homology modelling</a>    <ol>
-      <li><a href="#the-sequence" id="markdown-toc-the-sequence">The sequence</a></li>
-      <li><a href="#searching-for-the-template-structure" id="markdown-toc-searching-for-the-template-structure">Searching for the template structure</a></li>
-      <li><a href="#aligning-target-and-template-sequence-and-template-selection" id="markdown-toc-aligning-target-and-template-sequence-and-template-selection">Aligning target and template sequence and template selection</a></li>
-    </ol>
-  </li>
-  <li><a href="#building-the-homology-model-with-swiss-model" id="markdown-toc-building-the-homology-model-with-swiss-model">Building the homology model with Swiss Model</a></li>
-</ol>
-
-</blockquote>
-
-<h1 id="main-ingredients-for-homology-modelling">Main ingredients for homology modelling</h1>
-
-<h2 id="the-sequence">The sequence</h2>
+<h3 id="the-sequence">The sequence</h3>
 
 <p>Last week my colleague sequenced a plant protein. He is not a bioinformatician. Yet, he would like to know what the structure might look like to do some rounds of rational mutagenesis. Let’s try to address the problem for him.</p>
 
@@ -304,104 +283,21 @@
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SVCCPSLVARTNYNVCRLPGTEAALCATFTGCIIIPGATCGGDYAN
 </code></pre></div></div>
 
-<h2 id="searching-for-the-template-structure">Searching for the template structure</h2>
+<h3 id="searching-for-the-template-structure">Searching for the template structure</h3>
 
 <p>Actually, the first step is to check whether the PDB already contains the structure of this sequence. That would be easy so we don’t have to model anything. We will use Blast again to search with the sequence.</p>
 
-<p><strong>TODO: add hands-on area with Blast search on PDB page</strong></p>
-
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-data-upload"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Data upload</h3>
+  <h3 id="hands_on-hands-on-blast-search-for-pdb-structure"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: BLAST search for PDB structure</h3>
 
   <ol>
-    <li>Create a new history for this tutorial</li>
-    <li>
-      <p>Import the files from <a href="">Zenodo</a> or from the shared data library</p>
-
-      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-</code></pre></div>      </div>
-      <p><strong><em>TODO</em></strong>: <em>Add the files by the ones on Zenodo here (if not added)</em></p>
-
-      <p><strong><em>TODO</em></strong>: <em>Remove the useless files (if added)</em></p>
-
-      <blockquote class="tip">
-
-        <h3 id="tip-tip-importing-data-via-links"><i class="fa fa-lightbulb-o" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Importing data via links</h3>
-
-        <ul>
-          <li>Copy the link location</li>
-          <li>
-            <p>Open the Galaxy Upload Manager (<i class="fa fa fa-upload" aria-hidden="true"></i><span class="visually-hidden">galaxy-upload</span> on the top-right of the tool panel)</p>
-          </li>
-          <li>Select <strong>Paste/Fetch Data</strong></li>
-          <li>
-            <p>Paste the link into the text field</p>
-          </li>
-          <li>
-            <p>Press <strong>Start</strong></p>
-          </li>
-          <li><strong>Close</strong> the window</li>
-        </ul>
-
-        <p>By default, Galaxy uses the URL as the name, so rename the files with a more useful name.</p>
-      </blockquote>
-
-      <blockquote class="tip">
-
-        <h3 id="tip-tip-importing-data-from-a-data-library"><i class="fa fa-lightbulb-o" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Importing data from a data library</h3>
-
-        <p>As an alternative to uploading the data from a URL or your computer, the files may also have been made available from a <em>shared data library</em>:</p>
-
-        <ul>
-          <li>
-            <p>Go into <strong>Shared data</strong> (top panel) then <strong>Data libraries</strong></p>
-          </li>
-          <li>
-            <p>Find the correct folder (ask your instructor)</p>
-          </li>
-          <li>Select the desired files</li>
-          <li>Click on the <strong>To History</strong> button near the top and select <strong>as Datasets</strong> from the dropdown menu</li>
-          <li>In the pop-up window, select the history you want to import the files to (or create a new one)</li>
-          <li>Click on <strong>Import</strong></li>
-        </ul>
-      </blockquote>
-    </li>
-    <li>Rename the datasets</li>
-    <li>
-      <p>Check that the datatype</p>
-
-      <blockquote class="tip">
-
-        <h3 id="tip-tip-changing-the-datatype"><i class="fa fa-lightbulb-o" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Changing the datatype</h3>
-        <ul>
-          <li>Click on the <i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">galaxy-pencil</span> <strong>pencil icon</strong> for the dataset to edit its attributes</li>
-          <li>In the central panel, click on the <i class="fa fa fa-database" aria-hidden="true"></i><span class="visually-hidden">galaxy-chart-select-data</span> <strong>Datatypes</strong> tab on the top</li>
-          <li>Select <code class="highlighter-rouge">datatypes</code></li>
-          <li>Click the <strong>Change datatype</strong> button</li>
-        </ul>
-      </blockquote>
-    </li>
-    <li>
-      <p>Add to each database a tag corresponding to …</p>
-
-      <blockquote class="tip">
-
-        <h3 id="tip-tip-adding-a-tag"><i class="fa fa-lightbulb-o" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Adding a tag</h3>
-        <ul>
-          <li>Click on the dataset</li>
-          <li>Click on <i class="fa fa-tags" aria-hidden="true"></i><span class="visually-hidden">galaxy-tags</span> <strong>Edit dataset tags</strong></li>
-          <li>
-            <p>Add a tag starting with <code class="highlighter-rouge">#</code></p>
-
-            <p>Tags starting with <code class="highlighter-rouge">#</code> will be automatically propagated to the outputs of tools using this dataset.</p>
-          </li>
-          <li>Check that the tag is appearing below the dataset name</li>
-        </ul>
-
-      </blockquote>
-    </li>
+    <li>Go to the Advanced Search section</li>
+    <li>Please select ‘Sequence BLAST/PSI-BLAST’ in the Query type drop down.
+This method allows you to change some parameters for the search.</li>
+    <li>Copy and paste the sequence in the ‘‘Sequence’’ field</li>
+    <li>Press ‘‘Submit query’’.</li>
+    <li>You should see the same structures popping up as you saw in the UniProt page of DnaK.</li>
   </ol>
-
 </blockquote>
 
 <p>A suitable template structure to make a high quality model should have following properties:</p>
@@ -409,102 +305,10 @@
 <ul>
   <li>The highest possible sequence identity from all structures in the PDB when aligned to the target sequence</li>
   <li>A good resolution (and R-factor): if many identical template structures exist with the same sequence, filter by resolution</li>
-  <li>Is solved by X-RAY, not NMR</li>
+  <li>Is solved by X-RAY, not NMR.</li>
 </ul>
 
-<blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-data-upload-1"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Data upload</h3>
-
-  <ol>
-    <li>Create a new history for this tutorial</li>
-    <li>
-      <p>Import the files from <a href="">Zenodo</a> or from the shared data library</p>
-
-      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-</code></pre></div>      </div>
-      <p><strong><em>TODO</em></strong>: <em>Add the files by the ones on Zenodo here (if not added)</em></p>
-
-      <p><strong><em>TODO</em></strong>: <em>Remove the useless files (if added)</em></p>
-
-      <blockquote class="tip">
-
-        <h3 id="tip-tip-importing-data-via-links-1"><i class="fa fa-lightbulb-o" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Importing data via links</h3>
-
-        <ul>
-          <li>Copy the link location</li>
-          <li>
-            <p>Open the Galaxy Upload Manager (<i class="fa fa fa-upload" aria-hidden="true"></i><span class="visually-hidden">galaxy-upload</span> on the top-right of the tool panel)</p>
-          </li>
-          <li>Select <strong>Paste/Fetch Data</strong></li>
-          <li>
-            <p>Paste the link into the text field</p>
-          </li>
-          <li>
-            <p>Press <strong>Start</strong></p>
-          </li>
-          <li><strong>Close</strong> the window</li>
-        </ul>
-
-        <p>By default, Galaxy uses the URL as the name, so rename the files with a more useful name.</p>
-      </blockquote>
-
-      <blockquote class="tip">
-
-        <h3 id="tip-tip-importing-data-from-a-data-library-1"><i class="fa fa-lightbulb-o" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Importing data from a data library</h3>
-
-        <p>As an alternative to uploading the data from a URL or your computer, the files may also have been made available from a <em>shared data library</em>:</p>
-
-        <ul>
-          <li>
-            <p>Go into <strong>Shared data</strong> (top panel) then <strong>Data libraries</strong></p>
-          </li>
-          <li>
-            <p>Find the correct folder (ask your instructor)</p>
-          </li>
-          <li>Select the desired files</li>
-          <li>Click on the <strong>To History</strong> button near the top and select <strong>as Datasets</strong> from the dropdown menu</li>
-          <li>In the pop-up window, select the history you want to import the files to (or create a new one)</li>
-          <li>Click on <strong>Import</strong></li>
-        </ul>
-      </blockquote>
-    </li>
-    <li>Rename the datasets</li>
-    <li>
-      <p>Check that the datatype</p>
-
-      <blockquote class="tip">
-
-        <h3 id="tip-tip-changing-the-datatype-1"><i class="fa fa-lightbulb-o" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Changing the datatype</h3>
-        <ul>
-          <li>Click on the <i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">galaxy-pencil</span> <strong>pencil icon</strong> for the dataset to edit its attributes</li>
-          <li>In the central panel, click on the <i class="fa fa fa-database" aria-hidden="true"></i><span class="visually-hidden">galaxy-chart-select-data</span> <strong>Datatypes</strong> tab on the top</li>
-          <li>Select <code class="highlighter-rouge">datatypes</code></li>
-          <li>Click the <strong>Change datatype</strong> button</li>
-        </ul>
-      </blockquote>
-    </li>
-    <li>
-      <p>Add to each database a tag corresponding to …</p>
-
-      <blockquote class="tip">
-
-        <h3 id="tip-tip-adding-a-tag-1"><i class="fa fa-lightbulb-o" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Adding a tag</h3>
-        <ul>
-          <li>Click on the dataset</li>
-          <li>Click on <i class="fa fa-tags" aria-hidden="true"></i><span class="visually-hidden">galaxy-tags</span> <strong>Edit dataset tags</strong></li>
-          <li>
-            <p>Add a tag starting with <code class="highlighter-rouge">#</code></p>
-
-            <p>Tags starting with <code class="highlighter-rouge">#</code> will be automatically propagated to the outputs of tools using this dataset.</p>
-          </li>
-          <li>Check that the tag is appearing below the dataset name</li>
-        </ul>
-
-      </blockquote>
-    </li>
-  </ol>
-
-</blockquote>
+<p>TODO:</p>
 
 <blockquote class="question">
   <h3 id="question-questions"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</h3>
@@ -514,18 +318,16 @@
     <li>What is the PDB ID with the highest resolution, does not have insertions or deletions and should thus be the better template structure?</li>
   </ol>
 
-  <blockquote>
-    <details>
-      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+  <details>
+    <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
 
-      <ol>
-        <li><strong>TODO</strong></li>
-        <li><strong>TODO</strong></li>
-      </ol>
+    <ol>
+      <li><strong>TODO</strong></li>
+      <li><strong>TODO</strong></li>
+    </ol>
 
-    </details>
-  </blockquote>
+  </details>
 
 </blockquote>
 
@@ -533,107 +335,7 @@
 
 <p>The alignment is the most crucial part of homology modeling. We will not explain what an alignment is and how you make it, this should be known. In an alignment, we put homologous sequences on top of each other in a text file. The point is that amino acids that are on top of each other in the same column are assumed to have the equivalent position in the 3D structure. So if the template sequence has an Ala at position 3, where the target sequence has a Phe, homology modelling tools will use the backbone of the template structure and replace the sidechain at position 3 from Ala to Phe.</p>
 
-<blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-data-upload-2"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Data upload</h3>
-
-  <ol>
-    <li>Create a new history for this tutorial</li>
-    <li>
-      <p>Import the files from <a href="">Zenodo</a> or from the shared data library</p>
-
-      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-</code></pre></div>      </div>
-      <p><strong><em>TODO</em></strong>: <em>Add the files by the ones on Zenodo here (if not added)</em></p>
-
-      <p><strong><em>TODO</em></strong>: <em>Remove the useless files (if added)</em></p>
-
-      <blockquote class="tip">
-
-        <h3 id="tip-tip-importing-data-via-links-2"><i class="fa fa-lightbulb-o" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Importing data via links</h3>
-
-        <ul>
-          <li>Copy the link location</li>
-          <li>
-            <p>Open the Galaxy Upload Manager (<i class="fa fa fa-upload" aria-hidden="true"></i><span class="visually-hidden">galaxy-upload</span> on the top-right of the tool panel)</p>
-          </li>
-          <li>Select <strong>Paste/Fetch Data</strong></li>
-          <li>
-            <p>Paste the link into the text field</p>
-          </li>
-          <li>
-            <p>Press <strong>Start</strong></p>
-          </li>
-          <li><strong>Close</strong> the window</li>
-        </ul>
-
-        <p>By default, Galaxy uses the URL as the name, so rename the files with a more useful name.</p>
-      </blockquote>
-
-      <blockquote class="tip">
-
-        <h3 id="tip-tip-importing-data-from-a-data-library-2"><i class="fa fa-lightbulb-o" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Importing data from a data library</h3>
-
-        <p>As an alternative to uploading the data from a URL or your computer, the files may also have been made available from a <em>shared data library</em>:</p>
-
-        <ul>
-          <li>
-            <p>Go into <strong>Shared data</strong> (top panel) then <strong>Data libraries</strong></p>
-          </li>
-          <li>
-            <p>Find the correct folder (ask your instructor)</p>
-          </li>
-          <li>Select the desired files</li>
-          <li>Click on the <strong>To History</strong> button near the top and select <strong>as Datasets</strong> from the dropdown menu</li>
-          <li>In the pop-up window, select the history you want to import the files to (or create a new one)</li>
-          <li>Click on <strong>Import</strong></li>
-        </ul>
-      </blockquote>
-    </li>
-    <li>Rename the datasets</li>
-    <li>
-      <p>Check that the datatype</p>
-
-      <blockquote class="tip">
-
-        <h3 id="tip-tip-changing-the-datatype-2"><i class="fa fa-lightbulb-o" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Changing the datatype</h3>
-        <ul>
-          <li>Click on the <i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">galaxy-pencil</span> <strong>pencil icon</strong> for the dataset to edit its attributes</li>
-          <li>In the central panel, click on the <i class="fa fa fa-database" aria-hidden="true"></i><span class="visually-hidden">galaxy-chart-select-data</span> <strong>Datatypes</strong> tab on the top</li>
-          <li>Select <code class="highlighter-rouge">datatypes</code></li>
-          <li>Click the <strong>Change datatype</strong> button</li>
-        </ul>
-      </blockquote>
-    </li>
-    <li>
-      <p>Add to each database a tag corresponding to …</p>
-
-      <blockquote class="tip">
-
-        <h3 id="tip-tip-adding-a-tag-2"><i class="fa fa-lightbulb-o" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Adding a tag</h3>
-        <ul>
-          <li>Click on the dataset</li>
-          <li>Click on <i class="fa fa-tags" aria-hidden="true"></i><span class="visually-hidden">galaxy-tags</span> <strong>Edit dataset tags</strong></li>
-          <li>
-            <p>Add a tag starting with <code class="highlighter-rouge">#</code></p>
-
-            <p>Tags starting with <code class="highlighter-rouge">#</code> will be automatically propagated to the outputs of tools using this dataset.</p>
-          </li>
-          <li>Check that the tag is appearing below the dataset name</li>
-        </ul>
-
-      </blockquote>
-    </li>
-  </ol>
-
-</blockquote>
-
-<p>To extract the sequence from the template structure, display the FASTA sequence of the template structure and paste it into the text editor on the first line.</p>
-
-<figure id="figure-1"><img src="../../images/image_name" alt="Alternative text" /><figcaption><span class="figcaption-prefix">Figure 1:</span> Legend of the image</figcaption></figure>
-
-<p>The idea is to keep the theory description before quite simple to focus more on the practical part.</p>
-
-<figure id="figure-2"><img src="../../images/image_name" alt="Alternative text" /><figcaption><span class="figcaption-prefix">Figure 2:</span> Legend of the image</figcaption></figure>
+<p>TODO: add text as summary</p>
 
 <h1 id="building-the-homology-model-with-swiss-model">Building the homology model with Swiss Model</h1>
 
@@ -646,10 +348,9 @@
 
   <ol>
     <li>Browse to the <a href="https://swissmodel.expasy.org/interactive">Swiss Model server</a></li>
-    <li>On the first page, paste the sequence of our unknown protein in the field ‘Target Sequence’ and give the project a name.</li>
-  </ol>
-  <figure id="figure-3"><img src="../../images/Modelling_sequence_template_step1.png" alt="Swiss Model Start page" /><figcaption><span class="figcaption-prefix">Figure 3:</span> Start page of Swiss Model</figcaption></figure>
-  <ol>
+    <li>On the first page, paste the sequence of our unknown protein in the field ‘Target Sequence’ and give the project a name.
+      <figure id="figure-1"><img src="../../images/Modelling_sequence_template_step1.png" alt="Swiss Model Start page" /><figcaption><span class="figcaption-prefix">Figure 1:</span> Start page of Swiss Model</figcaption></figure>
+    </li>
     <li>Click ‘Search templates’ to initiate the first step. 
 Thereafter, the server identifies structural template(s) and gives an overview list of hits 
 which you can select the templates from.</li>
@@ -662,40 +363,32 @@ which you can select the templates from.</li>
 
   <p>Which of the 10 (at the time of writing) possible template structures would you select as template for the model building process?</p>
 
-  <blockquote>
-    <details>
-      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+  <details>
+    <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
 
-      <p><strong>TODO: add link with 10 template</strong> 
-We suggest as template <strong>1jxx.1.A</strong> given that it is an X-ray structure with high resolution and a very high 
+    <p>We suggest as template <strong>1jxx.1.A</strong> given that it is an X-ray structure with high resolution and a very high 
 sequence identity (X-ray, 0.9 Å, 78.26 %).</p>
-
-    </details>
-  </blockquote>
-
+  </details>
 </blockquote>
 
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-hands-on-model-building-step-and-visualisation"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Model Building Step and Visualisation</h3>
 
   <ol>
-    <li>
-      <p>Once you have selected the template, hit ‘Build Model’ to start the homology modelling procedure. 
+    <li>Once you have selected the template, hit ‘Build Model’ to start the homology modelling procedure. 
 The server will alignment of target sequence and template structure(s), build a model and evaluate it. 
 These steps require specialized software and integrate up-to-date protein sequence and structure databases. 
-Each of the above steps can be repeated interactively until a satisfying modelling result is achieved.</p>
-    </li>
-    <li>Once the model has been built, you can download it.</li>
+Each of the above steps can be repeated interactively until a satisfying modelling result is achieved. 
+<img src="../../images/Modelling_template_selection_step2.png" alt="download model" /></li>
+    <li>Once the model has been built, you can download it.
+<img src="../../images/Modelling_results_step3.png" alt="download model" /></li>
     <li>If the Swiss Model server is too busy at the moment you execute the request, you can download the model from
 <a href="https://zenodo.org/record/3551850#.Xdqs4ehKiUk">here</a>.</li>
     <li>Load the created model into YASARA. 
-Perform a structural superposition with your reference e.g. 1CRN 
-try to detect the differences through manipulating the visualisations.
-      <figure id="figure-4"><img src=" " alt="superposition" /><figcaption><span class="figcaption-prefix">Figure 4:</span> Superposition of 1CRN with the obtained model</figcaption></figure>
-    </li>
+Perform a structural alignment with your reference e.g. 1CRN and try to detect the differences through manipulating the visualisations.
+<img src="../../images/1214.png" alt="structural alignment" /></li>
   </ol>
-
 </blockquote>
 
 <h1 class="no_toc" id="conclusion">Conclusion</h1>
@@ -758,15 +451,14 @@ try to detect the differences through manipulating the visualisations.
 
 
 </body>
-<script type="text/javascript" src=" /assets/js/jquery.slim.min.js "></script>
-<script type="text/javascript" src=" /assets/js/popper.min.js "></script>
-<script type="text/javascript" src=" /assets/js/bootstrap.min.js?v=3 "></script>
-<script type="text/javascript" src=" /assets/js/details-element-polyfill.js "></script>
+<script type="text/javascript" src="/assets/js/jquery.slim.min.js"></script>
+<script type="text/javascript" src="/assets/js/popper.min.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.min.js?v=3"></script>
+<script type="text/javascript" src="/assets/js/details-element-polyfill.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script type="text/javascript" src=" /assets/js/bootstrap-toc.min.js "></script>
-<script type="text/javascript" src=" /assets/js/main.js "></script>
-<script type="text/javascript" src=" /assets/js/clipboard.min.js "></script>
-<script type="text/javascript" src="https://app.cloudsh.com/js/cloudsh.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap-toc.min.js"></script>
+<script type="text/javascript" src="/assets/js/main.js"></script>
+<script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
 <script type="text/javascript">
     var snippets = document.querySelectorAll('div.highlight');
     [].forEach.call(snippets, function(snippet) {

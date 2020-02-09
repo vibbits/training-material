@@ -24,18 +24,18 @@
         ga('create', 'UA-61194136-18', 'auto');
         ga('send', 'pageview');
     </script>
-    <link rel="stylesheet" href=" /assets/css/bootstrap.min.css?v=3 ">
-    <link rel="stylesheet" href=" /assets/css/bootstrap-toc.min.css ">
-    <link rel="stylesheet" href=" /assets/css/font-awesome.css ">
-    <link rel="stylesheet" href=" /assets/css/main.css ">
-    <link rel="stylesheet" href=" /assets/css/VIB.css ">
-    <link rel="stylesheet" href=" /assets/css/academicons.css ">
-    <link rel="stylesheet" href=" /assets/css/syntax_highlighting.css ">
-    <link rel="shortcut icon" href=" /favicon.ico " type="image/x-icon" />     
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=3">
+    <link rel="stylesheet" href="/assets/css/bootstrap-toc.min.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="/assets/css/main.scss">
+    <link rel="stylesheet" href="/assets/css/VIB.css">
+    <link rel="stylesheet" href="/assets/css/academicons.css">
+    <link rel="stylesheet" href="/assets/css/syntax_highlighting.css">
+    <link rel="shortcut icon" href="/favicon.ico " type="image/x-icon" />     
     <meta name="description" content="Analyzing the protein structure of your protein-of-intere..." />
     <meta property="og:title" content="VIB Bioinformatics Training: 03 Compare Structures" />
     <meta property="og:description" content="Analyzing the protein structure of your protein-of-intere..." />
-    <meta property="og:image" content=" /assets/images/bioinformatics_core_rgb_neg.png " />
+    <meta property="og:image" content="/assets/images/bioinformatics_core_rgb_neg.png" />
 </head>
 
 <body data-spy="scroll" data-target="#toc">
@@ -170,7 +170,7 @@
   },
   "url": "https://material.bits.vib.be//topics/protein-structure-analysis/tutorials/compare-structures/tutorial.html",
   "timeRequired": "PT15M",
-  "description": "03 Compare Structures\\nThe questions this  addresses are:\n - Which biological questions are addressed by the tutorial?\n - Which bioinformatics techniques are important to know for this type of data?\n\n\\nThe objectives are:\n - The learning objectives are the goals of the tutorial\n - They will be informed by your audience and will communicate to them and to yourself what you should focus on during the course\n - They are single sentences describing what a learner should be able to do once they have completed the tutorial\n - You can use Bloom's Taxonomy to write effective learning objectives\n\n",
+  "description": "03 Compare Structures\\nThe questions this  addresses are:\n - how to structurally align protein structures\n\n\\nThe objectives are:\n - Use rigid body structural alignment in YASARA\n\n",
   "hasPart": [
 
   ],
@@ -227,22 +227,14 @@
             <strong><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</strong>
             <ul>
             
-            <li>Which biological questions are addressed by the tutorial?</li>
-            
-            <li>Which bioinformatics techniques are important to know for this type of data?</li>
+            <li>how to structurally align protein structures</li>
             
             </ul>
 
             <strong><i class="fa fa-bullseye" aria-hidden="true"></i><span class="visually-hidden">objectives</span> Objectives</strong>
             <ul>
             
-            <li>The learning objectives are the goals of the tutorial</li>
-            
-            <li>They will be informed by your audience and will communicate to them and to yourself what you should focus on during the course</li>
-            
-            <li>They are single sentences describing what a learner should be able to do once they have completed the tutorial</li>
-            
-            <li>You can use Bloom's Taxonomy to write effective learning objectives</li>
+            <li>Use rigid body structural alignment in YASARA</li>
             
             </ul>
 
@@ -262,22 +254,10 @@
         <div class="container" data-field="body">
             <div class="row">
                 <div class="col-md-10" role="main">
-                    <blockquote class="agenda">
-  <h3 id="agenda">Agenda</h3>
-
-  <p>In this tutorial, we will cover:</p>
-
-<ol id="markdown-toc">
-  <li><a href="#structural-comparison-and-rmdd" id="markdown-toc-structural-comparison-and-rmdd">Structural comparison and RMDD</a></li>
-  <li><a href="#superimposing-multiple-structures-using-yasara" id="markdown-toc-superimposing-multiple-structures-using-yasara">Superimposing multiple structures using YASARA</a></li>
-</ol>
-
-</blockquote>
-
-<h1 id="structural-comparison-and-rmdd">Structural comparison and RMDD</h1>
-<p>We compare structures by superposing (or structurally align) them on top of each other. That is, we
- superpose structurally equivalent atoms. For now, we will only superpose CA atoms, so backbones. B
-ut Yasara also can superpose on any type of atom you want. You always need to specify:</p>
+                    <h2 id="structural-comparison-and-rmsd">Structural comparison and RMSD</h2>
+<p>We compare structures by structurally aligning them on top of each other. That is, we
+align structurally equivalent atoms. For now, we will only use CA atoms as a representation of the backbones. 
+But Yasara also can align on any type of atom you want. You always need to specify:</p>
 
 <ul>
   <li>source object(s): the structure(s) that needs to be rotated and translated to superpose on anoth
@@ -285,11 +265,10 @@ er structure</li>
   <li>target object: the structure to superpose on</li>
 </ul>
 
-<p>An optimal superposition is found when the root-mean-square deviation (RMSD) is at a minimum. The R
-MSD is given as:</p>
+<p>An optimal alignment is found when the root-mean-square deviation (RMSD) is at a minimum. 
+The RMSD is given as:</p>
 <figure id="figure-1"><img src="../../images/RMSD.gif" alt="RMSD" /><figcaption><span class="figcaption-prefix">Figure 1:</span> calculation of RMSD</figcaption></figure>
-<p>where R is the distance between two structurally equivalent atom pairs (CA in our case) and n is th
-e total number of atom pairs.Get data</p>
+<p>where R is the distance between two structurally equivalent atom pairs (CA in our case) and n is the total number of atom pairs.</p>
 
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-hands-on-data-download"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Data download</h3>
@@ -305,7 +284,7 @@ e total number of atom pairs.Get data</p>
 
 </blockquote>
 
-<h1 id="superimposing-multiple-structures-using-yasara">Superimposing multiple structures using YASARA</h1>
+<h2 id="aligning-multiple-structures-using-yasara">Aligning multiple structures using YASARA</h2>
 
 <p>Now load all of them in YASARA:</p>
 
@@ -319,7 +298,7 @@ e total number of atom pairs.Get data</p>
 
 <p>In the first window you have to select the source objects that will be repositioned. Select Objects 2 till 5. In the second window you select the target Object to superpose on. That would then be the first object.</p>
 
-<p>Notice that YASARA prints the RMSD of every superposition in the lower Console. Open the Console by pressing the spacebar once or twice to extend it.</p>
+<p>Notice that YASARA prints the RMSD of every structural alignment in the lower Console. Open the Console by pressing the spacebar once or twice to extend it.</p>
 
 <p>Color the atoms by their B-factor:</p>
 
@@ -329,28 +308,23 @@ Then choose BFactor in the next window and press 'Apply unique color'.
 
 <p>High BFactors are yellow, low BFactors are blue.</p>
 
+<h3 id="question-questions"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</h3>
+
+<p>Do you see a correlation between the BFactors and the variability in the structure?</p>
+
 <blockquote>
-  <h3 id="question-questions"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</h3>
-
-  <p>Question: Do you see a correlation between the BFactors and the variability in the structure?</p>
-
-  <blockquote>
-    <details>
-      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+  <details>
+    <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
-      <h3 id="a-header">A Header</h3>
-      <ol>
-        <li>Yes, add explanation here</li>
-      </ol>
 
-      <p><strong>TODO</strong>: add image</p>
-    </details>
-  </blockquote>
+    <p><img src="../../images/aligned-structures.png" alt="Structural alignemnt" /></p>
+
+  </details>
 </blockquote>
 
 <h1 class="no_toc" id="conclusion">Conclusion</h1>
 
-<p>Superimposition of related structures is a very efficient approach to spot similarities and differences of structutally related proteins.</p>
+<p>Structural alignment of related structures is a very efficient approach to spot similarities and differences of structutally related proteins.</p>
 
 
 
@@ -360,9 +334,7 @@ Then choose BFactor in the next window and press 'Apply unique color'.
 
                         <ul>
                             
-                            <li>The take-home messages</li>
-                            
-                            <li>They will appear at the end of the tutorial</li>
+                            <li>Superimposition of related structures is a very efficient approach to spot similarities and differences of structutally related proteins.</li>
                             
                         </ul>
                     </blockquote>
@@ -408,15 +380,14 @@ Then choose BFactor in the next window and press 'Apply unique color'.
 
 
 </body>
-<script type="text/javascript" src=" /assets/js/jquery.slim.min.js "></script>
-<script type="text/javascript" src=" /assets/js/popper.min.js "></script>
-<script type="text/javascript" src=" /assets/js/bootstrap.min.js?v=3 "></script>
-<script type="text/javascript" src=" /assets/js/details-element-polyfill.js "></script>
+<script type="text/javascript" src="/assets/js/jquery.slim.min.js"></script>
+<script type="text/javascript" src="/assets/js/popper.min.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.min.js?v=3"></script>
+<script type="text/javascript" src="/assets/js/details-element-polyfill.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script type="text/javascript" src=" /assets/js/bootstrap-toc.min.js "></script>
-<script type="text/javascript" src=" /assets/js/main.js "></script>
-<script type="text/javascript" src=" /assets/js/clipboard.min.js "></script>
-<script type="text/javascript" src="https://app.cloudsh.com/js/cloudsh.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap-toc.min.js"></script>
+<script type="text/javascript" src="/assets/js/main.js"></script>
+<script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
 <script type="text/javascript">
     var snippets = document.querySelectorAll('div.highlight');
     [].forEach.call(snippets, function(snippet) {
