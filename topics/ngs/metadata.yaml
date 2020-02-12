@@ -1,0 +1,37 @@
+---
+name: ngs-data-analysis
+type: basics 
+category: omics 
+title: "Next Generation Sequencing Data Analysis" 
+summary: "This page is dedicated to the series of trainings that will lead you through the various workflows for the analysis of next generation sequencing data."
+
+subtopics:
+  - id: introduction 
+    title: "Introduction to the analysis of NGS data"
+    description: "This training gives you the background knowledge you need to follow the more advanced trainings on variant analysis, RNA-Seq and ChIP-Seq."
+  - id: variant-analysis 
+    title: "NGS Variant Analysis"
+    description: "
+- Use the graphical environment provided by the BITS GenePattern server to perform all steps of a classical NGS variant workflow and feel the complexity of the task.
+- Perform a simplified analysis workflow including read mapping, variant calling against the current human reference genome
+- Annotate the obtained variant calls and compare them to the public variant file for that genome.
+- implicitly get the motivation to go to the next level and learn command line and R"
+  - id: rna-seq 
+    title: "RNA-Seq analysis"
+    description: "TBC"
+  - id: chip-seq
+    title: "ChIP-Seq analysis"
+    description: "The aim of this session is to :
+- Have an understanding of the nature of ChIP-Seq data
+- Perform a complete analysis workflow including QC, read mapping, visualization in a genome browser and peak-calling
+- Use the GenePattern platform for each step of the workflow and feel the complexity of the task
+- Have an overview of possible downstream analyses
+- Perform a motif analysis with online web programs"
+  - id: metagenomics 
+    title: "Metagenomics"
+    description: "TBC"
+maintainers:
+- janick-bits 
+
+references:
+
