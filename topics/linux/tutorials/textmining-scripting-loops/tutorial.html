@@ -1,4 +1,3 @@
---- ---
 <!doctype html>
 <html lang="en">
 
@@ -263,7 +262,7 @@ echo "$goodday, $USER !"
 
 <blockquote>
   <p>One way of doing this is:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> nano buddy
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nano buddy
 </code></pre></div>  </div>
 </blockquote>
 
@@ -354,7 +353,7 @@ Doing great, bits !
 
 <blockquote>
   <p>The last line of your script should be ‘exit 0’. If bash reaches this lines, it means that the script was successfully executed. Add it by opening the file with ‘nano’ and modifying its contents.</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ cat buddy.sh 
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cat buddy.sh 
 #!/bin/bash
 badday="Cheer up"
 goodday="Doing great"
@@ -391,7 +390,7 @@ exit 0
 
 <blockquote>
   <p>Download the bed file <a href="http://data.bits.vib.be/pub/trainingen/Linux/TAIR9_mRNA.bed">here</a> via command line</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget https://dl.dropbox.com/u/18352887/TAIR9_mRNA.bed
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget http://data.bits.vib.be/pub/trainingen/Linux/TAIR9_mRNA.bed
 </code></pre></div>  </div>
 </blockquote>
 
@@ -426,7 +425,7 @@ chr2	14578629	14581727	AT2G34630.1	0	+	14579725	14581632	0	11	203,96,81,72,132,8
 </code></pre></div>  </div>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gunzip Homo_sapiens.dna.chromosome21.zip
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>unzip Homo_sapiens.dna.chromosome21.zip
 </code></pre></div></div>
 
 <p>Entries in a fasta file start with &gt;</p>
@@ -603,7 +602,7 @@ Another example: Show all Arabidopsis mRNA with more than 50 exons</p>
 <h2 id="bash-aliases-to-enhance-your-productivity">Bash Aliases to enhance your productivity</h2>
 
 <p>You specify aliases in the <strong>.bashrc file</strong> in your home directory.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>alias myalias## "&lt;my fancy command&gt;"
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>alias myalias="&lt;my fancy command&gt;"
 </code></pre></div></div>
 
 <p>Change ‘my fancy command’ to a real command!!
@@ -626,7 +625,7 @@ Sometimes you might want to open a big text file from the end on, and start scro
 <blockquote>
   <p>Type “/at the end” and <ENTER>. Less will search in the content for "at the end". Examine the entries with the string./ Go to the following result by typing "/" followed by ENTER.
 The option is: add the alias by opening .bashrc with an editor, and adding the line:</ENTER></p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>alias sell## "less +G"
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>alias sell="less +G"
 </code></pre></div>  </div>
 </blockquote>
 
