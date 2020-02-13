@@ -35,7 +35,7 @@ echo "$goodday, $USER !"
 
 > One way of doing this is:
 ```
- nano buddy
+nano buddy
 ```
 
 > and copy of the contents of the header above. Save the contents by pressing <ctrl>+O. Close nano with <ctrl>+x
@@ -115,7 +115,7 @@ $ mv buddy{,.sh}
 
 >The last line of your script should be 'exit 0'. If bash reaches this lines, it means that the script was successfully executed. Add it by opening the file with 'nano' and modifying its contents.
 ```
- $ cat buddy.sh 
+$ cat buddy.sh 
 #!/bin/bash
 badday="Cheer up"
 goodday="Doing great"
@@ -148,7 +148,7 @@ Let's try a small script below.
 
 > Download the bed file [here](http://data.bits.vib.be/pub/trainingen/Linux/TAIR9_mRNA.bed) via command line 
 ```
-wget https://dl.dropbox.com/u/18352887/TAIR9_mRNA.bed
+wget http://data.bits.vib.be/pub/trainingen/Linux/TAIR9_mRNA.bed
 ```
 
 > Look at the first 10 lines of this file. 
@@ -180,7 +180,7 @@ wget https://data.bits.vib.be/pub/trainingen/Linux/Homo_sapiens.dna.chromosome21
 ```
 
 ```
-gunzip Homo_sapiens.dna.chromosome21.zip
+unzip Homo_sapiens.dna.chromosome21.zip
 ```
 
 Entries in a fasta file start with > 
@@ -345,7 +345,7 @@ awk '{ print $4,",",$11 }'  TAIR9_mRNA.bed
 
 You specify aliases in the **.bashrc file** in your home directory. 
 ```
-alias myalias## "<my fancy command>"
+alias myalias="<my fancy command>"
 ```
 
 Change 'my fancy command' to a real command!!
@@ -369,7 +369,7 @@ $ man less
 > Type "/at the end" and <ENTER>. Less will search in the content for "at the end". Examine the entries with the string./ Go to the following result by typing "/" followed by ENTER.
 > The option is: add the alias by opening .bashrc with an editor, and adding the line:
 ```
-alias sell## "less +G"
+alias sell="less +G"
 ```
 
 > When you have changed the content of .bashrc, it needs to be reloaded. Close your terminal and fire it up again. OR execute:
