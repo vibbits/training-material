@@ -4,19 +4,14 @@ layout: tutorial_hands_on
 title: 04 Predicting the effect of a mutation on a protein structure
 zenodo_link: 'https://zenodo.org/record/3551686#.XdpXbOhKiUk'
 questions:
-- Which biological questions are addressed by the tutorial?
-- Which bioinformatics techniques are important to know for this type of data?
+- What is the effect of a point mutation on the structure of a protein?
+- How can you quantify the effect of the mutation by using FoldX?
 objectives:
-- The learning objectives are the goals of the tutorial
-- They will be informed by your audience and will communicate to them and to yourself
-  what you should focus on during the course
-- They are single sentences describing what a learner should be able to do once they
-  have completed the tutorial
-- You can use Bloom's Taxonomy to write effective learning objectives
+- Use FoldX to calculate the effect of a mutation
+- Estimate the effect of a mutation by using ddG of the FoldX energies 
 time_estimation: 30M
 key_points:
-- The take-home messages
-- They will appear at the end of the tutorial
+- By using FoldX, the stabilizing or destabilising effect of a mutation can be quantified
 contributors:
 - abotzki 
 - jvdurme 
@@ -92,7 +87,7 @@ FoldX assumes that the starting structure has been energy minimized. Although cr
 > Analyse > FoldX > Repair object 
 > ```
 > 
-> ![Select the object for repairing](../../images/Training_2.png "Select the object for repairing")
+> ![Select the object for repairing -80width](../../images/Training_2.png "Select the object for repairing")
 > 
 > And select the only object in the list.
 {: .hands_on}
@@ -105,14 +100,12 @@ Because we will continue working with this Repaired Object, we can now hide the 
 
 # How to analyze a mutation 
 
-TODO: text is missing
-
 FoldX has mutated the Ala to Trp and the structure with the Trp mutation has been loaded in the next Object (3) and is superposed with the wild type (WT, Object 2). We selected an option to show the VdW clashes in WT and mutant. The atoms that give rise to steric clashes are colored in red. Toggle the Visibility of Object 2 (WT) and Object 3 (mutant) and see how many clashes we introduced by mutating the Ala to Trp.
 
 
-![Zoomed-in-view on the original Ala159, no Vander Waals clashes here](../../images/Training_7.png "Zoomed-in-view on the original Ala159, no Vander Waals clashes here")
+![Zoomed-in-view on the original Ala159, no Vander Waals clashes here -80width](../../images/Training_7.png "Zoomed-in-view on the original Ala159, no Vander Waals clashes here")
 
-![Zoomed-in-view on the mutated Ala159Trp, lots of red Vander Waals clashes here](../../images/Training_8.png "Zoomed-in-view on the mutated Ala159Trp, lots of red Vander Waals clashes here")
+![Zoomed-in-view on the mutated Ala159Trp, lots of red Vander Waals clashes here -80width](../../images/Training_8.png "Zoomed-in-view on the mutated Ala159Trp, lots of red Vander Waals clashes here")
 
 
 > ### {% icon question %} Questions
@@ -128,7 +121,7 @@ FoldX has mutated the Ala to Trp and the structure with the Trp mutation has bee
 > Open the Console by pressing the spacebar twice and see the free energy change of the mutation. 
 > Anything above a change of +0.5kcal/mol is already assumed to be destabilizing.
 > In the console - to open press spacebar twice - we see an energy change of +29 kcal/mol.
-> ![In the console - to open press spacebar twice - we see an energy change of +29 kcal/mol.](../../images/Training_9.png "Open the console to explore the situation.")
+> ![In the console - to open press spacebar twice - we see an energy change of +29 kcal/mol. -80width](../../images/Training_9.png "Open the console to explore the situation.")
 > This is clearly a destabilizing mutation.
 > </details>
 {: .question}
@@ -148,7 +141,7 @@ Show atoms > Sidechain and CA and zoom in on Arg273
 
 Notice how the positively charged Arginine is making an electrostatic interaction with the negative phosphate from the DNA backbone.
 
-![R273 makes an electrostatic interaction with the DNA phosphate groups.](../../images/Training_10.png "R273 makes an electrostatic interaction with the DNA phosphate groups.")
+![R273 makes an electrostatic interaction with the DNA phosphate groups. -80width](../../images/Training_10.png "R273 makes an electrostatic interaction with the DNA phosphate groups.")
 
 Let's see what would happen to the interaction energy between the DNA and P53 when we mutate this Arginine to Alanine.
 
@@ -165,7 +158,7 @@ A number of menus is now presented and here is what you need to do in each menu:
 3. 'Move neighbours' and 'Show disrupted and new hydrogen bonds'
 4. Don't change any numerical options in the last menu
 
-![View of the first options menu with 'Show new and disrupted hydrogen bondsxi' selected.](../../images/Training_11.png "View of the first options menu with 'Show new and disrupted hydrogen bonds' selected.")
+![View of the first options menu with 'Show new and disrupted hydrogen bondsxi' selected. -80width](../../images/Training_11.png "View of the first options menu with 'Show new and disrupted hydrogen bonds' selected.")
 
 > ### {% icon question %} Questions
 > 
