@@ -169,7 +169,7 @@
   },
   "url": "https://material.bits.vib.be//topics/protein-structure-analysis/tutorials/mutate-structure/tutorial.html",
   "timeRequired": "PT30M",
-  "description": "04 Predicting the effect of a mutation on a protein structure\\nThe questions this  addresses are:\n - Which biological questions are addressed by the tutorial?\n - Which bioinformatics techniques are important to know for this type of data?\n\n\\nThe objectives are:\n - The learning objectives are the goals of the tutorial\n - They will be informed by your audience and will communicate to them and to yourself what you should focus on during the course\n - They are single sentences describing what a learner should be able to do once they have completed the tutorial\n - You can use Bloom's Taxonomy to write effective learning objectives\n\n",
+  "description": "04 Predicting the effect of a mutation on a protein structure\\nThe questions this  addresses are:\n - What is the effect of a point mutation on the structure of a protein?\n - How can you quantify the effect of the mutation by using FoldX?\n\n\\nThe objectives are:\n - Use FoldX to calculate the effect of a mutation\n - Estimate the effect of a mutation by using ddG of the FoldX energies\n\n",
   "hasPart": [
 
   ],
@@ -226,22 +226,18 @@
             <strong><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</strong>
             <ul>
             
-            <li>Which biological questions are addressed by the tutorial?</li>
+            <li>What is the effect of a point mutation on the structure of a protein?</li>
             
-            <li>Which bioinformatics techniques are important to know for this type of data?</li>
+            <li>How can you quantify the effect of the mutation by using FoldX?</li>
             
             </ul>
 
             <strong><i class="fa fa-bullseye" aria-hidden="true"></i><span class="visually-hidden">objectives</span> Objectives</strong>
             <ul>
             
-            <li>The learning objectives are the goals of the tutorial</li>
+            <li>Use FoldX to calculate the effect of a mutation</li>
             
-            <li>They will be informed by your audience and will communicate to them and to yourself what you should focus on during the course</li>
-            
-            <li>They are single sentences describing what a learner should be able to do once they have completed the tutorial</li>
-            
-            <li>You can use Bloom's Taxonomy to write effective learning objectives</li>
+            <li>Estimate the effect of a mutation by using ddG of the FoldX energies</li>
             
             </ul>
 
@@ -324,7 +320,7 @@
   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Analyse &gt; FoldX &gt; Repair object 
 </code></pre></div>  </div>
 
-  <figure id="figure-2"><img src="../../images/Training_2.png" alt="Select the object for repairing" /><figcaption><span class="figcaption-prefix">Figure 2:</span> Select the object for repairing</figcaption></figure>
+  <figure id="figure-2"><img src="../../images/Training_2.png" alt="Select the object for repairing -80width" /><figcaption><span class="figcaption-prefix">Figure 2:</span> Select the object for repairing</figcaption></figure>
 
   <p>And select the only object in the list.</p>
 </blockquote>
@@ -337,13 +333,11 @@
 
 <h1 id="how-to-analyze-a-mutation">How to analyze a mutation</h1>
 
-<p>TODO: text is missing</p>
-
 <p>FoldX has mutated the Ala to Trp and the structure with the Trp mutation has been loaded in the next Object (3) and is superposed with the wild type (WT, Object 2). We selected an option to show the VdW clashes in WT and mutant. The atoms that give rise to steric clashes are colored in red. Toggle the Visibility of Object 2 (WT) and Object 3 (mutant) and see how many clashes we introduced by mutating the Ala to Trp.</p>
 
-<figure id="figure-3"><img src="../../images/Training_7.png" alt="Zoomed-in-view on the original Ala159, no Vander Waals clashes here" /><figcaption><span class="figcaption-prefix">Figure 3:</span> Zoomed-in-view on the original Ala159, no Vander Waals clashes here</figcaption></figure>
+<figure id="figure-3"><img src="../../images/Training_7.png" alt="Zoomed-in-view on the original Ala159, no Vander Waals clashes here -80width" /><figcaption><span class="figcaption-prefix">Figure 3:</span> Zoomed-in-view on the original Ala159, no Vander Waals clashes here</figcaption></figure>
 
-<figure id="figure-4"><img src="../../images/Training_8.png" alt="Zoomed-in-view on the mutated Ala159Trp, lots of red Vander Waals clashes here" /><figcaption><span class="figcaption-prefix">Figure 4:</span> Zoomed-in-view on the mutated Ala159Trp, lots of red Vander Waals clashes here</figcaption></figure>
+<figure id="figure-4"><img src="../../images/Training_8.png" alt="Zoomed-in-view on the mutated Ala159Trp, lots of red Vander Waals clashes here -80width" /><figcaption><span class="figcaption-prefix">Figure 4:</span> Zoomed-in-view on the mutated Ala159Trp, lots of red Vander Waals clashes here</figcaption></figure>
 
 <blockquote class="question">
   <h3 id="question-questions"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</h3>
@@ -359,7 +353,7 @@ Do you see a difference around the mutation site between WT and mutant?</p>
 Open the Console by pressing the spacebar twice and see the free energy change of the mutation. 
 Anything above a change of +0.5kcal/mol is already assumed to be destabilizing.
 In the console - to open press spacebar twice - we see an energy change of +29 kcal/mol.</p>
-    <figure id="figure-5"><img src="../../images/Training_9.png" alt="In the console - to open press spacebar twice - we see an energy change of +29 kcal/mol." /><figcaption><span class="figcaption-prefix">Figure 5:</span> Open the console to explore the situation.</figcaption></figure>
+    <figure id="figure-5"><img src="../../images/Training_9.png" alt="In the console - to open press spacebar twice - we see an energy change of +29 kcal/mol. -80width" /><figcaption><span class="figcaption-prefix">Figure 5:</span> Open the console to explore the situation.</figcaption></figure>
     <p>This is clearly a destabilizing mutation.</p>
   </details>
 </blockquote>
@@ -376,7 +370,7 @@ First turn on all atoms in the molecules G and H (DNA) again as you did previous
 
 <p>Notice how the positively charged Arginine is making an electrostatic interaction with the negative phosphate from the DNA backbone.</p>
 
-<figure id="figure-6"><img src="../../images/Training_10.png" alt="R273 makes an electrostatic interaction with the DNA phosphate groups." /><figcaption><span class="figcaption-prefix">Figure 6:</span> R273 makes an electrostatic interaction with the DNA phosphate groups.</figcaption></figure>
+<figure id="figure-6"><img src="../../images/Training_10.png" alt="R273 makes an electrostatic interaction with the DNA phosphate groups. -80width" /><figcaption><span class="figcaption-prefix">Figure 6:</span> R273 makes an electrostatic interaction with the DNA phosphate groups.</figcaption></figure>
 
 <p>Let’s see what would happen to the interaction energy between the DNA and P53 when we mutate this Arginine to Alanine.</p>
 
@@ -394,7 +388,7 @@ First turn on all atoms in the molecules G and H (DNA) again as you did previous
   <li>Don’t change any numerical options in the last menu</li>
 </ol>
 
-<figure id="figure-7"><img src="../../images/Training_11.png" alt="View of the first options menu with 'Show new and disrupted hydrogen bondsxi' selected." /><figcaption><span class="figcaption-prefix">Figure 7:</span> View of the first options menu with 'Show new and disrupted hydrogen bonds' selected.</figcaption></figure>
+<figure id="figure-7"><img src="../../images/Training_11.png" alt="View of the first options menu with 'Show new and disrupted hydrogen bondsxi' selected. -80width" /><figcaption><span class="figcaption-prefix">Figure 7:</span> View of the first options menu with 'Show new and disrupted hydrogen bonds' selected.</figcaption></figure>
 
 <blockquote class="question">
   <h3 id="question-questions-1"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</h3>
@@ -435,9 +429,7 @@ And what is the reason?</li>
 
                         <ul>
                             
-                            <li>The take-home messages</li>
-                            
-                            <li>They will appear at the end of the tutorial</li>
+                            <li>By using FoldX, the stabilizing or destabilising effect of a mutation can be quantified</li>
                             
                         </ul>
                     </blockquote>
