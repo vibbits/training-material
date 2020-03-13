@@ -1,0 +1,23 @@
+---
+name: python-programming
+type: basics
+category: programming
+title: Gentle hands-on introduction to Python programming
+summary: During this course you'll get to learn all the basics and peculiarities of Python with the help of plenty hands-on exercises related to bioinformatics or Life Sciences data-analyses. 
+
+extra: data_analysis_python
+
+#requirements:
+#- type: internal
+# topic_name: introduction
+
+#docker_image: ''
+maintainers:
+ - tmuylder
+
+references:
+ -
+   authors: "Wim Vrancken"
+   title: "Gentle hands-on introduction to Python programming"
+   link: "https://wiki.bits.vib.be/index.php/Python_training_material#Python"
+   summary: "This course is based on the original content from Wim Vrancken"
