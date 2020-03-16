@@ -48,7 +48,7 @@ For reference, see the [Docker documentation on publishing images](https://docs.
 We would like to thank all contributors, especially those mentioned in the [Contributors list](CONTRIBUTORS.yaml).
 
 # Remarks:
-Within the conda environment `base` you can add a new topic and tutorial with 
+Within the conda environment `environment.yml` you can add a new topic and tutorial with 
 ```
 planemo training_init --topic_name "my-topic" --tutorial_name "my-new-tutorial2" --tutorial_title "Title of the tutorial"
 ```
@@ -58,6 +58,8 @@ Thereafter, remove any placeholder contributor and replace with the real ones in
 Adapt the file `topics/<new topic>/metadata.yaml` to follow this template, the keywords for `category` can be `software`, `omics`, `basics`, `advanced`, `programming`, `statistics`, and `admin-dev`.
 
 The type must be `basics` to display the link to the slides and the hands-on materials.
+
+Make sure that the folder metadata contains a symbolic link to the new topic. 
 
 ```
 ---
