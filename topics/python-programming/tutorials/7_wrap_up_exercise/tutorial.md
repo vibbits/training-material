@@ -14,8 +14,6 @@ contributors:
 ---
 
 
-# 7. Wrap-up exercise
-*Practice makes perfect*  
 
 As we introduced a lot of new concepts it is important that you practice them.
 

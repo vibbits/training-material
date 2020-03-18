@@ -3,10 +3,10 @@ layout: tutorial_hands_on
 
 title: 08 Dictionaries
 questions:
-- 
+- Combine a set of values
 objectives:
-- 
-time_estimation: 20m
+- Use Dictionaries to combine sets of values. 
+time_estimation: 20 min
 key_points:
 - 
 contributors:
@@ -15,156 +15,274 @@ contributors:
 ---
 
 
-# Introduction
-{:.no_toc}
+## 8.1 Introduction
 
-<!-- This is a comment. -->
-
-General introduction about the topic and then an introduction of the
-tutorial (the questions and the objectives). It is nice also to have a
-scheme to sum up the pipeline used during the tutorial. The idea is to
-give to trainees insight into the content of the tutorial and the (theoretical
-and technical) key concepts they will learn.
-
-You may want to cite some publications; this can be done by adding citations to the
-bibliography file (`tutorial.bib` file next to your `tutorial.md` file). These citations
-must be in bibtex format. If you have the DOI for the paper you wish to cite, you can
-get the corresponding bibtex entry using [doi2bib.org](https://doi2bib.org).
-
-With the example you will find in the `tutorial.bib` file, you can add a citation to
-this article here in your tutorial like this:
-{% raw %} `{% cite Batut2018 %}`{% endraw %}.
-This will be rendered like this: {% cite Batut2018 %}, and links to a
-[bibliography section](#bibliography) which will automatically be created at the end of the
-tutorial.
+So far we've seen variables that store one value or a series of values (see [section 5](../5_lists_and_tuples/tutorial.md): lists, tuples and sets). There is another way of storing information where you associate one variable with another; in Python this is called a dictionary. Dictionaries provide a very useful way of quickly connecting variables to each other.
 
 
-**Please follow our
-[tutorial to learn how to fill the Markdown]({{ site.baseurl }}/topics/contributing/tutorials/create-new-tutorial-content/tutorial.html)**
+## 8.2 Dictionary creation & usage
 
-> ### Agenda
+It is best to think of a dictionary as a set of *key:value* pairs, with the requirement that the keys are unique (within one dictionary). Dictionaries are initiated by using curly brackets {}, placing a comma-separated list of *key:value* pairs adds initial *key:value* pairs to the dictionary. This is how a dictionary would look like:
+
+
+![Gentle-hands-on-introduction-to-Python-Programming Python Dictionary](../../images/myDictionary-cropped.PNG)
+
+
+
+
+
+```python
+myDictionary = {'A': 'Ala', 'C': 'Cys', 'D': 'Asp'}
+myDictionary
+```
+
+You can recall or add values by using square brackets [ ] with the name of the key, or use the `get()`-method. 
+
+
+```python
+myDictionary['A']
+```
+
+
+```python
+myDictionary.get('C')
+```
+
+If you would like to add a new pair of key-value: 
+
+
+```python
+myDictionary['E'] = 'Glu'
+myDictionary
+```
+
+Note however that keys are unique and if you try to add a key that already exists. with a different value, it will overwrite it. 
+
+
+```python
+myDictionary['A'] = 'Glu'
+myDictionary
+```
+
+So keys are unique, values are not!
+
+Dictionaries, like lists, have several useful built-in methods. The most frequently used are listed here below:
+- `keys()`	to list the dictionary's keys
+- `values()` to list the values in the dictionary
+- `get()`	call the value of a specified key
+- `pop()`	to remove the specified key and its values
+
+
+```python
+myDictionary = {'A': 'Ala', 'C': 'Cys', 'D': 'Asp', 'E': 'Glu'}
+list(myDictionary.keys())
+```
+
+
+```python
+list(myDictionary.values())
+```
+
+
+```python
+myDictionary.pop('E')
+myDictionary
+```
+
+If you try to access a key that doesn't exist, Python will give an error:
+
+
+```python
+myDictionary = {'A': 'Ala', 'C': 'Cys', 'D': 'Asp', 'E': 'Glu'}
+ 
+print(myDictionary['B'])
+```
+
+You should therefore always check whether a key exists:
+
+
+
+```python
+# Newlines don't matter when initialising a dictionary...
+myDictionary = {
+     'A': 'Ala',
+     'C': 'Cys',
+     'D': 'Asp',
+     'E': 'Glu',
+     'F': 'Phe',
+     'G': 'Gly',
+     'H': 'His',
+     'I': 'Ile',
+     'K': 'Lys',
+     'L': 'Leu',
+     'M': 'Met',
+     'N': 'Asn',
+     'P': 'Pro',
+     'Q': 'Gln',
+     'R': 'Arg',
+     'S': 'Ser',
+     'T': 'Thr',
+     'V': 'Val',
+     'W': 'Trp',
+     'Y': 'Tyr'}
+
+if 'B' in myDictionary.keys():
+    print(myDictionary['B'])
+else:
+    print("myDictionary doesn't have key 'B'!")
+```
+
+---
+
+> ### {% icon hands_on %} Exercise 8.2.1 
 >
-> In this tutorial, we will cover:
->
-> 1. TOC
-> {:toc}
->
-{: .agenda}
-
-# Title for your first section
-
-Give some background about what the trainees will be doing in the section.
-Remember that many people reading your materials will likely be novices,
-so make sure to explain all the relevant concepts.
-
-## Title for a subsection
-Section and subsection titles will be displayed in the tutorial index on the left side of
-the page, so try to make them informative and concise!
-
-# Hands-on Sections
-Below are a series of hand-on boxes, one for each tool in your workflow file.
-Often you may wish to combine several boxes into one or make other adjustments such
-as breaking the tutorial into sections, we encourage you to make such changes as you
-see fit, this is just a starting point :)
-
-Anywhere you find the word "***TODO***", there is something that needs to be changed
-depending on the specifics of your tutorial.
-
-have fun!
-
-## Get data
-
-> ### {% icon hands_on %} Hands-on: Data upload
->
-> 1. Create a new history for this tutorial
-> 2. Import the files from [Zenodo]() or from the shared data library
->
->    ```
->    
->    ```
->    ***TODO***: *Add the files by the ones on Zenodo here (if not added)*
->
->    ***TODO***: *Remove the useless files (if added)*
->
->    {% include snippets/import_via_link.md %}
->    {% include snippets/import_from_data_library.md %}
->
-> 3. Rename the datasets
-> 4. Check that the datatype
->
->    {% include snippets/change_datatype.md datatype="datatypes" %}
->
-> 5. Add to each database a tag corresponding to ...
->
->    {% include snippets/add_tag.md %}
->
-{: .hands_on}
-
-# Title of the section usually corresponding to a big step in the analysis
-
-It comes first a description of the step: some background and some theory.
-Some image can be added there to support the theory explanation:
-
-![Alternative text](../../images/image_name "Legend of the image")
-
-The idea is to keep the theory description before quite simple to focus more on the practical part.
-
-***TODO***: *Consider adding a detail box to expand the theory*
-
-> ### {% icon details %} More details about the theory
->
-> But to describe more details, it is possible to use the detail boxes which are expandable
->
-{: .details}
-
-A big step can have several subsections or sub steps:
-
-
-## Sub-step with **My Tool**
-
-> ### {% icon hands_on %} Hands-on: Task description
->
-> 1. **My Tool** {% icon tool %} with the following parameters:
->    - {% icon param-file %} *"Input file"*: File
->    - *"Parameter"*: `a value`
->
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > ### {% icon comment %} Comment
+> Use a dictionary to track how many times each amino acid code appears in the following sequence:
+> ```
+> SFTMHGTPVVNQVKVLTESNRISHHKILAIVGTAESNSEHPLGTAITKYCKQELDTETLGTCIDFQVVPGCGISCKVTNIEGLLHKNNWNIED  
+> NNIKNASLVQIDASNEQSSTSSSMIIDAQISNALNAQQYKVLIGNREWMIRNGLVINNDVNDFMTEHERKGRTAVLVAVDDELCGLIAIADT
+> ```
+> Tip: use the one-letter code as key in the dictionary, and the count as value.
+> 
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
+>    > ```python
+>    > # Use a dictionary to track how many times each amino acid code appears in the following sequence:
+>    > # SFTMHGTPVVNQVKVLTESNRISHHKILAIVGTAESNSEHPLGTAITKYCKQELDTETLGTCIDFQVVPGCGISCKVTNIEGLLHKNNWNIEDNNIKNASLVQIDASNEQSSTSSSMIIDAQISNALNAQQYKVLIGNREWMIRNGLVINNDVNDFMTEHERKGRTAVLVAVDDELCGLIAIADT
+>    > # Tip: use the one-letter code as key in the dictionary, and the count as value. 
+>    > mySequence = "SFTMHGTPVVNQVKVLTESNRISHHKILAIVGTAESNSEHPLGTAITKYCKQELDTETLGTCIDFQVVPGCGISCKVTNIEGLLHKNNWNIEDNNIKNASLVQIDASNEQSSTSSSMIIDAQISNALNAQQYKVLIGNREWMIRNGLVINNDVNDFMTEHERKGRTAVLVAVDDELCGLIAIADT"
+>    >  
+>    > # First way to do this, using sets (condensed)
+>    > aminoAcidCount = {}
+>    > myUniqueAminoAcids = set(mySequence)
+>    > for aaCode in myUniqueAminoAcids:
+>    >     print("Amino acid {} occurs {} times.".format(aaCode,mySequence.count(aaCode)))
+>    >     aminoAcidCount[aaCode] = mySequence.count(aaCode)
+>    > ```
+>    > 
+>    > </details>
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
+>    >
+>    > ```python
+>    > # Another way to do this, a little bit more elaborate and using the myDictionary as a reference for iteration
+>    > mySequence = "SFTMHGTPVVNQVKVLTESNRISHHKILAIVGTAESNSEHPLGTAITKYCKQELDTETLGTCIDFQVVPGCGISCKVTNIEGLLHKNNWNIEDNNIKNASLVQIDASNEQSSTSSSMIIDAQISNALNAQQYKVLIGNREWMIRNGLVINNDVNDFMTEHERKGRTAVLVAVDDELCGLIAIADT"
+>    > 
+>    > myDictionary = {
+>    >      'A': 'Ala',
+>    >      'C': 'Cys',
+>    >      'D': 'Asp',
+>    >      'E': 'Glu',
+>    >      'F': 'Phe',
+>    >      'G': 'Gly',
+>    >      'H': 'His',
+>    >      'I': 'Ile',
+>    >      'K': 'Lys',
+>    >      'L': 'Leu',
+>    >      'M': 'Met',
+>    >      'N': 'Asn',
+>    >      'P': 'Pro',
+>    >      'Q': 'Gln',
+>    >      'R': 'Arg',
+>    >      'S': 'Ser',
+>    >      'T': 'Thr',
+>    >      'V': 'Val',
+>    >      'W': 'Trp',
+>    >      'Y': 'Tyr'}
+>    > 
+>    > lengthDict = len(myDictionary.keys())
+>    > for aa in range(lengthDict):
+>    >     aaCode = list(myDictionary.keys())[aa]
+>    >     aaCount = mySequence.count(aaCode)
+>    >     print("Amino acid {} occurs {} times.".format(aaCode,aaCount))
+>    > ```
+>    > 
+>    > </details>
 >
 {: .hands_on}
 
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
 
-> ### {% icon question %} Questions
->
-> 1. Question1?
-> 2. Question2?
->
-> > ### {% icon solution %} Solution
-> >
-> > 1. Answer for question1
-> > 2. Answer for question2
-> >
-> {: .solution}
->
-{: .question}
+## 8.3 A practical example of dictionaries
+An practical example of dictionaries can be found in Biopython. Imagine that we want to extract some information from a GenBank file ([NC_005816](https://www.ncbi.nlm.nih.gov/nuccore/NC_005816/))   
 
 
-## Re-arrange
+```python
+# Imports the SeqIO object from Biopython
+from Bio import SeqIO
 
-To create the template, each step of the workflow had its own subsection.
+# Reads in (just one record of) the GenBank file
+record = SeqIO.read("data/NC_005816.gb","genbank")
+print(record)
+```
 
-***TODO***: *Re-arrange the generated subsections into sections or other subsections.
-Consider merging some hands-on boxes to have a meaningful flow of the analyses*
+The SeqRecord object (which we see here) has an id, name and description as well as a sequence. For other (miscellaneous) annotations, the SeqRecord object has a dictionary attribute *annotations*. Most of the annotations information gets recorded in the annotations dictionary.
 
-# Conclusion
-{:.no_toc}
 
-Sum up the tutorial and the key takeaways here. We encourage adding an overview image of the
-pipeline used.
+```python
+print(record.id)
+print(record.name)
+print(record.description)
+#print(record.seq)
+```
+
+
+```python
+record.annotations
+```
+
+
+```python
+record.annotations['organism']
+```
+
+
+```python
+record.annotations['source']
+```
+
+(In general, `organism` is used for the scientific name (in Latin, e.g. *Arabidopsis thaliana*), while `source`
+will often be the common name (e.g. thale cress). In this example, as is often the case, the two fields are
+identical.)
+
+
+```python
+record.annotations['accessions'] # This could be a list of values, hence the list. 
+```
+
+## 8.4 More with dictionaries
+As mentioned here above, you can have a dictionary with a list of values for one key:
+
+
+```python
+TriplicateExp1 = {'name': 'experiment 1', 'pH': 5.6, 'temperature': 288.0, 'volume': 200, 'calibration':'cal1', 'date':['01-01-2020','02-01-2020']}
+TriplicateExp1
+```
+
+You can, however, only use variables that cannot change keys (so tuples are OK, lists are not), and keys have to be unique: if you add a key that already exists, the old entry will be overwritten:
+
+
+```python
+dates = ('date1','date2') # tuple
+
+TriplicateExp1[dates] = ['01-01-2020','02-01-2020']
+TriplicateExp1
+```
+
+It is also possible to have a so-called nested dictionary, in which there is a dictionary within a dictionary. 
+
+
+```python
+TriplicateExp2 = {'name': 'experiment 2', 'pH': 5.8, 'temperature': 286.0, 'volume': 200, 'calibration':'cal1', 'date':'03-01-2020'}
+TriplicateExp3 = {'name': 'experiment 3', 'pH': 5.4, 'temperature': 287.0, 'volume': 200, 'calibration':'cal1', 'date':'04-01-2020'}
+Triplicate = {
+    'exp1':TriplicateExp1,
+    'exp2':TriplicateExp2,
+    'exp3':TriplicateExp3
+}
+Triplicate
+```
+
+## 8.5 Conclusion
+
