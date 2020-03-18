@@ -317,7 +317,7 @@ print("My string converted to float is {}".format(float(myFloatString)))
 
 
 ---
-> ### {% icon hands_on %} Hands-on: Exercise 2.6.1
+> ### {% icon hands_on %} Exercise 2.6.1
 >
 > Write a program where you ask for a number, convert it to an integer, and print out in a formatted string what your number is.
 > 
