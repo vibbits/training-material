@@ -1,7 +1,7 @@
 ---
 layout: tutorial_hands_on
 
-title: Introduction
+title: 01 Introduction
 # zenodo_link: ''
 # questions:
 # - Which biological questions are addressed by the tutorial?
@@ -13,10 +13,10 @@ title: Introduction
 # - They are single sentences describing what a learner should be able to do once they
 #   have completed the tutorial
 # - You can use Bloom's Taxonomy to write effective learning objectives
-# time_estimation: 3H
-# key_points:
-# - The take-home messages
-# - They will appear at the end of the tutorial
+time_estimation: 3H
+key_points:
+ - Jupyter-notebook & insight of the course
+
 contributors:
 - tmuylder
 
