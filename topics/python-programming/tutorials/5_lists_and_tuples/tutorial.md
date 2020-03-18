@@ -3,168 +3,447 @@ layout: tutorial_hands_on
 
 title: 05 Lists and Tuples
 questions:
-- 
+- How to combine multiple values in one variable
 objectives:
-- 
-time_estimation: 20m
+- Use Lists and Tuples to collect multiple values within one variable
+- Learn how to create and convert different types of variables 
+time_estimation: 30 min
 key_points:
-- 
+- Use Lists and Tuples to collect multiple values within one variable
+- Learn how to create and convert different types of variables 
 contributors:
 - tmuylder
 
 ---
 
 
-# Introduction
-{:.no_toc}
 
-<!-- This is a comment. -->
+## 5.1 Introduction
 
-General introduction about the topic and then an introduction of the
-tutorial (the questions and the objectives). It is nice also to have a
-scheme to sum up the pipeline used during the tutorial. The idea is to
-give to trainees insight into the content of the tutorial and the (theoretical
-and technical) key concepts they will learn.
+So far we've seen variables where you essentially assign a value to a name that you can use in the program. It is also possible to assign groups of values to a name, in Python these are called *lists* and *tuples* - variables that contain multiple values in a fixed order. Python also has *sets*, which are also variables that contain multiple values, but in no particular order. In [section 8](8_Dictionaries.ipynb) we will also discuss dictionaries. By means of a brief summary, already in this stage; there are four collection data types in Python:
+- `List` is a collection which is ordered and changeable. Allows duplicate members. Use square brackets [] for lists.
+- `Tuple` is a collection which is ordered and unchangeable. Allows duplicate members. Use normal brackets () for tuples.
+- `Set` is a collection which is unordered and unindexed. No duplicate members. Use curly brackets {} for sets. 
+- `Dictionary` is a collection which is unordered, changeable and indexed. No duplicate members. Use curly brackets {} for dictionaries (see [section 8](8_Dictionaries.ipynb)).
 
-You may want to cite some publications; this can be done by adding citations to the
-bibliography file (`tutorial.bib` file next to your `tutorial.md` file). These citations
-must be in bibtex format. If you have the DOI for the paper you wish to cite, you can
-get the corresponding bibtex entry using [doi2bib.org](https://doi2bib.org).
-
-With the example you will find in the `tutorial.bib` file, you can add a citation to
-this article here in your tutorial like this:
-{% raw %} `{% cite Batut2018 %}`{% endraw %}.
-This will be rendered like this: {% cite Batut2018 %}, and links to a
-[bibliography section](#bibliography) which will automatically be created at the end of the
-tutorial.
+They are useful in different circumstances, which we'll try to explain below.
 
 
-**Please follow our
-[tutorial to learn how to fill the Markdown]({{ site.baseurl }}/topics/contributing/tutorials/create-new-tutorial-content/tutorial.html)**
 
-> ### Agenda
+
+## 5.2 Lists and range
+
+You can make your own Python list from scratch:
+
+
+```python
+myList = [5,3,56,13,33]
+myList
+```
+
+You can also use the `range()` function. Try this:
+
+
+
+```python
+myList = list(range(10))
+myList
+```
+
+You should get the following output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]. This is a list of integers - you can recognize a list by the square [ ] brackets. **Note** that Python always starts counting from 0. The command above will give you a series of integers starting from 0 and stopping at the number you defined, however with this number **not** included in the list. Hence, it stops at 9. You can start from a different number as well:
+
+
+```python
+myList = list(range(3,12))
+myList
+```
+
+or increase the step size (the default is step size is 1):
+
+
+
+
+```python
+myList = list(range(1,12,2))
+myList
+```
+
+An important feature of lists is that they are flexible - you can add and remove values, change the order, ... . You can do such modifications by calling a *method* from the list itself. Some examples of methods are:
+- Add elements
+    - `append()` to append an item to the end of the list
+    - `insert()` to add an item at the specified index
+    - `extend()` to extend an item
+- Delete elements
+    - `remove()` to remove the specified item
+    - `pop()` to remove the specified index (or the last item if index is not specified)
+    - `del` keyword removes the specified index
+    - `clear()` method empties the list
+- Sorting:
+    - `sort()` will sort the list in an ordered way
+    - `reverse()` will reverse the order of the list
+- Copy of a list with the `copy()` method
+
+
+
+```python
+myList = []             # Create an empty list
+myList.append(5)        # Add a single value to the back of the list
+myList
+```
+
+
+```python
+myList.insert(0,9)      # Insert a value in the list at index (element position) 0
+myList
+```
+
+
+```python
+myList.extend([99,3,5]) # Extend the list with another list
+myList
+```
+
+
+```python
+myList[0]               # Return the first element in the list (counting starts at zero) 
+```
+
+
+```python
+myList[2]               # Return the third element in the list
+```
+
+
+```python
+myRemovedElement = myList.pop(3)  # Remove the fourth element in the list and return it
+print("I removed {}".format(myRemovedElement))
+myList
+```
+
+
+```python
+myList.sort()           # You can sort the elements in a list - this will change their order
+myList
+```
+
+
+```python
+myList.reverse()        # Or reverse the order of the list
+myList
+```
+
+You can also select a slice from a list - this will give you a new list:
+
+
+```python
+myList = list(range(15))
+ 
+myListSlice = myList[3:6]
+myListSlice
+```
+
+
+```python
+myListCopy = myList[:]
+print(myListCopy)
+```
+
+
+```python
+print(myList[-4:])     # This will select the fourth-last to the last element in the list
+```
+
+There are two other methods you can use on lists:
+- `index()` returns the index of the first element with the specified value
+- `count()` returns the number of elements with the specified value
+
+
+```python
+myList = list(range(1,15))
+myList
+```
+
+
+```python
+myList.count(10)   # Will count the amount of times the value 10 occurs in this list
+```
+
+
+```python
+myList.count("A")  # This always works, and will return 0 if nothing is found
+```
+
+
+```python
+myList.index(10)   # Will give the index of the element with value 10 - in this case 9 because the list index starts at 0.
+```
+
+
+```python
+#print(myList.index("A"))  # This will crash the program - the value to look for has to be present in the list!!!
+```
+
+
+
+---
+
+> ### {% icon hands_on %} Exercise 5.2.1
 >
-> In this tutorial, we will cover:
->
-> 1. TOC
-> {:toc}
->
-{: .agenda}
-
-# Title for your first section
-
-Give some background about what the trainees will be doing in the section.
-Remember that many people reading your materials will likely be novices,
-so make sure to explain all the relevant concepts.
-
-## Title for a subsection
-Section and subsection titles will be displayed in the tutorial index on the left side of
-the page, so try to make them informative and concise!
-
-# Hands-on Sections
-Below are a series of hand-on boxes, one for each tool in your workflow file.
-Often you may wish to combine several boxes into one or make other adjustments such
-as breaking the tutorial into sections, we encourage you to make such changes as you
-see fit, this is just a starting point :)
-
-Anywhere you find the word "***TODO***", there is something that needs to be changed
-depending on the specifics of your tutorial.
-
-have fun!
-
-## Get data
-
-> ### {% icon hands_on %} Hands-on: Data upload
->
-> 1. Create a new history for this tutorial
-> 2. Import the files from [Zenodo]() or from the shared data library
->
->    ```
->    
->    ```
->    ***TODO***: *Add the files by the ones on Zenodo here (if not added)*
->
->    ***TODO***: *Remove the useless files (if added)*
->
->    {% include snippets/import_via_link.md %}
->    {% include snippets/import_from_data_library.md %}
->
-> 3. Rename the datasets
-> 4. Check that the datatype
->
->    {% include snippets/change_datatype.md datatype="datatypes" %}
->
-> 5. Add to each database a tag corresponding to ...
->
->    {% include snippets/add_tag.md %}
->
-{: .hands_on}
-
-# Title of the section usually corresponding to a big step in the analysis
-
-It comes first a description of the step: some background and some theory.
-Some image can be added there to support the theory explanation:
-
-![Alternative text](../../images/image_name "Legend of the image")
-
-The idea is to keep the theory description before quite simple to focus more on the practical part.
-
-***TODO***: *Consider adding a detail box to expand the theory*
-
-> ### {% icon details %} More details about the theory
->
-> But to describe more details, it is possible to use the detail boxes which are expandable
->
-{: .details}
-
-A big step can have several subsections or sub steps:
-
-
-## Sub-step with **My Tool**
-
-> ### {% icon hands_on %} Hands-on: Task description
->
-> 1. **My Tool** {% icon tool %} with the following parameters:
->    - {% icon param-file %} *"Input file"*: File
->    - *"Parameter"*: `a value`
->
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > ### {% icon comment %} Comment
+> Take the list [54,56,2,1,5223,6,23,57,3,7,3344], sort it in reverse order (largest value first) and print out the third value.
+> 
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
+>    >  ```python
+>    >  # Take the list [54,56,2,1,5223,6,23,57,3,7,3344], sort it in reverse order (largest value first) and print out the third value.
+>    >  myList = [54,56,2,1,5223,6,23,57,3,7,3344]
+>    >  
+>    >  myList.sort()
+>    >  myList.reverse()
+>    >  
+>    >  print(myList[2])
+>    >  #The first element is at index 0, the third at index 3!
+>    >  ```
+>    > </details>
 >
 {: .hands_on}
+---
 
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
 
-> ### {% icon question %} Questions
+## 5.3 Tuples  
+Similar to *lists* are *tuples* - essentially they are the same, except that a tuple cannot be modified once created. This can be useful for values that don't change, like (part of) the alphabet for example:
+
+
+```python
+myTuple = ("A","B","C","D","E","F")
+myTuple
+```
+
+Important to remember is that if you create a tuple with one value you have to use a comma:
+
+
+```python
+myTuple = ("My string",)
+myTuple
+```
+
+
+```python
+myWrongTuple = ("My string")  # The brackets here don't do anything.
+myWrongTuple
+```
+
+A tuple is indicated by round brackets **( )**. You can interconvert between lists and tuples by using `list()` and `tuple()`:
+
+
+
+
+```python
+myTuple = ("A","B","C","D","E","F")
+myList = list(range(10))
+ 
+myNewTuple = tuple(myList)
+myNewList = list(myTuple)
+ 
+print("{} and {}".format(myList, myNewTuple))
+print("{} and {}".format(myTuple, myNewList))
+```
+
+You can find out the length (number of elements) in a list or tuple with `len()`:
+
+
+```python
+myTuple = ("A","B","C","D","E","F")
+myTupleLength = len(myTuple)
+myTupleLength
+```
+
+Tuples are faster during iteration procedures due to their immutability. 
+
+
+
+---
+
+> ### {% icon hands_on %} Exercise 5.3.1
 >
-> 1. Question1?
-> 2. Question2?
+> Start with the tuple `('a','B','c','D','e','F')`, sort it, take the fourth value out, and print the result.
+> 
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
+>    >
+>    >  ```python
+>    >  # Start with the tuple ('a','B','c','D','e','F'), sort it, take the fourth value out, and print the result.
+>    >  myTuple = ('a','B','c','D','e','F')
+>    >  myList = list(myTuple)
+>    >  myList.sort()
+>    >  #print(myList)
+>    >  
+>    >  print ("Removing {}".format(myList.pop(3)))
+>    >  print ("Result is {}".format(str(tuple(myList))))
+>    >  ```
+>    > </details>
 >
-> > ### {% icon solution %} Solution
-> >
-> > 1. Answer for question1
-> > 2. Answer for question2
-> >
-> {: .solution}
+{: .hands_on}
+---
+
+
+
+
+## 5.4 Strings
+**Strings are a bit like lists and tuples** 
+
+Strings are really a sequence of characters, and they behave similar to lists:
+
+
+```python
+myString = "This is a sentence."
+ 
+myString[0:5]          # Take the first five characters
+```
+
+
+```python
+myString.count("e")    # Count the number of 'e' characters
+```
+
+
+```python
+myString.index("i")    # Give the index of the first 'i' character
+```
+
+You cannot re-assign strings as you do with lists though, the following example does not work:
+
+
+```python
+myString = "   This is a sentence.  "
+```
+
+
+```python
+print(myString.upper())       # Upper-case all characters
+```
+
+
+```python
+print(myString.lower())       # Lower-case all characters
+```
+
+
+```python
+print(myString.strip())       # Strip leading and trailing spaces/tabs/newlines
+```
+
+
+```python
+print(myString.split())       # Split the line into elements - default is splitting by whitespace characters
+```
+
+
+```python
+print(myString.replace(' is ',' was '))  # Replace ' is ' by ' was '. Spaces are necessary, otherwise the 'is' in 'This' will be replaced!
+```
+
+A list with all string methods and a full description can be found in the [Python documentation](https://docs.python.org/3/library/stdtypes.html#string-methods), or simply type `dir(myString)`
+
+
+```python
+dir(myString)
+```
+
+
+---
+> ### {% icon hands_on %} Exercise 5.4.1
 >
-{: .question}
+> Ask the user for two words, then check whether they are the same (upper or lower case should not matter),if not check whether they have the same first letter (again case should not matter). If not, then print their length. 
+> 
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
+>    >
+>    >  ```python
+>    >  # Ask the user for two words, then check whether they are the same (upper or lower case should not matter),if not check whether they have the same first letter (again case >    >  should not matter). If not, then print their length. 
+>    >  firstWord = input("Give first word:")
+>    >  secondWord = input("Give second word:")
+>    >  
+>    >  print(len(firstWord))
+>    >  
+>    >  if firstWord.upper() == secondWord.upper():
+>    >      print("Words are the same (ignoring case).")
+>    >  elif firstWord[0].upper() == secondWord[0].upper():
+>    >      print("Words share the same first letter (ignoring case).")
+>    >  else:
+>    >      print("Word lengths are {} and {}".format(int((len(firstWord))),int(len(secondWord))))
+>    >  ```
+>    > </details>
+>
+{: .hands_on}
+---
+
+## 5.5 Sets  
+Very useful as well are sets. These are unordered and unindexed (so the order in which you put in elements doesn't matter), and it is much easier to compare them to each other. Because sets cannot have multiple occurrences of the same element, it makes sets highly useful to efficiently remove duplicate values from a list or tuple and to perform common math operations like unions and intersections.
+
+![sets](../../images/Python-Set-Operatioons.png)
+Source: https://www.learnbyexample.org/python-set/
+
+You initialise them by using **set()** on a list or tuple:
 
 
-## Re-arrange
+```python
+mySet1 = set(range(10))
+mySet2 = set(range(5,20))
+ 
+print(mySet1)
+print(mySet2)
+ 
+mySet.add(5)  # Elements in a set are unique - the set will not change because it already has a 5
+ 
+print(mySet1.intersection(mySet2))
+print(mySet1.union(mySet2))
+```
 
-To create the template, each step of the workflow had its own subsection.
 
-***TODO***: *Re-arrange the generated subsections into sections or other subsections.
-Consider merging some hands-on boxes to have a meaningful flow of the analyses*
+```python
+dir(mySet1)
+```
 
-# Conclusion
-{:.no_toc}
+The principle of using intersection and union is the same as the Venn diagrams you probably saw in school... You can also make a set out of a string:
 
-Sum up the tutorial and the key takeaways here. We encourage adding an overview image of the
-pipeline used.
+
+```python
+myString = "This is a sentence."
+ 
+myLetters = set(myString)
+myLetters    # Note that an upper case T and lower case t are not the same!
+```
+
+There are more things you can do with sets which we will not go into here, see the [Python sets](https://docs.python.org/3/library/stdtypes.html#types-set) documentation for more information.
+
+---
+> ### {% icon hands_on %} Exercise 5.5.1
+>
+> Which letters are shared between the words "perspicacious" and "circumlocution"?
+> 
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
+>    >
+>    >  ```python
+>    >  # Which letters are shared between the words "perspicacious" and "circumlocution"?
+>    >  firstWord = "perspicacious"
+>    >  secondWord = "circumlocution"
+>    >  
+>    >  firstLetterSet = set(firstWord)
+>    >  secondLetterSet = set(secondWord)
+>    >  
+>    >  print(firstLetterSet.intersection(secondLetterSet))
+>    >  ```
+>    > </details>
+>
+{: .hands_on}
+---
+
+
+## 5.6 Conclusion
+Each data-type has its own advantage. On a small-case example this might not be noticable, however on a larger scale using the right data-type can save you a lot of time. 

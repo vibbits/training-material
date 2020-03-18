@@ -14,11 +14,6 @@ contributors:
 
 ---
 
-
-
-# 4. Conditions
-*Decide what to do based on x and y*.
-
 ## 4.1 Introduction
 Programs start to become more interesting if you can do different things depending on the input. For this, you have to use *conditions*, which we will discuss in this section. 
 
@@ -276,4 +271,3 @@ You can modify the value of x a bit to see what else can happen. Can you spot a 
 
 ## 4.6 Conclusion
 The ´if-elif-else´ condition allows you to only execute a bit of code if a (set of) condition(s) is satisfied.
-
