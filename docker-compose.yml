@@ -3,7 +3,7 @@ version: '3'
 services:
   jekyll:
     container_name: training-material
-    image: vibbioinfocore/training-material:devel
+    image: vibbioinfocore/training-material:clean
     volumes:
       - ./404.md:/site/404.md
       - ./about.md:/site/about.md
