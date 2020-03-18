@@ -3,10 +3,13 @@ layout: tutorial_hands_on
 
 title: 02 Variables and Operators
 questions:
-- 
+- Which variables does Python have?
+- Which operators are there?
 objectives:
-- 
-time_estimation: 20m
+- Learn Python's built-in data types
+- How to assign a value to a variable
+- How to compare values within variables using operators
+time_estimation: 20 min
 key_points:
 - Assign a value to a variable
 - Compare variables and their values with operators
