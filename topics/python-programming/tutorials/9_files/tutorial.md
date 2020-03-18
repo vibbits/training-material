@@ -3,168 +3,320 @@ layout: tutorial_hands_on
 
 title: 09 Files
 questions:
-- 
+- How to read and write files
 objectives:
-- 
-time_estimation: 20m
+- Exploit different ways of reading in files
+- Open & close files appropriately
+time_estimation: 30 min
 key_points:
-- 
+- Exploit different ways of reading in files
+- Open & close files appropriately
 contributors:
 - tmuylder
 
 ---
 
 
-# Introduction
-{:.no_toc}
+## 9.1 Introduction
 
-<!-- This is a comment. -->
+More often than not the data you need for your program will come from somewhere else - either from user input or a file. Especially for more complex data it becomes essential to be able to read in data files, do something with the data, and write out a new file with modified information or a set of analysis results.
 
-General introduction about the topic and then an introduction of the
-tutorial (the questions and the objectives). It is nice also to have a
-scheme to sum up the pipeline used during the tutorial. The idea is to
-give to trainees insight into the content of the tutorial and the (theoretical
-and technical) key concepts they will learn.
-
-You may want to cite some publications; this can be done by adding citations to the
-bibliography file (`tutorial.bib` file next to your `tutorial.md` file). These citations
-must be in bibtex format. If you have the DOI for the paper you wish to cite, you can
-get the corresponding bibtex entry using [doi2bib.org](https://doi2bib.org).
-
-With the example you will find in the `tutorial.bib` file, you can add a citation to
-this article here in your tutorial like this:
-{% raw %} `{% cite Batut2018 %}`{% endraw %}.
-This will be rendered like this: {% cite Batut2018 %}, and links to a
-[bibliography section](#bibliography) which will automatically be created at the end of the
-tutorial.
+## 9.2 Reading files
+ 
+To read in a file you have to create a *file handle*. This is a sort of connection to the file that you can use to pull data from it. You create a connection to a file by using the **open()** function. Whenever you're done using the file, it's good practice to close the file handle. 
 
 
-**Please follow our
-[tutorial to learn how to fill the Markdown]({{ site.baseurl }}/topics/contributing/tutorials/create-new-tutorial-content/tutorial.html)**
+```python
+# Open the file
+fileHandle = open("data/readfile.txt")  
+# Close the file
+fileHandle.close()
+# Nothing happened...
+```
 
-> ### Agenda
+All this does, is creating this connection, the file has not been read. In order to read in a file, there are a couple of possibilities:
+- `readline()` - read the first line of the file as one string.* 
+- `readlines()` - read all of the lines in the file. Each line is one string. The lines are combined as a list of lines (strings). 
+- `read()` - read the whole file as one string. 
+S
+
+
+```python
+fileHandle = open("data/readfile.txt")  
+fileHandle.read()
+```
+
+
+```python
+fileHandle.close()
+```
+
+
+```python
+fileHandle = open("data/readfile.txt")   
+fileHandle.readline()
+```
+
+
+```python
+fileHandle.close()
+```
+
+
+```python
+fileHandle = open("data/readfile.txt")   
+fileHandle.readlines()
+```
+
+
+```python
+fileHandle.close()
+```
+
+Knowing this we can move on to more complex examples. First make sure to find the PDB file *TestFile.PDB* in your data folder or download [this fake PDB coordinate file for a 5 residue peptide](http://wiki.bits.vib.be/images/3/3a/TestFile.pdb) and save it in the data directory. 
+
+In the example below we will read all the lines in the file (as separated by a newline character), and store them in the variable *lines*. Each element in this list corresponds to one line of the file! When this is done, we close the file. 
+
+
+```python
+# Read in the file per line
+fileHandle = open("data/TestFile.pdb")
+lines = fileHandle.readlines()
+ 
+# Close the file
+fileHandle.close()
+ 
+# Print number of lines in the file
+print("There are:", len(lines), "lines in the file")
+
+# Loop over the lines, and do some basic string manipulations
+for line in lines:
+    line = line.strip()  # Remove starting and trailing spaces/tabs/newlines
+    print(line)
+```
+
+
+```python
+line = lines[10]
+line = line.strip().split()
+line[-1]
+```
+
+Now you can do many other things with the data in the file. E.g. if you want to count the number of times a carbon element appears in the file. 
+
+
+```python
+# Open the file
+fileHandle = open("data/TestFile.pdb")
+ 
+# Read all the lines in the file (as separated by a newline character), and store them in the lines list
+# Each element in this list corresponds to one line of the file!
+lines = fileHandle.readlines()
+ 
+# Close the file
+fileHandle.close()
+ 
+# Initialise the line counter
+lineCount = 0
+ 
+# Loop over the lines
+for line in lines:
+    columns = line.strip().split()
+    if columns[-1] == 'C':       # Alternatively, use "if ' C ' in line:"
+        print(line, end='')     # Using the 'end' argument in the print because the line already contains a newline at the end
+                                # otherwise will get double spacing.
+        lineCount += 1
+
+print("Number of lines with ' C ': {}".format(lineCount))
+```
+
+You should find 75 lines - note that in this case, for those who know the PDB format a bit, you're finding all carbon atoms.
+
+## 9.3 Writing a file
+Writing a file is very similar, except that you have to let Python know you are writing this time by adding the `'w'` parameter in the `open()` function. Actually Python needs two arguments, however it assumes that if you only give one parameter (the file that it has to read), the other one is `'r'` which stands for *reading* mode. 
+
+For the sake of the example, we're writing something new in the `readfile.txt`:
+
+
+```python
+f = open('data/writefile.txt','w')
+f.write('Now we have a new file \n')
+f.write('Because Python automatically makes this file and writes some text to it.')
+f.write('Btw, if you don\'t specify the newline characters, it will append the string at the end of the last line')
+f.close()
+f = open('data/writefile.txt')
+text = f.read()
+print(text)
+f.close()
+```
+
+**Be careful** - if the file exists already it will be overwritten without warning!
+
+The file is written to the directory you're executing the program in - have a look!
+
+Now we will read in a file, extract all the lines that contain "VAL" and write out all those lines to a new variable and then make a file from it. 
+
+----
+
+> ### {% icon hands_on %} Exercise 9.3.1
 >
-> In this tutorial, we will cover:
->
-> 1. TOC
-> {:toc}
->
-{: .agenda}
-
-# Title for your first section
-
-Give some background about what the trainees will be doing in the section.
-Remember that many people reading your materials will likely be novices,
-so make sure to explain all the relevant concepts.
-
-## Title for a subsection
-Section and subsection titles will be displayed in the tutorial index on the left side of
-the page, so try to make them informative and concise!
-
-# Hands-on Sections
-Below are a series of hand-on boxes, one for each tool in your workflow file.
-Often you may wish to combine several boxes into one or make other adjustments such
-as breaking the tutorial into sections, we encourage you to make such changes as you
-see fit, this is just a starting point :)
-
-Anywhere you find the word "***TODO***", there is something that needs to be changed
-depending on the specifics of your tutorial.
-
-have fun!
-
-## Get data
-
-> ### {% icon hands_on %} Hands-on: Data upload
->
-> 1. Create a new history for this tutorial
-> 2. Import the files from [Zenodo]() or from the shared data library
->
->    ```
->    
->    ```
->    ***TODO***: *Add the files by the ones on Zenodo here (if not added)*
->
->    ***TODO***: *Remove the useless files (if added)*
->
->    {% include snippets/import_via_link.md %}
->    {% include snippets/import_from_data_library.md %}
->
-> 3. Rename the datasets
-> 4. Check that the datatype
->
->    {% include snippets/change_datatype.md datatype="datatypes" %}
->
-> 5. Add to each database a tag corresponding to ...
->
->    {% include snippets/add_tag.md %}
->
-{: .hands_on}
-
-# Title of the section usually corresponding to a big step in the analysis
-
-It comes first a description of the step: some background and some theory.
-Some image can be added there to support the theory explanation:
-
-![Alternative text](../../images/image_name "Legend of the image")
-
-The idea is to keep the theory description before quite simple to focus more on the practical part.
-
-***TODO***: *Consider adding a detail box to expand the theory*
-
-> ### {% icon details %} More details about the theory
->
-> But to describe more details, it is possible to use the detail boxes which are expandable
->
-{: .details}
-
-A big step can have several subsections or sub steps:
-
-
-## Sub-step with **My Tool**
-
-> ### {% icon hands_on %} Hands-on: Task description
->
-> 1. **My Tool** {% icon tool %} with the following parameters:
->    - {% icon param-file %} *"Input file"*: File
->    - *"Parameter"*: `a value`
->
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > ### {% icon comment %} Comment
+> Read in the file from the previous example, and write out all lines that contain 'VAL' to a new file.
+> 
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
+>    >  ```python
+>    > # Read the file
+>    > f = open("data/TestFile.pdb","r")
+>    > g = open('data/withval.pdb','w')
+>    > 
+>    > # Loop over the lines
+>    > for line in f:
+>    >     if 'VAL' in line:      # Alternatively, use "if ' C ' in line:"
+>    >         if 'ATOM' in line:
+>    >             g.write(line)
+>    > f.close()
+>    > g.close()
+>    >  ```
+>    > </details>
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
+>    >
+>    >  ```python
+>    > # Open the file
+>    > fileHandle = open("data/TestFile.pdb")
+>    > 
+>    > # Read all the lines in the file (as separated by a newline character), and store them in the lines list
+>    > # Each element in this list corresponds to one line of the file!
+>    > lines = fileHandle.readlines()
+>    >  
+>    > # Close the file
+>    > fileHandle.close()
+>    >  
+>    > # Track the lines with VAL
+>    > linesToWrite = []
+>    >  
+>    > # Loop over the lines
+>    > for line in lines:
+>    >     if line.count("VAL"):      # Alternatively, use "if ' C ' in line:"
+>    >         linesToWrite.append(line)
+>    > 
+>    > # Write out the lines
+>    > fileHandle = open("data/fileWithVAL.pdb",'w')
+>    > for line in linesToWrite:
+>    >     fileHandle.write(line)
+>    > 
+>    > # Close the file
+>    > fileHandle.close()
+>    >  ```
+>    > </details>
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
+>    >
+>    >  ```python
+>    > # Read the file
+>    > f = open("data/TestFile.pdb","r")
+>    > 
+>    > # Track the lines with VAL
+>    > linesToWrite = []
+>    > 
+>    > # Loop over the lines
+>    > for line in f.readlines():
+>    >     if line.count("VAL"):      # Alternatively, use "if ' C ' in line:"
+>    >         linesToWrite.append(line)
+>    > 
+>    > # Write out the lines
+>    > fileHandle = open("data/fileWithVAL.pdb",'w')
+>    > for line in linesToWrite:
+>    >     fileHandle.write(line)
+>    > 
+>    > # Close the file
+>    > fileHandle.close()
+>    >  ```
+>    > </details>
 >
 {: .hands_on}
 
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
 
-> ### {% icon question %} Questions
+
+## 9.4 Advanced file reading and interpretation 
+
+> ### {% icon hands_on %} Exercise 9.4.1
 >
-> 1. Question1?
-> 2. Question2?
+> Read in the TestFile.pdb atom coordinate file, print out the title of the file, and find all atoms that have coordinates closer than 2 angstrom to the (x,y,z) coordinate (-8.7,-7.7,4.7). Print out the model number, residue number, atom name and atom serial for each; the model is indicated by:
+> ```
+> MODEL     1
+> ```
+> lines, the atom coordinate information is in:
+> ```
+> ATOM      1  N   ASP A   1     -10.341  -9.922   9.398  1.00  0.00           N
+> ```
+> lines, where column 1 is always ATOM, column 2 is the atom serial,  column 3 the atom name, column 4 the residue name, column 5 the chain code, column 6 the residue number, followed by the x, y and z coordinates in angstrom in columns 7, 8 and 9.
+> 
+> note that the distance between two coordinates is calculated as the square root of (x1-x2)²+(y1-y2)²+(z1-z2)².
+> 
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
+>    >
+>    >  ```python
+>    > # Open the file
+>    > fileHandle = open("data/TestFile.pdb")
+>    >  
+>    > # Read all the lines in the file (as separated by a newline character), and store them in the lines list
+>    > # Each element in this list corresponds to one line of the file!
+>    > lines = fileHandle.readlines()
+>    >  
+>    > # Close the file
+>    > fileHandle.close()
+>    >  
+>    > # Initialise some information
+>    > searchCoordinate = (-8.7,-7.7,4.7)
+>    > modelNumber = None
+>    >  
+>    > # Loop over the lines, and do some basic string manipulations
+>    > for line in lines:
+>    >     line = line.strip()  # Remove starting and trailing spaces/tabs/newlines
+>    >     
+>    >     # Only do something if it's not an empty line
+>    >     if line:
+>    >         cols = line.split()   # Split the line by white spaces; depending on the format this could be commas, ...
+>    >  
+>    >     # Print the title
+>    >     if cols[0] == 'TITLE':
+>    >         title = line.replace(cols[0],'')
+>    >         title = title.strip()
+>    >         print("The title is '{}'".format(title))
+>    >  
+>    >     # Track the model number
+>    >     elif cols[0] == 'MODEL':
+>    >         modelNumber = int(cols[1])
+>    >  
+>    >     # For atom lines, calculate the distance
+>    >     elif cols[0] == 'ATOM':
+>    >  
+>    >         # Set some clear variable names and convert to the right type
+>    >         atomSerial = int(cols[1])
+>    >         atomName = cols[2]
+>    >         residueNumber = int(cols[5])
+>    >         x = float(cols[6])
+>    >         y = float(cols[7])
+>    >         z = float(cols[8])
+>    >  
+>    >         # Calculate the distance
+>    >         distance = ((x - searchCoordinate[0]) ** 2 + (y - searchCoordinate[1]) ** 2 + (z - searchCoordinate[2]) ** 2 ) ** 0.5
+>    >         if distance < 2.0:
+>    >             print("Model {}, residue {}, atom {} (serial {}) is {:.2f} away from reference.".format(modelNumber,residueNumber,atomName,atomSerial,distance))
+>    > 
+>    >  ```
+>    > </details>
 >
-> > ### {% icon solution %} Solution
-> >
-> > 1. Answer for question1
-> > 2. Answer for question2
-> >
-> {: .solution}
->
-{: .question}
+{: .hands_on} 
 
 
-## Re-arrange
 
-To create the template, each step of the workflow had its own subsection.
-
-***TODO***: *Re-arrange the generated subsections into sections or other subsections.
-Consider merging some hands-on boxes to have a meaningful flow of the analyses*
-
-# Conclusion
-{:.no_toc}
-
-Sum up the tutorial and the key takeaways here. We encourage adding an overview image of the
-pipeline used.
+## 9.5 Next session
+Conclusion
