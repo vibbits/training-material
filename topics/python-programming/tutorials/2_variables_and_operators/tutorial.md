@@ -20,7 +20,10 @@ contributors:
 
 
 # 2. Variables & operators
+{:.toc}
 ## 2.1 Introduction
+{:.toc}
+
 Just printing things is not that interesting, what you really want to do with a computer program is manipulate data. This is why variables are so important - they allow you to assign information to a name that you can re-use later on.
 
 In this section we will introduce the basic types of variables and how you can manipulate them. Just to get started, we give an overview of the different **built-in data types** that are present in Python and which you can assign to a variable. Although this variety of data types exist, not all of them will be discussed in this course.
@@ -45,6 +48,7 @@ In this section, we will cover the text type, numeric types (complex are out of 
 This section doesn't really include any exercises. Try to follow and code along while we scroll through the examples so you start to have a feeling of it.
 
 ## 2.2 Strings
+{:.toc}
 We already saw strings in the previous section. You can assign a string to a variable like this:
 
 
@@ -98,6 +102,7 @@ myString
 ```
 
 ## 2.3 Strings from user input
+
 Python provides a very simple way to get user input. This input is always returned as a string, so try the following:
 
 
