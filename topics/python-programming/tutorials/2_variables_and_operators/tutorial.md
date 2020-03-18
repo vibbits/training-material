@@ -315,17 +315,25 @@ print("My string converted to integer is {}".format(int(myIntegerString)))
 print("My string converted to float is {}".format(float(myFloatString)))
 ```
 
----
-### 2.6.1 Exercises
-
-Write a program where you ask for a number, convert it to an integer, and print out in a formatted string what your number is.
 
 ---
-
-
-```python
-
-```
+> ### {% icon hands_on %} Hands-on: Exercise 2.6.1
+>
+> Write a program where you ask for a number, convert it to an integer, and print out in a formatted string what your number is.
+> 
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
+>    >
+>    >  ```python
+>    >  myFloatString = input("Give me a number:")
+>    >  myInteger = int(float(myFloatString))
+>    >  print("My number in integer form is {}".format(myInteger))
+>    >  ```
+>    > </details>
+>
+{: .hands_on}
+--- 
 
 You can also add, substract, divide and multiple a variable by a number or other variable directly. These are the so-called assignment operators.
 
