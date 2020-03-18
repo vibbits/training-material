@@ -3,168 +3,103 @@ layout: tutorial_hands_on
 
 title: 07 Wrap-up exercise
 questions:
-- 
+- This section combines all of the previous tutorials in one complex exercise
 objectives:
-- 
-time_estimation: 20m
-key_points:
-- 
+- Exploit basic Python built-in features in a more difficult set-up. 
+time_estimation: 1 h
+
 contributors:
 - tmuylder
 
 ---
 
 
-# Introduction
-{:.no_toc}
+# 7. Wrap-up exercise
+*Practice makes perfect*  
 
-<!-- This is a comment. -->
+As we introduced a lot of new concepts it is important that you practice them.
 
-General introduction about the topic and then an introduction of the
-tutorial (the questions and the objectives). It is nice also to have a
-scheme to sum up the pipeline used during the tutorial. The idea is to
-give to trainees insight into the content of the tutorial and the (theoretical
-and technical) key concepts they will learn.
+----
 
-You may want to cite some publications; this can be done by adding citations to the
-bibliography file (`tutorial.bib` file next to your `tutorial.md` file). These citations
-must be in bibtex format. If you have the DOI for the paper you wish to cite, you can
-get the corresponding bibtex entry using [doi2bib.org](https://doi2bib.org).
-
-With the example you will find in the `tutorial.bib` file, you can add a citation to
-this article here in your tutorial like this:
-{% raw %} `{% cite Batut2018 %}`{% endraw %}.
-This will be rendered like this: {% cite Batut2018 %}, and links to a
-[bibliography section](#bibliography) which will automatically be created at the end of the
-tutorial.
-
-
-**Please follow our
-[tutorial to learn how to fill the Markdown]({{ site.baseurl }}/topics/contributing/tutorials/create-new-tutorial-content/tutorial.html)**
-
-> ### Agenda
+> ### {% icon hands_on %} Exercise 7
 >
-> In this tutorial, we will cover:
->
-> 1. TOC
-> {:toc}
->
-{: .agenda}
-
-# Title for your first section
-
-Give some background about what the trainees will be doing in the section.
-Remember that many people reading your materials will likely be novices,
-so make sure to explain all the relevant concepts.
-
-## Title for a subsection
-Section and subsection titles will be displayed in the tutorial index on the left side of
-the page, so try to make them informative and concise!
-
-# Hands-on Sections
-Below are a series of hand-on boxes, one for each tool in your workflow file.
-Often you may wish to combine several boxes into one or make other adjustments such
-as breaking the tutorial into sections, we encourage you to make such changes as you
-see fit, this is just a starting point :)
-
-Anywhere you find the word "***TODO***", there is something that needs to be changed
-depending on the specifics of your tutorial.
-
-have fun!
-
-## Get data
-
-> ### {% icon hands_on %} Hands-on: Data upload
->
-> 1. Create a new history for this tutorial
-> 2. Import the files from [Zenodo]() or from the shared data library
->
->    ```
->    
->    ```
->    ***TODO***: *Add the files by the ones on Zenodo here (if not added)*
->
->    ***TODO***: *Remove the useless files (if added)*
->
->    {% include snippets/import_via_link.md %}
->    {% include snippets/import_from_data_library.md %}
->
-> 3. Rename the datasets
-> 4. Check that the datatype
->
->    {% include snippets/change_datatype.md datatype="datatypes" %}
->
-> 5. Add to each database a tag corresponding to ...
->
->    {% include snippets/add_tag.md %}
->
-{: .hands_on}
-
-# Title of the section usually corresponding to a big step in the analysis
-
-It comes first a description of the step: some background and some theory.
-Some image can be added there to support the theory explanation:
-
-![Alternative text](../../images/image_name "Legend of the image")
-
-The idea is to keep the theory description before quite simple to focus more on the practical part.
-
-***TODO***: *Consider adding a detail box to expand the theory*
-
-> ### {% icon details %} More details about the theory
->
-> But to describe more details, it is possible to use the detail boxes which are expandable
->
-{: .details}
-
-A big step can have several subsections or sub steps:
-
-
-## Sub-step with **My Tool**
-
-> ### {% icon hands_on %} Hands-on: Task description
->
-> 1. **My Tool** {% icon tool %} with the following parameters:
->    - {% icon param-file %} *"Input file"*: File
->    - *"Parameter"*: `a value`
->
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > ### {% icon comment %} Comment
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
+> Write a program that does the following:
+> 
+> 1. Ask the user for a full DNA sequence
+>     - Make sure the sequence contains only GACT
+> 2. Once you have a valid sequence
+>     - For each DNA fragment the user enters:
+>         - Check if it occurs in the full sequence
+>         - Print out the sequence position if so
+>         - Track each fragment
+>     - Keep on asking the user for DNA fragments, stop if they just press return
+> 3. As a summary, print out all fragments with their position that you tracked
+> 
+> **Tips** to complete this exercise in case you get stuck.
+> - Use while loops: you can use the condition to decide when to end the loop depending on the user input
+> - Track the sequence fragment and position data using a list
+> - Use string methods!
+> - To check the full DNA sequence, you can count how many times each GACT letter occurs, add up these counts, and compare this value to the total length of the full DNA sequence
+> 
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
+>    > 
+>    > ```python
+>    > # This variable will be used for the while loop
+>    > validSequence = False
+>    >  
+>    > # Keep on going as long as the DNA sequence is not valid
+>    > while not validSequence:
+>    >     # Get a string from the user
+>    >     fullDnaSequence = input("Please enter your full DNA sequence:")
+>    >     fullDnaSequence = fullDnaSequence.upper()
+>    >     
+>    >     # Count the GACT characters in the sequence
+>    >     gactCount = 0
+>    >     for code in 'GACT':
+>    >         gactCount += fullDnaSequence.count(code)
+>    >  
+>    >     # Check if the number of GACT characters matches the full length of the sequence
+>    >     # and set validSequence to True if so - this will stop the while: loop
+>    >     if gactCount == len(fullDnaSequence):
+>    >         validSequence = True
+>    >     else:
+>    >         print("\nInvalid sequence, only GACT allowed, try again!.\n")
+>    > 
+>    > # Print some line breaks
+>    > print("\n\n")
+>    >  
+>    > # Prime the list to track the DNA fragments and the variable for the while loop
+>    > dnaFragmentInfo = []
+>    > dnaFragment = input("Please give a DNA fragment to check:")
+>    >  
+>    > while dnaFragment:
+>    >     
+>    >     # Check if present at all
+>    >     dnaFragmentCount = fullDnaSequence.count(dnaFragment)
+>    >     if dnaFragmentCount:
+>    >         currentDnaSequenceIndex = 0
+>    >         for i in range(dnaFragmentCount):        
+>    >             # Equivalent to currentDnaSequenceIndex = currentDnaSequenceIndex + fullDna...
+>    >             currentDnaSequenceIndex += fullDnaSequence[currentDnaSequenceIndex:].index(dnaFragment)
+>    >  
+>    >             print("\n  Fragment {} present at position {}.\n".format(dnaFragment,currentDnaSequenceIndex + 1))
+>    >             dnaFragmentInfo.append((currentDnaSequenceIndex + 1,dnaFragment))
+>    >             currentDnaSequenceIndex += 1
+>    >     else:
+>    >         print("\n  Fragment {} not present!\n".format(dnaFragment))
+>    >  
+>    >     dnaFragment = input("Please give a DNA fragment to check:")
+>    > 
+>    > # Print some line breaks
+>    > print("\n\n")
+>    > 
+>    > # Print out the fragment information again, first sort it
+>    > dnaFragmentInfo.sort()
+>    > for (dnaFragmentPosition,dnaFragment) in dnaFragmentInfo:
+>    >     print("Found {} at position {}".format(dnaFragment,dnaFragmentPosition))
+>    > ```
+>    > </details>
 >
 {: .hands_on}
-
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
-
-> ### {% icon question %} Questions
->
-> 1. Question1?
-> 2. Question2?
->
-> > ### {% icon solution %} Solution
-> >
-> > 1. Answer for question1
-> > 2. Answer for question2
-> >
-> {: .solution}
->
-{: .question}
-
-
-## Re-arrange
-
-To create the template, each step of the workflow had its own subsection.
-
-***TODO***: *Re-arrange the generated subsections into sections or other subsections.
-Consider merging some hands-on boxes to have a meaningful flow of the analyses*
-
-# Conclusion
-{:.no_toc}
-
-Sum up the tutorial and the key takeaways here. We encourage adding an overview image of the
-pipeline used.
