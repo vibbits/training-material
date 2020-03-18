@@ -3,168 +3,277 @@ layout: tutorial_hands_on
 
 title: 04 Conditions
 questions:
-- 
+- How to perform part of a code only when a specific condition is met.
 objectives:
-- 
+- Use if-elif-else statements together with condition statements.
 time_estimation: 20m
 key_points:
-- 
+- Based on a condition, let Python only perform part of the code. 
 contributors:
 - tmuylder
 
 ---
 
 
-# Introduction
-{:.no_toc}
 
-<!-- This is a comment. -->
+# 4. Conditions
+*Decide what to do based on x and y*.
 
-General introduction about the topic and then an introduction of the
-tutorial (the questions and the objectives). It is nice also to have a
-scheme to sum up the pipeline used during the tutorial. The idea is to
-give to trainees insight into the content of the tutorial and the (theoretical
-and technical) key concepts they will learn.
+## 4.1 Introduction
+Programs start to become more interesting if you can do different things depending on the input. For this, you have to use *conditions*, which we will discuss in this section. 
 
-You may want to cite some publications; this can be done by adding citations to the
-bibliography file (`tutorial.bib` file next to your `tutorial.md` file). These citations
-must be in bibtex format. If you have the DOI for the paper you wish to cite, you can
-get the corresponding bibtex entry using [doi2bib.org](https://doi2bib.org).
+Decisions will be taken based on a condition. In this perspective, we highlight the booleans **True** and **False**, as well as the **None**-keyword once more.
 
-With the example you will find in the `tutorial.bib` file, you can add a citation to
-this article here in your tutorial like this:
-{% raw %} `{% cite Batut2018 %}`{% endraw %}.
-This will be rendered like this: {% cite Batut2018 %}, and links to a
-[bibliography section](#bibliography) which will automatically be created at the end of the
-tutorial.
+## 4.2 If statement
+
+The **if** condition allows you to only execute a bit of code if a (set of) condition(s) is satisfied. Python syntax requires that you put a colon : after the **if**, and that the *block* of code that is conditional is *indented* with the same amount of spaces (or tabs). Python doesn't really care about the number of spaces or tabs, as long as you're consistent. Jupyter notebook uses tabs, hence it is best to follow along. Now try this:
 
 
-**Please follow our
-[tutorial to learn how to fill the Markdown]({{ site.baseurl }}/topics/contributing/tutorials/create-new-tutorial-content/tutorial.html)**
+```python
+x = 5
+ 
+if x == 5:
+    print("x is five!")
 
-> ### Agenda
+if x!=5:
+    print("x is not five!")
+```
+
+you will see that only the block of code under x == 5 is printed out. You can of course make the conditions more complex and combine them with **and** and **or**:
+
+
+
+```python
+x = 5
+y = 10
+ 
+if (y / x) == 2:
+    print("y divided by x is 2!")
+
+if y == 10 or x == 2:
+    print("x is two or y is ten")
+    
+if y == 10 and x == 2:
+    print("x is two and y is ten")
+
+print("The end")
+```
+
+Here you see that the blocks for the first two conditions (which are True) are executed, but not the third. The last line of code is always printed off - it's on the same level as the start of the code, and not conditional.
+
+## 4.3 Indentation
+Python relies on indentation (whitespace at the beginning of a line) to define scope in the code. Other programming languages often use (curly) brackets for this purpose. The level of indentation is crucial, and Python will immediately give an error if there are inconsistent levels of indentation in the code. Try this:
+
+
+```python
+x = 5
+y = 10
+ 
+if (y / x) == 2:
+  print("y divided by x is 2!")
+   print ("And x is {}!".format(x))
+```
+
+Note that this can also happen if you start mixing space and tab characters!
+
+
+
+---
+
+> ### {% icon hands_on %} Exercise 4.3.1
 >
-> In this tutorial, we will cover:
->
-> 1. TOC
-> {:toc}
->
-{: .agenda}
-
-# Title for your first section
-
-Give some background about what the trainees will be doing in the section.
-Remember that many people reading your materials will likely be novices,
-so make sure to explain all the relevant concepts.
-
-## Title for a subsection
-Section and subsection titles will be displayed in the tutorial index on the left side of
-the page, so try to make them informative and concise!
-
-# Hands-on Sections
-Below are a series of hand-on boxes, one for each tool in your workflow file.
-Often you may wish to combine several boxes into one or make other adjustments such
-as breaking the tutorial into sections, we encourage you to make such changes as you
-see fit, this is just a starting point :)
-
-Anywhere you find the word "***TODO***", there is something that needs to be changed
-depending on the specifics of your tutorial.
-
-have fun!
-
-## Get data
-
-> ### {% icon hands_on %} Hands-on: Data upload
->
-> 1. Create a new history for this tutorial
-> 2. Import the files from [Zenodo]() or from the shared data library
->
->    ```
->    
->    ```
->    ***TODO***: *Add the files by the ones on Zenodo here (if not added)*
->
->    ***TODO***: *Remove the useless files (if added)*
->
->    {% include snippets/import_via_link.md %}
->    {% include snippets/import_from_data_library.md %}
->
-> 3. Rename the datasets
-> 4. Check that the datatype
->
->    {% include snippets/change_datatype.md datatype="datatypes" %}
->
-> 5. Add to each database a tag corresponding to ...
->
->    {% include snippets/add_tag.md %}
->
-{: .hands_on}
-
-# Title of the section usually corresponding to a big step in the analysis
-
-It comes first a description of the step: some background and some theory.
-Some image can be added there to support the theory explanation:
-
-![Alternative text](../../images/image_name "Legend of the image")
-
-The idea is to keep the theory description before quite simple to focus more on the practical part.
-
-***TODO***: *Consider adding a detail box to expand the theory*
-
-> ### {% icon details %} More details about the theory
->
-> But to describe more details, it is possible to use the detail boxes which are expandable
->
-{: .details}
-
-A big step can have several subsections or sub steps:
-
-
-## Sub-step with **My Tool**
-
-> ### {% icon hands_on %} Hands-on: Task description
->
-> 1. **My Tool** {% icon tool %} with the following parameters:
->    - {% icon param-file %} *"Input file"*: File
->    - *"Parameter"*: `a value`
->
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > ### {% icon comment %} Comment
+> Write a program where you ask the user for x and y, make sure that y is not zero, and print out x/y. 
+> 
+> ```python
+> # Modify the code below on the ... locations:
+> xString = input(...)
+> yString = input(...)
+> 
+> x = ...(xString)
+> y = ...(yString)
+> 
+> if ... :
+>     print("Error, your y-number is 0")
+> if ... : 
+>     print("x divided by y = {:.2f}".format(...))
+> ```
+> 
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
+>    >  ```python
+>    >  # Write a program where you ask the user for x and y, make sure that y is not zero, and print out x/y. 
+>    >  
+>    >  xString = input("Give a number: ")
+>    >  yString = input("Give another number that is not zero: ")
+>    >  
+>    >  x = float(xString)
+>    >  y = float(yString)
+>    >  
+>    >  if y == 0:
+>    >      print("Error, you're y-number is 0")
+>    >  if y != 0:
+>    >      result = x/y
+>    >      print("x divided by y = {:.2f}".format(result))
+>    >  ```
+>    > </details>
+>
+{: .hands_on}
+---
+
+## 4.4 Elif statement 
+
+Once you have an **if**-condition, you can directly follow it up with an **elif** (else if) condition. This is not the same as another **if**-statement. An **elif** is only executed if the previous if (and other preceding elifs) are not True. In the example below the code in section 4.3 is adapted. Now all if-statements are changed by elifs.
+
+
+```python
+x = 5
+y = 10
+ 
+if (y / x) == 2:
+    print("y divided by x is 2!")
+elif y == 10 or x == 2:
+    print("x is two or y is ten")
+elif y == 10 and x == 2:
+    print("x is two and y is ten")
+
+print("The end")
+```
+
+Now only the code under the first condition is executed, not the second (the third is not True and is in any case irrelevant). If we switch the conditions around a bit:
+
+
+
+
+```python
+x = 5
+y = 10
+ 
+if y == 10 and x == 2:
+    print("x is two and y is ten")
+elif y == 10 or x == 2:
+    print("x is two or y is ten")
+elif (y / x) == 2:
+    print("y divided by x is 2!")
+
+print("The end")
+```
+
+The first condition is not True, so the second is evaluated. This one is True, so it is executed, and the text 'x is two or y is ten' is printed. For clarity it is often useful to leave some space before and after the (set of) condition(s) - it makes the code easier to 'read' afterwards.
+
+
+
+
+
+---
+> ### {% icon hands_on %} Exercise 4.4.1
+>
+> Write a program where you ask the user for two words. Compare the words; if they are the same, print a message, if the first or second word is 'Stop', then also print a message. 
+> 
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
+>    >
+>    >  ```python
+>    >  # Write a program where you ask the user for two words. Compare the words; if they are the same, print a message, if the first or second word is 'Stop', then also print a >    >  message.
+>    >  print("Give two words.")
+>    >  firstWord = input("Write a word: ")
+>    >  secondWord = input("Write another word: ")
+>    >  
+>    >  if firstWord == secondWord:
+>    >      print("These words are the same")
+>    >  elif firstWord =="Stop" or secondWord == "Stop":
+>    >      print("You're word was Stop, hence we stopped here")
+>    >  
+>    >  print("The end")
+>    >  ```
+>    > </details>
+>
+{: .hands_on}
+---
+
+
+
+## 4.5 Else statement
+You can also end an **if** (with or without **elif**s) with an **else** condition. The block of code following else is only executed if the previous (set of) conditions are all False. Try this:
+
+
+```python
+x = 7
+ 
+if not (x % 2):
+    print("x is divisible by two!")
+elif not (x % 3):
+    print("x is divisible by three!")
+else:
+    print("x is not divisible by two...")
+
+print ("x is {}".format(x))
+```
+
+You can modify the value of x a bit to see what else can happen. Can you spot a problem with this example? What will happen if x can be divided by both two and three? What can you do to solve this problem?
+
+
+
+> ### {% icon hands_on %} Exercise 
+>
+> Modify the code above so it prints that it is divisible by two and three when this is the case.
+> 
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
+>    >
+>    >  ```python
+>    >  # If a value can be divided by two and three, only the block of code under the first condition will be executed, so you will not find out whether your value can be divided by three! There are several solutions to this, for example:
+>    >  x = 12
+>    >   
+>    >  if not (x % 2):
+>    >      print("x is divisible by two!")
+>    >      if not (x % 3):
+>    >          print("x is divisible by three!")
+>    >  elif not (x % 3):
+>    >      print("x is divisible by three!")
+>    >  else:
+>    >      print("x is not divisible by two or three...")
+>    >  
+>    >  print ("x is {}".format(x))
+>    >  
+>    >  # This is not a very elegant solution however, as you are repeating the same bit of code twice to find out whether the value can be divided by three. This one might be   slightly better:
+>    >  x = 12
+>    >  
+>    >  if not (x % 2):
+>    >      print("x is divisible by two!")
+>    >  
+>    >  if not (x % 3):
+>    >      print("x is divisible by three!")
+>    >  
+>    >  if (x % 2) and (x % 3):
+>    >      print("x is not divisible by two or three...")
+>    >  
+>    >  print ("x is {}".format(x))
+>    >  
+>    >  # However you still have to repeat the conditions, which would become very tedious (and error-prone) if you were to try division by many values. The next example is a bit more verbose but cleaner and more 'extendable' for other values:
+>    >  x = 12
+>    >  xDivisible = False
+>    >   
+>    >  if not (x % 2):
+>    >      print("x is divisible by two!")
+>    >      xDivisible = True
+>    >  
+>    >  if not (x % 3):
+>    >      print("x is divisible by three!")
+>    >      xDivisible = True
+>    >  
+>    >  if not xDivisible:
+>    >      print("x is not divisible by two or three...")
+>    >  
+>    >  print ("x is {}".format(x))
+>    >  ```
+>    > </details>
 >
 {: .hands_on}
 
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
+## 4.6 Conclusion
+The ´if-elif-else´ condition allows you to only execute a bit of code if a (set of) condition(s) is satisfied.
 
-> ### {% icon question %} Questions
->
-> 1. Question1?
-> 2. Question2?
->
-> > ### {% icon solution %} Solution
-> >
-> > 1. Answer for question1
-> > 2. Answer for question2
-> >
-> {: .solution}
->
-{: .question}
-
-
-## Re-arrange
-
-To create the template, each step of the workflow had its own subsection.
-
-***TODO***: *Re-arrange the generated subsections into sections or other subsections.
-Consider merging some hands-on boxes to have a meaningful flow of the analyses*
-
-# Conclusion
-{:.no_toc}
-
-Sum up the tutorial and the key takeaways here. We encourage adding an overview image of the
-pipeline used.
