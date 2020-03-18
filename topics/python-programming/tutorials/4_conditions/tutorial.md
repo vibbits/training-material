@@ -211,7 +211,7 @@ You can modify the value of x a bit to see what else can happen. Can you spot a 
 
 
 
-> ### {% icon hands_on %} Exercise 
+> ### {% icon hands_on %} Exercise 4.5.1
 >
 > Modify the code above so it prints that it is divisible by two and three when this is the case.
 > 
