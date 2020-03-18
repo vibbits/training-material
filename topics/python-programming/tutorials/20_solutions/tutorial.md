@@ -17,7 +17,7 @@ contributors:
 
 
 
-> ### {% icon hands_on %} Hands-on: Exercise 
+> ### {% icon hands_on %} Exercise 
 >
 > 
 > 
@@ -35,47 +35,6 @@ contributors:
 # Solutions
 
 
-
----
-### 2.6.2 Exercises
-
-See what happens if you try to print a float as an integer, and an integer as a string. 
-
----
-
-
-```python
-myFloat = 11.4
-myIntFloat = int(myFloat)
-print("My float as integer {}".format(myIntFloat)) 
-#This works
-
-myInt  = 12
-print("My integer as string {}".format(str(myInt)))
-#This works as well... but:
-
-myString = "aa"
-print("My string as float {}".format(float(myString)))
-#will fail and give a TypeError - Python cannot convert "aa" into a float.
-```
-
-----
-## 3.2.1 Exercise
-Try to print the text: *Percent of alignment: 100%* using a formatting character for the number 100. If this worked out succesfully, try to align it explicitly to the right with five whitespaces. 
-
-----
-
-
-```python
-# part 1
-print("Percent of alignment: {}%".format(100))
-```
-
-
-```python
-# part 2
-print("Percent of alignment: {:>8}%".format(100))
-```
 
 
 ---

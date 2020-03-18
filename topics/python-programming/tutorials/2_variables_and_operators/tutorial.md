@@ -373,17 +373,36 @@ print(myString, type(myString))
 
 Note here that you can print multiple values by using a comma in between the values.
 
----
-### 2.6.2 Exercises
 
-See what happens if you try to print a float as an integer, and an integer as a string. 
 
 ---
+> ### {% icon hands_on %} Exercise 2.6.2
+>
+> See what happens if you try to print a float as an integer, and an integer as a string. 
+> 
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
+>    >
+>    >  ```python
+>    >  myFloat = 11.4
+>    >  myIntFloat = int(myFloat)
+>    >  print("My float as integer {}".format(myIntFloat)) 
+>    >  #This works
 
+>    >  myInt  = 12
+>    >  print("My integer as string {}".format(str(myInt)))
+>    >  #This works as well... but:
 
-```python
+>    >  myString = "aa"
+>    >  print("My string as float {}".format(float(myString)))
+>    >  #will fail and give a TypeError - Python cannot convert "aa" into a float.
+>    >  ```
+>    > </details>
+>
+{: .hands_on}
+--- 
 
-```
 
 ## 2.7 Booleans 
 Finally, there are the boolean variables `True` and `False`. 
@@ -471,7 +490,7 @@ x == 5 and y > 2    # Both have to be True for the result to be True
 x != 5 or y > 2     # Only one has to be True for the result to be True
 ```
 
-# 2.8 Nothing
+## 2.8 Nothing
 
 Finally, we highlight the `None` value which is comparable to other program's `null` values. In the code below we show that None, which you could interpret as nothing, is still something else than the value 0 or e.g. an empty string. 
 
@@ -510,11 +529,5 @@ not None
 
 Really 0 is still an integer, "" a string, so `None` is really nothing:
 
-## 2.9 Next session
-
-Go to our [next chapter](3_Print_formatting.ipynb). 
-
-
-```python
-
-```
+## 2.9 Conclusion
+You should now have an idea on what different data types you can use, as well as how to assign them to variables and use operators to compare different values within variables with each other. 

@@ -3,168 +3,113 @@ layout: tutorial_hands_on
 
 title: 03 Print formatting
 questions:
-- 
+- How can you lay-out the text that Python prints out in a nice and tidy way?
 objectives:
-- 
+- Using ´.format()´ to format the printing output.
 time_estimation: 20m
 key_points:
-- 
+- Using ´.format()´ to format the printing output.
 contributors:
 - tmuylder
 
 ---
 
 
-# Introduction
-{:.no_toc}
+# 3. Print formatting
+## 3.1 Introduction  
+There are several ways to present the output of a program, data can be printed in a human-readable form, or written to a file for future use. Sometimes users want more control over the formatting of output, rather than simply printing space-separated values. There are several ways to format output which we will cover in this section.
 
-<!-- This is a comment. -->
+The following figure (which I shamelessly copied from [here](https://www.python-course.eu/python3_formatted_output.php)) helps to visualize the `.format()` argument. If you don't understand it completely, don't worry, we'll cover it in this section:
 
-General introduction about the topic and then an introduction of the
-tutorial (the questions and the objectives). It is nice also to have a
-scheme to sum up the pipeline used during the tutorial. The idea is to
-give to trainees insight into the content of the tutorial and the (theoretical
-and technical) key concepts they will learn.
+<center><img src="../../images/format_method_positional_parameters.png" /></center>
 
-You may want to cite some publications; this can be done by adding citations to the
-bibliography file (`tutorial.bib` file next to your `tutorial.md` file). These citations
-must be in bibtex format. If you have the DOI for the paper you wish to cite, you can
-get the corresponding bibtex entry using [doi2bib.org](https://doi2bib.org).
+Everything between the double quotation marks is what will be printed (thus the `print()` statement is missing). Between curly brackets you can find lay-out options for the arguments, the arguments themselves are given within the `.format()` statement. The first number defines the argument that will be printed (Python starts counting at 0), the number behind the colon (`:`) defines the number of characters that is foreseen for the argument, and lastly the number behind the point (`.`) is only applicable for floats and defines the amount of decimals that will be printed. E.g.: `1:8.2f` will print the first argument with 8 characters/numbers of which two decimals and the type of the argument is a float. If the argument has less than 8 characters/numbers than whitespace will be used. 
 
-With the example you will find in the `tutorial.bib` file, you can add a citation to
-this article here in your tutorial like this:
-{% raw %} `{% cite Batut2018 %}`{% endraw %}.
-This will be rendered like this: {% cite Batut2018 %}, and links to a
-[bibliography section](#bibliography) which will automatically be created at the end of the
-tutorial.
+## 3.2 Using .format()
+The following example gives the most basic use form of the `.format()` statement. 
 
 
-**Please follow our
-[tutorial to learn how to fill the Markdown]({{ site.baseurl }}/topics/contributing/tutorials/create-new-tutorial-content/tutorial.html)**
 
-> ### Agenda
+```python
+print("My name is {}.".format("Jane"))
+```
+
+The above don't do anything interesting; you can however put a number in between the curly brackets `{}` to force the output to take up a number of characters. Try this:
+
+
+```python
+print("My name is {:>10}.".format("Jane"))
+```
+
+You'll now see that you force an area of 10 characters to put the name. If the name is shorter, the remaining empty characters will be whitespaces. If the name would be longer, the number will be overruled. Note that the > character in the .format() form can be used to determine the alignment (use < for left align, > for right align and = for centered). 
+
+There are a number of differences between the old Python (version <2.5) and the version you're using now (Python 3.7). In older scripts you might see different print statements which will not work in this version. Instead of using the `.format()` statement, it used to be a `%`-symbol to position information in the right place. E.g.:
+```print("My name is %s." % "Jane")```  
+
+
+----
+
+> ### {% icon hands_on %} Hands-on: Exercise 3.2.1
 >
-> In this tutorial, we will cover:
->
-> 1. TOC
-> {:toc}
->
-{: .agenda}
-
-# Title for your first section
-
-Give some background about what the trainees will be doing in the section.
-Remember that many people reading your materials will likely be novices,
-so make sure to explain all the relevant concepts.
-
-## Title for a subsection
-Section and subsection titles will be displayed in the tutorial index on the left side of
-the page, so try to make them informative and concise!
-
-# Hands-on Sections
-Below are a series of hand-on boxes, one for each tool in your workflow file.
-Often you may wish to combine several boxes into one or make other adjustments such
-as breaking the tutorial into sections, we encourage you to make such changes as you
-see fit, this is just a starting point :)
-
-Anywhere you find the word "***TODO***", there is something that needs to be changed
-depending on the specifics of your tutorial.
-
-have fun!
-
-## Get data
-
-> ### {% icon hands_on %} Hands-on: Data upload
->
-> 1. Create a new history for this tutorial
-> 2. Import the files from [Zenodo]() or from the shared data library
->
->    ```
->    
->    ```
->    ***TODO***: *Add the files by the ones on Zenodo here (if not added)*
->
->    ***TODO***: *Remove the useless files (if added)*
->
->    {% include snippets/import_via_link.md %}
->    {% include snippets/import_from_data_library.md %}
->
-> 3. Rename the datasets
-> 4. Check that the datatype
->
->    {% include snippets/change_datatype.md datatype="datatypes" %}
->
-> 5. Add to each database a tag corresponding to ...
->
->    {% include snippets/add_tag.md %}
->
-{: .hands_on}
-
-# Title of the section usually corresponding to a big step in the analysis
-
-It comes first a description of the step: some background and some theory.
-Some image can be added there to support the theory explanation:
-
-![Alternative text](../../images/image_name "Legend of the image")
-
-The idea is to keep the theory description before quite simple to focus more on the practical part.
-
-***TODO***: *Consider adding a detail box to expand the theory*
-
-> ### {% icon details %} More details about the theory
->
-> But to describe more details, it is possible to use the detail boxes which are expandable
->
-{: .details}
-
-A big step can have several subsections or sub steps:
-
-
-## Sub-step with **My Tool**
-
-> ### {% icon hands_on %} Hands-on: Task description
->
-> 1. **My Tool** {% icon tool %} with the following parameters:
->    - {% icon param-file %} *"Input file"*: File
->    - *"Parameter"*: `a value`
->
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > ### {% icon comment %} Comment
+> Try to print the text: *Percent of alignment: 100%* using a formatting character for the number 100. 
+> If this worked out succesfully, try to align it explicitly to the right with five whitespaces. 
+> 
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
+>    >  ```python
+>    >  # part 1
+>    >  print("Percent of alignment: {}%".format(100))
+>    >  
+>    >  # part 2
+>    >  print("Percent of alignment: {:>8}%".format(100))
+>    >  ```
+>    > </details>
 >
 {: .hands_on}
 
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
-
-> ### {% icon question %} Questions
->
-> 1. Question1?
-> 2. Question2?
->
-> > ### {% icon solution %} Solution
-> >
-> > 1. Answer for question1
-> > 2. Answer for question2
-> >
-> {: .solution}
->
-{: .question}
+----
 
 
-## Re-arrange
 
-To create the template, each step of the workflow had its own subsection.
 
-***TODO***: *Re-arrange the generated subsections into sections or other subsections.
-Consider merging some hands-on boxes to have a meaningful flow of the analyses*
+## 3.3 Formatting numbers  
+Here are some examples of formatting integers (digits):
 
-# Conclusion
-{:.no_toc}
 
-Sum up the tutorial and the key takeaways here. We encourage adding an overview image of the
-pipeline used.
+```python
+print("This is {:d}.".format(252))
+print("This is {:d} and {:d}.".format(25,30))
+```
+
+Here are some examples of formatting decimal number (floating point):
+
+```python
+myFloat = 4545.4542244
+ 
+print("Print the full float {},\ncut off decimals {:5.2f},\nor determine the characters before the decimal {:10.1f}.".format(myFloat,myFloat,myFloat))
+ 
+# Or in old style
+# print("Print the full float %f,\ncut off decimals %.2f,\nor determine the characters before the decimal %10.1f." % (myFloat,myFloat,myFloat))
+```
+
+## 3.4 Special characters  
+For some characters it is necessary to use what are called 'escape' codes because you cannot type the character normally from the keyboard. Try this:
+
+```python
+print("The \ sign\ncan\talso\tbe\tprinted.")
+```
+
+Here the \\ will print a backslash (however Python might think you are trying to insert a special code and in order to be safe it's better to type a double \\\\), the \n will print a new line, \t a tab character.
+
+
+Escape codes are necessary if you are trying to print a single or double quote:
+
+```python
+print("He said: \"Hello\".")
+```
+
+## 3.5 Conclusion
+ 
+After this tutorial you should be able to format the printing output of Python in more human readable way. 
