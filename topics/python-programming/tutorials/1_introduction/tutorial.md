@@ -1,7 +1,7 @@
 ---
 layout: tutorial_hands_on
 
-title: 01 Introduction
+title: 01 Introduction to Jupyter 
 # zenodo_link: ''
 # questions:
 # - Which biological questions are addressed by the tutorial?
@@ -21,9 +21,6 @@ contributors:
 - tmuylder
 
 ---
-
-# 1. Introduction to Jupyter 
-*An interactive environment to write and run Python code*
 
 ## 1.1 Why Jupyter
 Jupyter is an interactive code environment that allows you to write code and get immediate feedback from it. It's one of the most popular environment for data science in Python. Especially for training purposes, as it interactively gives you your code and some informative text together. 
@@ -157,6 +154,3 @@ This line is called the 'Shebang' and tells the operating system where it can fi
 
 With recent improvements, the environment grew a little bit more powerful to a full interface, called JupyterLab. You can see all of the files that are within a folder within a file explorer, you can open a Terminal window which is a Linux machine where you can install any packages that you would need. You can also make a text file or edit text files that are in your folder. However, the most simplest is still to open a Python console where you directly insert python code. 
 
-## 1.6 Next session
-
-Go to our [next chapter](2_Variables_and_Operators.ipynb). 

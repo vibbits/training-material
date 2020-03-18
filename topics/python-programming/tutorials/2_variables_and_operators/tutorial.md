@@ -19,10 +19,8 @@ contributors:
 ---
 
 
-# 2. Variables & operators
-{:.toc}
+
 ## 2.1 Introduction
-{:.toc}
 
 Just printing things is not that interesting, what you really want to do with a computer program is manipulate data. This is why variables are so important - they allow you to assign information to a name that you can re-use later on.
 
@@ -48,7 +46,6 @@ In this section, we will cover the text type, numeric types (complex are out of 
 This section doesn't really include any exercises. Try to follow and code along while we scroll through the examples so you start to have a feeling of it.
 
 ## 2.2 Strings
-{:.toc}
 We already saw strings in the previous section. You can assign a string to a variable like this:
 
 

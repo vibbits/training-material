@@ -15,7 +15,6 @@ contributors:
 ---
 
 
-# 3. Print formatting
 ## 3.1 Introduction  
 There are several ways to present the output of a program, data can be printed in a human-readable form, or written to a file for future use. Sometimes users want more control over the formatting of output, rather than simply printing space-separated values. There are several ways to format output which we will cover in this section.
 
