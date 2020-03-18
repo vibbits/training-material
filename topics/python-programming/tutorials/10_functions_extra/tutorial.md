@@ -7,164 +7,175 @@ questions:
 objectives:
 - 
 time_estimation: 20m
-key_points:
-- 
 contributors:
 - tmuylder
 
 ---
 
 
-# Introduction
-{:.no_toc}
+## Extra exercises on functions
 
-<!-- This is a comment. -->
-
-General introduction about the topic and then an introduction of the
-tutorial (the questions and the objectives). It is nice also to have a
-scheme to sum up the pipeline used during the tutorial. The idea is to
-give to trainees insight into the content of the tutorial and the (theoretical
-and technical) key concepts they will learn.
-
-You may want to cite some publications; this can be done by adding citations to the
-bibliography file (`tutorial.bib` file next to your `tutorial.md` file). These citations
-must be in bibtex format. If you have the DOI for the paper you wish to cite, you can
-get the corresponding bibtex entry using [doi2bib.org](https://doi2bib.org).
-
-With the example you will find in the `tutorial.bib` file, you can add a citation to
-this article here in your tutorial like this:
-{% raw %} `{% cite Batut2018 %}`{% endraw %}.
-This will be rendered like this: {% cite Batut2018 %}, and links to a
-[bibliography section](#bibliography) which will automatically be created at the end of the
-tutorial.
+Practice makes perfect...
 
 
-**Please follow our
-[tutorial to learn how to fill the Markdown]({{ site.baseurl }}/topics/contributing/tutorials/create-new-tutorial-content/tutorial.html)**
 
-> ### Agenda
+---
+
+> ### {% icon hands_on %} Exercise 10.2.1
 >
-> In this tutorial, we will cover:
->
-> 1. TOC
-> {:toc}
->
-{: .agenda}
-
-# Title for your first section
-
-Give some background about what the trainees will be doing in the section.
-Remember that many people reading your materials will likely be novices,
-so make sure to explain all the relevant concepts.
-
-## Title for a subsection
-Section and subsection titles will be displayed in the tutorial index on the left side of
-the page, so try to make them informative and concise!
-
-# Hands-on Sections
-Below are a series of hand-on boxes, one for each tool in your workflow file.
-Often you may wish to combine several boxes into one or make other adjustments such
-as breaking the tutorial into sections, we encourage you to make such changes as you
-see fit, this is just a starting point :)
-
-Anywhere you find the word "***TODO***", there is something that needs to be changed
-depending on the specifics of your tutorial.
-
-have fun!
-
-## Get data
-
-> ### {% icon hands_on %} Hands-on: Data upload
->
-> 1. Create a new history for this tutorial
-> 2. Import the files from [Zenodo]() or from the shared data library
->
->    ```
->    
->    ```
->    ***TODO***: *Add the files by the ones on Zenodo here (if not added)*
->
->    ***TODO***: *Remove the useless files (if added)*
->
->    {% include snippets/import_via_link.md %}
->    {% include snippets/import_from_data_library.md %}
->
-> 3. Rename the datasets
-> 4. Check that the datatype
->
->    {% include snippets/change_datatype.md datatype="datatypes" %}
->
-> 5. Add to each database a tag corresponding to ...
->
->    {% include snippets/add_tag.md %}
->
-{: .hands_on}
-
-# Title of the section usually corresponding to a big step in the analysis
-
-It comes first a description of the step: some background and some theory.
-Some image can be added there to support the theory explanation:
-
-![Alternative text](../../images/image_name "Legend of the image")
-
-The idea is to keep the theory description before quite simple to focus more on the practical part.
-
-***TODO***: *Consider adding a detail box to expand the theory*
-
-> ### {% icon details %} More details about the theory
->
-> But to describe more details, it is possible to use the detail boxes which are expandable
->
-{: .details}
-
-A big step can have several subsections or sub steps:
-
-
-## Sub-step with **My Tool**
-
-> ### {% icon hands_on %} Hands-on: Task description
->
-> 1. **My Tool** {% icon tool %} with the following parameters:
->    - {% icon param-file %} *"Input file"*: File
->    - *"Parameter"*: `a value`
->
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > ### {% icon comment %} Comment
+> Download [this matrix file](data/Matrix.txt) (`Matrix.txt`) and save it in your directory. Then write a function to read a matrix file in this format, reorder the rows by the values in the given column, and printing out the result. The function should take as argument a file name and a column number. 
+> 
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
+>    >  ```python
+>    > def sortMatrixByColumn(fileName,columnNumber):
+>    >     #
+>    >     # Read the tab-delimited file and store the values
+>    >     #
+>    >  
+>    >     fin = open(fileName)
+>    >     lines = fin.readlines()
+>    >     fin.close()
+>    >  
+>    >     #
+>    >     # Convert the data from the file into a Python list
+>    >     #
+>    >  
+>    >     matrix = []
+>    > 
+>    >     for matrixRow in lines:
+>    >         # Tab-delimited, so split line by \t - this will give a list of strings
+>    >         matrixColumns = matrixRow.rstrip().split("\t") 
+>    >  
+>    >         # Add a row to the matrix
+>    >         matrix.append([])
+>    >  
+>    >         # Add the columns, but convert the strings from the file into a float
+>    >         for matrixValue in matrixColumns:
+>    >             matrix[-1].append(float(matrixValue))
+>    >  
+>    >     #
+>    >     # Now sort by column - but have to track the row number as well!
+>    >     #
+>    >  
+>    >     selectedColumnValues = []
+>    >  
+>    >     for rowNumber in range(len(matrix)):
+>    >  
+>    >         selectedColumnValues.append((matrix[rowNumber][columnNumber],rowNumber))
+>    >  
+>    >         selectedColumnValues.sort()
+>    >  
+>    >     #
+>    >     # Now print out the new matrix - the column value is now not interesting
+>    >     # we want the row number!!
+>    >     #
+>    >  
+>    >     for (columnValue,rowNumber) in selectedColumnValues:  
+>    >         columnValueStrings = []
+>    >         for value in matrix[rowNumber]:
+>    >             columnValueStrings.append("{:.3f}".format(value))
+>    >         print("\t".join(columnValueStrings))
+>    >  
+>    >  
+>    > sortMatrixByColumn("data/matrix.txt",3)
+>    >  ```
+>    > </details>
 >
 {: .hands_on}
+---
 
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
 
-> ### {% icon question %} Questions
+
+---
+
+> ### {% icon hands_on %} Exercise 10.2.2
 >
-> 1. Question1?
-> 2. Question2?
+> 
+> Modify the program to read in the TestFile.pdb file by using separate functions to 
+> 1. get the title, 
+> 2. dissect the information from the ATOM line and 
+> 3. to calculate the distance to the reference distance
+> 
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
+>    >
+>    >  ```python
+>    > def getTitle(line,cols):
+>    >  
+>    >     # Gets the title
+>    >  
+>    >     title = line.replace(cols[0],'')
+>    >     title = title.strip()
+>    >  
+>    >     return ("The title is '%s'" % title)
+>    >  
+>    > def getAtomInfo(cols):
+>    >  
+>    >     # Get relevant information from an ATOM line and convert to the right type
+>    >  
+>    >     atomSerial = int(cols[1])
+>    >     atomName = cols[2]
+>    >     residueNumber = int(cols[5])
+>    >     x = float(cols[6])
+>    >     y = float(cols[7])
+>    >     z = float(cols[8])
+>    >  
+>    >     return (atomSerial,atomName,residueNumber,x,y,z)
+>    >  
+>    > def calculateDistance(coordinate1,coordinate2):
+>    >  
+>    >     # Calculate the distance between two 3 dimensional coordinates
+>    >  
+>    >     return ((coordinate1[0] - coordinate2[0]) ** 2 + (coordinate1[1] - coordinate2[1]) ** 2 + (coordinate1[2] - coordinate2[2]) ** 2 ) ** 0.5
+>    >  
+>    > 
+>    > # Open the file
+>    > fileHandle = open("data/TestFile.pdb")
+>    >  
+>    > # Read all the lines in the file (as separated by a newline character), and store them in the lines list
+>    > # Each element in this list corresponds to one line of the file!
+>    > lines = fileHandle.readlines()
+>    >  
+>    > # Close the file
+>    > fileHandle.close()
+>    >  
+>    > # Initialise some information
+>    > searchCoordinate = (-8.7,-7.7,4.7)
+>    > modelNumber = None
+>    >  
+>    > # Loop over the lines, and do some basic string manipulations
+>    > for line in lines:
+>    >  
+>    >     line = line.strip()  # Remove starting and trailing spaces/tabs/newlines
+>    >  
+>    >     # Only do something if it's not an empty line
+>    >     if line:
+>    >         cols = line.split()   # Split the line by white spaces; depending on the format this could be commas, ...
+>    >  
+>    >         # Print off the title
+>    >         if cols[0] == 'TITLE':
+>    >             print(getTitle(line,cols))
+>    >  
+>    >         # Track the model number
+>    >         elif cols[0] == 'MODEL':
+>    >             modelNumber = int(cols[1])
+>    >  
+>    >         # For atom lines, calculate the distance
+>    >         elif cols[0] == 'ATOM':
+>    >             (atomSerial,atomName,residueNumber,x,y,z) = getAtomInfo(cols)
+>    >  
+>    >             # Calculate the distance
+>    >             distance = calculateDistance((x,y,z),searchCoordinate)
+>    >  
+>    >             if distance < 2.0:
+>    >                 print("Model {}, residue {}, atom {} (serial {}) is {:.2f} away from reference.".format(modelNumber,residueNumber,atomName,atomSerial,distance))
+>    >  ```
+>    > </details>
 >
-> > ### {% icon solution %} Solution
-> >
-> > 1. Answer for question1
-> > 2. Answer for question2
-> >
-> {: .solution}
->
-{: .question}
+{: .hands_on}
+---
 
-
-## Re-arrange
-
-To create the template, each step of the workflow had its own subsection.
-
-***TODO***: *Re-arrange the generated subsections into sections or other subsections.
-Consider merging some hands-on boxes to have a meaningful flow of the analyses*
-
-# Conclusion
-{:.no_toc}
-
-Sum up the tutorial and the key takeaways here. We encourage adding an overview image of the
-pipeline used.

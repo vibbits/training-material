@@ -3,7 +3,7 @@ layout: tutorial_hands_on
 
 title: 11 Modules
 questions:
-- 
+- (Re-)using existing code
 objectives:
 - 
 time_estimation: 20m
@@ -15,156 +15,541 @@ contributors:
 ---
 
 
-# Introduction
-{:.no_toc}
+## 11.1 Introduction
+So now that we know how to make functions, how can you re-use them? Imagine that you've started writing code and functions in one file and the project has grown to such an extent that it would be easier to maintain it in different files each containing a specific part of the project. Or you want to re-use some of the functions in other projects as well. 
 
-<!-- This is a comment. -->
+In Python you can import functions and chunks of code from files. Such a file containing the functions is called a *module*. Generally we say that we import a *definition* from a *module*. A module can have one or multiple functions in it. 
+The file name is the module name with the suffix `.py` appended. 
 
-General introduction about the topic and then an introduction of the
-tutorial (the questions and the objectives). It is nice also to have a
-scheme to sum up the pipeline used during the tutorial. The idea is to
-give to trainees insight into the content of the tutorial and the (theoretical
-and technical) key concepts they will learn.
+Using the code from this module is possible by using **import**. In this way you can import your own functions, but also draw on a very extensive library of functions provided by Python (built-in modules). We will first look at the syntax for imports and how to import your own functions, then explore the most commonly used Python libraries.
 
-You may want to cite some publications; this can be done by adding citations to the
-bibliography file (`tutorial.bib` file next to your `tutorial.md` file). These citations
-must be in bibtex format. If you have the DOI for the paper you wish to cite, you can
-get the corresponding bibtex entry using [doi2bib.org](https://doi2bib.org).
+## 11.2 How imports work
+The easiest way to import a module looks like this:
 
-With the example you will find in the `tutorial.bib` file, you can add a citation to
-this article here in your tutorial like this:
-{% raw %} `{% cite Batut2018 %}`{% endraw %}.
-This will be rendered like this: {% cite Batut2018 %}, and links to a
-[bibliography section](#bibliography) which will automatically be created at the end of the
-tutorial.
+```python
+import module1
+```
+
+Imagine that in the module `module1`, there is a function called `getMeanValue()`. This way of importing does not make the name of the function available; it only remembers the module name `module1` which you can than use to access the functions within the module:
+
+```python
+import module1
+module1.getMeanValue([1,2,3])
+```
+
+## 11.3 How to create your own module
+The easiest example is importing a module from within the same working directory. Let's create a Python module called `module1.py` with the code of the function `getMeanValue()` that we have written earlier (and you can find here below). 
+
+**Create a module in Jupyter Lab/Notebook**
+- In order to create a module in Jupyter Lab, first create a new notebook 
+- Rename the notebook (e.g. 'module1.ipynb') and copy paste the code in the notebook 
+- Click 'File', 'Download as' and 'Python' 
+- Jupyter will not download it in some local folder, copy it to your current working directory (in our case in the same directory as we're in right now). 
+
+Unfortunately, Jupyter Lab/Notebook doesn't have a streamlined & straightforward way of creating Python modules and Python scripts. When you export the notebook, it will always export the whole Notebook and not just a part of it, which makes it very messy if you have a very large notebook. 
+
+Import the following code in the `module1.py` file. 
 
 
-**Please follow our
-[tutorial to learn how to fill the Markdown]({{ site.baseurl }}/topics/contributing/tutorials/create-new-tutorial-content/tutorial.html)**
+```python
+# When you download this as a Python script, Jupyter will automatically insert the environment shebang here. 
 
-> ### Agenda
+def getMeanValue(valueList):
+    """
+    Calculate the mean (average) value from a list of values.
+    Input: list of integers/floats
+    Output: mean value
+    """
+    valueTotal = 0.0
+ 
+    for value in valueList:
+        valueTotal += value
+    numberValues = len(valueList)
+    
+    return (valueTotal/numberValues)
+```
+
+## 11.4 Import syntax 
+We can now use the module we just created by importing it. In this case where we import the whole 'module1' file, we can call the function as a method, similar to the methods for lists and strings that we saw earlier:
+
+
+```python
+import module1
+
+print(module1.getMeanValue([4,6,77,3,67,54,6,5]))
+```
+
+If we were to write code for a huge project, long names can get exhaustive. Programmers will intrinsically make shortcut names for functions they use a lot. Renaming a module is therefore a common thing to do (e.g. NumPy as np, pandas as pd, etc.):
+
+
+```python
+import module1 as m1
+
+print(m1.getMeanValue([4,6,77,3,67,54,6,5]))
+```
+
+When importing a file, Python only searches the current directory, the directory that the entry-point script is running from, and sys.path which includes locations such as the package installation directory (it's actually a little more complex than this, but this covers most cases).
+
+However, you can specify the Python path yourself as well. Note that within our folders there is a directory named `modules` and within this folder, there is a module named `module2` (recognizable due to its .py extension). In that module there are two functions: 'getMeanValue' and 'compareMeanValueOfLists'. 
+
+
+```python
+from modules import module2
+
+print(module2.getMeanValue([4,6,77,3,67,54,6,5]))
+```
+
+
+```python
+from modules import module2 as m2
+
+print(m2.getMeanValue([4,6,77,3,67,54,6,5]))
+```
+
+Another way of writing this is with an absolute path to the module. You can explicitly import an attribute from a module.
+
+
+```python
+from modules.module2 import compareMeanValueOfLists
+
+print(compareMeanValueOfLists([1,2,3,4,5,6,7], [4,6,77,3,67,54,6,5]))
+```
+
+So here we *import* the function compareMeanValueOfLists (without brackets!) from the file *module2* (without .py extension!).
+
+In order to have an overview of all the different functions within a module, use `dir()`:
+
+
+```python
+dir(module2)
+```
+
+## 11.5 Built-in Modules
+
+There are several built-in modules in Python, which you can import whenever you like.
+
+Python has many ready-to-use functions that can save you a lot of time when writing code. The most common ones are **time**, **sys**, **os/os.path** and **re**.
+
+### 11.5.1 `time`
+With **time** you can get information on the current time and date, ...:
+
+
+```python
+import time
+time.ctime()  # Print current day and time
+```
+
+
+```python
+time.time()   # Print system clock time
+```
+
+
+```python
+time.sleep(10)       # Sleep for 5 seconds - the program will wait here
+```
+
+See the [Python documentation](https://docs.python.org/3/library/time.html) for a full description of time. Also see [datetime](https://docs.python.org/3/library/datetime.html), which is a module to deal with date/time manipulations.
+
+
+### 11.5.2 `sys`
+gives you system-specific parameters and functions:
+
+
+```python
+import sys
+
+```
+
+
+```python
+sys.argv  # A list of parameters that are given when calling this script 
+          # from the command line (e.g. ''python myScript a b c'')
+```
+
+
+```python
+sys.platform # The platform the code is currently running on
+```
+
+
+```python
+sys.path     # The directories where Python will look for things to import
+```
+
+
+```python
+help(sys.exit)          # Exit the code immediately
+```
+
+See the [Python documentation](https://docs.python.org/3/library/sys.html) for a full description.
+
+### 11.5.3 `os` and `os.path` 
+are very useful when dealing with files and directories:
+
+
+
+```python
+import os
+```
+
+
+```python
+# Get the current working directory (cwd)
+currentDir = os.getcwd()
+currentDir
+```
+
+
+```python
+# Get a list of the files in the current working directory    
+myFiles = os.listdir(currentDir)
+myFiles
+```
+
+
+```python
+# Create a directory, rename it, and remove it
+os.mkdir("myTempDir")
+os.rename("myTempDir","myNewTempDir")
+os.removedirs("myNewTempDir")
+```
+
+
+```python
+# Create a full path name to the `module2` module in the modules folder
+myFileFullPath = os.path.join(currentDir,'modules','module2.py')
+myFileFullPath
+```
+
+
+```python
+# Does this file exist?
+os.path.exists(myFileFullPath)
+```
+
+
+```python
+# How big is the file?
+os.path.getsize(myFileFullPath)
+```
+
+
+```python
+# Split the directory path from the file name
+(myDir,myFileName) = os.path.split(myFileFullPath)
+print(myDir)
+print(myFileName)
+```
+
+See the Python documentation for [**os**](https://docs.python.org/3/library/os.html) and [**os.path**](https://docs.python.org/3/library/os.path.html) for a full description.
+
+### 11.5.4 `re`
+
+A library that is very powerful for dealing with strings is **re**. It allows you to use regular expressions to examine text - using these is a course in itself, so just consider this simple example:
+
+
+```python
+import re
+
+myText = """Call me Ishmael. Some years ago - never mind how long precisely -
+having little or no money in my purse, and nothing particular to interest me on 
+shore, I thought I would sail about a little and see the watery part of the 
+world."""
+
+# Compile a regular expression, 
+myPattern = re.compile("(w\w+d)")    # Look for the first word that starts with a w,
+                                     # is followed by 1 or more characters (\w+)
+                                     # and ends in a d
+
+mySearch = myPattern.search(myText)
+
+# mySearch will be None if nothing was found
+if mySearch:
+    print(mySearch.groups())
+```
+
+See the full [Python documentation](https://docs.python.org/3/library/re.html) on regular expressions for more information.
+
+## 11.6 Putting everything together
+
+
+---
+
+> ### {% icon hands_on %} Exercise 11.6.1
 >
-> In this tutorial, we will cover:
->
-> 1. TOC
-> {:toc}
->
-{: .agenda}
-
-# Title for your first section
-
-Give some background about what the trainees will be doing in the section.
-Remember that many people reading your materials will likely be novices,
-so make sure to explain all the relevant concepts.
-
-## Title for a subsection
-Section and subsection titles will be displayed in the tutorial index on the left side of
-the page, so try to make them informative and concise!
-
-# Hands-on Sections
-Below are a series of hand-on boxes, one for each tool in your workflow file.
-Often you may wish to combine several boxes into one or make other adjustments such
-as breaking the tutorial into sections, we encourage you to make such changes as you
-see fit, this is just a starting point :)
-
-Anywhere you find the word "***TODO***", there is something that needs to be changed
-depending on the specifics of your tutorial.
-
-have fun!
-
-## Get data
-
-> ### {% icon hands_on %} Hands-on: Data upload
->
-> 1. Create a new history for this tutorial
-> 2. Import the files from [Zenodo]() or from the shared data library
->
->    ```
->    
->    ```
->    ***TODO***: *Add the files by the ones on Zenodo here (if not added)*
->
->    ***TODO***: *Remove the useless files (if added)*
->
->    {% include snippets/import_via_link.md %}
->    {% include snippets/import_from_data_library.md %}
->
-> 3. Rename the datasets
-> 4. Check that the datatype
->
->    {% include snippets/change_datatype.md datatype="datatypes" %}
->
-> 5. Add to each database a tag corresponding to ...
->
->    {% include snippets/add_tag.md %}
->
-{: .hands_on}
-
-# Title of the section usually corresponding to a big step in the analysis
-
-It comes first a description of the step: some background and some theory.
-Some image can be added there to support the theory explanation:
-
-![Alternative text](../../images/image_name "Legend of the image")
-
-The idea is to keep the theory description before quite simple to focus more on the practical part.
-
-***TODO***: *Consider adding a detail box to expand the theory*
-
-> ### {% icon details %} More details about the theory
->
-> But to describe more details, it is possible to use the detail boxes which are expandable
->
-{: .details}
-
-A big step can have several subsections or sub steps:
-
-
-## Sub-step with **My Tool**
-
-> ### {% icon hands_on %} Hands-on: Task description
->
-> 1. **My Tool** {% icon tool %} with the following parameters:
->    - {% icon param-file %} *"Input file"*: File
->    - *"Parameter"*: `a value`
->
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > ### {% icon comment %} Comment
+> Make a new directory in which you write out 5 files with a 2 second delay. Each file should contain the date and time when it was originally written out.
+> 
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
 >    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
+>    >  ```python
+>    > # 1
+>    > import time, os
+>    >  
+>    > 
+>    > # Create a variable for the directory name
+>    > myDir = "timeTest"
+>    > 
+>    > # Check whether the directory exists, if not create it
+>    > if not os.path.exists(myDir):
+>    >     os.mkdir(myDir)
+>    > 
+>    > 
+>    > # Loop from 1 to 5
+>    > for i in range(1,6):
+>    > 
+>    >     # Get the current time
+>    >     currentTime = time.ctime()
+>    > 
+>    >     # Write out the file - use i to give a different name to each
+>    >     filePath = os.path.join(myDir,"myFile{}.txt".format(i))
+>    > 
+>    >     outFileHandle = open(filePath,'w')    
+>    >     outFileHandle.write("{}\n".format(currentTime))
+>    >     outFileHandle.close()
+>    > 
+>    >     print("Written file {}...".format(filePath))
+>    > 
+>    >     # Sleep for 2 seconds
+>    >     time.sleep(2)
+>    >  ```
+>    > </details>
 >
 {: .hands_on}
 
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
+---
 
-> ### {% icon question %} Questions
+
+
+
+---
+> ### {% icon hands_on %} Exercise 11.6.2
 >
-> 1. Question1?
-> 2. Question2?
+> Write a function to read in a FASTA file with an RNA sequence and return the RNA sequence (in 3 base unit chunks).
+> 
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
+>    >
+>    >  ```python
+>    > # 2 
+>    > import os
+>    >  
+>    > def readRnaFastaFile(fileName):
+>    >  
+>    >     if not os.path.exists(fileName):
+>    >         print("Error: File {} not available!".format(fileName))
+>    >         return (None,None,None)
+>    > 
+>    >     fconnect = open(fileName)
+>    >     lines = fconnect.readlines()
+>    >     fconnect.close()
+>    > 
+>    >     sequenceInfo = []
+>    >     moleculeName = None
+>    >     description = None
+>    > 
+>    >     # Get information from the first line - ignore the >
+>    >     firstLine = lines[0]
+>    >     firstLineCols = firstLine[1:].split()
+>    >     moleculeName = firstLineCols[0]
+>    >     description = firstLine[1:].replace(moleculeName,'').strip()
+>    > 
+>    >     # Now get the full sequence out
+>    >     fullSequence = ""
+>    >     for line in lines[1:]:
+>    > 
+>    >         line = line.strip()
+>    >         fullSequence += line
+>    > 
+>    >     # Divide up the sequence depending on type (amino acid or nucleic acid)
+>    >     for seqIndex in range(0,len(fullSequence),3):
+>    >         sequenceInfo.append(fullSequence[seqIndex:seqIndex+3])
+>    > 
+>    >     return (moleculeName,description,sequenceInfo)
+>    > 
+>    > 
+>    > print(readRnaFastaFile("data/rnaSeq.txt"))
+>    >  ```
+>    > </details>
 >
-> > ### {% icon solution %} Solution
-> >
-> > 1. Answer for question1
-> > 2. Answer for question2
-> >
-> {: .solution}
+{: .hands_on}
+
+---
+
+
+
+
+---
+> ### {% icon hands_on %} Exercise 11.6.3
 >
-{: .question}
+> Write a program where you ask the user for a one-letter amino acid sequence, and print out the three-letter amino acid codes. Download the dictionary from section 8.2 and save it as a module named SequenceDicts.py first.
+> 
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
+>    >
+>    >  ```python
+>    > # 3
+>    > # Note how you can import a function (or variable) with a different name for your program!
+>    > 
+>    > from modules.SequenceDicts import proteinOneToThree as oneToThreeLetterCodes
+>    > 
+>    > oneLetterSeq = input('Give one letter sequence:')
+>    >  
+>    > if oneLetterSeq:
+>    >     for oneLetterCode in oneLetterSeq:
+>    >         if oneLetterCode in oneToThreeLetterCodes.keys():
+>    >             print(oneToThreeLetterCodes[oneLetterCode])
+>    >         else:
+>    >             print("One letter code '{}' is not a valid amino acid code!".format(oneLetterCode))
+>    > else:
+>    >     print("You didn't give me any information!")
+>    >  ```
+>    > </details>
+>
+{: .hands_on}
+---
 
 
-## Re-arrange
 
-To create the template, each step of the workflow had its own subsection.
+---
+> ### {% icon hands_on %} Exercise 11.6.4 
+>
+> Write a program where you translate the RNA sequence `data/rnaSeq.txt` into 3 letter amino acid codes. Use the dictionary from section 8.2 (called myDictionary) and save it as a module named SequenceDicts.py first. You can use the `readFasta.py` module from the modules folder. 
+> 
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
+>    >
+>    >  ```python
+>    > from modules.SequenceDicts import standardRnaToProtein, proteinOneToThree
+>    > 
+>    > from modules.readFasta import readRnaFastaFile
+>    > 
+>    > (molName,description,sequenceInfo) = readRnaFastaFile("data/rnaSeq.txt")
+>    > proteinThreeLetterSeq = []
+>    > 
+>    > for rnaCodon in sequenceInfo:
+>    > 
+>    >     aaOneLetterCode = standardRnaToProtein[rnaCodon]
+>    >     aaThreeLetterCode = proteinOneToThree[aaOneLetterCode]
+>    >     proteinThreeLetterSeq.append(aaThreeLetterCode)
+>    > 
+>    > print(proteinThreeLetterSeq)
+>    >  ```
+>    > </details>
+>
+{: .hands_on}
+---
 
-***TODO***: *Re-arrange the generated subsections into sections or other subsections.
-Consider merging some hands-on boxes to have a meaningful flow of the analyses*
 
-# Conclusion
-{:.no_toc}
 
-Sum up the tutorial and the key takeaways here. We encourage adding an overview image of the
-pipeline used.
+---
+> ### {% icon hands_on %} Exercise 11.6.5 
+>
+> Write a program that:
+> - Has a function `readSampleInformationFile()` to read the information from this sample data file into a dictionary. Also check whether the file exists.
+> - Has a function `getSampleIdsForValueRange()` that can extract sample IDs from this dictionary. Print the sample IDs for pH 6.0-7.0, temperature 280-290 and volume 200-220 using this function.
+> 
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
+>    >
+>    >  ```python
+>    > import os
+>    >  
+>    > def readSampleInformationFile(fileName):
+>    >  
+>    >     # Read in the sample information file in .csv (comma-delimited) format
+>    > 
+>    >     # Doublecheck if file exists
+>    >     if not os.path.exists(fileName):
+>    >         print("File {} does not exist!".format(fileName))
+>    >         return None
+>    >  
+>    >     # Open the file and read the information
+>    >     fileHandle = open(fileName)
+>    >     lines = fileHandle.readlines()
+>    >     fileHandle.close()
+>    > 
+>    >     # Now read the information. The first line has the header information which
+>    >     # we are going to use to create the dictionary!
+>    > 
+>    >     fileInfoDict = {}
+>    > 
+>    >     headerCols = lines[0].strip().split(',')
+>    > 
+>    >     # Now read in the information, use the first column as the key for the dictionary
+>    >     # Note that you could organise this differently by creating a dictionary with
+>    >     # the header names as keys, then a list of the values for each of the columns.
+>    > 
+>    >     for line in lines[1:]:
+>    >  
+>    >         line = line.strip()  # Remove newline characters
+>    >         cols = line.split(',')
+>    > 
+>    >         sampleId = int(cols[0])
+>    > 
+>    >         fileInfoDict[sampleId] = {}
+>    > 
+>    >         # Don't use the first column, is already the key!
+>    >         for i in range(1,len(headerCols)):
+>    >             valueName = headerCols[i]
+>    >  
+>    >             value = cols[i]
+>    >             if valueName in ('pH','temperature','volume'):
+>    >                 value = float(value)
+>    > 
+>    >             fileInfoDict[sampleId][valueName] = value
+>    > 
+>    >     # Return the dictionary with the file information
+>    >     return fileInfoDict
+>    > 
+>    > def getSampleIdsForValueRange(fileInfoDict,valueName,lowValue,highValue):
+>    >  
+>    >     # Return the sample IDs that fit within the given value range for a kind of value
+>    >  
+>    >     #sampleIdList = fileInfoDict.keys()
+>    >     #sampleIdList.sort()
+>    >     sampleIdList = sorted(fileInfoDict.keys())
+>    >     sampleIdsFound = []
+>    > 
+>    >     for sampleId in sampleIdList:
+>    > 
+>    >         currentValue = fileInfoDict[sampleId][valueName]
+>    >  
+>    >         if lowValue <= currentValue <= highValue:
+>    >             sampleIdsFound.append(sampleId)
+>    >  
+>    >     return sampleIdsFound
+>    >  
+>    > if __name__ == '__main__':
+>    >  
+>    >     fileInfoDict = readSampleInformationFile("../data/SampleInfo.txt")
+>    > 
+>    >     print(getSampleIdsForValueRange(fileInfoDict,'pH',6.0,7.0))
+>    >     print(getSampleIdsForValueRange(fileInfoDict,'temperature',280,290))
+>    >     print(getSampleIdsForValueRange(fileInfoDict,'volume',200,220))
+>    >  ```
+>    > </details>
+>
+{: .hands_on}
+---
+
+
+Go to the next part of the tutorial
+
+## 11.7 Theoretical background
+
+The first thing Python will do is look up the name `module1` in [`sys.modules`](https://docs.python.org/3/library/sys.html#sys.modules). This is a cache of all modules that have been previously imported.
+
+If the name isn’t found in the module cache, Python will proceed to search through a list of built-in modules. These are modules that come pre-installed with Python and can be found in the [Python Standard Library](https://docs.python.org/3/library/). If the name still isn’t found in the built-in modules, Python then searches for it in a list of directories defined by [`sys.path`](https://docs.python.org/3/library/sys.html#sys.path). This list usually includes the current directory, which is searched first.
+
+When Python finds the module, it binds it to a name locally. This means that `abc` is now defined and can be used in the current file without throwing a `NameError`. In the case a `NameError` is thrown, it basically means that Python couldn't find the function with the name that you gave. 
+
+If the name of the module is not found, you’ll get a `ModuleNotFoundError`. 
+
+## 11.8 Conclusion
