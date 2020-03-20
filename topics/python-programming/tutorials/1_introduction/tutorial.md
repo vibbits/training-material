@@ -26,11 +26,21 @@ contributors:
 Jupyter is an interactive code environment that allows you to write code and get immediate feedback from it. It's one of the most popular environment for data science in Python. Especially for training purposes, as it interactively gives you your code and some informative text together. 
 
 ## 1.2 Installation
-The easiest way to install Python and Jupyter is to install [Anaconda](https://docs.anaconda.com/anaconda/install/) (Navigator) on your computer. It's worth it to struggle through all the documentation and get things up and running on your own machine. 
+The easiest way to install Python and Jupyter is to install [Anaconda](https://docs.anaconda.com/anaconda/install/) (Navigator) on your computer. Anaconda Navigator contains several (GUI) applications like Jupyter in which you can run your Python code. As a side note, Anaconda is also a package manager which makes it ideal for reproducibility purposes as well. 
 
-Anaconda Navigator contains some applications like Jupyter where you can run your Python code. Moreover, Anaconda is also a package manager which makes it ideal for reproducibility purposes as well. 
+Nowadays, Jupyter comes in two versions. More often you will hear about Jupyter Notebooks which is the precursor of Jupyter Lab. The latter has a couple of advantages, however for stability reasons we'll be using Jupyter Notebooks for now. 
 
-Nowadays, Jupyter comes in two versions. More often you will hear about Jupyter Notebooks which is the precursor of Jupyter Lab. The latter has a couple of advantages, however for stability reasons we'll be using Jupyter Notebooks for now.
+> ### {% icon hands_on %} Installation instructions
+>
+> To install all prerequisites for this course 
+> 1. Go to [Anaconda](https://www.anaconda.com/distribution/), scroll a bit down and select the right distribution system (Windows, MacOS or Linux), and download the Python 3.7 version. Follow the installation instructions.  
+> 2. You should be able to find Jupyter Notebooks within the installed apps now. Otherwise, open the Anaconda Navigator & launch a Jupyter Notebook
+> 3. Jupyter Notebooks opens a tab with a list of your folders. Make and/or select a folder in which you want to keep the training materials.
+> 4. Find the training materials on our Github repository: [Gentle hands on python](https://github.com/vibbits/gentle-hands-on-python)
+> 5. Click the button 'Clone or Download' and select 'Download ZIP'. Finally, extract the zipped file within the folder you just selected or created. 
+> 6. In Jupyter Notebook you should see the materials now. 
+>
+{: .hands_on}
 
 
 ## 1.3 Getting familiar with Jupyter Notebooks
