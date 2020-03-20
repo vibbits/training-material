@@ -3,16 +3,19 @@ layout: tutorial_hands_on
 
 title: 02 Variables and Operators
 questions:
-- Which variables does Python have?
-- Which operators are there?
+- Which Python's built-in data types are there?
+- How to assign a value to a variable?
+- How to compare values within variables using operators? 
+
 objectives:
-- Learn Python's built-in data types
-- How to assign a value to a variable
-- How to compare values within variables using operators
+- Recognize different built-in data types of Python
+- Write, evaluate and interpret expressions in Python
+- Print out results to the user
 time_estimation: 20 min
 key_points:
-- Assign a value to a variable
-- Compare variables and their values with operators
+- We've assessed the most basic and important data-types that exist in Python
+- We compared variables and their values with operators
+- We know how to use `.format()` in its most basic form 
 contributors:
 - tmuylder
 

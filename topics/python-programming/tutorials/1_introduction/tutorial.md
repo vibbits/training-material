@@ -4,8 +4,9 @@ layout: tutorial_hands_on
 title: 01 Introduction to Jupyter 
 # zenodo_link: ''
 questions:
-- How to get started in Python? 
+- How to get started with Python? 
 objectives:
+- Install Anaconda & Jupyter Notebooks
 - Execute a Python expression in the Jupyter Notebook environment 
 - Use Jupyter Notebooks and its shortcuts for Python programming
 # - They will be informed by your audience and will communicate to them and to yourself
