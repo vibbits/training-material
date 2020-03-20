@@ -13,9 +13,9 @@ objectives:
 - Print out results to the user
 time_estimation: 20 min
 key_points:
-- We've assessed the most basic and important data-types that exist in Python
+- We've assessed the string, integers, float and boolean data-types of Python
 - We compared variables and their values with operators
-- We know how to use `.format()` in its most basic form 
+- We know how to use .format() in its most basic form 
 contributors:
 - tmuylder
 
@@ -526,5 +526,3 @@ not None
 
 Really 0 is still an integer, "" a string, so `None` is really nothing:
 
-## 2.9 Conclusion
-You should now have an idea on what different data types you can use, as well as how to assign them to variables and use operators to compare different values within variables with each other. 
