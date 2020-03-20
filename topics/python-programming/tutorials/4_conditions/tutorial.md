@@ -3,21 +3,23 @@ layout: tutorial_hands_on
 
 title: 04 Conditions
 questions:
-- How to perform part of a code only when a specific condition is met.
+- How to control the code that is performed based on a condition?
 objectives:
-- Use if-elif-else statements together with condition statements.
-time_estimation: 20m
+- Use if-elif-else statements together with condition statements
+- Understand what indentation means and how it can affect your code
+time_estimation: 30 min
 key_points:
-- Based on a condition, let Python only perform part of the code. 
+- We can decide which Python code is executed based on a (set of) condition(s) that is satisfied.  
 contributors:
 - tmuylder
-
+## 4.6 Conclusion
+The ´if-elif-else´ condition allows you to .
 ---
 
 ## 4.1 Introduction
 Programs start to become more interesting if you can do different things depending on the input. For this, you have to use *conditions*, which we will discuss in this section. 
 
-Decisions will be taken based on a condition. In this perspective, we highlight the booleans **True** and **False**, as well as the **None**-keyword once more.
+Decisions will be taken based on a condition. In this perspective, we highlight the importance of understanding booleans **True** and **False**, as well as the **None**-keyword once more.
 
 ## 4.2 If statement
 
@@ -269,5 +271,3 @@ You can modify the value of x a bit to see what else can happen. Can you spot a 
 >
 {: .hands_on}
 
-## 4.6 Conclusion
-The ´if-elif-else´ condition allows you to only execute a bit of code if a (set of) condition(s) is satisfied.
