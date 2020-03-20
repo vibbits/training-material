@@ -211,7 +211,6 @@ print("The result of the first calculation is {}.".format(firstResult))
 secondResult = (5 * (4 + 3) - 2)
 print(secondResult)
 print("The result of the second calculation is {}.".format(secondResult))
-
 ```
 
 Note here the precedence of operations; * and / take precedence over + and -. You can use () to change the results.
@@ -389,12 +388,10 @@ Note here that you can print multiple values by using a comma in between the val
 >    >  myIntFloat = int(myFloat)
 >    >  print("My float as integer {}".format(myIntFloat)) 
 >    >  #This works
-
 >    >  myInt  = 12
 >    >  print("My integer as string {}".format(str(myInt)))
 >    >  #This works as well... but:
-
->    >  myString = "aa"
+>    >  myString = "Hello"
 >    >  print("My string as float {}".format(float(myString)))
 >    >  #will fail and give a TypeError - Python cannot convert "aa" into a float.
 >    >  ```
