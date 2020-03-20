@@ -3,11 +3,11 @@ layout: tutorial_hands_on
 
 title: 01 Introduction to Jupyter 
 # zenodo_link: ''
-# questions:
-# - Which biological questions are addressed by the tutorial?
-# - Which bioinformatics techniques are important to know for this type of data?
-# objectives:
-# - The learning objectives are the goals of the tutorial
+questions:
+- How to get started in Python? 
+objectives:
+- Execute a Python expression in the Jupyter Notebook environment 
+- Use Jupyter Notebooks and its shortcuts for Python programming
 # - They will be informed by your audience and will communicate to them and to yourself
 #   what you should focus on during the course
 # - They are single sentences describing what a learner should be able to do once they
@@ -15,7 +15,8 @@ title: 01 Introduction to Jupyter
 # - You can use Bloom's Taxonomy to write effective learning objectives
 time_estimation: 15 min
 key_points:
- - Jupyter-notebook & insight of the course
+- We installed Jupyter Notebooks, a very strong environment for Python programming
+- We learned how to write and submit Python code in its simplest form
 
 contributors:
 - tmuylder
@@ -23,7 +24,7 @@ contributors:
 ---
 
 ## 1.1 Why Jupyter
-Jupyter is an interactive code environment that allows you to write code and get immediate feedback from it. It's one of the most popular environment for data science in Python. Especially for training purposes, as it interactively gives you your code and some informative text together. 
+Jupyter is an interactive code environment that allows you to write code and get immediate feedback from it. It's one of the most popular environment for Python programming. Especially for training purposes, as it interactively gives you your code and some informative text together. 
 
 ## 1.2 Installation
 The easiest way to install Python and Jupyter is to install [Anaconda](https://docs.anaconda.com/anaconda/install/) (Navigator) on your computer. Anaconda Navigator contains several (GUI) applications like Jupyter in which you can run your Python code. As a side note, Anaconda is also a package manager which makes it ideal for reproducibility purposes as well. 
@@ -54,7 +55,7 @@ Navigate to a folder and click on the right New --> Python 3. A new Notebook now
 ```
 
 Click on the triangle symbol on the top of the notebook or type 'Shift+Enter' to run the code. The output will immediately appear on the screen and should look like this. 
-<center><img src="images/cells.PNG" /></center>
+<center><img src="../../images/cells.PNG" /></center>
 
 Also, a new cell will have appeared in the notebook. A notebook is actually a set of cells in which you can input code. 
 
@@ -81,7 +82,7 @@ Lastly, within the command mode, type 'y' to change the cell to a Python code ce
 
 **d. Running a cell**
 
-To stress the importance of the 'stop' button on top of this notebook, run the following code below. While it is running, the code has an asterisk which means it's still being executed and your notebook won't be able to process any other code in another cell. In order to stop it, because it's an indefinite loop, hit the stop button or type 'ii' in command mode. 
+To stress the importance of the 'stop' button on top of this notebook, run the following code below. While it is running, the code has an asterisk which means it's still being executed and your notebook won't be able to process any other code in another cell. In order to stop it, because it's an infinite loop, hit the stop button or type 'ii' in command mode. 
 
 
 ```python
@@ -92,7 +93,7 @@ while True:
 ```
 
 ## 1.4 Examples
-The above will suffice for the JupyterLab environment introduction. We will dive into our first examples before diving into the first chapter of our Python adventure. 
+The above will suffice for the Jupyter environment introduction. We will dive into our first examples before diving into the first chapter of our Python adventure. 
 
 A program needs information (input) to run, and then needs to export its results so that you know what happened (output). The easiest way to do this is to send a 'text message' to the screen; this is possible with the print command which we will introduce here.
 
