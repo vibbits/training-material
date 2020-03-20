@@ -284,5 +284,3 @@ Triplicate = {
 Triplicate
 ```
 
-## 8.5 Conclusion
-
