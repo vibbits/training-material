@@ -5,10 +5,10 @@ title: 03 Print formatting
 questions:
 - How can you lay-out the text that Python prints out in a nice and tidy way?
 objectives:
-- Using ´.format()´ to format the printing output.
-time_estimation: 20m
+- Using .format() to format the printing output.
+time_estimation: 20 min
 key_points:
-- Using ´.format()´ to format the printing output.
+- We've exploited the .format() method to format the printing of results in a more human readable way. 
 contributors:
 - tmuylder
 
@@ -33,7 +33,7 @@ The following example gives the most basic use form of the `.format()` statement
 print("My name is {}.".format("Jane"))
 ```
 
-The above don't do anything interesting; you can however put a number in between the curly brackets `{}` to force the output to take up a number of characters. Try this:
+The above doesn't do anything interesting; you can however put a number in between the curly brackets `{}` to force the output to take up a number of characters. Try this:
 
 
 ```python
@@ -42,7 +42,7 @@ print("My name is {:>10}.".format("Jane"))
 
 You'll now see that you force an area of 10 characters to put the name. If the name is shorter, the remaining empty characters will be whitespaces. If the name would be longer, the number will be overruled. Note that the > character in the .format() form can be used to determine the alignment (use < for left align, > for right align and = for centered). 
 
-There are a number of differences between the old Python (version <2.5) and the version you're using now (Python 3.7). In older scripts you might see different print statements which will not work in this version. Instead of using the `.format()` statement, it used to be a `%`-symbol to position information in the right place. E.g.:
+There are a number of differences between the old Python (version <2.5) and the version you're using now (Python 3.7). In older scripts you might see different print statements. Instead of using the `.format()` statement, it used to be a `%`-symbol to position information in the right place. E.g.:
 ```print("My name is %s." % "Jane")```  
 
 
@@ -108,7 +108,3 @@ Escape codes are necessary if you are trying to print a single or double quote:
 ```python
 print("He said: \"Hello\".")
 ```
-
-## 3.5 Conclusion
- 
-After this tutorial you should be able to format the printing output of Python in more human readable way. 
