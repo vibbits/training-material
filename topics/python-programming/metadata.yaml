@@ -3,7 +3,7 @@ name: "python-programming"
 type: "basics"
 category: "programming"
 title: "Gentle hands-on introduction to Python programming"
-summary: "During this course you'll get to learn all the basics and peculiarities of Python with the help of plenty hands-on exercises related to bioinformatics or Life Sciences data-analyses." 
+summary: "In this course you'll get to learn all the basics of Python by plenty hands-on exercises related to bioinformatics or Life Sciences data-analyses." 
 
 extra: "data_analysis_python"
 
