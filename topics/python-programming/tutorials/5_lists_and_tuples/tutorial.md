@@ -1,15 +1,15 @@
 ---
 layout: tutorial_hands_on
 
-title: 05 Lists and Tuples
+title: 05 Lists, Tuples and Sets
 questions:
-- How to combine multiple values in one variable
+- How to combine multiple values in one variable?
 objectives:
-- Use Lists and Tuples to collect multiple values within one variable
+- Use Lists, Tuples and Sets to collect multiple values within one variable
 - Learn how to create and convert different types of variables 
 time_estimation: 30 min
 key_points:
-- Use Lists and Tuples to collect multiple values within one variable
+- Use Lists, Tuples and Sets to collect multiple values within one variable
 - Learn how to create and convert different types of variables 
 contributors:
 - tmuylder
@@ -384,7 +384,8 @@ dir(myString)
 ## 5.5 Sets  
 Very useful as well are sets. These are unordered and unindexed (so the order in which you put in elements doesn't matter), and it is much easier to compare them to each other. Because sets cannot have multiple occurrences of the same element, it makes sets highly useful to efficiently remove duplicate values from a list or tuple and to perform common math operations like unions and intersections.
 
-![sets](../../images/Python-Set-Operatioons.png)
+![sets](../../images/Python-Set-Operatioons.png)  
+
 Source: https://www.learnbyexample.org/python-set/
 
 You initialise them by using **set()** on a list or tuple:
