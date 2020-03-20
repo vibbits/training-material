@@ -26,7 +26,8 @@ So far we've seen variables where you essentially assign a value to a name that 
 - `Set` is a collection which is unordered and unindexed. No duplicate members. Use curly brackets {} for sets. 
 - `Dictionary` is a collection which is unordered, changeable and indexed. No duplicate members. Use curly brackets {} for dictionaries (see [section 8](8_Dictionaries.ipynb)).
 
-They are useful in different circumstances, which we'll try to explain below.
+They are useful in different circumstances and each data-type has its own advantage. On a small-case example this might not be noticable, however on a larger scale using the right data-type can save you a lot of time. 
+
 
 
 
@@ -445,6 +446,3 @@ There are more things you can do with sets which we will not go into here, see t
 {: .hands_on}
 ---
 
-
-## 5.6 Conclusion
-Each data-type has its own advantage. On a small-case example this might not be noticable, however on a larger scale using the right data-type can save you a lot of time. 
