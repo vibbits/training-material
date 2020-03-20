@@ -6,11 +6,11 @@ questions:
 - How to perform the same code over and over again?
 objectives:
 - Perform the same code over a list of values using for-loops
-- Learn how to use the while statement 
-time_estimation: 20m
+- Use a while statement to perform code over and over until a specific condition is met
+- Recall how Python iterates over multiple variables simultaneously
+time_estimation: 30 min
 key_points:
-- - Perform the same code over a list of values using for-loops
-- Learn how to use the while statement 
+- We learned how to use the while and for loops for a single and for multiple lists, strings, and other variables
 contributors:
 - tmuylder
 
@@ -97,10 +97,11 @@ for line in enumerate(myTuple):
 ```
 
 ----
+
 **Intermezzo:**
 
 
-In order to understand this, we highlight the if-conditions from chapter 4 again, especially the fact that Python interprets the integer 0 to be `False`, the integer 1 is interpreted as `True` and any other integer different than 0 and 1 is considered to be not `False` (it's also not `True` though)
+Before starting with exercises, we want to highlight the if-conditions from chapter 4 again, especially the fact that Python interprets the integer 0 to be `False`, the integer 1 is interpreted as `True` and any other integer different than 0 and 1 is considered to be not `False` (it's also not `True` though)
 
 
 ```python
@@ -122,6 +123,16 @@ c == True
 
 
 ```python
+c == False
+```
+
+
+```python
+c != True
+```
+
+
+```python
 c != False
 ```
 
@@ -130,21 +141,35 @@ Why is this important to know? We see sometimes code similar to the one below in
 
 
 ```python
-c = 2 # we assign the value 2 to the integer c
-if a + b + c != False:  # 
+c = 2 
+if c != False:  # 
     print("C is equal to", c)
 ```
 
 
 ```python
-b = 0
-if not b:   
-    print("C is equal to", b)
+a = 0
+if a:
+    print("A is equal to 0")
+```
+
+
+```python
+b = 1
+if b:   
+    print("B is equal to", b)
+```
+
+
+```python
+if not a:
+    print("A is still equal to 0")
 ```
 
 ----
 
-If we now return to the example where we want to find out if a number is divisible by another, it becomes much easier to test a large set of values. In the code below, we will iterate over each value in the list of numbers. If the remainder after division is 0 (comparison is True), we print the number out. 
+Now we want to find out if a number is divisible by another number. In the code below, we will iterate over each value in the list of numbers. If the remainder after division is 0 (comparison is True), we print the number out. 
+
 
 
 ```python
@@ -181,7 +206,7 @@ for myNumber in myNumbers:
 > Write a program where you print out all positive numbers up to 1000 that can be divided by 13, or 17, or both. The output should be printed as : `Number 13 is divisible by [13]`. If you want a little more challenge, the output should be printed as `Number 884 is divisible by 13, 17`
 > 
 >    > <details markdown="1">
->    > <summary>{% icon solution %} Solution
+>    > <summary>{% icon solution %} Solution 1
 >    > </summary>
 >    >
 >    >  ```python
@@ -197,9 +222,8 @@ for myNumber in myNumbers:
 >    >          print("Number {} is divisible by {}".format(myNumber,validDividers))       
 >    >  ```
 >    > </details>
-
 >    > <details markdown="1">
->    > <summary>{% icon solution %} Solution
+>    > <summary>{% icon solution %} Solution 2
 >    > </summary>
 >    >  ```python
 >    >  # Extra: The output is not very nice here as you print off the list with the square brackets, you could try the following bit of code under the if validDividers: condition:
@@ -253,7 +277,7 @@ for myNumber in myNumbers:
 > Number 4 can be divided by 1, 2, 4!
 > ```
 >    > <details markdown="1">
->    > <summary>{% icon solution %} Solution
+>    > <summary>{% icon solution %} Solution 1
 >    > </summary>
 >    >
 >    >  ```python
@@ -271,7 +295,7 @@ for myNumber in myNumbers:
 >    >  ```
 >    > </details>
 >    > <details markdown="1">
->    > <summary>{% icon solution %} Solution
+>    > <summary>{% icon solution %} Solution 2
 >    > </summary>
 >    >
 >    >  ```python
@@ -453,7 +477,5 @@ for i,j,k in zip(x,y,z):
     count += 1
     print("Iteration: {}. The value i is {}, the value j is {} and the value k is {}".format(count, i, j, k))
 ```
-
-## 6.5 Conclusion
 
 
