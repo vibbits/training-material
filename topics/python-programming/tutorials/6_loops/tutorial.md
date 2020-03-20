@@ -18,7 +18,7 @@ contributors:
 
 ## 6.1 Introduction
 
-Another important feature of computer programs is that they can do the same thing over and over again with different information. To allow this, it is possible to use loops in the program; essentially a loop is executed until it runs out of data or the code decides to break out of it.
+Another important feature of computer programs is that they can do the same thing over and over again with different information. This is possible by using loops in your code; essentially a loop is executed until it runs out of data or the code decides to break out of it.
 
 
 
@@ -66,6 +66,8 @@ for tupleIndex in range(myTupleLength):
 
 Python has a built-in function `enumerate()` which eases this task for you as a programmer. For the tuple which we defined above, you could make the following table with indeces and accompanied values:
 
+<center>
+
 | index | value |
 |---|---|
 | 0 | A |
@@ -74,6 +76,7 @@ Python has a built-in function `enumerate()` which eases this task for you as a 
 | 3 | D |
 | 4 | E |
 | 5 | F |
+</center>
 
 `enumerate()` mimics this table and you can use it in this way which immediately gives you the indeces:
 
