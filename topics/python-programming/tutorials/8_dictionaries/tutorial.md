@@ -6,7 +6,7 @@ questions:
 - Combine a set of values
 objectives:
 - Use Dictionaries to combine sets of values. 
-time_estimation: 20 min
+time_estimation: 20m
 key_points:
 - 
 contributors:

@@ -6,7 +6,7 @@ questions:
 - This section combines all of the previous tutorials in one complex exercise
 objectives:
 - Exploit basic Python built-in features in a more difficult set-up. 
-time_estimation: 1 h
+time_estimation: 1h
 
 contributors:
 - tmuylder

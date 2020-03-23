@@ -7,7 +7,7 @@ questions:
 objectives:
 - Exploit different ways of reading in files
 - Open & close files appropriately
-time_estimation: 30 min
+time_estimation: 30m
 key_points:
 - Exploit different ways of reading in files
 - Open & close files appropriately

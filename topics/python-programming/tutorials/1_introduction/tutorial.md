@@ -14,7 +14,7 @@ objectives:
 # - They are single sentences describing what a learner should be able to do once they
 #   have completed the tutorial
 # - You can use Bloom's Taxonomy to write effective learning objectives
-time_estimation: 15 min
+time_estimation: 15m
 key_points:
 - We installed Jupyter Notebooks, a very strong environment for Python programming
 - We learned how to write and submit Python code in its simplest form

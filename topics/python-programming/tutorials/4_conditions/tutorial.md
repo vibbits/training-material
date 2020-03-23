@@ -7,7 +7,7 @@ questions:
 objectives:
 - Use if-elif-else statements together with condition statements
 - Understand what indentation means and how it can affect your code
-time_estimation: 30 min
+time_estimation: 30m
 key_points:
 - We can decide which Python code is executed based on a (set of) condition(s) that is satisfied.  
 contributors:

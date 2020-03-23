@@ -6,7 +6,7 @@ questions:
 - How can you lay-out the text that Python prints out in a nice and tidy way?
 objectives:
 - Using .format() to format the printing output.
-time_estimation: 20 min
+time_estimation: 20m
 key_points:
 - We've exploited the .format() method to format the printing of results in a more human readable way. 
 contributors:

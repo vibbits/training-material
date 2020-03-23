@@ -7,7 +7,7 @@ questions:
 objectives:
 - Use Lists, Tuples and Sets to collect multiple values within one variable
 - Learn how to create and convert different types of variables 
-time_estimation: 30 min
+time_estimation: 30m
 key_points:
 - Use Lists, Tuples and Sets to collect multiple values within one variable
 - Learn how to create and convert different types of variables 

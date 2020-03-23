@@ -8,7 +8,7 @@ objectives:
 - Perform the same code over a list of values using for-loops
 - Use a while statement to perform code over and over until a specific condition is met
 - Recall how Python iterates over multiple variables simultaneously
-time_estimation: 30 min
+time_estimation: 30m
 key_points:
 - We learned how to use the while and for loops for a single and for multiple lists, strings, and other variables
 contributors:

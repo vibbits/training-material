@@ -11,7 +11,7 @@ objectives:
 - Recognize different built-in data types of Python
 - Write, evaluate and interpret expressions in Python
 - Print out results to the user
-time_estimation: 20 min
+time_estimation: 20m
 key_points:
 - We've assessed the string, integers, float and boolean data-types of Python
 - We compared variables and their values with operators
