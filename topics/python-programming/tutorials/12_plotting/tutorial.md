@@ -3,12 +3,14 @@ layout: tutorial_hands_on
 
 title: 12 Plotting
 questions:
-- 
+- How to plot some data analysis results in Python?
 objectives:
-- 
+- Use matplotlib as a library for plotting figures
+- Make line figures, scatter plots and histograms with matplotlib
+- Change colors, plot and axis titles, make a legend and make error margins
 time_estimation: 20m
 key_points:
-- 
+- We've exploited matplotlib as Pythons primary library for plotting high-quality figures
 contributors:
 - tmuylder
 
@@ -41,6 +43,7 @@ import matplotlib.pyplot as plt
 plt.plot([1, 2, 3, 2.5])
 plt.ylabel('some numbers')
 ```
+![Figure 1](../../images/plotting1.png)
 
 `plot()` is a versatile command, and will take an arbitrary number of arguments. For example, to plot x versus y, you can issue the command:
 
@@ -187,6 +190,3 @@ plt.show()
 ```
 
 
-
-
-## 12.2 Conclusion
