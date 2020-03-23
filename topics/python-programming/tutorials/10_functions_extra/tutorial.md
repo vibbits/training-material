@@ -15,7 +15,7 @@ contributors:
 
 ## Extra exercises on functions
 
-Practice makes perfect...
+This chapter contains some extra exercises on functions. In the end, practice makes perfect...
 
 
 
@@ -23,7 +23,7 @@ Practice makes perfect...
 
 > ### {% icon hands_on %} Exercise 10.2.1
 >
-> Download [this matrix file](data/Matrix.txt) (`Matrix.txt`) and save it in your directory. Then write a function to read a matrix file in this format, reorder the rows by the values in the given column, and printing out the result. The function should take as argument a file name and a column number. 
+> Download [this matrix file](http://wiki.bits.vib.be/images/4/4e/Matrix.txt) (`Matrix.txt`) and save it in your directory. Then write a function to read a matrix file in this format, reorder the rows by the values in the given column, and printing out the result. The function should take as argument a file name and a column number. 
 > 
 >    > <details markdown="1">
 >    > <summary>{% icon solution %} Solution
