@@ -3,8 +3,9 @@ layout: tutorial_hands_on
 
 title: 08 Dictionaries
 questions:
-- Combine a set of values
+- How to associate two values with each other in one data structure?
 objectives:
+- Understand the difference between dictionaries and other data structures. 
 - Use Dictionaries to combine sets of values. 
 time_estimation: 20m
 key_points:
@@ -17,7 +18,7 @@ contributors:
 
 ## 8.1 Introduction
 
-So far we've seen variables that store one value or a series of values (see [section 5](../5_lists_and_tuples/tutorial.md): lists, tuples and sets). There is another way of storing information where you associate one variable with another; in Python this is called a dictionary. Dictionaries provide a very useful way of quickly connecting variables to each other.
+So far we've seen variables that store one value or a series of values (see [section 5](../../5_lists_and_tuples/tutorial.md): lists, tuples and sets). There is another way of storing information where you associate one variable with another; in Python this is called a dictionary. Dictionaries provide a very useful way of quickly connecting variables to each other.
 
 
 ## 8.2 Dictionary creation & usage
@@ -25,7 +26,7 @@ So far we've seen variables that store one value or a series of values (see [sec
 It is best to think of a dictionary as a set of *key:value* pairs, with the requirement that the keys are unique (within one dictionary). Dictionaries are initiated by using curly brackets {}, placing a comma-separated list of *key:value* pairs adds initial *key:value* pairs to the dictionary. This is how a dictionary would look like:
 
 
-![Gentle-hands-on-introduction-to-Python-Programming Python Dictionary](../../images/myDictionary-cropped.PNG)
+![Gentle-hands-on-introduction-to-Python-Programming Python Dictionary](../../images/myDictionary-cropped.png)
 
 
 
