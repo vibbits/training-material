@@ -11,6 +11,7 @@ objectives:
 time_estimation: 20m
 key_points:
 - We've exploited matplotlib as Pythons primary library for plotting high-quality figures
+- This library produces figures in a similar manner to Matlabs plotting library
 contributors:
 - tmuylder
 
@@ -43,21 +44,6 @@ import matplotlib.pyplot as plt
 plt.plot([1, 2, 3, 2.5])
 plt.ylabel('some numbers')
 ```
-![plotting1](../../images/plotting1.png)
-
-img 2
-
-<img src="../../images/plotting1.png" width=100% height=100%>
-
-img 3
-
-<img src="../../images/plotting1.png" width="50%" height="50%">
-
-img 4
-
-<img src="../../images/plotting1.png" width="396">
-
-img 5
 
 <center><img src="../../images/plotting1.png" /></center>
 
@@ -78,6 +64,8 @@ plt.plot(x_list, y_list)
 plt.title("Title of the plot")
 ```
 
+<center><img src="../../images/plotting2.png" /></center>
+
 Using the pyplot interphase, you build a graph by calling a sequence of functions and all of them are applied to the *current subplot*, like so:
 
 
@@ -91,6 +79,7 @@ plt.ylabel("This is the y-label")
 # Uncomment the line below to save the figure in your currentdirectory
 # plt.savefig('examplefigure.png')
 ```
+<center><img src="../../images/plotting3.png" /></center>
 
 When working with just one subplot in the figure, generally is OK to work with the pyplot interphase, however, when doing more complicated plots, or working within larger scripts, you will want to explicitly pass around the *Subplot (Axes)* and/or *Figure* object to operate upon.
 
@@ -145,7 +134,7 @@ plt.title('Distribution of nucleotides in fasta sequence')
 
 plt.show()
 ```
-
+<center><img src="../../images/plotting4.png" /></center>
 
 ```python
 total_count = A_count + C_count + G_count + T_count
@@ -164,7 +153,7 @@ plt.title('Distribution of nucleotides in fasta sequence')
 
 plt.show()
 ```
-
+<center><img src="../../images/plotting5.png" /></center>
 
 ```python
 # libraries
@@ -206,4 +195,4 @@ plt.show()
 
 ```
 
-
+<center><img src="../../images/plotting6.png" /></center>
