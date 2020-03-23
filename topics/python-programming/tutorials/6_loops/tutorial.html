@@ -1,0 +1,729 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="dw_1zBYRNxF7-vYNDXh3Ght_JuqgJt3BD1N_Pynqmv0" />
+    <title>06 Loops</title>
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-61194136-18', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=3">
+    <link rel="stylesheet" href="/assets/css/bootstrap-toc.min.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="/assets/css/main.scss">
+    <link rel="stylesheet" href="/assets/css/VIB.css">
+    <link rel="stylesheet" href="/assets/css/academicons.css">
+    <link rel="stylesheet" href="/assets/css/syntax_highlighting.css">
+    <link rel="shortcut icon" href="/favicon.ico " type="image/x-icon" />     
+    <meta name="description" content="In this course you'll get to learn all the basics of Pyth..." />
+    <meta property="og:title" content="VIB Bioinformatics Training: 06 Loops" />
+    <meta property="og:description" content="In this course you'll get to learn all the basics of Pyth..." />
+    <meta property="og:image" content="/assets/images/bioinformatics_core_rgb_neg.png" />
+</head>
+
+<body data-spy="scroll" data-target="#toc">
+    <div class="top-bar-vib">
+ <a href="http://vib.be/en" target="_blank" style="font-size:14px">VIB Home </a>
+</div>
+
+<div class="container main-content">
+
+<div class="container page-top__container">
+          <div class="region region-top">
+  <div id="logo" class="col-md-3 col-lg-3 text-left" style="padding-left:0px;margin-top:20px">
+       <a href="/">
+           <img src="/assets/images/logo.svg" height="60" alt="VIB logo" class="margin20">
+       </a>
+    </div>
+    <div class="col-md-9 col-lg-9 text-right" style="margin-top:50px;">
+    <nav role="navigation" aria-labelledby="block-mainnavigation-menu" id="block-mainnavigation" class="block block-menu navigation menu--main">
+  
+
+
+        <a href="/" class="topmenu">Home</a>
+
+
+        <a href="/about.html" class="topmenu" >About</a>
+
+
+        <a href="/hall-of-fame.html" class="topmenu">Contribute</a>
+
+
+        <a href="/faq.html" class="topmenu">Faq</a>
+
+
+        <a href="/search/index.html" class="topmenu">Search</a>
+
+
+  </nav>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="application/ld+json">
+        
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "headline": "06 Loops",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "/blob//LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "courseCode": "python-programming / 6_loops / hands-on",
+  "learningResourceType": "hands-on tutorial",
+  "name": "Hands-on for '06 Loops' tutorial",
+  "isPartOf": {
+    "@type": "Course",
+    "name": "06 Loops",
+    "description": "06 Loops",
+    "learningResourceType": "tutorial",
+    "interactivityType": "expositive",
+    "provider": {
+      "@type": "Organization",
+      "email": "bits@vib.be",
+      "name": "VIB Bioinformatics Core",
+      "url": "https://www.bits.vib.be"
+    }
+  },
+  "url": "https://material.bits.vib.be//topics/python-programming/tutorials/6_loops/tutorial.html",
+  "timeRequired": "PT30M",
+  "description": "06 Loops\\nThe questions this  addresses are:\n - How to perform the same code over and over again?\n\n\\nThe objectives are:\n - Perform the same code over a list of values using for-loops\n - Use a while statement to perform code over and over until a specific condition is met\n - Recall how Python iterates over multiple variables simultaneously\n\n",
+  "hasPart": [
+
+  ],
+  "mentions": [
+
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Tuur Muyldermans"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Tuur Muyldermans"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "Gentle hands-on introduction to Python programming",
+      "description": "In this course you'll get to learn all the basics of Python by plenty hands-on exercises related to bioinformatics or Life Sciences data-analyses.",
+      "url": "https://material.bits.vib.be//topics/python-programming/"
+    }
+  ]
+}
+    </script>
+
+    <div class="row tutorial">
+      <div class="col-md-12" role="main">
+        <h1 data-toc-skip>06 Loops</h1>
+        <div class="contributors-line">By: 
+
+<a href="/hall-of-fame#tmuylder" class="contributor-badge">Tuur Muyldermans</a>
+
+
+</div>
+        <blockquote class="overview">
+
+            <strong><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</strong>
+            <ul>
+            
+            <li>How to perform the same code over and over again?</li>
+            
+            </ul>
+
+            <strong><i class="fa fa-bullseye" aria-hidden="true"></i><span class="visually-hidden">objectives</span> Objectives</strong>
+            <ul>
+            
+            <li>Perform the same code over a list of values using for-loops</li>
+            
+            <li>Use a while statement to perform code over and over until a specific condition is met</li>
+            
+            <li>Recall how Python iterates over multiple variables simultaneously</li>
+            
+            </ul>
+
+            
+
+            
+            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 30 minutes</p>
+            
+
+            
+
+
+            
+
+        </blockquote>
+
+        <div class="container" data-field="body">
+            <div class="row">
+                <div class="col-md-10" role="main">
+                    <h2 id="61-introduction">6.1 Introduction</h2>
+
+<p>Another important feature of computer programs is that they can do the same thing over and over again with different information. This is possible by using loops in your code; essentially a loop is executed until it runs out of data or the code decides to break out of it.</p>
+
+<h2 id="62-for-loop">6.2 For loop</h2>
+<p>Now that we have these variables that can hold multiple elements (previous exercise), it would be useful to be able to loop over them one by one. This is possible with the <strong>for</strong> loop:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Make a list of integers from 0 to 9 with steps of 1 (0, 1, 2, ..., 9)
+</span><span class="n">myList</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> 
+ 
+<span class="c1"># for each value (myElement) in this list (myList); do the following:
+</span><span class="k">for</span> <span class="n">myElement</span> <span class="ow">in</span> <span class="n">myList</span><span class="p">:</span> 
+    <span class="c1"># Print that value
+</span>    <span class="k">print</span><span class="p">(</span><span class="s">"Counting {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">myElement</span><span class="p">))</span>  
+</code></pre></div></div>
+
+<p>In the first iteration myElement will take up the first value of myList and perform the code that is indented (in this cas it will print <em>counting 0</em>), then it will go back to the start of the loop and take up the second value of myList (which is 1) and perform again the code that is indented (<em>counting 1</em>), etc.</p>
+
+<p>Note that again we have to use indentation, as there is a block of code that is only relevant within the for loop.</p>
+
+<p>Python will always need a list, tuple, set or dictionary to iterate through and it will work exactly the same with tuples (see example below). The iterator will always take up the value of the list/tuple/set/dict!</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myTuple</span> <span class="o">=</span> <span class="p">(</span><span class="s">"A"</span><span class="p">,</span><span class="s">"B"</span><span class="p">,</span><span class="s">"C"</span><span class="p">,</span><span class="s">"D"</span><span class="p">,</span><span class="s">"E"</span><span class="p">,</span><span class="s">"F"</span><span class="p">)</span>
+ 
+<span class="k">for</span> <span class="n">myElement</span> <span class="ow">in</span> <span class="n">myTuple</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Letter {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">myElement</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>Because you can access individual elements within a list or tuple, you can also count the element index in the list or tuple, so that you know both index and value. If you want to iterate over  a list of letters, in this case it’s in a tuple type, you’ll first have to find the length of the list and then use range to make a list of integers that can be used as an index.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myTuple</span> <span class="o">=</span> <span class="p">(</span><span class="s">"A"</span><span class="p">,</span><span class="s">"B"</span><span class="p">,</span><span class="s">"C"</span><span class="p">,</span><span class="s">"D"</span><span class="p">,</span><span class="s">"E"</span><span class="p">,</span><span class="s">"F"</span><span class="p">)</span>
+<span class="n">myTupleLength</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">myTuple</span><span class="p">)</span>
+ 
+<span class="k">for</span> <span class="n">tupleIndex</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">myTupleLength</span><span class="p">):</span>
+    <span class="n">myElement</span> <span class="o">=</span> <span class="n">myTuple</span><span class="p">[</span><span class="n">tupleIndex</span><span class="p">]</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Letter {} is at position {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">myElement</span><span class="p">,</span><span class="n">tupleIndex</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>  <span class="c1"># We have to add 1 to the index here because Python starts at zero...
+</span></code></pre></div></div>
+
+<p>Python has a built-in function <code class="highlighter-rouge">enumerate()</code> which eases this task for you as a programmer. For the tuple which we defined above, you could make the following table with indeces and accompanied values:</p>
+
+<center>
+
+| index | value |
+|---|---|
+| 0 | A |
+| 1 | B |
+| 2 | C |
+| 3 | D |
+| 4 | E |
+| 5 | F |
+</center>
+
+<p><code class="highlighter-rouge">enumerate()</code> mimics this table and you can use it in this way which immediately gives you the indeces:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myTuple</span> <span class="o">=</span> <span class="p">(</span><span class="s">"A"</span><span class="p">,</span><span class="s">"B"</span><span class="p">,</span><span class="s">"C"</span><span class="p">,</span><span class="s">"D"</span><span class="p">,</span><span class="s">"E"</span><span class="p">,</span><span class="s">"F"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">myTuple</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>The enumerate function has some similarities with dictionaries, especially in how to access a value. Don’t worry if you’re confused with the squared brackets, we’ll cover this in Chapter 8.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myTuple</span> <span class="o">=</span> <span class="p">(</span><span class="s">"A"</span><span class="p">,</span><span class="s">"B"</span><span class="p">,</span><span class="s">"C"</span><span class="p">,</span><span class="s">"D"</span><span class="p">,</span><span class="s">"E"</span><span class="p">,</span><span class="s">"F"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">myTuple</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Letter {1} is at position {0}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">line</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span> <span class="c1"># For the sake of exercising I switched the format positions for once. 
+</span></code></pre></div></div>
+
+<hr />
+
+<p><strong>Intermezzo:</strong></p>
+
+<p>Before starting with exercises, we want to highlight the if-conditions from chapter 4 again, especially the fact that Python interprets the integer 0 to be <code class="highlighter-rouge">False</code>, the integer 1 is interpreted as <code class="highlighter-rouge">True</code> and any other integer different than 0 and 1 is considered to be not <code class="highlighter-rouge">False</code> (it’s also not <code class="highlighter-rouge">True</code> though)</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">a</span> <span class="o">==</span> <span class="bp">False</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">b</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">b</span> <span class="o">==</span> <span class="bp">True</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">c</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">c</span> <span class="o">==</span> <span class="bp">True</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">c</span> <span class="o">==</span> <span class="bp">False</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">c</span> <span class="o">!=</span> <span class="bp">True</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">c</span> <span class="o">!=</span> <span class="bp">False</span>
+</code></pre></div></div>
+
+<p>Why is this important to know? We see sometimes code similar to the one below in which an arithmetical operation is evaluated in an <code class="highlighter-rouge">if</code> statement. If the result of this arithmetical operation is an integer like 2, 3, etc. we know now how we can deploy this knowledge to evaluate the statement.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">c</span> <span class="o">=</span> <span class="mi">2</span> 
+<span class="k">if</span> <span class="n">c</span> <span class="o">!=</span> <span class="bp">False</span><span class="p">:</span>  <span class="c1"># 
+</span>    <span class="k">print</span><span class="p">(</span><span class="s">"C is equal to"</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">if</span> <span class="n">a</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"A is equal to 0"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">b</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">if</span> <span class="n">b</span><span class="p">:</span>   
+    <span class="k">print</span><span class="p">(</span><span class="s">"B is equal to"</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="ow">not</span> <span class="n">a</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"A is still equal to 0"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<hr />
+
+<p>Now we want to find out if a number is divisible by another number. In the code below, we will iterate over each value in the list of numbers. If the remainder after division is 0 (comparison is True), we print the number out.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myNumbers</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">myDivider</span> <span class="o">=</span> <span class="mi">17</span>
+ 
+<span class="k">for</span> <span class="n">myNumber</span> <span class="ow">in</span> <span class="n">myNumbers</span><span class="p">:</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">myNumber</span> <span class="o">%</span> <span class="n">myDivider</span><span class="p">):</span>  <span class="c1"># Nothing left after division, so number is divisible.
+</span>        <span class="k">print</span><span class="p">(</span><span class="s">"Number {} cannot be divided by {}!"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">myNumber</span><span class="p">,</span><span class="n">myDivider</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>Here we now have two levels of code besides the main one; the <strong>if</strong> is checked for every value, but the print is only executed for numbers divisible by myDivider.</p>
+
+<p>You can also control the loop by using <strong>continue</strong> and <strong>break</strong>. They alter the flow of a normal loop:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myNumbers</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+ 
+<span class="k">for</span> <span class="n">myNumber</span> <span class="ow">in</span> <span class="n">myNumbers</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">myNumber</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>   
+        <span class="k">continue</span>     <span class="c1"># This means that the code within the for loop will be ignored if myNumber is equal to 5, we 'jump back' to the start and use the next number (6)
+</span>    <span class="k">print</span><span class="p">(</span><span class="n">myNumber</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">myNumber</span> <span class="o">==</span> <span class="mi">8</span><span class="p">:</span>
+        <span class="k">break</span>        <span class="c1"># This means we will exit the loop alltogether, all other values after this one will not be dealt with.
+</span>
+</code></pre></div></div>
+
+<hr />
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-exercise-621"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Exercise 6.2.1</h3>
+
+  <p>Write a program where you print out all positive numbers up to 1000 that can be divided by 13, or 17, or both. The output should be printed as : <code class="highlighter-rouge">Number 13 is divisible by [13]</code>. If you want a little more challenge, the output should be printed as <code class="highlighter-rouge">Number 884 is divisible by 13, 17</code></p>
+
+  <blockquote>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution 1
+</summary>
+
+      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">myNumbers</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span> <span class="c1"># should be 1001
+</span> <span class="n">myDividers</span> <span class="o">=</span> <span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="mi">17</span><span class="p">)</span>    <span class="c1"># We will loop over these in the loop itself, so it's easy to add new numbers to this
+</span>  
+ <span class="k">for</span> <span class="n">myNumber</span> <span class="ow">in</span> <span class="n">myNumbers</span><span class="p">:</span>
+     <span class="n">validDividers</span> <span class="o">=</span> <span class="p">[]</span>     <span class="c1"># In this list we will put all the valid dividers
+</span>     <span class="k">for</span> <span class="n">myDivider</span> <span class="ow">in</span> <span class="n">myDividers</span><span class="p">:</span>
+         <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">myNumber</span> <span class="o">%</span> <span class="n">myDivider</span><span class="p">):</span>
+               <span class="n">validDividers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">myDivider</span><span class="p">)</span>
+     <span class="k">if</span> <span class="n">validDividers</span><span class="p">:</span>      <span class="c1"># This means that the list has to have values in it
+</span>         <span class="k">print</span><span class="p">(</span><span class="s">"Number {} is divisible by {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">myNumber</span><span class="p">,</span><span class="n">validDividers</span><span class="p">))</span>       
+</code></pre></div>      </div>
+    </details>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution 2
+</summary>
+      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1"># Extra: The output is not very nice here as you print off the list with the square brackets, you could try the following bit of code under the if validDividers: condition:
+</span> <span class="n">myNumbers</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span> <span class="c1">#should be 1001
+</span> <span class="n">myDividers</span> <span class="o">=</span> <span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="mi">17</span><span class="p">)</span>    <span class="c1"># We will loop over these in the loop itself, so it's easy to add new numbers to this
+</span>  
+ <span class="k">for</span> <span class="n">myNumber</span> <span class="ow">in</span> <span class="n">myNumbers</span><span class="p">:</span>
+     <span class="n">validDividers</span> <span class="o">=</span> <span class="p">[]</span>     <span class="c1"># In this list we will put all the valid dividers
+</span>     <span class="k">for</span> <span class="n">myDivider</span> <span class="ow">in</span> <span class="n">myDividers</span><span class="p">:</span>
+         <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">myNumber</span> <span class="o">%</span> <span class="n">myDivider</span><span class="p">):</span>
+               <span class="n">validDividers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">myDivider</span><span class="p">)</span>
+     <span class="k">if</span> <span class="n">validDividers</span><span class="p">:</span>      <span class="c1"># This means that the list has to have values in it
+</span>         <span class="c1"># First make strings out of the integers; this is valid Python syntax where you make a list out of a list    
+</span>         <span class="n">validDividerStrings</span> <span class="o">=</span> <span class="p">[</span><span class="s">"{}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">validDivider</span><span class="p">)</span> <span class="k">for</span> <span class="n">validDivider</span> <span class="ow">in</span> <span class="n">validDividers</span><span class="p">]</span>
+ 
+         <span class="c1"># Now you can join the elements of a list (if they are strings) together using the .join() method for a string:
+</span>         <span class="n">validDividerString</span> <span class="o">=</span> <span class="s">', '</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">validDividerStrings</span><span class="p">)</span>
+  
+         <span class="k">print</span><span class="p">(</span><span class="s">"Number {} is divisible by {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">myNumber</span><span class="p">,</span><span class="n">validDividerString</span><span class="p">))</span>
+     
+     <span class="c1">######### Or as an alternative for the nice printing:
+</span>         <span class="c1">#if len(validDividers) == 1:
+</span>         <span class="c1">#    print("number is div by {}".format(validDividers[0]))
+</span>         <span class="c1">#elif len(validDividers) == 2:
+</span>         <span class="c1">#    print("number x is div by {}, {}".format(validDividers[0],validDividers[1]))
+</span></code></pre></div>      </div>
+    </details>
+  </blockquote>
+
+</blockquote>
+
+<hr />
+
+<hr />
+
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-exercise-622"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Exercise 6.2.2</h3>
+
+  <p>Write a program where you find, for each positive number up to 50, all numbers that can divide each number. E.g. 16 can be divided by 1, 2, 4, 8 and 16. 17 can be divided by…</p>
+
+  <p>It’s fine if you print the output like this:</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Number 1 can be divided by 1!
+Number 2 can be divided by 1!
+Number 2 can be divided by 2!
+Number 3 can be divided by 1!
+</code></pre></div>  </div>
+  <p>However, you can also try to print the output like this:</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Number 4 can be divided by 1, 2, 4!
+</code></pre></div>  </div>
+  <blockquote>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution 1
+</summary>
+
+      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1"># Write a program where you find, for each positive number up to 50, all numbers that can divide each number. E.g. 16 can be divided by 1, 2, 4, 8 and 16. 17 can be divided by...
+</span> <span class="n">myNumbers</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="c1">#should be 51
+</span>  
+ <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">myNumbers</span><span class="p">:</span>
+     <span class="n">dividers</span> <span class="o">=</span> <span class="p">[]</span>
+     <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+         <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="n">y</span><span class="p">):</span>
+             <span class="n">dividers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+  
+     <span class="k">for</span> <span class="n">divider</span> <span class="ow">in</span> <span class="n">dividers</span><span class="p">:</span>
+         <span class="k">print</span> <span class="p">(</span><span class="s">"Number {} can be divided by {}!"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">divider</span><span class="p">))</span>
+</code></pre></div>      </div>
+    </details>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution 2
+</summary>
+
+      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1"># The output is again not very nice here, you can replace the last two lines by this for nicer output:
+</span> <span class="n">myNumbers</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+  
+ <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">myNumbers</span><span class="p">:</span>
+     <span class="n">dividers</span> <span class="o">=</span> <span class="p">[]</span>
+     <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+         <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="n">y</span><span class="p">):</span>
+             <span class="n">dividers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+  
+     <span class="c1">#for divider in dividers:
+</span>     <span class="n">dividerList</span> <span class="o">=</span> <span class="s">", "</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">divider</span><span class="p">)</span> <span class="k">for</span> <span class="n">divider</span> <span class="ow">in</span> <span class="n">dividers</span><span class="p">])</span>
+         
+     <span class="k">print</span> <span class="p">(</span><span class="s">"Number {} can be divided by {}!"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">dividerList</span><span class="p">))</span>
+</code></pre></div>      </div>
+    </details>
+  </blockquote>
+
+</blockquote>
+
+<h2 id="63-while-loop">6.3 While loop</h2>
+<p>A <strong>while</strong> loop is dependent on a condition, as long as this condition is evaluated as <code class="highlighter-rouge">True</code> the loop will continue. This is an endless loop:
+FYI, if you execute this, you’ll end up in an enternal loop. To break the loop, press stop button.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Endless..."</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>While loops are more flexible than for loops, as you can make them end whenever necessary depending on code within the loop itself:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">baseValue</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">powerValue</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">powerResult</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">powerResult</span> <span class="o">&lt;</span> <span class="mi">1000</span><span class="p">:</span>
+    <span class="n">powerResult</span> <span class="o">=</span> <span class="n">baseValue</span> <span class="o">**</span> <span class="n">powerValue</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"{} to the power {} is {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">baseValue</span><span class="p">,</span><span class="n">powerValue</span><span class="p">,</span><span class="n">powerResult</span><span class="p">))</span>
+    <span class="n">powerValue</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># Add one to itself - this kind of step is crucial in a while loop, or it will be endless!
+</span></code></pre></div></div>
+
+<p>Note that the last value printed is greater than 1000, the while condition is only checked at the start of the loop. You should check where the first result is calculated as this may impact the result! Here we changed the order of calculating the value. We <em>initialized</em> the loop and put the calculation at the very end:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">baseValue</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">powerValue</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">powerResult</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">powerResult</span> <span class="o">=</span> <span class="n">baseValue</span> <span class="o">**</span> <span class="n">powerValue</span>
+
+<span class="k">while</span> <span class="n">powerResult</span> <span class="o">&lt;</span> <span class="mi">1000</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"{} to the power {} is {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">baseValue</span><span class="p">,</span><span class="n">powerValue</span><span class="p">,</span><span class="n">powerResult</span><span class="p">))</span>
+    <span class="n">powerValue</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># Add one to itself - this kind of step is crucial in a while loop, or it will be endless!
+</span>    <span class="n">powerResult</span> <span class="o">=</span> <span class="n">baseValue</span> <span class="o">**</span> <span class="n">powerValue</span>
+</code></pre></div></div>
+
+<hr />
+
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-exercise-631"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Exercise 6.3.1</h3>
+
+  <p>Try to reproduce a for-loop (the example of numbers divisible by 17) by using a while-loop.</p>
+
+  <blockquote>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
+
+      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1"># Try to reproduce a for-loop (the example of numbers divisible by 17) by using a while-loop.
+</span> <span class="n">myNumber</span> <span class="o">=</span> <span class="mi">1</span>
+ <span class="n">myDivider</span> <span class="o">=</span> <span class="mi">17</span>
+ 
+ <span class="k">while</span> <span class="n">myNumber</span> <span class="o">&lt;=</span> <span class="mi">50</span><span class="p">:</span>
+     <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">myNumber</span> <span class="o">%</span> <span class="n">myDivider</span><span class="p">):</span> <span class="c1"># Nothing left after division, so number is divisible.
+</span>         <span class="k">print</span><span class="p">(</span><span class="s">"{} is divisible by {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">myNumber</span><span class="p">),</span><span class="nb">str</span><span class="p">(</span><span class="n">myDivider</span><span class="p">)))</span>
+     <span class="n">myNumber</span> <span class="o">+=</span> <span class="mi">1</span>
+ 
+</code></pre></div>      </div>
+    </details>
+  </blockquote>
+
+</blockquote>
+<hr />
+
+<hr />
+
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-exercise-632"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Exercise 6.3.2</h3>
+
+  <p>Write a program where you start with a list of numbers from 1 to 100, and you then remove every number from this list that can be divided by 3 or by 5. Print the result.<br />
+Tip: you have to make a copy of the original list here, otherwise Python will get ‘confused’ when you remove values from the list while it’s looping over it. Use <code class="highlighter-rouge">[:]</code> for this purpose.</p>
+
+  <blockquote>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
+
+      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Write a program where you start with a list of numbers from 1 to 100, and you then remove every number from this list that can be divided by 3 or by 5. Print the result.
+# Tip: you have to make a copy of the original list here, otherwise Python will get 'confused'
+# when you remove values from the list while it's looping over it
+</span>
+<span class="n">myNumberList</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">101</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">myNumberList</span><span class="p">[:]:</span>  
+    <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">number</span> <span class="o">%</span> <span class="mi">3</span><span class="p">)</span> <span class="ow">or</span> <span class="ow">not</span> <span class="p">(</span><span class="n">number</span> <span class="o">%</span> <span class="mi">5</span><span class="p">):</span>
+        <span class="n">myNumberList</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">myNumberList</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">number</span><span class="p">))</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">myNumberList</span><span class="p">)</span>
+</code></pre></div>      </div>
+    </details>
+  </blockquote>
+
+</blockquote>
+
+<hr />
+
+<hr />
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-exercise-633"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Exercise 6.3.3</h3>
+
+  <p>Write a program where you ask the user for an integer (whole number), and keep on asking if they give the wrong input. Check whether the number can be divided by 7, and print the result.</p>
+
+  <blockquote>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
+
+      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Write a program where you ask the user for an integer (whole number), and keep on asking if they give the wrong input. Check whether the number can be divided by 7, and print the result.
+</span><span class="n">myNumberList</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">101</span><span class="p">)</span>
+ 
+<span class="c1"># Keep on checking until you have a number, prime the while loop as well
+</span><span class="n">isNumber</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="k">while</span> <span class="ow">not</span> <span class="p">(</span><span class="n">isNumber</span><span class="p">):</span>
+    <span class="n">inputString</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Give a number:"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">inputString</span><span class="o">.</span><span class="n">isdigit</span><span class="p">():</span>
+        <span class="n">isNumber</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">inputString</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Incorrect, not a whole number, try again."</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">number</span> <span class="o">%</span> <span class="mi">7</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"{} can be divided by 7!"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">number</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span> 
+        <span class="k">print</span><span class="p">(</span><span class="s">"Number not divisible by 7"</span><span class="p">)</span>
+</code></pre></div>      </div>
+    </details>
+  </blockquote>
+
+</blockquote>
+<hr />
+
+<h2 id="64-iterating-through-two-files-at-the-same-time">6.4 Iterating through two files at the same time</h2>
+<p>Python has a built-in function which allows you to iterate through multiple e.g. lists or strings at the same time. For two strings, it would look like this:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="s">'abcde'</span>
+<span class="n">y</span> <span class="o">=</span> <span class="s">'fghij'</span>
+
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Iteration: {}. The value i is {}, and the value j is {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>And the principle is practically the same for three (or more) strings.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="s">'abcde'</span>
+<span class="n">y</span> <span class="o">=</span> <span class="s">'fghij'</span>
+<span class="n">z</span> <span class="o">=</span> <span class="s">'klmno'</span>
+
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">k</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">):</span>
+    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Iteration: {}. The value i is {}, the value j is {} and the value k is {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">))</span>
+</code></pre></div></div>
+
+
+
+
+                    
+                    <blockquote class="key_points">
+                        <h3><i class="fa fa-key" aria-hidden="true"></i><span class="visually-hidden">keypoints</span> Key points</h3>
+
+                        <ul>
+                            
+                            <li>We learned how to use the while and for loops for a single and for multiple lists, strings, and other variables</li>
+                            
+                        </ul>
+                    </blockquote>
+                    
+
+                    
+                    <h1 data-toc-skip>Useful literature</h1>
+                    <p>Further information, including links to documentation and original publications, regarding the tools, analysis techniques and the interpretation of results described in this tutorial can be found <a href="/topics/python-programming#references">here</a>.</p>
+                    
+
+                    
+
+                </div>
+                <!-- sidebar, which will be hidden on a small screen -->
+                <nav class="col-md-2 sticky-toc bs-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary" id="toc" data-toggle="toc"></nav>
+            </div>
+        </div>
+
+        <h3><i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
+
+        
+
+        
+
+</div>
+</div>
+</div>
+<footer>
+   <div class="well row">
+       <div class="col-md-2 text-center" style="padding: 25px 20px 25px 20px;">				
+         <a href="https://www.bits.vib.be" target="_blank"><img src="/assets/images/bioinformatics_core_rgb_neg.png" width="200"></a>
+       </div>
+       <div class="col-md-8 text-center" style="padding-top: 20px;">	
+        <a href="https://github.com/vibbits/training-material" title="View on GitHub" class="margin20" target="_blank">
+                            <i class="fa fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> View on GitHub
+                        </a>
+       </div>
+       <div class="col-md-2 text-center" style="padding-top: 30px;">
+         <span class="slogan"><br>SCIENCE MEETS LIFE</span>
+       </div>
+   </div>
+</footer>
+
+
+</body>
+<script type="text/javascript" src="/assets/js/jquery.slim.min.js"></script>
+<script type="text/javascript" src="/assets/js/popper.min.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.min.js?v=3"></script>
+<script type="text/javascript" src="/assets/js/details-element-polyfill.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" src="/assets/js/bootstrap-toc.min.js"></script>
+<script type="text/javascript" src="/assets/js/main.js"></script>
+<script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
+<script type="text/javascript">
+    var snippets = document.querySelectorAll('div.highlight');
+    [].forEach.call(snippets, function(snippet) {
+        snippet.firstChild.insertAdjacentHTML('beforebegin', '<button class="btn btn-light" data-clipboard-snippet><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+    });
+
+    var clipboardSnippets = new ClipboardJS('[data-clipboard-snippet]', {
+        target: function(trigger) {
+            return trigger.nextElementSibling;
+        }
+    });
+</script>
+
+</html>

@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="dw_1zBYRNxF7-vYNDXh3Ght_JuqgJt3BD1N_Pynqmv0" />
+    <title>12 Plotting</title>
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-61194136-18', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=3">
+    <link rel="stylesheet" href="/assets/css/bootstrap-toc.min.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="/assets/css/main.scss">
+    <link rel="stylesheet" href="/assets/css/VIB.css">
+    <link rel="stylesheet" href="/assets/css/academicons.css">
+    <link rel="stylesheet" href="/assets/css/syntax_highlighting.css">
+    <link rel="shortcut icon" href="/favicon.ico " type="image/x-icon" />     
+    <meta name="description" content="In this course you'll get to learn all the basics of Pyth..." />
+    <meta property="og:title" content="VIB Bioinformatics Training: 12 Plotting" />
+    <meta property="og:description" content="In this course you'll get to learn all the basics of Pyth..." />
+    <meta property="og:image" content="/assets/images/bioinformatics_core_rgb_neg.png" />
+</head>
+
+<body data-spy="scroll" data-target="#toc">
+    <div class="top-bar-vib">
+ <a href="http://vib.be/en" target="_blank" style="font-size:14px">VIB Home </a>
+</div>
+
+<div class="container main-content">
+
+<div class="container page-top__container">
+          <div class="region region-top">
+  <div id="logo" class="col-md-3 col-lg-3 text-left" style="padding-left:0px;margin-top:20px">
+       <a href="/">
+           <img src="/assets/images/logo.svg" height="60" alt="VIB logo" class="margin20">
+       </a>
+    </div>
+    <div class="col-md-9 col-lg-9 text-right" style="margin-top:50px;">
+    <nav role="navigation" aria-labelledby="block-mainnavigation-menu" id="block-mainnavigation" class="block block-menu navigation menu--main">
+  
+
+
+        <a href="/" class="topmenu">Home</a>
+
+
+        <a href="/about.html" class="topmenu" >About</a>
+
+
+        <a href="/hall-of-fame.html" class="topmenu">Contribute</a>
+
+
+        <a href="/faq.html" class="topmenu">Faq</a>
+
+
+        <a href="/search/index.html" class="topmenu">Search</a>
+
+
+  </nav>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="application/ld+json">
+        
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "headline": "12 Plotting",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "/blob//LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "courseCode": "python-programming / 12_plotting / hands-on",
+  "learningResourceType": "hands-on tutorial",
+  "name": "Hands-on for '12 Plotting' tutorial",
+  "isPartOf": {
+    "@type": "Course",
+    "name": "12 Plotting",
+    "description": "12 Plotting",
+    "learningResourceType": "tutorial",
+    "interactivityType": "expositive",
+    "provider": {
+      "@type": "Organization",
+      "email": "bits@vib.be",
+      "name": "VIB Bioinformatics Core",
+      "url": "https://www.bits.vib.be"
+    }
+  },
+  "url": "https://material.bits.vib.be//topics/python-programming/tutorials/12_plotting/tutorial.html",
+  "timeRequired": "PT20M",
+  "description": "12 Plotting\\nThe questions this  addresses are:\n - How to plot some data analysis results in Python?\n\n\\nThe objectives are:\n - Use matplotlib as a library for plotting figures\n - Make line figures, scatter plots and histograms with matplotlib\n - Change colors, plot and axis titles, make a legend and make error margins\n\n",
+  "hasPart": [
+
+  ],
+  "mentions": [
+
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Tuur Muyldermans"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Tuur Muyldermans"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "Gentle hands-on introduction to Python programming",
+      "description": "In this course you'll get to learn all the basics of Python by plenty hands-on exercises related to bioinformatics or Life Sciences data-analyses.",
+      "url": "https://material.bits.vib.be//topics/python-programming/"
+    }
+  ]
+}
+    </script>
+
+    <div class="row tutorial">
+      <div class="col-md-12" role="main">
+        <h1 data-toc-skip>12 Plotting</h1>
+        <div class="contributors-line">By: 
+
+<a href="/hall-of-fame#tmuylder" class="contributor-badge">Tuur Muyldermans</a>
+
+
+</div>
+        <blockquote class="overview">
+
+            <strong><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</strong>
+            <ul>
+            
+            <li>How to plot some data analysis results in Python?</li>
+            
+            </ul>
+
+            <strong><i class="fa fa-bullseye" aria-hidden="true"></i><span class="visually-hidden">objectives</span> Objectives</strong>
+            <ul>
+            
+            <li>Use matplotlib as a library for plotting figures</li>
+            
+            <li>Make line figures, scatter plots and histograms with matplotlib</li>
+            
+            <li>Change colors, plot and axis titles, make a legend and make error margins</li>
+            
+            </ul>
+
+            
+
+            
+            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 20 minutes</p>
+            
+
+            
+
+
+            
+
+        </blockquote>
+
+        <div class="container" data-field="body">
+            <div class="row">
+                <div class="col-md-10" role="main">
+                    <h1 id="12-plotting-figures">12. Plotting figures</h1>
+<p><em>This chapter is based on the materials from <a href="https://www.packtpub.com/eu/big-data-and-business-intelligence/become-python-data-analyst">this book</a> and <a href="https://python-graph-gallery.com/8-add-confidence-interval-on-barplot/">this website</a></em></p>
+
+<p>Matplotlib is a Python 2D plotting library which produces publication quality figures. Although Matplotlib is written primarily in pure Python, it makes heavy use of NumPy and other extension code to provide good performance even for large arrays.</p>
+
+<p>We will start with the basics concepts being figures, subplots (axes) and axis. The following line of code allows the figures to be plotted in the notebook results</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">matplotlib.pyplot</code> is a collection of command style functions that make matplotlib work like MATLAB. Each pyplot function makes some change to a figure: e.g., creates a figure, creates a plotting area in a figure, plots some lines in a plotting area, decorates the plot with labels, etc. In matplotlib.pyplot various states are preserved across function calls, so that it keeps track of things like the current figure and plotting area, and the plotting functions are directed to the current subplot.</p>
+
+<p>What we first have to do is importing the library of course.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'some numbers'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<center><img src="../../images/plotting1.png" /></center>
+
+<p><code class="highlighter-rouge">plot()</code> is a versatile command, and will take an arbitrary number of arguments. For example, to plot x versus y, you can issue the command:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">y_list</span> <span class="o">=</span> <span class="p">[</span><span class="nb">pow</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x_list</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">x_list</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">y_list</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_list</span><span class="p">,</span> <span class="n">y_list</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s">"Title of the plot"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<center><img src="../../images/plotting2.png" /></center>
+
+<p>Using the pyplot interphase, you build a graph by calling a sequence of functions and all of them are applied to the <em>current subplot</em>, like so:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s">'lightblue'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">([</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">3.8</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">],</span> <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">26</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s">'darkgreen'</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s">'^'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s">"Title of the plot"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">"This is the x-label"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">"This is the y-label"</span><span class="p">)</span>
+<span class="c1"># Uncomment the line below to save the figure in your currentdirectory
+# plt.savefig('examplefigure.png')
+</span></code></pre></div></div>
+<center><img src="../../images/plotting3.png" /></center>
+
+<p>When working with just one subplot in the figure, generally is OK to work with the pyplot interphase, however, when doing more complicated plots, or working within larger scripts, you will want to explicitly pass around the <em>Subplot (Axes)</em> and/or <em>Figure</em> object to operate upon.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">gc_content</span><span class="p">(</span><span class="nb">file</span><span class="p">):</span>
+    <span class="s">"""Calculate GC content of a fasta file (with one sequence)"""</span>
+    <span class="n">sequence</span><span class="o">=</span><span class="s">""</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">'&gt;'</span><span class="p">):</span>
+                <span class="n">seq_id</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()[</span><span class="mi">1</span><span class="p">:]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">sequence</span> <span class="o">+=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+    
+    <span class="n">A_count</span> <span class="o">=</span> <span class="n">sequence</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s">'A'</span><span class="p">)</span>
+    <span class="n">C_count</span> <span class="o">=</span> <span class="n">sequence</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s">'C'</span><span class="p">)</span>
+    <span class="n">G_count</span> <span class="o">=</span> <span class="n">sequence</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s">'G'</span><span class="p">)</span>
+    <span class="n">T_count</span> <span class="o">=</span> <span class="n">sequence</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s">'T'</span><span class="p">)</span>
+    <span class="n">N_count</span> <span class="o">=</span> <span class="n">sequence</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s">'N'</span><span class="p">)</span>
+    <span class="n">GC_content</span> <span class="o">=</span> <span class="p">(</span><span class="n">sequence</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s">'G'</span><span class="p">)</span> <span class="o">+</span> <span class="n">sequence</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s">'C'</span><span class="p">))</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+    <span class="n">AT_content</span> <span class="o">=</span> <span class="p">(</span><span class="n">sequence</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s">'A'</span><span class="p">)</span> <span class="o">+</span> <span class="n">sequence</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s">'T'</span><span class="p">))</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"The GC content of {} is</span><span class="se">\t</span><span class="s"> {:.2f}</span><span class="si">%</span><span class="s">"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">seq_id</span><span class="p">,</span> <span class="n">GC_content</span><span class="p">))</span>    
+    <span class="k">return</span> <span class="n">GC_content</span><span class="p">,</span> <span class="n">AT_content</span><span class="p">,</span> <span class="n">A_count</span><span class="p">,</span> <span class="n">C_count</span><span class="p">,</span> <span class="n">G_count</span><span class="p">,</span> <span class="n">T_count</span><span class="p">,</span> <span class="n">N_count</span>
+    
+
+<span class="n">GC_content</span><span class="p">,</span> <span class="n">AT_content</span><span class="p">,</span> <span class="n">A_count</span><span class="p">,</span> <span class="n">C_count</span><span class="p">,</span> <span class="n">G_count</span><span class="p">,</span> <span class="n">T_count</span><span class="p">,</span> <span class="n">N_count</span> <span class="o">=</span> <span class="n">gc_content</span><span class="p">(</span><span class="s">'../data/gene.fa'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">GC_content</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">AT_content</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">A_count</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">C_count</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">T_count</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">G_count</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">total_count</span> <span class="o">=</span> <span class="n">A_count</span> <span class="o">+</span> <span class="n">C_count</span> <span class="o">+</span> <span class="n">G_count</span> <span class="o">+</span> <span class="n">T_count</span>
+<span class="n">A_perc</span> <span class="o">=</span> <span class="n">A_count</span><span class="o">/</span><span class="n">total_count</span><span class="o">*</span><span class="mi">100</span>
+<span class="n">C_perc</span> <span class="o">=</span> <span class="n">C_count</span><span class="o">/</span><span class="n">total_count</span><span class="o">*</span><span class="mi">100</span>
+<span class="n">G_perc</span> <span class="o">=</span> <span class="n">G_count</span><span class="o">/</span><span class="n">total_count</span><span class="o">*</span><span class="mi">100</span>
+<span class="n">T_perc</span> <span class="o">=</span> <span class="n">T_count</span><span class="o">/</span><span class="n">total_count</span><span class="o">*</span><span class="mi">100</span>
+<span class="n">height</span> <span class="o">=</span> <span class="p">[</span><span class="n">A_perc</span><span class="p">,</span> <span class="n">C_perc</span><span class="p">,</span> <span class="n">G_perc</span><span class="p">,</span> <span class="n">T_perc</span><span class="p">]</span>
+<span class="n">bars</span> <span class="o">=</span> <span class="p">(</span><span class="s">'A'</span><span class="p">,</span><span class="s">'C'</span><span class="p">,</span><span class="s">'G'</span><span class="p">,</span><span class="s">'T'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">bars</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'Nucleotide'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'Percentage of occurence (</span><span class="si">%</span><span class="s">)'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Distribution of nucleotides in fasta sequence'</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+<center><img src="../../images/plotting4.png" /></center>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">total_count</span> <span class="o">=</span> <span class="n">A_count</span> <span class="o">+</span> <span class="n">C_count</span> <span class="o">+</span> <span class="n">G_count</span> <span class="o">+</span> <span class="n">T_count</span>
+<span class="n">A_perc</span> <span class="o">=</span> <span class="n">A_count</span><span class="o">/</span><span class="n">total_count</span><span class="o">*</span><span class="mi">100</span>
+<span class="n">C_perc</span> <span class="o">=</span> <span class="n">C_count</span><span class="o">/</span><span class="n">total_count</span><span class="o">*</span><span class="mi">100</span>
+<span class="n">G_perc</span> <span class="o">=</span> <span class="n">G_count</span><span class="o">/</span><span class="n">total_count</span><span class="o">*</span><span class="mi">100</span>
+<span class="n">T_perc</span> <span class="o">=</span> <span class="n">T_count</span><span class="o">/</span><span class="n">total_count</span><span class="o">*</span><span class="mi">100</span>
+<span class="n">height</span> <span class="o">=</span> <span class="p">[</span><span class="n">A_perc</span><span class="p">,</span> <span class="n">C_perc</span><span class="p">,</span> <span class="n">G_perc</span><span class="p">,</span> <span class="n">T_perc</span><span class="p">]</span>
+<span class="n">bars</span> <span class="o">=</span> <span class="p">(</span><span class="s">'A'</span><span class="p">,</span><span class="s">'C'</span><span class="p">,</span><span class="s">'G'</span><span class="p">,</span><span class="s">'T'</span><span class="p">)</span>
+<span class="c1">#plt.bar(bars, height, color=('green','red','yellow','blue'))
+</span><span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">bars</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="s">'#1f77b4'</span><span class="p">,</span><span class="s">'#ff7f0e'</span><span class="p">,</span><span class="s">'#2ca02c'</span><span class="p">,</span><span class="s">'#d62728'</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'Nucleotide'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'Percentage of occurence (</span><span class="si">%</span><span class="s">)'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Distribution of nucleotides in fasta sequence'</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+<center><img src="../../images/plotting5.png" /></center>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># libraries
+#import numpy as np
+</span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+ 
+<span class="c1"># width of the bars
+</span><span class="n">barWidth</span> <span class="o">=</span> <span class="mf">0.3</span>
+ 
+<span class="c1"># Choose the height of the blue bars
+</span><span class="n">experimentA</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+ 
+<span class="c1"># Choose the height of the cyan bars
+</span><span class="n">experimentB</span> <span class="o">=</span> <span class="p">[</span><span class="mf">10.8</span><span class="p">,</span> <span class="mf">9.5</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">]</span>
+ 
+<span class="c1"># Choose the height of the error bars (bars1)
+</span><span class="n">yer1</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">]</span>
+ 
+<span class="c1"># Choose the height of the error bars (bars2)
+</span><span class="n">yer2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+ 
+<span class="c1"># The x position of bars
+</span><span class="n">r1</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">experimentA</span><span class="p">)))</span>
+<span class="n">r2</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="o">+</span> <span class="n">barWidth</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">r1</span><span class="p">]</span>
+ 
+<span class="c1"># Create blue bars
+</span><span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">r1</span><span class="p">,</span> <span class="n">experimentA</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s">'blue'</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s">'black'</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="n">yer1</span><span class="p">,</span> <span class="n">capsize</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'Experiment A'</span><span class="p">)</span> <span class="c1"># Capsize is the width of errorbars
+</span> 
+<span class="c1"># Create cyan bars
+</span><span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">r2</span><span class="p">,</span> <span class="n">experimentB</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s">'cyan'</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s">'black'</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="n">yer2</span><span class="p">,</span> <span class="n">capsize</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'Experiment B'</span><span class="p">)</span>
+ 
+<span class="c1"># general layout
+</span><span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([</span><span class="n">x</span> <span class="o">+</span> <span class="n">barWidth</span><span class="o">/</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">r1</span><span class="p">],</span> <span class="p">[</span><span class="s">'cond_A'</span><span class="p">,</span> <span class="s">'cond_B'</span><span class="p">,</span> <span class="s">'cond_C'</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'effect'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+ 
+<span class="c1"># Show graphic
+</span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+</code></pre></div></div>
+
+<center><img src="../../images/plotting6.png" /></center>
+
+
+
+                    
+                    <blockquote class="key_points">
+                        <h3><i class="fa fa-key" aria-hidden="true"></i><span class="visually-hidden">keypoints</span> Key points</h3>
+
+                        <ul>
+                            
+                            <li>We've exploited matplotlib as Pythons primary library for plotting high-quality figures</li>
+                            
+                            <li>This library produces figures in a similar manner to Matlabs plotting library</li>
+                            
+                        </ul>
+                    </blockquote>
+                    
+
+                    
+                    <h1 data-toc-skip>Useful literature</h1>
+                    <p>Further information, including links to documentation and original publications, regarding the tools, analysis techniques and the interpretation of results described in this tutorial can be found <a href="/topics/python-programming#references">here</a>.</p>
+                    
+
+                    
+
+                </div>
+                <!-- sidebar, which will be hidden on a small screen -->
+                <nav class="col-md-2 sticky-toc bs-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary" id="toc" data-toggle="toc"></nav>
+            </div>
+        </div>
+
+        <h3><i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
+
+        
+
+        
+
+</div>
+</div>
+</div>
+<footer>
+   <div class="well row">
+       <div class="col-md-2 text-center" style="padding: 25px 20px 25px 20px;">				
+         <a href="https://www.bits.vib.be" target="_blank"><img src="/assets/images/bioinformatics_core_rgb_neg.png" width="200"></a>
+       </div>
+       <div class="col-md-8 text-center" style="padding-top: 20px;">	
+        <a href="https://github.com/vibbits/training-material" title="View on GitHub" class="margin20" target="_blank">
+                            <i class="fa fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> View on GitHub
+                        </a>
+       </div>
+       <div class="col-md-2 text-center" style="padding-top: 30px;">
+         <span class="slogan"><br>SCIENCE MEETS LIFE</span>
+       </div>
+   </div>
+</footer>
+
+
+</body>
+<script type="text/javascript" src="/assets/js/jquery.slim.min.js"></script>
+<script type="text/javascript" src="/assets/js/popper.min.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.min.js?v=3"></script>
+<script type="text/javascript" src="/assets/js/details-element-polyfill.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" src="/assets/js/bootstrap-toc.min.js"></script>
+<script type="text/javascript" src="/assets/js/main.js"></script>
+<script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
+<script type="text/javascript">
+    var snippets = document.querySelectorAll('div.highlight');
+    [].forEach.call(snippets, function(snippet) {
+        snippet.firstChild.insertAdjacentHTML('beforebegin', '<button class="btn btn-light" data-clipboard-snippet><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+    });
+
+    var clipboardSnippets = new ClipboardJS('[data-clipboard-snippet]', {
+        target: function(trigger) {
+            return trigger.nextElementSibling;
+        }
+    });
+</script>
+
+</html>

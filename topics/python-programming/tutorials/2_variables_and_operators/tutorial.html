@@ -1,0 +1,719 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="dw_1zBYRNxF7-vYNDXh3Ght_JuqgJt3BD1N_Pynqmv0" />
+    <title>02 Variables and Operators</title>
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-61194136-18', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=3">
+    <link rel="stylesheet" href="/assets/css/bootstrap-toc.min.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="/assets/css/main.scss">
+    <link rel="stylesheet" href="/assets/css/VIB.css">
+    <link rel="stylesheet" href="/assets/css/academicons.css">
+    <link rel="stylesheet" href="/assets/css/syntax_highlighting.css">
+    <link rel="shortcut icon" href="/favicon.ico " type="image/x-icon" />     
+    <meta name="description" content="In this course you'll get to learn all the basics of Pyth..." />
+    <meta property="og:title" content="VIB Bioinformatics Training: 02 Variables and Operators" />
+    <meta property="og:description" content="In this course you'll get to learn all the basics of Pyth..." />
+    <meta property="og:image" content="/assets/images/bioinformatics_core_rgb_neg.png" />
+</head>
+
+<body data-spy="scroll" data-target="#toc">
+    <div class="top-bar-vib">
+ <a href="http://vib.be/en" target="_blank" style="font-size:14px">VIB Home </a>
+</div>
+
+<div class="container main-content">
+
+<div class="container page-top__container">
+          <div class="region region-top">
+  <div id="logo" class="col-md-3 col-lg-3 text-left" style="padding-left:0px;margin-top:20px">
+       <a href="/">
+           <img src="/assets/images/logo.svg" height="60" alt="VIB logo" class="margin20">
+       </a>
+    </div>
+    <div class="col-md-9 col-lg-9 text-right" style="margin-top:50px;">
+    <nav role="navigation" aria-labelledby="block-mainnavigation-menu" id="block-mainnavigation" class="block block-menu navigation menu--main">
+  
+
+
+        <a href="/" class="topmenu">Home</a>
+
+
+        <a href="/about.html" class="topmenu" >About</a>
+
+
+        <a href="/hall-of-fame.html" class="topmenu">Contribute</a>
+
+
+        <a href="/faq.html" class="topmenu">Faq</a>
+
+
+        <a href="/search/index.html" class="topmenu">Search</a>
+
+
+  </nav>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="application/ld+json">
+        
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "headline": "02 Variables and Operators",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "/blob//LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "courseCode": "python-programming / 2_variables_and_operators / hands-on",
+  "learningResourceType": "hands-on tutorial",
+  "name": "Hands-on for '02 Variables and Operators' tutorial",
+  "isPartOf": {
+    "@type": "Course",
+    "name": "02 Variables and Operators",
+    "description": "02 Variables and Operators",
+    "learningResourceType": "tutorial",
+    "interactivityType": "expositive",
+    "provider": {
+      "@type": "Organization",
+      "email": "bits@vib.be",
+      "name": "VIB Bioinformatics Core",
+      "url": "https://www.bits.vib.be"
+    }
+  },
+  "url": "https://material.bits.vib.be//topics/python-programming/tutorials/2_variables_and_operators/tutorial.html",
+  "timeRequired": "PT20M",
+  "description": "02 Variables and Operators\\nThe questions this  addresses are:\n - Which Python's built-in data types are there?\n - How to assign a value to a variable?\n - How to compare values within variables using operators?\n\n\\nThe objectives are:\n - Recognize different built-in data types of Python\n - Write, evaluate and interpret expressions in Python\n - Print out results to the user\n\n",
+  "hasPart": [
+
+  ],
+  "mentions": [
+
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Tuur Muyldermans"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Tuur Muyldermans"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "Gentle hands-on introduction to Python programming",
+      "description": "In this course you'll get to learn all the basics of Python by plenty hands-on exercises related to bioinformatics or Life Sciences data-analyses.",
+      "url": "https://material.bits.vib.be//topics/python-programming/"
+    }
+  ]
+}
+    </script>
+
+    <div class="row tutorial">
+      <div class="col-md-12" role="main">
+        <h1 data-toc-skip>02 Variables and Operators</h1>
+        <div class="contributors-line">By: 
+
+<a href="/hall-of-fame#tmuylder" class="contributor-badge">Tuur Muyldermans</a>
+
+
+</div>
+        <blockquote class="overview">
+
+            <strong><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</strong>
+            <ul>
+            
+            <li>Which Python's built-in data types are there?</li>
+            
+            <li>How to assign a value to a variable?</li>
+            
+            <li>How to compare values within variables using operators?</li>
+            
+            </ul>
+
+            <strong><i class="fa fa-bullseye" aria-hidden="true"></i><span class="visually-hidden">objectives</span> Objectives</strong>
+            <ul>
+            
+            <li>Recognize different built-in data types of Python</li>
+            
+            <li>Write, evaluate and interpret expressions in Python</li>
+            
+            <li>Print out results to the user</li>
+            
+            </ul>
+
+            
+
+            
+            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 20 minutes</p>
+            
+
+            
+
+
+            
+
+        </blockquote>
+
+        <div class="container" data-field="body">
+            <div class="row">
+                <div class="col-md-10" role="main">
+                    <h2 id="21-introduction">2.1 Introduction</h2>
+
+<p>Just printing things is not that interesting, what you really want to do with a computer program is manipulate data. This is why variables are so important - they allow you to assign information to a name that you can re-use later on.</p>
+
+<p>In this section we will introduce the basic types of variables and how you can manipulate them. Just to get started, we give an overview of the different <strong>built-in data types</strong> that are present in Python and which you can assign to a variable. Although this variety of data types exist, not all of them will be discussed in this course.</p>
+
+<ul>
+  <li>Text type:       <code class="highlighter-rouge">str</code></li>
+  <li>Numeric types:   <code class="highlighter-rouge">int</code>, <code class="highlighter-rouge">float</code>, <code class="highlighter-rouge">complex</code></li>
+  <li>Sequence types:  <code class="highlighter-rouge">list</code>, <code class="highlighter-rouge">tuple</code>, <code class="highlighter-rouge">range</code></li>
+  <li>Mapping types:   <code class="highlighter-rouge">dict</code></li>
+  <li>Set types:       <code class="highlighter-rouge">set</code>, <code class="highlighter-rouge">frozenset</code></li>
+  <li>Boolean types:   <code class="highlighter-rouge">bool</code></li>
+  <li>Binary types:    <code class="highlighter-rouge">bytes</code>, <code class="highlighter-rouge">bytearray</code>, <code class="highlighter-rouge">memoryview</code></li>
+</ul>
+
+<p>In this section, we will cover the text type, numeric types (complex are out of scope) and booleans.</p>
+
+<p><strong>Operators</strong> can be anything from:</p>
+<ul>
+  <li>Arithmetic: additions, substractions, multiplications, divisions, remainders and power</li>
+  <li>Comparison: equal to, not equal to, greater than, less than, etc.</li>
+  <li>Logical: AND, OR and NOT used for conditional statements</li>
+  <li>Identity: <code class="highlighter-rouge">is</code>, <code class="highlighter-rouge">is not</code></li>
+</ul>
+
+<p><strong>Note</strong>:<br />
+This section doesn’t really include any exercises. Try to follow and code along while we scroll through the examples so you start to have a feeling of it.</p>
+
+<h2 id="22-strings">2.2 Strings</h2>
+<p>We already saw strings in the previous section. You can assign a string to a variable like this:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Assign the sequence AGAATCGATACGA to a variable and print the variable.  
+</span><span class="n">mySequence</span> <span class="o">=</span> <span class="s">"AGAATCGATACGA"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">mySequence</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>What happens here is that you assign a <strong>value</strong>: “<em>AGAATCGATACGA</em>” to a <strong>variable</strong>: <code class="highlighter-rouge">mySequence</code> and then print it out. You can now keep on using <code class="highlighter-rouge">mySequence</code> throughout your program. Note that <code class="highlighter-rouge">mySequence</code> is not quoted because it is now part of the program, try this for example:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Repeat the above, but this time put the variable in quotation marks when you put in the print statement and see what happens
+</span><span class="n">mySequence</span> <span class="o">=</span> <span class="s">"AGAATCGATACGA"</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"mySequence"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>You will now still assign the value “<em>AGAATCGATACGA</em>” to the variable <code class="highlighter-rouge">mySequence</code>, but because of the quotes you then print off the string “mySequence”, not the variable.</p>
+
+<p>You can assign strings in the following ways:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myString1</span> <span class="o">=</span> <span class="s">"Hello world!"</span>
+<span class="n">myString2</span> <span class="o">=</span> <span class="s">'Hello sun!'</span>
+<span class="n">myString3</span> <span class="o">=</span> <span class="s">"""Hello
+universe."""</span>
+<span class="k">print</span><span class="p">(</span><span class="n">myString1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">myString2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">myString3</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>The single and double quotes are essentially the same. If you use triple double quotes - “”” - you can assign a string over multiple lines.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Try assigning a string over multiple lines without using the triple double quotes and see what happens.
+</span><span class="n">myString</span> <span class="o">=</span> <span class="s">"Hello</span><span class="err">
+</span><span class="s">universe."</span>
+</code></pre></div></div>
+
+<p>This will give a SyntaxError, as Python ‘reads’ each line separately, and it doesn’t find the ending (on the first line) and starting (on the second line) quote. Using the escape codes, you can however do the following:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Try to print two words in two different lines without using three "" marks. 
+</span><span class="n">myString</span> <span class="o">=</span> <span class="s">"Hello</span><span class="se">\n</span><span class="s">universe."</span>
+<span class="n">myString</span>
+</code></pre></div></div>
+
+<h2 id="23-strings-from-user-input">2.3 Strings from user input</h2>
+
+<p>Python provides a very simple way to get user input. This input is always returned as a string, so try the following:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Use input to ask for a sequence string, then print the input sequence
+</span><span class="n">mySequence</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Give me a sequence:"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">mySequence</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="24-integers">2.4 Integers</h2>
+<p>Integers are non-decimal numbers. Python will recognize numbers in the code automatically, so you can do:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Assign integer 5 to a variable myInteger
+</span><span class="n">myInteger</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="k">print</span><span class="p">(</span><span class="n">myInteger</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>As described in the introduction, you can also do standard mathematical operations on integers. Mathematical operations are even possible within a print statement.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">5</span> <span class="o">+</span> <span class="mi">5</span>  <span class="c1"># Addition
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">5</span> <span class="o">-</span> <span class="mi">8</span>  <span class="c1"># Subtraction
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">2</span> <span class="o">*</span> <span class="mi">5</span>  <span class="c1"># Multiplication
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">4</span> <span class="o">/</span> <span class="mi">2</span>  <span class="c1"># Division
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">5</span> <span class="o">%</span> <span class="mi">2</span>  <span class="c1"># Modulus, remainder of division
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">2</span> <span class="o">**</span> <span class="mi">3</span> <span class="c1"># Power
+</span></code></pre></div></div>
+
+<p>It doesn’t matter if you use variables or integers for this:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">2</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">+</span> <span class="mi">5</span>  <span class="c1"># Addition
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">-</span> <span class="mi">8</span>  <span class="c1"># Subtraction
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">y</span> <span class="o">*</span> <span class="n">x</span>  <span class="c1"># Multiplication
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">4</span> <span class="o">/</span> <span class="n">y</span>  <span class="c1"># Division
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">5</span> <span class="o">%</span> <span class="n">y</span>  <span class="c1"># Modulus, remainder of division
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">y</span> <span class="o">**</span> <span class="mi">3</span> <span class="c1"># Power
+</span></code></pre></div></div>
+
+<p>In order to print an integer inside a string, you could simply use the following expression in which the string is separated from the integer with a comma.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">firstResult</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">4</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"The result is"</span><span class="p">,</span> <span class="n">firstResult</span><span class="p">,</span><span class="s">"."</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>However, there is another way using the <code class="highlighter-rouge">.format()</code> method. The format method allows you to change the lay-out of the output that it prints. We will use it a lot during this course, here you see it in the most simplest form. The variable that you want to print is given within the rounded brackets of the format method, and the location in the string to where it prints is given with curly brackets:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">firstResult</span> <span class="o">=</span> <span class="p">(</span><span class="mi">5</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">firstResult</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"The result of the first calculation is {}."</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">firstResult</span><span class="p">))</span>
+
+<span class="n">secondResult</span> <span class="o">=</span> <span class="p">(</span><span class="mi">5</span> <span class="o">*</span> <span class="p">(</span><span class="mi">4</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">secondResult</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"The result of the second calculation is {}."</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">secondResult</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>Note here the precedence of operations; * and / take precedence over + and -. You can use () to change the results.</p>
+
+<h2 id="25-floats">2.5 Floats</h2>
+
+<p>Floats (floating point numbers) are decimal numbers that behave in the same way as integers, except that they are more accurate</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Assign float 5.5 to the myFloat variable
+</span><span class="n">myFloat</span> <span class="o">=</span> <span class="mf">5.5</span> 
+<span class="n">myFloat</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">type</span><span class="p">(</span><span class="n">myFloat</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Mathematical operations are the same:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mf">5.2</span> <span class="o">+</span> <span class="mf">4.8</span>  <span class="c1"># Addition
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mf">5.2</span> <span class="o">-</span> <span class="mf">8.3</span>  <span class="c1"># Subtraction
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mf">2.0</span> <span class="o">*</span> <span class="mf">5.11212</span>  <span class="c1"># Multiplication
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mf">4.2</span> <span class="o">/</span> <span class="mf">2.7</span>  <span class="c1"># Division
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mf">5.4</span> <span class="o">%</span> <span class="mf">2.0</span>  <span class="c1"># Modulus, remainder of division
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">4</span> <span class="o">**</span> <span class="mf">0.5</span> <span class="c1"># Power
+</span></code></pre></div></div>
+
+<p>Also floats can be incorporated in a string with the <code class="highlighter-rouge">.format()</code> statement. You can determine the number of characters before and after the decimal point as well, however we will cover this in the next section.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myFloat</span> <span class="o">=</span> <span class="mf">4545.4542244</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Print the full float {},</span><span class="se">\n</span><span class="s">cut off decimals {:.2f},</span><span class="se">\n</span><span class="s">or determine the characters before the decimal {:10.1f}."</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">myFloat</span><span class="p">,</span><span class="n">myFloat</span><span class="p">,</span><span class="n">myFloat</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>Note here that we put three formatting characters in the string; we then also need three values to print out.</p>
+
+<h2 id="26-floats-integers-and-strings">2.6 Floats, integers and strings</h2>
+<p>You can also force a conversion between the different value types float, integers and strings with the <code class="highlighter-rouge">str()</code>, <code class="highlighter-rouge">int()</code> and <code class="highlighter-rouge">float()</code> conversions:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Use the int() and float() statements to switch the value types and print out the values. Do you notice any differences?
+</span><span class="n">myFloat</span> <span class="o">=</span> <span class="mf">4.5</span>
+<span class="n">myFloat</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">int</span><span class="p">(</span><span class="n">myFloat</span><span class="p">)</span> <span class="c1"># Note that it will print the result of the operation; myFloat remains an integer!
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myInteger</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">myInteger</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myOtherFloat</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">myInteger</span><span class="p">)</span>
+<span class="n">myOtherFloat</span>
+</code></pre></div></div>
+
+<p>The same is possible to convert between strings with <code class="highlighter-rouge">str()</code>, you can also convert strings back to integers and floats but only if the content of the string is an integer or float:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Convert a float and an integer to a string with the str() statement 
+</span><span class="n">myFloat</span> <span class="o">=</span> <span class="mf">4.5</span>
+<span class="n">myFloatString</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">myFloat</span><span class="p">)</span>
+<span class="n">myInteger</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">myIntegerString</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">myInteger</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"My strings are {} and {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">myFloatString</span><span class="p">,</span><span class="n">myIntegerString</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"My string converted to integer is {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">myIntegerString</span><span class="p">)))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"My string converted to float is {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">myFloatString</span><span class="p">)))</span>
+</code></pre></div></div>
+
+<hr />
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-exercise-261"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Exercise 2.6.1</h3>
+
+  <p>Write a program where you ask for a number, convert it to an integer, and print out in a formatted string what your number is.</p>
+
+  <blockquote>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
+
+      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">myFloatString</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Give me a number:"</span><span class="p">)</span>
+ <span class="n">myInteger</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">myFloatString</span><span class="p">))</span>
+ <span class="k">print</span><span class="p">(</span><span class="s">"My number in integer form is {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">myInteger</span><span class="p">))</span>
+</code></pre></div>      </div>
+    </details>
+  </blockquote>
+
+</blockquote>
+<hr />
+
+<p>You can also add, substract, divide and multiple a variable by a number or other variable directly. These are the so-called assignment operators.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myFloat</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">myString</span> <span class="o">=</span> <span class="s">"ABC"</span>
+ 
+<span class="n">myFloat</span> <span class="o">+=</span> <span class="mi">5</span>   <span class="c1"># Same as myFloat = myFloat + 5
+</span><span class="k">print</span><span class="p">(</span><span class="n">myFloat</span><span class="p">)</span>
+ 
+<span class="n">myString</span> <span class="o">+=</span> <span class="s">"DE"</span>  <span class="c1"># Addition works for strings as well
+</span><span class="k">print</span><span class="p">(</span><span class="n">myString</span><span class="p">)</span>
+ 
+<span class="n">myFloat</span> <span class="o">-=</span> <span class="mi">5</span>   <span class="c1"># Same as myFloat = myFloat - 5
+</span><span class="k">print</span><span class="p">(</span><span class="n">myFloat</span><span class="p">)</span>
+ 
+<span class="n">myFloat</span> <span class="o">/=</span> <span class="mi">2</span>   <span class="c1"># Same as myFloat = myFloat / 2
+</span><span class="k">print</span><span class="p">(</span><span class="n">myFloat</span><span class="p">)</span>
+ 
+<span class="n">myFloat</span> <span class="o">*=</span> <span class="mi">2</span>   <span class="c1"># Same as myFloat = myFloat * 2
+</span><span class="k">print</span><span class="p">(</span><span class="n">myFloat</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Finally, you can check what data type a variable is by using <code class="highlighter-rouge">type()</code>:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myInteger</span> <span class="o">=</span> <span class="o">-</span><span class="mi">6</span>
+<span class="n">myFloat</span> <span class="o">=</span> <span class="mf">5.22</span>
+<span class="n">myString</span> <span class="o">=</span> <span class="s">"Text!"</span>
+ 
+<span class="k">print</span><span class="p">(</span><span class="n">myInteger</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">myInteger</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">myFloat</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">myFloat</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">myString</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">myString</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>Note here that you can print multiple values by using a comma in between the values.</p>
+
+<hr />
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-exercise-262"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Exercise 2.6.2</h3>
+
+  <p>See what happens if you try to print a float as an integer, and an integer as a string.</p>
+
+  <blockquote>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
+
+      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">myFloat</span> <span class="o">=</span> <span class="mf">11.4</span>
+ <span class="n">myIntFloat</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">myFloat</span><span class="p">)</span>
+ <span class="k">print</span><span class="p">(</span><span class="s">"My float as integer {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">myIntFloat</span><span class="p">))</span> 
+ <span class="c1">#This works
+</span> <span class="n">myInt</span>  <span class="o">=</span> <span class="mi">12</span>
+ <span class="k">print</span><span class="p">(</span><span class="s">"My integer as string {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">myInt</span><span class="p">)))</span>
+ <span class="c1">#This works as well... but:
+</span> <span class="n">myString</span> <span class="o">=</span> <span class="s">"Hello"</span>
+ <span class="k">print</span><span class="p">(</span><span class="s">"My string as float {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">myString</span><span class="p">)))</span>
+ <span class="c1">#will fail and give a TypeError - Python cannot convert "aa" into a float.
+</span></code></pre></div>      </div>
+    </details>
+  </blockquote>
+
+</blockquote>
+<hr />
+
+<h2 id="27-booleans">2.7 Booleans</h2>
+<p>Finally, there are the boolean variables <code class="highlighter-rouge">True</code> and <code class="highlighter-rouge">False</code>. 
+Python returns booleans when comparing values. In the code below python checks whether the comparison is <code class="highlighter-rouge">TRUE</code>, when this is the case it will print out the boolean True. In order to do a comparison, we use <strong>comparison operators</strong> like <code class="highlighter-rouge">==, &gt;, &lt;, &lt;=, &gt;=, !=</code></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myBoolean</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">myBoolean</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">type</span><span class="p">(</span><span class="n">myBoolean</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myInteger</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">myInteger</span> <span class="o">==</span> <span class="mi">6</span>   <span class="c1"># This means 'is myInteger equal to 6?'
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myInteger</span> <span class="o">&lt;</span> <span class="mi">6</span>    <span class="c1"># This means 'is myInteger smaller than 6?'
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myInteger</span> <span class="o">&gt;</span> <span class="mi">6</span>    <span class="c1"># This means 'is myInteger greater than 6?'
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myInteger</span> <span class="o">&lt;=</span> <span class="mi">6</span>   <span class="c1"># This means 'is myInteger smaller or equal to 6?'
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myInteger</span> <span class="o">&gt;=</span> <span class="mi">6</span>   <span class="c1"># This means 'is myInteger greater or equal to 6?'
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myInteger</span> <span class="o">!=</span> <span class="mi">6</span>   <span class="c1"># This means 'is myInteger not equal to 6?'
+</span></code></pre></div></div>
+
+<p>Similarly to comparison operators, you can also use <code class="highlighter-rouge">is</code> and <code class="highlighter-rouge">not</code> which are the <strong>identity operators</strong>:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myInteger</span> <span class="o">=</span> <span class="mi">5</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myInteger</span> <span class="ow">is</span> <span class="mi">6</span>    <span class="c1"># Same as ==
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myInteger</span> <span class="ow">is</span> <span class="ow">not</span> <span class="mi">6</span>   <span class="c1"># Same as !=
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="ow">not</span> <span class="n">myInteger</span> <span class="o">&gt;</span> <span class="mi">6</span>    <span class="c1"># Same as &lt;=
+</span></code></pre></div></div>
+
+<p>If you want to combine multiple comparisons, it is possible to use the logical operators <code class="highlighter-rouge">and</code> and <code class="highlighter-rouge">or</code>. With the <code class="highlighter-rouge">and</code> operator both comparisons have to be True for the result to be True. With the <code class="highlighter-rouge">or</code> operator, only one has to be True for the result to be True.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">6</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">==</span> <span class="mi">5</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">&gt;</span> <span class="mi">2</span>    <span class="c1"># Both have to be True for the result to be True
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">!=</span> <span class="mi">5</span> <span class="ow">or</span> <span class="n">y</span> <span class="o">&gt;</span> <span class="mi">2</span>     <span class="c1"># Only one has to be True for the result to be True
+</span></code></pre></div></div>
+
+<h2 id="28-nothing">2.8 Nothing</h2>
+
+<p>Finally, we highlight the <code class="highlighter-rouge">None</code> value which is comparable to other program’s <code class="highlighter-rouge">null</code> values. In the code below we show that None, which you could interpret as nothing, is still something else than the value 0 or e.g. an empty string.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myNothing</span> <span class="o">=</span> <span class="bp">None</span>
+<span class="n">myNothing</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">type</span><span class="p">(</span><span class="n">myNothing</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">type</span><span class="p">(</span><span class="bp">None</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">0</span> <span class="o">==</span> <span class="bp">None</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">""</span> <span class="o">==</span> <span class="bp">None</span>
+</code></pre></div></div>
+
+<p>However, the opposite of None is still True.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="ow">not</span> <span class="bp">None</span>
+</code></pre></div></div>
+
+<p>Really 0 is still an integer, “” a string, so <code class="highlighter-rouge">None</code> is really nothing:</p>
+
+
+
+
+                    
+                    <blockquote class="key_points">
+                        <h3><i class="fa fa-key" aria-hidden="true"></i><span class="visually-hidden">keypoints</span> Key points</h3>
+
+                        <ul>
+                            
+                            <li>We've assessed the string, integers, float and boolean data-types of Python</li>
+                            
+                            <li>We compared variables and their values with operators</li>
+                            
+                            <li>We know how to use .format() in its most basic form</li>
+                            
+                        </ul>
+                    </blockquote>
+                    
+
+                    
+                    <h1 data-toc-skip>Useful literature</h1>
+                    <p>Further information, including links to documentation and original publications, regarding the tools, analysis techniques and the interpretation of results described in this tutorial can be found <a href="/topics/python-programming#references">here</a>.</p>
+                    
+
+                    
+
+                </div>
+                <!-- sidebar, which will be hidden on a small screen -->
+                <nav class="col-md-2 sticky-toc bs-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary" id="toc" data-toggle="toc"></nav>
+            </div>
+        </div>
+
+        <h3><i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
+
+        
+
+        
+
+</div>
+</div>
+</div>
+<footer>
+   <div class="well row">
+       <div class="col-md-2 text-center" style="padding: 25px 20px 25px 20px;">				
+         <a href="https://www.bits.vib.be" target="_blank"><img src="/assets/images/bioinformatics_core_rgb_neg.png" width="200"></a>
+       </div>
+       <div class="col-md-8 text-center" style="padding-top: 20px;">	
+        <a href="https://github.com/vibbits/training-material" title="View on GitHub" class="margin20" target="_blank">
+                            <i class="fa fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> View on GitHub
+                        </a>
+       </div>
+       <div class="col-md-2 text-center" style="padding-top: 30px;">
+         <span class="slogan"><br>SCIENCE MEETS LIFE</span>
+       </div>
+   </div>
+</footer>
+
+
+</body>
+<script type="text/javascript" src="/assets/js/jquery.slim.min.js"></script>
+<script type="text/javascript" src="/assets/js/popper.min.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.min.js?v=3"></script>
+<script type="text/javascript" src="/assets/js/details-element-polyfill.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" src="/assets/js/bootstrap-toc.min.js"></script>
+<script type="text/javascript" src="/assets/js/main.js"></script>
+<script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
+<script type="text/javascript">
+    var snippets = document.querySelectorAll('div.highlight');
+    [].forEach.call(snippets, function(snippet) {
+        snippet.firstChild.insertAdjacentHTML('beforebegin', '<button class="btn btn-light" data-clipboard-snippet><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+    });
+
+    var clipboardSnippets = new ClipboardJS('[data-clipboard-snippet]', {
+        target: function(trigger) {
+            return trigger.nextElementSibling;
+        }
+    });
+</script>
+
+</html>

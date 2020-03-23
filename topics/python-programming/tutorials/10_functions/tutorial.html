@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="dw_1zBYRNxF7-vYNDXh3Ght_JuqgJt3BD1N_Pynqmv0" />
+    <title>10 Functions</title>
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-61194136-18', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=3">
+    <link rel="stylesheet" href="/assets/css/bootstrap-toc.min.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="/assets/css/main.scss">
+    <link rel="stylesheet" href="/assets/css/VIB.css">
+    <link rel="stylesheet" href="/assets/css/academicons.css">
+    <link rel="stylesheet" href="/assets/css/syntax_highlighting.css">
+    <link rel="shortcut icon" href="/favicon.ico " type="image/x-icon" />     
+    <meta name="description" content="In this course you'll get to learn all the basics of Pyth..." />
+    <meta property="og:title" content="VIB Bioinformatics Training: 10 Functions" />
+    <meta property="og:description" content="In this course you'll get to learn all the basics of Pyth..." />
+    <meta property="og:image" content="/assets/images/bioinformatics_core_rgb_neg.png" />
+</head>
+
+<body data-spy="scroll" data-target="#toc">
+    <div class="top-bar-vib">
+ <a href="http://vib.be/en" target="_blank" style="font-size:14px">VIB Home </a>
+</div>
+
+<div class="container main-content">
+
+<div class="container page-top__container">
+          <div class="region region-top">
+  <div id="logo" class="col-md-3 col-lg-3 text-left" style="padding-left:0px;margin-top:20px">
+       <a href="/">
+           <img src="/assets/images/logo.svg" height="60" alt="VIB logo" class="margin20">
+       </a>
+    </div>
+    <div class="col-md-9 col-lg-9 text-right" style="margin-top:50px;">
+    <nav role="navigation" aria-labelledby="block-mainnavigation-menu" id="block-mainnavigation" class="block block-menu navigation menu--main">
+  
+
+
+        <a href="/" class="topmenu">Home</a>
+
+
+        <a href="/about.html" class="topmenu" >About</a>
+
+
+        <a href="/hall-of-fame.html" class="topmenu">Contribute</a>
+
+
+        <a href="/faq.html" class="topmenu">Faq</a>
+
+
+        <a href="/search/index.html" class="topmenu">Search</a>
+
+
+  </nav>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="application/ld+json">
+        
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "headline": "10 Functions",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "/blob//LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "courseCode": "python-programming / 10_functions / hands-on",
+  "learningResourceType": "hands-on tutorial",
+  "name": "Hands-on for '10 Functions' tutorial",
+  "isPartOf": {
+    "@type": "Course",
+    "name": "10 Functions",
+    "description": "10 Functions",
+    "learningResourceType": "tutorial",
+    "interactivityType": "expositive",
+    "provider": {
+      "@type": "Organization",
+      "email": "bits@vib.be",
+      "name": "VIB Bioinformatics Core",
+      "url": "https://www.bits.vib.be"
+    }
+  },
+  "url": "https://material.bits.vib.be//topics/python-programming/tutorials/10_functions/tutorial.html",
+  "timeRequired": "PT35M",
+  "description": "10 Functions\\nThe questions this  addresses are:\n - How to re-use the same bit of code without the need of copying it over and over?\n\n\\nThe objectives are:\n - Define, make and recall functions in Python.\n - Understand the importance and know how to properly document functions.\n - Deal with a variable number of arguments that serve as input in a function.\n - Use default arguments in a function.\n\n",
+  "hasPart": [
+
+  ],
+  "mentions": [
+
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Tuur Muyldermans"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Tuur Muyldermans"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "Gentle hands-on introduction to Python programming",
+      "description": "In this course you'll get to learn all the basics of Python by plenty hands-on exercises related to bioinformatics or Life Sciences data-analyses.",
+      "url": "https://material.bits.vib.be//topics/python-programming/"
+    }
+  ]
+}
+    </script>
+
+    <div class="row tutorial">
+      <div class="col-md-12" role="main">
+        <h1 data-toc-skip>10 Functions</h1>
+        <div class="contributors-line">By: 
+
+<a href="/hall-of-fame#tmuylder" class="contributor-badge">Tuur Muyldermans</a>
+
+
+</div>
+        <blockquote class="overview">
+
+            <strong><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</strong>
+            <ul>
+            
+            <li>How to re-use the same bit of code without the need of copying it over and over?</li>
+            
+            </ul>
+
+            <strong><i class="fa fa-bullseye" aria-hidden="true"></i><span class="visually-hidden">objectives</span> Objectives</strong>
+            <ul>
+            
+            <li>Define, make and recall functions in Python.</li>
+            
+            <li>Understand the importance and know how to properly document functions.</li>
+            
+            <li>Deal with a variable number of arguments that serve as input in a function.</li>
+            
+            <li>Use default arguments in a function.</li>
+            
+            </ul>
+
+            
+
+            
+            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 35 minutes</p>
+            
+
+            
+
+
+            
+
+        </blockquote>
+
+        <div class="container" data-field="body">
+            <div class="row">
+                <div class="col-md-10" role="main">
+                    <h2 id="101-introduction">10.1 Introduction</h2>
+
+<p>So far we’ve been writing ‘sequential’ code, basically following the flow of the code from the top to the bottom of the program. Sometimes, however, you want to re-use code elsewhere without copy/pasting a bit of code. You can do this with functions; a function holds a block of code that can be called from other places. Functions are essential for larger projects and code maintenance - if there’s a problem with that piece of code, for example, you only have to fix it in one place.</p>
+
+<h2 id="102-functions">10.2 Functions</h2>
+
+<p>We’ve already been using built-in Python functions, for example <strong>abs()</strong> or <strong>len()</strong>. However, in this section we will build our own functions. Generally, the syntax when calling a function is the name of the function followed by round brackets <strong>( )</strong>. When you’re writing your own function, in essence it would look like this:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">name_function</span><span class="p">():</span>
+    <span class="s">"Some information about the function"</span>
+    
+    <span class="k">print</span><span class="p">(</span><span class="s">"This is a very simple function"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Information is given to a function by means of an argument and this is passed on in the rounded brackets. In the example above an argument is not defined, hence whenever you call the function it will print the same text. Arguments are defined within the parenthesis and are separated by commas in case there are multiple arguments. Before exploiting functions with arguments, let’s have a look to an example with no arguments that prints the same text always when you call the function.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">silly_function</span><span class="p">():</span>
+    <span class="s">"This is some information about the silly function that will print out some silly text"</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="s">"Some silly text"</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<span class="n">silly_function</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>Information about the function can be retrieved by using the <code class="highlighter-rouge">help()</code> function.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">help</span><span class="p">(</span><span class="n">silly_function</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>The following code is an example of a function that will take some value as an argument and return the absolute value:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">myAbsFunc</span><span class="p">(</span><span class="n">someValue</span><span class="p">):</span>
+    <span class="s">"myAbsFunc takes a number as input and will return the absolute value"</span>
+    <span class="k">if</span> <span class="n">someValue</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">someValue</span> <span class="o">=</span> <span class="o">-</span><span class="n">someValue</span>
+    <span class="k">return</span> <span class="n">someValue</span>
+</code></pre></div></div>
+
+<p>So here we’ve emulated the Python built-in abs() function with myAbsFunc(). Within a function you can use <strong>return</strong> to ‘send back’ a value, which can then be used somewhere else in the code.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myAbsFunc</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>It works exactly the same as a built-in Python function.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">abs</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Functions can also make code more ‘readable’, as you can give them a name that is easy to understand so that it’s clear what is happening without having to examine the code.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">getMeanValue</span><span class="p">(</span><span class="n">valueList</span><span class="p">):</span>
+    <span class="s">"""
+    Calculate the mean (average) value from a list of values.
+    Input: list of integers/floats
+    Output: mean value
+    """</span>
+    <span class="n">meanValue</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">valueList</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">valueList</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">meanValue</span>
+
+<span class="n">getMeanValue</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">77</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">67</span><span class="p">,</span><span class="mi">54</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">getMeanValue</span><span class="p">([</span><span class="mi">3443</span><span class="p">,</span><span class="mi">434</span><span class="p">,</span><span class="mi">34343456</span><span class="p">,</span><span class="mi">32434</span><span class="p">,</span><span class="mi">34</span><span class="p">,</span><span class="mi">34341</span><span class="p">,</span><span class="mi">23</span><span class="p">])</span>
+</code></pre></div></div>
+
+<p>Note that it’s a good practice to add a comment (in this case a multi-line one) to the top of the function that describes what it does, what it takes as input and what it produces as output. This is especially important for more complex functions. You can invoke the information with <code class="highlighter-rouge">help(function_name)</code></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">compareMeanValueOfLists</span><span class="p">(</span><span class="n">valueList1</span><span class="p">,</span><span class="n">valueList2</span><span class="p">):</span>
+ 
+    <span class="s">"""
+    Compare the mean values of two lists of values.
+    Input: valueList1, valueList2
+    Output: Text describing which of the valueLists has the highest average value
+    """</span>
+ 
+    <span class="n">meanValueList1</span> <span class="o">=</span> <span class="n">getMeanValue</span><span class="p">(</span><span class="n">valueList1</span><span class="p">)</span>
+    <span class="n">meanValueList2</span> <span class="o">=</span> <span class="n">getMeanValue</span><span class="p">(</span><span class="n">valueList2</span><span class="p">)</span>
+ 
+    <span class="k">if</span> <span class="n">meanValueList1</span> <span class="o">==</span> <span class="n">meanValueList2</span><span class="p">:</span>
+        <span class="n">outputText</span> <span class="o">=</span> <span class="s">"The mean values are the same ({:.2f})."</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">meanValueList1</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">meanValueList1</span> <span class="o">&gt;</span> <span class="n">meanValueList2</span><span class="p">:</span>
+        <span class="n">outputText</span> <span class="o">=</span> <span class="s">"List1 has a higher average ({:.2f}) than list2 ({:.2f})."</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">meanValueList1</span><span class="p">,</span><span class="n">meanValueList2</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># No need to compare again, only possibility left
+</span>        <span class="n">outputText</span> <span class="o">=</span> <span class="s">"List2 has a higher average ({:.2f}) than list1 ({:.2f})."</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">meanValueList2</span><span class="p">,</span><span class="n">meanValueList1</span><span class="p">)</span>
+ 
+    <span class="k">return</span> <span class="n">outputText</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">valueList1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">77</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">67</span><span class="p">,</span><span class="mi">54</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">valueList2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">76</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">65</span><span class="p">,</span><span class="mi">56</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">compareMeanValueOfLists</span><span class="p">(</span><span class="n">valueList1</span><span class="p">,</span><span class="n">valueList2</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<p>You can call functions within functions, or basically anywhere in your code, even in conditions, …:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="n">getMeanValue</span><span class="p">(</span><span class="n">valueList1</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">26</span> <span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"The mean value of list 1 is greater than 1."</span><span class="p">)</span>
+</code></pre></div></div>
+
+<hr />
+
+<p>There are several ways to solve this problem, however it might be easier to do it with <code class="highlighter-rouge">zip()</code> ;).</p>
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-exercise-1021"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Exercise 10.2.1</h3>
+
+  <p>The Hamming distance between two strings of equal length is the number of positions at which the corresponding character are different. In a more general context, the Hamming distance is one of several string metrics for measuring the edit distance between two sequences.</p>
+
+  <p>The Hamming distance between:</p>
+
+  <p>“karolin” and “kathrin” is 3.</p>
+
+  <p>Write a function called “hamming_distance”:</p>
+  <ul>
+    <li>which accepts two strings, and</li>
+    <li>raises an error if the lengths are unequal.</li>
+    <li>
+      <p>Furthermore the function will return an integer that represents the number of mismatches between the two sequences.</p>
+
+      <blockquote>
+        <details>
+          <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
+
+          <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># string1 and string2 should be the same length.
+</span><span class="k">def</span> <span class="nf">hamming_distance</span><span class="p">(</span><span class="n">string1</span><span class="p">,</span> <span class="n">string2</span><span class="p">):</span> 
+    <span class="s">"""Return the Hamming distance between equal-length sequences."""</span>
+    
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">string1</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">string2</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="nb">ValueError</span><span class="p">(</span><span class="s">"Undefined for sequences of unequal length."</span><span class="p">)</span>
+    
+    <span class="c1"># Start with a distance of zero, and count up
+</span>    <span class="n">distance</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="c1"># Loop over the indices of the string
+</span>    <span class="n">L</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">string1</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+        <span class="c1"># Add 1 to the distance if these two characters are not equal
+</span>        <span class="k">if</span> <span class="n">string1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">string2</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+            <span class="n">distance</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="c1"># Return the final count of differences
+</span>    <span class="k">return</span> <span class="n">distance</span>
+
+<span class="n">seq1</span> <span class="o">=</span> <span class="s">"GATCATAGA"</span>
+<span class="n">seq2</span> <span class="o">=</span> <span class="s">"CATCATACA"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">hamming_distance</span><span class="p">(</span><span class="n">seq1</span><span class="p">,</span><span class="n">seq2</span><span class="p">))</span>
+</code></pre></div>          </div>
+        </details>
+      </blockquote>
+    </li>
+  </ul>
+
+</blockquote>
+
+<hr />
+
+<hr />
+
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-exercise-1022"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Exercise 10.2.2</h3>
+
+  <p>Write a function that calculates the GC content of the sequence in a fasta file. For this example you can use <a href="data/gene.fa">this fasta file</a> which contains the genetic sequence of a bone gla protein. The function must accept a fasta file as input file and will print the following:</p>
+
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The GC content of HSBGPG Human gene for bone gla protein (BGP) is	 63.53%
+</code></pre></div>  </div>
+
+  <p>The method <a href="https://www.tutorialspoint.com/python/string_startswith.htm">.startswith()</a> might help. The function should read the lines of the fasta file and if it starts with a ‘&gt;’ define the text that comes afterwards as the sequence ID. The other lines are part of the sequence. After reading through the lines, you can easily define the GC content by counting the bases and taking the average.</p>
+
+  <blockquote>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution 1
+</summary>
+
+      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># solution one
+</span><span class="k">def</span> <span class="nf">gc_content</span><span class="p">(</span><span class="nb">file</span><span class="p">):</span>
+    <span class="s">"""Calculate GC content of a fasta file (with one sequence)"""</span>
+    <span class="n">sequence</span><span class="o">=</span><span class="s">""</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">'&gt;'</span><span class="p">):</span>
+                <span class="n">seq_id</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()[</span><span class="mi">1</span><span class="p">:]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">sequence</span> <span class="o">+=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+    <span class="n">GC_content</span> <span class="o">=</span> <span class="p">(</span><span class="n">sequence</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s">'G'</span><span class="p">)</span> <span class="o">+</span> <span class="n">sequence</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s">'C'</span><span class="p">))</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"The GC content of {} is</span><span class="se">\t</span><span class="s"> {:.2f}</span><span class="si">%</span><span class="s">"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">seq_id</span><span class="p">,</span> <span class="n">GC_content</span><span class="p">))</span>    
+
+    
+<span class="n">gc_content</span><span class="p">(</span><span class="s">'data/gene.fa'</span><span class="p">)</span>
+</code></pre></div>      </div>
+    </details>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution 2
+</summary>
+
+      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># solution two - very similar to one. 
+</span><span class="k">def</span> <span class="nf">gc_content</span><span class="p">(</span><span class="nb">file</span><span class="p">):</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span>
+    <span class="n">sequence</span><span class="o">=</span><span class="s">""</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">():</span>  
+        <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">'&gt;'</span><span class="p">):</span>
+            <span class="n">seq_id</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()[</span><span class="mi">1</span><span class="p">:]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">sequence</span> <span class="o">+=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+    <span class="n">GC_content</span> <span class="o">=</span> <span class="p">(</span><span class="n">sequence</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s">'G'</span><span class="p">)</span> <span class="o">+</span> <span class="n">sequence</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s">'C'</span><span class="p">))</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"The GC content of {} is</span><span class="se">\t</span><span class="s"> {:.2f}</span><span class="si">%</span><span class="s">"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">seq_id</span><span class="p">,</span> <span class="n">GC_content</span><span class="p">))</span>    
+
+    
+<span class="n">gc_content</span><span class="p">(</span><span class="s">'data/gene.fa'</span><span class="p">)</span>
+</code></pre></div>      </div>
+    </details>
+  </blockquote>
+
+</blockquote>
+<hr />
+
+<h2 id="103-flexibility-in-functions">10.3 Flexibility in functions</h2>
+
+<p>In the functions so far we’ve been using values (arguments) that are passed in and are required for the function to work. If you’re not sure how many arguments the user will give, you can use an asterisk <code class="highlighter-rouge">*</code>. However, make sure that your code is flexible to access the number of arguments that the user is giving as input. In the example below we use the * asterisk to define a flexible number of arguments, and we use a for-loop to access each argument:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">MeanValue</span><span class="p">(</span><span class="o">*</span><span class="n">valueList</span><span class="p">):</span>
+    <span class="s">"""
+    Calculate the mean (average) value from a list of values.
+    Input: list of integers/floats
+    Output: mean value
+    """</span>
+    <span class="n">meanValues</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="k">for</span> <span class="n">eachList</span> <span class="ow">in</span> <span class="n">valueList</span><span class="p">:</span>
+        <span class="n">meanOfList</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">eachList</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">eachList</span><span class="p">)</span>
+        <span class="n">meanValues</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">meanOfList</span><span class="p">)</span>
+        
+    <span class="k">return</span> <span class="n">meanValues</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">MeanValue</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">MeanValue</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
+</code></pre></div></div>
+
+<p>A second way of making flexible functions is by using <em>keywords</em> in a function; these are not required for the function to work because they are given a default value in the function definition. You can then set these keywords if necessary; consider the following example.</p>
+
+<p>By default the parameter sortedList is <code class="highlighter-rouge">False</code> which means that Python will not make a sorted list in the function below, unless you explicitly ask it by setting the parameter to <code class="highlighter-rouge">True</code>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">MeanValue</span><span class="p">(</span><span class="o">*</span><span class="n">valueList</span><span class="p">,</span> <span class="n">sortedList</span> <span class="o">=</span> <span class="bp">False</span><span class="p">):</span>
+    <span class="s">"""
+    Calculate the mean (average) value from a list of values.
+    Input: list of integers/floats
+    Output: mean value
+    """</span>
+    <span class="n">meanValues</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">eachList</span> <span class="ow">in</span> <span class="n">valueList</span><span class="p">:</span>
+        <span class="n">meanOfList</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">eachList</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">eachList</span><span class="p">)</span>
+        <span class="n">meanValues</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">meanOfList</span><span class="p">)</span>
+        
+    <span class="k">if</span> <span class="n">sortedList</span> <span class="o">==</span> <span class="bp">False</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'I calculated all the mean values of your lists, however did not sort them'</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">meanValues</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'I calculated the mean values and also sorted them'</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">meanValues</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">valueList1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">77</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">67</span><span class="p">,</span><span class="mi">54</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">valueList2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">76</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">65</span><span class="p">,</span><span class="mi">56</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">valueList3</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">75</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">65</span><span class="p">,</span><span class="mi">34</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">MeanValue</span><span class="p">(</span><span class="n">valueList1</span><span class="p">,</span> <span class="n">valueList2</span><span class="p">,</span> <span class="n">valueList3</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">MeanValue</span><span class="p">(</span><span class="n">valueList1</span><span class="p">,</span> <span class="n">valueList2</span><span class="p">,</span> <span class="n">valueList3</span><span class="p">,</span> <span class="n">sortedList</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Using these keywords makes the function a lot more flexible - you can make the function do things (or not) depending on them.</p>
+
+
+
+
+                    
+                    <blockquote class="key_points">
+                        <h3><i class="fa fa-key" aria-hidden="true"></i><span class="visually-hidden">keypoints</span> Key points</h3>
+
+                        <ul>
+                            
+                            <li>We learned to create functions and recall them at any point within an analysis.</li>
+                            
+                            <li>We know how to make flexible functions in its inputs with defaults and variable number of arguments.</li>
+                            
+                        </ul>
+                    </blockquote>
+                    
+
+                    
+                    <h1 data-toc-skip>Useful literature</h1>
+                    <p>Further information, including links to documentation and original publications, regarding the tools, analysis techniques and the interpretation of results described in this tutorial can be found <a href="/topics/python-programming#references">here</a>.</p>
+                    
+
+                    
+
+                </div>
+                <!-- sidebar, which will be hidden on a small screen -->
+                <nav class="col-md-2 sticky-toc bs-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary" id="toc" data-toggle="toc"></nav>
+            </div>
+        </div>
+
+        <h3><i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
+
+        
+
+        
+
+</div>
+</div>
+</div>
+<footer>
+   <div class="well row">
+       <div class="col-md-2 text-center" style="padding: 25px 20px 25px 20px;">				
+         <a href="https://www.bits.vib.be" target="_blank"><img src="/assets/images/bioinformatics_core_rgb_neg.png" width="200"></a>
+       </div>
+       <div class="col-md-8 text-center" style="padding-top: 20px;">	
+        <a href="https://github.com/vibbits/training-material" title="View on GitHub" class="margin20" target="_blank">
+                            <i class="fa fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> View on GitHub
+                        </a>
+       </div>
+       <div class="col-md-2 text-center" style="padding-top: 30px;">
+         <span class="slogan"><br>SCIENCE MEETS LIFE</span>
+       </div>
+   </div>
+</footer>
+
+
+</body>
+<script type="text/javascript" src="/assets/js/jquery.slim.min.js"></script>
+<script type="text/javascript" src="/assets/js/popper.min.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.min.js?v=3"></script>
+<script type="text/javascript" src="/assets/js/details-element-polyfill.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" src="/assets/js/bootstrap-toc.min.js"></script>
+<script type="text/javascript" src="/assets/js/main.js"></script>
+<script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
+<script type="text/javascript">
+    var snippets = document.querySelectorAll('div.highlight');
+    [].forEach.call(snippets, function(snippet) {
+        snippet.firstChild.insertAdjacentHTML('beforebegin', '<button class="btn btn-light" data-clipboard-snippet><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+    });
+
+    var clipboardSnippets = new ClipboardJS('[data-clipboard-snippet]', {
+        target: function(trigger) {
+            return trigger.nextElementSibling;
+        }
+    });
+</script>
+
+</html>

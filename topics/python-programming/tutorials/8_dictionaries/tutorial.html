@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="dw_1zBYRNxF7-vYNDXh3Ght_JuqgJt3BD1N_Pynqmv0" />
+    <title>08 Dictionaries</title>
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-61194136-18', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=3">
+    <link rel="stylesheet" href="/assets/css/bootstrap-toc.min.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="/assets/css/main.scss">
+    <link rel="stylesheet" href="/assets/css/VIB.css">
+    <link rel="stylesheet" href="/assets/css/academicons.css">
+    <link rel="stylesheet" href="/assets/css/syntax_highlighting.css">
+    <link rel="shortcut icon" href="/favicon.ico " type="image/x-icon" />     
+    <meta name="description" content="In this course you'll get to learn all the basics of Pyth..." />
+    <meta property="og:title" content="VIB Bioinformatics Training: 08 Dictionaries" />
+    <meta property="og:description" content="In this course you'll get to learn all the basics of Pyth..." />
+    <meta property="og:image" content="/assets/images/bioinformatics_core_rgb_neg.png" />
+</head>
+
+<body data-spy="scroll" data-target="#toc">
+    <div class="top-bar-vib">
+ <a href="http://vib.be/en" target="_blank" style="font-size:14px">VIB Home </a>
+</div>
+
+<div class="container main-content">
+
+<div class="container page-top__container">
+          <div class="region region-top">
+  <div id="logo" class="col-md-3 col-lg-3 text-left" style="padding-left:0px;margin-top:20px">
+       <a href="/">
+           <img src="/assets/images/logo.svg" height="60" alt="VIB logo" class="margin20">
+       </a>
+    </div>
+    <div class="col-md-9 col-lg-9 text-right" style="margin-top:50px;">
+    <nav role="navigation" aria-labelledby="block-mainnavigation-menu" id="block-mainnavigation" class="block block-menu navigation menu--main">
+  
+
+
+        <a href="/" class="topmenu">Home</a>
+
+
+        <a href="/about.html" class="topmenu" >About</a>
+
+
+        <a href="/hall-of-fame.html" class="topmenu">Contribute</a>
+
+
+        <a href="/faq.html" class="topmenu">Faq</a>
+
+
+        <a href="/search/index.html" class="topmenu">Search</a>
+
+
+  </nav>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="application/ld+json">
+        
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "headline": "08 Dictionaries",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "/blob//LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "courseCode": "python-programming / 8_dictionaries / hands-on",
+  "learningResourceType": "hands-on tutorial",
+  "name": "Hands-on for '08 Dictionaries' tutorial",
+  "isPartOf": {
+    "@type": "Course",
+    "name": "08 Dictionaries",
+    "description": "08 Dictionaries",
+    "learningResourceType": "tutorial",
+    "interactivityType": "expositive",
+    "provider": {
+      "@type": "Organization",
+      "email": "bits@vib.be",
+      "name": "VIB Bioinformatics Core",
+      "url": "https://www.bits.vib.be"
+    }
+  },
+  "url": "https://material.bits.vib.be//topics/python-programming/tutorials/8_dictionaries/tutorial.html",
+  "timeRequired": "PT20M",
+  "description": "08 Dictionaries\\nThe questions this  addresses are:\n - How to associate two values with each other in one data structure?\n\n\\nThe objectives are:\n - Understand the difference between dictionaries and other data structures.\n - Use Dictionaries to combine sets of values and store different data structures within a dictionary.\n - Give an example of how dictionaries are used in bioinformatics (BioPython).\n\n",
+  "hasPart": [
+
+  ],
+  "mentions": [
+
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Tuur Muyldermans"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Tuur Muyldermans"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "Gentle hands-on introduction to Python programming",
+      "description": "In this course you'll get to learn all the basics of Python by plenty hands-on exercises related to bioinformatics or Life Sciences data-analyses.",
+      "url": "https://material.bits.vib.be//topics/python-programming/"
+    }
+  ]
+}
+    </script>
+
+    <div class="row tutorial">
+      <div class="col-md-12" role="main">
+        <h1 data-toc-skip>08 Dictionaries</h1>
+        <div class="contributors-line">By: 
+
+<a href="/hall-of-fame#tmuylder" class="contributor-badge">Tuur Muyldermans</a>
+
+
+</div>
+        <blockquote class="overview">
+
+            <strong><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</strong>
+            <ul>
+            
+            <li>How to associate two values with each other in one data structure?</li>
+            
+            </ul>
+
+            <strong><i class="fa fa-bullseye" aria-hidden="true"></i><span class="visually-hidden">objectives</span> Objectives</strong>
+            <ul>
+            
+            <li>Understand the difference between dictionaries and other data structures.</li>
+            
+            <li>Use Dictionaries to combine sets of values and store different data structures within a dictionary.</li>
+            
+            <li>Give an example of how dictionaries are used in bioinformatics (BioPython).</li>
+            
+            </ul>
+
+            
+
+            
+            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 20 minutes</p>
+            
+
+            
+
+
+            
+
+        </blockquote>
+
+        <div class="container" data-field="body">
+            <div class="row">
+                <div class="col-md-10" role="main">
+                    <h2 id="81-introduction">8.1 Introduction</h2>
+
+<p>So far we’ve seen variables that store one value or a series of values (see section 5: lists, tuples and sets). There is another way of storing information where you associate one variable with another; in Python this is called a dictionary. Dictionaries provide a very useful way of quickly connecting variables to each other.</p>
+
+<h2 id="82-dictionary-creation--usage">8.2 Dictionary creation &amp; usage</h2>
+
+<p>It is best to think of a dictionary as a set of <em>key:value</em> pairs, with the requirement that the keys are unique (within one dictionary). Dictionaries are initiated by using curly brackets {}, and each pair of <em>key:value</em>s is separated with a comma. This is how a dictionary would look like:</p>
+
+<p><img src="../../images/myDictionary-cropped.png" alt="Gentle-hands-on-introduction-to-Python-Programming Python Dictionary" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myDictionary</span> <span class="o">=</span> <span class="p">{</span><span class="s">'A'</span><span class="p">:</span> <span class="s">'Ala'</span><span class="p">,</span> <span class="s">'C'</span><span class="p">:</span> <span class="s">'Cys'</span><span class="p">,</span> <span class="s">'D'</span><span class="p">:</span> <span class="s">'Asp'</span><span class="p">}</span>
+<span class="n">myDictionary</span>
+</code></pre></div></div>
+
+<p>You can recall values by using square brackets [ ] with the name of the key, or use the <code class="highlighter-rouge">get()</code>-method.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myDictionary</span><span class="p">[</span><span class="s">'A'</span><span class="p">]</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myDictionary</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'C'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>If you would like to add a new pair of key-value:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myDictionary</span><span class="p">[</span><span class="s">'E'</span><span class="p">]</span> <span class="o">=</span> <span class="s">'Glu'</span>
+<span class="n">myDictionary</span>
+</code></pre></div></div>
+
+<p>Note however that keys are unique and if you try to add a <em>key:value</em>-pair with a key that already exists in the dictionary and a different value, it will overwrite the value.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myDictionary</span><span class="p">[</span><span class="s">'A'</span><span class="p">]</span> <span class="o">=</span> <span class="s">'Glu'</span>
+<span class="n">myDictionary</span>
+</code></pre></div></div>
+
+<p>So keys are unique, values are not!</p>
+
+<p>Dictionaries, like lists, have several useful built-in methods. The most frequently used are listed here below:</p>
+<ul>
+  <li><code class="highlighter-rouge">keys()</code>	to list the dictionary’s keys</li>
+  <li><code class="highlighter-rouge">values()</code> to list the values in the dictionary</li>
+  <li><code class="highlighter-rouge">get()</code>	call the value of a specified key</li>
+  <li><code class="highlighter-rouge">pop()</code>	to remove the specified key and its values</li>
+</ul>
+
+<p>Listing the keys within a dictionary:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myDictionary</span> <span class="o">=</span> <span class="p">{</span><span class="s">'A'</span><span class="p">:</span> <span class="s">'Ala'</span><span class="p">,</span> <span class="s">'C'</span><span class="p">:</span> <span class="s">'Cys'</span><span class="p">,</span> <span class="s">'D'</span><span class="p">:</span> <span class="s">'Asp'</span><span class="p">,</span> <span class="s">'E'</span><span class="p">:</span> <span class="s">'Glu'</span><span class="p">}</span>
+<span class="n">myDictionary</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>Python tells us that the list is still in a dictionary-keys data structure type. If you would like to extract the keys for further processing, it’s probably better to transform them into a list:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">list</span><span class="p">(</span><span class="n">myDictionary</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+</code></pre></div></div>
+
+<p>Similarly for the values of a dictionary:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">list</span><span class="p">(</span><span class="n">myDictionary</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+</code></pre></div></div>
+
+<p>We’ve already exploited the <code class="highlighter-rouge">get</code> method, with <code class="highlighter-rouge">pop</code> we can remove a <em>key-value</em> pair:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myDictionary</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">'E'</span><span class="p">)</span>
+<span class="n">myDictionary</span>
+</code></pre></div></div>
+
+<p>If you try to access a key that doesn’t exist, Python will give an error:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myDictionary</span> <span class="o">=</span> <span class="p">{</span><span class="s">'A'</span><span class="p">:</span> <span class="s">'Ala'</span><span class="p">,</span> <span class="s">'C'</span><span class="p">:</span> <span class="s">'Cys'</span><span class="p">,</span> <span class="s">'D'</span><span class="p">:</span> <span class="s">'Asp'</span><span class="p">,</span> <span class="s">'E'</span><span class="p">:</span> <span class="s">'Glu'</span><span class="p">}</span>
+ 
+<span class="n">myDictionary</span><span class="p">[</span><span class="s">'B'</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>You should therefore always check whether a key exists:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Newlines don't matter when initialising a dictionary...
+</span><span class="n">myDictionary</span> <span class="o">=</span> <span class="p">{</span>
+     <span class="s">'A'</span><span class="p">:</span> <span class="s">'Ala'</span><span class="p">,</span>
+     <span class="s">'C'</span><span class="p">:</span> <span class="s">'Cys'</span><span class="p">,</span>
+     <span class="s">'D'</span><span class="p">:</span> <span class="s">'Asp'</span><span class="p">,</span>
+     <span class="s">'E'</span><span class="p">:</span> <span class="s">'Glu'</span><span class="p">,</span>
+     <span class="s">'F'</span><span class="p">:</span> <span class="s">'Phe'</span><span class="p">,</span>
+     <span class="s">'G'</span><span class="p">:</span> <span class="s">'Gly'</span><span class="p">,</span>
+     <span class="s">'H'</span><span class="p">:</span> <span class="s">'His'</span><span class="p">,</span>
+     <span class="s">'I'</span><span class="p">:</span> <span class="s">'Ile'</span><span class="p">,</span>
+     <span class="s">'K'</span><span class="p">:</span> <span class="s">'Lys'</span><span class="p">,</span>
+     <span class="s">'L'</span><span class="p">:</span> <span class="s">'Leu'</span><span class="p">,</span>
+     <span class="s">'M'</span><span class="p">:</span> <span class="s">'Met'</span><span class="p">,</span>
+     <span class="s">'N'</span><span class="p">:</span> <span class="s">'Asn'</span><span class="p">,</span>
+     <span class="s">'P'</span><span class="p">:</span> <span class="s">'Pro'</span><span class="p">,</span>
+     <span class="s">'Q'</span><span class="p">:</span> <span class="s">'Gln'</span><span class="p">,</span>
+     <span class="s">'R'</span><span class="p">:</span> <span class="s">'Arg'</span><span class="p">,</span>
+     <span class="s">'S'</span><span class="p">:</span> <span class="s">'Ser'</span><span class="p">,</span>
+     <span class="s">'T'</span><span class="p">:</span> <span class="s">'Thr'</span><span class="p">,</span>
+     <span class="s">'V'</span><span class="p">:</span> <span class="s">'Val'</span><span class="p">,</span>
+     <span class="s">'W'</span><span class="p">:</span> <span class="s">'Trp'</span><span class="p">,</span>
+     <span class="s">'Y'</span><span class="p">:</span> <span class="s">'Tyr'</span><span class="p">}</span>
+
+<span class="k">if</span> <span class="s">'B'</span> <span class="ow">in</span> <span class="n">myDictionary</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">myDictionary</span><span class="p">[</span><span class="s">'B'</span><span class="p">])</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"myDictionary doesn't have key 'B'!"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<hr />
+
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-exercise-821"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Exercise 8.2.1</h3>
+
+  <p>Use a dictionary to track how many times each amino acid code appears in the following sequence:</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SFTMHGTPVVNQVKVLTESNRISHHKILAIVGTAESNSEHPLGTAITKYCKQELDTETLGTCIDFQVVPGCGISCKVTNIEGLLHKNNWNIED  
+NNIKNASLVQIDASNEQSSTSSSMIIDAQISNALNAQQYKVLIGNREWMIRNGLVINNDVNDFMTEHERKGRTAVLVAVDDELCGLIAIADT
+</code></pre></div>  </div>
+  <p>Tip: use the one-letter code as key in the dictionary, and the count as value.</p>
+
+  <blockquote>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
+
+      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Use a dictionary to track how many times each amino acid code appears in the following sequence:
+# SFTMHGTPVVNQVKVLTESNRISHHKILAIVGTAESNSEHPLGTAITKYCKQELDTETLGTCIDFQVVPGCGISCKVTNIEGLLHKNNWNIEDNNIKNASLVQIDASNEQSSTSSSMIIDAQISNALNAQQYKVLIGNREWMIRNGLVINNDVNDFMTEHERKGRTAVLVAVDDELCGLIAIADT
+# Tip: use the one-letter code as key in the dictionary, and the count as value. 
+</span><span class="n">mySequence</span> <span class="o">=</span> <span class="s">"SFTMHGTPVVNQVKVLTESNRISHHKILAIVGTAESNSEHPLGTAITKYCKQELDTETLGTCIDFQVVPGCGISCKVTNIEGLLHKNNWNIEDNNIKNASLVQIDASNEQSSTSSSMIIDAQISNALNAQQYKVLIGNREWMIRNGLVINNDVNDFMTEHERKGRTAVLVAVDDELCGLIAIADT"</span>
+ 
+<span class="c1"># First way to do this, using sets (condensed)
+</span><span class="n">aminoAcidCount</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">myUniqueAminoAcids</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">mySequence</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">aaCode</span> <span class="ow">in</span> <span class="n">myUniqueAminoAcids</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Amino acid {} occurs {} times."</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">aaCode</span><span class="p">,</span><span class="n">mySequence</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">aaCode</span><span class="p">)))</span>
+    <span class="n">aminoAcidCount</span><span class="p">[</span><span class="n">aaCode</span><span class="p">]</span> <span class="o">=</span> <span class="n">mySequence</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">aaCode</span><span class="p">)</span>
+</code></pre></div>      </div>
+
+    </details>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
+
+      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Another way to do this, a little bit more elaborate and using the myDictionary as a reference for iteration
+</span><span class="n">mySequence</span> <span class="o">=</span> <span class="s">"SFTMHGTPVVNQVKVLTESNRISHHKILAIVGTAESNSEHPLGTAITKYCKQELDTETLGTCIDFQVVPGCGISCKVTNIEGLLHKNNWNIEDNNIKNASLVQIDASNEQSSTSSSMIIDAQISNALNAQQYKVLIGNREWMIRNGLVINNDVNDFMTEHERKGRTAVLVAVDDELCGLIAIADT"</span>
+
+<span class="n">myDictionary</span> <span class="o">=</span> <span class="p">{</span>
+     <span class="s">'A'</span><span class="p">:</span> <span class="s">'Ala'</span><span class="p">,</span>
+     <span class="s">'C'</span><span class="p">:</span> <span class="s">'Cys'</span><span class="p">,</span>
+     <span class="s">'D'</span><span class="p">:</span> <span class="s">'Asp'</span><span class="p">,</span>
+     <span class="s">'E'</span><span class="p">:</span> <span class="s">'Glu'</span><span class="p">,</span>
+     <span class="s">'F'</span><span class="p">:</span> <span class="s">'Phe'</span><span class="p">,</span>
+     <span class="s">'G'</span><span class="p">:</span> <span class="s">'Gly'</span><span class="p">,</span>
+     <span class="s">'H'</span><span class="p">:</span> <span class="s">'His'</span><span class="p">,</span>
+     <span class="s">'I'</span><span class="p">:</span> <span class="s">'Ile'</span><span class="p">,</span>
+     <span class="s">'K'</span><span class="p">:</span> <span class="s">'Lys'</span><span class="p">,</span>
+     <span class="s">'L'</span><span class="p">:</span> <span class="s">'Leu'</span><span class="p">,</span>
+     <span class="s">'M'</span><span class="p">:</span> <span class="s">'Met'</span><span class="p">,</span>
+     <span class="s">'N'</span><span class="p">:</span> <span class="s">'Asn'</span><span class="p">,</span>
+     <span class="s">'P'</span><span class="p">:</span> <span class="s">'Pro'</span><span class="p">,</span>
+     <span class="s">'Q'</span><span class="p">:</span> <span class="s">'Gln'</span><span class="p">,</span>
+     <span class="s">'R'</span><span class="p">:</span> <span class="s">'Arg'</span><span class="p">,</span>
+     <span class="s">'S'</span><span class="p">:</span> <span class="s">'Ser'</span><span class="p">,</span>
+     <span class="s">'T'</span><span class="p">:</span> <span class="s">'Thr'</span><span class="p">,</span>
+     <span class="s">'V'</span><span class="p">:</span> <span class="s">'Val'</span><span class="p">,</span>
+     <span class="s">'W'</span><span class="p">:</span> <span class="s">'Trp'</span><span class="p">,</span>
+     <span class="s">'Y'</span><span class="p">:</span> <span class="s">'Tyr'</span><span class="p">}</span>
+
+<span class="n">lengthDict</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">myDictionary</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="k">for</span> <span class="n">aa</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">lengthDict</span><span class="p">):</span>
+    <span class="n">aaCode</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">myDictionary</span><span class="o">.</span><span class="n">keys</span><span class="p">())[</span><span class="n">aa</span><span class="p">]</span>
+    <span class="n">aaCount</span> <span class="o">=</span> <span class="n">mySequence</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">aaCode</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Amino acid {} occurs {} times."</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">aaCode</span><span class="p">,</span><span class="n">aaCount</span><span class="p">))</span>
+</code></pre></div>      </div>
+
+    </details>
+  </blockquote>
+
+</blockquote>
+
+<h2 id="83-a-practical-example-of-dictionaries">8.3 A practical example of dictionaries</h2>
+<p>An practical example of dictionaries can be found in Biopython. Imagine that we want to extract some information from a GenBank file (<a href="https://www.ncbi.nlm.nih.gov/nuccore/NC_005816/">NC_005816</a>)</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Imports the SeqIO object from Biopython
+</span><span class="kn">from</span> <span class="nn">Bio</span> <span class="kn">import</span> <span class="n">SeqIO</span>
+
+<span class="c1"># Reads in (just one record of) the GenBank file
+</span><span class="n">record</span> <span class="o">=</span> <span class="n">SeqIO</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s">"data/NC_005816.gb"</span><span class="p">,</span><span class="s">"genbank"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>The SeqRecord object (which we see here) has an id, name and description as well as a sequence. For other (miscellaneous) annotations, the SeqRecord object has a dictionary attribute <em>annotations</em>. Most of the annotations information gets recorded in the annotations dictionary.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">record</span><span class="o">.</span><span class="nb">id</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">record</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">record</span><span class="o">.</span><span class="n">description</span><span class="p">)</span>
+<span class="c1">#print(record.seq)
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">record</span><span class="o">.</span><span class="n">annotations</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">record</span><span class="o">.</span><span class="n">annotations</span><span class="p">[</span><span class="s">'organism'</span><span class="p">]</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">record</span><span class="o">.</span><span class="n">annotations</span><span class="p">[</span><span class="s">'source'</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>(In general, <code class="highlighter-rouge">organism</code> is used for the scientific name (in Latin, e.g. <em>Arabidopsis thaliana</em>), while <code class="highlighter-rouge">source</code>
+will often be the common name (e.g. thale cress). In this example, as is often the case, the two fields are
+identical.)</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">record</span><span class="o">.</span><span class="n">annotations</span><span class="p">[</span><span class="s">'accessions'</span><span class="p">]</span> <span class="c1"># This could be a list of values, hence the list. 
+</span></code></pre></div></div>
+
+<h2 id="84-more-with-dictionaries">8.4 More with dictionaries</h2>
+<p>As mentioned here above, the value associated with a key can consist of a list with values (instead of one single value). In the example below we save the information of an experiment in a dictionary. The key that saves the <em>date</em> information contains a <code class="highlighter-rouge">list</code> of fictive dates (01-01-2020 and 02-01-2020):</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">TriplicateExp1</span> <span class="o">=</span> <span class="p">{</span><span class="s">'name'</span><span class="p">:</span> <span class="s">'experiment 1'</span><span class="p">,</span> <span class="s">'pH'</span><span class="p">:</span> <span class="mf">5.6</span><span class="p">,</span> <span class="s">'temperature'</span><span class="p">:</span> <span class="mf">288.0</span><span class="p">,</span> <span class="s">'volume'</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="s">'calibration'</span><span class="p">:</span><span class="s">'cal1'</span><span class="p">,</span> <span class="s">'date'</span><span class="p">:[</span><span class="s">'01-01-2020'</span><span class="p">,</span><span class="s">'02-01-2020'</span><span class="p">]}</span>
+<span class="n">TriplicateExp1</span>
+</code></pre></div></div>
+
+<p>For the keys, however, the data structures should be immutable (so tuples are OK, lists are not). Recall that keys have to be unique; if you add a key that already exists, the old entry will be overwritten:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dates</span> <span class="o">=</span> <span class="p">(</span><span class="s">'date1'</span><span class="p">,</span><span class="s">'date2'</span><span class="p">)</span> <span class="c1"># tuple
+</span>
+<span class="n">TriplicateExp1</span><span class="p">[</span><span class="n">dates</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s">'01-01-2020'</span><span class="p">,</span><span class="s">'02-01-2020'</span><span class="p">]</span>
+<span class="n">TriplicateExp1</span>
+</code></pre></div></div>
+
+<p>It is also possible to have a so-called nested dictionary, in which there is a dictionary within a dictionary. Here we make two more dictionaries with information about the triplicate experiment. The information of each experiment is thus assembled in a separate dictionary. Then, the three dictionaries are combined into one dictionary.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">TriplicateExp2</span> <span class="o">=</span> <span class="p">{</span><span class="s">'name'</span><span class="p">:</span> <span class="s">'experiment 2'</span><span class="p">,</span> <span class="s">'pH'</span><span class="p">:</span> <span class="mf">5.8</span><span class="p">,</span> <span class="s">'temperature'</span><span class="p">:</span> <span class="mf">286.0</span><span class="p">,</span> <span class="s">'volume'</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="s">'calibration'</span><span class="p">:</span><span class="s">'cal1'</span><span class="p">,</span> <span class="s">'date'</span><span class="p">:</span><span class="s">'03-01-2020'</span><span class="p">}</span>
+<span class="n">TriplicateExp3</span> <span class="o">=</span> <span class="p">{</span><span class="s">'name'</span><span class="p">:</span> <span class="s">'experiment 3'</span><span class="p">,</span> <span class="s">'pH'</span><span class="p">:</span> <span class="mf">5.4</span><span class="p">,</span> <span class="s">'temperature'</span><span class="p">:</span> <span class="mf">287.0</span><span class="p">,</span> <span class="s">'volume'</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="s">'calibration'</span><span class="p">:</span><span class="s">'cal1'</span><span class="p">,</span> <span class="s">'date'</span><span class="p">:</span><span class="s">'04-01-2020'</span><span class="p">}</span>
+<span class="n">Triplicate</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'exp1'</span><span class="p">:</span><span class="n">TriplicateExp1</span><span class="p">,</span>
+    <span class="s">'exp2'</span><span class="p">:</span><span class="n">TriplicateExp2</span><span class="p">,</span>
+    <span class="s">'exp3'</span><span class="p">:</span><span class="n">TriplicateExp3</span>
+<span class="p">}</span>
+<span class="n">Triplicate</span>
+</code></pre></div></div>
+
+
+
+
+                    
+                    <blockquote class="key_points">
+                        <h3><i class="fa fa-key" aria-hidden="true"></i><span class="visually-hidden">keypoints</span> Key points</h3>
+
+                        <ul>
+                            
+                            <li>We learned why it can be beneficial to store information in dictionaries</li>
+                            
+                            <li>Dictionaries can be nested within each other and can contain multiple different data structures.</li>
+                            
+                        </ul>
+                    </blockquote>
+                    
+
+                    
+                    <h1 data-toc-skip>Useful literature</h1>
+                    <p>Further information, including links to documentation and original publications, regarding the tools, analysis techniques and the interpretation of results described in this tutorial can be found <a href="/topics/python-programming#references">here</a>.</p>
+                    
+
+                    
+
+                </div>
+                <!-- sidebar, which will be hidden on a small screen -->
+                <nav class="col-md-2 sticky-toc bs-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary" id="toc" data-toggle="toc"></nav>
+            </div>
+        </div>
+
+        <h3><i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
+
+        
+
+        
+
+</div>
+</div>
+</div>
+<footer>
+   <div class="well row">
+       <div class="col-md-2 text-center" style="padding: 25px 20px 25px 20px;">				
+         <a href="https://www.bits.vib.be" target="_blank"><img src="/assets/images/bioinformatics_core_rgb_neg.png" width="200"></a>
+       </div>
+       <div class="col-md-8 text-center" style="padding-top: 20px;">	
+        <a href="https://github.com/vibbits/training-material" title="View on GitHub" class="margin20" target="_blank">
+                            <i class="fa fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> View on GitHub
+                        </a>
+       </div>
+       <div class="col-md-2 text-center" style="padding-top: 30px;">
+         <span class="slogan"><br>SCIENCE MEETS LIFE</span>
+       </div>
+   </div>
+</footer>
+
+
+</body>
+<script type="text/javascript" src="/assets/js/jquery.slim.min.js"></script>
+<script type="text/javascript" src="/assets/js/popper.min.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.min.js?v=3"></script>
+<script type="text/javascript" src="/assets/js/details-element-polyfill.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" src="/assets/js/bootstrap-toc.min.js"></script>
+<script type="text/javascript" src="/assets/js/main.js"></script>
+<script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
+<script type="text/javascript">
+    var snippets = document.querySelectorAll('div.highlight');
+    [].forEach.call(snippets, function(snippet) {
+        snippet.firstChild.insertAdjacentHTML('beforebegin', '<button class="btn btn-light" data-clipboard-snippet><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+    });
+
+    var clipboardSnippets = new ClipboardJS('[data-clipboard-snippet]', {
+        target: function(trigger) {
+            return trigger.nextElementSibling;
+        }
+    });
+</script>
+
+</html>

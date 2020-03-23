@@ -1,0 +1,679 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="dw_1zBYRNxF7-vYNDXh3Ght_JuqgJt3BD1N_Pynqmv0" />
+    <title>05 Lists, Tuples and Sets</title>
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-61194136-18', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=3">
+    <link rel="stylesheet" href="/assets/css/bootstrap-toc.min.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="/assets/css/main.scss">
+    <link rel="stylesheet" href="/assets/css/VIB.css">
+    <link rel="stylesheet" href="/assets/css/academicons.css">
+    <link rel="stylesheet" href="/assets/css/syntax_highlighting.css">
+    <link rel="shortcut icon" href="/favicon.ico " type="image/x-icon" />     
+    <meta name="description" content="In this course you'll get to learn all the basics of Pyth..." />
+    <meta property="og:title" content="VIB Bioinformatics Training: 05 Lists, Tuples and Sets" />
+    <meta property="og:description" content="In this course you'll get to learn all the basics of Pyth..." />
+    <meta property="og:image" content="/assets/images/bioinformatics_core_rgb_neg.png" />
+</head>
+
+<body data-spy="scroll" data-target="#toc">
+    <div class="top-bar-vib">
+ <a href="http://vib.be/en" target="_blank" style="font-size:14px">VIB Home </a>
+</div>
+
+<div class="container main-content">
+
+<div class="container page-top__container">
+          <div class="region region-top">
+  <div id="logo" class="col-md-3 col-lg-3 text-left" style="padding-left:0px;margin-top:20px">
+       <a href="/">
+           <img src="/assets/images/logo.svg" height="60" alt="VIB logo" class="margin20">
+       </a>
+    </div>
+    <div class="col-md-9 col-lg-9 text-right" style="margin-top:50px;">
+    <nav role="navigation" aria-labelledby="block-mainnavigation-menu" id="block-mainnavigation" class="block block-menu navigation menu--main">
+  
+
+
+        <a href="/" class="topmenu">Home</a>
+
+
+        <a href="/about.html" class="topmenu" >About</a>
+
+
+        <a href="/hall-of-fame.html" class="topmenu">Contribute</a>
+
+
+        <a href="/faq.html" class="topmenu">Faq</a>
+
+
+        <a href="/search/index.html" class="topmenu">Search</a>
+
+
+  </nav>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="application/ld+json">
+        
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "headline": "05 Lists, Tuples and Sets",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "/blob//LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "courseCode": "python-programming / 5_lists_and_tuples / hands-on",
+  "learningResourceType": "hands-on tutorial",
+  "name": "Hands-on for '05 Lists, Tuples and Sets' tutorial",
+  "isPartOf": {
+    "@type": "Course",
+    "name": "05 Lists, Tuples and Sets",
+    "description": "05 Lists, Tuples and Sets",
+    "learningResourceType": "tutorial",
+    "interactivityType": "expositive",
+    "provider": {
+      "@type": "Organization",
+      "email": "bits@vib.be",
+      "name": "VIB Bioinformatics Core",
+      "url": "https://www.bits.vib.be"
+    }
+  },
+  "url": "https://material.bits.vib.be//topics/python-programming/tutorials/5_lists_and_tuples/tutorial.html",
+  "timeRequired": "PT30M",
+  "description": "05 Lists, Tuples and Sets\\nThe questions this  addresses are:\n - How to combine multiple values in one variable?\n\n\\nThe objectives are:\n - Use Lists, Tuples and Sets to collect multiple values within one variable\n - Learn how to create and convert different types of variables\n\n",
+  "hasPart": [
+
+  ],
+  "mentions": [
+
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Tuur Muyldermans"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Tuur Muyldermans"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "Gentle hands-on introduction to Python programming",
+      "description": "In this course you'll get to learn all the basics of Python by plenty hands-on exercises related to bioinformatics or Life Sciences data-analyses.",
+      "url": "https://material.bits.vib.be//topics/python-programming/"
+    }
+  ]
+}
+    </script>
+
+    <div class="row tutorial">
+      <div class="col-md-12" role="main">
+        <h1 data-toc-skip>05 Lists, Tuples and Sets</h1>
+        <div class="contributors-line">By: 
+
+<a href="/hall-of-fame#tmuylder" class="contributor-badge">Tuur Muyldermans</a>
+
+
+</div>
+        <blockquote class="overview">
+
+            <strong><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</strong>
+            <ul>
+            
+            <li>How to combine multiple values in one variable?</li>
+            
+            </ul>
+
+            <strong><i class="fa fa-bullseye" aria-hidden="true"></i><span class="visually-hidden">objectives</span> Objectives</strong>
+            <ul>
+            
+            <li>Use Lists, Tuples and Sets to collect multiple values within one variable</li>
+            
+            <li>Learn how to create and convert different types of variables</li>
+            
+            </ul>
+
+            
+
+            
+            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 30 minutes</p>
+            
+
+            
+
+
+            
+
+        </blockquote>
+
+        <div class="container" data-field="body">
+            <div class="row">
+                <div class="col-md-10" role="main">
+                    <h2 id="51-introduction">5.1 Introduction</h2>
+
+<p>So far we’ve seen variables where you essentially assign a value to a name that you can use in the program. It is also possible to assign groups of values to a name, in Python these are called <em>lists</em> and <em>tuples</em> - variables that contain multiple values in a fixed order. Python also has <em>sets</em>, which are also variables that contain multiple values, but in no particular order. In <a href="8_Dictionaries.ipynb">section 8</a> we will also discuss dictionaries. By means of a brief summary, already in this stage; there are four collection data types in Python:</p>
+<ul>
+  <li><code class="highlighter-rouge">List</code> is a collection which is ordered and changeable. Allows duplicate members. Use square brackets [] for lists.</li>
+  <li><code class="highlighter-rouge">Tuple</code> is a collection which is ordered and unchangeable. Allows duplicate members. Use normal brackets () for tuples.</li>
+  <li><code class="highlighter-rouge">Set</code> is a collection which is unordered and unindexed. No duplicate members. Use curly brackets {} for sets.</li>
+  <li><code class="highlighter-rouge">Dictionary</code> is a collection which is unordered, changeable and indexed. No duplicate members. Use curly brackets {} for dictionaries (see <a href="8_Dictionaries.ipynb">section 8</a>).</li>
+</ul>
+
+<p>They are useful in different circumstances and each data-type has its own advantage. On a small-case example this might not be noticable, however on a larger scale using the right data-type can save you a lot of time.</p>
+
+<h2 id="52-lists-and-range">5.2 Lists and range</h2>
+
+<p>You can make your own Python list from scratch:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myList</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">56</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">33</span><span class="p">]</span>
+<span class="n">myList</span>
+</code></pre></div></div>
+
+<p>You can also use the <code class="highlighter-rouge">range()</code> function. Try this:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myList</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">myList</span>
+</code></pre></div></div>
+
+<p>You should get the following output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]. This is a list of integers - you can recognize a list by the square [ ] brackets. <strong>Note</strong> that Python always starts counting from 0. The command above will give you a series of integers starting from 0 and stopping at the number you defined, however with this number <strong>not</strong> included in the list. Hence, it stops at 9. You can start from a different number as well:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myList</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
+<span class="n">myList</span>
+</code></pre></div></div>
+
+<p>or increase the step size (the default is step size is 1):</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myList</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">myList</span>
+</code></pre></div></div>
+
+<p>An important feature of lists is that they are flexible - you can add and remove values, change the order, … . You can do such modifications by calling a <em>method</em> from the list itself. Some examples of methods are:</p>
+<ul>
+  <li>Add elements
+    <ul>
+      <li><code class="highlighter-rouge">append()</code> to append an item to the end of the list</li>
+      <li><code class="highlighter-rouge">insert()</code> to add an item at the specified index</li>
+      <li><code class="highlighter-rouge">extend()</code> to extend an item</li>
+    </ul>
+  </li>
+  <li>Delete elements
+    <ul>
+      <li><code class="highlighter-rouge">remove()</code> to remove the specified item</li>
+      <li><code class="highlighter-rouge">pop()</code> to remove the specified index (or the last item if index is not specified)</li>
+      <li><code class="highlighter-rouge">del</code> keyword removes the specified index</li>
+      <li><code class="highlighter-rouge">clear()</code> method empties the list</li>
+    </ul>
+  </li>
+  <li>Sorting:
+    <ul>
+      <li><code class="highlighter-rouge">sort()</code> will sort the list in an ordered way</li>
+      <li><code class="highlighter-rouge">reverse()</code> will reverse the order of the list</li>
+    </ul>
+  </li>
+  <li>Copy of a list with the <code class="highlighter-rouge">copy()</code> method</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myList</span> <span class="o">=</span> <span class="p">[]</span>             <span class="c1"># Create an empty list
+</span><span class="n">myList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>        <span class="c1"># Add a single value to the back of the list
+</span><span class="n">myList</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myList</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">9</span><span class="p">)</span>      <span class="c1"># Insert a value in the list at index (element position) 0
+</span><span class="n">myList</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myList</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="mi">99</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span> <span class="c1"># Extend the list with another list
+</span><span class="n">myList</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myList</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>               <span class="c1"># Return the first element in the list (counting starts at zero) 
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myList</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>               <span class="c1"># Return the third element in the list
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myRemovedElement</span> <span class="o">=</span> <span class="n">myList</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># Remove the fourth element in the list and return it
+</span><span class="k">print</span><span class="p">(</span><span class="s">"I removed {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">myRemovedElement</span><span class="p">))</span>
+<span class="n">myList</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myList</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>           <span class="c1"># You can sort the elements in a list - this will change their order
+</span><span class="n">myList</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myList</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>        <span class="c1"># Or reverse the order of the list
+</span><span class="n">myList</span>
+</code></pre></div></div>
+
+<p>You can also select a slice from a list - this will give you a new list:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myList</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">15</span><span class="p">))</span>
+ 
+<span class="n">myListSlice</span> <span class="o">=</span> <span class="n">myList</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span>
+<span class="n">myListSlice</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myListCopy</span> <span class="o">=</span> <span class="n">myList</span><span class="p">[:]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">myListCopy</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">myList</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">:])</span>     <span class="c1"># This will select the fourth-last to the last element in the list
+</span></code></pre></div></div>
+
+<p>There are two other methods you can use on lists:</p>
+<ul>
+  <li><code class="highlighter-rouge">index()</code> returns the index of the first element with the specified value</li>
+  <li><code class="highlighter-rouge">count()</code> returns the number of elements with the specified value</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myList</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">15</span><span class="p">))</span>
+<span class="n">myList</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myList</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>   <span class="c1"># Will count the amount of times the value 10 occurs in this list
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myList</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s">"A"</span><span class="p">)</span>  <span class="c1"># This always works, and will return 0 if nothing is found
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myList</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>   <span class="c1"># Will give the index of the element with value 10 - in this case 9 because the list index starts at 0.
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#print(myList.index("A"))  # This will crash the program - the value to look for has to be present in the list!!!
+</span></code></pre></div></div>
+
+<hr />
+
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-exercise-521"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Exercise 5.2.1</h3>
+
+  <p>Take the list [54,56,2,1,5223,6,23,57,3,7,3344], sort it in reverse order (largest value first) and print out the third value.</p>
+
+  <blockquote>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
+
+      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1"># Take the list [54,56,2,1,5223,6,23,57,3,7,3344], sort it in reverse order (largest value first) and print out the third value.
+</span> <span class="n">myList</span> <span class="o">=</span> <span class="p">[</span><span class="mi">54</span><span class="p">,</span><span class="mi">56</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">5223</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">57</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">3344</span><span class="p">]</span>
+ 
+ <span class="n">myList</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+ <span class="n">myList</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+ 
+ <span class="k">print</span><span class="p">(</span><span class="n">myList</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+ <span class="c1">#The first element is at index 0, the third at index 3!
+</span></code></pre></div>      </div>
+    </details>
+  </blockquote>
+
+</blockquote>
+<hr />
+
+<h2 id="53-tuples">5.3 Tuples</h2>
+<p>Similar to <em>lists</em> are <em>tuples</em> - essentially they are the same, except that a tuple cannot be modified once created. This can be useful for values that don’t change, like (part of) the alphabet for example:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myTuple</span> <span class="o">=</span> <span class="p">(</span><span class="s">"A"</span><span class="p">,</span><span class="s">"B"</span><span class="p">,</span><span class="s">"C"</span><span class="p">,</span><span class="s">"D"</span><span class="p">,</span><span class="s">"E"</span><span class="p">,</span><span class="s">"F"</span><span class="p">)</span>
+<span class="n">myTuple</span>
+</code></pre></div></div>
+
+<p>Important to remember is that if you create a tuple with one value you have to use a comma:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myTuple</span> <span class="o">=</span> <span class="p">(</span><span class="s">"My string"</span><span class="p">,)</span>
+<span class="n">myTuple</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myWrongTuple</span> <span class="o">=</span> <span class="p">(</span><span class="s">"My string"</span><span class="p">)</span>  <span class="c1"># The brackets here don't do anything.
+</span><span class="n">myWrongTuple</span>
+</code></pre></div></div>
+
+<p>A tuple is indicated by round brackets <strong>( )</strong>. You can interconvert between lists and tuples by using <code class="highlighter-rouge">list()</code> and <code class="highlighter-rouge">tuple()</code>:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myTuple</span> <span class="o">=</span> <span class="p">(</span><span class="s">"A"</span><span class="p">,</span><span class="s">"B"</span><span class="p">,</span><span class="s">"C"</span><span class="p">,</span><span class="s">"D"</span><span class="p">,</span><span class="s">"E"</span><span class="p">,</span><span class="s">"F"</span><span class="p">)</span>
+<span class="n">myList</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+ 
+<span class="n">myNewTuple</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">myList</span><span class="p">)</span>
+<span class="n">myNewList</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">myTuple</span><span class="p">)</span>
+ 
+<span class="k">print</span><span class="p">(</span><span class="s">"{} and {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">myList</span><span class="p">,</span> <span class="n">myNewTuple</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"{} and {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">myTuple</span><span class="p">,</span> <span class="n">myNewList</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>You can find out the length (number of elements) in a list or tuple with <code class="highlighter-rouge">len()</code>:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myTuple</span> <span class="o">=</span> <span class="p">(</span><span class="s">"A"</span><span class="p">,</span><span class="s">"B"</span><span class="p">,</span><span class="s">"C"</span><span class="p">,</span><span class="s">"D"</span><span class="p">,</span><span class="s">"E"</span><span class="p">,</span><span class="s">"F"</span><span class="p">)</span>
+<span class="n">myTupleLength</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">myTuple</span><span class="p">)</span>
+<span class="n">myTupleLength</span>
+</code></pre></div></div>
+
+<p>Tuples are faster during iteration procedures due to their immutability.</p>
+
+<hr />
+
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-exercise-531"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Exercise 5.3.1</h3>
+
+  <p>Start with the tuple <code class="highlighter-rouge">('a','B','c','D','e','F')</code>, sort it, take the fourth value out, and print the result.</p>
+
+  <blockquote>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
+
+      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1"># Start with the tuple ('a','B','c','D','e','F'), sort it, take the fourth value out, and print the result.
+</span> <span class="n">myTuple</span> <span class="o">=</span> <span class="p">(</span><span class="s">'a'</span><span class="p">,</span><span class="s">'B'</span><span class="p">,</span><span class="s">'c'</span><span class="p">,</span><span class="s">'D'</span><span class="p">,</span><span class="s">'e'</span><span class="p">,</span><span class="s">'F'</span><span class="p">)</span>
+ <span class="n">myList</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">myTuple</span><span class="p">)</span>
+ <span class="n">myList</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+ <span class="c1">#print(myList)
+</span> 
+ <span class="k">print</span> <span class="p">(</span><span class="s">"Removing {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">myList</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">3</span><span class="p">)))</span>
+ <span class="k">print</span> <span class="p">(</span><span class="s">"Result is {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><span class="n">myList</span><span class="p">))))</span>
+</code></pre></div>      </div>
+    </details>
+  </blockquote>
+
+</blockquote>
+<hr />
+
+<h2 id="54-strings">5.4 Strings</h2>
+<p><strong>Strings are a bit like lists and tuples</strong></p>
+
+<p>Strings are really a sequence of characters, and they behave similar to lists:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myString</span> <span class="o">=</span> <span class="s">"This is a sentence."</span>
+ 
+<span class="n">myString</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>          <span class="c1"># Take the first five characters
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myString</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s">"e"</span><span class="p">)</span>    <span class="c1"># Count the number of 'e' characters
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myString</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s">"i"</span><span class="p">)</span>    <span class="c1"># Give the index of the first 'i' character
+</span></code></pre></div></div>
+
+<p>You cannot re-assign strings as you do with lists though, the following example does not work:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myString</span> <span class="o">=</span> <span class="s">"   This is a sentence.  "</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">myString</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>       <span class="c1"># Upper-case all characters
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">myString</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>       <span class="c1"># Lower-case all characters
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">myString</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>       <span class="c1"># Strip leading and trailing spaces/tabs/newlines
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">myString</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>       <span class="c1"># Split the line into elements - default is splitting by whitespace characters
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">myString</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">' is '</span><span class="p">,</span><span class="s">' was '</span><span class="p">))</span>  <span class="c1"># Replace ' is ' by ' was '. Spaces are necessary, otherwise the 'is' in 'This' will be replaced!
+</span></code></pre></div></div>
+
+<p>A list with all string methods and a full description can be found in the <a href="https://docs.python.org/3/library/stdtypes.html#string-methods">Python documentation</a>, or simply type <code class="highlighter-rouge">dir(myString)</code></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">dir</span><span class="p">(</span><span class="n">myString</span><span class="p">)</span>
+</code></pre></div></div>
+
+<hr />
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-exercise-541"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Exercise 5.4.1</h3>
+
+  <p>Ask the user for two words, then check whether they are the same (upper or lower case should not matter),if not check whether they have the same first letter (again case should not matter). If not, then print their length.</p>
+
+  <blockquote>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
+
+      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1"># Ask the user for two words, then check whether they are the same (upper or lower case should not matter),if not check whether they have the same first letter (again case &gt;    &gt;  should not matter). If not, then print their length. 
+</span> <span class="n">firstWord</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Give first word:"</span><span class="p">)</span>
+ <span class="n">secondWord</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Give second word:"</span><span class="p">)</span>
+ 
+ <span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">firstWord</span><span class="p">))</span>
+ 
+ <span class="k">if</span> <span class="n">firstWord</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="o">==</span> <span class="n">secondWord</span><span class="o">.</span><span class="n">upper</span><span class="p">():</span>
+     <span class="k">print</span><span class="p">(</span><span class="s">"Words are the same (ignoring case)."</span><span class="p">)</span>
+ <span class="k">elif</span> <span class="n">firstWord</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="o">==</span> <span class="n">secondWord</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">():</span>
+     <span class="k">print</span><span class="p">(</span><span class="s">"Words share the same first letter (ignoring case)."</span><span class="p">)</span>
+ <span class="k">else</span><span class="p">:</span>
+     <span class="k">print</span><span class="p">(</span><span class="s">"Word lengths are {} and {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="nb">int</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">firstWord</span><span class="p">))),</span><span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">secondWord</span><span class="p">))))</span>
+</code></pre></div>      </div>
+    </details>
+  </blockquote>
+
+</blockquote>
+<hr />
+
+<h2 id="55-sets">5.5 Sets</h2>
+<p>Very useful as well are sets. These are unordered and unindexed (so the order in which you put in elements doesn’t matter), and it is much easier to compare them to each other. Because sets cannot have multiple occurrences of the same element, it makes sets highly useful to efficiently remove duplicate values from a list or tuple and to perform common math operations like unions and intersections.</p>
+
+<p><img src="../../images/Python-Set-Operatioons.png" alt="sets" /></p>
+
+<p>Source: https://www.learnbyexample.org/python-set/</p>
+
+<p>You initialise them by using <strong>set()</strong> on a list or tuple:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mySet1</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">mySet2</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">20</span><span class="p">))</span>
+ 
+<span class="k">print</span><span class="p">(</span><span class="n">mySet1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">mySet2</span><span class="p">)</span>
+ 
+<span class="n">mySet</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># Elements in a set are unique - the set will not change because it already has a 5
+</span> 
+<span class="k">print</span><span class="p">(</span><span class="n">mySet1</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">mySet2</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">mySet1</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">mySet2</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">dir</span><span class="p">(</span><span class="n">mySet1</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>The principle of using intersection and union is the same as the Venn diagrams you probably saw in school… You can also make a set out of a string:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myString</span> <span class="o">=</span> <span class="s">"This is a sentence."</span>
+ 
+<span class="n">myLetters</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">myString</span><span class="p">)</span>
+<span class="n">myLetters</span>    <span class="c1"># Note that an upper case T and lower case t are not the same!
+</span></code></pre></div></div>
+
+<p>There are more things you can do with sets which we will not go into here, see the <a href="https://docs.python.org/3/library/stdtypes.html#types-set">Python sets</a> documentation for more information.</p>
+
+<hr />
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-exercise-551"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Exercise 5.5.1</h3>
+
+  <p>Which letters are shared between the words “perspicacious” and “circumlocution”?</p>
+
+  <blockquote>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
+
+      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1"># Which letters are shared between the words "perspicacious" and "circumlocution"?
+</span> <span class="n">firstWord</span> <span class="o">=</span> <span class="s">"perspicacious"</span>
+ <span class="n">secondWord</span> <span class="o">=</span> <span class="s">"circumlocution"</span>
+ 
+ <span class="n">firstLetterSet</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">firstWord</span><span class="p">)</span>
+ <span class="n">secondLetterSet</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">secondWord</span><span class="p">)</span>
+ 
+ <span class="k">print</span><span class="p">(</span><span class="n">firstLetterSet</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">secondLetterSet</span><span class="p">))</span>
+</code></pre></div>      </div>
+    </details>
+  </blockquote>
+
+</blockquote>
+<hr />
+
+
+
+
+                    
+                    <blockquote class="key_points">
+                        <h3><i class="fa fa-key" aria-hidden="true"></i><span class="visually-hidden">keypoints</span> Key points</h3>
+
+                        <ul>
+                            
+                            <li>Use Lists, Tuples and Sets to collect multiple values within one variable</li>
+                            
+                            <li>Learn how to create and convert different types of variables</li>
+                            
+                        </ul>
+                    </blockquote>
+                    
+
+                    
+                    <h1 data-toc-skip>Useful literature</h1>
+                    <p>Further information, including links to documentation and original publications, regarding the tools, analysis techniques and the interpretation of results described in this tutorial can be found <a href="/topics/python-programming#references">here</a>.</p>
+                    
+
+                    
+
+                </div>
+                <!-- sidebar, which will be hidden on a small screen -->
+                <nav class="col-md-2 sticky-toc bs-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary" id="toc" data-toggle="toc"></nav>
+            </div>
+        </div>
+
+        <h3><i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
+
+        
+
+        
+
+</div>
+</div>
+</div>
+<footer>
+   <div class="well row">
+       <div class="col-md-2 text-center" style="padding: 25px 20px 25px 20px;">				
+         <a href="https://www.bits.vib.be" target="_blank"><img src="/assets/images/bioinformatics_core_rgb_neg.png" width="200"></a>
+       </div>
+       <div class="col-md-8 text-center" style="padding-top: 20px;">	
+        <a href="https://github.com/vibbits/training-material" title="View on GitHub" class="margin20" target="_blank">
+                            <i class="fa fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> View on GitHub
+                        </a>
+       </div>
+       <div class="col-md-2 text-center" style="padding-top: 30px;">
+         <span class="slogan"><br>SCIENCE MEETS LIFE</span>
+       </div>
+   </div>
+</footer>
+
+
+</body>
+<script type="text/javascript" src="/assets/js/jquery.slim.min.js"></script>
+<script type="text/javascript" src="/assets/js/popper.min.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.min.js?v=3"></script>
+<script type="text/javascript" src="/assets/js/details-element-polyfill.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" src="/assets/js/bootstrap-toc.min.js"></script>
+<script type="text/javascript" src="/assets/js/main.js"></script>
+<script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
+<script type="text/javascript">
+    var snippets = document.querySelectorAll('div.highlight');
+    [].forEach.call(snippets, function(snippet) {
+        snippet.firstChild.insertAdjacentHTML('beforebegin', '<button class="btn btn-light" data-clipboard-snippet><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+    });
+
+    var clipboardSnippets = new ClipboardJS('[data-clipboard-snippet]', {
+        target: function(trigger) {
+            return trigger.nextElementSibling;
+        }
+    });
+</script>
+
+</html>

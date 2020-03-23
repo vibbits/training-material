@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="dw_1zBYRNxF7-vYNDXh3Ght_JuqgJt3BD1N_Pynqmv0" />
+    <title>04 Conditions</title>
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-61194136-18', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=3">
+    <link rel="stylesheet" href="/assets/css/bootstrap-toc.min.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="/assets/css/main.scss">
+    <link rel="stylesheet" href="/assets/css/VIB.css">
+    <link rel="stylesheet" href="/assets/css/academicons.css">
+    <link rel="stylesheet" href="/assets/css/syntax_highlighting.css">
+    <link rel="shortcut icon" href="/favicon.ico " type="image/x-icon" />     
+    <meta name="description" content="In this course you'll get to learn all the basics of Pyth..." />
+    <meta property="og:title" content="VIB Bioinformatics Training: 04 Conditions" />
+    <meta property="og:description" content="In this course you'll get to learn all the basics of Pyth..." />
+    <meta property="og:image" content="/assets/images/bioinformatics_core_rgb_neg.png" />
+</head>
+
+<body data-spy="scroll" data-target="#toc">
+    <div class="top-bar-vib">
+ <a href="http://vib.be/en" target="_blank" style="font-size:14px">VIB Home </a>
+</div>
+
+<div class="container main-content">
+
+<div class="container page-top__container">
+          <div class="region region-top">
+  <div id="logo" class="col-md-3 col-lg-3 text-left" style="padding-left:0px;margin-top:20px">
+       <a href="/">
+           <img src="/assets/images/logo.svg" height="60" alt="VIB logo" class="margin20">
+       </a>
+    </div>
+    <div class="col-md-9 col-lg-9 text-right" style="margin-top:50px;">
+    <nav role="navigation" aria-labelledby="block-mainnavigation-menu" id="block-mainnavigation" class="block block-menu navigation menu--main">
+  
+
+
+        <a href="/" class="topmenu">Home</a>
+
+
+        <a href="/about.html" class="topmenu" >About</a>
+
+
+        <a href="/hall-of-fame.html" class="topmenu">Contribute</a>
+
+
+        <a href="/faq.html" class="topmenu">Faq</a>
+
+
+        <a href="/search/index.html" class="topmenu">Search</a>
+
+
+  </nav>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="application/ld+json">
+        
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "headline": "04 Conditions",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "/blob//LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "courseCode": "python-programming / 4_conditions / hands-on",
+  "learningResourceType": "hands-on tutorial",
+  "name": "Hands-on for '04 Conditions' tutorial",
+  "isPartOf": {
+    "@type": "Course",
+    "name": "04 Conditions",
+    "description": "04 Conditions",
+    "learningResourceType": "tutorial",
+    "interactivityType": "expositive",
+    "provider": {
+      "@type": "Organization",
+      "email": "bits@vib.be",
+      "name": "VIB Bioinformatics Core",
+      "url": "https://www.bits.vib.be"
+    }
+  },
+  "url": "https://material.bits.vib.be//topics/python-programming/tutorials/4_conditions/tutorial.html",
+  "timeRequired": "PT30M",
+  "description": "04 Conditions\\nThe questions this  addresses are:\n - How to control the code that is performed based on a condition?\n\n\\nThe objectives are:\n - Use if-elif-else statements together with condition statements\n - Understand what indentation means and how it can affect your code\n\n",
+  "hasPart": [
+
+  ],
+  "mentions": [
+
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Tuur Muyldermans"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Tuur Muyldermans"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "Gentle hands-on introduction to Python programming",
+      "description": "In this course you'll get to learn all the basics of Python by plenty hands-on exercises related to bioinformatics or Life Sciences data-analyses.",
+      "url": "https://material.bits.vib.be//topics/python-programming/"
+    }
+  ]
+}
+    </script>
+
+    <div class="row tutorial">
+      <div class="col-md-12" role="main">
+        <h1 data-toc-skip>04 Conditions</h1>
+        <div class="contributors-line">By: 
+
+<a href="/hall-of-fame#tmuylder" class="contributor-badge">Tuur Muyldermans</a>
+
+
+</div>
+        <blockquote class="overview">
+
+            <strong><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</strong>
+            <ul>
+            
+            <li>How to control the code that is performed based on a condition?</li>
+            
+            </ul>
+
+            <strong><i class="fa fa-bullseye" aria-hidden="true"></i><span class="visually-hidden">objectives</span> Objectives</strong>
+            <ul>
+            
+            <li>Use if-elif-else statements together with condition statements</li>
+            
+            <li>Understand what indentation means and how it can affect your code</li>
+            
+            </ul>
+
+            
+
+            
+            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 30 minutes</p>
+            
+
+            
+
+
+            
+
+        </blockquote>
+
+        <div class="container" data-field="body">
+            <div class="row">
+                <div class="col-md-10" role="main">
+                    <h2 id="41-introduction">4.1 Introduction</h2>
+<p>Programs start to become more interesting if you can do different things depending on the input. For this, you have to use <em>conditions</em>, which we will discuss in this section.</p>
+
+<p>Decisions will be taken based on a condition. In this perspective, we highlight the importance of understanding booleans <strong>True</strong> and <strong>False</strong>, as well as the <strong>None</strong>-keyword once more.</p>
+
+<h2 id="42-if-statement">4.2 If statement</h2>
+
+<p>The <strong>if</strong> condition allows you to only execute a bit of code if a (set of) condition(s) is satisfied. Python syntax requires that you put a colon : after the <strong>if</strong>, and that the <em>block</em> of code that is conditional is <em>indented</em> with the same amount of spaces (or tabs). Python doesn’t really care about the number of spaces or tabs, as long as you’re consistent. Jupyter notebook uses tabs, hence it is best to follow along. Now try this:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+ 
+<span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"x is five!"</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">x</span><span class="o">!=</span><span class="mi">5</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"x is not five!"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>you will see that only the block of code under x == 5 is printed out. You can of course make the conditions more complex and combine them with <strong>and</strong> and <strong>or</strong>:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">10</span>
+ 
+<span class="k">if</span> <span class="p">(</span><span class="n">y</span> <span class="o">/</span> <span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"y divided by x is 2!"</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">10</span> <span class="ow">or</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"x is two or y is ten"</span><span class="p">)</span>
+    
+<span class="k">if</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">10</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"x is two and y is ten"</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"The end"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Here you see that the blocks for the first two conditions (which are True) are executed, but not the third. The last line of code is always printed off - it’s on the same level as the start of the code, and not conditional.</p>
+
+<h2 id="43-indentation">4.3 Indentation</h2>
+<p>Python relies on indentation (whitespace at the beginning of a line) to define scope in the code. Other programming languages often use (curly) brackets for this purpose. The level of indentation is crucial, and Python will immediately give an error if there are inconsistent levels of indentation in the code. Try this:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">10</span>
+ 
+<span class="k">if</span> <span class="p">(</span><span class="n">y</span> <span class="o">/</span> <span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"y divided by x is 2!"</span><span class="p">)</span>
+   <span class="k">print</span> <span class="p">(</span><span class="s">"And x is {}!"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>Note that this can also happen if you start mixing space and tab characters!</p>
+
+<hr />
+
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-exercise-431"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Exercise 4.3.1</h3>
+
+  <p>Write a program where you ask the user for x and y, make sure that y is not zero, and print out x/y.</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Modify the code below on the ... locations:
+</span><span class="n">xString</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="n">yString</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="o">...</span><span class="p">(</span><span class="n">xString</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="o">...</span><span class="p">(</span><span class="n">yString</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="o">...</span> <span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Error, your y-number is 0"</span><span class="p">)</span>
+<span class="k">if</span> <span class="o">...</span> <span class="p">:</span> 
+    <span class="k">print</span><span class="p">(</span><span class="s">"x divided by y = {:.2f}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="o">...</span><span class="p">))</span>
+</code></pre></div>  </div>
+
+  <blockquote>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
+
+      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1"># Write a program where you ask the user for x and y, make sure that y is not zero, and print out x/y. 
+</span> 
+ <span class="n">xString</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Give a number: "</span><span class="p">)</span>
+ <span class="n">yString</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Give another number that is not zero: "</span><span class="p">)</span>
+ 
+ <span class="n">x</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">xString</span><span class="p">)</span>
+ <span class="n">y</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">yString</span><span class="p">)</span>
+ 
+ <span class="k">if</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+     <span class="k">print</span><span class="p">(</span><span class="s">"Error, you're y-number is 0"</span><span class="p">)</span>
+ <span class="k">if</span> <span class="n">y</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+     <span class="n">result</span> <span class="o">=</span> <span class="n">x</span><span class="o">/</span><span class="n">y</span>
+     <span class="k">print</span><span class="p">(</span><span class="s">"x divided by y = {:.2f}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
+</code></pre></div>      </div>
+    </details>
+  </blockquote>
+
+</blockquote>
+<hr />
+
+<h2 id="44-elif-statement">4.4 Elif statement</h2>
+
+<p>Once you have an <strong>if</strong>-condition, you can directly follow it up with an <strong>elif</strong> (else if) condition. This is not the same as another <strong>if</strong>-statement. An <strong>elif</strong> is only executed if the previous if (and other preceding elifs) are not True. In the example below the code in section 4.3 is adapted. Now all if-statements are changed by elifs.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">10</span>
+ 
+<span class="k">if</span> <span class="p">(</span><span class="n">y</span> <span class="o">/</span> <span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"y divided by x is 2!"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">10</span> <span class="ow">or</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"x is two or y is ten"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">10</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"x is two and y is ten"</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"The end"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Now only the code under the first condition is executed, not the second (the third is not True and is in any case irrelevant). If we switch the conditions around a bit:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">10</span>
+ 
+<span class="k">if</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">10</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"x is two and y is ten"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">10</span> <span class="ow">or</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"x is two or y is ten"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="p">(</span><span class="n">y</span> <span class="o">/</span> <span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"y divided by x is 2!"</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"The end"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>The first condition is not True, so the second is evaluated. This one is True, so it is executed, and the text ‘x is two or y is ten’ is printed. For clarity it is often useful to leave some space before and after the (set of) condition(s) - it makes the code easier to ‘read’ afterwards.</p>
+
+<hr />
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-exercise-441"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Exercise 4.4.1</h3>
+
+  <p>Write a program where you ask the user for two words. Compare the words; if they are the same, print a message, if the first or second word is ‘Stop’, then also print a message.</p>
+
+  <blockquote>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
+
+      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1"># Write a program where you ask the user for two words. Compare the words; if they are the same, print a message, if the first or second word is 'Stop', then also print a &gt;    &gt;  message.
+</span> <span class="k">print</span><span class="p">(</span><span class="s">"Give two words."</span><span class="p">)</span>
+ <span class="n">firstWord</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Write a word: "</span><span class="p">)</span>
+ <span class="n">secondWord</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Write another word: "</span><span class="p">)</span>
+ 
+ <span class="k">if</span> <span class="n">firstWord</span> <span class="o">==</span> <span class="n">secondWord</span><span class="p">:</span>
+     <span class="k">print</span><span class="p">(</span><span class="s">"These words are the same"</span><span class="p">)</span>
+ <span class="k">elif</span> <span class="n">firstWord</span> <span class="o">==</span><span class="s">"Stop"</span> <span class="ow">or</span> <span class="n">secondWord</span> <span class="o">==</span> <span class="s">"Stop"</span><span class="p">:</span>
+     <span class="k">print</span><span class="p">(</span><span class="s">"You're word was Stop, hence we stopped here"</span><span class="p">)</span>
+ 
+ <span class="k">print</span><span class="p">(</span><span class="s">"The end"</span><span class="p">)</span>
+</code></pre></div>      </div>
+    </details>
+  </blockquote>
+
+</blockquote>
+<hr />
+
+<h2 id="45-else-statement">4.5 Else statement</h2>
+<p>You can also end an <strong>if</strong> (with or without <strong>elif</strong>s) with an <strong>else</strong> condition. The block of code following else is only executed if the previous (set of) conditions are all False. Try this:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="mi">7</span>
+ 
+<span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="mi">2</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"x is divisible by two!"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="ow">not</span> <span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="mi">3</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"x is divisible by three!"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"x is not divisible by two..."</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="p">(</span><span class="s">"x is {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>You can modify the value of x a bit to see what else can happen. Can you spot a problem with this example? What will happen if x can be divided by both two and three? What can you do to solve this problem?</p>
+
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-exercise-451"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Exercise 4.5.1</h3>
+
+  <p>Modify the code above so it prints that it is divisible by two and three when this is the case.</p>
+
+  <blockquote>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
+
+      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1"># If a value can be divided by two and three, only the block of code under the first condition will be executed, so you will not find out whether your value can be divided by three! There are several solutions to this, for example:
+</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">12</span>
+  
+ <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="mi">2</span><span class="p">):</span>
+     <span class="k">print</span><span class="p">(</span><span class="s">"x is divisible by two!"</span><span class="p">)</span>
+     <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="mi">3</span><span class="p">):</span>
+         <span class="k">print</span><span class="p">(</span><span class="s">"x is divisible by three!"</span><span class="p">)</span>
+ <span class="k">elif</span> <span class="ow">not</span> <span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="mi">3</span><span class="p">):</span>
+     <span class="k">print</span><span class="p">(</span><span class="s">"x is divisible by three!"</span><span class="p">)</span>
+ <span class="k">else</span><span class="p">:</span>
+     <span class="k">print</span><span class="p">(</span><span class="s">"x is not divisible by two or three..."</span><span class="p">)</span>
+ 
+ <span class="k">print</span> <span class="p">(</span><span class="s">"x is {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+ 
+ <span class="c1"># This is not a very elegant solution however, as you are repeating the same bit of code twice to find out whether the value can be divided by three. This one might be   slightly better:
+</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">12</span>
+ 
+ <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="mi">2</span><span class="p">):</span>
+     <span class="k">print</span><span class="p">(</span><span class="s">"x is divisible by two!"</span><span class="p">)</span>
+ 
+ <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="mi">3</span><span class="p">):</span>
+     <span class="k">print</span><span class="p">(</span><span class="s">"x is divisible by three!"</span><span class="p">)</span>
+ 
+ <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="mi">3</span><span class="p">):</span>
+     <span class="k">print</span><span class="p">(</span><span class="s">"x is not divisible by two or three..."</span><span class="p">)</span>
+ 
+ <span class="k">print</span> <span class="p">(</span><span class="s">"x is {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+ 
+ <span class="c1"># However you still have to repeat the conditions, which would become very tedious (and error-prone) if you were to try division by many values. The next example is a bit more verbose but cleaner and more 'extendable' for other values:
+</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">12</span>
+ <span class="n">xDivisible</span> <span class="o">=</span> <span class="bp">False</span>
+  
+ <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="mi">2</span><span class="p">):</span>
+     <span class="k">print</span><span class="p">(</span><span class="s">"x is divisible by two!"</span><span class="p">)</span>
+     <span class="n">xDivisible</span> <span class="o">=</span> <span class="bp">True</span>
+ 
+ <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="mi">3</span><span class="p">):</span>
+     <span class="k">print</span><span class="p">(</span><span class="s">"x is divisible by three!"</span><span class="p">)</span>
+     <span class="n">xDivisible</span> <span class="o">=</span> <span class="bp">True</span>
+ 
+ <span class="k">if</span> <span class="ow">not</span> <span class="n">xDivisible</span><span class="p">:</span>
+     <span class="k">print</span><span class="p">(</span><span class="s">"x is not divisible by two or three..."</span><span class="p">)</span>
+ 
+ <span class="k">print</span> <span class="p">(</span><span class="s">"x is {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</code></pre></div>      </div>
+    </details>
+  </blockquote>
+
+</blockquote>
+
+
+
+
+                    
+                    <blockquote class="key_points">
+                        <h3><i class="fa fa-key" aria-hidden="true"></i><span class="visually-hidden">keypoints</span> Key points</h3>
+
+                        <ul>
+                            
+                            <li>We can decide which Python code is executed based on a (set of) condition(s) that is satisfied.</li>
+                            
+                        </ul>
+                    </blockquote>
+                    
+
+                    
+                    <h1 data-toc-skip>Useful literature</h1>
+                    <p>Further information, including links to documentation and original publications, regarding the tools, analysis techniques and the interpretation of results described in this tutorial can be found <a href="/topics/python-programming#references">here</a>.</p>
+                    
+
+                    
+
+                </div>
+                <!-- sidebar, which will be hidden on a small screen -->
+                <nav class="col-md-2 sticky-toc bs-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary" id="toc" data-toggle="toc"></nav>
+            </div>
+        </div>
+
+        <h3><i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
+
+        
+
+        
+
+</div>
+</div>
+</div>
+<footer>
+   <div class="well row">
+       <div class="col-md-2 text-center" style="padding: 25px 20px 25px 20px;">				
+         <a href="https://www.bits.vib.be" target="_blank"><img src="/assets/images/bioinformatics_core_rgb_neg.png" width="200"></a>
+       </div>
+       <div class="col-md-8 text-center" style="padding-top: 20px;">	
+        <a href="https://github.com/vibbits/training-material" title="View on GitHub" class="margin20" target="_blank">
+                            <i class="fa fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> View on GitHub
+                        </a>
+       </div>
+       <div class="col-md-2 text-center" style="padding-top: 30px;">
+         <span class="slogan"><br>SCIENCE MEETS LIFE</span>
+       </div>
+   </div>
+</footer>
+
+
+</body>
+<script type="text/javascript" src="/assets/js/jquery.slim.min.js"></script>
+<script type="text/javascript" src="/assets/js/popper.min.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.min.js?v=3"></script>
+<script type="text/javascript" src="/assets/js/details-element-polyfill.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" src="/assets/js/bootstrap-toc.min.js"></script>
+<script type="text/javascript" src="/assets/js/main.js"></script>
+<script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
+<script type="text/javascript">
+    var snippets = document.querySelectorAll('div.highlight');
+    [].forEach.call(snippets, function(snippet) {
+        snippet.firstChild.insertAdjacentHTML('beforebegin', '<button class="btn btn-light" data-clipboard-snippet><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+    });
+
+    var clipboardSnippets = new ClipboardJS('[data-clipboard-snippet]', {
+        target: function(trigger) {
+            return trigger.nextElementSibling;
+        }
+    });
+</script>
+
+</html>
