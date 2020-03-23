@@ -5,7 +5,7 @@ This repository collects tutorials, slides, and exercises developed and maintain
 
 # Usage
 
-The content of the material is developed in Markdown and a templating system ([Jekyll](http://jekyllrb.com/)) is used to format the tutorials and generate a website ([http://training.bits.vib.be](http://training.bits.vib.be)).
+The content of the material is developed in Markdown and a templating system ([Jekyll](http://jekyllrb.com/)) is used to format the tutorials and generate a website ([http://material.bits.vib.be](http://material.bits.vib.be)).
 
 # License
 
@@ -48,7 +48,7 @@ For reference, see the [Docker documentation on publishing images](https://docs.
 We would like to thank all contributors, especially those mentioned in the [Contributors list](CONTRIBUTORS.yaml).
 
 # Remarks:
-Within the conda environment `base` you can add a new topic and tutorial with 
+Within the conda environment `environment.yml` you can add a new topic and tutorial with 
 ```
 planemo training_init --topic_name "my-topic" --tutorial_name "my-new-tutorial2" --tutorial_title "Title of the tutorial"
 ```
@@ -58,6 +58,8 @@ Thereafter, remove any placeholder contributor and replace with the real ones in
 Adapt the file `topics/<new topic>/metadata.yaml` to follow this template, the keywords for `category` can be `software`, `omics`, `basics`, `advanced`, `programming`, `statistics`, and `admin-dev`.
 
 The type must be `basics` to display the link to the slides and the hands-on materials.
+
+Make sure that the folder metadata contains a symbolic link to the new topic. 
 
 ```
 ---
@@ -76,7 +78,7 @@ references:
   summary: ''
 ```
 
-Image scaling:
+## Image scaling:
 
 The Markdown for the above could be something like:
 ```
@@ -98,3 +100,9 @@ The Markdown for the above could be something like:
 -80width width:  80%;
 
 -fullwidth width: 100%;
+
+Another way of scaling and centering images is with HTML code:
+```html
+<center><img src="../../images/plotting1.png" /></center>
+
+```
