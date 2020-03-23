@@ -3,12 +3,14 @@ layout: tutorial_hands_on
 
 title: 11 Modules
 questions:
-- (Re-)using existing code
+- How to import functions from Python's built-in libraries and from other people or from yourself
 objectives:
-- 
-time_estimation: 20m
+- Understand how to import modules in several ways and how to call functions within a module. 
+- Use built-in modules from Python, e.g. to access date and time, or to navigate in your folders,...
+time_estimation: 40m
 key_points:
-- 
+- We can build our own module containing several functions and understand how to use them in some other code. 
+- We learned some of Python's built-in modules and know how to e.g. make a folder from Python.
 contributors:
 - tmuylder
 
@@ -40,13 +42,17 @@ module1.getMeanValue([1,2,3])
 ## 11.3 How to create your own module
 The easiest example is importing a module from within the same working directory. Let's create a Python module called `module1.py` with the code of the function `getMeanValue()` that we have written earlier (and you can find here below). 
 
-**Create a module in Jupyter Lab/Notebook**
-- In order to create a module in Jupyter Lab, first create a new notebook 
-- Rename the notebook (e.g. 'module1.ipynb') and copy paste the code in the notebook 
-- Click 'File', 'Download as' and 'Python' 
-- Jupyter will not download it in some local folder, copy it to your current working directory (in our case in the same directory as we're in right now). 
+> ### {% icon hands_on %} Create your own module
+>
+> To create your own module from Jupyter Notebook, follow these steps:
+> 1. In order to create a module in Jupyter Lab, first create a new notebook 
+> 2. Rename the notebook (e.g. 'module1.ipynb') and copy paste the code in the notebook 
+> 3. Click 'File', 'Download as' and 'Python' 
+> 4. Jupyter will not download it in some local folder, copy it to your current working directory (in our case in the same directory as we're in right now). 
+>
+{: .hands_on}
 
-Unfortunately, Jupyter Lab/Notebook doesn't have a streamlined & straightforward way of creating Python modules and Python scripts. When you export the notebook, it will always export the whole Notebook and not just a part of it, which makes it very messy if you have a very large notebook. 
+Unfortunately, Jupyter Notebook doesn't have a streamlined & straightforward way of creating Python modules and Python scripts. When you export the notebook, it will always export the whole Notebook and not just a part of it, which makes it very messy if you have a very large notebook. 
 
 Import the following code in the `module1.py` file. 
 
@@ -90,7 +96,7 @@ print(m1.getMeanValue([4,6,77,3,67,54,6,5]))
 
 When importing a file, Python only searches the current directory, the directory that the entry-point script is running from, and sys.path which includes locations such as the package installation directory (it's actually a little more complex than this, but this covers most cases).
 
-However, you can specify the Python path yourself as well. Note that within our folders there is a directory named `modules` and within this folder, there is a module named `module2` (recognizable due to its .py extension). In that module there are two functions: 'getMeanValue' and 'compareMeanValueOfLists'. 
+However, you can specify the Python path yourself as well. If you're using the materials from [Github](https://github.com/vibbits/gentle-hands-on-python), note that within our folders there is a directory named `modules` and within this folder, there is a module named `module2` (recognizable due to its .py extension). In that module there are two functions: 'getMeanValue' and 'compareMeanValueOfLists'. 
 
 
 ```python
@@ -539,17 +545,3 @@ See the full [Python documentation](https://docs.python.org/3/library/re.html) o
 {: .hands_on}
 ---
 
-
-Go to the next part of the tutorial
-
-## 11.7 Theoretical background
-
-The first thing Python will do is look up the name `module1` in [`sys.modules`](https://docs.python.org/3/library/sys.html#sys.modules). This is a cache of all modules that have been previously imported.
-
-If the name isn’t found in the module cache, Python will proceed to search through a list of built-in modules. These are modules that come pre-installed with Python and can be found in the [Python Standard Library](https://docs.python.org/3/library/). If the name still isn’t found in the built-in modules, Python then searches for it in a list of directories defined by [`sys.path`](https://docs.python.org/3/library/sys.html#sys.path). This list usually includes the current directory, which is searched first.
-
-When Python finds the module, it binds it to a name locally. This means that `abc` is now defined and can be used in the current file without throwing a `NameError`. In the case a `NameError` is thrown, it basically means that Python couldn't find the function with the name that you gave. 
-
-If the name of the module is not found, you’ll get a `ModuleNotFoundError`. 
-
-## 11.8 Conclusion
