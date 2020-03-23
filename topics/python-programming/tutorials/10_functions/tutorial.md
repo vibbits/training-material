@@ -4,12 +4,16 @@ layout: tutorial_hands_on
 title: 10 Functions
 
 questions:
-- How to re-use the same bit of code over and over
+- How to re-use the same bit of code without the need of copying it over and over?
 objectives:
-- Define and make functions
-time_estimation: 20m
+- Define, make and recall functions in Python.
+- Understand the importance and know how to properly document functions.
+- Deal with a variable number of arguments that serve as input in a function.
+- Use default arguments in a function.
+time_estimation: 35m
 key_points:
-- Define and make functions
+- We learned to create functions and recall them at any point within an analysis.
+- We know how to make flexible functions in its inputs with defaults and variable number of arguments.
 contributors:
 - tmuylder
 
@@ -22,7 +26,7 @@ So far we've been writing 'sequential' code, basically following the flow of the
 
 ## 10.2 Functions
 
-We've already been using built-in Python functions, for example **abs()** or **len()**. In this section we will build our own functions however. Generally, the syntax when calling a function is the name of the function followed by round brackets **( )**. When you're writing your own function, in essence it would look like this:
+We've already been using built-in Python functions, for example **abs()** or **len()**. However, in this section we will build our own functions. Generally, the syntax when calling a function is the name of the function followed by round brackets **( )**. When you're writing your own function, in essence it would look like this:
 
 ```python
 def name_function():
@@ -31,23 +35,24 @@ def name_function():
     print("This is a very simple function")
 ```
 
-Information is given to a function by means of an argument. In the example above an argument is not defined, hence whenever you call the function it will print the same text. Arguments are defined within the parenthesis and are separated by commas in case there are multiple arguments. The following code is an example of a function that will take some value and return the absolute value by inverting it if it's negative:
-
+Information is given to a function by means of an argument and this is passed on in the rounded brackets. In the example above an argument is not defined, hence whenever you call the function it will print the same text. Arguments are defined within the parenthesis and are separated by commas in case there are multiple arguments. Before exploiting functions with arguments, let's have a look to an example with no arguments that prints the same text always when you call the function. 
 
 ```python
-def name_function():
-    "This function will print out some silly text"
-    print("This is a very simple function")
+def silly_function():
+    "This is some information about the silly function that will print out some silly text"
+    text = "Some silly text"
+    print(text)
+silly_function()
 ```
 
 Information about the function can be retrieved by using the `help()` function. 
 
 
 ```python
-help(name_function)
+help(silly_function)
 ```
 
-
+The following code is an example of a function that will take some value as an argument and return the absolute value:
 ```python
 def myAbsFunc(someValue):
     "myAbsFunc takes a number as input and will return the absolute value"
@@ -126,8 +131,7 @@ compareMeanValueOfLists(valueList1,valueList2)
 
 ```
 
-You can call functions within functions, basically anywhere in the code, also in conditions, ...:
-
+You can call functions within functions, or basically anywhere in your code, even in conditions, ...:
 
 ```python
 if getMeanValue(valueList1) > 26 :
@@ -197,10 +201,10 @@ There are several ways to solve this problem, however it might be easier to do i
 > The GC content of HSBGPG Human gene for bone gla protein (BGP) is	 63.53%
 > ```
 > 
-> The method [.startswith()](https://www.tutorialspoint.com/python/string_startswith.html) might help. The function should read the lines of the fasta file and if it starts with a '>' define the text that comes afterwards as the sequence ID. The other lines are part of the sequence. After reading through the lines, you can easily define the GC content by counting the bases and taking the average. 
+> The method [.startswith()](https://www.tutorialspoint.com/python/string_startswith.htm) might help. The function should read the lines of the fasta file and if it starts with a '>' define the text that comes afterwards as the sequence ID. The other lines are part of the sequence. After reading through the lines, you can easily define the GC content by counting the bases and taking the average. 
 > 
 >    > <details markdown="1">
->    > <summary>{% icon solution %} Solution
+>    > <summary>{% icon solution %} Solution 1
 >    > </summary>
 >    >
 >    >  ```python
@@ -222,7 +226,7 @@ There are several ways to solve this problem, however it might be easier to do i
 >    >  ```
 >    > </details>
 >    > <details markdown="1">
->    > <summary>{% icon solution %} Solution
+>    > <summary>{% icon solution %} Solution 2
 >    > </summary>
 >    >
 >    >  ```python
@@ -248,7 +252,7 @@ There are several ways to solve this problem, however it might be easier to do i
 
 ## 10.3 Flexibility in functions
 
-In the functions so far we've been using values (arguments) that are passed in and are required for the function to work. If you're not sure how many arguments the user will give, you can use an asterisk `*`:
+In the functions so far we've been using values (arguments) that are passed in and are required for the function to work. If you're not sure how many arguments the user will give, you can use an asterisk `*`. However, make sure that your code is flexible to access the number of arguments that the user is giving as input. In the example below we use the * asterisk to define a flexible number of arguments, and we use a for-loop to access each argument:
 
 
 ```python
@@ -275,10 +279,9 @@ MeanValue([1, 2, 3], [4,5,6])
 
 ```python
 MeanValue([1, 2, 3], [4,5,6], [7, 8, 9])
-
 ```
 
-You can also give *keywords* to a function; these are not required for the function to work because they are given a default value in the function definition. You can then set these keywords if necessary; consider this example:
+A second way of making flexible functions is by using *keywords* in a function; these are not required for the function to work because they are given a default value in the function definition. You can then set these keywords if necessary; consider the following example.
 
 
 By default the parameter sortedList is `False` which means that Python will not make a sorted list in the function below, unless you explicitly ask it by setting the parameter to `True`. 
@@ -324,5 +327,4 @@ MeanValue(valueList1, valueList2, valueList3, sortedList = True)
 
 Using these keywords makes the function a lot more flexible - you can make the function do things (or not) depending on them.
 
-## 10.4 Conclusion
 
