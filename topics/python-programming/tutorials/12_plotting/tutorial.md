@@ -43,9 +43,16 @@ import matplotlib.pyplot as plt
 plt.plot([1, 2, 3, 2.5])
 plt.ylabel('some numbers')
 ```
-[plotting1](../../images/plotting1.png)
+![plotting1](../../images/plotting1.png)
 
-<img src="../../images/plotting1.png">
+img 2
+<img src="../../images/plotting1.png" width=100% height=100%>
+
+img 3
+<img src="../../images/plotting1.png" width="100%" height="100%">
+
+img 4
+<img src="../../images/plotting1.png" width="396" height="252">
 
 `plot()` is a versatile command, and will take an arbitrary number of arguments. For example, to plot x versus y, you can issue the command:
 
