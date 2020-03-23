@@ -51,7 +51,7 @@ img 2
 
 img 3
 
-<img src="../../images/plotting1.png" width="100%" height="100%">
+<img src="../../images/plotting1.png" width="50%" height="50%">
 
 img 4
 
