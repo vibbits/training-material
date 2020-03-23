@@ -5,7 +5,7 @@ This repository collects tutorials, slides, and exercises developed and maintain
 
 # Usage
 
-The content of the material is developed in Markdown and a templating system ([Jekyll](http://jekyllrb.com/)) is used to format the tutorials and generate a website ([http://training.bits.vib.be](http://training.bits.vib.be)).
+The content of the material is developed in Markdown and a templating system ([Jekyll](http://jekyllrb.com/)) is used to format the tutorials and generate a website ([http://material.bits.vib.be](http://material.bits.vib.be)).
 
 # License
 
@@ -78,7 +78,7 @@ references:
   summary: ''
 ```
 
-Image scaling:
+## Image scaling:
 
 The Markdown for the above could be something like:
 ```
@@ -100,3 +100,9 @@ The Markdown for the above could be something like:
 -80width width:  80%;
 
 -fullwidth width: 100%;
+
+Another way of scaling and centering images is with HTML code:
+```html
+<center><img src="../../images/plotting1.png" /></center>
+
+```
