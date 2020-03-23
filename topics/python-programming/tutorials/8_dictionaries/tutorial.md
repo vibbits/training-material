@@ -6,10 +6,12 @@ questions:
 - How to associate two values with each other in one data structure?
 objectives:
 - Understand the difference between dictionaries and other data structures. 
-- Use Dictionaries to combine sets of values. 
+- Use Dictionaries to combine sets of values and store different data structures within a dictionary. 
+- Give an example of how dictionaries are used in bioinformatics (BioPython).
 time_estimation: 20m
 key_points:
-- 
+- We learned why it can be beneficial to store information in dictionaries
+- Dictionaries can be nested within each other and can contain multiple different data structures. 
 contributors:
 - tmuylder
 
@@ -18,12 +20,12 @@ contributors:
 
 ## 8.1 Introduction
 
-So far we've seen variables that store one value or a series of values (see [section 5](../../5_lists_and_tuples/tutorial.md): lists, tuples and sets). There is another way of storing information where you associate one variable with another; in Python this is called a dictionary. Dictionaries provide a very useful way of quickly connecting variables to each other.
+So far we've seen variables that store one value or a series of values (see section 5: lists, tuples and sets). There is another way of storing information where you associate one variable with another; in Python this is called a dictionary. Dictionaries provide a very useful way of quickly connecting variables to each other.
 
 
 ## 8.2 Dictionary creation & usage
 
-It is best to think of a dictionary as a set of *key:value* pairs, with the requirement that the keys are unique (within one dictionary). Dictionaries are initiated by using curly brackets {}, placing a comma-separated list of *key:value* pairs adds initial *key:value* pairs to the dictionary. This is how a dictionary would look like:
+It is best to think of a dictionary as a set of *key:value* pairs, with the requirement that the keys are unique (within one dictionary). Dictionaries are initiated by using curly brackets {}, and each pair of *key:value*s is separated with a comma. This is how a dictionary would look like:
 
 
 ![Gentle-hands-on-introduction-to-Python-Programming Python Dictionary](../../images/myDictionary-cropped.png)
@@ -37,7 +39,7 @@ myDictionary = {'A': 'Ala', 'C': 'Cys', 'D': 'Asp'}
 myDictionary
 ```
 
-You can recall or add values by using square brackets [ ] with the name of the key, or use the `get()`-method. 
+You can recall values by using square brackets [ ] with the name of the key, or use the `get()`-method. 
 
 
 ```python
@@ -57,7 +59,7 @@ myDictionary['E'] = 'Glu'
 myDictionary
 ```
 
-Note however that keys are unique and if you try to add a key that already exists. with a different value, it will overwrite it. 
+Note however that keys are unique and if you try to add a *key:value*-pair with a key that already exists in the dictionary and a different value, it will overwrite the value. 
 
 
 ```python
@@ -73,17 +75,23 @@ Dictionaries, like lists, have several useful built-in methods. The most frequen
 - `get()`	call the value of a specified key
 - `pop()`	to remove the specified key and its values
 
-
+Listing the keys within a dictionary: 
 ```python
 myDictionary = {'A': 'Ala', 'C': 'Cys', 'D': 'Asp', 'E': 'Glu'}
+myDictionary.keys()
+```
+
+Python tells us that the list is still in a dictionary-keys data structure type. If you would like to extract the keys for further processing, it's probably better to transform them into a list:
+```python
 list(myDictionary.keys())
 ```
 
-
+Similarly for the values of a dictionary: 
 ```python
 list(myDictionary.values())
 ```
 
+We've already exploited the `get` method, with `pop` we can remove a *key-value* pair:
 
 ```python
 myDictionary.pop('E')
@@ -96,7 +104,7 @@ If you try to access a key that doesn't exist, Python will give an error:
 ```python
 myDictionary = {'A': 'Ala', 'C': 'Cys', 'D': 'Asp', 'E': 'Glu'}
  
-print(myDictionary['B'])
+myDictionary['B']
 ```
 
 You should therefore always check whether a key exists:
@@ -253,7 +261,7 @@ record.annotations['accessions'] # This could be a list of values, hence the lis
 ```
 
 ## 8.4 More with dictionaries
-As mentioned here above, you can have a dictionary with a list of values for one key:
+As mentioned here above, the value associated with a key can consist of a list with values (instead of one single value). In the example below we save the information of an experiment in a dictionary. The key that saves the *date* information contains a `list` of fictive dates (01-01-2020 and 02-01-2020):
 
 
 ```python
@@ -261,7 +269,7 @@ TriplicateExp1 = {'name': 'experiment 1', 'pH': 5.6, 'temperature': 288.0, 'volu
 TriplicateExp1
 ```
 
-You can, however, only use variables that cannot change keys (so tuples are OK, lists are not), and keys have to be unique: if you add a key that already exists, the old entry will be overwritten:
+For the keys, however, the data structures should be immutable (so tuples are OK, lists are not). Recall that keys have to be unique; if you add a key that already exists, the old entry will be overwritten:
 
 
 ```python
@@ -271,7 +279,7 @@ TriplicateExp1[dates] = ['01-01-2020','02-01-2020']
 TriplicateExp1
 ```
 
-It is also possible to have a so-called nested dictionary, in which there is a dictionary within a dictionary. 
+It is also possible to have a so-called nested dictionary, in which there is a dictionary within a dictionary. Here we make two more dictionaries with information about the triplicate experiment. The information of each experiment is thus assembled in a separate dictionary. Then, the three dictionaries are combined into one dictionary. 
 
 
 ```python
