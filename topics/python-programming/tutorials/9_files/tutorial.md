@@ -3,14 +3,18 @@ layout: tutorial_hands_on
 
 title: 09 Files
 questions:
-- How to read and write files
+- How to import data from files 
+- How to export data made by an analysis into a file
 objectives:
-- Exploit different ways of reading in files
-- Open & close files appropriately
+- Understand the difference between the alternative ways of reading in files.
+- Exploit these different ways of reading in files for specific purposes.
+- Open & close files appropriately.
+- Incorporate writing lines into loops and combine with conditions. 
 time_estimation: 30m
 key_points:
-- Exploit different ways of reading in files
-- Open & close files appropriately
+- We exploited different ways of reading files, each with its own advantage. 
+- We learned how to create a file containing results of some analysis.
+- We're able to create loops in which we incorporate the exporting of data to a file that we're writing. 
 contributors:
 - tmuylder
 
@@ -19,7 +23,7 @@ contributors:
 
 ## 9.1 Introduction
 
-More often than not the data you need for your program will come from somewhere else - either from user input or a file. Especially for more complex data it becomes essential to be able to read in data files, do something with the data, and write out a new file with modified information or a set of analysis results.
+More often than not the data you need for your program will come from somewhere else - either from user input or a file. Especially for more complex data, it becomes essential to be able to read in data files, do something with the data, and write out a new file with modified information or a set of analysis results.
 
 ## 9.2 Reading files
  
@@ -35,11 +39,21 @@ fileHandle.close()
 ```
 
 All this does, is creating this connection, the file has not been read. In order to read in a file, there are a couple of possibilities:
-- `readline()` - read the first line of the file as one string.* 
+- `readline()` - read the first line of the file as one string. 
 - `readlines()` - read all of the lines in the file. Each line is one string. The lines are combined as a list of lines (strings). 
 - `read()` - read the whole file as one string. 
-S
+Each method has its advantage. E.g. if you're searching for the presence of a word or string in a file, given that the file is not too big, you can use *read*. If you want to process an enormously big file and from each line you need to extract, process and save the information, than it's better to read line by line with *readline* within a for-loop. Try to understand the difference of these methods while you go through this section. 
 
+Given the file `readfile.txt` in a folder named data:
+
+``` 
+This is the first line.
+Here is a second one. 
+And there is also a third line. 
+```
+
+1. Using `read`:
+Note that the three different lines are read in one long string. This is how the `read` function works. 
 
 ```python
 fileHandle = open("data/readfile.txt")  
@@ -52,17 +66,25 @@ fileHandle.close()
 ```
 
 
+2. Using `readline`:
+Readline reads in the following line. It starts with the first one. When you call the method again, it will print the second line. It's important to understand this as you can exploit this method in a for-loop to access each line separately.
+
 ```python
 fileHandle = open("data/readfile.txt")   
 fileHandle.readline()
 ```
 
+```python
+fileHandle.readline()
+```
 
 ```python
 fileHandle.close()
 ```
 
 
+3. Using `readlines`:
+Instead of reading the lines of a file one by one, you can also do it in one go. As explained above, each line is one string and all of the lines/strings are stored in a list. 
 ```python
 fileHandle = open("data/readfile.txt")   
 fileHandle.readlines()
@@ -135,8 +157,7 @@ You should find 75 lines - note that in this case, for those who know the PDB fo
 ## 9.3 Writing a file
 Writing a file is very similar, except that you have to let Python know you are writing this time by adding the `'w'` parameter in the `open()` function. Actually Python needs two arguments, however it assumes that if you only give one parameter (the file that it has to read), the other one is `'r'` which stands for *reading* mode. 
 
-For the sake of the example, we're writing something new in the `readfile.txt`:
-
+For the sake of the example, we're writing a new file and call it `writefile.txt`:
 
 ```python
 f = open('data/writefile.txt','w')
@@ -154,7 +175,7 @@ f.close()
 
 The file is written to the directory you're executing the program in - have a look!
 
-Now we will read in a file, extract all the lines that contain "VAL" and write out all those lines to a new variable and then make a file from it. 
+
 
 ----
 
@@ -163,7 +184,7 @@ Now we will read in a file, extract all the lines that contain "VAL" and write o
 > Read in the file from the previous example, and write out all lines that contain 'VAL' to a new file.
 > 
 >    > <details markdown="1">
->    > <summary>{% icon solution %} Solution
+>    > <summary>{% icon solution %} Solution 1
 >    > </summary>
 >    >
 >    >  ```python
@@ -181,7 +202,7 @@ Now we will read in a file, extract all the lines that contain "VAL" and write o
 >    >  ```
 >    > </details>
 >    > <details markdown="1">
->    > <summary>{% icon solution %} Solution
+>    > <summary>{% icon solution %} Solution 2
 >    > </summary>
 >    >
 >    >  ```python
@@ -213,7 +234,7 @@ Now we will read in a file, extract all the lines that contain "VAL" and write o
 >    >  ```
 >    > </details>
 >    > <details markdown="1">
->    > <summary>{% icon solution %} Solution
+>    > <summary>{% icon solution %} Solution 3
 >    > </summary>
 >    >
 >    >  ```python
@@ -246,7 +267,7 @@ Now we will read in a file, extract all the lines that contain "VAL" and write o
 
 > ### {% icon hands_on %} Exercise 9.4.1
 >
-> Read in the TestFile.pdb atom coordinate file, print out the title of the file, and find all atoms that have coordinates closer than 2 angstrom to the (x,y,z) coordinate (-8.7,-7.7,4.7). Print out the model number, residue number, atom name and atom serial for each; the model is indicated by:
+> Read in the TestFile.pdb file, print out the title of the file, and find all atoms that have coordinates closer than 2 angstrom to the (x,y,z) coordinate (-8.7,-7.7,4.7). Print out the model number, residue number, atom name and atom serial for each; the model is indicated by:
 > ```
 > MODEL     1
 > ```
@@ -259,7 +280,7 @@ Now we will read in a file, extract all the lines that contain "VAL" and write o
 > note that the distance between two coordinates is calculated as the square root of (x1-x2)²+(y1-y2)²+(z1-z2)².
 > 
 >    > <details markdown="1">
->    > <summary>{% icon solution %} Solution
+>    > <summary>{% icon solution %} Solution 
 >    > </summary>
 >    >
 >    >  ```python
