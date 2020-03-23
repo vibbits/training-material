@@ -12,8 +12,7 @@ key_points:
 - We can decide which Python code is executed based on a (set of) condition(s) that is satisfied.  
 contributors:
 - tmuylder
-## 4.6 Conclusion
-The ´if-elif-else´ condition allows you to .
+
 ---
 
 ## 4.1 Introduction
