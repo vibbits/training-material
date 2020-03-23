@@ -57,7 +57,12 @@ img 4
 
 <img src="../../images/plotting1.png" width="396">
 
+img 5
+
+<center><img src="../../images/plotting1.png" /></center>
+
 `plot()` is a versatile command, and will take an arbitrary number of arguments. For example, to plot x versus y, you can issue the command:
+
 
 
 ```python
