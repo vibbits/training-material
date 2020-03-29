@@ -42,8 +42,13 @@ def silly_function():
     "This is some information about the silly function that will print out some silly text"
     text = "Some silly text"
     print(text)
+```
+Notice that nothing happened now. This is because we're not calling the function, we just defined it. In order to call the function, we use the following expression:
+
+```python
 silly_function()
 ```
+
 
 Information about the function can be retrieved by using the `help()` function. 
 
@@ -156,7 +161,7 @@ There are several ways to solve this problem, however it might be easier to do i
 > - Furthermore the function will return an integer that represents the number of mismatches between the two sequences. 
 > 
 >    > <details markdown="1">
->    > <summary>{% icon solution %} Solution
+>    > <summary>{% icon solution %} Solution 1
 >    > </summary>
 >    >
 >    >  ```python
@@ -183,12 +188,52 @@ There are several ways to solve this problem, however it might be easier to do i
 >    > print(hamming_distance(seq1,seq2))
 >    >  ```
 >    > </details>
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution 2
+>    > </summary>
+>    >
+>    >  ```python
+>    > # string1 and string2 should be the same length.
+>    > def hamming_distance(string1, string2): 
+>    >     """Return the Hamming distance between equal-length sequences."""
+>    >     
+>    >     if len(string1) != len(string2):
+>    >         raise ValueError("Undefined for sequences of unequal length.")
+>    >     
+>    >     # Start with a distance of zero, and count up
+>    >     distance = 0
+>    >     # Loop over the indices of the string
+>    >     for s1,s2 in zip(string1,string2):
+>    >         if s1 != s2:
+>    >              distance +=1
+>    >         return distance
+>    >     # Return the final count of differences
+>    >     return distance
+>    > 
+>    > seq1 = "GATCATAGA"
+>    > seq2 = "CATCATACA"
+>    > print(hamming_distance(seq1,seq2))
+>    >  ```
+>    > </details>
 >
 {: .hands_on}
 
 ---
 
+# with zip!
+def hamming_distance(string1, string2): 
+    """Return the Hamming distance between equal-length sequences."""
+    
+    if len(string1) != len(string2):
+        raise ValueError("Undefined for sequences of unequal length.")
+    
+    # Start with a distance of zero, and count up
+    distance = 0
 
+
+seq1 = "GATCATAGA"
+seq2 = "CATCATACA"
+print(hamming_distance(seq1,seq2))
 
 
 ---

@@ -176,12 +176,11 @@ f.close()
 The file is written to the directory you're executing the program in - have a look!
 
 
-
 ----
 
 > ### {% icon hands_on %} Exercise 9.3.1
 >
-> Read in the file from the previous example, and write out all lines that contain 'VAL' to a new file.
+> Read in the file `TestFile.pdb`, and write out all lines that contain 'VAL' to a new file.
 > 
 >    > <details markdown="1">
 >    > <summary>{% icon solution %} Solution 1
