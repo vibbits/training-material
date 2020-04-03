@@ -1,0 +1,37 @@
+---
+name: "introduction"
+type: "basics"
+category: "omics"
+title: "Introduction to the analysis of NGS data"
+summary: "
+This training is an introduction to 'Bulk RNA-Seq analysis for differential expression', Hands-on introduction to NGS variant analysis', and 'Hands on introduction to ChIP-Seq analysis'. If you want to follow one of these trainings and you have no experience with NGS data you should follow this introduction first. 
+
+This training is an introduction to a series of trainings on the analysis of Next Generation Sequencing data. This training is intended for newbies to the field and will teach them all background knowledge required to successfully complete the advanced NGS analysis trainings. To this end the training will give an overview of:
+- The Illumina platform
+- NGS data formats and file handling
+- Quality control of NGS data
+- Mapping of NGS data
+- Supporting IT: Galaxy and GenePattern platform
+"
+
+requirements:
+
+maintainers:
+  - janick-bits
+
+references:
+  -
+    authors: "Bailey et al. "
+    title: "Practical Guidelines for the Comprehensive Analysis of ChIP-seq Data. PLoS Comput Biol 9, e1003326 (2013)"
+    link: "http://data.bits.vib.be/pub/trainingen/NGSChIPSEQ/articles/2013_Bailey_PLoS%20Comput%20Biol.pdf"
+    summary: ""
+  -
+    authors: "Thomas-Chollier et al."
+    title: "A complete workflow for the analysis of full-size ChIP-seq (and similar) data sets using peak-motifs Nature Protocols 7, 1551–1568 (2012)"
+    link: "http://data.bits.vib.be/pub/trainingen/NGSChIPSEQ/articles/2012_Thomas-Chollier_Nature%20Protocols.pdf"
+    summary: ""
+  -
+    authors: "Kevin S Myers et al."
+    title: "Genome-scale analysis of escherichia coli FNR reveals complex features of transcription factor binding. PLoS Genet.: 2013, 9(6);e1003565"
+    link: "http://dx.doi.org/10.1371/journal.pgen.1003565"
+    summary: ""
