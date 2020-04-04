@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="dw_1zBYRNxF7-vYNDXh3Ght_JuqgJt3BD1N_Pynqmv0" />
+    <title>04 Mapping reads with Bowtie</title>
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-61194136-18', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=3">
+    <link rel="stylesheet" href="/assets/css/bootstrap-toc.min.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="/assets/css/main.scss">
+    <link rel="stylesheet" href="/assets/css/VIB.css">
+    <link rel="stylesheet" href="/assets/css/academicons.css">
+    <link rel="stylesheet" href="/assets/css/syntax_highlighting.css">
+    <link rel="shortcut icon" href="/favicon.ico " type="image/x-icon" />     
+    <meta name="description" content=" This training gives an introduction to ChIP-seq data ana..." />
+    <meta property="og:title" content="VIB Bioinformatics Training: 04 Mapping reads with Bowtie" />
+    <meta property="og:description" content=" This training gives an introduction to ChIP-seq data ana..." />
+    <meta property="og:image" content="/assets/images/bioinformatics_core_rgb_neg.png" />
+</head>
+
+<body data-spy="scroll" data-target="#toc">
+    <div class="top-bar-vib">
+ <a href="http://vib.be/en" target="_blank" style="font-size:14px">VIB Home </a>
+</div>
+
+<div class="container main-content">
+
+<div class="container page-top__container">
+          <div class="region region-top">
+  <div id="logo" class="col-md-3 col-lg-3 text-left" style="padding-left:0px;margin-top:20px">
+       <a href="/">
+           <img src="/assets/images/logo.svg" height="60" alt="VIB logo" class="margin20">
+       </a>
+    </div>
+    <div class="col-md-9 col-lg-9 text-right" style="margin-top:50px;">
+    <nav role="navigation" aria-labelledby="block-mainnavigation-menu" id="block-mainnavigation" class="block block-menu navigation menu--main">
+  
+
+
+        <a href="/" class="topmenu">Home</a>
+
+
+        <a href="/about.html" class="topmenu" >About</a>
+
+
+        <a href="/hall-of-fame.html" class="topmenu">Contribute</a>
+
+
+        <a href="/faq.html" class="topmenu">Faq</a>
+
+
+        <a href="/search/index.html" class="topmenu">Search</a>
+
+
+  </nav>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="application/ld+json">
+        
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "headline": "04 Mapping reads with Bowtie",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "/blob//LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "courseCode": "chip-seq / mapping-reads-bowtie / hands-on",
+  "learningResourceType": "hands-on tutorial",
+  "name": "Hands-on for '04 Mapping reads with Bowtie' tutorial",
+  "isPartOf": {
+    "@type": "Course",
+    "name": "04 Mapping reads with Bowtie",
+    "description": "04 Mapping reads with Bowtie",
+    "learningResourceType": "tutorial",
+    "interactivityType": "expositive",
+    "provider": {
+      "@type": "Organization",
+      "email": "bits@vib.be",
+      "name": "VIB Bioinformatics Core",
+      "url": "https://www.bits.vib.be"
+    }
+  },
+  "url": "https://material.bits.vib.be//topics/chip-seq/tutorials/mapping-reads-bowtie/tutorial.html",
+  "timeRequired": "PT15M",
+  "description": "04 Mapping reads with Bowtie\\nThe questions this  addresses are:\n - Download the data from GEO or ENA\n\n\\nThe objectives are:\n - Basic knowledge of downloading data from GEO or ENA\n\n",
+  "hasPart": [
+
+  ],
+  "mentions": [
+    {
+      "@type": "Thing",
+      "url": "https://data.bits.vib.be/pub/trainingen/PSA/",
+      "name": "Training data for 04 Mapping reads with Bowtie tutorial"
+    }
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Janick Mathys"
+    },
+    {
+      "@type": "Person",
+      "name": "Morgane Thomas-Chollier"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Janick Mathys"
+    },
+    {
+      "@type": "Person",
+      "name": "Morgane Thomas-Chollier"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "ChIP-Seq analysis",
+      "description": " This training gives an introduction to ChIP-seq data analysis, covering the processing steps starting from the reads to the peaks. Among all possible downstream analyses, the practical aspect will focus on motif analyses. A particular emphasis will be put on deciding which downstream analyses to perform depending on the biological question. This training does not cover all methods available today. It does not aim at bringing users to a professional NGS analyst level but provides enough information to allow biologists understand what DNA sequencing practically is and to communicate with NGS experts for more in-depth needs.\n- Have an understanding of the nature of ChIP-Seq data - Perform a complete analysis workflow including QC, read mapping, visualization in a genome browser and peak-calling - Use the GenePattern platform for each step of the workflow and feel the complexity of the task - Have an overview of possible downstream analyses - Perform a motif analysis with online web programs\nFor this training, we will use a dataset produced by Myers et al [1] involved in the regulation of gene expression under anaerobic conditions in bacteria. We will focus on one factor: FNR. The advantage of this dataset is its small size, allowing real time execution of all steps of the dataset. ",
+      "url": "https://material.bits.vib.be//topics/chip-seq/"
+    }
+  ]
+}
+    </script>
+
+    <div class="row tutorial">
+      <div class="col-md-12" role="main">
+        <h1 data-toc-skip>04 Mapping reads with Bowtie</h1>
+        <div class="contributors-line">By: 
+
+<a href="/hall-of-fame#janick-bits" class="contributor-badge">Janick Mathys</a>
+, <a href="/hall-of-fame#morganeTC" class="contributor-badge">Morgane Thomas-Chollier</a>
+
+
+</div>
+        <blockquote class="overview">
+
+            <strong><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</strong>
+            <ul>
+            
+            <li>Download the data from GEO or ENA</li>
+            
+            </ul>
+
+            <strong><i class="fa fa-bullseye" aria-hidden="true"></i><span class="visually-hidden">objectives</span> Objectives</strong>
+            <ul>
+            
+            <li>Basic knowledge of downloading data from GEO or ENA</li>
+            
+            </ul>
+
+            
+
+            
+            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 15 minutes</p>
+            
+
+            
+
+
+            
+
+        </blockquote>
+
+        <div class="container" data-field="body">
+            <div class="row">
+                <div class="col-md-10" role="main">
+                    <h2 id="mapping-reads-with-bowtie">Mapping reads with Bowtie</h2>
+
+<p>Exercise created by Morgane Thomas Chollier</p>
+
+<h3 id="obtaining-the-reference-genome">Obtaining the reference genome</h3>
+
+<p>In the ChIP-Seq experiment of <em>E. coli</em> we want to see which genomic regions are bound to transcription factor FNR. However, at this point what we have is a set of reads that are identified by their location on the flow cell. To answer our question we should link the reads to regions in the genome to obtain their genomic coordinates. This process is called mapping.
+For Illumina reads the standard mappers are BWA and Bowtie (version 1 and 2).</p>
+
+<blockquote>
+  <p>Which version of Bowtie are we going to use?
+We will use Bowtie version 1 as this version was designed for mapping short reads (&lt; 50nt) and our reads are short (36nt).</p>
+</blockquote>
+
+<p>The Bowtie_1 aligner is installed on GenePattern. Check the documentation on GenePattern or read <a href="http://bowtie-bio.sourceforge.net/manual.shtml">the manual on the Bowtie website</a>.</p>
+
+<p>Bowtie needs the complete genome, in FASTA format as a reference sequence to align the reads to.</p>
+
+<blockquote>
+  <p>Which <em>E. coli</em> strain was used in the experiment?
+Go to <a href="http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1003565">the paper</a> and check the part <strong>Strains and growth conditions</strong> in the <strong>Materials and methods</strong> section. There you see that the experiment was done using <em>E. coli</em> K-12 MG1655.</p>
+</blockquote>
+
+<table>
+  <tbody>
+    <tr>
+      <td>![](../../images/mapping1.png</td>
+      <td>600px}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The genome sequence of <em>E. coli</em> K-12 MG1655 needs to be in a specific format (=index) for bowtie. Several pre-built indexes are available to download on <a href="http://bowtie-bio.sourceforge.net/manual.shtml">the bowtie webpages</a> or the <a href="http://support.illumina.com/sequencing/sequencing_software/igenome.html">iGenomes website</a>.
+Although the <em>E. coli</em> sequence is available we will not use it to show you how you should proceed if you don’t find your reference sequence on this website. In that case you will need to make the index yourself.</p>
+
+<p>If you can’t find your reference on the iGenomes website you have to download it from:</p>
+<ul>
+  <li><a href="http://genome.ucsc.edu/">UCSC</a></li>
+  <li><a href="http://www.ensembl.org/index.html">Ensembl</a></li>
+  <li><a href="http://www.ncbi.nlm.nih.gov/">NCBI</a></li>
+</ul>
+
+<p>Since Ensembl focuses on higher eukaryotes, we are going to download the genome from NCBI.</p>
+
+<blockquote>
+  <p>Which reference sequence was used in the experiment ?<br />
+Go to <a href="http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1003565">the paper</a> and check the part <strong>High-throughput RNA sequencing (RNA-seq) analysis</strong>. There you see that the reads were mapped to an NCBI sequence with accession number <strong>U00096</strong>.</p>
+</blockquote>
+
+<p><img src="../../images/mapping2.png" alt="" /></p>
+
+<blockquote>
+  <p>Search for this sequence on NCBI ?<br />
+Go to <a href="http://www.ncbi.nlm.nih.gov/">the NCBI website</a>, select the <strong>Nucleotide</strong> database, type <strong>U00096</strong> as a search term and click <strong>Search</strong>.</p>
+</blockquote>
+
+<p>NCBI Nucleotide is notorious for the amount of errors it contains both in sequences and in annotations. Therefore, if available you should always use sequences from RefSeq, the clean subset of NCBI’s Nucleotide database. This sequence is not a RefSeq sequence. You can see that because the accession number does not contain an underscore and all RefSeq accession numbers contain an underscore.</p>
+
+<blockquote>
+  <p>Is there a RefSeq sequence available ?<br />
+In <a href="http://www.ncbi.nlm.nih.gov/nuccore/U00096.3">the Nucleotide record</a>, scroll down to the <strong>Related information</strong> section in the right menu. There you see that a RefSeq sequence is available. Click the <strong>Identical RefSeq</strong> link.</p>
+</blockquote>
+
+<p><img src="../../images/mapping4.png" alt="" /></p>
+
+<p>This brings us to a RefSeq record with accession number NC_000913.</p>
+
+<blockquote>
+  <p>Download the sequence of the RefSeq record in FASTA format</p>
+
+  <p><img src="../../images/mapping6.png" alt="" /></p>
+</blockquote>
+
+<ul>
+  <li>In the record expand the <strong>Send to</strong> section (red).</li>
+  <li>Select <strong>File</strong> as destination (green). This means that you download the data on your computer.</li>
+  <li>Select <strong>FASTA</strong> format (blue).</li>
+  <li>Click <strong>Create File</strong>.</li>
+</ul>
+
+<p>If all goes well you should see the following message” =&gt; the message is “sequence.fasta. This creates a file called <strong>sequence.fasta</strong> in the <strong>Downloads</strong> folder of your computer.</p>
+
+<blockquote>
+  <p>Upload the downloaded file to your <strong>Uploads</strong> folder in GenePattern.</p>
+
+  <ul>
+    <li>Go to the <strong>Files</strong> tab in GenePattern.</li>
+    <li>Drag and drop the file onto the <strong>Drag Files Here</strong> section.</li>
+    <li>Select the <strong>Uploads</strong> folder and click <strong>Select</strong></li>
+  </ul>
+</blockquote>
+
+<p><img src="../../images/GPUpload.png" alt="" />
+If all goes well you should see the following message
+<img src="../../images/GPUpload2.png" alt="" /></p>
+
+<p>If the upload takes too long use the fasta file from the <strong>SHARED_DATA</strong> folder in GenePattern.</p>
+
+<h3 id="indexing-the-reference-genome">Indexing the reference genome</h3>
+
+<p>You cannot do the mapping directly on the .fasta file, you need to index the file first. Reference genomes from the Bowtie/iGenomes website are already indexed so when you get your reference there you can skip this step. Reference genomes downloaded from NCBI, Ensembl or UCSC need to be indexed using the Bowtie_1 indexer tool.<br />
+Indexing a reference genome is a one-time effort: you do not have to repeat it each time you do a mapping.<br />
+Check the documentation of the Bowtie_1 indexer to see the parameters it takes. The documentation shows that you need to specify:</p>
+<ul>
+  <li>the reference genome that you want to index as an input (in our case the <em>E. coli</em> fasta file)</li>
+  <li>the name of the indexed output file</li>
+</ul>
+
+<p>Give the output file the same name as the input file: <strong>Escherichia_coli_K12</strong>. The Bowtie indexer will generate a zip file containing a whole set of .ebwt files whose name all start with Escherichia_coli_K12.
+Copy the zip-file to your <strong>Uploads</strong> folder.</p>
+
+<h3 id="mapping-the-reads">Mapping the reads</h3>
+
+<p>Open the Bowtie_1 aligner parameter form.</p>
+
+<blockquote>
+  <p>Use the indexed E.coli genome for mapping
+The first parameter of the Bowtie 1 aligner parameter form are the genome index files (= the zipped ebwt files in your <strong>Uploads</strong> folder).</p>
+  <ul>
+    <li>Go to the <strong>Files</strong> tab</li>
+    <li>Click the <strong>Upload your own file</strong> button in the <strong>bowtie1 index</strong> section of the bowtie 1 parameter form</li>
+    <li>Drag and drop the zip file to the <strong>Drag your files here</strong> section</li>
+  </ul>
+</blockquote>
+
+<p><img src="../../images/GPBowtie1.png" alt="" /></p>
+
+<blockquote>
+  <p>How to define the input file(s) ?
+Bowtie needs an input file containing the reads (in our case SRR576933.fastq). Bowtie can map single end reads like we have but also paired end reads. In the case of paired end reads you have two fastq files, one with the upstream reads and one with the downstream reads. That’s why you can specify two input files: <strong>reads pair 1</strong> and <strong>reads pair 2</strong>. We just select <strong>SRR576933.fastq</strong> from the <strong>SHARED_DATA</strong> folder as input for <strong>reads pair 1</strong>.</p>
+</blockquote>
+
+<p><img src="../../images/GPBowtie2.png" alt="" /></p>
+
+<p>You need to tell bowtie what type of file your input file is.</p>
+
+<blockquote>
+  <p>What is the parameter for doing this ?
+Via the parameter called <strong>input format</strong> you can specify that the input file is in fastQ format.
+FastQ is the default, so you don’t have to explicitly set this option.</p>
+</blockquote>
+
+<p>Bowtie has two modes of mapping. The simplest strategy is called v-mode alignment: you align complete reads (from the first to the last base aka end-to-end) to the reference and you count the number of mismatches in this alignment. In this mode quality values are ignored and you need to tell bowtie the maximum number of mismatches you allow.</p>
+
+<blockquote>
+  <p>Do a v-mode mapping allowing 2 mismatches in the alignments.</p>
+  <ul>
+    <li>Expand the <strong>advanced customization of run</strong> parameters</li>
+    <li>Set <strong>alignment mode</strong> to <strong>v-mode</strong></li>
+    <li>Set <strong>max mismatches for vmode alignment</strong> to <strong>2</strong> it means that bowtie will allow two mismatches anywhere in the alignments. The value for this parameter must be a number from 0 through 3.</li>
+  </ul>
+</blockquote>
+
+<p><img src="../../images/GPBowtie3.png" alt="" /></p>
+
+<p>Remember because the base quality at the 3’end of the reads is lower, base calls at the 3’ends are often incorrect. This will inevitably lead to mismatches in the alignments. Reads with more than 2 mismatches will not be reported. To avoid losing too many reads during the mapping we can either trim low quality bases from the 3’ ends of the reads before the alignment is done or use a mapping strategy that takes into account the quality scores of the bases.</p>
+
+<p>This strategy is called n-mode alignment. It’s the default mode. It aligns seeds, the first N bases of the reads at the high quality 5’end, to the reference. You have to set the length of the reads and the maximum number of mismatches allowed in the seed alignment. Additionally the sum of the quality scores at all mismatched positions (not just in the seed) is calculated and you can set a maximum for this parameter. In this way, reads with mismatches with high quality scores will not be reported whereas mismatches with low scores are more or less ignored.</p>
+
+<p>The FASTQC report showed that the last base is of low quality. Since the reads are 36 bases ling we could use seeds of 35 bases for the mapping.</p>
+
+<blockquote>
+  <p>Do an n-mode mapping with seeds of 35 bases allowing 2 mismatches in the seeds.</p>
+  <ul>
+    <li>Expand the <strong>advanced customization of run</strong> parameters</li>
+    <li>Set <strong>alignment mode</strong> to <strong>n-mode</strong></li>
+    <li>Set <strong>seed length for nmode alignment</strong> to <strong>35</strong></li>
+    <li>Set <strong>max mismatches in seed</strong> to <strong>2</strong> it means that bowtie will allow two mismatches in the alignments of the seeds (the first 35 bases of the reads) to the reference. The value for this parameter must be a number from 0 through 3.</li>
+  </ul>
+</blockquote>
+
+<p><img src="../../images/GPBowtie4.png" alt="" /></p>
+
+<p>We also need to specify that we only want to report reads that map specifically to one location in the reference.</p>
+
+<blockquote>
+  <p>What is the parameter for doing this ?
+Via the parameter called <strong>report alignments</strong> you can specify that the output file should contain reads <strong>only mapping at unique location</strong>.</p>
+</blockquote>
+
+<p>By default, bowtie will include unmapped reads in the output file. That’s unnecessary since no one uses these unmapped reads.</p>
+
+<blockquote>
+  <p>How to exclude unmapped reads from the output file?
+Via the parameter called <strong>include unaligned</strong> in the <strong>output</strong> section you can specify not to include unmapped reads in the output file.</p>
+</blockquote>
+
+<p>We want to get a rough idea of the quality of the mapping. Look at the stdout.txt file that was generated by bowtie to get the basic statistics of the mapping.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>![](../../images/GPBowtie5.png</td>
+      <td>300px}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>You see that 62% of the reads were mapped. This may seem low but remember that we haven’t done any cleaning on the file. According to FASTQC the file contains about 30% of adapter sequences that will not map.</p>
+
+<blockquote>
+  <p>How many multi-mapped reads were originally present in the sample?
+Multimappers are reported as <strong>reads with alignments suppressed due to -m</strong>. Behind the scenes the <strong>report alignments</strong> parameter in the form is translated into a bowtie -m option that is run at command line. This option is used to guarantee that reported alignments are unique. Specifying -m 1 instructs bowtie to refrain from reporting any alignments for reads having more than 1 reportable alignment.</p>
+</blockquote>
+
+<p>The output of Bowtie is a sam file. The SAM format corresponds to large text files, that can be compressed (“zipped”) into .bam files that take up to 4 times less disk space and are usually sorted and indexed for fast access to the data they contain. The index of a .bam file is named .bai aand some tools require these index files to process the .bam files. So we need to transform the .sam file with our mapping results to a .bam file. You can use one of the tools from the Picard toolbox for this.</p>
+
+<blockquote>
+  <p>Convert the sam to a bam file.
+You can use the tool Picard.SamToBam for this.</p>
+</blockquote>
+
+<p>Repeat the analysis for the control sample SRR576938.fastq  These two fastq files come from a ChIP-Seq experiment, the first contains the reads of the ChIP sample, the second of the control sample, which consists of fragmented genomic DNA. You need both to identify regions in the genome that are represented more in the ChIP reads than in the control (these are the regions that bind to the transcription factor).
+Suppose that you have many fastq files that you need to map to the <em>E. coli</em> genome. The best way to ensure that you can reuse tools and parameter settings during the next analysis, is to combine them into a pipeline.</p>
+
+<blockquote>
+  <p>Create a pipeline to map ChIPSeq data set?</p>
+  <ul>
+    <li>In the top menu select <strong>Modules &amp; Pipelines</strong></li>
+    <li>Click <strong>New Pipeline</strong></li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td>![](../../images/GPPL.png</td>
+        <td>100px}}</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<blockquote>
+  <ul>
+    <li>In the <strong>Search Modules</strong> section search for the modules you need: first <strong>Bowtie_1_aligner</strong> and then <strong>Picard.SamToBam</strong></li>
+    <li>Click a tool to open its parameter form in the right pane of the pipeline editor.</li>
+    <li>You can set values for the parameters or you can allow users to give values for the parameters when they use the pipeline. For the Bowtie_1_aligner allow users to define the index and the input fastq file by checking the boxes in front of these parameters. After you have done this you should see a user icon appearing in front of these parameters in the middle pane of the pipeline editor.</li>
+  </ul>
+</blockquote>
+
+<table>
+  <tbody>
+    <tr>
+      <td>![](../../images/GPPL2.png</td>
+      <td>750px}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <ul>
+    <li>Use the same settings for the remaining parameters as you used for mapping SRR576933.fastq</li>
+    <li>Connect the sam output of bowtie as input file in Picard.</li>
+    <li>Click the <strong>Properties</strong> button at the top to open the <strong>Editing pipeline</strong> parameters in the right pane.</li>
+    <li>Type a name for the pipeline and hit Enter</li>
+    <li>Click the <strong>Save</strong> button at the top.</li>
+    <li>The pipeline has now become a module that you can search for and run in GenePattern. Exit the pipeline editor by clicking the <strong>GenePattern</strong> button at the top.</li>
+  </ul>
+</blockquote>
+
+<table>
+  <tbody>
+    <tr>
+      <td>![](../../images/GPPL3.png</td>
+      <td>150px}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Now you use the pipeline as a regular module.</p>
+
+<blockquote>
+  <p>Repeat the analysis for sample SRR576938.fastq use the ChIPSeqMapping pipeline.
+Repeating the mapping is easy, the only thing you need to do is define the index and the input file:</p>
+  <ul>
+    <li>Open the parameter form of the ChIPSeqMapping pipeline</li>
+    <li>Drag and drop the zip file with the indexed genome to the <strong>Drag your files here</strong> section</li>
+    <li>Use <strong>SRR576938.fastq</strong> from the <strong>SHARED_DATA</strong> folder as input file</li>
+    <li>Run the pipeline</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <p>How many reads of the control sample were mapped ?
+In the stdout.txt file generated by bowtie, you see that 95% of the reads was mapped. This is of course ok but you expected a high percentage here since the control sample is nothing more than the reference genome cut up into small pieces.</p>
+</blockquote>
+
+<p>At this point, you have two sam and two bam files, one for the treated sample, one for the control sample.</p>
+
+
+
+                    
+                    <blockquote class="key_points">
+                        <h3><i class="fa fa-key" aria-hidden="true"></i><span class="visually-hidden">keypoints</span> Key points</h3>
+
+                        <ul>
+                            
+                            <li>SRA ID</li>
+                            
+                            <li>GEO</li>
+                            
+                            <li>ENA</li>
+                            
+                        </ul>
+                    </blockquote>
+                    
+
+                    
+                    <h1 data-toc-skip>Useful literature</h1>
+                    <p>Further information, including links to documentation and original publications, regarding the tools, analysis techniques and the interpretation of results described in this tutorial can be found <a href="/topics/chip-seq#references">here</a>.</p>
+                    
+
+                    
+
+                </div>
+                <!-- sidebar, which will be hidden on a small screen -->
+                <nav class="col-md-2 sticky-toc bs-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary" id="toc" data-toggle="toc"></nav>
+            </div>
+        </div>
+
+        <h3><i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
+
+        
+
+        
+
+</div>
+</div>
+</div>
+<footer>
+   <div class="well row">
+       <div class="col-md-2 text-center" style="padding: 25px 20px 25px 20px;">				
+         <a href="https://www.bits.vib.be" target="_blank"><img src="/assets/images/bioinformatics_core_rgb_neg.png" width="200"></a>
+       </div>
+       <div class="col-md-8 text-center" style="padding-top: 20px;">	
+        <a href="https://github.com/vibbits/training-material" title="View on GitHub" class="margin20" target="_blank">
+                            <i class="fa fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> View on GitHub
+                        </a>
+       </div>
+       <div class="col-md-2 text-center" style="padding-top: 30px;">
+         <span class="slogan"><br>SCIENCE MEETS LIFE</span>
+       </div>
+   </div>
+</footer>
+
+
+</body>
+<script type="text/javascript" src="/assets/js/jquery.slim.min.js"></script>
+<script type="text/javascript" src="/assets/js/popper.min.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.min.js?v=3"></script>
+<script type="text/javascript" src="/assets/js/details-element-polyfill.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" src="/assets/js/bootstrap-toc.min.js"></script>
+<script type="text/javascript" src="/assets/js/main.js"></script>
+<script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
+<script type="text/javascript">
+    var snippets = document.querySelectorAll('div.highlight');
+    [].forEach.call(snippets, function(snippet) {
+        snippet.firstChild.insertAdjacentHTML('beforebegin', '<button class="btn btn-light" data-clipboard-snippet><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+    });
+
+    var clipboardSnippets = new ClipboardJS('[data-clipboard-snippet]', {
+        target: function(trigger) {
+            return trigger.nextElementSibling;
+        }
+    });
+</script>
+
+</html>

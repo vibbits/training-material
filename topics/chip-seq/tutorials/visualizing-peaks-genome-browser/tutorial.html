@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="dw_1zBYRNxF7-vYNDXh3Ght_JuqgJt3BD1N_Pynqmv0" />
+    <title>07 Visualizing the peaks in a genome browser</title>
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-61194136-18', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=3">
+    <link rel="stylesheet" href="/assets/css/bootstrap-toc.min.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="/assets/css/main.scss">
+    <link rel="stylesheet" href="/assets/css/VIB.css">
+    <link rel="stylesheet" href="/assets/css/academicons.css">
+    <link rel="stylesheet" href="/assets/css/syntax_highlighting.css">
+    <link rel="shortcut icon" href="/favicon.ico " type="image/x-icon" />     
+    <meta name="description" content=" This training gives an introduction to ChIP-seq data ana..." />
+    <meta property="og:title" content="VIB Bioinformatics Training: 07 Visualizing the peaks in a genome browser" />
+    <meta property="og:description" content=" This training gives an introduction to ChIP-seq data ana..." />
+    <meta property="og:image" content="/assets/images/bioinformatics_core_rgb_neg.png" />
+</head>
+
+<body data-spy="scroll" data-target="#toc">
+    <div class="top-bar-vib">
+ <a href="http://vib.be/en" target="_blank" style="font-size:14px">VIB Home </a>
+</div>
+
+<div class="container main-content">
+
+<div class="container page-top__container">
+          <div class="region region-top">
+  <div id="logo" class="col-md-3 col-lg-3 text-left" style="padding-left:0px;margin-top:20px">
+       <a href="/">
+           <img src="/assets/images/logo.svg" height="60" alt="VIB logo" class="margin20">
+       </a>
+    </div>
+    <div class="col-md-9 col-lg-9 text-right" style="margin-top:50px;">
+    <nav role="navigation" aria-labelledby="block-mainnavigation-menu" id="block-mainnavigation" class="block block-menu navigation menu--main">
+  
+
+
+        <a href="/" class="topmenu">Home</a>
+
+
+        <a href="/about.html" class="topmenu" >About</a>
+
+
+        <a href="/hall-of-fame.html" class="topmenu">Contribute</a>
+
+
+        <a href="/faq.html" class="topmenu">Faq</a>
+
+
+        <a href="/search/index.html" class="topmenu">Search</a>
+
+
+  </nav>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="application/ld+json">
+        
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "headline": "07 Visualizing the peaks in a genome browser",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "/blob//LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "courseCode": "chip-seq / visualizing-peaks-genome-browser / hands-on",
+  "learningResourceType": "hands-on tutorial",
+  "name": "Hands-on for '07 Visualizing the peaks in a genome browser' tutorial",
+  "isPartOf": {
+    "@type": "Course",
+    "name": "07 Visualizing the peaks in a genome browser",
+    "description": "07 Visualizing the peaks in a genome browser",
+    "learningResourceType": "tutorial",
+    "interactivityType": "expositive",
+    "provider": {
+      "@type": "Organization",
+      "email": "bits@vib.be",
+      "name": "VIB Bioinformatics Core",
+      "url": "https://www.bits.vib.be"
+    }
+  },
+  "url": "https://material.bits.vib.be//topics/chip-seq/tutorials/visualizing-peaks-genome-browser/tutorial.html",
+  "timeRequired": "PT15M",
+  "description": "07 Visualizing the peaks in a genome browser\\nThe questions this  addresses are:\n - Download the data from GEO or ENA\n\n\\nThe objectives are:\n - Basic knowledge of downloading data from GEO or ENA\n\n",
+  "hasPart": [
+
+  ],
+  "mentions": [
+    {
+      "@type": "Thing",
+      "url": "https://data.bits.vib.be/pub/trainingen/PSA/",
+      "name": "Training data for 07 Visualizing the peaks in a genome browser tutorial"
+    }
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Janick Mathys"
+    },
+    {
+      "@type": "Person",
+      "name": "Morgane Thomas-Chollier"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Janick Mathys"
+    },
+    {
+      "@type": "Person",
+      "name": "Morgane Thomas-Chollier"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "ChIP-Seq analysis",
+      "description": " This training gives an introduction to ChIP-seq data analysis, covering the processing steps starting from the reads to the peaks. Among all possible downstream analyses, the practical aspect will focus on motif analyses. A particular emphasis will be put on deciding which downstream analyses to perform depending on the biological question. This training does not cover all methods available today. It does not aim at bringing users to a professional NGS analyst level but provides enough information to allow biologists understand what DNA sequencing practically is and to communicate with NGS experts for more in-depth needs.\n- Have an understanding of the nature of ChIP-Seq data - Perform a complete analysis workflow including QC, read mapping, visualization in a genome browser and peak-calling - Use the GenePattern platform for each step of the workflow and feel the complexity of the task - Have an overview of possible downstream analyses - Perform a motif analysis with online web programs\nFor this training, we will use a dataset produced by Myers et al [1] involved in the regulation of gene expression under anaerobic conditions in bacteria. We will focus on one factor: FNR. The advantage of this dataset is its small size, allowing real time execution of all steps of the dataset. ",
+      "url": "https://material.bits.vib.be//topics/chip-seq/"
+    }
+  ]
+}
+    </script>
+
+    <div class="row tutorial">
+      <div class="col-md-12" role="main">
+        <h1 data-toc-skip>07 Visualizing the peaks in a genome browser</h1>
+        <div class="contributors-line">By: 
+
+<a href="/hall-of-fame#janick-bits" class="contributor-badge">Janick Mathys</a>
+, <a href="/hall-of-fame#morganeTC" class="contributor-badge">Morgane Thomas-Chollier</a>
+
+
+</div>
+        <blockquote class="overview">
+
+            <strong><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</strong>
+            <ul>
+            
+            <li>Download the data from GEO or ENA</li>
+            
+            </ul>
+
+            <strong><i class="fa fa-bullseye" aria-hidden="true"></i><span class="visually-hidden">objectives</span> Objectives</strong>
+            <ul>
+            
+            <li>Basic knowledge of downloading data from GEO or ENA</li>
+            
+            </ul>
+
+            
+
+            
+            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 15 minutes</p>
+            
+
+            
+
+
+            
+
+        </blockquote>
+
+        <div class="container" data-field="body">
+            <div class="row">
+                <div class="col-md-10" role="main">
+                    <h2 id="choosing-a-genome-browser">Choosing a genome browser</h2>
+
+<p>There are several options for genome browsers, divided between the local browsers (need to install the program, eg. IGV) and the online web browsers (eg. UCSC genome browser, Ensembl). We often use both types, depending on the aim and the localisation of the data.
+Note that if you’re working on a non-model organism, the local viewer will be the only choice. If the aim is to share the results with your collaborators, view many tracks in the context of many existing annotations, then the online genome browsers are more suitable.</p>
+
+<h2 id="viewing-the-aligned-reads-in-igv">Viewing the aligned reads in IGV</h2>
+
+<p>Open IGV. Be patient, it might take a few minutes for the program to start.
+Change the genome in IGV from ‘'’Human hg19’’’ to the one you used in the mapping.</p>
+
+<blockquote>
+  <p>Load the desired genomed. 
+Load the <em>E. coli</em> genome as reference (from the file Escherichia_coli_K_12_MG1655.fasta, downloaded to build the bowtie index).</p>
+</blockquote>
+
+<ul>
+  <li>Top menu: <strong>Genome</strong> -&gt; <strong>Load Genome from File</strong>
+ <img src="../../images/IGVLoadGenome.png" alt="" /></li>
+  <li>The loaded genome appears in the top left panel:
+ <img src="../../images/IGVLoadGenome2.png" alt="" /></li>
+</ul>
+
+<p>You can also visualize the annotation (genes) in IGV. You can obtain a file with annotations from the Refseq record.</p>
+
+<blockquote>
+  <p>Download the annotations from RefSeq in GFF3 format. 
+Go to the <a href="https://www.ncbi.nlm.nih.gov/nuccore/NC_000913.3">RefSeq record</a> of the <em>E. coli</em> genome.</p>
+  <ul>
+    <li>Expand the <strong>Send to</strong> section at the top of the page.</li>
+    <li>Choose <strong>File</strong> as destination.</li>
+    <li>Select <strong>GFF3</strong> format.
+ <img src="../../images/NCBIGFF3.png" alt="" /></li>
+  </ul>
+</blockquote>
+
+<p>You can also <a href="http://data.bits.vib.be/pub/trainingen/NGSIntro/Ecoli_annotations.gff3">download the GFF3 file</a> from our website.</p>
+
+<p>If you want to load the .gff3 file and visualize the annotation properly in IGV, it’s necessary to comment (or remove) the third line:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>##sequence-region NC_000913.3 1 4641652
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=511145
+## NC_000913.3	RefSeq	region	1	4641652	.	+	.	ID=NC_000913.3:1..4641652;Dbxref=taxon:511145;Is_circular=...
+NC_000913.3	RefSeq	gene	190	255	.	+	.	ID=gene-b0001;Dbxref=ASAP:ABE-0000006,ECOCYC:EG11277...
+</code></pre></div></div>
+
+<p>You can visualize reads in IGV as long as they are sorted according to genomic location. Download the two sorted and indexed bam files (for SRR576933 and SRR576938) from GenePattern to your computer and load them in IGV.</p>
+
+<blockquote>
+  <p>Load the annotation and the bam files of the ChIP and the control sample.</p>
+  <ul>
+    <li>Top menu: <strong>File</strong> -&gt; <strong>Load from File</strong>:
+ <img src="../../images/IGVLoadFile.png" alt="" /></li>
+    <li>You should see the track now.</li>
+    <li>Do the same for the .bam files.
+Note that you have to download the .bai files too and store them in the same folder as the .bam files. You do not have to explicitly open the .bai files in IGV but they have to be in the same folder as the .bam files or IGV will throw an error.</li>
+    <li>Zoom in u8ntil you see the reads</li>
+  </ul>
+</blockquote>
+
+<p><img src="../../images/IGVbams.png" alt="" /></p>
+
+<p><strong>Browse around in the genome. Do you see peaks?</strong></p>
+
+<blockquote>
+  <p>Go to the following gene: pepT.
+Type <strong>pepT</strong> in the box at the top (red) and click <strong>Go</strong>:
+ <img src="../../images/IGVpepT.png" alt="" /></p>
+</blockquote>
+
+<p>Do the same for gene ycfP.
+Looking at .bam files does not allow to directly compare the two samples as data are not normalized. To generate normalized data for visualization you can use bamCoverage from deepTools (it’s available in GenePattern). It generates BigWig files out of .bam files.</p>
+
+<blockquote>
+  <p>Create a BigWig file from the sorted and indexed .bam file of the ChIP sample
+The bamCoverage tool has the following parameters:</p>
+  <ul>
+    <li><strong>input file</strong> is the sorted and indexed .bam file to process</li>
+    <li><strong>index</strong> is the accompanying .bai file</li>
+    <li><strong>output format</strong> is the output file type, we want to generate a <strong>BigWig</strong> file</li>
+    <li><strong>genomeSize</strong> <strong>4639675</strong> nt for <em>E. coli</em></li>
+    <li><strong>normalize</strong>: different overall normalization methods; we will use the <strong>RPGC</strong> method corresponding to 1x average coverage</li>
+    <li><strong>skip noncovered</strong>: skip non-covered regions (without mapped reads) in the genome? Set to <strong>yes</strong>.</li>
+    <li><strong>extend reads</strong>: extend reads to fragment size, in our case <strong>200</strong> nt.</li>
+    <li><strong>ignore duplicates</strong>: reads that map to the same location in the genome will be considered only once. Set this to <strong>yes</strong>.</li>
+  </ul>
+</blockquote>
+
+<p>Repeat for the control (again you see the benefit of creating a pipeline for repeating the same steps on multiple samples).
+Download the BigWig files, start a new session in IGV and load the BigWig files in IGV.</p>
+
+<blockquote>
+  <p>Create a BigWig file from the sorted and indexed .bam file of the ChIP sample</p>
+  <ul>
+    <li>Top menu: <strong>File</strong> -&gt; <strong>New session</strong></li>
+    <li>Top menu: <strong>File</strong> -&gt; <strong>Load from File</strong>. Load the two BigWigs and the .ggf3 with the annotation.</li>
+    <li>Right click the names of the BigWig tracks and select <strong>Autoscale</strong>.</li>
+  </ul>
+</blockquote>
+
+<p><strong>Go back to the genes we looked at earlier: pepT, ycfP. Look at the shape of the signal.</strong></p>
+
+<h2 id="viewing-the-peaks-in-igv">Viewing the peaks in IGV</h2>
+
+<p>Download the bdg files generated by MACS from GenePattern to your computer and rename them with the extension .bedgraph.</p>
+
+<blockquote>
+  <p>Dowload the bdg files. 
+Click the names of the bdg files in the <strong>Files</strong> tab and select <strong>Save File</strong>
+ <img src="../../images/GPDownloadBdg.png" alt="" /></p>
+</blockquote>
+
+<p>Replace .bdg by .bedgraph otherwise the file will not be recognized by IGV.
+Open a <strong>new session</strong> in IGV. Reload the .ggf3 file with the annotation.</p>
+
+<blockquote>
+  <p>View the bedgraph files. 
+Load the control bedgraph file:</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p>Top menu: <strong>File</strong> -&gt; <strong>Load from File</strong>:
+ <img src="../../images/IGVLoadFile.png" alt="" />
+You might get a warning that the file is big. Simply click on the button continue.</p>
+  </li>
+  <li>
+    <p>You should see the track (in blue):
+ <img src="../../images/IGVLoadFile2.png" alt="" /></p>
+  </li>
+</ul>
+
+<p>Repeat this step to load the treatment bedgraph file. You should now see the 2 tracks (in blue):
+ <img src="../../images/IGVLoadFile3.png" alt="" /></p>
+
+<p>Download and view the BED file containing the peak locations.</p>
+
+<blockquote>
+  <p>View the bed file with the peak locations. 
+Save the file from GenePattern to your computer and load the bed file into IGV.
+A new track with discrete positions appears at the bottom:
+ <img src="../../images/IGVLoadFile4.png" alt="" /></p>
+</blockquote>
+
+<p>The end result should look like this: 3 tracks with data (the bedgraph files of the 2 samples and the peaks file) and 1 track with annotation:
+ <img src="../../images/IGVLoadFile5.png" alt="" /></p>
+
+<p><strong>Go back again to the genes we looked at earlier: pepT, ycfP. Do you see peaks?</strong></p>
+
+
+
+                    
+                    <blockquote class="key_points">
+                        <h3><i class="fa fa-key" aria-hidden="true"></i><span class="visually-hidden">keypoints</span> Key points</h3>
+
+                        <ul>
+                            
+                            <li>SRA ID</li>
+                            
+                            <li>GEO</li>
+                            
+                            <li>ENA</li>
+                            
+                        </ul>
+                    </blockquote>
+                    
+
+                    
+                    <h1 data-toc-skip>Useful literature</h1>
+                    <p>Further information, including links to documentation and original publications, regarding the tools, analysis techniques and the interpretation of results described in this tutorial can be found <a href="/topics/chip-seq#references">here</a>.</p>
+                    
+
+                    
+
+                </div>
+                <!-- sidebar, which will be hidden on a small screen -->
+                <nav class="col-md-2 sticky-toc bs-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary" id="toc" data-toggle="toc"></nav>
+            </div>
+        </div>
+
+        <h3><i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
+
+        
+
+        
+
+</div>
+</div>
+</div>
+<footer>
+   <div class="well row">
+       <div class="col-md-2 text-center" style="padding: 25px 20px 25px 20px;">				
+         <a href="https://www.bits.vib.be" target="_blank"><img src="/assets/images/bioinformatics_core_rgb_neg.png" width="200"></a>
+       </div>
+       <div class="col-md-8 text-center" style="padding-top: 20px;">	
+        <a href="https://github.com/vibbits/training-material" title="View on GitHub" class="margin20" target="_blank">
+                            <i class="fa fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> View on GitHub
+                        </a>
+       </div>
+       <div class="col-md-2 text-center" style="padding-top: 30px;">
+         <span class="slogan"><br>SCIENCE MEETS LIFE</span>
+       </div>
+   </div>
+</footer>
+
+
+</body>
+<script type="text/javascript" src="/assets/js/jquery.slim.min.js"></script>
+<script type="text/javascript" src="/assets/js/popper.min.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.min.js?v=3"></script>
+<script type="text/javascript" src="/assets/js/details-element-polyfill.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" src="/assets/js/bootstrap-toc.min.js"></script>
+<script type="text/javascript" src="/assets/js/main.js"></script>
+<script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
+<script type="text/javascript">
+    var snippets = document.querySelectorAll('div.highlight');
+    [].forEach.call(snippets, function(snippet) {
+        snippet.firstChild.insertAdjacentHTML('beforebegin', '<button class="btn btn-light" data-clipboard-snippet><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+    });
+
+    var clipboardSnippets = new ClipboardJS('[data-clipboard-snippet]', {
+        target: function(trigger) {
+            return trigger.nextElementSibling;
+        }
+    });
+</script>
+
+</html>

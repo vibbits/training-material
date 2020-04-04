@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="dw_1zBYRNxF7-vYNDXh3Ght_JuqgJt3BD1N_Pynqmv0" />
+    <title>01 GenPattern tutorial</title>
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-61194136-18', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=3">
+    <link rel="stylesheet" href="/assets/css/bootstrap-toc.min.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="/assets/css/main.scss">
+    <link rel="stylesheet" href="/assets/css/VIB.css">
+    <link rel="stylesheet" href="/assets/css/academicons.css">
+    <link rel="stylesheet" href="/assets/css/syntax_highlighting.css">
+    <link rel="shortcut icon" href="/favicon.ico " type="image/x-icon" />     
+    <meta name="description" content=" This training gives an introduction to ChIP-seq data ana..." />
+    <meta property="og:title" content="VIB Bioinformatics Training: 01 GenPattern tutorial" />
+    <meta property="og:description" content=" This training gives an introduction to ChIP-seq data ana..." />
+    <meta property="og:image" content="/assets/images/bioinformatics_core_rgb_neg.png" />
+</head>
+
+<body data-spy="scroll" data-target="#toc">
+    <div class="top-bar-vib">
+ <a href="http://vib.be/en" target="_blank" style="font-size:14px">VIB Home </a>
+</div>
+
+<div class="container main-content">
+
+<div class="container page-top__container">
+          <div class="region region-top">
+  <div id="logo" class="col-md-3 col-lg-3 text-left" style="padding-left:0px;margin-top:20px">
+       <a href="/">
+           <img src="/assets/images/logo.svg" height="60" alt="VIB logo" class="margin20">
+       </a>
+    </div>
+    <div class="col-md-9 col-lg-9 text-right" style="margin-top:50px;">
+    <nav role="navigation" aria-labelledby="block-mainnavigation-menu" id="block-mainnavigation" class="block block-menu navigation menu--main">
+  
+
+
+        <a href="/" class="topmenu">Home</a>
+
+
+        <a href="/about.html" class="topmenu" >About</a>
+
+
+        <a href="/hall-of-fame.html" class="topmenu">Contribute</a>
+
+
+        <a href="/faq.html" class="topmenu">Faq</a>
+
+
+        <a href="/search/index.html" class="topmenu">Search</a>
+
+
+  </nav>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="application/ld+json">
+        
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "headline": "01 GenPattern tutorial",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "/blob//LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "courseCode": "chip-seq / genepattern-tutorial / hands-on",
+  "learningResourceType": "hands-on tutorial",
+  "name": "Hands-on for '01 GenPattern tutorial' tutorial",
+  "isPartOf": {
+    "@type": "Course",
+    "name": "01 GenPattern tutorial",
+    "description": "01 GenPattern tutorial",
+    "learningResourceType": "tutorial",
+    "interactivityType": "expositive",
+    "provider": {
+      "@type": "Organization",
+      "email": "bits@vib.be",
+      "name": "VIB Bioinformatics Core",
+      "url": "https://www.bits.vib.be"
+    }
+  },
+  "url": "https://material.bits.vib.be//topics/chip-seq/tutorials/genepattern-tutorial/tutorial.html",
+  "timeRequired": "PT30M",
+  "description": "01 GenPattern tutorial\\nThe questions this  addresses are:\n - How to use GenePattern for data analysis\n\n\\nThe objectives are:\n - Acquire basic knowledge of using GenePattern for data analysis\n\n",
+  "hasPart": [
+
+  ],
+  "mentions": [
+    {
+      "@type": "Thing",
+      "url": "",
+      "name": "Training data for 01 GenPattern tutorial tutorial"
+    }
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Janick Mathys"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Janick Mathys"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "ChIP-Seq analysis",
+      "description": " This training gives an introduction to ChIP-seq data analysis, covering the processing steps starting from the reads to the peaks. Among all possible downstream analyses, the practical aspect will focus on motif analyses. A particular emphasis will be put on deciding which downstream analyses to perform depending on the biological question. This training does not cover all methods available today. It does not aim at bringing users to a professional NGS analyst level but provides enough information to allow biologists understand what DNA sequencing practically is and to communicate with NGS experts for more in-depth needs.\n- Have an understanding of the nature of ChIP-Seq data - Perform a complete analysis workflow including QC, read mapping, visualization in a genome browser and peak-calling - Use the GenePattern platform for each step of the workflow and feel the complexity of the task - Have an overview of possible downstream analyses - Perform a motif analysis with online web programs\nFor this training, we will use a dataset produced by Myers et al [1] involved in the regulation of gene expression under anaerobic conditions in bacteria. We will focus on one factor: FNR. The advantage of this dataset is its small size, allowing real time execution of all steps of the dataset. ",
+      "url": "https://material.bits.vib.be//topics/chip-seq/"
+    }
+  ]
+}
+    </script>
+
+    <div class="row tutorial">
+      <div class="col-md-12" role="main">
+        <h1 data-toc-skip>01 GenPattern tutorial</h1>
+        <div class="contributors-line">By: 
+
+<a href="/hall-of-fame#janick-bits" class="contributor-badge">Janick Mathys</a>
+
+
+</div>
+        <blockquote class="overview">
+
+            <strong><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</strong>
+            <ul>
+            
+            <li>How to use GenePattern for data analysis</li>
+            
+            </ul>
+
+            <strong><i class="fa fa-bullseye" aria-hidden="true"></i><span class="visually-hidden">objectives</span> Objectives</strong>
+            <ul>
+            
+            <li>Acquire basic knowledge of using GenePattern for data analysis</li>
+            
+            </ul>
+
+            
+
+            
+            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 30 minutes</p>
+            
+
+            
+
+
+            
+
+        </blockquote>
+
+        <div class="container" data-field="body">
+            <div class="row">
+                <div class="col-md-10" role="main">
+                    <h2 id="introduction-to-genepattern">Introduction to GenePattern</h2>
+
+<h3 id="access-genepattern">Access GenePattern</h3>
+
+<p>You can work on our <a href="https://dev.bits.vib.be:8686/gp/pages/index.jsf">BITS Genepattern server</a>. Ask the trainer for login details.</p>
+
+<h3 id="the-genepattern-user-interface">The GenePattern user interface</h3>
+
+<p>Logging in brings you to the GenePattern homepage:</p>
+
+<p><img src="../../images/GP2b.png" alt="loggingingp" /></p>
+
+<ul>
+  <li>Click the GenePattern icon at the top of the page (red) to return to this home page at any time.</li>
+  <li>The upper right corner shows your user name (green).</li>
+  <li>The navigation tabs (blue) provide access to other pages.</li>
+</ul>
+
+<p>We’ll zoom in on the navigation tabs:</p>
+
+<ul>
+  <li>The Modules tab gives access to the tools that you can run. Enter the first few characters of a module in the search box to locate a tool. Click the Browse modules button to list the tools.</li>
+</ul>
+
+<p><img src="../../images/GP3b.png" alt="modulesgp" /></p>
+
+<ul>
+  <li>The Jobs tab shows an overview of the analyses that you have done by showing the tools that you have run, together with a list of output files that were generated.</li>
+</ul>
+
+<p><img src="../../images/GP4.png" alt="jobsgp" /></p>
+
+<ul>
+  <li>The <strong>Files</strong> tab shows a list of files you can use as input for the tools. These are files that you have uploaded from your hard drive or files that were generated as the output of a tool and that were saved to the <strong>Files</strong> tab. In your case the Files tab contains a folder <strong>uploads</strong>.</li>
+</ul>
+
+<h3 id="searching-a-tool-in-genepattern">Searching a tool in GenePattern</h3>
+
+<p>You can find a module by typing its name into the search box on the <strong>Modules</strong> tab:</p>
+
+<p><img src="../../images/GP4a.png" alt="modulesgp" /></p>
+
+<p>Searching a tool makes its name appear in the main window.</p>
+
+<h3 id="running-tools-in-genepattern">Running tools in GenePattern</h3>
+
+<p>Clicking the name of the tool will open its parameter form in the main window.</p>
+
+<p><img src="../../images/GP5.png" alt="groomer" /></p>
+
+<p>Fill in the parameters and click <strong>Run</strong> to start the analysis.</p>
+
+<p>As long as the tool is running you see an arched arrow in the top right corner:</p>
+
+<p><img src="../../images/GP11.png" alt="groomer" /></p>
+
+<p>When the tool has finished the arched arrow is replaced by a checkmark and the file(s) containing the results appear at the bottom:</p>
+
+<p><img src="../../images/GP12.png" alt="groomersrr074262" /></p>
+
+<p>Note that apart from the file containing the results, other files are generated e.g. stdout.txt containing the error log of the tool. You can consult the error log in case of problems.</p>
+
+<h4 id="check-the-documentation">Check the documentation</h4>
+
+<p>To obtain a description of the parameters of a tool and their default values click the Documentation link at the top of the page.</p>
+
+<p><img src="../../images/GP16.png" alt="groomerdoc" /></p>
+
+<h4 id="define-input-files">Define input files</h4>
+
+<p>Many input files are located in the shared data folder. In the parameter form of a tool, you will find the <strong>Add Paths</strong> or <strong>URLs button</strong> in the <strong>input files</strong> section:</p>
+
+<p><img src="../../images/GPAddPaths.png" alt="groomerinput" /></p>
+
+<p>Click the button and expand <strong>BITS trainingdata Chipseq</strong>:</p>
+
+<p><img src="../../images/GPSharedData.png" alt="groomerinput" /></p>
+
+<h3 id="store-the-output-of-a-tool-in-genepattern">Store the output of a tool in GenePattern</h3>
+
+<p>Copy the file in the uploads folder on the Files tab to store it permanently and allow to use it as input for other tools. Output files that are not saved in the uploads folder are stored 7 days on the server and are visible via the Jobs tab.</p>
+
+<p>When a tool has finished output files are generated at the bottom of the page.</p>
+
+<ul>
+  <li>Click the name of the output file.</li>
+</ul>
+
+<p><img src="../../images/GP14.png" alt="groomerinput" /></p>
+
+<ul>
+  <li>Select Copy to Files Tab</li>
+</ul>
+
+<p><img src="../../images/GP13.png" alt="groomerinput" /></p>
+
+
+
+                    
+                    <blockquote class="key_points">
+                        <h3><i class="fa fa-key" aria-hidden="true"></i><span class="visually-hidden">keypoints</span> Key points</h3>
+
+                        <ul>
+                            
+                            <li>GenePattern</li>
+                            
+                            <li>Data Analysis</li>
+                            
+                        </ul>
+                    </blockquote>
+                    
+
+                    
+                    <h1 data-toc-skip>Useful literature</h1>
+                    <p>Further information, including links to documentation and original publications, regarding the tools, analysis techniques and the interpretation of results described in this tutorial can be found <a href="/topics/chip-seq#references">here</a>.</p>
+                    
+
+                    
+
+                </div>
+                <!-- sidebar, which will be hidden on a small screen -->
+                <nav class="col-md-2 sticky-toc bs-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary" id="toc" data-toggle="toc"></nav>
+            </div>
+        </div>
+
+        <h3><i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
+
+        
+
+        
+
+</div>
+</div>
+</div>
+<footer>
+   <div class="well row">
+       <div class="col-md-2 text-center" style="padding: 25px 20px 25px 20px;">				
+         <a href="https://www.bits.vib.be" target="_blank"><img src="/assets/images/bioinformatics_core_rgb_neg.png" width="200"></a>
+       </div>
+       <div class="col-md-8 text-center" style="padding-top: 20px;">	
+        <a href="https://github.com/vibbits/training-material" title="View on GitHub" class="margin20" target="_blank">
+                            <i class="fa fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> View on GitHub
+                        </a>
+       </div>
+       <div class="col-md-2 text-center" style="padding-top: 30px;">
+         <span class="slogan"><br>SCIENCE MEETS LIFE</span>
+       </div>
+   </div>
+</footer>
+
+
+</body>
+<script type="text/javascript" src="/assets/js/jquery.slim.min.js"></script>
+<script type="text/javascript" src="/assets/js/popper.min.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.min.js?v=3"></script>
+<script type="text/javascript" src="/assets/js/details-element-polyfill.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" src="/assets/js/bootstrap-toc.min.js"></script>
+<script type="text/javascript" src="/assets/js/main.js"></script>
+<script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
+<script type="text/javascript">
+    var snippets = document.querySelectorAll('div.highlight');
+    [].forEach.call(snippets, function(snippet) {
+        snippet.firstChild.insertAdjacentHTML('beforebegin', '<button class="btn btn-light" data-clipboard-snippet><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+    });
+
+    var clipboardSnippets = new ClipboardJS('[data-clipboard-snippet]', {
+        target: function(trigger) {
+            return trigger.nextElementSibling;
+        }
+    });
+</script>
+
+</html>

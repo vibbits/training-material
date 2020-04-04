@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="dw_1zBYRNxF7-vYNDXh3Ght_JuqgJt3BD1N_Pynqmv0" />
+    <title>03 Quality control of the data of the ChIP-Seq training</title>
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-61194136-18', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=3">
+    <link rel="stylesheet" href="/assets/css/bootstrap-toc.min.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="/assets/css/main.scss">
+    <link rel="stylesheet" href="/assets/css/VIB.css">
+    <link rel="stylesheet" href="/assets/css/academicons.css">
+    <link rel="stylesheet" href="/assets/css/syntax_highlighting.css">
+    <link rel="shortcut icon" href="/favicon.ico " type="image/x-icon" />     
+    <meta name="description" content=" This training gives an introduction to ChIP-seq data ana..." />
+    <meta property="og:title" content="VIB Bioinformatics Training: 03 Quality control of the data of the ChIP-Seq training" />
+    <meta property="og:description" content=" This training gives an introduction to ChIP-seq data ana..." />
+    <meta property="og:image" content="/assets/images/bioinformatics_core_rgb_neg.png" />
+</head>
+
+<body data-spy="scroll" data-target="#toc">
+    <div class="top-bar-vib">
+ <a href="http://vib.be/en" target="_blank" style="font-size:14px">VIB Home </a>
+</div>
+
+<div class="container main-content">
+
+<div class="container page-top__container">
+          <div class="region region-top">
+  <div id="logo" class="col-md-3 col-lg-3 text-left" style="padding-left:0px;margin-top:20px">
+       <a href="/">
+           <img src="/assets/images/logo.svg" height="60" alt="VIB logo" class="margin20">
+       </a>
+    </div>
+    <div class="col-md-9 col-lg-9 text-right" style="margin-top:50px;">
+    <nav role="navigation" aria-labelledby="block-mainnavigation-menu" id="block-mainnavigation" class="block block-menu navigation menu--main">
+  
+
+
+        <a href="/" class="topmenu">Home</a>
+
+
+        <a href="/about.html" class="topmenu" >About</a>
+
+
+        <a href="/hall-of-fame.html" class="topmenu">Contribute</a>
+
+
+        <a href="/faq.html" class="topmenu">Faq</a>
+
+
+        <a href="/search/index.html" class="topmenu">Search</a>
+
+
+  </nav>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="application/ld+json">
+        
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "headline": "03 Quality control of the data of the ChIP-Seq training",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "/blob//LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "courseCode": "chip-seq / quality-control-chip-seq / hands-on",
+  "learningResourceType": "hands-on tutorial",
+  "name": "Hands-on for '03 Quality control of the data of the ChIP-Seq training' tutorial",
+  "isPartOf": {
+    "@type": "Course",
+    "name": "03 Quality control of the data of the ChIP-Seq training",
+    "description": "03 Quality control of the data of the ChIP-Seq training",
+    "learningResourceType": "tutorial",
+    "interactivityType": "expositive",
+    "provider": {
+      "@type": "Organization",
+      "email": "bits@vib.be",
+      "name": "VIB Bioinformatics Core",
+      "url": "https://www.bits.vib.be"
+    }
+  },
+  "url": "https://material.bits.vib.be//topics/chip-seq/tutorials/quality-control-chip-seq/tutorial.html",
+  "timeRequired": "PT30M",
+  "description": "03 Quality control of the data of the ChIP-Seq training\\nThe questions this  addresses are:\n - How to do quality control of the data\n\n\\nThe objectives are:\n - Acquire basic knowledge of using GenePattern for data analysis\n\n",
+  "hasPart": [
+
+  ],
+  "mentions": [
+    {
+      "@type": "Thing",
+      "url": "",
+      "name": "Training data for 03 Quality control of the data of the ChIP-Seq training tutorial"
+    }
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Janick Mathys"
+    },
+    {
+      "@type": "Person",
+      "name": "Morgane Thomas-Chollier"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Janick Mathys"
+    },
+    {
+      "@type": "Person",
+      "name": "Morgane Thomas-Chollier"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "ChIP-Seq analysis",
+      "description": " This training gives an introduction to ChIP-seq data analysis, covering the processing steps starting from the reads to the peaks. Among all possible downstream analyses, the practical aspect will focus on motif analyses. A particular emphasis will be put on deciding which downstream analyses to perform depending on the biological question. This training does not cover all methods available today. It does not aim at bringing users to a professional NGS analyst level but provides enough information to allow biologists understand what DNA sequencing practically is and to communicate with NGS experts for more in-depth needs.\n- Have an understanding of the nature of ChIP-Seq data - Perform a complete analysis workflow including QC, read mapping, visualization in a genome browser and peak-calling - Use the GenePattern platform for each step of the workflow and feel the complexity of the task - Have an overview of possible downstream analyses - Perform a motif analysis with online web programs\nFor this training, we will use a dataset produced by Myers et al [1] involved in the regulation of gene expression under anaerobic conditions in bacteria. We will focus on one factor: FNR. The advantage of this dataset is its small size, allowing real time execution of all steps of the dataset. ",
+      "url": "https://material.bits.vib.be//topics/chip-seq/"
+    }
+  ]
+}
+    </script>
+
+    <div class="row tutorial">
+      <div class="col-md-12" role="main">
+        <h1 data-toc-skip>03 Quality control of the data of the ChIP-Seq training</h1>
+        <div class="contributors-line">By: 
+
+<a href="/hall-of-fame#janick-bits" class="contributor-badge">Janick Mathys</a>
+, <a href="/hall-of-fame#morganeTC" class="contributor-badge">Morgane Thomas-Chollier</a>
+
+
+</div>
+        <blockquote class="overview">
+
+            <strong><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</strong>
+            <ul>
+            
+            <li>How to do quality control of the data</li>
+            
+            </ul>
+
+            <strong><i class="fa fa-bullseye" aria-hidden="true"></i><span class="visually-hidden">objectives</span> Objectives</strong>
+            <ul>
+            
+            <li>Acquire basic knowledge of using GenePattern for data analysis</li>
+            
+            </ul>
+
+            
+
+            
+            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 30 minutes</p>
+            
+
+            
+
+
+            
+
+        </blockquote>
+
+        <div class="container" data-field="body">
+            <div class="row">
+                <div class="col-md-10" role="main">
+                    <h2 id="quality-control-of-the-data-of-the-chip-seq-training">Quality control of the data of the ChIP-Seq training</h2>
+
+<p>Use FASTQC inside GenePattern to get basic information on the data (read length, number of reads, global quality of the datasets).</p>
+
+<p>Read the GenePattern tutorial for more details on how to use GenePattern.
+The data is already present on the GenePattern server. When you open a tool in GenePattern, you will find the <strong>Add Paths or URLs button</strong> in the <strong>input files</strong> section:</p>
+
+<p><img src="../../images/GPAddPaths.png" alt="inputfiles" /></p>
+
+<p>Click the button and expand BITS trainingdata Chipseq:</p>
+
+<p><img src="../../images/GPSharedData.png" alt="inputfiles" /></p>
+
+<p>The fastq file of the control data set is also available in the shared data folder (SRR576938.2.fastq)</p>
+
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-generate-and-view-the-fastqc-report-of-srr5769332fastq-in-genepattern"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Generate and view the FASTQC report of SRR576933.2.fastq in GenePattern</h3>
+
+  <ul>
+    <li>Search for <strong>FASTQC</strong> in the <strong>Modules</strong> section and open the parameter form.</li>
+    <li>Use the fastq file from the Shared Data folder as input file.</li>
+    <li>Leave the other parameters at their default values.</li>
+    <li>Run FASTQC
+FASTQC will generate a zip file and a html file. You can open the HTML report in your browser:</li>
+    <li>Click the name of the output file at the bottom of the page.</li>
+    <li>Select <strong>Open Link</strong>
+<img src="../../images/GP18.png" alt="searchGEO" /></li>
+  </ul>
+</blockquote>
+
+<p>The only parameter you might want to change in if you work on your own data is the contaminants file. It contains a long list of known adapter sequences (see the Documentation in GenePattern). If for some reason the adapters you used are not in the list, you have to provide them as a fasta file.</p>
+
+<h3 id="question-how-many-reads-does-the-file-contain"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> How many reads does the file contain?</h3>
+
+<details class="question">
+  <summary>Check the answer.</summary>
+
+  <p>This is one of the results of the Basic statistics module in FASTQC (red):</p>
+
+  <p><img src="../../images/FASTQC9b.png" alt="fastqc9b" /></p>
+
+  <p>Knowing that it is recommended for ChIPSeq to have around 30 million reads, the number of reads in this fastq file seems very low.</p>
+</details>
+
+<h3 id="question-should-we-be-concerned-about-the-low-number-of-reads-in-the-sample"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Should we be concerned about the low number of reads in the sample?</h3>
+
+<details class="question">
+  <summary>Check the answer.</summary>
+
+  <p>No it’s not a problem because the sample comes from E. coli. This bacterium has a very small genome so 3 million reads will still generate high coverage. However, if this was a human or mouse sample the number of reads would be way too low and we would indeed be concerned.</p>
+
+</details>
+
+<h3 id="question-what-is-the-length-of-the-reads"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> What is the length of the reads?</h3>
+
+<details class="question">
+  <summary>Check the answer.</summary>
+
+  <p>This is one of the results of the Basic statistics module in FASTQC (green):</p>
+
+  <p><img src="../../images/FASTQC9b.png" alt="fastqc9b" /></p>
+
+  <p>Again, you see that the data set consists of very short reads although this data set is very recent. This is because it has been shown that elongating the reads does not improve your results in ChIP-Seq analysis. It will just cost you more money.</p>
+
+</details>
+
+<h3 id="question-are-there-any-positions-with-low-sequence-quality"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Are there any positions with low sequence quality?</h3>
+
+<details class="question">
+  <summary>Check the answer.</summary>
+
+  <p>This is shown in the Per base sequence quality module in FASTQC:</p>
+
+  <p><img src="../../images/FASTQC11b.png" alt="fastqcpositions" /></p>
+
+  <p>The overall sequence quality is good, although it drops sharply at the last position, but this is normal in Illumina data, so this feature is not raising hard concerns.</p>
+
+</details>
+
+<h3 id="question-what-could-be-the-cause-of-the-failure-in-the-per-base-sequence-content-plot"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> What could be the cause of the failure in the per base sequence content plot?</h3>
+
+<details class="question">
+  <summary>Check the answer.</summary>
+
+  <p>The content of the 4 nucleotides is far from constant over all positions:</p>
+
+  <p><img src="../../images/FASTQC12b.png" alt="fastqcadapters" /></p>
+
+  <p>This typically point the presence of adapter or other contaminating sequences in your reads.</p>
+
+</details>
+
+<h3 id="question-which-fastqc-module-allows-you-to-confirm-this-suspicion"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Which FASTQC module allows you to confirm this suspicion?</h3>
+
+<details class="question">
+  <summary>Check the answer.</summary>
+
+  <p>The <strong>Overrepresented sequences</strong> module will show if your read file is enriched in known contaminants.</p>
+
+</details>
+
+<h3 id="question-what-does-this-module-tell-you"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> What does this module tell you?</h3>
+
+<details class="question">
+  <summary>Check the answer.</summary>
+
+  <p>The <strong>Overrepresented sequences</strong> module shows a high percentage of adapter sequencess (29% !).</p>
+
+  <p><img src="../../images/FASTQC13b.png" alt="fastqcadapters" /></p>
+
+  <p>Again you see that adapter contamination is a frequently occurring problem of Illumina NGS data.</p>
+
+</details>
+
+<h3 id="question-what-about-sequence-duplication-levels"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> What about sequence duplication levels?</h3>
+
+<details class="question">
+  <summary>Check the answer.</summary>
+
+  <p>There is sequence duplication. Adapter contamination will be partly responsible for the high duplication levels (the blue peaks at the far right of the plot) but the main cause lies in the technique itself. Typically, after ChIP, you end up with a very small initial amount of DNA (antibodies are not that effective, many cleanup steps in the protocol,…) and you have to do PCR to get your library up to a proper size for sequencing. So naturally, you expect many clones of the same DNA fragment due to the small initial size of the library.</p>
+
+  <p><img src="../../images/FASTQC17b.png" alt="fastqcadapters" /></p>
+
+</details>
+
+<p>Now do the same for the control data set: <strong>SRR576938.2.fastq</strong>.</p>
+
+<p>In theory one expects that regions with high read count in the ChIP sample represent the regions that were enriched by the immunoprecipitation, i.e. the regions that were bound to the protein. However many studies have shown that the read count is affected by many factors, including GC content, mappability, chromatin structure, copy number variations… To account for these biases, a control sample is used consisting of fragmented genomic DNA that was not subjected to immunoprecipitation or that was precipitated using a non-specific antibody.</p>
+
+<h3 id="question-how-many-reads-does-the-control-data-set-contain"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> How many reads does the control data set contain?</h3>
+
+<details class="question">
+  <summary>Check the answer.</summary>
+
+  <p>This is one of the results of the <strong>Basic statistics</strong> module in FASTQC. You see that the control data set contains the double amount of reads as the ChIP data set.</p>
+
+  <p>The ChIP and control samples are usually sequenced at different depths, generating files with different total number of reads. This means that these two samples have to be made comparable later on in the analysis by normalization (see ChIP-Seq training).</p>
+
+</details>
+
+<h3 id="question-what-is-the-length-of-the-reads-in-the-control-data-set"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> What is the length of the reads in the control data set?</h3>
+
+<details class="question">
+  <summary>Check the answer.</summary>
+
+  <p>This is one of the results of the <strong>Basic statistics</strong> module in FASTQC. You see that the control data set contains reads of 36 bases just like the ChIP data set.</p>
+</details>
+
+<h3 id="question-are-there-any-positions-with-low-sequence-quality-1"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Are there any positions with low sequence quality?</h3>
+
+<details class="question">
+  <summary>Check the answer.</summary>
+
+  <p>This is shown in the Per base sequence quality module in FASTQC:</p>
+
+  <p><img src="../../images/FASTQC14b.png" alt="fastqc9b" /></p>
+
+  <p>The overall sequence quality is good, although it drops sharply at the last position, but this is normal in Illumina data, so this feature is not raising hard concerns.</p>
+
+</details>
+
+<h3 id="question-why-did-the-per-base-sequence-quality-plot-raise-a-failure-in-the-chip-sample-and-not-in-the-control"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Why did the per base sequence quality plot raise a failure in the ChIP sample and not in the control?</h3>
+
+<details class="question">
+  <summary>Check the answer.</summary>
+
+  <p>In the slides you can see that the thresholds for a warning are:</p>
+
+  <ul>
+    <li>end of box &lt; 10</li>
+    <li>median &lt; 25</li>
+  </ul>
+
+  <p><img src="../../images/FASTQC14c.png" alt="fastqcpositions" /></p>
+
+  <p>On the figure you see that the culprit is the median:</p>
+
+  <ul>
+    <li>In the ChIP sample the median Phred score of the last position is 21 (so below 25) raising a failure</li>
+    <li>In the control sample the median Phred score of the last position is 26 (so above 25)</li>
+  </ul>
+
+</details>
+
+<h3 id="question-which-fastqc-module-gives-a-failure"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Which FASTQC module gives a failure?</h3>
+
+<details class="question">
+  <summary>Check the answer.</summary>
+
+  <p>The <strong>Per tile sequence quality</strong> module. The quality of one of the tiles is consistently different from the rest of the tiles</p>
+
+  <p><img src="../../images/FASTQC15b.png" alt="fastqcadapters" /></p>
+
+</details>
+
+<h3 id="question-is-this-also-the-case-in-the-chip-sample"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Is this also the case in the ChIP sample?</h3>
+
+<details class="question">
+  <summary>Check the answer.</summary>
+
+  <p>Yes, you see exactly the same problem in the ChIP sample. Since both samples were probably loaded on the same lane, it seems normal that you see the same problem in the ChIP sample.</p>
+
+  <p><img src="../../images/FASTQC15c.png" alt="fastqcadapters" /></p>
+
+</details>
+
+<h3 id="question-why-does-the-sequence-duplication-levels-modules-give-a-failure-in-the-control-sample"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Why does the Sequence duplication levels modules give a failure in the control sample?</h3>
+
+<details class="question">
+  <summary>Check the answer.</summary>
+
+  <p>The duplication levels in the control data set are high.</p>
+
+  <p><img src="../../images/FASTQC15d.png" alt="fastqcadapters" /></p>
+
+  <p>There are a high number of sequences with low duplication levels which could be due to high coverage. Remember that you are working with E. coli which has a small genome.</p>
+
+</details>
+
+<h3 id="estimation-of-coverage">Estimation of coverage</h3>
+
+<p>Knowing your organism size is important to evaluate if your data set has sufficient coverage to continue your analyses, e.g. for the human genome (3 Gb), 10 million reads are considered sufficient.</p>
+
+<h3 id="question-what-is-the-size-of-the-genome-of-the-e-coli-k-12-strain-substr-mg1655"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> What is the size of the genome of the E. coli K-12 strain substr. MG1655??</h3>
+
+<details class="question">
+  <summary>Check the answer.</summary>
+
+  <ul>
+    <li>Go to the <a href="http://www.ncbi.nlm.nih.gov/">NCBI website</a></li>
+    <li>Select the <strong>Genome</strong> database to search in</li>
+    <li>Type <strong>Escherichia coli</strong> in the search term box</li>
+    <li>Click <strong>Search</strong></li>
+  </ul>
+
+  <p><img src="../../images/Genome2.png" alt="fastqcadapters" /></p>
+
+  <p>The genome is 4.64 Mbase.</p>
+
+</details>
+
+<p>The FASTQC report has shown that the fastq files of the ChIP and control sample contain 3.6 and 6.7 million reads respectively. As you aim for 10 million reads for 3 Gb in human, we can assume that these data sets contain enough reads for proper analysis.</p>
+
+
+
+                    
+                    <blockquote class="key_points">
+                        <h3><i class="fa fa-key" aria-hidden="true"></i><span class="visually-hidden">keypoints</span> Key points</h3>
+
+                        <ul>
+                            
+                            <li>GenePattern</li>
+                            
+                            <li>Quality control</li>
+                            
+                            <li>ChIP-seq</li>
+                            
+                        </ul>
+                    </blockquote>
+                    
+
+                    
+                    <h1 data-toc-skip>Useful literature</h1>
+                    <p>Further information, including links to documentation and original publications, regarding the tools, analysis techniques and the interpretation of results described in this tutorial can be found <a href="/topics/chip-seq#references">here</a>.</p>
+                    
+
+                    
+
+                </div>
+                <!-- sidebar, which will be hidden on a small screen -->
+                <nav class="col-md-2 sticky-toc bs-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary" id="toc" data-toggle="toc"></nav>
+            </div>
+        </div>
+
+        <h3><i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
+
+        
+
+        
+
+</div>
+</div>
+</div>
+<footer>
+   <div class="well row">
+       <div class="col-md-2 text-center" style="padding: 25px 20px 25px 20px;">				
+         <a href="https://www.bits.vib.be" target="_blank"><img src="/assets/images/bioinformatics_core_rgb_neg.png" width="200"></a>
+       </div>
+       <div class="col-md-8 text-center" style="padding-top: 20px;">	
+        <a href="https://github.com/vibbits/training-material" title="View on GitHub" class="margin20" target="_blank">
+                            <i class="fa fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> View on GitHub
+                        </a>
+       </div>
+       <div class="col-md-2 text-center" style="padding-top: 30px;">
+         <span class="slogan"><br>SCIENCE MEETS LIFE</span>
+       </div>
+   </div>
+</footer>
+
+
+</body>
+<script type="text/javascript" src="/assets/js/jquery.slim.min.js"></script>
+<script type="text/javascript" src="/assets/js/popper.min.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.min.js?v=3"></script>
+<script type="text/javascript" src="/assets/js/details-element-polyfill.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" src="/assets/js/bootstrap-toc.min.js"></script>
+<script type="text/javascript" src="/assets/js/main.js"></script>
+<script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
+<script type="text/javascript">
+    var snippets = document.querySelectorAll('div.highlight');
+    [].forEach.call(snippets, function(snippet) {
+        snippet.firstChild.insertAdjacentHTML('beforebegin', '<button class="btn btn-light" data-clipboard-snippet><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+    });
+
+    var clipboardSnippets = new ClipboardJS('[data-clipboard-snippet]', {
+        target: function(trigger) {
+            return trigger.nextElementSibling;
+        }
+    });
+</script>
+
+</html>

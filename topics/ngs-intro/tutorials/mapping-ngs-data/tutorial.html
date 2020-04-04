@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="dw_1zBYRNxF7-vYNDXh3Ght_JuqgJt3BD1N_Pynqmv0" />
+    <title>03 Mapping of NGS data</title>
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-61194136-18', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=3">
+    <link rel="stylesheet" href="/assets/css/bootstrap-toc.min.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="/assets/css/main.scss">
+    <link rel="stylesheet" href="/assets/css/VIB.css">
+    <link rel="stylesheet" href="/assets/css/academicons.css">
+    <link rel="stylesheet" href="/assets/css/syntax_highlighting.css">
+    <link rel="shortcut icon" href="/favicon.ico " type="image/x-icon" />     
+    <meta name="description" content="Collection of tutorials developed and maintained by the V..." />
+    <meta property="og:title" content="VIB Bioinformatics Training: 03 Mapping of NGS data" />
+    <meta property="og:description" content="Collection of tutorials developed and maintained by the V..." />
+    <meta property="og:image" content="/assets/images/bioinformatics_core_rgb_neg.png" />
+</head>
+
+<body data-spy="scroll" data-target="#toc">
+    <div class="top-bar-vib">
+ <a href="http://vib.be/en" target="_blank" style="font-size:14px">VIB Home </a>
+</div>
+
+<div class="container main-content">
+
+<div class="container page-top__container">
+          <div class="region region-top">
+  <div id="logo" class="col-md-3 col-lg-3 text-left" style="padding-left:0px;margin-top:20px">
+       <a href="/">
+           <img src="/assets/images/logo.svg" height="60" alt="VIB logo" class="margin20">
+       </a>
+    </div>
+    <div class="col-md-9 col-lg-9 text-right" style="margin-top:50px;">
+    <nav role="navigation" aria-labelledby="block-mainnavigation-menu" id="block-mainnavigation" class="block block-menu navigation menu--main">
+  
+
+
+        <a href="/" class="topmenu">Home</a>
+
+
+        <a href="/about.html" class="topmenu" >About</a>
+
+
+        <a href="/hall-of-fame.html" class="topmenu">Contribute</a>
+
+
+        <a href="/faq.html" class="topmenu">Faq</a>
+
+
+        <a href="/search/index.html" class="topmenu">Search</a>
+
+
+  </nav>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="application/ld+json">
+        
+
+
+{}
+    </script>
+
+    <div class="row tutorial">
+      <div class="col-md-12" role="main">
+        <h1 data-toc-skip>03 Mapping of NGS data</h1>
+        <div class="contributors-line">By: 
+
+<a href="/hall-of-fame#janick-bits" class="contributor-badge">Janick Mathys</a>
+
+
+</div>
+        <blockquote class="overview">
+
+            <strong><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</strong>
+            <ul>
+            
+            <li>Download the data from GEO or ENA</li>
+            
+            </ul>
+
+            <strong><i class="fa fa-bullseye" aria-hidden="true"></i><span class="visually-hidden">objectives</span> Objectives</strong>
+            <ul>
+            
+            <li>Basic knowledge of downloading data from GEO or ENA</li>
+            
+            </ul>
+
+            
+
+            
+            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 15 minutes</p>
+            
+
+            
+
+
+            
+
+        </blockquote>
+
+        <div class="container" data-field="body">
+            <div class="row">
+                <div class="col-md-10" role="main">
+                    <p>After quality control, the next step is to align the reads to a reference sequence. 
+The reference is in most cases the full genome sequence but sometimes, a library of EST sequences is used. In either way, aligning your reads to a reference sequence is called mapping.
+The most used mappers are <a href="http://bio-bwa.sourceforge.net/">BWA</a> and <a href="http://bowtie-bio.sourceforge.net/bowtie2/index.shtml">Bowtie</a> <strong>for DNA-Seq data</strong> and <a href="http://tophat.cbcb.umd.edu/">Tophat</a> , <a href="https://github.com/alexdobin/STAR">STAR</a> , <a href="http://bioinformatics.oxfordjournals.org/content/early/2012/10/25/bioinformatics.bts635">STAR article</a> , or <a href="http://www.ccb.jhu.edu/software/hisat/index.shtml">HISAT2</a> <strong>for RNA-Seq data</strong>.
+Mappers differ in methodology, parameters, how fast and how accurate they are and whether they tolerate spliced alignments or not (relevant for RNA-Seq). Bowtie is faster than BWA, but looses some sensitivity (does not map an equal amount of reads to the correct position in the genome as BWA). BWA and Bowtie cannot align spliced reads while Tophat, STAR and HISAT2 can.
+At the moment STAR is the most popular RNASeq mapper and HISAT2 is being pushed over TopHat.</p>
+
+<h2 id="mapping-in-galaxy">Mapping in Galaxy</h2>
+
+<p>Links:</p>
+<ul>
+  <li><a href="https://usegalaxy.eu/u/janick/h/cleandatamapped">Mapped data for Arabidopsis in the European Galaxy</a></li>
+  <li><a href="https://www.ncbi.nlm.nih.gov/pubmed/10454621">paper on intron sizes in various organisms</a></li>
+  <li><a href="https://usegalaxy.eu/u/janick/h/ecolisorted">Sorted and indexed data for <em>E.coli</em> in the European Galaxy</a></li>
+  <li><a href="http://data.bits.vib.be/pub/trainingen/NGSIntro/EcoliK12.fasta">fasta file containing the E.coli K12 genome</a></li>
+  <li><a href="http://bowtie-bio.sourceforge.net/manual.shtml">Bowtie manual</a></li>
+</ul>
+
+<h3 id="running-rna-star-in-galaxy">Running RNA STAR in Galaxy</h3>
+
+<p>STAR has a large number of parameters, we’ll give an overview of the most important ones:</p>
+<ul>
+  <li><strong>Single end or paired end data</strong>: the parameters you have to set will adjust accordingly</li>
+  <li><strong>RNASeq Fastq file</strong>: STAR automatically detects files it can use as input, select the file you want to map.</li>
+  <li><strong>Custom or built-in reference genome</strong>: many reference genomes are built-in in Galaxy just select the correct organism from the list of reference genomes.</li>
+  <li><strong>Length of the genomic sequence around annotated junctions</strong>: the default is 100 but the ideal value is <strong>read length-1</strong>.</li>
+  <li><strong>Count number of reads per gene</strong>: map reads and create a count table (table with counts of how many reads map to each gene).</li>
+  <li><strong>Would you like to set output parameters (formatting and filtering)?</strong>: in most cases <strong>yes</strong> because the default settings will most likely not be ideal for your data</li>
+  <li><strong>Would you like to set additional output parameters (formatting and filtering)?</strong>: in most cases <strong>yes</strong> because the default settings will most likely not be ideal for your data</li>
+  <li><strong>Would you like unmapped reads included in the SAM?</strong>: by default STAR does not save the unmapped reads, so if you want to analyze them (BLAST…) you need to change this setting.</li>
+  <li><strong>Maximum number of alignments to output a read’s alignment results, plus 1</strong>: default is 10 meaning that reads that map to more than 10 locations in the genome are excluded from the results.  Multimappers are common when you map short reads. What to do with them is a complicated issue. You could use them to represent expression of whole classes/families of RNAs (e.g. transposons, gene families…). It can be useful to have two separate files: one for unique mappers and one for multimappers.</li>
+  <li><strong>Maximum number of mismatches to output an alignment, plus 1</strong>: maximum number of mismatches for a read (single-end) or a pair of reads (paired-end). Default is 10. The value you should choose is dependent on the read length. For short quality trimmed reads you typically allow 5% mismatches.</li>
+  <li><strong>Maximum ratio of mismatches to read length</strong>: how many mismatches you allow in the alignment (number is represented as a fraction of the total read length). Typically you choose 0.05 (= 5%) but this depends on the quality of the reads. In case of reads with many sequencing errors you need to increase the fraction of mismatches you allow.</li>
+  <li><strong>Other parameters (seed, alignment, limits and chimeric alignment)</strong>: choose <strong>extended parameter list</strong> because the default settings will most likely not be ideal for your data</li>
+  <li><strong>Alignment parameters: Maximum intron size</strong>: maximum distance between reads from a pair when mapped to the genome.</li>
+  <li><strong>Two-pass mode: Use two pass mode to better map reads to unknown splice junctions</strong>: for the most accurate mapping, you should run STAR in 2-pass mode. It allows to detect more reads mapping to novel splice junctions. The basic idea is to run STAR with standard parameters, then collect the junctions detected in this first pass, and use them as annotated junctions for the second pass mapping.</li>
+  <li><strong>Parameters related to chimeric reads</strong>: chimeric reads occur when one read aligns to two distinct portions of the genome. In RNA-Seq chimeric reads may indicate the presence of chimeric genes. Many chimeric genes form through errors in DNA replication or DNA repair so that pieces of two different genes are combined. Chimeric genes can also occur when a retrotransposon accidentally copies the transcript of a gene and inserts it into the genome in a new location. Depending on where the new retrogene appears, it can produce a chimeric gene…</li>
+</ul>
+
+<p>Click <strong>Execute</strong> to start the mapping.</p>
+
+<p>STAR produces 3 result files:</p>
+<ul>
+  <li><strong>bam</strong> file containing all alignments (multimappers, reads that map to multiple locations, are printed at each location)</li>
+  <li><strong>tab</strong> file containing all detected splice junctions</li>
+  <li><strong>log</strong> file containing mapping statistics</li>
+</ul>
+
+<h3 id="running-bowtie-for-illumina--bowtie1-in-galaxy">Running Bowtie for Illumina (= Bowtie1) in Galaxy</h3>
+
+<p>This is an overview of the main parameters:</p>
+<ul>
+  <li><strong>Will you select a reference genome from your history or use a built-in index?</strong> Galaxy has many built-in genomes for Bowtie 1 but you can also use a fasta file from the history when the organism you work is not supported.</li>
+  <li><strong>Is this library mate-paired?</strong> single end or paired end ?</li>
+  <li><strong>FASTQ file</strong> Galaxy will automatically detect potential input files, select the file you want to use as input.</li>
+  <li><strong>Bowtie settings to use</strong> ask for full parameter list since the defaults are most likely not ideal for your data</li>
+  <li><strong>Trim n bases from high-quality (left) end of each read before alignment (-5)</strong> trim bases from high-quality (left) end of each read before alignment, default is 0.</li>
+  <li><strong>Trim n bases from low-quality (right) end of each read before alignment (-3)</strong> trim bases from low-quality (right) end of each read before alignment, default is 0.</li>
+  <li><strong>Alignment mode</strong> when the default -n option is used, bowtie determines which alignments are valid according to the following policy: alignments may have no more than n mismatches (where n is a number 0-3, set with <strong>Maximum number of mismatches permitted in the seed (-n)</strong>) in the first l bases (where l is a number 5 or greater, set with <strong>Seed length (-l)</strong>) on the high-quality (left) end of the read. The first l bases are called the “seed”. The sum of the Phred quality scores at all mismatched positions (not just in the seed) may not exceed e (set with <strong>Maximum permitted total of quality values at all mismatched read positions (-e)</strong>).
+In -v mode, alignments may have no more than v mismatches, where v may be a number from 0 through 3 set using the <strong>Maximum number of mismatches (-v)</strong> option. Quality values are ignored.</li>
+  <li><strong>Suppress all alignments for a read if more than n reportable alignments exist (-m)</strong>  default is no limit. Bowtie is designed to be very fast for small -m but can become significantly slower for larger values of -m</li>
+</ul>
+
+<h3 id="download-mapping-results-from-galaxy">Download mapping results from Galaxy</h3>
+
+<p>Click the name of the file containing the sorted alignments in the history.
+Click the <strong>download</strong> button at the bottom of the description. You should download two files: the bam file containing the mapping results and an index file (.bai) for fast access to the bam file. In Galaxy, indexing of bam files is done automatically. You need to download both files into the same folder. 
+ <img src="../../images/IGV2.png" alt="" /></p>
+
+<h2 id="mapping-in-genepattern">Mapping in GenePattern</h2>
+
+<p><strong>Links</strong>:</p>
+<ul>
+  <li><a href="https://wiki.bits.vib.be/index.php/Parameters_of_STAR">Parameters of STAR</a></li>
+  <li><a href="https://www.ncbi.nlm.nih.gov/pubmed/10454621">paper on intron sizes in various organisms</a></li>
+  <li><a href="http://data.bits.vib.be/pub/trainingen/NGSIntro/EcoliK12.fasta">fasta file containing the E.coli K12 genome</a></li>
+  <li><a href="http://bowtie-bio.sourceforge.net/manual.shtml">Bowtie manual</a></li>
+</ul>
+
+<h3 id="running-star-in-genepattern">Running STAR in GenePattern</h3>
+
+<ul>
+  <li>Search for the STAR aligner tool</li>
+  <li>Fill in the parameters of STAR, you can find a detailed description of the parameters on <a href="https://wiki.bits.vib.be/index.php/Parameters_of_STAR">this page</a></li>
+  <li>Run STAR</li>
+  <li>Store the resulting bam file in your uploads folder</li>
+  <li>View the …align_summary.txt file in your browser to get an overview of the mapping results.</li>
+</ul>
+
+<h3 id="running-bowtie_1-indexer-in-genepattern">Running Bowtie_1 indexer in GenePattern</h3>
+
+<p>Search for the Bowtie_1 indexer tool. Here’s a detailed description of the main parameters:</p>
+
+<ul>
+  <li><strong>fasta files</strong> one or several fasta files containing the DNA sequence of the genome to index.</li>
+  <li><strong>index name</strong> a name for the bowtie 1 index files.</li>
+</ul>
+
+<p>Run the indexer, it will produce 6 files:</p>
+<ul>
+  <li>
+    <index name="">.1.ebwt
+</index>
+  </li>
+  <li>
+    <index name="">.2.ebwt
+</index>
+  </li>
+  <li>
+    <index name="">.3.ebwt
+</index>
+  </li>
+  <li>
+    <index name="">.4.ebwt
+</index>
+  </li>
+  <li>
+    <index name="">.rev.1.ebwt
+</index>
+  </li>
+  <li>
+    <index name="">.rev.2.ebwt
+
+</index>
+  </li>
+</ul>
+<p>For easy handling in GenePattern Bowtie_1.indexer puts all these files in a ZIP archive, which can be given as input to Bowtie_1.aligner. Store the resulting zip file in your uploads folder.</p>
+
+<h3 id="running-picard-sortsam-in-genepattern">Running Picard SortSam in GenePattern</h3>
+
+<p>Some downstream tools cannot handle raw bam files since they are so large and chaotic, they need sorted and indexed bam files. Bam files can be sorted and indexed with samtools or Picard.</p>
+<ul>
+  <li>Search for a tool that can sort sam or bam files</li>
+  <li>Sort the file, keep the results in bam format. Sorting will add an index to the bam file (this is the .bai file that is generated)</li>
+  <li>Download the sorted bam and bai files to your computer</li>
+</ul>
+
+<h2 id="mapping-via-command-line-tools">Mapping via command line tools</h2>
+
+<p>On our Linux command line page you can find:
+<a href="http://wiki.bits.vib.be/index.php/Linux_command_line#Mapping_reads_with_Bowtie">an exercise on mapping with Bowtie</a> via the command line.</p>
+
+<p>We will handle the mapping in detail in advanced NGS trainings, so we are not going into more detail now.</p>
+
+<h2 id="visualisation-of-mapping-results-in-igv">Visualisation of mapping results in IGV</h2>
+
+<ul>
+  <li><a href="http://data.bits.vib.be/pub/trainingen/NGSIntro/GP_Athaliana.bam">bam-file for <em>Arabidopsis thaliana</em> from GenePattern</a></li>
+  <li><a href="http://data.bits.vib.be/pub/trainingen/NGSIntro/GP_Athaliana.bai">bai-file for <em>Arabidopsis thaliana</em> from GenePattern</a></li>
+  <li><a href="http://data.bits.vib.be/pub/trainingen/NGSIntro/Galaxy_Athaliana.bam">bam-file for <em>Arabidopsis thaliana</em> from Galaxy</a></li>
+  <li><a href="http://data.bits.vib.be/pub/trainingen/NGSIntro/Galaxy_Athaliana.bai">bai-file for <em>Arabidopsis thaliana</em> from Galaxy</a></li>
+  <li><a href="http://data.bits.vib.be/pub/trainingen/NGSIntro/GP_Ecoli.bam">bam-file for <em>E. coli</em> from GenePattern</a></li>
+  <li><a href="http://data.bits.vib.be/pub/trainingen/NGSIntro/GP_Ecoli.bai">bai-file for <em>E. coli</em> from GenePattern</a></li>
+  <li><a href="http://data.bits.vib.be/pub/trainingen/NGSIntro/Galaxy_Ecoli.bam">bam-file for <em>E. coli</em> from Galaxy</a></li>
+  <li><a href="http://data.bits.vib.be/pub/trainingen/NGSIntro/Galaxy_Ecoli.bai">bai-file for <em>E. coli</em> from Galaxy</a></li>
+</ul>
+
+<p>IGV needs a sorted bam file and an index (.bai) file.</p>
+
+<ul>
+  <li>Open IGV by clicking its icon on the Desktop. Be patient, it might take a few minutes for the program to start.</li>
+  <li>If necessary change the genome in IGV from <strong>Human hg19</strong> to the one you used in the mapping.</li>
+</ul>
+
+<p><img src="../../images/IGV3.png" alt="" /></p>
+<ul>
+  <li>Load the mapped reads via <strong>File</strong> in the top menu and <strong>Load from File</strong>.</li>
+</ul>
+
+<p><img src="../../images/IGV4.png" alt="" /></p>
+
+<p>Select the .bam file to open. You don’t need to load the .bai file, it’s suffcient that it is present in the same folder as the .bam file.</p>
+<ul>
+  <li>This loads the data into the center view. At this point, you can’t see the reads, you have to zoom in to view them.</li>
+  <li>To zoom in on a gene type its accession number in the top toolbar and clicking <strong>Go</strong>:</li>
+</ul>
+
+<p><img src="../../images/IGV5.png" alt="" /></p>
+
+<ul>
+  <li>Zooming in can be done using the zoom bar in the top toolbar:</li>
+</ul>
+
+<p><img src="../../images/IGV6.png" alt="" /></p>
+
+<p>The reads are represented by grey arrows, the arrow indicating the orietation of the mapping. Hovering your mouse over a read gives additional info on the mapping. The colored nucleotides indicate mismatches between the read and the reference.</p>
+
+<p>By default IGV calculates and displays the coverage track (red) for an alignment file. When IGV is zoomed to the alignment read visibility threshold (by default 30 KB), the coverage track displays the depth of the reads displayed at each locus as a gray bar chart. If a nucleotide differs from the reference sequence in greater than 20% of quality weighted reads, IGV colors the bar in proportion to the read count of each base (A, C, G, T). You can view count details by hovering the mouse over a coverage bar:</p>
+
+<p><img src="../../images/IGV8.png" alt="" /></p>
+
+<h2 id="quality-control-of-mapping-results-using-qualimap">Quality control of mapping results using Qualimap</h2>
+
+<p>Qualimap is very similar to FastQC. It has an easy-to-use user interface and works on any platform: Windows, Mac, Linux. It’s installed on the BITS laptops: you can run it by clicking the icon on the desktop.
+You can do several analyses in Qualimap: we will focus on the BAM Quality Control and the RNA-Seq Quality Control.</p>
+
+<h3 id="starting-a-bam-qc-analysis-in-qualimap">Starting a BAM QC analysis in Qualimap</h3>
+
+<ul>
+  <li><a href="http://data.bits.vib.be/pub/trainingen/NGSIntro/Arabidopsis_thaliana.TAIR10.31.gtf">gtf-file for <em>Arabidopsis thaliana</em> from Ensembl Plants</a></li>
+</ul>
+
+<p>In the top menu, expand <strong>File</strong> and select <strong>New analysis</strong> and <strong>BAM QC</strong></p>
+
+<p><img src="../../images/GP22.png" alt="" /></p>
+
+<p>A parameters form is opened.</p>
+
+<p>Select a .bam file as input file and leave all other parameters at their default setting:</p>
+
+<p><img src="../../images/GP23.png" alt="" /></p>
+
+<ul>
+  <li>With the default settings the mapping is evaluated over the full reference sequence but you can limit the evaluation to certain regions by selecting the <strong>Analyze regions</strong> option and providing a gtf file containing the regions of interest.</li>
+  <li>There are parameters for specific types of NGS experiments e.g. stranded libraries (<strong>Library strand specificity</strong>) and paired-end reads (<strong>Detect overlapping paired-end reads</strong>).</li>
+</ul>
+
+<p>A BAM Quality Control report is generated, very similar to the report that FastQC produces. Let’s take a look at some of the figures in the report:</p>
+
+<ul>
+  <li><strong>Coverage across reference</strong>: In the top figure you see the coverage (red line; average coverage in a window of a certain size) across the reference sequence. In the bottom figure you see the GC content (black line) across the reference.</li>
+  <li><strong>Coverage histograms</strong>: What percentage of the genome is not covered, covered at least once….</li>
+</ul>
+
+<h3 id="starting-a-rna-seq-qc-analysis-in-qualimap">Starting a RNA-Seq QC analysis in Qualimap</h3>
+
+<p>Specifically for RNA-Seq data you can  do a RNA-Seq QC in Qualimap. In the top menu, expand <strong>File</strong> and select <strong>New analysis</strong> and <strong>RNA-seq QC</strong></p>
+
+<p><img src="../../images/GP25.png" alt="" /></p>
+
+<p>A parameters form is opened.</p>
+
+<ul>
+  <li>You need to provide an annotation file so Qualimap knows where the exons are located on the reference sequence. This annotation file is in gtf format and can be downloaded from the Ensembl or <a href="http://ensemblgenomes.org/info/access/ftp">EnsemblGenomes</a> ftp site. GTF stands for general transfer format, used for linking features (exons, introns, genes, transcripts, repeats, mutations…) to locations in the genome.</li>
+</ul>
+
+<p><img src="../../images/GP26.png" alt="" />
+Select the .gtf file as annotation file</p>
+<ul>
+  <li>Select the .bam file as input file</li>
+  <li>Leave all other parameters at their default setting</li>
+</ul>
+
+<p><img src="../../images/GP28.png" alt="" /></p>
+
+<p>A RNA-seq Quality Control report is generated.</p>
+
+<p><em>Coverage Profile (Total)</em>: The plot shows mean coverage profile of the transcripts. All transcripts with non-zero coverage are used to calculate this plot.
+<em>Coverage Profile (Low)</em>: The plot shows mean coverage profile of 500 lowest-expressed genes.
+<em>Coverage Profile (Total)</em>: The plot shows mean coverage profile of 500 highest-expressed genes.
+<em>Coverage Histogram (0-50x)</em>: Coverage of transcripts from 0 to 50X. If certain genes have higher coverage level they are added to the last column (50X).
+<em>Junction Analysis</em>: This pie chart shows analysis of junction positions in spliced alignments. Known category represents percentage of alignments where both junction sides are known. Partly known represents alignments where only one junction side is known. All other alignments with junctions are marked as Novel.</p>
+
+<p><a href="http://data.bits.vib.be/pub/trainingen/NGSIntro/Solutions.pdf">Solutions of Group Exercises</a></p>
+
+
+
+
+                    
+                    <blockquote class="key_points">
+                        <h3><i class="fa fa-key" aria-hidden="true"></i><span class="visually-hidden">keypoints</span> Key points</h3>
+
+                        <ul>
+                            
+                            <li>SRA ID</li>
+                            
+                            <li>GEO</li>
+                            
+                            <li>ENA</li>
+                            
+                        </ul>
+                    </blockquote>
+                    
+
+                    
+
+                    
+
+                </div>
+                <!-- sidebar, which will be hidden on a small screen -->
+                <nav class="col-md-2 sticky-toc bs-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary" id="toc" data-toggle="toc"></nav>
+            </div>
+        </div>
+
+        <h3><i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
+
+        
+
+        
+
+</div>
+</div>
+</div>
+<footer>
+   <div class="well row">
+       <div class="col-md-2 text-center" style="padding: 25px 20px 25px 20px;">				
+         <a href="https://www.bits.vib.be" target="_blank"><img src="/assets/images/bioinformatics_core_rgb_neg.png" width="200"></a>
+       </div>
+       <div class="col-md-8 text-center" style="padding-top: 20px;">	
+        <a href="https://github.com/vibbits/training-material" title="View on GitHub" class="margin20" target="_blank">
+                            <i class="fa fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> View on GitHub
+                        </a>
+       </div>
+       <div class="col-md-2 text-center" style="padding-top: 30px;">
+         <span class="slogan"><br>SCIENCE MEETS LIFE</span>
+       </div>
+   </div>
+</footer>
+
+
+</body>
+<script type="text/javascript" src="/assets/js/jquery.slim.min.js"></script>
+<script type="text/javascript" src="/assets/js/popper.min.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.min.js?v=3"></script>
+<script type="text/javascript" src="/assets/js/details-element-polyfill.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" src="/assets/js/bootstrap-toc.min.js"></script>
+<script type="text/javascript" src="/assets/js/main.js"></script>
+<script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
+<script type="text/javascript">
+    var snippets = document.querySelectorAll('div.highlight');
+    [].forEach.call(snippets, function(snippet) {
+        snippet.firstChild.insertAdjacentHTML('beforebegin', '<button class="btn btn-light" data-clipboard-snippet><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+    });
+
+    var clipboardSnippets = new ClipboardJS('[data-clipboard-snippet]', {
+        target: function(trigger) {
+            return trigger.nextElementSibling;
+        }
+    });
+</script>
+
+</html>

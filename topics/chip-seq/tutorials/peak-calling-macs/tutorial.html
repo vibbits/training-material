@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="dw_1zBYRNxF7-vYNDXh3Ght_JuqgJt3BD1N_Pynqmv0" />
+    <title>05 Peak calling with MACS</title>
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-61194136-18', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=3">
+    <link rel="stylesheet" href="/assets/css/bootstrap-toc.min.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="/assets/css/main.scss">
+    <link rel="stylesheet" href="/assets/css/VIB.css">
+    <link rel="stylesheet" href="/assets/css/academicons.css">
+    <link rel="stylesheet" href="/assets/css/syntax_highlighting.css">
+    <link rel="shortcut icon" href="/favicon.ico " type="image/x-icon" />     
+    <meta name="description" content=" This training gives an introduction to ChIP-seq data ana..." />
+    <meta property="og:title" content="VIB Bioinformatics Training: 05 Peak calling with MACS" />
+    <meta property="og:description" content=" This training gives an introduction to ChIP-seq data ana..." />
+    <meta property="og:image" content="/assets/images/bioinformatics_core_rgb_neg.png" />
+</head>
+
+<body data-spy="scroll" data-target="#toc">
+    <div class="top-bar-vib">
+ <a href="http://vib.be/en" target="_blank" style="font-size:14px">VIB Home </a>
+</div>
+
+<div class="container main-content">
+
+<div class="container page-top__container">
+          <div class="region region-top">
+  <div id="logo" class="col-md-3 col-lg-3 text-left" style="padding-left:0px;margin-top:20px">
+       <a href="/">
+           <img src="/assets/images/logo.svg" height="60" alt="VIB logo" class="margin20">
+       </a>
+    </div>
+    <div class="col-md-9 col-lg-9 text-right" style="margin-top:50px;">
+    <nav role="navigation" aria-labelledby="block-mainnavigation-menu" id="block-mainnavigation" class="block block-menu navigation menu--main">
+  
+
+
+        <a href="/" class="topmenu">Home</a>
+
+
+        <a href="/about.html" class="topmenu" >About</a>
+
+
+        <a href="/hall-of-fame.html" class="topmenu">Contribute</a>
+
+
+        <a href="/faq.html" class="topmenu">Faq</a>
+
+
+        <a href="/search/index.html" class="topmenu">Search</a>
+
+
+  </nav>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="application/ld+json">
+        
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "headline": "05 Peak calling with MACS",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "/blob//LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "courseCode": "chip-seq / peak-calling-macs / hands-on",
+  "learningResourceType": "hands-on tutorial",
+  "name": "Hands-on for '05 Peak calling with MACS' tutorial",
+  "isPartOf": {
+    "@type": "Course",
+    "name": "05 Peak calling with MACS",
+    "description": "05 Peak calling with MACS",
+    "learningResourceType": "tutorial",
+    "interactivityType": "expositive",
+    "provider": {
+      "@type": "Organization",
+      "email": "bits@vib.be",
+      "name": "VIB Bioinformatics Core",
+      "url": "https://www.bits.vib.be"
+    }
+  },
+  "url": "https://material.bits.vib.be//topics/chip-seq/tutorials/peak-calling-macs/tutorial.html",
+  "timeRequired": "PT15M",
+  "description": "05 Peak calling with MACS\\nThe questions this  addresses are:\n - Download the data from GEO or ENA\n\n\\nThe objectives are:\n - Basic knowledge of downloading data from GEO or ENA\n\n",
+  "hasPart": [
+
+  ],
+  "mentions": [
+    {
+      "@type": "Thing",
+      "url": "https://data.bits.vib.be/pub/trainingen/PSA/",
+      "name": "Training data for 05 Peak calling with MACS tutorial"
+    }
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Janick Mathys"
+    },
+    {
+      "@type": "Person",
+      "name": "Morgane Thomas-Chollier"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Janick Mathys"
+    },
+    {
+      "@type": "Person",
+      "name": "Morgane Thomas-Chollier"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "ChIP-Seq analysis",
+      "description": " This training gives an introduction to ChIP-seq data analysis, covering the processing steps starting from the reads to the peaks. Among all possible downstream analyses, the practical aspect will focus on motif analyses. A particular emphasis will be put on deciding which downstream analyses to perform depending on the biological question. This training does not cover all methods available today. It does not aim at bringing users to a professional NGS analyst level but provides enough information to allow biologists understand what DNA sequencing practically is and to communicate with NGS experts for more in-depth needs.\n- Have an understanding of the nature of ChIP-Seq data - Perform a complete analysis workflow including QC, read mapping, visualization in a genome browser and peak-calling - Use the GenePattern platform for each step of the workflow and feel the complexity of the task - Have an overview of possible downstream analyses - Perform a motif analysis with online web programs\nFor this training, we will use a dataset produced by Myers et al [1] involved in the regulation of gene expression under anaerobic conditions in bacteria. We will focus on one factor: FNR. The advantage of this dataset is its small size, allowing real time execution of all steps of the dataset. ",
+      "url": "https://material.bits.vib.be//topics/chip-seq/"
+    }
+  ]
+}
+    </script>
+
+    <div class="row tutorial">
+      <div class="col-md-12" role="main">
+        <h1 data-toc-skip>05 Peak calling with MACS</h1>
+        <div class="contributors-line">By: 
+
+<a href="/hall-of-fame#janick-bits" class="contributor-badge">Janick Mathys</a>
+, <a href="/hall-of-fame#morganeTC" class="contributor-badge">Morgane Thomas-Chollier</a>
+
+
+</div>
+        <blockquote class="overview">
+
+            <strong><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</strong>
+            <ul>
+            
+            <li>Download the data from GEO or ENA</li>
+            
+            </ul>
+
+            <strong><i class="fa fa-bullseye" aria-hidden="true"></i><span class="visually-hidden">objectives</span> Objectives</strong>
+            <ul>
+            
+            <li>Basic knowledge of downloading data from GEO or ENA</li>
+            
+            </ul>
+
+            
+
+            
+            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 15 minutes</p>
+            
+
+            
+
+
+            
+
+        </blockquote>
+
+        <div class="container" data-field="body">
+            <div class="row">
+                <div class="col-md-10" role="main">
+                    <p>Using the mapping results we can define the peaks, the regions with a high density of reads in the ChIP sample, where the transcription factor was bound.
+There are multiple programs to perform the peak calling. Some are more directed towards histone marks (broad peaks) while others are specific to narrow peaks (transcription factors). Here we will use MACS because it’s known to produce generally good results, and it is well-maintained by the developer.</p>
+
+<p>MACS is installed on GenePattern. Check the documentation on GenePattern or read the manual on <a href="https://github.com/taoliu/MACS/">the MACS github</a>. Let’s see the parameters of MACS before launching the peak calling.</p>
+
+<blockquote>
+  <p>How to define the input files?<br />
+<strong>treatment</strong> and <strong>control</strong>: the treatment mapped read file (SRR576933.bam) and the control mapped read file (SRR576938.bam)</p>
+</blockquote>
+
+<p>Note that the bam files need to be sorted according to genomic location. At this point they are not, the reads are in the same order as they were in the fastq file, according to position on the flow cell.</p>
+
+<blockquote>
+  <p>Which Picard tool can we use to sort the files? 
+You can use Picard.SortSam for this.</p>
+</blockquote>
+
+<blockquote>
+  <p>Sort the bam files so that they can be used as input for MACS. 
+Use the default parameter settings.</p>
+</blockquote>
+
+<p>Let’s go over the different parameters of MACS: 
+The <strong>effective genome size</strong> is the size of the genome considered “usable” for peak calling. This value is given by the MACS developers on their website. It is smaller than the complete genome because many regions are excluded (telomeres, highly repeated regions…). The default value is for human (2700000000), so we need to change it. As the value for <i>E. coli</i> is not provided, we will take the complete genome size <strong>4639675</strong>.</p>
+
+<p>MACS needs the length of the fragments, which are longer than the read length, because the sequencer sequences only parts starting from the end of the fragments. MACS2 does this by making a model of enrichment of reads in the ChIP sample versus the background, searching pairs of peaks within a bandwidth of 300 bases with an enrichment ratio between 5 and 50. If there are not enough pairs of peaks, as is the case in our data, you can fall back on using a preset fragment length by setting the <strong>model</strong> parameter to <strong>no</strong>. The default of <strong>shift 0 extsize 200</strong> is adequate for ChIPSeq. It means that reads are extended to a length of 200 bases before they are counted.</p>
+
+<p>The <strong>duplicates</strong> specifies how MACS should treat the reads that are mapped to the exact same location (duplicates). The manual specifies that keeping only 1 representative of these “stacks” of reads is giving the best results.</p>
+
+<p>The <strong>make BedGraph</strong> parameter will output a file in BEDGRAPH format to visualize the peak profiles in a genome browser. There will be one file for the treatment, and one for the control.</p>
+
+<p><strong>FDR</strong> and <strong>FDR for broad peaks</strong> indicates that MACS will report peaks if their associated p-value is lower than the value specified here. Use a relaxed threshold as you want to keep a high number of peaks (even if some of them are false positives).</p>
+
+<blockquote>
+  <p>Perform peak calling on the sorted bam files. 
+Set the parameters as described above:</p>
+</blockquote>
+
+<ul>
+  <li>Load sorted bam files for treatment and control</li>
+  <li>Set effective genome size to 4639675</li>
+  <li>Don’t use a model</li>
+  <li>Make a bedgraph file</li>
+</ul>
+
+<p>Look at the files that were created by MACS.</p>
+
+<blockquote>
+  <p>Which files contains which information?</p>
+
+  <ul>
+    <li>macs_summits.bed: location of the summit base for each peak (BED format).If you want to find the motifs at the binding sites, this file is recommended. The file can be loaded directly to the UCSC genome browser. Remove the beginning track line if you want to analyze it by other tools.</li>
+    <li>macs_peaks.xls: peak coordinates with more information, to be opened with Excel. Information include:</li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li>chromosome name</li>
+  <li>start position of peak</li>
+  <li>end position of peak</li>
+  <li>length of peak region</li>
+  <li>absolute peak summit position</li>
+  <li>pileup height at peak summit</li>
+  <li>-log10(pvalue) for the peak summit (e.g. pvalue =1e-10, then this value should be 10)</li>
+  <li>fold enrichment for this peak summit against random Poisson distribution with local lambda</li>
+  <li>-log10(qvalue) at peak summit</li>
+</ul>
+
+<p>Coordinates in XLS is 1-based which is different from BED format.</p>
+
+<ul>
+  <li>
+    <p>MACS_peaks.narrowPeak is a BED file which contains the peak locations together with peak summit, p-value, and q-value. You can load it to the UCSC genome browser. Definition of some specific columns are:</p>
+  </li>
+  <li>5th: integer score for display. It’s calculated as int(-10<em>log10pvalue) or int(-10</em>log10qvalue) depending on whether -p (pvalue) or -q (qvalue) is used as score cutoff.</li>
+  <li>7th: fold-change at peak summit</li>
+  <li>8th: -log10pvalue at peak summit</li>
+  <li>9th: -log10qvalue at peak summit</li>
+  <li>10th: relative summit position to peak start</li>
+</ul>
+
+<p>The file can be loaded directly to the UCSC genome browser. Remove the beginning track line if you want to analyze it by other tools.</p>
+<ul>
+  <li>The MACS_treat_pileup.bdg and MACS_control_lambda.bdg files are in bedGraph format which can be imported to the UCSC genome browser or be converted into even smaller bigWig files. The MACS_treat_pileup.bdg contains the pileup signals (normalized) from the ChIP sample. The MACS_control_lambda.bdg contains local biases estimated for each genomic location from the control sample.</li>
+</ul>
+
+
+
+                    
+                    <blockquote class="key_points">
+                        <h3><i class="fa fa-key" aria-hidden="true"></i><span class="visually-hidden">keypoints</span> Key points</h3>
+
+                        <ul>
+                            
+                            <li>SRA ID</li>
+                            
+                            <li>GEO</li>
+                            
+                            <li>ENA</li>
+                            
+                        </ul>
+                    </blockquote>
+                    
+
+                    
+                    <h1 data-toc-skip>Useful literature</h1>
+                    <p>Further information, including links to documentation and original publications, regarding the tools, analysis techniques and the interpretation of results described in this tutorial can be found <a href="/topics/chip-seq#references">here</a>.</p>
+                    
+
+                    
+
+                </div>
+                <!-- sidebar, which will be hidden on a small screen -->
+                <nav class="col-md-2 sticky-toc bs-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary" id="toc" data-toggle="toc"></nav>
+            </div>
+        </div>
+
+        <h3><i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
+
+        
+
+        
+
+</div>
+</div>
+</div>
+<footer>
+   <div class="well row">
+       <div class="col-md-2 text-center" style="padding: 25px 20px 25px 20px;">				
+         <a href="https://www.bits.vib.be" target="_blank"><img src="/assets/images/bioinformatics_core_rgb_neg.png" width="200"></a>
+       </div>
+       <div class="col-md-8 text-center" style="padding-top: 20px;">	
+        <a href="https://github.com/vibbits/training-material" title="View on GitHub" class="margin20" target="_blank">
+                            <i class="fa fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> View on GitHub
+                        </a>
+       </div>
+       <div class="col-md-2 text-center" style="padding-top: 30px;">
+         <span class="slogan"><br>SCIENCE MEETS LIFE</span>
+       </div>
+   </div>
+</footer>
+
+
+</body>
+<script type="text/javascript" src="/assets/js/jquery.slim.min.js"></script>
+<script type="text/javascript" src="/assets/js/popper.min.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.min.js?v=3"></script>
+<script type="text/javascript" src="/assets/js/details-element-polyfill.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" src="/assets/js/bootstrap-toc.min.js"></script>
+<script type="text/javascript" src="/assets/js/main.js"></script>
+<script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
+<script type="text/javascript">
+    var snippets = document.querySelectorAll('div.highlight');
+    [].forEach.call(snippets, function(snippet) {
+        snippet.firstChild.insertAdjacentHTML('beforebegin', '<button class="btn btn-light" data-clipboard-snippet><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+    });
+
+    var clipboardSnippets = new ClipboardJS('[data-clipboard-snippet]', {
+        target: function(trigger) {
+            return trigger.nextElementSibling;
+        }
+    });
+</script>
+
+</html>

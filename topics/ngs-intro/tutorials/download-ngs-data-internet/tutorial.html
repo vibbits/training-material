@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="dw_1zBYRNxF7-vYNDXh3Ght_JuqgJt3BD1N_Pynqmv0" />
+    <title>01 Downloading NGS data from the internet</title>
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-61194136-18', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=3">
+    <link rel="stylesheet" href="/assets/css/bootstrap-toc.min.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="/assets/css/main.scss">
+    <link rel="stylesheet" href="/assets/css/VIB.css">
+    <link rel="stylesheet" href="/assets/css/academicons.css">
+    <link rel="stylesheet" href="/assets/css/syntax_highlighting.css">
+    <link rel="shortcut icon" href="/favicon.ico " type="image/x-icon" />     
+    <meta name="description" content="Collection of tutorials developed and maintained by the V..." />
+    <meta property="og:title" content="VIB Bioinformatics Training: 01 Downloading NGS data from the internet" />
+    <meta property="og:description" content="Collection of tutorials developed and maintained by the V..." />
+    <meta property="og:image" content="/assets/images/bioinformatics_core_rgb_neg.png" />
+</head>
+
+<body data-spy="scroll" data-target="#toc">
+    <div class="top-bar-vib">
+ <a href="http://vib.be/en" target="_blank" style="font-size:14px">VIB Home </a>
+</div>
+
+<div class="container main-content">
+
+<div class="container page-top__container">
+          <div class="region region-top">
+  <div id="logo" class="col-md-3 col-lg-3 text-left" style="padding-left:0px;margin-top:20px">
+       <a href="/">
+           <img src="/assets/images/logo.svg" height="60" alt="VIB logo" class="margin20">
+       </a>
+    </div>
+    <div class="col-md-9 col-lg-9 text-right" style="margin-top:50px;">
+    <nav role="navigation" aria-labelledby="block-mainnavigation-menu" id="block-mainnavigation" class="block block-menu navigation menu--main">
+  
+
+
+        <a href="/" class="topmenu">Home</a>
+
+
+        <a href="/about.html" class="topmenu" >About</a>
+
+
+        <a href="/hall-of-fame.html" class="topmenu">Contribute</a>
+
+
+        <a href="/faq.html" class="topmenu">Faq</a>
+
+
+        <a href="/search/index.html" class="topmenu">Search</a>
+
+
+  </nav>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="application/ld+json">
+        
+
+
+{}
+    </script>
+
+    <div class="row tutorial">
+      <div class="col-md-12" role="main">
+        <h1 data-toc-skip>01 Downloading NGS data from the internet</h1>
+        <div class="contributors-line">By: 
+
+<a href="/hall-of-fame#janick-bits" class="contributor-badge">Janick Mathys</a>
+
+
+</div>
+        <blockquote class="overview">
+
+            <strong><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</strong>
+            <ul>
+            
+            <li>Download the data from GEO or ENA</li>
+            
+            </ul>
+
+            <strong><i class="fa fa-bullseye" aria-hidden="true"></i><span class="visually-hidden">objectives</span> Objectives</strong>
+            <ul>
+            
+            <li>Basic knowledge of downloading data from GEO or ENA</li>
+            
+            </ul>
+
+            
+
+            
+            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 15 minutes</p>
+            
+
+            
+
+
+            
+
+        </blockquote>
+
+        <div class="container" data-field="body">
+            <div class="row">
+                <div class="col-md-10" role="main">
+                    <h3 id="introduction">Introduction</h3>
+
+<h4 id="ngs-data-repositories">NGS data repositories</h4>
+
+<p>First of all, you need data to analyze. You can generate your own data but there’s a lot of NGS data available on the internet.</p>
+
+<p>The main repositories for NGS data:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>{</th>
+      <th>class=”wikitable”</th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+    <tr>
+      <th> </th>
+      <th>align=”center” style=”background:#f0f0f0;”</th>
+      <th>’’’’’’</th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+    <tr>
+      <th> </th>
+      <th>align=”center” style=”background:#f0f0f0;”</th>
+      <th>’'’NCBI - US’’’</th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+    <tr>
+      <th> </th>
+      <th>align=”center” style=”background:#f0f0f0;”</th>
+      <th>’'’EBI - Europe’’’</th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td>Close-by so faster downloads</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td>’'’Gene expression database’’’</td>
+      <td> </td>
+      <td>[http://www.ncbi.nlm.nih.gov/geo/ GEO]</td>
+      <td> </td>
+      <td>[http://www.ebi.ac.uk/arrayexpress ArrayExpress]</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td>Contain processed NGS data, no raw data</td>
+      <td> </td>
+      <td>ID starts with G</td>
+      <td> </td>
+      <td>ID starts with E-</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td>’'’NGS sequence database’’’</td>
+      <td> </td>
+      <td>[http://www.ncbi.nlm.nih.gov/sra SRA]</td>
+      <td> </td>
+      <td>[http://www.ebi.ac.uk/ena ENA]</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td>Contain raw NGS data</td>
+      <td> </td>
+      <td>ID starts with SR</td>
+      <td> </td>
+      <td>ID starts with ER</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td>ENA IDs also used by SRA</td>
+      <td> </td>
+      <td>SRA IDs also used by ENA</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td>stores reads in sra format</td>
+      <td> </td>
+      <td>stores reads in fastq format</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>}</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Both GEO and SRA use multiple types of IDs, ordered according to a certain hierarchy:</p>
+
+<p>{|class=”wikitable”
+| align=”center” style=”background:#f0f0f0;”|’'’GEO ID’’’
+| align=”center” style=”background:#f0f0f0;”|’'’points to’’’
+| align=”center” style=”background:#f0f0f0;”|’'’definition’’’
+|-
+|ID starts with GSE||experiment||Data of a full NGS experiment consisting of multiple samples The samples belong to different groups that are to be compared e.g. treated and control samples
+|-
+|ID starts with GSM||sample||Data of one single sample 
+|-
+| align=”center” style=”background:#f0f0f0;”|’'’SRA ID’’’
+| align=”center” style=”background:#f0f0f0;”|’'’points to’’’
+| align=”center” style=”background:#f0f0f0;”|’'’definition’’’
+|-
+|ID starts with SRP||study||Studies have an overall goal and may comprise several experiments. 
+|-
+|ID starts with SRX||experiment||An Experiment describes what was sequenced and the method used.
+Info on the source of the DNA, samples, sequencing platform and the processing of the data. 
+|-
+|ID starts with SRR||run||Data of a particular sequencing experiment.
+Experiments may contain many runs depending on the number of instrument runs that were needed.
+|}</p>
+
+<p>There are two other resources of NGS data:</p>
+
+<ul>
+  <li>[https://insilicodb.org/ In Silico DB] from the ULB <ref name="insilicoDB">https://insilicodb.org/</ref></li>
+  <li>[http://www.illumina.com/science/data_library.ilmn Illumina’s NGS data library] <ref name="Illumina Sequence Data Library">http://www.illumina.com/science/data_library.ilmn</ref></li>
+</ul>
+
+<p>If you have an article describing an NGS dataset that is of interest to you, you should search in the article for a sentence mentioning the ID of the data in one of these databases.</p>
+
+<h4 id="metadata-of-ngs-data-sets">Metadata of NGS data sets</h4>
+
+<p>You do not only need the data, you also need extra inforrmation to be able to do the analysis. For instance, you need to know where each sample comes from: in clinical datasets it is important to know if the reads are coming from a patient or from someone in the control group…
+This kind of information is called metadata and is stored together with the actual data.</p>
+
+<h3 id="exercise-1-downloading-a-data-set-for-the-introduction-training">Exercise 1: Downloading a data set for the introduction training</h3>
+
+<p>For the introduction training we will use a data set containing short Illumina reads from <em>Arabidopsis thaliana</em> infected with a pathogen, <em>Pseudomonas syringae</em>, versus mock treated controls. The data set is described in <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3188579/">the article of Cumbie et al., 2011</a>.</p>
+
+<p>The authors provide an ArrayExpress ID (<strong>E-GEOD-25818</strong>) in the section <strong>Analysis of a pilot RNA-Seq experiment</strong>, but this ID points to Affymetrix microarray data and not to NGS data:
+Go to <a href="https://www.ebi.ac.uk/arrayexpress/">the ArrayExpress home page</a></p>
+
+<blockquote>
+  <p>Find the description of the experiment with ArrayExpress ID E-GEOD-25818 ?
+|-
+|</p>
+  <ul>
+    <li>Type the ID in the search box on the ArrayExpress home page</li>
+    <li>Click <strong>Search</strong></li>
+  </ul>
+</blockquote>
+
+<p>You see that the experiment is stored as a <strong>Transcription profiling by array</strong> experiment (red) and that <strong>Affymetrix GeneChip Arabidopsis Genome [ATH1-121501]</strong> is the platform that was used (green).</p>
+<ul>
+  <li>Click the <strong>Click for detailed sample information and links to data</strong> link (blue)</li>
+</ul>
+
+<p>You see that you will download .CEL files, the file type for storing raw Affymetrix <strong>microarray</strong> data.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>}</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Fortunately I could find the data in NCBI’s SRA database, so we know the SRA ID. Since the connection with NCBI is too slow, we will do the download from ENA using the SRA ID.</p>
+
+<p>Go to <a href="http://www.ebi.ac.uk/">the EBI website</a>.</p>
+
+<blockquote>
+  <p>Download the data set with SRA ID SRR074262 from ENA ?</p>
+</blockquote>
+
+<ul>
+  <li>Type <strong>SRR074262</strong> in the search box</li>
+  <li>Click <strong>Search</strong></li>
+</ul>
+
+<p>Since we are using an SRA run ID as a search term, we do a very specific search so the search returns a single SRA record:</p>
+
+<ul>
+  <li>Click the SRA run ID on the results page to go to [http://www.ebi.ac.uk/ena/data/view/SRR074262&amp;display=html the ENA record containing the actual data of the run]</li>
+  <li>Scroll to the table at the bottom of the page</li>
+  <li>Click the link in the <strong>Fastq files (ftp)</strong> column (red):</li>
+</ul>
+
+<table>
+  <tbody>
+    <tr>
+      <td>}</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>It can take some time to download the file since it’s very big. Firefox will give you an estimate on how long it’s going to take. If it takes too long, cancel the download and use the file that is already present on the BITS laptops in the <strong>/Documents/NGSdata</strong> folder as <strong>SRR074262.fastq</strong>.</p>
+
+<p>In a normal analysis we would of course download all 6 data files of this study. It’s only because of time limits that we will only use a single sample during the training. If you are analyzing the 6 samples you need to take a look at the metadata to know which samples represent controls and which samples represent the treatment (in this case treatment with a plant pathogen).</p>
+
+<p>In ENA and SRA, annotation is found in the record of the NGS study.</p>
+
+<blockquote>
+  <p>Go to the ENA record of the study the downloaded sample belongs to and look at the grouping of the samples.
+|-
+|</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p>Click the SRA ID of the study the downloaded sample belongs to (green) to access the record of the study:</p>
+  </li>
+  <li>
+    <p>Click the <strong>Select columns</strong> link on the <strong>Read files</strong> tab to visualize all the fields with metadata that you can visualize.</p>
+  </li>
+  <li>
+    <p>Deselect the fields that you are not interested in and select the fields you want to view; If you are interested in the grouping of the samples you need to select <strong>Library name</strong>(red):</p>
+  </li>
+</ul>
+
+<p>This adds a column called <strong>Library name</strong> in the table containing the grouping annotation of the samples.</p>
+<ul>
+  <li>If you want to know exactly what the names mean, you have to consult [http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0025279 the paper that describes the analysis of the data set]. In the <strong>RNA preparation and sequencing</strong> section you see that hrcC means infected with the pathogen, while MgCL2 represent the control treatment</li>
+</ul>
+
+<p>The sample that we have downloaded for the introduction training thus comes from the group of infected samples. 
+|}</p>
+
+<h3 id="exercise-2-downloading-a-data-set-for-the-chip-seq-training">Exercise 2: Downloading a data set for the ChIP-Seq training</h3>
+<p><em>Exercise created by Morgane Thomas-Chollier</em></p>
+
+<p>For the ChIP-Seq training, we are going to use the data set that is described in [http://www.ncbi.nlm.nih.gov/pubmed/23818864 the article of Myers et al., 2013] <ref>http://www.ncbi.nlm.nih.gov/pubmed/23818864</ref>. The article contains the following sentence at the end of the Materials and Methods section:
+“All genome-wide data from this publication have been deposited in NCBI’s Gene Expression Omnibus (GSE41195).”
+In this case <strong>GSE41195</strong> is the ID of the experiment in the GEO database.</p>
+
+<p>Go to [http://www.ncbi.nlm.nih.gov/geo/ the GEO home page]</p>
+
+<blockquote>
+  <p>Download the data of the experiment with GEO ID GSE41195 ?
+|-
+|</p>
+  <ul>
+    <li>Type the ID in the search box on the GEO home page</li>
+    <li>Click <strong>Search</strong></li>
+  </ul>
+</blockquote>
+
+<p>This redirects you to the GEO record of the experiment.</p>
+
+<p>In the <strong>Experiment type</strong> section you can see that this GEO record is a mixture of expression analysis and ChIP-Seq.</p>
+<ul>
+  <li>Scroll to the bottom of the page:</li>
+</ul>
+
+<p>You can see that the data of the ChIP-Seq experiment have their own identifier: GSE41187</p>
+
+<ul>
+  <li>Click the ChIP-Seq data identifier.
+This brings us on the GEO record of the ChIP-Seq experiment.</li>
+  <li>Scroll down to the <strong>Samples</strong> section:</li>
+</ul>
+
+<p>Note that GEO contains the grouping annotation here in the <strong>Samples</strong> section.
+For time’s sake, we will focus on a single sample: FNR IP ChIP-seq Anaerobic A</p>
+<ul>
+  <li>Click the ID <strong>GSM1010219</strong> of that sample to go to the GEO record of the sample</li>
+  <li>Scroll to the bottom of the page to the <strong>Relations</strong> section:</li>
+</ul>
+
+<p>GEO only contains processed NGS, no raw data. The corresponding raw data is stored in the SRA database. In the <strong>Relations</strong> section you can find the SRA ID of this data set. For the training we need a fastq file containing raw data.</p>
+<ul>
+  <li>Copy the SRA ID of the ChIP-Seq experiment (SRX189773)</li>
+</ul>
+
+<table>
+  <tbody>
+    <tr>
+      <td>}</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Again, it will take too long to download the data from NCBI. So we will do the download from EBI.</p>
+
+<p>Go to [http://www.ebi.ac.uk/ the EBI website].</p>
+
+<blockquote>
+  <p>Download the data with SRA ID SRX189773 ?
+|-
+|</p>
+  <ul>
+    <li>Type the ID in the search box on the EBI home page</li>
+    <li>Click <strong>Search</strong></li>
+  </ul>
+</blockquote>
+
+<p>This returns two results: a link to the record of the experiment and a link to the record of the run:</p>
+
+<ul>
+  <li>Click the record of the full experiment (red)</li>
+</ul>
+
+<p>The table at the bottom of the page contains a column called <strong>Fastq files (ftp)</strong></p>
+<ul>
+  <li>Click the link in this column to download the data in fastq format</li>
+</ul>
+
+<table>
+  <tbody>
+    <tr>
+      <td>}</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>It took only a few minutes to download the data on my laptop at work, but the internet connection at work will be faster than the one in the training room. Firefox will give you an estimate of the time it takes for the download. If it is too long, cancel the download and use the file that has already been downloaded and is available on the BITS laptops:</p>
+
+<ul>
+  <li>on Windows: in the <strong>/Documents/NGSdata</strong> folder as <strong>SRR576933.fastq</strong></li>
+  <li>In Linux: in the <strong>/home/bits/NGS/ChIPSeq</strong> folder as <strong>SRR576933.fastq</strong></li>
+</ul>
+
+<p>ChIP-Seq always compares the ChIP sample to a control sample, consisting of genomic DNA isolated from cells that were cross-linked and fragmented under the same conditions as the ChIP sample or of DNA fragments isolated in a “mock” ChIP reaction using an antibody that reacts with an irrelevant, non-nuclear protein.</p>
+
+<p>In this data set, control samples consist of full genomic DNA. To download a control sample, we should redo the same steps starting from the GEO record of the ChIP-Seq experiment and click the GEO sample ID of the <strong>anaerobic INPUT DNA</strong> sample… However, the fastq file is available in the same data folders (SRR576938.fastq)</p>
+
+<h3 id="downloading-data-sets-via-linux-command-line">Downloading data sets via Linux command line</h3>
+
+<p>See Linux command line training pages</p>
+
+<h3 id="downloading-data-sets-via-r">Downloading data sets via R</h3>
+
+<p><em>Exercise created by Stephane Plaisance</em></p>
+
+<p>Once you know the SRA or ENA ID of the data set you can download the data and the metadata automatically via an R script.
+See [http://wiki.bits.vib.be/index.php/NGS_RNASeq_DE_Exercise.1#Obtain_data_and_metadata_from_ENA_using_R the exercises of the RNA-Seq training] to learn how to do this.</p>
+
+
+
+                    
+                    <blockquote class="key_points">
+                        <h3><i class="fa fa-key" aria-hidden="true"></i><span class="visually-hidden">keypoints</span> Key points</h3>
+
+                        <ul>
+                            
+                            <li>SRA ID</li>
+                            
+                            <li>GEO</li>
+                            
+                            <li>ENA</li>
+                            
+                        </ul>
+                    </blockquote>
+                    
+
+                    
+
+                    
+
+                </div>
+                <!-- sidebar, which will be hidden on a small screen -->
+                <nav class="col-md-2 sticky-toc bs-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary" id="toc" data-toggle="toc"></nav>
+            </div>
+        </div>
+
+        <h3><i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
+
+        
+
+        
+
+</div>
+</div>
+</div>
+<footer>
+   <div class="well row">
+       <div class="col-md-2 text-center" style="padding: 25px 20px 25px 20px;">				
+         <a href="https://www.bits.vib.be" target="_blank"><img src="/assets/images/bioinformatics_core_rgb_neg.png" width="200"></a>
+       </div>
+       <div class="col-md-8 text-center" style="padding-top: 20px;">	
+        <a href="https://github.com/vibbits/training-material" title="View on GitHub" class="margin20" target="_blank">
+                            <i class="fa fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> View on GitHub
+                        </a>
+       </div>
+       <div class="col-md-2 text-center" style="padding-top: 30px;">
+         <span class="slogan"><br>SCIENCE MEETS LIFE</span>
+       </div>
+   </div>
+</footer>
+
+
+</body>
+<script type="text/javascript" src="/assets/js/jquery.slim.min.js"></script>
+<script type="text/javascript" src="/assets/js/popper.min.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.min.js?v=3"></script>
+<script type="text/javascript" src="/assets/js/details-element-polyfill.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" src="/assets/js/bootstrap-toc.min.js"></script>
+<script type="text/javascript" src="/assets/js/main.js"></script>
+<script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
+<script type="text/javascript">
+    var snippets = document.querySelectorAll('div.highlight');
+    [].forEach.call(snippets, function(snippet) {
+        snippet.firstChild.insertAdjacentHTML('beforebegin', '<button class="btn btn-light" data-clipboard-snippet><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+    });
+
+    var clipboardSnippets = new ClipboardJS('[data-clipboard-snippet]', {
+        target: function(trigger) {
+            return trigger.nextElementSibling;
+        }
+    });
+</script>
+
+</html>
