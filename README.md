@@ -48,6 +48,9 @@ For reference, see the [Docker documentation on publishing images](https://docs.
 We would like to thank all contributors, especially those mentioned in the [Contributors list](CONTRIBUTORS.yaml).
 
 # Remarks:
+
+**If you add a new contributor for any material, please add this person to the CONTRIBUTOR.md file so that the information needed for the Bioschemas creation is correctly parsed.**
+
 Within the conda environment `environment.yml` you can add a new topic and tutorial with 
 ```
 planemo training_init --topic_name "my-topic" --tutorial_name "my-new-tutorial2" --tutorial_title "Title of the tutorial"
