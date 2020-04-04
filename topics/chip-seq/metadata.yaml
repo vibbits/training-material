@@ -1,0 +1,44 @@
+---
+name: "chip-seq"
+type: "basics"
+category: "omics"
+title: "ChIP-Seq analysis"
+summary: "
+This training gives an introduction to ChIP-seq data analysis, covering the processing steps starting from the reads to the peaks. 
+Among all possible downstream analyses, the practical aspect will focus on motif analyses. A particular emphasis will be put on deciding 
+which downstream analyses to perform depending on the biological question. This training does not cover all methods available today. 
+It does not aim at bringing users to a professional NGS analyst level but provides enough information to allow biologists understand 
+what DNA sequencing practically is and to communicate with NGS experts for more in-depth needs.
+
+- Have an understanding of the nature of ChIP-Seq data
+- Perform a complete analysis workflow including QC, read mapping, visualization in a genome browser and peak-calling
+- Use the GenePattern platform for each step of the workflow and feel the complexity of the task
+- Have an overview of possible downstream analyses
+- Perform a motif analysis with online web programs
+
+For this training, we will use a dataset produced by Myers et al [1] involved in the regulation of gene expression under anaerobic conditions in bacteria. We will focus on one factor: FNR. The advantage of this dataset is its small size, allowing real time execution of all steps of the dataset.
+"
+
+requirements:
+
+maintainers:
+  - abotzki
+  - janick-bits
+  - morganeTC
+
+references:
+  -
+    authors: "Bailey et al. "
+    title: "Practical Guidelines for the Comprehensive Analysis of ChIP-seq Data. PLoS Comput Biol 9, e1003326 (2013)"
+    link: "http://data.bits.vib.be/pub/trainingen/NGSChIPSEQ/articles/2013_Bailey_PLoS%20Comput%20Biol.pdf"
+    summary: ""
+  -
+    authors: "Thomas-Chollier et al."
+    title: "A complete workflow for the analysis of full-size ChIP-seq (and similar) data sets using peak-motifs Nature Protocols 7, 1551–1568 (2012)"
+    link: "http://data.bits.vib.be/pub/trainingen/NGSChIPSEQ/articles/2012_Thomas-Chollier_Nature%20Protocols.pdf"
+    summary: ""
+  -
+    authors: "Kevin S Myers et al."
+    title: "Genome-scale analysis of escherichia coli FNR reveals complex features of transcription factor binding. PLoS Genet.: 2013, 9(6);e1003565"
+    link: "http://dx.doi.org/10.1371/journal.pgen.1003565"
+    summary: ""
