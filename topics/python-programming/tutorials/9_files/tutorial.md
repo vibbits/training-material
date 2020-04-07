@@ -154,6 +154,14 @@ print("Number of lines with ' C ': {}".format(lineCount))
 
 You should find 75 lines - note that in this case, for those who know the PDB format a bit, you're finding all carbon atoms.
 
+Alternatively, you can use the with() statement to open files. The example here above would then become:
+```python
+with open("data/readfile.txt") as fileHandle:
+    for line in fileHandle:
+        print(line)
+```
+This method is often used as it results in cleaner syntax.
+
 ## 9.3 Writing a file
 Writing a file is very similar, except that you have to let Python know you are writing this time by adding the `'w'` parameter in the `open()` function. Actually Python needs two arguments, however it assumes that if you only give one parameter (the file that it has to read), the other one is `'r'` which stands for *reading* mode. 
 

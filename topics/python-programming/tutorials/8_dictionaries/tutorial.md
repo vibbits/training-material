@@ -141,6 +141,11 @@ else:
     print("myDictionary doesn't have key 'B'!")
 ```
 
+However, it's much cleaner if you use the `get()` method as it doesn't return an explicit error if a key doesn't exist in your dictionary. Instead it will return a None-value. 
+```python
+type(myDictionary.get('B'))
+```
+
 ---
 
 > ### {% icon hands_on %} Exercise 8.2.1 
