@@ -20,7 +20,7 @@ contributors:
 
 ## 8.1 Introduction
 
-So far we've seen variables that store one value or a series of values (see section 5: lists, tuples and sets). There is another way of storing information where you associate one variable with another; in Python this is called a dictionary. Dictionaries provide a very useful way of quickly connecting variables to each other.
+So far we've seen variables that store one value or a series of values (see section 5: lists, tuples and sets). There is another way of storing information where you associate one value with another value; in Python this is called a dictionary. Dictionaries provide a very useful way of quickly connecting different values to each other.
 
 
 ## 8.2 Dictionary creation & usage
@@ -139,6 +139,11 @@ if 'B' in myDictionary.keys():
     print(myDictionary['B'])
 else:
     print("myDictionary doesn't have key 'B'!")
+```
+
+However, it's much cleaner if you use the `get()` method as it doesn't return an explicit error if a key doesn't exist in your dictionary. Instead it will return a `None`-value. 
+```python
+type(myDictionary.get('B'))
 ```
 
 ---
@@ -292,4 +297,3 @@ Triplicate = {
 }
 Triplicate
 ```
-

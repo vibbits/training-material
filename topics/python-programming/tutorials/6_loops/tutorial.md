@@ -319,7 +319,18 @@ for myNumber in myNumbers:
 
 
 ## 6.3 While loop
-A **while** loop is dependent on a condition, as long as this condition is evaluated as `True` the loop will continue. This is an endless loop:
+A **while** loop is dependent on a condition, as long as this condition is evaluated as `True` the loop will continue. Its structure is very similar to the for-loop we saw here above.
+
+```python
+result = 0
+while result < 10:
+    # add 1 to the result
+    result += 1
+    print(result)
+```
+
+
+This is an endless loop:
 FYI, if you execute this, you'll end up in an enternal loop. To break the loop, press stop button.
 
 
