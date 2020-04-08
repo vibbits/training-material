@@ -246,7 +246,7 @@
                 <div class="col-md-10" role="main">
                     <h2 id="81-introduction">8.1 Introduction</h2>
 
-<p>So far we’ve seen variables that store one value or a series of values (see section 5: lists, tuples and sets). There is another way of storing information where you associate one variable with another; in Python this is called a dictionary. Dictionaries provide a very useful way of quickly connecting variables to each other.</p>
+<p>So far we’ve seen variables that store one value or a series of values (see section 5: lists, tuples and sets). There is another way of storing information where you associate one value with another value; in Python this is called a dictionary. Dictionaries provide a very useful way of quickly connecting different values to each other.</p>
 
 <h2 id="82-dictionary-creation--usage">8.2 Dictionary creation &amp; usage</h2>
 
@@ -343,6 +343,10 @@
     <span class="k">print</span><span class="p">(</span><span class="n">myDictionary</span><span class="p">[</span><span class="s">'B'</span><span class="p">])</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="k">print</span><span class="p">(</span><span class="s">"myDictionary doesn't have key 'B'!"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>However, it’s much cleaner if you use the <code class="highlighter-rouge">get()</code> method as it doesn’t return an explicit error if a key doesn’t exist in your dictionary. Instead it will return a <code class="highlighter-rouge">None</code>-value.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">type</span><span class="p">(</span><span class="n">myDictionary</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'B'</span><span class="p">))</span>
 </code></pre></div></div>
 
 <hr />
@@ -477,7 +481,6 @@ identical.)</p>
 <span class="p">}</span>
 <span class="n">Triplicate</span>
 </code></pre></div></div>
-
 
 
 

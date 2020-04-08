@@ -266,7 +266,10 @@
     <span class="s">"This is some information about the silly function that will print out some silly text"</span>
     <span class="n">text</span> <span class="o">=</span> <span class="s">"Some silly text"</span>
     <span class="k">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
-<span class="n">silly_function</span><span class="p">()</span>
+</code></pre></div></div>
+<p>Notice that nothing happened now. This is because we’re not calling the function, we just defined it. In order to call the function, we use the following expression:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">silly_function</span><span class="p">()</span>
 </code></pre></div></div>
 
 <p>Information about the function can be retrieved by using the <code class="highlighter-rouge">help()</code> function.</p>
@@ -367,7 +370,7 @@
 
       <blockquote>
         <details>
-          <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+          <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution 1
 </summary>
 
           <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># string1 and string2 should be the same length.
@@ -393,6 +396,31 @@
 <span class="k">print</span><span class="p">(</span><span class="n">hamming_distance</span><span class="p">(</span><span class="n">seq1</span><span class="p">,</span><span class="n">seq2</span><span class="p">))</span>
 </code></pre></div>          </div>
         </details>
+        <details>
+          <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution 2
+</summary>
+
+          <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># string1 and string2 should be the same length.
+</span><span class="k">def</span> <span class="nf">hamming_distance</span><span class="p">(</span><span class="n">string1</span><span class="p">,</span> <span class="n">string2</span><span class="p">):</span> 
+    <span class="s">"""Return the Hamming distance between equal-length sequences."""</span>
+    
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">string1</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">string2</span><span class="p">),</span> <span class="s">"Undefined for sequences of unequal length."</span>
+    
+    <span class="c1"># Start with a distance of zero, and count up
+</span>    <span class="n">distance</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="c1"># Loop over the indices of the string
+</span>    <span class="k">for</span> <span class="n">s1</span><span class="p">,</span><span class="n">s2</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">string1</span><span class="p">,</span><span class="n">string2</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">s1</span> <span class="o">!=</span> <span class="n">s2</span><span class="p">:</span>
+             <span class="n">distance</span> <span class="o">+=</span><span class="mi">1</span>
+        <span class="k">return</span> <span class="n">distance</span>
+    <span class="c1"># Return the final count of differences
+</span>    <span class="k">return</span> <span class="n">distance</span>
+
+<span class="n">seq1</span> <span class="o">=</span> <span class="s">"GATCATAGA"</span>
+<span class="n">seq2</span> <span class="o">=</span> <span class="s">"CATCATACA"</span>
+<span class="k">print</span><span class="p">(</span><span class="n">hamming_distance</span><span class="p">(</span><span class="n">seq1</span><span class="p">,</span><span class="n">seq2</span><span class="p">))</span>
+</code></pre></div>          </div>
+        </details>
       </blockquote>
     </li>
   </ul>
@@ -400,6 +428,8 @@
 </blockquote>
 
 <hr />
+
+<p>There are several ways to solve this problem, however it might be easier to do it with the <code class="highlighter-rouge">zip()</code> function.</p>
 
 <hr />
 

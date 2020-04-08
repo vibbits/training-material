@@ -501,7 +501,16 @@ Number 3 can be divided by 1!
 </blockquote>
 
 <h2 id="63-while-loop">6.3 While loop</h2>
-<p>A <strong>while</strong> loop is dependent on a condition, as long as this condition is evaluated as <code class="highlighter-rouge">True</code> the loop will continue. This is an endless loop:
+<p>A <strong>while</strong> loop is dependent on a condition, as long as this condition is evaluated as <code class="highlighter-rouge">True</code> the loop will continue. Its structure is very similar to the for-loop we saw here above.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">result</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="c1"># add 1 to the result
+</span>    <span class="n">result</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>This is an endless loop:
 FYI, if you execute this, you’ll end up in an enternal loop. To break the loop, press stop button.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">while</span> <span class="bp">True</span><span class="p">:</span>

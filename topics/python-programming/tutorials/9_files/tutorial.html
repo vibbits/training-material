@@ -370,6 +370,13 @@ Instead of reading the lines of a file one by one, you can also do it in one go.
 
 <p>You should find 75 lines - note that in this case, for those who know the PDB format a bit, you’re finding all carbon atoms.</p>
 
+<p>Alternatively, you can use the with() statement to open files. The example here above would then become:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">"data/readfile.txt"</span><span class="p">)</span> <span class="k">as</span> <span class="n">fileHandle</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">fileHandle</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+</code></pre></div></div>
+<p>This method is often used as it does not require you to keep track of the open file in your mind, as well as clearer syntax.</p>
+
 <h2 id="93-writing-a-file">9.3 Writing a file</h2>
 <p>Writing a file is very similar, except that you have to let Python know you are writing this time by adding the <code class="highlighter-rouge">'w'</code> parameter in the <code class="highlighter-rouge">open()</code> function. Actually Python needs two arguments, however it assumes that if you only give one parameter (the file that it has to read), the other one is <code class="highlighter-rouge">'r'</code> which stands for <em>reading</em> mode.</p>
 
@@ -395,7 +402,7 @@ Instead of reading the lines of a file one by one, you can also do it in one go.
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-exercise-931"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Exercise 9.3.1</h3>
 
-  <p>Read in the file from the previous example, and write out all lines that contain ‘VAL’ to a new file.</p>
+  <p>Read in the file <code class="highlighter-rouge">TestFile.pdb</code>, and write out all lines that contain ‘VAL’ to a new file.</p>
 
   <blockquote>
     <details>
