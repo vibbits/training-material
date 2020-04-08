@@ -219,20 +219,8 @@ There are several ways to solve this problem, however it might be easier to do i
 
 ---
 
-# with zip!
-def hamming_distance(string1, string2): 
-    """Return the Hamming distance between equal-length sequences."""
-    
-    if len(string1) != len(string2):
-        raise ValueError("Undefined for sequences of unequal length.")
-    
-    # Start with a distance of zero, and count up
-    distance = 0
+There are several ways to solve this problem, however it might be easier to do it with the `zip()` function.
 
-
-seq1 = "GATCATAGA"
-seq2 = "CATCATACA"
-print(hamming_distance(seq1,seq2))
 
 
 ---
