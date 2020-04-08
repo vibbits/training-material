@@ -197,8 +197,7 @@ There are several ways to solve this problem, however it might be easier to do i
 >    > def hamming_distance(string1, string2): 
 >    >     """Return the Hamming distance between equal-length sequences."""
 >    >     
->    >     if len(string1) != len(string2):
->    >         raise ValueError("Undefined for sequences of unequal length.")
+>    >     assert len(string1) == len(string2), "Undefined for sequences of unequal length."
 >    >     
 >    >     # Start with a distance of zero, and count up
 >    >     distance = 0
@@ -371,5 +370,4 @@ MeanValue(valueList1, valueList2, valueList3, sortedList = True)
 ```
 
 Using these keywords makes the function a lot more flexible - you can make the function do things (or not) depending on them.
-
 
