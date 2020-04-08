@@ -160,7 +160,7 @@ with open("data/readfile.txt") as fileHandle:
     for line in fileHandle:
         print(line)
 ```
-This method is often used as it results in cleaner syntax.
+This method is often used as it does not require you to keep track of the open file in your mind, as well as clearer syntax.
 
 ## 9.3 Writing a file
 Writing a file is very similar, except that you have to let Python know you are writing this time by adding the `'w'` parameter in the `open()` function. Actually Python needs two arguments, however it assumes that if you only give one parameter (the file that it has to read), the other one is `'r'` which stands for *reading* mode. 
