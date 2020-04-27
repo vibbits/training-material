@@ -192,7 +192,7 @@ We've learned how to make a GitHub repository, clone it to our computer, add a f
 
 
 
-## 4 Create a new repository from your computer
+# 4. Create a new repository from your computer
 As discussed here above, you can also create a repository from your computer. The command that we use for this is:
 ```
 git init
@@ -204,8 +204,9 @@ The first thing we have to do is to make a new folder which will contain the fil
 - Open GitHub.com, create a new repository and DO NOT initialize it with a README.md, .gitignore or license. You can add that later. 
 - Go back to your Terminal and use the following commands to make a link between your local repository and the repository on GitHub: 
   ```
-  git remote add origin git@github.com:youraccount/repositoryname.git
+  git remote add origin https://github.com/<username>/<repository>.git
   ```
+  Notice that this link can also be found from the green 'Clone or download' button on GitHub.
 - Add the file(s) in your folder to the staging area, commit it and push it to GitHub with the following commands:
 ```
 git add <file>
@@ -221,6 +222,7 @@ If we use `ll` or `ls -a` we get a list of all files and directories, and we see
 
 
 Before starting with the next exercise we also want to stress the importance of not uploading data to GitHub. It's good practice to have links to data, however not the data itself. GitHub is not your next cloud storage instance. 
+
 ---
 
 > ### {% icon hands_on %} Exercise 3
@@ -236,3 +238,13 @@ Before starting with the next exercise we also want to stress the importance of 
 >
 {: .hands_on}
 ---
+
+
+# 5. The strength of the staging area
+Now you're probably wondering why it's useful to have that many steps to save a file (add, commit, push). We will give a practical example based on the figure below: 
+
+<center><img src="../../images/staging_area.PNG" /></center>
+
+Imagine that you're working on a project with multiple Python scripts and you're working on all of them. In this case your folder in your development area contains the files  `scriptA.py`, `scriptB.py` and `scriptC.py`. The changes that you made in script A and script C are somehow related, but script B is not. It's good practice to make commits in which changes that are related to each other are bundled. Hence, in this case we want to make one commit with the changes from file A and C. Now we can simply add scripts A and C to the staging area and commit it. The changes in script B will remain unsaved until we commit the changes in a separate commit. 
+
+It's always better to have more commits; in case you want to remove part of your work in a later stage, or you want to start your work again from a specific commit. 
