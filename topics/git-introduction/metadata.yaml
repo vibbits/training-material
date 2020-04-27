@@ -1,9 +1,12 @@
 ---
-name: "git-introduction"
-type: "basics"
-category: "basics"
-title: "Version control with git and GitHub"
-summary: "In this course we'll introduce you to how you can version control your software or data-analysis code."
-
+name: git-introduction
+type: use
+category: basics
+title: Title of the topic
+summary: Summary of the topic
+requirements:
+- type: internal
+  topic_name: introduction
+docker_image: ''
 maintainers:
 - tmuylder
