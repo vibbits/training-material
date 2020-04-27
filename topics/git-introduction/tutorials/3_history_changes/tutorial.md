@@ -67,7 +67,7 @@ with `<link>` being the link from GitHub.
 
 > ### {% icon hands_on %} Exercise 1
 >
->  Create a new GitHub repository, give it a name and initialize it with a `README`-file. Upload [this file](https://drive.google.com/open?id=1O0Vjljc-e-3y9tOTBFLIwrp-1jHNfFbf) // [this file via website](../../../../assets/files/git-introduction/example.R) to the repository on GitHub. What is GitHub asking you to do? Which stage is ommitted when uploading a file directly to GitHub?  
+>  Create a new GitHub repository, give it a name and initialize it with a `README`-file. Upload [this file](https://drive.google.com/open?id=1O0Vjljc-e-3y9tOTBFLIwrp-1jHNfFbf) // [this file via website](../../../../assets/files/git-introduction/plot1.R) to the repository on GitHub. What is GitHub asking you to do? Which stage is ommitted when uploading a file directly to GitHub?  
 > 
 > Clone the repository to your computer. How many files are there in your local repository?
 > 
