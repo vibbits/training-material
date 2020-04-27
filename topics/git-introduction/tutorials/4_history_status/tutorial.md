@@ -23,156 +23,123 @@ contributors:
 ---
 
 
-# Introduction
-{:.no_toc}
+## Status
+At all times, git can tell you which files it's tracking and which files are ready to commit (we say that the changes are in a staging area). This being said, let's try some of these features.
 
-<!-- This is a comment. -->
+`git status` is the command you'll use the most for its informative status description.
+```
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
 
-General introduction about the topic and then an introduction of the
-tutorial (the questions and the objectives). It is nice also to have a
-scheme to sum up the pipeline used during the tutorial. The idea is to
-give to trainees insight into the content of the tutorial and the (theoretical
-and technical) key concepts they will learn.
+nothing to commit, working tree clean
+```
+The first sentence tells us that we're on the `master` branch, which is the default branch name in Git. More on branches later. The second sentence tells us that our local branch is exactly the same as our origin. This means that all of the files and folders within our local project are identical to the ones in the remote GitHub repo. Lastly, git tells us that there is nothing to commit, which makes sense as we didn't make any changes yet.
 
-You may want to cite some publications; this can be done by adding citations to the
-bibliography file (`tutorial.bib` file next to your `tutorial.md` file). These citations
-must be in bibtex format. If you have the DOI for the paper you wish to cite, you can
-get the corresponding bibtex entry using [doi2bib.org](https://doi2bib.org).
+```
+vim README.md
+```
+When you're in the editing tab, type `i` to insert text, type something like "this is an introduction to github" and save the changes by typing 'esc', then ':' and finally 'x'. You should be back in your folders now. Check the status again with `git status`.
+```
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
 
-With the example you will find in the `tutorial.bib` file, you can add a citation to
-this article here in your tutorial like this:
-{% raw %} `{% cite Batut2018 %}`{% endraw %}.
-This will be rendered like this: {% cite Batut2018 %}, and links to a
-[bibliography section](#bibliography) which will automatically be created at the end of the
-tutorial.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
 
+nothing added to commit but untracked files present (use "git add" to track)
+```
+This time, git tells us that there is one file that is untracked.
 
-**Please follow our
-[tutorial to learn how to fill the Markdown]({{ site.baseurl }}/topics/contributing/tutorials/create-new-tutorial-content/tutorial.html)**
+### exercise 
+Imagine that we would have multiple files ready to commit, we would have to add the `-a` parameter, which stands for commit all changed files.
 
-> ### Agenda
->
-> In this tutorial, we will cover:
->
-> 1. TOC
-> {:toc}
->
-{: .agenda}
+# 5. Your history (log)
+In order to track all of your commits, enter `git log`. This will prompt all of the commits we made and will look something similar like this:
+```
+commit e2d7e9a0b461426bee6b3ffd7583237bc5671dc1
+Author: tmuylder <tuurmuyldermans@gmail.com>
+Date:   Wed Jan 01 01:23:45 2019 +0200
 
-# Title for your first section
-
-Give some background about what the trainees will be doing in the section.
-Remember that many people reading your materials will likely be novices,
-so make sure to explain all the relevant concepts.
-
-## Title for a subsection
-Section and subsection titles will be displayed in the tutorial index on the left side of
-the page, so try to make them informative and concise!
-
-# Hands-on Sections
-Below are a series of hand-on boxes, one for each tool in your workflow file.
-Often you may wish to combine several boxes into one or make other adjustments such
-as breaking the tutorial into sections, we encourage you to make such changes as you
-see fit, this is just a starting point :)
-
-Anywhere you find the word "***TODO***", there is something that needs to be changed
-depending on the specifics of your tutorial.
-
-have fun!
-
-## Get data
-
-> ### {% icon hands_on %} Hands-on: Data upload
->
-> 1. Create a new history for this tutorial
-> 2. Import the files from [Zenodo]() or from the shared data library
->
->    ```
->    
->    ```
->    ***TODO***: *Add the files by the ones on Zenodo here (if not added)*
->
->    ***TODO***: *Remove the useless files (if added)*
->
->    {% include snippets/import_via_link.md %}
->    {% include snippets/import_from_data_library.md %}
->
-> 3. Rename the datasets
-> 4. Check that the datatype
->
->    {% include snippets/change_datatype.md datatype="datatypes" %}
->
-> 5. Add to each database a tag corresponding to ...
->
->    {% include snippets/add_tag.md %}
->
-{: .hands_on}
-
-# Title of the section usually corresponding to a big step in the analysis
-
-It comes first a description of the step: some background and some theory.
-Some image can be added there to support the theory explanation:
-
-![Alternative text](../../images/image_name "Legend of the image")
-
-The idea is to keep the theory description before quite simple to focus more on the practical part.
-
-***TODO***: *Consider adding a detail box to expand the theory*
-
-> ### {% icon details %} More details about the theory
->
-> But to describe more details, it is possible to use the detail boxes which are expandable
->
-{: .details}
-
-A big step can have several subsections or sub steps:
+    make README file
+```
+`git log` lists all commits made to a repository in reverse chronological order. The listing for each commit starts with an identifier which is a unique code for each commit. If we push the commit to our Github repository (online) we will see the same (latest) identifier somewhere in the upper right corner. This is a verification for us so we know that the remote repository is up to date with the local repository. Besides the identifier, the commit’s author and date are given, and the log message Git was given when the commit was created.
 
 
-## Sub-step with **My Tool**
+**Extra options**
+When the output of git log is too long to fit in your screen, git uses a program to split it into pages of the size of your screen. When this “pager” is called, you will notice that the last line in your screen is a :, instead of your usual prompt.
+- To get out of the pager, press `Q`.
+- To move to the next page, press `Spacebar`.
+- To search for `some_word` in all pages, press `/` and type `some_word`. Navigate through matches pressing `N` (next).
 
-> ### {% icon hands_on %} Hands-on: Task description
->
-> 1. **My Tool** {% icon tool %} with the following parameters:
->    - {% icon param-file %} *"Input file"*: File
->    - *"Parameter"*: `a value`
->
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > ### {% icon comment %} Comment
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
->
-{: .hands_on}
+To avoid having `git log` cover your entire terminal screen, you can limit the number of commits that Git lists by using `-N`, where `N` is the number of commits that you want to view. For example, if you only want information from the last commit you can use `git log -1`. Otherwise, if you want to reduce the quantity of information, using the `git log --oneline` command is also a good option.
 
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
-
-> ### {% icon question %} Questions
->
-> 1. Question1?
-> 2. Question2?
->
-> > ### {% icon solution %} Solution
-> >
-> > 1. Answer for question1
-> > 2. Answer for question2
-> >
-> {: .solution}
->
-{: .question}
+You can also combine the `--oneline` option with others. One useful combination adds `--graph` to display the commit history as a text-based graph and `--decorate` to indicate which commits are associated with the current HEAD, the current branch master, or other Git references.
 
 
-## Re-arrange
 
-To create the template, each step of the workflow had its own subsection.
+# 7. Git diff
+Let's edit the `README.md` file. Use your editor (`vim`) and add another sentence to it so it looks something like this:
+```
+This is an introduction to github.
+We use this repo as an example.  
+```
+To save your changes, type Esc followed by `:x`. The output will look something like this (note that the colors do not completely match, however are indicative):
 
-***TODO***: *Re-arrange the generated subsections into sections or other subsections.
-Consider merging some hands-on boxes to have a meaningful flow of the analyses*
+```diff
+diff --git a/hello.txt b/hello.txt
+index ce01362..f23c541 100644
+--- a/hello.txt
++++ b/hello.txt
+@@ -1 +1,2 @@
+- this is an introduction to github
++ This is an introduction to github.
++ We use this repo as an example.
+```
+In the first line, git tells which files it's comparing. In the second line, it gives the identifier of the two different edits???. The third and fourth line indicate that the a-version is the previous version and the b-version is the current version with edits. The fifth line indicates where edits were performed ???. Finally, in the last lines we can see the lines that were edited from a previous version with a `-` sign to the current version with a `+` sign. We call this line-based diffing.
 
-# Conclusion
-{:.no_toc}
+You can check out the differences between files that are in the staged version with the `git diff --staged` command. Right now, it will give nothing in return. However, if we add the files to the staging area (`git add <file(s)>`) and enter the former command, we will see the same output as given here above.
 
-Sum up the tutorial and the key takeaways here. We encourage adding an overview image of the
-pipeline used.
+**Extra options**
+- Word-based diffing: `--color-words` allows you to highlight the changed words instead of lines.
+
+# 8. Create a new branch
+If we have a project with multiple parts, we can address each part separately by making a branch and make some changes in that branch. When we're happy about these edits, we can merge them back into the master branch which should be the reference branch.
+```
+git checkout -b new-branch
+```
+Git will tell you it switched to your new branch called 'new-branch'. If you want to change branches, just type `git checkout` followed by the name of the branch, e.g. `git checkout master`.
+
+*Exercise*: make some changes in the README file and commit them. When you push your changes to GitHub, make sure to be explicit enough so it pushes the whole branch.
+
+```
+git push origin new-branch
+```
+Next time you want to push committed changes in new-branch, you won’t need to specify the branch - you can simply do git push, because now new-branch exists at both ends. However, it’s still a good idea to be explicit. That way you’ll be less likely to get a surprise you didn’t want, when the wrong thing gets pushed.
+
+# Questions
+Which command(s) below would save the changes of a new file `myfile.txt` that I just created in my local Git repository?
+- Commit (1):
+```
+git commit -m "created new file: myfile.txt"
+```
+- Init & commit:
+```
+git init myfile.txt
+git commit -m "created new file: myfile.txt"`
+```
+- Add & commit:
+```
+git add myfile.txt
+git commit -m "created new file: myfile.txt"
+```
+- Commit (2):
+```
+git commit -m myfile.txt "created new file: myfile.txt"
+```
+
+# Exercise
+Fork github repo from me, make a branch, make changes to my script, commit and push, make pull request.
+I must have made some changes by the time they ask for pull request. So they have to fetch and merge (= pull) my changes in their code so it works for them and then pull request again.

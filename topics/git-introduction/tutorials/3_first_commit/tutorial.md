@@ -38,11 +38,15 @@ That's all you need to know: `add-commit-push`.
 <center><img src="../../images/conceptual_areas_push.png" /></center>
 
 
-# 2. Create a new repository
-There are two ways of initializing a new Git repository. The first option can be used if you're about to start a new project, the second option can be used when you already have some files in a project which you now want to start version controlling. 
+There are two ways of **initializing a new Git repository**:
+- Clone a GitHub repository (from GitHub): see Section 2
+- Initialize Git on a folder on your computer: see Section 4   
+Both options will work fine and depends on your preferences or maybe the situation of the project. The first option can be used if you're about to start a new project, the second option can be used when you already have some files in a project which you now want to start version controlling. 
 
 
-## 2.1 Creating a repository from GitHub
+
+# 2. Create a new repository from GitHub
+
 Go to your GitHub homepage and click the '+' icon in the upper right corner. The following screen will pop up.
 
 
@@ -88,8 +92,6 @@ with `<link>` being the link from GitHub.
 >    > in which you change `<link>` to the link that you copied from GitHub. There should be two files in your local repository as well.   
 >    > On a Windows computer we have a folder that contains the following files:
 >    > ![windowsfolder](../../images/folder1.PNG)
->    > ``` 
->    > ```
 >    > </details>
 >
 {: .hands_on}
@@ -117,27 +119,21 @@ git commit -m "added plot2.R script"
 ```
 We added a parameter `-m` (message) to the command followed by some text. This text informs our future selves of what changes were done. We make this message as explanatory as possible, yet as short as possible. If the `-m` parameter was not added, git will launch a text editor and ask to write a message. Some tips and general best practices in writing commit messages are described in [this link](https://chris.beams.io/posts/git-commit/). 
 
-
 ---
-
-> ### {% icon hands_on %} Question
->
+> ### {% icon question %} Question
+> 
 >  Which of the following commit messages would be most appropriate for a hypothetical commit made to our `README.md` file?
 >   - “Update README file”
 >   - “Added line ‘We use this repo as an example’ to README.md”
 >   - “Added purpose description to the README file”
-> 
->    > <details markdown="1">
->    > <summary>{% icon solution %} Solution
->    > </summary>
->    > 
->    > One can always argue on the most appropriate commit messages, however in this case the third one seems most appropriate. It's both short as descriptive enough to tell what has happend. 
->    > 
->    > ``` 
->    > ```
->    > </details>
+> > ### {% icon solution %} Solution
+> >
+> > One can argue on the appropriatness of commit messages as it is subjective. In this case however, the third options seems most ideal. It's both not too generic and not too specific. 
+> >
+> {: .solution}
 >
-{: .hands_on}
+{: .question}
+
 ---
 
 ---
@@ -148,26 +144,34 @@ We added a parameter `-m` (message) to the command followed by some text. This t
 >   - We saved a version of the file which is now visible on GitHub.com
 >   - We saved a version of the file which is now stored in our commit repository
 >
->  
-> {: .question}
+> > ### {% icon solution %} Solution
+> >
+> > We've been working locally uptil now and didn't push the commits to the GitHub repository, hence it's still in our commit repository. 
+> >
+> {: .solution}
+>
+{: .question}
 
- 
 ---
 
 
 ## 3.3 Push commits to GitHub
-Recall that when we added the first file on GitHub (exercise 1), it was immediately committed and showed up right away in the GitHub repository. Unfortunately, when we've changed some files locally and we committed them to our commit repository, GitHub doesn't know this yet. Hence, we have to do one final step: 
+Recall that when we added the first file on GitHub (exercise 1), it was immediately committed and showed up right away in the GitHub repository. Unfortunately, when we've changed some files locally and we commit them to our commit repository, GitHub doesn't know this yet. Hence, we have to do one final step: 
 ```
 git push
 ```
 Have a look on your GitHub repository and verify that the new file is now in your repository. 
 
 
+## 3.4 Stage-commit-push
+We've learned how to make a GitHub repository, clone it to our computer, add a file, commit it and push it back to GitHub. This is everything you need to know for a routine usage of Git(Hub) on one of your projects. In order to grasp this concept a bit better, we'll repeat it by making changes on both files in the next exercise. 
+
+
 ---
 
-> ### {% icon hands_on %} Exercise 1
+> ### {% icon hands_on %} Exercise 2
 >
->  Add a title to both files ("# Title plot 1" and "# Title plot 2"). Follow the steps here above to push your changes to our GitHub repository. 
+>  Add a title to both files ("# Title plot 1" and "# Title plot 2"). You can choose how you do this: e.g. open the files in a text editor and add the line on top of the file. Follow the steps here above to push your changes to our GitHub repository. 
 > 
 > 
 >    > <details markdown="1">
@@ -180,87 +184,29 @@ Have a look on your GitHub repository and verify that the new file is now in you
 >    > git push
 >    > ```
 >    > Here we used a `.` after `git add` because we want to add both changes to the staging area.  
->    > ``` 
->    > ```
 >    > </details>
 >
 {: .hands_on}
 ---
 
 
-## Status
-At all times, git can tell you which files it's tracking and which files are ready to commit (we say that the changes are in a staging area). This being said, let's try some of these features.
 
-`git status` is the command you'll use the most for its informative status description.
+
+## 4 Create a new repository from your computer
+As discussed here above, you can also create a repository from your computer. The command that we use for this is:
 ```
-$ git status
-On branch master
-Your branch is up to date with 'origin/master'.
-
-nothing to commit, working tree clean
+git init
 ```
-The first sentence tells us that we're on the `master` branch, which is the default branch name in Git. More on branches later. The second sentence tells us that our local branch is exactly the same as our origin. This means that all of the files and folders within our local project are identical to the ones in the remote GitHub repo. Lastly, git tells us that there is nothing to commit, which makes sense as we didn't make any changes yet.
 
-```
-vim README.md
-```
-When you're in the editing tab, type `i` to insert text, type something like "this is an introduction to github" and save the changes by typing 'esc', then ':' and finally 'x'. You should be back in your folders now. Check the status again with `git status`.
-```
-$ git status
-On branch master
-Your branch is up to date with 'origin/master'.
+The first thing we have to do is to make a new folder which will contain the files of the project in case you don't have one yet. In Git Bash (Windows) or in your Terminal (Mac, Linux), move to the project folder you just created or to the folder that contains the files of a project. 
 
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        README.md
-
-nothing added to commit but untracked files present (use "git add" to track)
-```
-This time, git tells us that there is one file that is untracked.
-
-### exercise 
-Imagine that we would have multiple files ready to commit, we would have to add the `-a` parameter, which stands for commit all changed files.
-
-# 5. Your history (log)
-In order to track all of your commits, enter `git log`. This will prompt all of the commits we made and will look something similar like this:
-```
-commit e2d7e9a0b461426bee6b3ffd7583237bc5671dc1
-Author: tmuylder <tuurmuyldermans@gmail.com>
-Date:   Wed Jan 01 01:23:45 2019 +0200
-
-    make README file
-```
-`git log` lists all commits made to a repository in reverse chronological order. The listing for each commit starts with an identifier which is a unique code for each commit. If we push the commit to our Github repository (online) we will see the same (latest) identifier somewhere in the upper right corner. This is a verification for us so we know that the remote repository is up to date with the local repository. Besides the identifier, the commit’s author and date are given, and the log message Git was given when the commit was created.
-
-
-**Extra options**
-When the output of git log is too long to fit in your screen, git uses a program to split it into pages of the size of your screen. When this “pager” is called, you will notice that the last line in your screen is a :, instead of your usual prompt.
-- To get out of the pager, press `Q`.
-- To move to the next page, press `Spacebar`.
-- To search for `some_word` in all pages, press `/` and type `some_word`. Navigate through matches pressing `N` (next).
-
-To avoid having `git log` cover your entire terminal screen, you can limit the number of commits that Git lists by using `-N`, where `N` is the number of commits that you want to view. For example, if you only want information from the last commit you can use `git log -1`. Otherwise, if you want to reduce the quantity of information, using the `git log --oneline` command is also a good option.
-
-You can also combine the `--oneline` option with others. One useful combination adds `--graph` to display the commit history as a text-based graph and `--decorate` to indicate which commits are associated with the current HEAD, the current branch master, or other Git references.
-
-# 6. Push your changes to GitHub
-
-
-
-
-## 2.2 Locally
-Alternatively, you can create a repository from the Terminal itself. 
-
-The first thing we have to do is make a new folder which will contain the files of the project in case you don't have one yet. In Git Bash (Windows) or in your Terminal (Mac, Linux), move to the project folder you just created or to the folder that contains the files of a project. 
-
-- When you're in that folder, you have to type `git init` to initialize Git and it will keep track of your files.  
+- When you're in that folder, you have to type `git init` to initialize a Git repository.  
 - Open GitHub.com, create a new repository and DO NOT initialize it with a README.md, .gitignore or license. You can add that later. 
-- Go back to your Terminal and use the following commands to make a link between your local repository and the repository on GitHub.: 
+- Go back to your Terminal and use the following commands to make a link between your local repository and the repository on GitHub: 
   ```
   git remote add origin git@github.com:youraccount/repositoryname.git
   ```
-- Add some content to the folder (e.g. add a file)
-- Add it to the staging area, commit it and push it to GitHub with the following commands:
+- Add the file(s) in your folder to the staging area, commit it and push it to GitHub with the following commands:
 ```
 git add <file>
 git commit -m "some text"
@@ -269,109 +215,24 @@ git push -u origin master
 
 It is important to note that `git init` will keep track of all the subdirectories and their files that are in the folder. Thus, you don't need to create a git repository for each folder or subdirectory.  
 
-If we use `ll` or `ls -a` we get a list of all files and directories, and we see now that a `.git` folder is now present. Git uses this special directory to store all the information about the project like the history of all commits. If we ever delete the `.git` sub-directory, we will lose the project’s history.
-
 As a best practice, it's suggested to have a git repository for each project and they are separated in folders. Git repositories can interfere with each other if they are “nested”: the outer repository will try to version-control the inner repository. Therefore, it’s best to create each new Git repository in a separate directory.
 
+If we use `ll` or `ls -a` we get a list of all files and directories, and we see that a `.git` folder is now present. Git uses this special directory to store all the information about the project like the history of all commits. If we ever delete the `.git` sub-directory, we will lose the project’s history.
 
 
+Before starting with the next exercise we also want to stress the importance of not uploading data to GitHub. It's good practice to have links to data, however not the data itself. GitHub is not your next cloud storage instance. 
+---
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Git push
-
-
-If you were pushing changes from *master* locally to *master* on GitHub, you could just issue the command `git push` and let Git work out what needs to go where.
-
-It’s always better to be explicit though. What’s more, you have multiple branches here, so you need to tell git where to push (i.e. back to the remote repository you cloned from, on GitHub) and what exactly to push (your new branch).
-
-```
-git push origin master
-```
-
-
-
-
-# 7. Git diff
-Let's edit the `README.md` file. Use your editor (`vim`) and add another sentence to it so it looks something like this:
-```
-This is an introduction to github.
-We use this repo as an example.  
-```
-To save your changes, type Esc followed by `:x`. The output will look something like this (note that the colors do not completely match, however are indicative):
-
-```diff
-diff --git a/hello.txt b/hello.txt
-index ce01362..f23c541 100644
---- a/hello.txt
-+++ b/hello.txt
-@@ -1 +1,2 @@
-- this is an introduction to github
-+ This is an introduction to github.
-+ We use this repo as an example.
-```
-In the first line, git tells which files it's comparing. In the second line, it gives the identifier of the two different edits???. The third and fourth line indicate that the a-version is the previous version and the b-version is the current version with edits. The fifth line indicates where edits were performed ???. Finally, in the last lines we can see the lines that were edited from a previous version with a `-` sign to the current version with a `+` sign. We call this line-based diffing.
-
-You can check out the differences between files that are in the staged version with the `git diff --staged` command. Right now, it will give nothing in return. However, if we add the files to the staging area (`git add <file(s)>`) and enter the former command, we will see the same output as given here above.
-
-**Extra options**
-- Word-based diffing: `--color-words` allows you to highlight the changed words instead of lines.
-
-# 8. Create a new branch
-If we have a project with multiple parts, we can address each part separately by making a branch and make some changes in that branch. When we're happy about these edits, we can merge them back into the master branch which should be the reference branch.
-```
-git checkout -b new-branch
-```
-Git will tell you it switched to your new branch called 'new-branch'. If you want to change branches, just type `git checkout` followed by the name of the branch, e.g. `git checkout master`.
-
-*Exercise*: make some changes in the README file and commit them. When you push your changes to GitHub, make sure to be explicit enough so it pushes the whole branch.
-
-```
-git push origin new-branch
-```
-Next time you want to push committed changes in new-branch, you won’t need to specify the branch - you can simply do git push, because now new-branch exists at both ends. However, it’s still a good idea to be explicit. That way you’ll be less likely to get a surprise you didn’t want, when the wrong thing gets pushed.
-
-# Questions
-Which command(s) below would save the changes of a new file `myfile.txt` that I just created in my local Git repository?
-- Commit (1):
-```
-git commit -m "created new file: myfile.txt"
-```
-- Init & commit:
-```
-git init myfile.txt
-git commit -m "created new file: myfile.txt"`
-```
-- Add & commit:
-```
-git add myfile.txt
-git commit -m "created new file: myfile.txt"
-```
-- Commit (2):
-```
-git commit -m myfile.txt "created new file: myfile.txt"
-```
-
-# Exercise
-Fork github repo from me, make a branch, make changes to my script, commit and push, make pull request.
-I must have made some changes by the time they ask for pull request. So they have to fetch and merge (= pull) my changes in their code so it works for them and then pull request again.
+> ### {% icon hands_on %} Exercise 3
+>
+>  Find a folder on your computer with some files that you want to version control, initialize Git on that folder and make it (privately) available on GitHub. 
+> 
+> 
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
+>    > See the steps in Section 4.  
+>    > </details>
+>
+{: .hands_on}
+---
