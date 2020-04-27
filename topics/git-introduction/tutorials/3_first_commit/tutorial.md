@@ -18,7 +18,7 @@ contributors:
 ---
 
 # 1. Routine usage
-As mentioned in the first chapter, there are three conceptual areas in Git. When we want to save a file from the development area on our computer to the commit repository, we'll always have to add it to the staging area first, before we can commit it. The usual routine looks like this: 
+As mentioned in the first chapter, there are three conceptual areas in Git: the development area, the staging area and the commit repository. The routine usage is depicted in the figure below. When we want to save a file from the development area on our computer to the commit repository, we'll always have to add it to the staging area first, before we can commit it. The usual routine looks like this: 
 
 ```
 git add <file>
@@ -35,7 +35,8 @@ With this command we can update our online repository on GitHub with the commits
 
 That's all you need to know: `add-commit-push`. 
 
-![Git add, commit and push](../../images/conceptual_areas_push.png)
+<center><img src="../../images/conceptual_areas_push.png" /></center>
+
 
 # 2. Create a new repository
 There are two ways of initializing a new Git repository. The first option can be used if you're about to start a new project, the second option can be used when you already have some files in a project which you now want to start version controlling. 
@@ -44,7 +45,9 @@ There are two ways of initializing a new Git repository. The first option can be
 ## 2.1 Creating a repository from GitHub
 Go to your GitHub homepage and click the '+' icon in the upper right corner. The following screen will pop up.
 
-![pop-up screen](../../images/02-2-create-repository.PNG)
+
+<center><img src="../../images/02-2-create-repository.PNG" /></center>
+
 
 We already filled in a repository name and an optional description. You can choose to already publish your repository, however as this is a meaningless repository, we will choose not to. When you're about to start a new project, there are three things to consider:
 - For a new repo, it's a good practice to initialize the repo with a README file. This file will eventually include a decscription about the repository and all of the code or files in it (e.g. information about the scripts, version, disclaimers, etc.)
@@ -53,7 +56,7 @@ We already filled in a repository name and an optional description. You can choo
 
 In our case, we will initialize the repository with a README file and click 'Create repository', which will then look like this:
 
-![initialize repository](../../images/02-3-create-readme-repository.PNG)
+<center><img src="../../images/02-3-create-readme-repository.PNG" /></center>
 
 This is the home directory of a GitHub repository. From here we can already do a lot, like changing or uploading files. 
 
@@ -76,7 +79,7 @@ with `<link>` being the link from GitHub.
 >    > </summary>
 >    > Click on upload files and drag the file into the screen. GitHub is asking to add a commit message which defines the changes that you'll do to your repository. In this case we'll add the very brief *Upload R script* message. Notice that there is no staging area when you upload a file directly on GitHub. 
 >    > 
->    > ![Upload R script](../../images/solution1.png)
+>    > <center><img src="../../images/solution1.PNG" /></center>
 >    > 
 >    > Click on 'Commit changes' and find the two files: `README.md` and `example.R` in your repository. Now, we can find the clone link via the green 'Clone or download' button. In our Terminal we type the following command to start using the repository locally on our computer: 
 >    > ```
