@@ -1,7 +1,7 @@
 ---
 layout: tutorial_hands_on
 
-title: 4 Branches and Pull requests
+title: 4 History & status
 zenodo_link: ''
 questions:
 - Which biological questions are addressed by the tutorial?
