@@ -243,7 +243,7 @@ Before starting with the next exercise we also want to stress the importance of 
 # 5. The strength of the staging area
 Now you're probably wondering why it's useful to have that many steps to save a file (add, commit, push). We will give a practical example based on the figure below: 
 
-<center><img src="../../images/staging_area.PNG" /></center>
+<center><img src="../../images/staging_area.png" /></center>
 
 Imagine that you're working on a project with multiple Python scripts and you're working on all of them. In this case your folder in your development area contains the files  `scriptA.py`, `scriptB.py` and `scriptC.py`. The changes that you made in script A and script C are somehow related, but script B is not. It's good practice to make commits in which changes that are related to each other are bundled. Hence, in this case we want to make one commit with the changes from file A and C. Now we can simply add scripts A and C to the staging area and commit it. The changes in script B will remain unsaved until we commit the changes in a separate commit. 
 
