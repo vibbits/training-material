@@ -79,7 +79,7 @@ with `<link>` being the link from GitHub.
 >    > </summary>
 >    > Click on upload files and drag the file into the screen. GitHub is asking to add a commit message which defines the changes that you'll do to your repository. In this case we'll add the very brief *Upload R script* message. Notice that there is no staging area when you upload a file directly on GitHub. 
 >    > 
->    > <center><img src="../../images/solution1.PNG" /></center>
+>    > <center><img src="../../images/solution1.PNG"/></center>
 >    > 
 >    > Click on 'Commit changes' and find the two files: `README.md` and `example.R` in your repository. Now, we can find the clone link via the green 'Clone or download' button. In our Terminal we type the following command to start using the repository locally on our computer: 
 >    > ```
@@ -96,11 +96,11 @@ with `<link>` being the link from GitHub.
 ---
 
 # 3. Our first commit
-Our local copy (clone) of the GitHub repository is now able to communicate with the GitHub repository. Every change within this repository is traceable, whether it is a new file or changes to a file. When you make changes in your local repo (e.g. create a new file), you have to add it to the staging area first (`git add`) and then commit the changes (`git commit`) before pushing it (`git push`) to your GitHub website repo. 
+Our local copy (clone) of the GitHub repository is now able to communicate with the GitHub repository. Every change within this repository is traceable, whether it is a new file or changes to a file. When you make changes in your local repo (e.g. create a new file), you have to add the file to the staging area first (`git add`) and then commit it (`git commit`) before pushing it (`git push`) to your GitHub website repo. 
 
 
-## 3.1 Staging a file
-Let's add a new file to our folder. Download [this file](../../../../assets/plot2.R) and copy paste it in our project folder. It contains some R code for plotting a new figure.  
+## 3.1 Staging
+Let's add a new file to our folder. Download [this file](../../../../assets/files/git-introduction/plot2.R) and copy paste it in our project folder. It contains some R code for plotting a new figure.  
 
 The first thing we'll have to do now is to stage the file into the staging area.  Remember that this is an intermediate area before committing the file to the repository. In a next section we will learn why this staging area can be useful. 
 
@@ -117,16 +117,43 @@ git commit -m "added plot2.R script"
 ```
 We added a parameter `-m` (message) to the command followed by some text. This text informs our future selves of what changes were done. We make this message as explanatory as possible, yet as short as possible. If the `-m` parameter was not added, git will launch a text editor and ask to write a message. Some tips and general best practices in writing commit messages are described in [this link](https://chris.beams.io/posts/git-commit/). 
 
-**Question**  
-Which of the following commit messages would be most appropriate for a hypothetical commit made to our `README.md` file?
-- “Update README file”
-- “Added line ‘We use this repo as an example’ to README.md”
-- “Added a description of the purpose of the README file”
 
-**Question**  
-What has happened after committing?
-- We saved a version of the file which is now visible on GitHub.com
-- We saved a version of the file which is now stored in our commit repository
+---
+
+> ### {% icon hands_on %} Question
+>
+>  Which of the following commit messages would be most appropriate for a hypothetical commit made to our `README.md` file?
+>   - “Update README file”
+>   - “Added line ‘We use this repo as an example’ to README.md”
+>   - “Added purpose description to the README file”
+> 
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
+>    > 
+>    > One can always argue on the most appropriate commit messages, however in this case the third one seems most appropriate. It's both short as descriptive enough to tell what has happend. 
+>    > 
+>    > ``` 
+>    > ```
+>    > </details>
+>
+{: .hands_on}
+---
+
+---
+
+> ### {% icon question %} Question
+> 
+> What has happened after committing?
+>   - We saved a version of the file which is now visible on GitHub.com
+>   - We saved a version of the file which is now stored in our commit repository
+>
+>  
+> {: .question}
+
+ 
+---
+
 
 ## 3.3 Push commits to GitHub
 Recall that when we added the first file on GitHub (exercise 1), it was immediately committed and showed up right away in the GitHub repository. Unfortunately, when we've changed some files locally and we committed them to our commit repository, GitHub doesn't know this yet. Hence, we have to do one final step: 
