@@ -23,7 +23,94 @@ contributors:
 
 ---
 
-# 1. 
+# 1. What's a branch?
+The idea of branching is that we can create a copy of the project in which we can add a new feature. This branch is a completely separate version of your project and lives next to your original version. If the new feature is working properly we can merge it back into the project. It's a great way of testing new changes in some code when you're not sure whether it will work, and in the meanwhile not messing up the code that you already have. 
+
+<center><img src="../../images/branching.png" /></center>
+
+The original repository is always called the *master* branch. If we would make a new branch, we can name it however we like (e.g. *new-feature*). 
+
+
+There are two ways of doing this: locally or on the GitHub website. We will first show you the latter and afterwards how to do it locally. 
+
+A repository can have numerous branches. Branches are ways of organising work on a project: you can have a branch for a new feature, for trying out something new, for exploring an issue - anything at all.
+
+It’s a good practice to create a new branch for every new bit of work you start doing, even if it’s a very small one. It’s especially useful to create a new branch for every new feature you start work on. Branches are of course disposable, you can always remove them. 
+
+
+# 2. Branching on GitHub
+The easiest way is to make a new branch on GitHub. 
+1. Click the button: 'Branch: master'
+2. In 'Find or create a branch...' type `new-feature`
+3. Click 'Create branch': new-feature
+
+<center><img src="../../images/newbranch-github.png" /></center>
+
+GitHub will now display in that button that it is on `Branch: new-feature`. It's very important to understand that any changes that happen in this branch, will not be visible in the master branch. 
+
+---
+
+> ### {% icon hands_on %} Exercise 5
+>
+>  Edit the `plot2.R` file again, however make sure you're in the *new-feature* branch. Add the following lines that will make a new plot. These lines will allow us to investigate the relation between the weight, horsepower and miles per gallon variables of `mtcars` dataset in R. 
+> 
+> ```R
+> # Install requirements & plotting of 3D scatterplot: weight, dis
+> install.packages("scatterplot3d")
+> library(scatterplot3d)
+> attach(mtcars)
+> scatterplot3d(wt,hp,mpg, pch=16, highlight.3d=TRUE,
+>               type="h", main="3D Scatterplot")
+> ```
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
+>    > Edit the file `plot2.R` by clicking on the pencil icon and add the following lines: 
+>    > 
+>    > <center><img src="../../images/solution5.png" /></center>
+>    > Commit your changes with a useful commit message and save by clicking the green 'Commit changes'-button.
+>    > 
+>    > </details>
+>
+{: .hands_on}
+---
+
+Switch back to your *master* branch and have a look to the `plot2.R`-file. It shouldn't contain the changes that we just made. 
+
+
+# 3. Merging branches
+Before exploring how we make branches on our computer locally, we'll merge the changes in the *new-feature* branch into the *master* branch. 
+
+Whether you're on the *master* or *new-feature* branch, doesn't matter. In both cases you should see the following yellow screen. Alternatively, go to 'Pull requests' and find it there. 
+
+<center><img src="../../images/pull-request-pre.png" /></center>
+
+Click on 'compare & pull requests'. A new screen pops-up with the following information.
+<center><img src="../../images/pull-request-1.png" /></center>
+
+- The pull request should be interpreted as a request to pull the new branch and all of its changes into the master branch.   
+- The base where it would be pulled towards is `base: master`. The branch where the changes are deriving from is `compare: new-feature`.   
+- Note that GitHub checks the compatibility of the branches: in this case there are no conflicting edits and the branches can be merged together.   
+- Give a descriptive title text and if appropriate some additional comment. 
+
+Underneath the pull request related information, GitHub also gives you a summary of the changes that were done. 
+<center><img src="../../images/pull-request-2.png" /></center>
+
+- Each commit that's done in the branch *new-feature* (i.e. only added these 7 lines in this case)
+- Display of the file and a visual representation of what changed in that commit. 
+
+Click on 'Create pull request'. 
+
+Finally, the last screen pops up in which you verify the merging commit and you give your consent to GitHub to merge both branches by clicking 'Merge pull request'.
+<center><img src="../../images/pull-request-3.png" /></center>
+
+It might be possible that in a project with several people, you're not authorized to make changes to the *master* branch. In this case you'll always have to work in a separate branch and someone else will get this last message. He or she will then decide whether this pull request should be merged. 
+
+# 4. Branching locally
+Besides the possibility of making branches on GitHub, we can also do it locally on our computer. 
+
+What do we first have to do? 
+Pull so our local repository is up to date with the GitHub one. 
 
 # 8. Create a new branch
 If we have a project with multiple parts, we can address each part separately by making a branch and make some changes in that branch. When we're happy about these edits, we can merge them back into the master branch which should be the reference branch.
@@ -40,29 +127,24 @@ git push origin new-branch
 Next time you want to push committed changes in new-branch, you won’t need to specify the branch - you can simply do git push, because now new-branch exists at both ends. However, it’s still a good idea to be explicit. That way you’ll be less likely to get a surprise you didn’t want, when the wrong thing gets pushed.
 
 
+
+
 ## 1.3 Create a new branch & edit
 Don’t edit the `master` (default) branch of the repository. It’s much better to edit the file in a new branch, leaving the `master` branch clean and untouched:
 
-There are two ways of doing this: locally (after cloning) or on the GitHub website (graphically). We will show the second way here:
-1. Click the button: 'Branch: master'
-2. In 'Find or create a branch...' enter `add-my-name`
-3. Hit 'Create branch': add-my-name
 
-As you may have noticed on GitHub, a repository can have numerous branches within it. Branches are ways of organising work on a project: you can have a branch for a new feature, for trying out something new, for exploring an issue - anything at all.
 
-Just as virtualenvs are disposable, so are branches in Git. You can have too many branches, but don’t hesitate to create new ones; it costs almost nothing.
 
-It’s a good policy to create a new branch for every new bit of work you start doing, even if it’s a very small one. It’s especially useful to create a new branch for every new feature you start work on.
 
-Now, let's make an edit on one of the files in the Github repository (note: make sure the branch is the branch you just created):
-1. Find the attendees_and_learners.rst file
-2. Hit the Edit button
-3. Add your name on the bottom of the list (just your name, you will add other information later) to the appropriate place in the file.
-4. Enter some meaningful text in the 'Commit changes' section below, and save by clicking the green 'Commit changes'-button.
 
-Now your copy of the file, the one that belongs to your fork of the project, has been changed; it’s reflected right away on GitHub. If you managed to mis-spell your name, or want to correct what you entered, you can simply edit it again.
 
-What you have done now is make some changes, in a new branch, in your own fork of the repository. You can see them there in the file.
+
+
+
+
+
+
+
 
 ## 1.4 Make a pull request
 When you’re ready to have your changes incorporated into the original/official/canonical repository, you do this by making a **Pull Request**.
