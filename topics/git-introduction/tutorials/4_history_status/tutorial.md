@@ -105,7 +105,6 @@ If we have pushed the commits to our Github repository (online) we will see the 
 
 Git log can be extended with many other parameters. You can also combine it with the `--oneline` parameter. One useful combination adds `--graph` to display the commit history as a text-based graph and `--decorate` to indicate which commits are associated with the current HEAD, the current branch master, or other Git references.
 
-
 ---
 Extra reading:
 
@@ -122,41 +121,4 @@ To avoid having `git log` cover your entire terminal screen, you can limit the n
 
 
 
-# 8. Create a new branch
-If we have a project with multiple parts, we can address each part separately by making a branch and make some changes in that branch. When we're happy about these edits, we can merge them back into the master branch which should be the reference branch.
-```
-git checkout -b new-branch
-```
-Git will tell you it switched to your new branch called 'new-branch'. If you want to change branches, just type `git checkout` followed by the name of the branch, e.g. `git checkout master`.
 
-*Exercise*: make some changes in the README file and commit them. When you push your changes to GitHub, make sure to be explicit enough so it pushes the whole branch.
-
-```
-git push origin new-branch
-```
-Next time you want to push committed changes in new-branch, you won’t need to specify the branch - you can simply do git push, because now new-branch exists at both ends. However, it’s still a good idea to be explicit. That way you’ll be less likely to get a surprise you didn’t want, when the wrong thing gets pushed.
-
-# Questions
-Which command(s) below would save the changes of a new file `myfile.txt` that I just created in my local Git repository?
-- Commit (1):
-```
-git commit -m "created new file: myfile.txt"
-```
-- Init & commit:
-```
-git init myfile.txt
-git commit -m "created new file: myfile.txt"`
-```
-- Add & commit:
-```
-git add myfile.txt
-git commit -m "created new file: myfile.txt"
-```
-- Commit (2):
-```
-git commit -m myfile.txt "created new file: myfile.txt"
-```
-
-# Exercise
-Fork github repo from me, make a branch, make changes to my script, commit and push, make pull request.
-I must have made some changes by the time they ask for pull request. So they have to fetch and merge (= pull) my changes in their code so it works for them and then pull request again.

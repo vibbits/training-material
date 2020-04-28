@@ -24,156 +24,166 @@ contributors:
 ---
 
 
-# Introduction
-{:.no_toc}
+# 4. Merge conflict
+When the GitHub repository has diverged from your local copy, e.g. a collaborator edited a file to which you were also working, and you realize that after staging and committing your changes can't be pushed to GitHub. The following error message is probably displayed:
+```
+To github.com:tmuylder/github-tutorials
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'git@github.com:tmuylder/github-tutorials'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+```
+GitHub proposes to pull the remote repository to your local repository first before pushing yours to GitHub. However, if you do this, you get the following conflict message:
+```
+CONFLICT (add/add): Merge conflict in conflictfile.txt
+Auto-merging conflictfile.txt
+Automatic merge failed; fix conflicts and then commit the result.
+```
+You get CONFLICT (add/add): Merge conflict in ... conflicts because the files are in fact not the same. You can see the difference using the `git diff` command, for example:
+```
+git diff branch1 branch2 -- path/to/file
+```
+where branch1 and branch2 are the names of the branches you want to compare, e.g. `git diff master origin/master -- ./conflictfile.txt`
 
-<!-- This is a comment. -->
+Or, an easier way to see the difference, right after the failed `git merge` or `git pull` when you are in the conflicted state, you can simply run `git diff` without parameters, it will reveal the conflicted regions. This can, however, be a long list. When you type `git merge branch1`, git's output will propose several things. It will say that we're in the midst of a merging process. To save files that haven't been committed you can do this first. To abort the merging process, you can go for: `git merge --abort`.
 
-General introduction about the topic and then an introduction of the
-tutorial (the questions and the objectives). It is nice also to have a
-scheme to sum up the pipeline used during the tutorial. The idea is to
-give to trainees insight into the content of the tutorial and the (theoretical
-and technical) key concepts they will learn.
+To resolve such conflict, you have to decide which branch has the right content. You can do that by checking out the file from the appropriate branch, for example:
+```
+git checkout name_of_branch path/to/file
+```
+Sometimes the right content is a mix of the two files. In that case you have to resolve manually, possibly by studying the differences using the `git diff` command, as in the examples above.
 
-You may want to cite some publications; this can be done by adding citations to the
-bibliography file (`tutorial.bib` file next to your `tutorial.md` file). These citations
-must be in bibtex format. If you have the DOI for the paper you wish to cite, you can
-get the corresponding bibtex entry using [doi2bib.org](https://doi2bib.org).
+To see the beginning of the merge conflict in your file, search the file (with your text editor) for the conflict marker <<<<<<<. When you open the file in your text editor, you'll see the changes from the HEAD or base branch after the line <<<<<<< HEAD. Next, you'll see =======, which divides your changes from the changes in the other branch, followed by >>>>>>> BRANCH-NAME.
 
-With the example you will find in the `tutorial.bib` file, you can add a citation to
-this article here in your tutorial like this:
-{% raw %} `{% cite Batut2018 %}`{% endraw %}.
-This will be rendered like this: {% cite Batut2018 %}, and links to a
-[bibliography section](#bibliography) which will automatically be created at the end of the
-tutorial.
+Delete the conflict markers <<<<<<<, =======, >>>>>>> and make the changes you want in the final merge. In this example, both changes are incorporated into the final merge:
 
+Add or stage your changes.
+```
+git add .
+```
+Commit your changes with a comment.
+```
+git commit -m "Resolved merge conflict."
+```
 
-**Please follow our
-[tutorial to learn how to fill the Markdown]({{ site.baseurl }}/topics/contributing/tutorials/create-new-tutorial-content/tutorial.html)**
-
-> ### Agenda
->
-> In this tutorial, we will cover:
->
-> 1. TOC
-> {:toc}
->
-{: .agenda}
-
-# Title for your first section
-
-Give some background about what the trainees will be doing in the section.
-Remember that many people reading your materials will likely be novices,
-so make sure to explain all the relevant concepts.
-
-## Title for a subsection
-Section and subsection titles will be displayed in the tutorial index on the left side of
-the page, so try to make them informative and concise!
-
-# Hands-on Sections
-Below are a series of hand-on boxes, one for each tool in your workflow file.
-Often you may wish to combine several boxes into one or make other adjustments such
-as breaking the tutorial into sections, we encourage you to make such changes as you
-see fit, this is just a starting point :)
-
-Anywhere you find the word "***TODO***", there is something that needs to be changed
-depending on the specifics of your tutorial.
-
-have fun!
-
-## Get data
-
-> ### {% icon hands_on %} Hands-on: Data upload
->
-> 1. Create a new history for this tutorial
-> 2. Import the files from [Zenodo]() or from the shared data library
->
->    ```
->    
->    ```
->    ***TODO***: *Add the files by the ones on Zenodo here (if not added)*
->
->    ***TODO***: *Remove the useless files (if added)*
->
->    {% include snippets/import_via_link.md %}
->    {% include snippets/import_from_data_library.md %}
->
-> 3. Rename the datasets
-> 4. Check that the datatype
->
->    {% include snippets/change_datatype.md datatype="datatypes" %}
->
-> 5. Add to each database a tag corresponding to ...
->
->    {% include snippets/add_tag.md %}
->
-{: .hands_on}
-
-# Title of the section usually corresponding to a big step in the analysis
-
-It comes first a description of the step: some background and some theory.
-Some image can be added there to support the theory explanation:
-
-![Alternative text](../../images/image_name "Legend of the image")
-
-The idea is to keep the theory description before quite simple to focus more on the practical part.
-
-***TODO***: *Consider adding a detail box to expand the theory*
-
-> ### {% icon details %} More details about the theory
->
-> But to describe more details, it is possible to use the detail boxes which are expandable
->
-{: .details}
-
-A big step can have several subsections or sub steps:
+The long-term solution is to avoid making conflicting changes to the same paths in different branches, which is typically a task sharing / communication issue between collaborators.
 
 
-## Sub-step with **My Tool**
-
-> ### {% icon hands_on %} Hands-on: Task description
->
-> 1. **My Tool** {% icon tool %} with the following parameters:
->    - {% icon param-file %} *"Input file"*: File
->    - *"Parameter"*: `a value`
->
->    ***TODO***: *Check parameter descriptions*
->
->    ***TODO***: *Consider adding a comment or tip box*
->
->    > ### {% icon comment %} Comment
->    >
->    > A comment about the tool or something else. This box can also be in the main text
->    {: .comment}
->
-{: .hands_on}
-
-***TODO***: *Consider adding a question to test the learners understanding of the previous exercise*
-
-> ### {% icon question %} Questions
->
-> 1. Question1?
-> 2. Question2?
->
-> > ### {% icon solution %} Solution
-> >
-> > 1. Answer for question1
-> > 2. Answer for question2
-> >
-> {: .solution}
->
-{: .question}
 
 
-## Re-arrange
 
-To create the template, each step of the workflow had its own subsection.
 
-***TODO***: *Re-arrange the generated subsections into sections or other subsections.
-Consider merging some hands-on boxes to have a meaningful flow of the analyses*
 
-# Conclusion
-{:.no_toc}
 
-Sum up the tutorial and the key takeaways here. We encourage adding an overview image of the
-pipeline used.
+
+
+
+
+
+
+
+
+
+
+
+# Changes & conflicts
+
+# 2. Undo changes
+There are numerous ways to undo changes in Git, where it all depends on what stage your finding yourself. A much more elaborate tutorial can be found [here](https://docs.gitlab.com/ee/topics/git/numerous_undo_possibilities_in_git/).
+## 2.1 Before the staging area
+Let's edit our `hamming_distance.py` file once more. Let's say we start counting from 1 (edit the fifth line) and save the file again. Check the file's status and verify that the changes are not staged for commit. Here git already tells you what you can do to undo your changes.
+```
+git restore hamming_distance.py
+```
+Alternatively, we could have used `git checkout HEAD hamming_distance.py`. Similarly, we could have used `git checkout <identifier> hamming_distance.py` to rewind to a specific version. (! it's important to fill in the identifier or HEAD)
+## 2.2 Changes in the staging area
+Let's edit our `hamming_distance.py` file again as described above. This time, add the changes in the file to the staging area, by using the `git add hamming_distance.py` command. Check that the file is in the right status. Again, git tells us what to do to undo our staged changes.
+```
+git restore --staged hamming_distance.py
+```
+By using `git status` we can see that the file is ready to be staged, however with `vim` we can see that the distance is still `1`. Use git restore as explained in §2.1 to undo the changes.
+
+The fact that files can be reverted one by one tends to change the way people organize their work. If everything is in one large document, it’s hard (but not impossible) to undo changes to the introduction without also undoing changes made later to the conclusion. If the introduction and conclusion are stored in separate files, on the other hand, moving backward and forward in time becomes much easier.
+## 2.3 Recovering older versions of a file
+**Exercise 1**
+We made changes to our `hamming_distance.py` Python script that we have been working on for weeks, and the modifications we made this morning ruined the script and it no longer runs. We've  spent ~ 1hr trying to fix it, with no luck…
+
+Luckily, we've been keeping track of the project’s versions using Git! Which commands below will let us recover the last committed version of our `hamming_distance.py` script?
+1. `git checkout HEAD`
+2. `git checkout HEAD hamming_distance.py`
+3. `git checkout HEAD~1 hamming_distance.py`
+4. `git checkout <unique ID of last commit> hamming_distance.py`
+5. Both 2 and 4
+
+The answer is (5): Both 2 and 4.
+
+The `checkout` command restores files from the repository, overwriting the files in your working directory. Answers 2 and 4 both restore the latest version in the repository of the file `hamming_distance.py`. Answer 2 uses `HEAD` to indicate the latest, whereas answer 4 uses the unique ID of the last commit, which is what `HEAD` means.
+
+Answer 3 gets the version of `hamming_distance.py` from the commit before `HEAD`, which is NOT what we wanted.
+
+Answer 1 can be dangerous! Without a filename, `git checkout` will restore all files in the current directory (and all directories below it) to their state at the commit specified. This command will restore `hamming_distance.py` to the latest commit version, but it will also restore any other files that are changed to that version, erasing any changes you may have made to those files! As discussed above, you are left in a detached `HEAD` state, and you don’t want to be there.
+
+## 2.4 Changes after pushing to project repository
+We'll describe this situation by means of an exercise. Mimic the situation that you've made some changes to the code of a project but all of your changes were crap... Edit the `hamming_distance.py` file, add it to the staging area and commit the change. Now, push the commit to the project repository.
+
+
+
+**Exercise 2**
+Jennifer is collaborating on her Python script with her colleagues and realizes her last commit to the project’s repository contained an error and she wants to undo it. `git revert [erroneous commit ID]` will create a new commit that reverses Jennifer’s erroneous commit. Therefore `git revert` is different to `git checkout [commit ID]` because `git checkout` returns the files within the local repository to a previous state, whereas `git revert` reverses changes committed to the local and project repositories.
+Below are the right steps and explanations for Jennifer to use git revert, what is the missing command?
+
+```
+git log # Look at the git history of the project to find the commit ID
+
+Copy the ID (the first few characters of the ID, e.g. 0b1d055).
+
+git revert [commit ID]
+
+Type in the new commit message.
+
+Save and close
+# so this doesn't works
+638  git add hamming_distance.py
+639  git commit -m "added last line hamming distance"
+640  git status
+641  git push origin master
+642  git log -3
+643  git revert 20d1de8
+644  git log -3
+645  vim hamming_distance.py
+646  git status
+647  vim hamming_distance.py
+648  history
+```
+
+**Exercise 3**
+What is the output of the last command in
+```
+cd planets
+echo "Venus is beautiful and full of love" > venus.txt
+git add venus.txt
+echo "Venus is too hot to be suitable as a base" >> venus.txt
+git commit -m "Comment on Venus as an unsuitable base"
+git checkout HEAD venus.txt
+cat venus.txt #this will print the contents of venus.txt to the screen
+```
+1. `Venus is too hot to be suitable as a base`
+2. `Venus is beautiful and full of love`
+3. `Venus is beautiful and full of love`
+`Venus is too hot to be suitable as a base`
+4. Some kind of error because you have changed venus.txt without committing the changes.
+
+The answer is 2.
+
+The command `git add venus.txt` places the current version of `venus.txt` into the staging area. The changes to the file from the second `echo` command are only applied to the working copy, not the version in the staging area.
+
+So, when `git commit -m "Comment on Venus as an unsuitable base"` is executed, the version of `venus.txt` committed to the repository is the one from the staging area and has only one line.
+
+At this time, the working copy still has the second line (and git status will show that the file is modified). However, `git checkout HEAD venus.txt` replaces the working copy with the most recently committed version of `venus.txt`.
+
+# 3. Getting more information from old versions
+Exploring history is an important part of Git, and often it is a challenge to find the right commit ID, especially if the commit is from several months ago. If you have a project with many files and lots of changes in a code (e.g. `hamming_distance.py`), you need some tricks to recover older versions.
+
+`git log <file>` will help to narrow down the `git log` command to the file we're interested in. However, if you need to scroll through the changes of different commits, you need something else. `git log --patch <file>` will give a long list of output, and you should be able to see both commit messages and the difference between each commit. 
