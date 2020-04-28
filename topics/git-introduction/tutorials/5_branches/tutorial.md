@@ -1,7 +1,7 @@
 ---
 layout: tutorial_hands_on
 
-title: 5 Branches
+title: 5 Branches and merging
 zenodo_link: ''
 questions:
 - Which biological questions are addressed by the tutorial?
@@ -78,7 +78,7 @@ GitHub will now display in that button that it is on `Branch: new-feature`. It's
 Switch back to your *master* branch and have a look to the `plot2.R`-file. It shouldn't contain the changes that we just made. 
 
 
-# 3. Merging branches
+# 3. Merging branches on GitHub
 Before exploring how we make branches on our computer locally, we'll merge the changes in the *new-feature* branch into the *master* branch. 
 
 Whether you're on the *master* or *new-feature* branch, doesn't matter. In both cases you should see the following yellow screen. Alternatively, go to 'Pull requests' and find it there. 
@@ -109,30 +109,93 @@ It might be possible that in a project with several people, you're not authorize
 # 4. Branching locally
 Besides the possibility of making branches on GitHub, we can also do it locally on our computer. 
 
-What do we first have to do? 
-Pull so our local repository is up to date with the GitHub one. 
+As we've made changes to the repository on GitHub, we'll start with pulling the changes into our local repository. Use `git pull` in your project folder. 
+ 
+There is always an indication in the Terminal or Git Bash of which branch we're in (i.e. '(master)'). Here are the most important commands related to making branches and switching between different branches:
+1. `git checkout -b <new-branch>`: will create a new branch and move into this branch. 
+2. `git branch <new-branch>`: will create a new branch, but will remain in the current branch (i.e. the *master* branch in this case)
+3. With `git checkout <branch>` we will switch from one branch to the other. 
+4. Listing all the existing branches is possible with `git branch -a`:
 
-# 8. Create a new branch
-If we have a project with multiple parts, we can address each part separately by making a branch and make some changes in that branch. When we're happy about these edits, we can merge them back into the master branch which should be the reference branch.
+Let's start with listing all the existing branches (4). 
 ```
-git checkout -b new-branch
+* master
+remotes/origin/HEAD -> origin/master
+remotes/origin/master
+remotes/origin/new-feature
 ```
-Git will tell you it switched to your new branch called 'new-branch'. If you want to change branches, just type `git checkout` followed by the name of the branch, e.g. `git checkout master`.
+The first branch is our local master branch in which we're working at the moment (as denoted by the asterisk \*). The three others relate to the branches that exist remotely on GitHub. If we want to work on the branch *new-feature* we will have to import it first with: `git checkout new-feature` (3). Git will understand that there is a remote branch with the same name and you want to work on this one. 
 
-*Exercise*: make some changes in the README file and commit them. When you push your changes to GitHub, make sure to be explicit enough so it pushes the whole branch.
+**Note** that if you use `git checkout -b new-feature` (2), you would have created a new branch with the same name as the remote branch. This is error prone and will lead to problems! 
 
+# 4.1 Example workflow
+
+**1. Make a new branch:**
 ```
-git push origin new-branch
+git checkout -b <new-branch>
 ```
-Next time you want to push committed changes in new-branch, you won’t need to specify the branch - you can simply do git push, because now new-branch exists at both ends. However, it’s still a good idea to be explicit. That way you’ll be less likely to get a surprise you didn’t want, when the wrong thing gets pushed.
+Git will make a new branch with the name `<new-branch>` and tell you it switched to the new branch. If you want to change branches, just type `git checkout` followed by the name of the branch, e.g. `git checkout master`.
+
+**2. Make the necessary changes:**
+  - Add  a new file
+  - Add new code to an existing file
+
+**3. Stage changes:**  
+Use the following  command to simply add all the new or changed files. 
+```
+git add .
+```
+ 
+**4. Commit staging area:**  
+Commit all the staged files with:
+```
+git commit -m "some useful commit message"
+```
+
+**5. Push commits to GitHub:**
+```
+git push origin <new-branch>
+```  
+  or alternatively:
+```
+git push --set-upstream origin <new-branch>
+```
+The `git push` command is now a bit longer. The first time we want to publish a new local branch on a remote repository (GitHub), we need to be explicit and tell Git to add the `<new-branch>` to the origin. In Git, the "origin" is used to refer to the GitHub original repository's URL and makes it much easier to talk about. 
+
+Next time you want to push your commits from *new-branch*, you won’t need to be explicit - you can simply do `git push`, because now *new-branch* exists on GitHub and both branches know how to commmunicate with each other. However, it’s still a good idea to be explicit. That way it'll be less likely to push something to the wrong branch.
 
 
+---
 
-
-## 1.3 Create a new branch & edit
-Don’t edit the `master` (default) branch of the repository. It’s much better to edit the file in a new branch, leaving the `master` branch clean and untouched:
-
-
+> ### {% icon hands_on %} Exercise 6
+>
+>  Make a new branch and make sure you're in the branch. Edit the README.md file to the following text. 
+> 
+> ```
+> # Downstream data-analysis R
+> This repository contains all the scripts for the downstream data analysis of my project.
+> ```
+> 
+> 
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
+>    >
+>    >  
+>    >  ```
+>    >  git checkout -b readme
+>    >  ```
+>    >  Do the necessary changes
+>    >  ```
+>    >  git add README.md
+>    >  git commit -m "changed README file completely"
+>    >  git push origin readme
+>    >  ```
+>    >  Find the new branch in your GitHub repository. 
+>    > </details>
+>
+{: .hands_on}
+---
 
 
 
