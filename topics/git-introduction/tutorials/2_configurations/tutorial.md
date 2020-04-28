@@ -54,6 +54,11 @@ in which we replace `<editor>` with `vim`, `emacs`, `atom` or any other editor y
  
 The second and third chapter of this section are not important for the rest of the course. We can therefore skip them for the time being. 
 
+---
+We will consider everything in the following sections (SSH keys and aliases) as extra reading material.
+
+---
+
 # 2. SSH keys
 Using the SSH protocol, you can connect and authenticate to remote servers and services in a secure way.
 With SSH keys, you can connect to GitHub without supplying your username or password at each visit. If you want to create one, follow the brief instructions below or find them at [GitHub](https://help.github.com/en/github/authenticating-to-github/checking-for-existing-ssh-keys).

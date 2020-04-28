@@ -23,10 +23,9 @@ contributors:
 ---
 
 
-## Status
-At all times, git can tell you which files it's tracking and which files are ready to commit (we say that the changes are in a staging area). This being said, let's try some of these features.
+# 1. Status
+Git can display the state of your working directory and staging area. The command that we'll use for this is `git status` and depending on the situation the output will look differently, but it will always give you some informative status description.
 
-`git status` is the command you'll use the most for its informative status description.
 ```
 $ git status
 On branch master
@@ -34,41 +33,82 @@ Your branch is up to date with 'origin/master'.
 
 nothing to commit, working tree clean
 ```
-The first sentence tells us that we're on the `master` branch, which is the default branch name in Git. More on branches later. The second sentence tells us that our local branch is exactly the same as our origin. This means that all of the files and folders within our local project are identical to the ones in the remote GitHub repo. Lastly, git tells us that there is nothing to commit, which makes sense as we didn't make any changes yet.
+The first sentence tells us that we're on the `master` branch, which is the default branch name in Git. More on branches later. The second sentence tells us that our local branch is exactly the same as our origin. This means that all of the files and folders within our local project are identical to the ones in the remote GitHub repo. Lastly, git tells us that there is nothing to commit, which makes sense as we don't have any changes at the moment. 
 
-```
-vim README.md
-```
-When you're in the editing tab, type `i` to insert text, type something like "this is an introduction to github" and save the changes by typing 'esc', then ':' and finally 'x'. You should be back in your folders now. Check the status again with `git status`.
+
+Let's make some changes to one of our files again.  Check the status again with `git status`.
 ```
 $ git status
 On branch master
 Your branch is up to date with 'origin/master'.
 
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        README.md
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   plot1.R
 
-nothing added to commit but untracked files present (use "git add" to track)
+no changes added to commit (use "git add" and/or "git commit -a")
 ```
-This time, git tells us that there is one file that is untracked.
+This time, git tells us that there are changes in the file `plot1.R` and they are not in the staging area. There are two options here:
+- Use `git add plot1.R` to add the changes to the staging area 
+- Use `git restore plot1.R` to remove the changes from your working directory. This will undo the changes that you made since the last time you committed it. 
 
-### exercise 
-Imagine that we would have multiple files ready to commit, we would have to add the `-a` parameter, which stands for commit all changed files.
+Add the file to the staging area and check the status again with `git status`
 
-# 5. Your history (log)
-In order to track all of your commits, enter `git log`. This will prompt all of the commits we made and will look something similar like this:
+```
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   plot1.R
+```
+The file is now in the staging area and we have two options:
+- Use `git commit -m "some informative text"` to commit the changes to the commit repository
+- Use `git restore --staged plot1.R` to pull the file back out of the staging area.
+
+Let's do the latter, check the status again and then remove the changes from your working directory. 
+
+
+
+
+
+# 5. The history (log)
+Besides checking the state of your project with `git status`, there is also a possibility to have a look in your commit history. In order to list all your previous commits, enter `git log`. The output is a long list containing several blocks like this:
 ```
 commit e2d7e9a0b461426bee6b3ffd7583237bc5671dc1
 Author: tmuylder <tuurmuyldermans@gmail.com>
-Date:   Wed Jan 01 01:23:45 2019 +0200
+Date:   Wed Jan 01 01:23:45 2020 +0200
 
-    make README file
+    The informative commit message
 ```
-`git log` lists all commits made to a repository in reverse chronological order. The listing for each commit starts with an identifier which is a unique code for each commit. If we push the commit to our Github repository (online) we will see the same (latest) identifier somewhere in the upper right corner. This is a verification for us so we know that the remote repository is up to date with the local repository. Besides the identifier, the commit’s author and date are given, and the log message Git was given when the commit was created.
+`git log` lists all commits made to a repository in reverse chronological order. Each commit starts with an identifier which is a unique code for each commit. Besides the identifier, the commit’s author and date are given, and the log message Git was given when the commit was created.
+
+If we have pushed the commits to our Github repository (online) we will see the last commit ID somewhere in the upper right corner. This is a verification for us so we know that the remote repository is up to date with the local repository. 
+
+---
+
+> ### {% icon question %} Question
+> 
+> Why is it useful to have the author's name and e-mail address in the history log?
+>
+> > ### {% icon solution %} Solution
+> >
+> > It's obvious that in this local project we've been doing all the changes & commits. However at a certain point you migth cooperate with someone else on the same project. In this case it's useful to know who did what changes.  
+> >
+> {: .solution}
+>
+{: .question}
+
+---
+
+Git log can be extended with many other parameters. You can also combine it with the `--oneline` parameter. One useful combination adds `--graph` to display the commit history as a text-based graph and `--decorate` to indicate which commits are associated with the current HEAD, the current branch master, or other Git references.
 
 
-**Extra options**
+---
+Extra reading:
+
 When the output of git log is too long to fit in your screen, git uses a program to split it into pages of the size of your screen. When this “pager” is called, you will notice that the last line in your screen is a :, instead of your usual prompt.
 - To get out of the pager, press `Q`.
 - To move to the next page, press `Spacebar`.
@@ -76,34 +116,11 @@ When the output of git log is too long to fit in your screen, git uses a program
 
 To avoid having `git log` cover your entire terminal screen, you can limit the number of commits that Git lists by using `-N`, where `N` is the number of commits that you want to view. For example, if you only want information from the last commit you can use `git log -1`. Otherwise, if you want to reduce the quantity of information, using the `git log --oneline` command is also a good option.
 
-You can also combine the `--oneline` option with others. One useful combination adds `--graph` to display the commit history as a text-based graph and `--decorate` to indicate which commits are associated with the current HEAD, the current branch master, or other Git references.
+---
 
 
 
-# 7. Git diff
-Let's edit the `README.md` file. Use your editor (`vim`) and add another sentence to it so it looks something like this:
-```
-This is an introduction to github.
-We use this repo as an example.  
-```
-To save your changes, type Esc followed by `:x`. The output will look something like this (note that the colors do not completely match, however are indicative):
 
-```diff
-diff --git a/hello.txt b/hello.txt
-index ce01362..f23c541 100644
---- a/hello.txt
-+++ b/hello.txt
-@@ -1 +1,2 @@
-- this is an introduction to github
-+ This is an introduction to github.
-+ We use this repo as an example.
-```
-In the first line, git tells which files it's comparing. In the second line, it gives the identifier of the two different edits???. The third and fourth line indicate that the a-version is the previous version and the b-version is the current version with edits. The fifth line indicates where edits were performed ???. Finally, in the last lines we can see the lines that were edited from a previous version with a `-` sign to the current version with a `+` sign. We call this line-based diffing.
-
-You can check out the differences between files that are in the staged version with the `git diff --staged` command. Right now, it will give nothing in return. However, if we add the files to the staging area (`git add <file(s)>`) and enter the former command, we will see the same output as given here above.
-
-**Extra options**
-- Word-based diffing: `--color-words` allows you to highlight the changed words instead of lines.
 
 # 8. Create a new branch
 If we have a project with multiple parts, we can address each part separately by making a branch and make some changes in that branch. When we're happy about these edits, we can merge them back into the master branch which should be the reference branch.

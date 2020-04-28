@@ -189,6 +189,10 @@ We've learned how to make a GitHub repository, clone it to our computer, add a f
 {: .hands_on}
 ---
 
+## 3.5 Skip `git add`
+One thing we haven't really said until now is that Git actually keeps track of the changes that you make to files as soon as you have told Git to do so. The first thing you have to do when you add a new file, is to tell Git to keep track of changes made in this file. If you do not do this, Git will know that there is a new file, but it will classify it as *untracked*. After adding it to the staging area a first time, it will always keep track of the changes in this file. 
+
+On the premise that Git is already keeping track of the files, you can simply do `git commit -a -m "some informative text"` in which `-a` stands for add all changes in all files to the staging area and commit them at once. 
 
 
 
@@ -248,3 +252,19 @@ Now you're probably wondering why it's useful to have that many steps to save a 
 Imagine that you're working on a project with multiple Python scripts and you're working on all of them. In this case your folder in your development area contains the files  `scriptA.py`, `scriptB.py` and `scriptC.py`. The changes that you made in script A and script C are somehow related, but script B is not. It's good practice to make commits in which changes that are related to each other are bundled. Hence, in this case we want to make one commit with the changes from file A and C. Now we can simply add scripts A and C to the staging area and commit it. The changes in script B will remain unsaved until we commit the changes in a separate commit. 
 
 It's always better to have more commits; in case you want to remove part of your work in a later stage, or you want to start your work again from a specific commit. 
+
+
+# 6. Pull
+Let's go back to our repository on GitHub.com. We will make a change in the repository on GitHub and then pull these changes back into the repository on our computer (i.e. the project folder on our computer). 
+
+Click on the `README.md` file in the list of files and click the pencil icon on the upper right. The file will open in an editor mode and we can change the title from *introduction-github* to *Introduction GitHub* or we can add some more descriptive text. Note that a README file is by default a markdown-file. Markdown is a text file with lay-outing options. If you haven't heard of it before, it's worth some [further reading](https://guides.github.com/features/mastering-markdown/).
+
+Save the changes by committing them as depicted here below:
+<center><img src="../../images/commitReadme.PNG"/></center>
+
+GitHub is now one commit ahead of our local repository. Hence, we have to pull this commit into our local repository. We can do this by using the following command:
+```
+git pull
+```
+
+Open the file `README.md` and check whether the changes have merged in.  
