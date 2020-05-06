@@ -117,6 +117,7 @@ for line in lines:
     print(line)
 ```
 
+One line can be extracted by slicing that line out of the list. After removing whitespaces from that line, it is possible to split the line in elements separated by their tab. This method allows us to extract values from a column in a file. 
 
 ```python
 line = lines[10]
@@ -195,74 +196,21 @@ The file is written to the directory you're executing the program in - have a lo
 >    > </summary>
 >    >
 >    >  ```python
->    > # Read the file
->    > f = open("data/TestFile.pdb","r")
->    > g = open('data/withval.pdb','w')
->    > 
->    > # Loop over the lines
->    > for line in f:
->    >     if 'VAL' in line:      # Alternatively, use "if ' C ' in line:"
->    >         if 'ATOM' in line:
->    >             g.write(line)
->    > f.close()
->    > g.close()
->    >  ```
->    > </details>
->    > <details markdown="1">
->    > <summary>{% icon solution %} Solution 2
->    > </summary>
->    >
->    >  ```python
->    > # Open the file
->    > fileHandle = open("data/TestFile.pdb")
->    > 
->    > # Read all the lines in the file (as separated by a newline character), and store them in the lines list
->    > # Each element in this list corresponds to one line of the file!
->    > lines = fileHandle.readlines()
+>    >  # Read the file
+>    >  f = open("data/TestFile.pdb","r")
+>    >  g = open("data/fileWithVAL.pdb",'w')
 >    >  
->    > # Close the file
->    > fileHandle.close()
+>    >  # Loop over the lines
+>    >  for line in f.readlines():
+>    >      if line.startswith("ATOM"):
+>    >          if "VAL" in line:
+>    >              g.write(line)
 >    >  
->    > # Track the lines with VAL
->    > linesToWrite = []
->    >  
->    > # Loop over the lines
->    > for line in lines:
->    >     if line.count("VAL"):      # Alternatively, use "if ' C ' in line:"
->    >         linesToWrite.append(line)
->    > 
->    > # Write out the lines
->    > fileHandle = open("data/fileWithVAL.pdb",'w')
->    > for line in linesToWrite:
->    >     fileHandle.write(line)
->    > 
->    > # Close the file
->    > fileHandle.close()
->    >  ```
->    > </details>
->    > <details markdown="1">
->    > <summary>{% icon solution %} Solution 3
->    > </summary>
->    >
->    >  ```python
->    > # Read the file
->    > f = open("data/TestFile.pdb","r")
->    > 
->    > # Track the lines with VAL
->    > linesToWrite = []
->    > 
->    > # Loop over the lines
->    > for line in f.readlines():
->    >     if line.count("VAL"):      # Alternatively, use "if ' C ' in line:"
->    >         linesToWrite.append(line)
->    > 
->    > # Write out the lines
->    > fileHandle = open("data/fileWithVAL.pdb",'w')
->    > for line in linesToWrite:
->    >     fileHandle.write(line)
->    > 
->    > # Close the file
->    > fileHandle.close()
+>    >  f.close()
+>    >  g.close()
+>    >  h = open("data/fileWithVAL.pdb",'r')
+>    >  text = h.read()
+>    >  print(text)
 >    >  ```
 >    > </details>
 >

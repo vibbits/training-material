@@ -23,11 +23,17 @@ Another important feature of computer programs is that they can do the same thin
 
 
 ## 6.2 For loop
-Now that we have these variables that can hold multiple elements (previous exercise), it would be useful to be able to loop over them one by one. This is possible with the **for** loop:
+Now that we have these variables that can hold multiple elements (previous exercise), it would be useful to be able to loop over them one by one. This is possible with the **for** loop. Here is an example of how it essentially works:
 
+```python
+myList = ["a","b","c","d"]
 
+for i in myList:
+    print(i)
+print("Loop has ended")
+```
 
-
+Another example:
 ```python
 # Make a list of integers from 0 to 9 with steps of 1 (0, 1, 2, ..., 9)
 myList = range(10) 
@@ -203,52 +209,27 @@ for myNumber in myNumbers:
 ---
 > ### {% icon hands_on %} Exercise 6.2.1
 >
-> Write a program where you print out all positive numbers up to 1000 that can be divided by 13, or 17, or both. The output should be printed as : `Number 13 is divisible by [13]`. If you want a little more challenge, the output should be printed as `Number 884 is divisible by 13, 17`
+> Write a program where you print out all positive numbers up to 1000 that can be divided by 13, or 17, or both. The output should be printed as : `Number 13 is divisible by 13`, or `Number 884 is divisible by 13 and 17`. Iterate through the list of numbers and the dividers by using (two) for-loops; one for the numbers and one for the dividers.
 > 
 >    > <details markdown="1">
->    > <summary>{% icon solution %} Solution 1
+>    > <summary>{% icon solution %} Solution 
 >    > </summary>
 >    >
 >    >  ```python
->    >  myNumbers = range(1,100) # should be 1001
->    >  myDividers = (13,17)    # We will loop over these in the loop itself, so it's easy to add new numbers to this
->    >   
->    >  for myNumber in myNumbers:
->    >      validDividers = []     # In this list we will put all the valid dividers
->    >      for myDivider in myDividers:
->    >          if not (myNumber % myDivider):
->    >                validDividers.append(myDivider)
->    >      if validDividers:      # This means that the list has to have values in it
->    >          print("Number {} is divisible by {}".format(myNumber,validDividers))       
->    >  ```
->    > </details>
->    > <details markdown="1">
->    > <summary>{% icon solution %} Solution 2
->    > </summary>
->    >  ```python
->    >  # Extra: The output is not very nice here as you print off the list with the square brackets, you could try the following bit of code under the if validDividers: condition:
->    >  myNumbers = range(1,100) #should be 1001
->    >  myDividers = (13,17)    # We will loop over these in the loop itself, so it's easy to add new numbers to this
->    >   
->    >  for myNumber in myNumbers:
->    >      validDividers = []     # In this list we will put all the valid dividers
->    >      for myDivider in myDividers:
->    >          if not (myNumber % myDivider):
->    >                validDividers.append(myDivider)
->    >      if validDividers:      # This means that the list has to have values in it
->    >          # First make strings out of the integers; this is valid Python syntax where you make a list out of a list    
->    >          validDividerStrings = ["{}".format(validDivider) for validDivider in validDividers]
+>    >  numbers = range(1,1001)
+>    >  dividers = [13,17]
 >    >  
->    >          # Now you can join the elements of a list (if they are strings) together using the .join() method for a string:
->    >          validDividerString = ', '.join(validDividerStrings)
->    >   
->    >          print("Number {} is divisible by {}".format(myNumber,validDividerString))
->    >      
->    >      ######### Or as an alternative for the nice printing:
->    >          #if len(validDividers) == 1:
->    >          #    print("number is div by {}".format(validDividers[0]))
->    >          #elif len(validDividers) == 2:
->    >          #    print("number x is div by {}, {}".format(validDividers[0],validDividers[1]))
+>    >  for number in numbers:
+>    >      validDividers = []
+>    >      for divider in dividers:
+>    >          if number % divider == 0:
+>    >              validDividers.append(divider)
+>    >  
+>    >      if len(validDividers) == 1:
+>    >          print("Number {} is divisible by {}".format(number, validDividers[0]))
+>    >      elif len(validDividers) == 2:
+>    >          print("Number {} is divisible by {} and {}".format(number, validDividers[0],validDividers[1]))    
+>    >  
 >    >  ```
 >    > </details>
 >
@@ -282,12 +263,12 @@ for myNumber in myNumbers:
 >    >
 >    >  ```python
 >    >  # Write a program where you find, for each positive number up to 50, all numbers that can divide each number. E.g. 16 can be divided by 1, 2, 4, 8 and 16. 17 can be divided by...
->    >  myNumbers = range(1,5) #should be 51
+>    >  myNumbers = range(1,51) #should be 51
 >    >   
 >    >  for x in myNumbers:
 >    >      dividers = []
 >    >      for y in range(1,x+1):
->    >          if not (x % y):
+>    >          if (x % y) == 0:
 >    >              dividers.append(y)
 >    >   
 >    >      for divider in dividers:
@@ -299,13 +280,13 @@ for myNumber in myNumbers:
 >    > </summary>
 >    >
 >    >  ```python
->    >  # The output is again not very nice here, you can replace the last two lines by this for nicer output:
->    >  myNumbers = range(1,5)
+>    >  # The output in the solution above is not very nice, you can replace the last two lines by this for nicer output:
+>    >  myNumbers = range(1,51)
 >    >   
 >    >  for x in myNumbers:
 >    >      dividers = []
 >    >      for y in range(1,x+1):
->    >          if not (x % y):
+>    >          if (x % y) == 0:
 >    >              dividers.append(y)
 >    >   
 >    >      #for divider in dividers:
@@ -387,7 +368,7 @@ while powerResult < 1000:
 >    >  myDivider = 17
 >    >  
 >    >  while myNumber <= 50:
->    >      if not (myNumber % myDivider): # Nothing left after division, so number is divisible.
+>    >      if myNumber % myDivider == 0: # Nothing left after division, so number is divisible.
 >    >          print("{} is divisible by {}".format(str(myNumber),str(myDivider)))
 >    >      myNumber += 1
 >    >  
@@ -403,21 +384,18 @@ while powerResult < 1000:
 > ### {% icon hands_on %} Exercise 6.3.2
 >
 > Write a program where you start with a list of numbers from 1 to 100, and you then remove every number from this list that can be divided by 3 or by 5. Print the result.  
-> Tip: you have to make a copy of the original list here, otherwise Python will get 'confused' when you remove values from the list while it's looping over it. Use `[:]` for this purpose.  
+> Tip: you have to make a copy of the original list here, otherwise Python will get 'confused' when you remove values from the list while it's looping over it.   
 > 
 >    > <details markdown="1">
 >    > <summary>{% icon solution %} Solution
 >    > </summary>
 >    >
 >    > ```python
->    > # Write a program where you start with a list of numbers from 1 to 100, and you then remove every number from this list that can be divided by 3 or by 5. Print the result.
->    > # Tip: you have to make a copy of the original list here, otherwise Python will get 'confused'
->    > # when you remove values from the list while it's looping over it
->    > 
+>    >  
 >    > myNumberList = list(range(1,101))
 >    > 
 >    > for number in myNumberList[:]:  
->    >     if not (number % 3) or not (number % 5):
+>    >     if (number % 3) == 0 or (number % 5) == 0:
 >    >         myNumberList.pop(myNumberList.index(number))
 >    > 
 >    > print(myNumberList)
@@ -444,7 +422,7 @@ while powerResult < 1000:
 >    >  
 >    > # Keep on checking until you have a number, prime the while loop as well
 >    > isNumber = False
->    > while not (isNumber):
+>    > while isNumber == False:
 >    >     inputString = input("Give a number:")
 >    >     if inputString.isdigit():
 >    >         isNumber = True

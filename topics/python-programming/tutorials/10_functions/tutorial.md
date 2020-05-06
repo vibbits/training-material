@@ -146,7 +146,6 @@ if getMeanValue(valueList1) > 26 :
 
 ---
 
-There are several ways to solve this problem, however it might be easier to do it with `zip()` ;). 
 > ### {% icon hands_on %} Exercise 10.2.1
 >
 > The Hamming distance between two strings of equal length is the number of positions at which the corresponding character are different. In a more general context, the Hamming distance is one of several string metrics for measuring the edit distance between two sequences. 
@@ -252,7 +251,7 @@ There are several ways to solve this problem, however it might be easier to do i
 >    >                 sequence += line.rstrip()
 >    >     GC_content = (sequence.count('G') + sequence.count('C')) / len(sequence) * 100
 >    >     print("The GC content of {} is\t {:.2f}%".format(seq_id, GC_content))    
->    > 
+>    >     return GC_content
 >    >     
 >    > gc_content('data/gene.fa')
 >    >  ```
@@ -273,7 +272,7 @@ There are several ways to solve this problem, however it might be easier to do i
 >    >             sequence += line.rstrip()
 >    >     GC_content = (sequence.count('G') + sequence.count('C')) / len(sequence) * 100
 >    >     print("The GC content of {} is\t {:.2f}%".format(seq_id, GC_content))    
->    > 
+>    >     return GC_content
 >    >     
 >    > gc_content('data/gene.fa')
 >    >  ```

@@ -134,7 +134,9 @@ dir(module2)
 
 There are several built-in modules in Python, which you can import whenever you like.
 
-Python has many ready-to-use functions that can save you a lot of time when writing code. The most common ones are **time**, **sys**, **os/os.path** and **re**.
+
+Python has many ready-to-use functions that can save you a lot of time when writing code. Some of them are discussed here (**time**, **math** and **os/os.path**), but a complete list of all built-in modules can be found [here](https://docs.python.org/3/py-modindex.html). Nonetheless there are also more libraries which you might have heard of: like pandas, NumPy, mathplotlib, seaborn, scikit, etc. 
+
 
 ### 11.5.1 `time`
 With **time** you can get information on the current time and date, ...:
@@ -158,37 +160,41 @@ time.sleep(10)       # Sleep for 5 seconds - the program will wait here
 See the [Python documentation](https://docs.python.org/3/library/time.html) for a full description of time. Also see [datetime](https://docs.python.org/3/library/datetime.html), which is a module to deal with date/time manipulations.
 
 
-### 11.5.2 `sys`
-gives you system-specific parameters and functions:
+### 11.5.2 `math`
+contains a couple of valuable mathematic operations such as factorials, power and log functions. Here are a couple of them, but more information can be found on [Real Python](https://realpython.com/python-math-module/).
 
 
 ```python
-import sys
-
+import math
 ```
 
 
 ```python
-sys.argv  # A list of parameters that are given when calling this script 
-          # from the command line (e.g. ''python myScript a b c'')
+# Use the number pi
+math.pi
 ```
-
 
 ```python
-sys.platform # The platform the code is currently running on
+# Square root
+math.sqrt(9)
 ```
-
 
 ```python
-sys.path     # The directories where Python will look for things to import
+# factorial of 5 (= 5*4*3*2*1)
+math.factorial(5)
 ```
-
 
 ```python
-help(sys.exit)          # Exit the code immediately
+# floor & ceil
+math.floor(6.68)
+math.ceil(6.23)
 ```
 
-See the [Python documentation](https://docs.python.org/3/library/sys.html) for a full description.
+```python
+# Power functions
+math.pow(2, 4)
+```
+
 
 ### 11.5.3 `os` and `os.path` 
 are very useful when dealing with files and directories:
@@ -250,35 +256,8 @@ print(myFileName)
 
 See the Python documentation for [**os**](https://docs.python.org/3/library/os.html) and [**os.path**](https://docs.python.org/3/library/os.path.html) for a full description.
 
-### 11.5.4 `re`
-
-A library that is very powerful for dealing with strings is **re**. It allows you to use regular expressions to examine text - using these is a course in itself, so just consider this simple example:
-
-
-```python
-import re
-
-myText = """Call me Ishmael. Some years ago - never mind how long precisely -
-having little or no money in my purse, and nothing particular to interest me on 
-shore, I thought I would sail about a little and see the watery part of the 
-world."""
-
-# Compile a regular expression, 
-myPattern = re.compile("(w\w+d)")    # Look for the first word that starts with a w,
-                                     # is followed by 1 or more characters (\w+)
-                                     # and ends in a d
-
-mySearch = myPattern.search(myText)
-
-# mySearch will be None if nothing was found
-if mySearch:
-    print(mySearch.groups())
-```
-
-See the full [Python documentation](https://docs.python.org/3/library/re.html) on regular expressions for more information.
 
 ## 11.6 Putting everything together
-
 
 ---
 

@@ -39,6 +39,7 @@ What we first have to do is importing the library of course.
 import matplotlib.pyplot as plt
 ```
 
+## 12.1 Basic syntax for plots
 
 ```python
 plt.plot([1, 2, 3, 2.5])
@@ -52,10 +53,10 @@ plt.ylabel('some numbers')
 
 
 ```python
-x_list = list(range(1,10))
-y_list = [pow(i, 2) for i in x_list]
-print(x_list)
-print(y_list)
+# list ranging from 1 to 9
+x_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# list with exponential values
+y_list = [1, 4, 9, 16, 25, 36, 49, 64, 81]
 ```
 
 
@@ -83,66 +84,28 @@ plt.ylabel("This is the y-label")
 
 When working with just one subplot in the figure, generally is OK to work with the pyplot interphase, however, when doing more complicated plots, or working within larger scripts, you will want to explicitly pass around the *Subplot (Axes)* and/or *Figure* object to operate upon.
 
-
-
-```python
-def gc_content(file):
-    """Calculate GC content of a fasta file (with one sequence)"""
-    sequence=""
-    with open(file, 'r') as f:
-        for line in f:
-            if line.startswith('>'):
-                seq_id = line.rstrip()[1:]
-            else:
-                sequence += line.rstrip()
-    
-    A_count = sequence.count('A')
-    C_count = sequence.count('C')
-    G_count = sequence.count('G')
-    T_count = sequence.count('T')
-    N_count = sequence.count('N')
-    GC_content = (sequence.count('G') + sequence.count('C')) / len(sequence) * 100
-    AT_content = (sequence.count('A') + sequence.count('T')) / len(sequence) * 100
-    print("The GC content of {} is\t {:.2f}%".format(seq_id, GC_content))    
-    return GC_content, AT_content, A_count, C_count, G_count, T_count, N_count
-    
-
-GC_content, AT_content, A_count, C_count, G_count, T_count, N_count = gc_content('../data/gene.fa')
-print(GC_content)
-print(AT_content)
-print(A_count)
-print(C_count)
-print(T_count)
-print(G_count)
-
-```
-
+## 12.2 Barplots
+Barplots are made with the `plt.bar` function:
 
 ```python
-total_count = A_count + C_count + G_count + T_count
-A_perc = A_count/total_count*100
-C_perc = C_count/total_count*100
-G_perc = G_count/total_count*100
-T_perc = T_count/total_count*100
-height = [A_perc, C_perc, G_perc, T_perc]
+# height of bars are nucleotide percentages of data/gene.fa: [A_perc, C_perc, G_perc, T_perc]
+height = [17.627944760357433, 33.22502030869212, 30.300568643379368, 18.846466287571083]
+# Names of bars
 bars = ('A','C','G','T')
+# making a barplot
 plt.bar(bars, height)
-
+# adding layouts: xlabel, ylabel and title. 
 plt.xlabel('Nucleotide')
 plt.ylabel('Percentage of occurence (%)')
 plt.title('Distribution of nucleotides in fasta sequence')
-
-plt.show()
 ```
+
 <center><img src="../../images/plotting4.png" /></center>
 
 ```python
-total_count = A_count + C_count + G_count + T_count
-A_perc = A_count/total_count*100
-C_perc = C_count/total_count*100
-G_perc = G_count/total_count*100
-T_perc = T_count/total_count*100
-height = [A_perc, C_perc, G_perc, T_perc]
+# height of bars are nucleotide percentages of data/gene.fa: [A_perc, C_perc, G_perc, T_perc]
+height = [17.627944760357433, 33.22502030869212, 30.300568643379368, 18.846466287571083]
+# Names of bars
 bars = ('A','C','G','T')
 #plt.bar(bars, height, color=('green','red','yellow','blue'))
 plt.bar(bars, height, color=('#1f77b4','#ff7f0e','#2ca02c','#d62728'))
@@ -150,8 +113,6 @@ plt.bar(bars, height, color=('#1f77b4','#ff7f0e','#2ca02c','#d62728'))
 plt.xlabel('Nucleotide')
 plt.ylabel('Percentage of occurence (%)')
 plt.title('Distribution of nucleotides in fasta sequence')
-
-plt.show()
 ```
 <center><img src="../../images/plotting5.png" /></center>
 
@@ -196,3 +157,31 @@ plt.show()
 ```
 
 <center><img src="../../images/plotting6.png" /></center>
+
+## 12.3 Venn diagrams
+
+Venn diagrams are a bit more difficult as they don't have a library that can be imported via a conda environment. We have to add it manually to our environment with `pip install`. 
+
+```python
+pip install matplotlib_venn
+```
+
+This package is depending on `NumPy`, `scipy` and needs to be imported itself as well. Here are the import statements:
+```python
+%matplotlib inline
+import numpy as np
+import scipy
+from matplotlib import pyplot as plt
+from matplotlib_venn import venn2
+```
+
+From here on it's easy to exploit this package either by searching its documentation or using `help()`. Here is the most simplest example:
+
+```python
+listGenes1 = ['geneA', 'geneB', 'geneC', 'geneD', 'geneE']
+listGenes2 = ['geneC', 'geneD', 'geneE', 'geneF']
+```
+
+```python
+venn2(subsets=[set(listGenes1), set(listGenes2)], set_labels = ("list 1", "list 2"))
+```

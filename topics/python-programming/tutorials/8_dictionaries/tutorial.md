@@ -158,30 +158,11 @@ type(myDictionary.get('B'))
 > Tip: use the one-letter code as key in the dictionary, and the count as value.
 > 
 >    > <details markdown="1">
->    > <summary>{% icon solution %} Solution
+>    > <summary>{% icon solution %} Solution 1
 >    > </summary>
 >    >
 >    > ```python
->    > # Use a dictionary to track how many times each amino acid code appears in the following sequence:
->    > # SFTMHGTPVVNQVKVLTESNRISHHKILAIVGTAESNSEHPLGTAITKYCKQELDTETLGTCIDFQVVPGCGISCKVTNIEGLLHKNNWNIEDNNIKNASLVQIDASNEQSSTSSSMIIDAQISNALNAQQYKVLIGNREWMIRNGLVINNDVNDFMTEHERKGRTAVLVAVDDELCGLIAIADT
->    > # Tip: use the one-letter code as key in the dictionary, and the count as value. 
->    > mySequence = "SFTMHGTPVVNQVKVLTESNRISHHKILAIVGTAESNSEHPLGTAITKYCKQELDTETLGTCIDFQVVPGCGISCKVTNIEGLLHKNNWNIEDNNIKNASLVQIDASNEQSSTSSSMIIDAQISNALNAQQYKVLIGNREWMIRNGLVINNDVNDFMTEHERKGRTAVLVAVDDELCGLIAIADT"
->    >  
->    > # First way to do this, using sets (condensed)
->    > aminoAcidCount = {}
->    > myUniqueAminoAcids = set(mySequence)
->    > for aaCode in myUniqueAminoAcids:
->    >     print("Amino acid {} occurs {} times.".format(aaCode,mySequence.count(aaCode)))
->    >     aminoAcidCount[aaCode] = mySequence.count(aaCode)
->    > ```
 >    > 
->    > </details>
->    > <details markdown="1">
->    > <summary>{% icon solution %} Solution
->    > </summary>
->    >
->    > ```python
->    > # Another way to do this, a little bit more elaborate and using the myDictionary as a reference for iteration
 >    > mySequence = "SFTMHGTPVVNQVKVLTESNRISHHKILAIVGTAESNSEHPLGTAITKYCKQELDTETLGTCIDFQVVPGCGISCKVTNIEGLLHKNNWNIEDNNIKNASLVQIDASNEQSSTSSSMIIDAQISNALNAQQYKVLIGNREWMIRNGLVINNDVNDFMTEHERKGRTAVLVAVDDELCGLIAIADT"
 >    > 
 >    > myDictionary = {
@@ -206,11 +187,23 @@ type(myDictionary.get('B'))
 >    >      'W': 'Trp',
 >    >      'Y': 'Tyr'}
 >    > 
->    > lengthDict = len(myDictionary.keys())
->    > for aa in range(lengthDict):
->    >     aaCode = list(myDictionary.keys())[aa]
->    >     aaCount = mySequence.count(aaCode)
->    >     print("Amino acid {} occurs {} times.".format(aaCode,aaCount))
+>    > for letter in list(myDictionary.keys()):
+>    >     countLetter = mySequence.count(letter)
+>    >     print(letter, countLetter)
+>    > ```
+>    > 
+>    > </details>
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution 2
+>    > </summary>
+>    >
+>    > ```python
+>    > # Another solution where we make a new dictionary with all the counted occurences of each value. 
+>    > newDict = dict()
+>    > for letter in list(myDictionary.keys()):
+>    >     countLetter = sequence.count(letter)
+>    >     newDict[letter] = countLetter
+>    > newDict 
 >    > ```
 >    > 
 >    > </details>

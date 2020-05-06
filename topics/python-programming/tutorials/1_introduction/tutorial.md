@@ -25,7 +25,7 @@ contributors:
 ---
 
 ## 1.1 Why Jupyter
-Jupyter is an interactive code environment that allows you to write code and get immediate feedback from it. It's one of the most popular environment for Python programming. Especially for training purposes, as it interactively gives you your code and some informative text together. 
+Jupyter is an interactive code environment that allows you to write code and get immediate feedback from it. It's one of the most popular environments for Python programming. Especially for training purposes, as it interactively gives you your code and some informative text together. 
 
 ## 1.2 Installation
 The easiest way to install Python and Jupyter is to install [Anaconda](https://docs.anaconda.com/anaconda/install/) (Navigator) on your computer. Anaconda Navigator contains several (GUI) applications like Jupyter in which you can run your Python code. As a side note, Anaconda is also a package manager which makes it ideal for reproducibility purposes as well. 

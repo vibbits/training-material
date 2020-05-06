@@ -198,12 +198,12 @@ You can also end an **if** (with or without **elif**s) with an **else** conditio
 ```python
 x = 7
  
-if not (x % 2):
+if (x % 2) == 0:
     print("x is divisible by two!")
-elif not (x % 3):
+elif (x % 3) == 0:
     print("x is divisible by three!")
 else:
-    print("x is not divisible by two...")
+    print("x is not divisible by two nor three...")
 
 print ("x is {}".format(x))
 ```
@@ -217,51 +217,40 @@ You can modify the value of x a bit to see what else can happen. Can you spot a 
 > Modify the code above so it prints that it is divisible by two and three when this is the case.
 > 
 >    > <details markdown="1">
->    > <summary>{% icon solution %} Solution
+>    > <summary>{% icon solution %} Solution 1
 >    > </summary>
 >    >
 >    >  ```python
->    >  # If a value can be divided by two and three, only the block of code under the first condition will be executed, so you will not find out whether your value can be divided by three! There are several solutions to this, for example:
->    >  x = 12
->    >   
->    >  if not (x % 2):
+>    >  # Solution with if-elif-else structure. 
+>    >  x = 13
+>    >  
+>    >  if (x % 2) == 0 and (x % 3) == 0:
+>    >      print("x is divisible by two and three!")
+>    >  elif (x % 2) == 0:
 >    >      print("x is divisible by two!")
->    >      if not (x % 3):
->    >          print("x is divisible by three!")
->    >  elif not (x % 3):
+>    >  elif (x % 3) == 0:
 >    >      print("x is divisible by three!")
 >    >  else:
->    >      print("x is not divisible by two or three...")
+>    >      print("x is not divisible by two, nor by three...")
 >    >  
 >    >  print ("x is {}".format(x))
->    >  
->    >  # This is not a very elegant solution however, as you are repeating the same bit of code twice to find out whether the value can be divided by three. This one might be   slightly better:
+>    >  ```
+>    > </details>
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution 2
+>    > </summary>
+>    >
+>    >  ```python
+>    >  # Solution with nested if structures
 >    >  x = 12
->    >  
->    >  if not (x % 2):
->    >      print("x is divisible by two!")
->    >  
->    >  if not (x % 3):
->    >      print("x is divisible by three!")
->    >  
->    >  if (x % 2) and (x % 3):
->    >      print("x is not divisible by two or three...")
->    >  
->    >  print ("x is {}".format(x))
->    >  
->    >  # However you still have to repeat the conditions, which would become very tedious (and error-prone) if you were to try division by many values. The next example is a bit more verbose but cleaner and more 'extendable' for other values:
->    >  x = 12
->    >  xDivisible = False
 >    >   
->    >  if not (x % 2):
+>    >  if (x % 2) == 0:
 >    >      print("x is divisible by two!")
->    >      xDivisible = True
->    >  
->    >  if not (x % 3):
+>    >      if (x % 3) == 0:
+>    >          print("x is divisible by three!")
+>    >  elif (x % 3) == 0:
 >    >      print("x is divisible by three!")
->    >      xDivisible = True
->    >  
->    >  if not xDivisible:
+>    >  else:
 >    >      print("x is not divisible by two or three...")
 >    >  
 >    >  print ("x is {}".format(x))

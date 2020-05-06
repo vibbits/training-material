@@ -44,6 +44,9 @@ myList
 
 You can also use the `range()` function. Try this:
 
+```python
+range(10)
+```
 
 
 ```python
@@ -85,6 +88,7 @@ An important feature of lists is that they are flexible - you can add and remove
 - Copy of a list with the `copy()` method
 
 
+In the cells below we will use a couple of these methods as an example.
 
 ```python
 myList = []             # Create an empty list
@@ -145,13 +149,20 @@ myListSlice
 
 
 ```python
+# Make a copy of the list as we're slicing all elements of the list.
 myListCopy = myList[:]
-print(myListCopy)
+myListCopy
 ```
 
 
 ```python
-print(myList[-4:])     # This will select the fourth-last to the last element in the list
+# Another way of making a copy of a list:
+myListCopy = myList.copy()
+```
+
+```python
+# This will print out the four last elements of the list
+print(myList[-4:])     
 ```
 
 There are two other methods you can use on lists:
@@ -213,7 +224,7 @@ myList.index(10)   # Will give the index of the element with value 10 - in this 
 
 
 ## 5.3 Tuples  
-Similar to *lists* are *tuples* - essentially they are the same, except that a tuple cannot be modified once created. This can be useful for values that don't change, like (part of) the alphabet for example:
+Similar to *lists* are *tuples* - essentially they are the same, except that a tuple cannot be modified once created. This can be useful for values that don't change. Let's start by making a new tuple:
 
 
 ```python
@@ -221,7 +232,15 @@ myTuple = ("A","B","C","D","E","F")
 myTuple
 ```
 
-Important to remember is that if you create a tuple with one value you have to use a comma:
+We can verify its immutability by listing the available operations that we can perform on a tuple with `dir()`. You will notice that you can only count the occurrence of values with `count` and extract indeces of a value with `index`.  
+
+
+```python
+dir(myTuple)
+```
+
+
+A tuple is indicated by round brackets **( )**. Important to remember is that if you create a tuple with one value you have to use a comma after your first value:
 
 
 ```python
@@ -235,7 +254,7 @@ myWrongTuple = ("My string")  # The brackets here don't do anything.
 myWrongTuple
 ```
 
-A tuple is indicated by round brackets **( )**. You can interconvert between lists and tuples by using `list()` and `tuple()`:
+You can interconvert between lists and tuples by using `list()` and `tuple()`:
 
 
 
@@ -260,8 +279,7 @@ myTupleLength = len(myTuple)
 myTupleLength
 ```
 
-Tuples are faster during iteration procedures due to their immutability. 
-
+Tuples will allocate less memory as opposed to lists, making operations faster. However, this advantage will only be relevant upon a huge number of elements.
 
 
 ---
@@ -293,10 +311,8 @@ Tuples are faster during iteration procedures due to their immutability.
 
 
 ## 5.4 Strings
-**Strings are a bit like lists and tuples** 
 
-Strings are really a sequence of characters, and they behave similar to lists:
-
+Strings are a sequence of characters, and they behave similar to lists:
 
 ```python
 myString = "This is a sentence."
@@ -346,7 +362,7 @@ print(myString.split())       # Split the line into elements - default is splitt
 print(myString.replace(' is ',' was '))  # Replace ' is ' by ' was '. Spaces are necessary, otherwise the 'is' in 'This' will be replaced!
 ```
 
-A list with all string methods and a full description can be found in the [Python documentation](https://docs.python.org/3/library/stdtypes.html#string-methods), or simply type `dir(myString)`
+These are the methods that we will use the most during this course. A list with all string methods and a full description can be found in the [Python documentation](https://docs.python.org/3/library/stdtypes.html#string-methods), or simply type `dir(myString)`
 
 
 ```python
@@ -391,6 +407,12 @@ Source: https://www.learnbyexample.org/python-set/
 
 You initialise them by using **set()** on a list or tuple:
 
+```python
+myList = [1 , 3, 5, 6, 6]
+mySet = set(myList)
+mySet
+```
+
 
 ```python
 mySet1 = set(range(10))
@@ -399,7 +421,7 @@ mySet2 = set(range(5,20))
 print(mySet1)
 print(mySet2)
  
-mySet.add(5)  # Elements in a set are unique - the set will not change because it already has a 5
+mySet2.add(5)  # Elements in a set are unique - the set will not change because it already has a 5
  
 print(mySet1.intersection(mySet2))
 print(mySet1.union(mySet2))
@@ -407,7 +429,7 @@ print(mySet1.union(mySet2))
 
 
 ```python
-dir(mySet1)
+dir(mySet)
 ```
 
 The principle of using intersection and union is the same as the Venn diagrams you probably saw in school... You can also make a set out of a string:
