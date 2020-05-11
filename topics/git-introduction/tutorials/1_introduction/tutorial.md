@@ -35,7 +35,7 @@ Why should you version control?
 One of Git's advantages is that you can choose whenever you save a version of your code, making it very flexible and powerful, however also comes with the downside that it requires good practice from your side to frequently and consistently save your files. Git works on the command line of e.g. your computer, whereas GitHub is a service for connecting and uploading/downloading files much like saving files in the cloud. Alternatives for GitHub are Gitlab, Bitbucket, etc. 
 
 # 2. Installations 
-(No, I stick to my first plan: GIT and THEN GITHUB). During this course we will start by exploring GitHub before moving to Git on the command line. The latter requires some basic understanding of the [Linux command line](https://material.bits.vib.be/topics/linux/). 
+During this course we will start by exploring GitHub before moving to Git on the command line. The latter requires some basic understanding of the [Linux command line](https://material.bits.vib.be/topics/linux/). 
 
 During this course we will use Git from the command line in order to properly understand how Git works and interacts with GitHub. Afterwards, we'll introduce how you can make life easier with GitHub Desktop and Git's integration in i.e. R. If you're not familiar with Linux command line, you can have a look at the materials here. 
 
