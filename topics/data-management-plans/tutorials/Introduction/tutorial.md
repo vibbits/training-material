@@ -6,15 +6,15 @@ questions:
 - What is data in a research context?
 - Why manage your research data?
 objectives:
-- Understand that data loss happens everywhere and very frequently 
+- Understand that data loss happens everywhere and very frequently
 - Understand funders' requirements
-- Discover funders' data management templates 
-time_estimation: 45M 
+- Discover funders' data management templates
+time_estimation: 45M
 subtopic: introduction
 key_points:
-- Importance of access, re-use of research data 
+- Importance of access, re-use of research data
 contributors:
-- abotzki 
+- abotzki
 
 ---
 
@@ -63,10 +63,7 @@ Think about your own research. If someone accused you of research misconduct, wo
 
 The following are real examples where researchers or data centers have lost crucial data. Could any of these ever happen to you? With good planning you could avoid or reduce the impact of such occurrences.
 
-TODO: add H5P 
-
-<iframe src="https://lll-platform.uu.nl/mod/hvp/embed.php?id=2295" width="800px" height="664" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="https://lll-platform.uu.nl/mod/hvp/library/js/h5p-resizer.js" charset="UTF-8"></script>
-<script src="https://lll-platform.uu.nl/mod/hvp/library/js/h5p-resizer.js" charset="UTF-8"></script>
+<iframe src="http://35.187.71.29:8080/wp-admin/admin-ajax.php?action=h5p_embed&id=1" width="958" height="642" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="http://35.187.71.29:8080/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
 ## University policy framework for research data
 
@@ -83,7 +80,7 @@ The highlights of the policy are:
 
 Links to the Policy Frameworks of the Flemish Universities
 
-* [Policy Framework from Ghent University](https://www.ugent.be/en/research/datamanagement/rdm-policy.pdf/at_download/file)
+* [Policy Framework from Ghent University](https://www.ugent.be/en/research/datamanagement/rdm-policy.pdf)
 
 * [Policy Framework from KU Leuven](https://www.kuleuven.be/english/research/scholcomm/rdm/policy-plan-rdm-ku-leuven-2014)
 
@@ -103,19 +100,19 @@ toplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="di
 
 More and more research funders explicitly require you to consider the management and publication of your research data, both during and after your research project. The European Commission and the Flemish funders FWO have explicit policies on research data management.
 
-**European Commission - Horizon 2020**
+### European Commission - Horizon 2020
 
 The European Commission wants “Horizon 2020 beneficiaries to make their research data findable, accessible, interoperable and reusable (FAIR), to ensure it is soundly managed. Good research data management is not a goal in itself, but rather the key conduit leading to knowledge discovery and innovation, and to subsequent data and knowledge integration and reuse.” Horizon 2020 is the biggest research and innovation program of the European Commission.
 
 [![European Commission - Horizon 2020](../../images/O_Funders_Screenshot_H2020guidelines.JPG)](https://www.nwo.nl/en/policies/open+science/data+management)
 
-**FWO**
+### FWO
 
 FWO states that “FWO has made data management a key element of its policy for all support channels provided by the FWO. The FWO expects researchers to pay due attention to this dimension before, during and for at least five years after their research.”
 
 [FWO Overview Data Management Plan](https://www.fwo.be/en/the-fwo/organisation/data-management-plan/)
 
-## Funder guidelines and templates
+### Funder guidelines and templates
 
 Most funders require you to write a Data Management Plan. A DMP outlines all key aspects of collecting, storing and managing research data during and after a project. For this they provide you with guidelines, forms, templates and examples. For more information you can download the documents under Resources or check out the websites. You can also contact your faculty Research Support Office:
 
