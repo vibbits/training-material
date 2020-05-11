@@ -43,7 +43,7 @@ The easiest way is to make a new branch on GitHub.
 2. In 'Find or create a branch...' type `new-feature`
 3. Click 'Create branch': new-feature
 
-<center><img src="../../images/newbranch-github.png" /></center>
+<center><img src="../../images/newbranch-github.PNG" /></center>
 
 GitHub will now display in that button that it is on `Branch: new-feature`. It's very important to understand that any changes that happen in this branch, will not be visible in the master branch. 
 
@@ -66,12 +66,13 @@ GitHub will now display in that button that it is on `Branch: new-feature`. It's
 >    > </summary>
 >    > Edit the file `plot2.R` by clicking on the pencil icon and add the following lines: 
 >    > 
->    > <center><img src="../../images/solution5.png" /></center>
+>    > <center><img src="../../images/solution5.PNG" /></center>
 >    > Commit your changes with a useful commit message and save by clicking the green 'Commit changes'-button.
 >    > 
 >    > </details>
->
+> 
 {: .hands_on}
+
 ---
 
 Switch back to your *master* branch and have a look to the `plot2.R`-file. It shouldn't contain the changes that we just made. 
@@ -82,10 +83,10 @@ Before exploring how we make branches on our computer locally, we'll merge the c
 
 Whether you're on the *master* or *new-feature* branch, doesn't matter. In both cases you should see the following yellow screen. Alternatively, go to 'Pull requests' and find it there. 
 
-<center><img src="../../images/pull-request-pre.png" /></center>
+<center><img src="../../images/pull-request-pre.PNG" /></center>
 
 Click on 'compare & pull requests'. A new screen pops-up with the following information.
-<center><img src="../../images/pull-request-1.png" /></center>
+<center><img src="../../images/pull-request-1.PNG" /></center>
 
 - The pull request should be interpreted as a request to pull the new branch and all of its changes into the master branch.   
 - The base where it would be pulled towards is `base: master`. The branch where the changes are deriving from is `compare: new-feature`.   
@@ -93,7 +94,7 @@ Click on 'compare & pull requests'. A new screen pops-up with the following info
 - Give a descriptive title text and if appropriate some additional comment. 
 
 Underneath the pull request related information, GitHub also gives you a summary of the changes that were done. 
-<center><img src="../../images/pull-request-2.png" /></center>
+<center><img src="../../images/pull-request-2.PNG" /></center>
 
 - Each commit that's done in the branch *new-feature* (i.e. only added these 7 lines in this case)
 - Display of the file and a visual representation of what changed in that commit. 
@@ -101,7 +102,7 @@ Underneath the pull request related information, GitHub also gives you a summary
 Click on 'Create pull request'. 
 
 Finally, the last screen pops up in which you verify the merging commit and you give your consent to GitHub to merge both branches by clicking 'Merge pull request'.
-<center><img src="../../images/pull-request-3.png" /></center>
+<center><img src="../../images/pull-request-3.PNG" /></center>
 
 It might be possible that in a project with several people, you're not authorized to make changes to the *master* branch. In this case you'll always have to work in a separate branch and someone else will get this last message. He or she will then decide whether this pull request should be merged. 
 
