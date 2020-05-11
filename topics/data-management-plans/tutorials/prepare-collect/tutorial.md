@@ -1,7 +1,7 @@
 ---
 layout: tutorial_hands_on
 
-title: "Prepare: Data collection" 
+title: "Prepare: Data collection"
 zenodo_link: ''
 questions:
 - What items are important during the data collection step?
@@ -10,19 +10,19 @@ objectives:
 - identify preferred file formats for your research data;
 - transform your files into a preferred format;
 - discover sources for existing data;
-- discover existing data yourself 
+- discover existing data yourself
 - assess the usefulness of existing data;
 - understand how a workflow leads to data products;
 - estimate costs involved with managing your data;
 - check the current and expected costs for your research data;
 - write the data collection section for your data management plan.
 time_estimation: 1H
-subtopic: prepare 
+subtopic: prepare
 key_points:
 - The take-home messages
 - They will appear at the end of the tutorial
 contributors:
-- abotzki 
+- abotzki
 
 ---
 
@@ -82,7 +82,7 @@ Determine which format is proprietary and which is an open format
 <details markdown='1'>
   <summary>Check your answers!</summary>
 
-1. Proprietary: .psd, .docx, .xls, .ppt 
+1. Proprietary: .psd, .docx, .xls, .ppt
 2. Open format: .csv, .xml, .odf, .pdf
 
 </details>
@@ -111,7 +111,7 @@ Which ones can you think of?
 
 </details>
 
-### {% icon hands_on %} Hands On 
+### {% icon hands_on %} Hands On
 
 Open the following .docx file to the preferred format .txt: [PreferredFormatsExcersizePenguinDOC.docx](../../images/PreferredFormatsExcersizePenguinDOC.docx)
 
@@ -133,12 +133,12 @@ Open the following .docx file to the preferred format .txt: [PreferredFormatsExc
 1. Convert this docx file to the preferred format .odt
 2. Open the .odt file
 3. Is all formatting preserved OK?
- 
+
 <details markdown='1'>
   <summary>Check your answers!</summary>
- 
+
 No, ODT files are formatted using the OASIS OpenDocument XML-based standard. When you open an OpenDocument Text file in Word, it might not have the same formatting as it did in the original application it was created in. This is because of the differences between applications that use the OpenDocument Format.  
- 
+
 </details>
 
 ![Data compression](../../images/04_Preferred-formats-data-compression.png)
@@ -152,19 +152,19 @@ Watch the screencast below. In this screencast, you will be guided through diffe
 <iframe src="https://www.youtube.com/embed/AZMUKgM8X-A" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
 
 > ### {% icon hands_on %} Hands On  
-> 
+>
 > You have just learned that there are different places to find data. By actively searching the different places, you will get an understanding of the differences.
 > Look at the different portals below. Some of them have been showcased in the screencast, some of them are additional.
-> 
+>
 > [Google](http://www.google.be) - add "database OR registry OR dataset OR archive OR statistics" to your search
 >
 > [Registry of Research Data Repositories re3data](https://www.re3data.org/) - find appropriate repositories holding interesting data
 >
 > [ZanRan]() - search engine for tables and graphes within .pdf or .html on the internet
-> 
+>
 > [Elsevier Data Search](https://datasearch.elsevier.com/#/) - try out chip-seq drosophila
-> 
-> [Google Dataset Search]() - try out chip-seq drosophila. Google Dataset Search indexes [OmicsDI](https://www.omicsdi.org/), an index providing a knowledge discovery framework across heterogeneous omics data (genomics, proteomics, transcriptomics and metabolomics).   
+>
+> [Google Dataset Search](https://datasetsearch.research.google.com/) - try out chip-seq drosophila. Google Dataset Search indexes [OmicsDI](https://www.omicsdi.org/), an index providing a knowledge discovery framework across heterogeneous omics data (genomics, proteomics, transcriptomics and metabolomics).   
 
 ### Assess the usefullness of existing data
 
@@ -187,14 +187,14 @@ In the following quizzes, take a closer look at the description or metadata of s
 
 Can you re-use [this dataset](https://dataverse.nl/dataset.xhtml?persistentId=hdl:10411/UWAU3K) on Spatial Patterns of Water-dispersed Seed Deposition along Stream Riparian Gradients in DataverseNL?
 
-1. Maybe 
-2. Yes 
-3. No 
+1. Maybe
+2. Yes
+3. No
 
 <details markdown='1'>
   <summary>Check your answer!</summary>
 
-Yes, the Terms of use indicate that there is a Creative Commons license 'Public Domain Dedication', which means you can copy, modify, distribute and perform thge work, even for commercial purposes, all without asking permission. 
+Yes, the Terms of use indicate that there is a Creative Commons license 'Public Domain Dedication', which means you can copy, modify, distribute and perform thge work, even for commercial purposes, all without asking permission.
 
 </details>
 
@@ -234,15 +234,15 @@ No, the dataset is not useful because the subjets have cancer. This should affec
 
 Would you trust the following dataset on heart rate under severe physical stress?
 
-Heart rate (beats per minute): 124, 160, 240, 0, 120, 400, 198, 156, 167 
+Heart rate (beats per minute): 124, 160, 240, 0, 120, 400, 198, 156, 167
 
-Please focus on the trustworthiness. 
+Please focus on the trustworthiness.
 
 1. Maybe
-2. Yes 
+2. Yes
 3. No
 
-<details markdown='1'> 
+<details markdown='1'>
   <summary>Check your answer!</summary>
 
 No, there are weird values in the dataset, a value of zero is unlikely. And overall, the values are on the high side.
@@ -256,10 +256,10 @@ Is your research likely to be reproducible when you use the following the follow
 The datasets is created during a PhD. Conditions for use state that it is a dataset stored and shared by the PhD student on his university account.
 
 1. Maybe
-2. Yes 
+2. Yes
 3. No
 
-<details markdown='1'> 
+<details markdown='1'>
   <summary>Check your answer!</summary>
 
 No, it is unlikely that the dataset can be reused since you do not have certainty that the files stored on the university file drives are availble for at least 10 years which is the current rule for data availablity.
@@ -275,18 +275,18 @@ Please watch the video below. Tessa Pronk will explain to you how to describe yo
 
 <iframe src="https://www.youtube.com/embed/KE2UpZY4wYA" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
 
-### Order elements in your data flow
+## Order elements in your data flow
 
 TODO: add H5P quiz
 
-### Copyright and Intellectual Property Rights (IPR) issues
+## Copyright and Intellectual Property Rights (IPR) issues
 
 Copyright is a form of intellectual property right which arises automatically if an original work is created. Copyright may affect the way data may be stored, shared and reused. You should ask yourself who the copyright holder of your datasets is, especially when you use existing data or when you collaborate with external parties.
 
-**Using someone else’s research data**
+### Using someone else’s research data
 SURF provides a brief guide to determining what consent is necessary to reuse someone else’s data (see "A brief guide ... someone else's data" in the resources below)  
 
-**Clarifying the ownership of your research data**
+### Clarifying the ownership of your research data
 
 TODO: change accordingly for VIB
 
@@ -298,39 +298,41 @@ TODO: change accordingly
 
 RDM Support offers you a Guide to legal instruments and agreements for research data management (see the Guide 'Legal instruments and agreements')
 
-**Confidential or privacy-sensitive data**
-When your research project has received data under confidentiality or under legal privacy restrictions, you will have to identify and explain how you will deal with these restrictions in your data management plan (also see ‘Learning Unit: Handle - Data security’).
+### Confidential or privacy-sensitive data
+When your research project has received data under confidentiality or under legal privacy restrictions, you will have to identify and explain how you will deal with these restrictions in your data management plan (also see ‘[Learning Unit: Handle - Data security](../handle-security/tutorial.md)’).
 
-### Costs involved with managing your data
+## Costs involved with managing your data
 
 TODO: https://www.uu.nl/en/research/research-data-management/guides/costs-of-data-management
 
 The costs of data management and sharing activities must be included into your research, in terms of time and resources needed.
 
-**1. Data Management Cost Guide**
+### Data Management Cost Guide
 
 When you plan your research you may not be able to oversee all costs involved. Nevertheless, it is useful to have an idea of possible costs at an early stage. You can use the Guide 'Costs of Data Management', which is a practical overview of possible costs per activity within each phase of the research process. Note: The Cost Guide offers cost indications and examples. These are not real prices.
 
-**2. Budget your data management costs**
+### Budget your data management costs
 
-You are advised to budget the data management costs as separate data management costs. These costs are eligible for funding with funders like NWO and the European Commission, as long as the costs are invoiced before the end of the project.
+You are advised to budget the data management costs as separate data management costs. These costs are eligible for funding with funders like FWO and the European Commission, as long as the costs are invoiced before the end of the project.
 
-**3. Planning can save time and money**
+### Planning can save time and money
 
 Planning an early start for certain activities within your research project can lower the costs for data management in the run of your project. You can save time by:
 
-Properly describing your data while collecting it, instead of doing it afterwards
-Choosing the right file format so that file conversion afterwards is not necessary
-Hiring an experienced data manager
+* Properly describing your data while collecting it, instead of doing it afterwards
+* Choosing the right file format so that file conversion afterwards is not necessary
+* Hiring an experienced data manager
+
 Spending time to think about data activities beforehand can help prevent unexpected extra efforts and costs later on in your research project.
 
-### Check the current and expected costs for your research data
+## Check the current and expected costs for your research data
 
 You have just learned that in many parts of a research project there are data related costs. These costs depend on the type and volume of data you produce, analyse and store.
 
-TODO: link to file (calculation) https://lll-platform.uu.nl/pluginfile.php/4907/format_elevated/resource/0/Cost%20overview.docx
+[Cost overview](../../docs/01_UU_CostOverview.docx)
 
-### Write your data management plan for your data collection
+
+## Write your data management plan for your data collection
 
 Go to DMPonline and open your draft data management plan created in the Introduction.
 
@@ -341,4 +343,3 @@ You have now completed the module Data collection. You should be able to complet
 * How will the data be collected or created?
 * How will you manage rights issues?
 * What are the costs involved in managing and storing your data?
-
