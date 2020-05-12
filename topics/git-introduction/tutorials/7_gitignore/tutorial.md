@@ -21,6 +21,7 @@ contributors:
 - tmuylder
 ---
 
-What if we have files that we do not want Git to track for us, like backup files created by our editor or intermediate files created during data analysis? Let’s create a few dummy files:
+# 1. Introduction
+What if we have files that we do not want Git to track for us, like backup files or intermediate files created during data analysis? 
 
 Finish this one: https://swcarpentry.github.io/git-novice/06-ignore/index.html

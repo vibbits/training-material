@@ -29,13 +29,11 @@ The idea of branching is that we can create a copy of the project in which we ca
 
 The original repository is always called the *master* branch. If we would make a new branch, we can name it however we like (e.g. *new-feature*). 
 
-
 There are two ways of doing this: locally or on the GitHub website. We will first show you the latter and afterwards how to do it locally. 
 
 A repository can have numerous branches. Branches are ways of organising work on a project: you can have a branch for a new feature, for trying out something new, for exploring an issue - anything at all.
 
 It’s a good practice to create a new branch for every new bit of work you start doing, even if it’s a very small one. It’s especially useful to create a new branch for every new feature you start work on. Branches are of course disposable, you can always remove them. 
-
 
 # 2. Branching on GitHub
 The easiest way is to make a new branch on GitHub. 
@@ -79,7 +77,7 @@ Switch back to your *master* branch and have a look to the `plot2.R`-file. It sh
 
 
 # 3. Merging branches on GitHub
-Before exploring how we make branches on our computer locally, we'll merge the changes in the *new-feature* branch into the *master* branch. 
+Before exploring how we make branches on our computer locally, we'll merge the changes in the *new-feature* branch into the *master* branch. Test branches are merged into the master branch by making a **pull request**. In this section we will explain how to do a pull request. 
 
 Whether you're on the *master* or *new-feature* branch, doesn't matter. In both cases you should see the following yellow screen. Alternatively, go to 'Pull requests' and find it there. 
 
@@ -196,76 +194,3 @@ Next time you want to push your commits from *new-branch*, you won’t need to b
 >
 {: .hands_on}
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-
-## 1.4 Make a pull request
-When you’re ready to have your changes incorporated into the original/official/canonical repository, you do this by making a **Pull Request**.
-
-* Go back to `https://github.com/<your github account>/afraid-to-commit`.  
-  You’ll see that GitHub has noted your recent changes, and now offers various buttons to allow you to compare them with the original or make a pull request.
-* Hit Compare & pull request.  
-  This will show you a compare view, from which you can make your pull request.
-
-When preparing for a pull request, GitHub will show you what’s being compared:
-```
-evildmp:master ... <your github account>:add-my-name
-```
-On the left is the **base** for the comparison, the upstream fork and branch. On the right is the **head**, our fork and branch, that you want to compare with it. A pull request goes from the **head** to the **base** - from right to left. You can simply change the repositories or branches by clicking them and scrolling through the options.
-
-Below of the comparing section, you can find a section where you can edit the message of the pull request. Underneath that, there is a section which, similarly to `git diff` summarizes the differences between the two repo's that are being compared.
-
-If you're happy with it, simply click the green 'Create pull request'-button. (you don't need to do this, though this would be a first pull request to an open-source community project)
-
-
-# 3. Merges
-1. Confirm the receiving branch
-Execute `git status` to ensure that HEAD is pointing to the correct merge-receiving branch. If needed, execute `git checkout <receiving>` to switch to the receiving branch. Usually, this would be `git checkout master`.
-
-2. Fetch the latest remote commits
-Make sure the receiving branch and the merging branch are up-to-date with the latest remote changes. Execute `git fetch (upstream?)` to pull the latest remote commits. Once the fetch is completed ensure the master branch has the latest updates by executing `git pull`.
-
-3. Merging
-Once the previously discussed "preparing to merge" steps have been taken a merge can be initiated by executing `git merge <branch name>` where `<branch name>` is the name of the branch that will be merged into the receiving branch.
-
-* Fast-forward merge  
-A fast-forward merge can occur when there is a linear path from the current branch tip to the target branch. This could be the case if the master branch did not change while you changed your branch. Instead of “actually” merging the branches, all Git has to do to integrate the histories is move (i.e., “fast forward”) the current branch tip up to the target branch tip. This effectively combines the histories, since all of the commits reachable from the target branch are now available through the current one. For example, a fast forward merge of some-feature into master would look something like the following: (make image on slides)  
-
-Find out what the differences are with the command:
-```
-git diff master..<new-branch>
-```
-First, move your HEAD to the master branch with `git checkout master`. Now simply merge them with the following command:
-```
-git merge <new-branch>
-```
-Git will now tell us it performed a fast-forward merge and summarizes the changes that happened within the repository. After merging, you can delete the branch with `git branch -d <new-branch>`
-
-**Extra:**  
-In the event that you require a merge commit during a fast forward merge for record keeping purposes you can execute `git merge` with the `--no-ff` option.
-```
-git merge --no-ff <new-branch>
-```
-This command merges the specified branch into the current branch, but always generates a merge commit (even if it was a fast-forward merge). This is useful for documenting all merges that occur in your repository.
-
-* Three-way merge  
-The above, is however not possible if the branches have diverged. When there is not a linear path to the target branch, Git has no choice but to combine them via a 3-way merge. 3-way merges use a dedicated commit to tie together the two histories. The nomenclature comes from the fact that Git uses three commits to generate the merge commit: the two branch tips and their common ancestor.
-
-While you can use either of these merge strategies, many developers like to use fast-forward merges (facilitated through rebasing) for small features or bug fixes, while reserving 3-way merges for the integration of longer-running features. In the latter case, the resulting merge commit serves as a symbolic joining of the two branches.
-
-```
-git merge --squash <new-branch>
-```
-
-* Rebasing
-
