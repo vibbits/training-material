@@ -84,6 +84,7 @@ Files in proprietary formats usually must be opened by the software in which the
 It is recommended that you use open formats for your research data. If this is not possible, try and store a copy of your data in an open format. For example, you might use .xls to store your spreadsheet data, but by saving an additional copy in an open format (such as .csv) you will ensure that your data will be readable in the future.
 
 TODO H5P - check 01_ProprietaryOpenFileFormats.png
+
 ### {% icon question %} Question
 
 Determine which format is proprietary and which is an open format
