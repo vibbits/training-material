@@ -194,3 +194,28 @@ Next time you want to push your commits from *new-branch*, you won’t need to b
 >
 {: .hands_on}
 ---
+
+# x. Deleting branches 
+
+**1. Via GitHub**
+
+If a branch is of no more use, we can delete it. Click on *branches* in the area depicted in figure below and find all of the branches as part of this GitHub repository:
+
+![Deleting a branch step 1](../../images/deleting-branch-1.PNG)
+
+After successfully merging our changes in the branch created during the exercise above, it can be deleted. Click on the waste bin:
+
+![Deleting a branch step 2](../../images/deleting-branch-2.PNG)
+
+Go back to the main tab of the repository and find that the branch has been deleted. 
+
+
+**2. Locally**
+
+Deleting a branch is as simple as typing the following command:
+
+```
+git branch -d <name-of-the-branch>
+```
+
+If git refuses to do so, there is a forced way to do it as well by using the capital `-D` parameter. 
