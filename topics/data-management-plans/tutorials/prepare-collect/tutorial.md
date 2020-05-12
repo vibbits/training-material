@@ -19,8 +19,7 @@ objectives:
 time_estimation: 1H
 subtopic: prepare
 key_points:
-- The take-home messages
-- They will appear at the end of the tutorial
+- TODO
 contributors:
 - abotzki
 
@@ -325,7 +324,7 @@ TODO: add H5P quiz - check 01_Order_Elements_In_Data_Flow.png
 Copyright is a form of intellectual property right which arises automatically if an original work is created. Copyright may affect the way data may be stored, shared and reused. You should ask yourself who the copyright holder of your datasets is, especially when you use existing data or when you collaborate with external parties.
 
 ### Using Someone Else’s Research Data
-SURF provides a brief guide to determining what consent is necessary to reuse someone else’s data (see "A brief guide ... someone else's data" in the resources below)  
+Here's a [A brief guide to determining what consent is necessary to reuse someone else’s data](../../documents/01_Brief_Guide_To_Determining_Consent_To_Reuse_Data.pdf).
 
 ### Clarifying the Ownership of Your Research Data
 
@@ -337,7 +336,7 @@ We strongly recommend that you deal with the issues around data exploitation at 
 
 TODO: change accordingly
 
-RDM Support offers you a Guide to legal instruments and agreements for research data management (see the Guide 'Legal instruments and agreements')
+Please find more information in the guide [Legal instruments and agreements](https://www.uu.nl/en/research/research-data-management/guides/legal-instruments-and-agreements)
 
 ### Confidential or Privacy-Sensitive Data
 When your research project has received data under confidentiality or under legal privacy restrictions, you will have to identify and explain how you will deal with these restrictions in your data management plan (also see ‘[Learning Unit: Handle - Data security](../handle-security/tutorial.md)’).
@@ -350,7 +349,7 @@ The costs of data management and sharing activities must be included into your r
 
 ### Data Management Cost Guide
 
-When you plan your research you may not be able to oversee all costs involved. Nevertheless, it is useful to have an idea of possible costs at an early stage. You can use the Guide 'Costs of Data Management', which is a practical overview of possible costs per activity within each phase of the research process. Note: The Cost Guide offers cost indications and examples. These are not real prices.
+When you plan your research you may not be able to oversee all costs involved. Nevertheless, it is useful to have an idea of possible costs at an early stage. You can use the Guide [Costs OVerview](../../documents/01_UU_CostOverview.docx), which is a practical overview of possible costs per activity within each phase of the research process. Note: The Cost Guide offers cost indications and examples. These are not real prices.
 
 ### Budget Your Data Management Costs
 
@@ -377,7 +376,7 @@ You have just learned that in many parts of a research project there are data re
 
 Go to DMPonline and open your draft data management plan created in the Introduction.
 
-You have now completed the module Data collection. You should be able to complete the following questions in the section Data collection:
+You have now completed the module Data collection. You should be able to complete the following questions:
 
 - Will you use existing data?
 - What data will you collect or create?

@@ -18,8 +18,7 @@ objectives:
 time_estimation: 50M
 subtopic: prepare
 key_points:
-- The take-home messages
-- They will appear at the end of the tutorial
+- TODO
 contributors:
 - abotzki
 
@@ -460,8 +459,8 @@ TODO: add H5P - check 02_FillTheGap.png
 
 Go to DMPonline and open your draft data management plan created in the Introduction.
 
-You have now completed the module Data documentation. You should be able to complete the following questions in the section Data documentation:
+You have now completed the module Data documentation. You should be able to complete the following questions:
 
-* How will you structure your data?
-* How will the data be described and documented?
-* What standards will you use?
+- How will you structure your data?
+- How will the data be described and documented?
+- What standards will you use?

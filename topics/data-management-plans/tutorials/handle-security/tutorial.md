@@ -15,8 +15,7 @@ objectives:
 time_estimation: 40M
 subtopic: handle
 key_points:
-- The take-home messages
-- They will appear at the end of the tutorial
+- TODO
 contributors:
 - abotzki
 
@@ -55,7 +54,7 @@ The information in data files can be protected by:
 
 - Controlling access to restricted materials with encryption. By coding your data, your files will become unreadable to anyone who does not have the correct encryption key. You may code an individual file, but also (part of) a hard disk or USB stick
 - Procedural arrangements like imposing non-disclosure agreements for managers or users of confidential data
-- Not sending personal or confidential data via email or through File Transfer Protocol (FTP), but rather by transmitting it as encrypted data e.g. [FileSender](https://filesender.belnet.be)
+- Not sending personal or confidential data via email or through File Transfer Protocol (FTP), but rather by transmitting it as encrypted data e.g. [FileSender](https://filesender.belnet.be) or SFTP (SSH File Transfer Protocol)
 - Destroying data in a consistent and reliable manner when needed
 - Authorisation and authentication: for personal data you have to give very selective access rights to specified individuals.
 
@@ -67,7 +66,7 @@ The computer you use to consult, process and store your data, must be secured:
 - Install anti-virus software
 - Install updates for your operating system and software
 - Only use secured wireless networks
-- Use passwords and do not share them with anyone. Do not use passwords on your UU computer only, but also on your laptop or home computer. If necessary, secure individual files with a password.
+- Use passwords and do not share them with anyone. If necessary, secure individual files with a password.
 - Encrypt your devices (laptop, smartphone, USB stick/disk).
 
 #### Physical Data Security
@@ -78,7 +77,7 @@ With a number of simple measures, you can ensure the physical security of your r
 - Lock your door if you are not in your room
 - Keep an eye on your laptop
 - Transport your USB stick or external hard disk in such a way that you cannot lose it
-- Keep non-digital material which should not be seen by others, in a locked cupboard or drawer.
+- Keep non-digital material which should not be seen by others in a locked cupboard or drawer.
 
 #### Data Classification
 
@@ -86,7 +85,7 @@ TODO: what to do with classified data. UU refers to https://intranet.uu.nl/en/da
 
 #### Data That Contain Personal Information
 
-These data should be treated with higher levels of security than data which do not. You will learn more about privacy-sensitive data in the e-module.
+These data should be treated with higher levels of security than data which do not. You will learn more about privacy-sensitive data later in this module.
 
 ### Your Experience with Unauthorised Access to Your Research Data
 
@@ -103,9 +102,7 @@ We are interested to know if you have ever experienced unauthorized access to an
 
 Often other people are required to handle your data, or you might be the person that handles other people’s data.
 
-To arrange the security of the research data you work with, in many cases you have to make a (legal) agreement with other people involved. These agreements will make explicit permitted uses, retention time, and agreed upon security measures. Find out what legal contracts you can use by studying the figure below. Visit the Guide 'Legal instruments and agreements' for more information
-
-TODO: localise *Legal instruments and agreements* in prev. paragraph
+To arrange the security of the research data you work with, in many cases you have to make a (legal) agreement with other people involved. These agreements will make explicit permitted uses, retention time, and agreed upon security measures. Find out what legal contracts you can use by studying the figure below. Visit the Guide [Legal instruments and agreements](https://www.uu.nl/en/research/research-data-management/guides/legal-instruments-and-agreements) for more information
 
 For tailored advice and templates, contact TODO: add link
 
@@ -133,8 +130,7 @@ Privacy is a fundamental right. With regards to privacy, we all have two perspec
 1. How is your privacy protected?
 2. How can we, as a researcher, protect the privacy of the people involved in our research (the data subjects)?
 
-TODO: add link to document and image screenshot Check 03_Privacy_Reference_Card_-why__EUR_Version_1_0.pdf
-![privacy reference card](../../images/LCRDM-privacy-reference-card-why-Version-02.pdf "Privacy reference card")
+Please consult this [Privacy Reference Card](https://www.eur.nl/sites/corporate/files/2017-11/Privacy_Reference_Card_-why__EUR_Version_1_0.pdf)
 
 ### Six Principles from the European General Data Protection Regulation
 
@@ -163,7 +159,7 @@ To comply with the six principles from the GDPR, you can implement privacy by de
 
 Can you recognise the principles that are breached in the different ways personal data is processed?
 
-TODO: H5P quiz 7 cases
+TODO: H5P quiz 7 cases - check 03_WhichDataBreachIsBreached_01.png, 03_WhichDataBreachIsBreached_02.png
 
 ### Storing Personal Data
 
@@ -222,7 +218,7 @@ CBS publishes reliable and coherent national statistical information. Microdata 
 
 ### Informed Consent
 
-In the module 'Legal agreements and contracts' you learned about informed consent. Informed consent is very important when working with data which is in any way related to people.
+In the topic *Legal agreements and contracts* you learned about informed consent. Informed consent is very important when working with data which is in any way related to people.
 
 TODO: add graphics on informed consent - check 03_SixPrinciplesGDPR.png
 
@@ -256,7 +252,7 @@ Sharing of research data that relates to people can often be achieved using a co
 
 Go to DMPonline and open your draft data management plan created in the Introduction.
 
-You have now completed the module on data security. You should be able to complete the following questions in the section ‘Data security’:
+You have now completed the module on data security. You should be able to complete the following questions:
 
 - Will you use or collect any confidential or privacy-sensitive data?
 - What measures will you take to ensure the security of any confidential or privacy-sensitive data?
