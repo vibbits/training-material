@@ -20,7 +20,7 @@ contributors:
 
 <!-- This is a comment. -->
 
-## Why manage your research data?
+## Why Manage Your Research Data?
 
 In this video Katarzyna Biernacka explains what data in a research context is.
 
@@ -49,7 +49,7 @@ Managing your data effectively is crucial to the success of your research. This 
    * Meeting publisher requirements for data access.
 
 
-## A case to consider
+## A Case to Consider
 
 Marleen is an early career researcher. She completed her PhD about four years ago and is now a postdoctoral research fellow at a different university. Since she obtained her PhD, she has published a number of journal articles based on her doctoral research. Her papers have been cited widely in the literature of her field. But just recently a fellow researcher has questioned her findings. He has gone so far as to suggest that the data on which her research was based is inaccurate. One implication is that the data could even have been falsified. Marleen is confident that her research is valid and that her data is accurate.
 
@@ -59,13 +59,13 @@ Marleen is an early career researcher. She completed her PhD about four years ag
 
 Think about your own research. If someone accused you of research misconduct, would you be in a position to defend your research and reputation? List some strategies you could implement right now that would assist you, should you ever find yourself in Marleen’s situation.
 
-## Data disasters – postcards from the edge
+## Data Disasters – Postcards From the Edge
 
 The following are real examples where researchers or data centers have lost crucial data. Could any of these ever happen to you? With good planning you could avoid or reduce the impact of such occurrences.
 
 <iframe src="http://35.187.71.29:8080/wp-admin/admin-ajax.php?action=h5p_embed&id=1" width="958" height="642" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="http://35.187.71.29:8080/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
-## University policy framework for research data
+## University Policy Framework for Research Data
 
 For the Flemish universities, it is important that all researchers honour scientific standards, including the meticulous and ethical treatment of research data.
 This policy is intended to set out parameters to safeguard the quality, availability and accessibility of research data within any Flemish university. It provides a basis for evaluating compliance with laws, regulations and codes of conduct. The policy also clarifies the various roles and responsibilities of university staff in managing research data.
@@ -96,7 +96,7 @@ In this short video Prof. dr. Chantal Kemner explains the importance of good dat
 toplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block
 ;" width="800px" title=""></iframe>
 
-## Funder requirements
+## Funder Requirements
 
 More and more research funders explicitly require you to consider the management and publication of your research data, both during and after your research project. The European Commission and the Flemish funders FWO have explicit policies on research data management.
 
@@ -112,14 +112,14 @@ FWO states that “FWO has made data management a key element of its policy for 
 
 [FWO Overview Data Management Plan](https://www.fwo.be/en/the-fwo/organisation/data-management-plan/)
 
-### Funder guidelines and templates
+### Funder Guidelines and Templates
 
 Most funders require you to write a Data Management Plan. A DMP outlines all key aspects of collecting, storing and managing research data during and after a project. For this they provide you with guidelines, forms, templates and examples. For more information you can download the documents under Resources or check out the websites. You can also contact your faculty Research Support Office:
 
 - [EC – Horizon 2020: guidelines](https://ec.europa.eu/research/openscience/index.cfm)
 - [FWO template](https://www.fwo.be/media/1023898/fwo-dmp-templatedocx.docx)
 
-## Writing a data management plan
+## Writing a Data Management Plan
 
 By now it should be clear that data needs to be properly managed throughout its lifecycle. The most effective way to do this is to create a Data Management Plan (DMP). This will take into account all the stages of the research data lifecycle. As outlined earlier, each individual researcher or research leader is responsible to draw up a data management plan. He or she should do this at the start of the research project. And during the research you should actively follow up on the agreements made in this plan.
 
@@ -132,7 +132,7 @@ Think about our early career researcher Sasha (introduced in ‘Why manage your 
 - Reducing time and effort in the long term.
 The good news is that this online training will take you through the necessary steps to create a plan during the subsequent modules.
 
-## Getting started with DMPonline
+## Getting Started with DMPonline
 
 We offer you DMPonline to create your Data Management Plan. DMPonline is an international online service that guides you in creating a DMP by answering a series of questions about your research project. It allows you to create, share, store, and revise your data management plans online. You will be asked to complete different sections of your DMP as we go through the other modules. As a result you will have written your own data management plan at the end of this course.
 
