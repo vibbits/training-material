@@ -24,16 +24,16 @@ contributors:
 
 # 1. Introduction
 
-Rstudio is a popular platform for downstream data-analysis, statistics, machine learning and more. Uptil now we have focused on the core principles of Git & GitHub, which gives us enough knowledge to start integrating in other platforms. 
+Rstudio is a popular platform for downstream data-analysis, statistics, machine learning and more with R. If you're unfamiliar with R and Rstudio, the materials on this website will surely get you started and are accesible via [this link](https://material.bits.vib.be/topics/R/). Uptil now we have focused on the core principles of Git & GitHub, which gives us enough knowledge to start integrating in other platforms. 
 
-To this extent we will exploit the repository that we created in this tutorial. 
+To this extent we will exploit the repository that we created in this tutorial. A sample repository is also downloadable [here](../../../../assets/files/git-introduction/sample-repo).  
 
 # 2. Starting a project 
 Let's start by making a new project (File > New project...). The following screen pops up:
 
 ---
 
-![Start a new project in RStudio](../../images/rstudio-1.PNG)
+<center><img src="../../images/rstudio-1.PNG" /></center>
 
 ---
 
@@ -47,7 +47,7 @@ If we were to choose to create a new R project based on a GitHub repository, you
 
 ---
 
-![Add repository URL](../../images/rstudio-2.PNG)
+<center><img src="../../images/rstudio-2.PNG" /></center>
 
 ---
 
@@ -67,7 +67,7 @@ The only action we're missing is the *staging*. Rstudio & Git actually continuou
 
 ---
 
-![Git screen in Rstudio](../../images/rstudio-3.PNG)
+<center><img src="../../images/rstudio-3.PNG" /></center>
 
 ---
 
@@ -78,7 +78,7 @@ Recall the routine usage: *stage-commit-push*. Staging changes in Rstudio is don
 
 --- 
 
-![Git staging Rstudio](../../images/rstudio-4.PNG)
+<center><img src="../../images/rstudio-4.PNG" /></center>
 
 ---
 
@@ -86,7 +86,7 @@ Subsequently, click on commit and find a similar screen:
 
 --- 
 
-![Git committing in Rstudio](../../images/rstudio-5.PNG)
+<center><img src="../../images/rstudio-5.PNG" /></center>
 
 ---
 
