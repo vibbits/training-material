@@ -41,7 +41,7 @@ There are two options relevant for us to create a project in RStudio initialized
 - **Existing Directory**: The preferred choice when a project folder already exists and which has previously been initialized with Git. 
 - **Version Control**: Ideally for creating a new R project based on a repository in GitHub. 
 
-We could choose for the latter as the repository exists on GitHub, however given this situation there also is a folder on our computer, initialized with Git, which we can use. Select *Existing Directory*, browse to the location of the project folder and create the project. 
+Given the situation that there is a folder on our computer, created during this tutorial and initialized with Git, we will go for the first option. Select **Existing Directory**, browse to the location of the project folder and create the project. (If you've downloaded the sample repository mentioned above, this option still holds)
 
 If we were to choose to create a new R project based on a GitHub repository, you would need to select **Version Control**, followed by *Git* and then copy the link of the GitHub repository from the green *Clone or Download* button and add it as the repository URL, and finally create the project. 
 
