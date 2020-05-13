@@ -35,7 +35,11 @@ With this command we can update our online repository on GitHub with the commits
 
 That's all you need to know: `add-commit-push`. 
 
+---
+
 <center><img src="../../images/conceptual_areas_push.png" /></center>
+
+---
 
 
 There are two ways of **initializing a new Git repository**:
@@ -50,7 +54,11 @@ Both options will work fine and depends on your preferences or maybe the situati
 Go to your GitHub homepage and click the '+' icon in the upper right corner. The following screen will pop up.
 
 
+---
+
 <center><img src="../../images/02-2-create-repository.PNG" /></center>
+
+---
 
 
 We already filled in a repository name and an optional description. You can choose to already publish your repository, however as this is a meaningless repository, we will choose not to. When you're about to start a new project, there are three things to consider:
@@ -60,7 +68,11 @@ We already filled in a repository name and an optional description. You can choo
 
 In our case, we will initialize the repository with a README file and click 'Create repository', which will then look like this:
 
+---
+
 <center><img src="../../images/02-3-create-readme-repository.PNG" /></center>
+
+---
 
 This is the home directory of a GitHub repository. From here we can already do a lot, like changing or uploading files. 
 
@@ -126,6 +138,7 @@ We added a parameter `-m` (message) to the command followed by some text. This t
 >   - “Update README file”
 >   - “Added line ‘We use this repo as an example’ to README.md”
 >   - “Added purpose description to the README file”
+>
 > > ### {% icon solution %} Solution
 > >
 > > One can argue on the appropriatness of commit messages as it is subjective. In this case however, the third options seems most ideal. It's both not too generic and not too specific. 
@@ -136,7 +149,7 @@ We added a parameter `-m` (message) to the command followed by some text. This t
 
 ---
 
----
+
 
 > ### {% icon question %} Question
 > 
@@ -189,7 +202,7 @@ We've learned how to make a GitHub repository, clone it to our computer, add a f
 {: .hands_on}
 ---
 
-## 3.5 Skip `git add`
+## 3.5 Commit all tracked files at once
 One thing we haven't really said until now is that Git actually keeps track of the changes that you make to files as soon as you have told Git to do so. The first thing you have to do when you add a new file, is to tell Git to keep track of changes made in this file. If you do not do this, Git will know that there is a new file, but it will classify it as *untracked*. After adding it to the staging area a first time, it will always keep track of the changes in this file. 
 
 On the premise that Git is already keeping track of the files, you can simply do `git commit -a -m "some informative text"` in which `-a` stands for add all changes in all files to the staging area and commit them at once. 
@@ -218,11 +231,9 @@ git commit -m "some text"
 git push -u origin master
 ```
 
-It is important to note that `git init` will keep track of all the subdirectories and their files that are in the folder. Thus, you don't need to create a git repository for each folder or subdirectory.  
+It is important to note that `git init` will keep track of all the subdirectories and their files that are in the folder. Thus, you don't need to create a git repository for each folder or subdirectory. Git repositories can interfere with each other if they are “nested”: the outer repository will try to version-control the inner repository. This will lead to errors.
 
-As a best practice, it's suggested to have a git repository for each project and they are separated in folders. Git repositories can interfere with each other if they are “nested”: the outer repository will try to version-control the inner repository. Therefore, it’s best to create each new Git repository in a separate directory.
-
-If we use `ll` or `ls -a` we get a list of all files and directories, and we see that a `.git` folder is now present. Git uses this special directory to store all the information about the project like the history of all commits. If we ever delete the `.git` sub-directory, we will lose the project’s history.
+If we use `ll` or `ls -a` we get a list of all files and directories, and we see that a `.git` folder is now present. Git uses this special directory to store all the information about the project like the history of all commits. If we ever delete the `.git` sub-directory, we will lose the project’s history. 
 
 
 Before starting with the next exercise we also want to stress the importance of not uploading data to GitHub. It's good practice to have links to data, however not the data itself. GitHub is not your next cloud storage instance. 
@@ -247,7 +258,11 @@ Before starting with the next exercise we also want to stress the importance of 
 # 5. The strength of the staging area
 Now you're probably wondering why it's useful to have that many steps to save a file (add, commit, push). We will give a practical example based on the figure below: 
 
+---
+
 <center><img src="../../images/staging_area.png" /></center>
+
+---
 
 Imagine that you're working on a project with multiple Python scripts and you're working on all of them. In this case your folder in your development area contains the files  `scriptA.py`, `scriptB.py` and `scriptC.py`. The changes that you made in script A and script C are somehow related, but script B is not. It's good practice to make commits in which changes that are related to each other are bundled. Hence, in this case we want to make one commit with the changes from file A and C. Now we can simply add scripts A and C to the staging area and commit it. The changes in script B will remain unsaved until we commit the changes in a separate commit. 
 
@@ -260,7 +275,12 @@ Let's go back to our repository on GitHub.com. We will make a change in the repo
 Click on the `README.md` file in the list of files and click the pencil icon on the upper right. The file will open in an editor mode and we can change the title from *introduction-github* to *Introduction GitHub* or we can add some more descriptive text. Note that a README file is by default a markdown-file. Markdown is a text file with lay-outing options. If you haven't heard of it before, it's worth some [further reading](https://guides.github.com/features/mastering-markdown/).
 
 Save the changes by committing them as depicted here below:
+
+---
+
 <center><img src="../../images/commitReadme.PNG"/></center>
+
+---
 
 GitHub is now one commit ahead of our local repository. Hence, we have to pull this commit into our local repository. We can do this by using the following command:
 ```
