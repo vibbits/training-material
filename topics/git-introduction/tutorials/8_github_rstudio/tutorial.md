@@ -72,15 +72,23 @@ A third option assumes that you already have an R/Rstudio project. Click on *Too
 
 ---
 
-This approach will initialize Git on the project. As discussed in chapter 3, this local repository does not exist on GitHub yet, hence we can't push our commits to GitHub. In order to do so, we'll have to make a repository on GitHub first (see chapter 3.2.). This repository should be initialized without(!!) a README file, `.gitignore` file or license. Copy the link that GitHub created for the new repository (e.g. https://github.com/vibbits/rstudio-project.git). In Rstudio, find a *Git* tab in the upper right corner and click on *New Branch* and *add remote*.  
+This approach will initialize Git on the project. As discussed in chapter 3, this local repository does not exist on GitHub yet, hence we can't push our commits to GitHub. In order to do so, we'll have to make a repository on GitHub first (see chapter 3.2.). This repository should be initialized without(!!) a README file, `.gitignore` file or license. Copy the link that GitHub created for the new repository (e.g. https://github.com/vibbits/rstudio-project.git). In Rstudio, find a *Git* tab in the upper right corner and click on *New Branch*.  
 
 ---
 
-<center><img src="../../images/rstudio-8.PNG" /></center>
+<center><img src="../../images/rstudio-8-1.PNG" /></center>
 
 ---
 
-Paste the GitHub link and write the name of the project. Finally add the name of the new branch *master* and hit create. Select *overwrite* when asked.  
+Click on *add remote* in the new screen, paste the GitHub link and add the name of the project. 
+
+---
+
+<center><img src="../../images/rstudio-9.PNG" /></center>
+
+---
+
+Finally, add the name of the new branch *master* and hit create. Select *overwrite* when asked.  
 
 ---
 
