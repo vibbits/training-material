@@ -4,19 +4,13 @@ layout: tutorial_hands_on
 title: 8 GitHub and RStudio
 zenodo_link: ''
 questions:
-- Which biological questions are addressed by the tutorial?
-- Which bioinformatics techniques are important to know for this type of data?
+- How to integrate version controlling with Git(Hub) in an existing project? 
 objectives:
-- The learning objectives are the goals of the tutorial
-- They will be informed by your audience and will communicate to them and to yourself
-  what you should focus on during the course
-- They are single sentences describing what a learner should be able to do once they
-  have completed the tutorial
-- You can use Bloom's Taxonomy to write effective learning objectives
+- Creating a 
 time_estimation: 3H
 key_points:
-- The take-home messages
-- They will appear at the end of the tutorial
+- Initializing Git on a current project which uses R in Rstudio
+- Exploit the core utilities of Git within Rstudio
 contributors:
 - tmuylder
 
@@ -24,9 +18,17 @@ contributors:
 
 # 1. Introduction
 
-Rstudio is a popular platform for downstream data-analysis, statistics, machine learning and more with R. If you're unfamiliar with R and Rstudio, the materials on this website will surely get you started and are accesible via [this link](https://material.bits.vib.be/topics/R/). Uptil now we have focused on the core principles of Git & GitHub, which gives us enough knowledge to start integrating in other platforms. 
+Rstudio is a popular platform for downstream data-analysis, statistics, machine learning and more scientific related analysis using the R language. If you're unfamiliar with R and Rstudio, some materials on this website that will get you started are accesible via [this link](https://material.bits.vib.be/topics/R/). Uptil now we have focused on the core principles of Git & GitHub, which gives us enough knowledge to start integrating in other platforms. 
 
-To this extent we will exploit the repository that we created in this tutorial. A sample repository is also downloadable [here](../../../../assets/files/git-introduction/sample-repo).  
+There are three plausible scenarios:
+1. You have an Rstudio project that you now want to start version controlling
+2. You have a version controlled project on your computer which you want to integrate in Rstudio
+3. You have a version controlled project on GitHub which you want to integrate in Rstudio locally 
+
+Creating a version controlled project in Rstudio from each of these scenarios is discussed in [section 2](#2.-Starting-a-project). Exploiting Git's features in Rstudio is further exploited in [section 3](#3.-Exploring-Git's-integration-in-Rstudio).
+
+ To this extent we will exploit the repository that we created in this tutorial. 
+A sample repository is also downloadable [here](https://github.com/vibbits/introduction-github). Download the repository as a ZIP-file and extract it.  
 
 # 2. Starting a project 
 Let's start by making a new project (File > New project...). The following screen pops up:
@@ -43,7 +45,7 @@ There are two options relevant for us to create a project in RStudio initialized
 
 Given the situation that there is a folder on our computer, created during this tutorial and initialized with Git, we will go for the first option. Select **Existing Directory**, browse to the location of the project folder and create the project. (If you've downloaded the sample repository mentioned above, this option still holds)
 
-If we were to choose to create a new R project based on a GitHub repository, you would need to select **Version Control**, followed by *Git* and then copy the link of the GitHub repository from the green *Clone or Download* button and add it as the repository URL, and finally create the project. 
+**Alternatively**, if we were to choose to create a new R project based on a GitHub repository, you would need to select **Version Control**, followed by *Git* and then copy the link of the GitHub repository from the green *Clone or Download* button and add it as the repository URL, and finally create the project. Using the sample repository for this option would mean that we need to fill in the following link as repository URL: *https://github.com/vibbits/introduction-github.git*.
 
 ---
 
@@ -51,7 +53,7 @@ If we were to choose to create a new R project based on a GitHub repository, you
 
 ---
 
-Notice that a `.gitignore` file is added on the fly containing the following 4 lines. We will extend this code later. 
+Notice that after creating the repository, a `.gitignore` file is added on the fly containing the following 4 lines. These lines will make sure that irrelevant information from an Rstudio initiated project is neglected.   
 ```
 .Rproj.user
 .Rhistory
@@ -61,9 +63,15 @@ Notice that a `.gitignore` file is added on the fly containing the following 4 l
 
 # 3. Exploring Git's integration in Rstudio
 
-Find a *Git* tab in the upper right corner. The tab consists of the main actions that can be performed with Git (the window might be too small to contain the keywords related to the symbol). Neglecting the *diff* keyword, we can find the following actions: *Commit, Pull, Push, History* and *More* followed by *New Branch*, the name of the branch (*master*) and a refresh button. 
+Find a *Git* tab in the upper right corner. The tab consists of the main actions that can be performed with Git (the window might be too small to contain the keywords related to the symbol). Neglecting the *diff* keyword which is out of scope for this tutorial, we can find the following actions: *Commit, Pull, Push, History* and *More* followed by *New Branch*, the name of the branch (*master*) and a refresh button.
 
-The only action we're missing is the *staging*. Rstudio & Git actually continuously process the files within the project searching for new changes. If there is a new change it will appear in the list in the screen as depicted here:
+- **Stage**: The only action we're missing is the *staging*. Rstudio & Git actually continuously process the files within the project searching for new changes. If there is a new change it will appear in the list in the screen as depicted here for the `.gitignore` file. 
+- **Commit**: Opens a new screen that controls the staging area and committing. 
+- **Pull**: Pulls upstream changes from the GitHub repository into our, this local repository.
+- **Push**: Pushes previous commits to the GitHub repository.
+- **History**: Neatly visualizes the history log of the repository. Each commit, branch, contributor is reviewed in this screen. 
+- **More**: Allows us to revert (undo) changes to a previous commit or ignore selected files (discussed below).
+- **New Branch**: Creates a new branch. 
 
 ---
 
@@ -123,3 +131,9 @@ If the commit has to appear on GitHub we need one more step. Click on *Push* and
 
 ---
  
+
+
+Tools > Version control > Project Setup... 
+New screen, select Version control system: Git
+Do you want to initialize a new git repository for this project? 
+Select 
