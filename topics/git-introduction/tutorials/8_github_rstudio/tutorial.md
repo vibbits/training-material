@@ -6,7 +6,8 @@ zenodo_link: ''
 questions:
 - How to integrate version controlling with Git(Hub) in an existing project? 
 objectives:
-- Creating a 
+- Creating a version controlled repository from any project in Rstudio
+- Understand how to use Git's routine usage functions (stage, commit, push, pull) in Rstudio
 time_estimation: 3H
 key_points:
 - Initializing Git on a current project which uses R in Rstudio
@@ -21,16 +22,17 @@ contributors:
 Rstudio is a popular platform for downstream data-analysis, statistics, machine learning and more scientific related analysis using the R language. If you're unfamiliar with R and Rstudio, some materials on this website that will get you started are accesible via [this link](https://material.bits.vib.be/topics/R/). Uptil now we have focused on the core principles of Git & GitHub, which gives us enough knowledge to start integrating in other platforms. 
 
 There are three plausible scenarios:
-1. You have an Rstudio project that you now want to start version controlling
-2. You have a version controlled project on your computer which you want to integrate in Rstudio
-3. You have a version controlled project on GitHub which you want to integrate in Rstudio locally 
+1. You have a version controlled project on your computer which you want to integrate in Rstudio
+2. You have a version controlled project on GitHub which you want to integrate in Rstudio locally 
+3. You have an Rstudio project that you now want to start version controlling
 
-Creating a version controlled project in Rstudio from each of these scenarios is discussed in [section 2](#2.-Starting-a-project). Exploiting Git's features in Rstudio is further exploited in [section 3](#3.-Exploring-Git's-integration-in-Rstudio).
+Creating a version controlled project in Rstudio from each of these scenarios is discussed in section 2: *Starting a project*. Exploiting Git's features in Rstudio is further exploited in section 3: *Exploring Git's integration in Rstudio*.
 
- To this extent we will exploit the repository that we created in this tutorial. 
-A sample repository is also downloadable [here](https://github.com/vibbits/introduction-github). Download the repository as a ZIP-file and extract it.  
+We will exploit the repository that we created in the previous chapters of this tutorial. A sample repository is also downloadable [here](https://github.com/vibbits/introduction-github). Download the repository as a ZIP-file and extract it.  
 
 # 2. Starting a project 
+
+## 2.1 Integrating a version controlled project in Rstudio (scenario 1 &2)
 Let's start by making a new project (File > New project...). The following screen pops up:
 
 ---
@@ -43,7 +45,7 @@ There are two options relevant for us to create a project in RStudio initialized
 - **Existing Directory**: The preferred choice when a project folder already exists and which has previously been initialized with Git. 
 - **Version Control**: Ideally for creating a new R project based on a repository in GitHub. 
 
-Given the situation that there is a folder on our computer, created during this tutorial and initialized with Git, we will go for the first option. Select **Existing Directory**, browse to the location of the project folder and create the project. (If you've downloaded the sample repository mentioned above, this option still holds)
+Given the situation that there is a folder on our computer, created during this tutorial and initialized with Git, we will go for the first option. Select **Existing Directory**, browse to the location of the project folder and create the project. (If you've downloaded the sample repository mentioned above, this option does not hold as it only downloads the files)
 
 **Alternatively**, if we were to choose to create a new R project based on a GitHub repository, you would need to select **Version Control**, followed by *Git* and then copy the link of the GitHub repository from the green *Clone or Download* button and add it as the repository URL, and finally create the project. Using the sample repository for this option would mean that we need to fill in the following link as repository URL: *https://github.com/vibbits/introduction-github.git*.
 
@@ -61,7 +63,32 @@ Notice that after creating the repository, a `.gitignore` file is added on the f
 .Ruserdata
 ``` 
 
-# 3. Exploring Git's integration in Rstudio
+## 2.2. Initiating version controlling on an existing Rstudio project (scenario 3)
+A third option assumes that you already have an R/Rstudio project. Click on *Tools > Version control > Project Setup...*. In the new screen, select Git as the version control system as depicted below and select yes when asked "Do you want to initialize a new git repository for this project?". Rstudio will need to restart for the changes to take place.
+
+---
+
+<center><img src="../../images/rstudio-7.PNG" /></center>
+
+---
+
+This approach will initialize Git on the project. As discussed in chapter 3, this local repository does not exist on GitHub yet, hence we can't push our commits to GitHub. In order to do so, we'll have to make a repository on GitHub first (see chapter 3.2.). This repository should be initialized without(!!) a README file, `.gitignore` file or license. Copy the link that GitHub created for the new repository (e.g. https://github.com/vibbits/rstudio-project.git). In Rstudio, find a *Git* tab in the upper right corner and click on *New Branch* and *add remote*.  
+
+---
+
+<center><img src="../../images/rstudio-8.PNG" /></center>
+
+---
+
+Paste the GitHub link and write the name of the project. Finally add the name of the new branch *master* and hit create. Select *overwrite* when asked.  
+
+---
+
+<center><img src="../../images/rstudio-8-1.PNG" /></center>
+
+---
+
+# 3. Git's features in Rstudio
 
 Find a *Git* tab in the upper right corner. The tab consists of the main actions that can be performed with Git (the window might be too small to contain the keywords related to the symbol). Neglecting the *diff* keyword which is out of scope for this tutorial, we can find the following actions: *Commit, Pull, Push, History* and *More* followed by *New Branch*, the name of the branch (*master*) and a refresh button.
 
@@ -132,8 +159,3 @@ If the commit has to appear on GitHub we need one more step. Click on *Push* and
 ---
  
 
-
-Tools > Version control > Project Setup... 
-New screen, select Version control system: Git
-Do you want to initialize a new git repository for this project? 
-Select 
