@@ -8,7 +8,7 @@ questions:
 objectives:
 - Creating a version controlled repository from any project in Rstudio
 - Understand how to use Git's routine usage functions (stage, commit, push, pull) in Rstudio
-time_estimation: 3H
+time_estimation: 20m
 key_points:
 - Initializing Git on a current project which uses R in Rstudio
 - Exploit the core utilities of Git within Rstudio
@@ -32,7 +32,7 @@ We will exploit the repository that we created in the previous chapters of this 
 
 # 2. Starting a project 
 
-## 2.1 Integrating a version controlled project in Rstudio (scenario 1 &2)
+## 2.1 Integrating a version controlled project in Rstudio (scenario 1 & 2)
 Let's start by making a new project (File > New project...). The following screen pops up:
 
 ---
@@ -55,7 +55,7 @@ Given the situation that there is a folder on our computer, created during this 
 
 ---
 
-Notice that after creating the repository, a `.gitignore` file is added on the fly containing the following 4 lines. These lines will make sure that irrelevant information from an Rstudio initiated project is neglected.   
+Notice that after creating the repository, a `.gitignore` file is added on the fly containing the following 4 lines. These lines will make sure that irrelevant information related to Rstudio is neglected.   
 ```
 .Rproj.user
 .Rhistory
@@ -72,7 +72,7 @@ A third option assumes that you already have an R/Rstudio project. Click on *Too
 
 ---
 
-This approach will initialize Git on the project. As discussed in chapter 3, this local repository does not exist on GitHub yet, hence we can't push our commits to GitHub. In order to do so, we'll have to make a repository on GitHub first (see chapter 3.2.). This repository should be initialized without(!!) a README file, `.gitignore` file or license. Copy the link that GitHub created for the new repository (e.g. https://github.com/vibbits/rstudio-project.git). In Rstudio, find a *Git* tab in the upper right corner and click on *New Branch*.  
+This approach will initialize Git on the project. As discussed in chapter 3, this local repository does not exist on GitHub yet, hence we can't push our commits to GitHub. In order to do so, we'll have to make a repository on GitHub first (see chapter 3.2.). This repository should be initialized without(!!) a README file, `.gitignore` file or license. Copy the link that GitHub created for the new repository (e.g. https://github.com/vibbits/rstudio-project.git). In Rstudio, find a *Git* tab in the upper right corner and click on *New Branch* (or the icon next to it).  
 
 ---
 
@@ -98,7 +98,7 @@ Finally, add the name of the new branch *master* and hit create. Select *overwri
 
 # 3. Git's features in Rstudio
 
-Find a *Git* tab in the upper right corner. The tab consists of the main actions that can be performed with Git (the window might be too small to contain the keywords related to the symbol). Neglecting the *diff* keyword which is out of scope for this tutorial, we can find the following actions: *Commit, Pull, Push, History* and *More* followed by *New Branch*, the name of the branch (*master*) and a refresh button.
+By initializing Git on an Rstudio project, there appears a *Git* tab in the upper right corner as depicted below. The tab consists of the main actions that can be performed with Git (the window might be too small to contain the keywords related to the symbol). Neglecting the *diff* keyword which is out of scope for this tutorial, we can find the following actions: *Commit, Pull, Push, History* and *More* followed by *New Branch*, the name of the branch (*master*) and a refresh button.
 
 - **Stage**: The only action we're missing is the *staging*. Rstudio & Git actually continuously process the files within the project searching for new changes. If there is a new change it will appear in the list in the screen as depicted here for the `.gitignore` file. 
 - **Commit**: Opens a new screen that controls the staging area and committing. 

@@ -13,7 +13,7 @@ objectives:
 - They are single sentences describing what a learner should be able to do once they
   have completed the tutorial
 - You can use Bloom's Taxonomy to write effective learning objectives
-time_estimation: 3H
+time_estimation: 10m
 key_points:
 - The take-home messages
 - They will appear at the end of the tutorial
@@ -71,4 +71,8 @@ Documentation lines are preceded by a `#`.
 
 It's always good to think this through and manually add the files or folders that need to be ignored. However, it's also useful to know that there are standardized `.gitignore` files depending on the programming environment. They are all accessible in [this repository](https://github.com/github/gitignore) and contain `.gitignore` files for Python, R, Ruby, Java, Perl, C++, amongst many others. These files can also be added on the fly to a new repository by initializing the repository with one of these files (see figure below). 
 
+--- 
+
 <center><img src="../../images/gitignore.PNG" /></center>
+
+---

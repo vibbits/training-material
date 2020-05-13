@@ -25,11 +25,17 @@ contributors:
 # 1. What's a branch?
 The idea of branching is that we can create a copy of the project in which we can add a new feature. This branch is a completely separate version of your project and lives next to your original version. If the new feature is working properly we can merge it back into the project. It's a great way of testing new changes in some code when you're not sure whether it will work, and in the meanwhile not messing up the code that you already have. 
 
+---
+
 <center><img src="../../images/branching.png" /></center>
 
-The original repository is always called the *master* branch. If we would make a new branch, we can name it however we like (e.g. *new-feature*). 
+---
 
-There are two ways of doing this: locally or on the GitHub website. We will first show you the latter and afterwards how to do it locally. 
+The original repository is always called the *master* branch.  
+
+When a new GitHub repository is made, it's initialized by default with one branch: the *master* branch. All the changes in our project that we did so far, have hence always been in this master branch. Remember that when we did `git status` we read a line saying that we were on the master branch. 
+
+If we would make a new branch, we can name it however we like (e.g. *new-feature*). There are two ways of doing this: locally or on the GitHub website. We will first show you the latter (section 2) and afterwards how to do it locally via Git Bash or the Terminal (section 4). 
 
 A repository can have numerous branches. Branches are ways of organising work on a project: you can have a branch for a new feature, for trying out something new, for exploring an issue - anything at all.
 
@@ -41,7 +47,11 @@ The easiest way is to make a new branch on GitHub.
 2. In 'Find or create a branch...' type `new-feature`
 3. Click 'Create branch': new-feature
 
+---
+
 <center><img src="../../images/newbranch-github.PNG" /></center>
+
+---
 
 GitHub will now display in that button that it is on `Branch: new-feature`. It's very important to understand that any changes that happen in this branch, will not be visible in the master branch. 
 
@@ -52,7 +62,7 @@ GitHub will now display in that button that it is on `Branch: new-feature`. It's
 >  Edit the `plot2.R` file again, however make sure you're in the *new-feature* branch. Add the following lines that will make a new plot. These lines will allow us to investigate the relation between the weight, horsepower and miles per gallon variables of `mtcars` dataset in R. 
 > 
 > ```R
-> # Install requirements & plotting of 3D scatterplot: weight, dis
+> # Install requirements & plotting of 3D scatterplot
 > install.packages("scatterplot3d")
 > library(scatterplot3d)
 > attach(mtcars)
@@ -81,10 +91,19 @@ Before exploring how we make branches on our computer locally, we'll merge the c
 
 Whether you're on the *master* or *new-feature* branch, doesn't matter. In both cases you should see the following yellow screen. Alternatively, go to 'Pull requests' and find it there. 
 
+---
+
 <center><img src="../../images/pull-request-pre.PNG" /></center>
 
+---
+
 Click on 'compare & pull requests'. A new screen pops-up with the following information.
+
+---
+
 <center><img src="../../images/pull-request-1.PNG" /></center>
+
+---
 
 - The pull request should be interpreted as a request to pull the new branch and all of its changes into the master branch.   
 - The base where it would be pulled towards is `base: master`. The branch where the changes are deriving from is `compare: new-feature`.   
@@ -92,7 +111,12 @@ Click on 'compare & pull requests'. A new screen pops-up with the following info
 - Give a descriptive title text and if appropriate some additional comment. 
 
 Underneath the pull request related information, GitHub also gives you a summary of the changes that were done. 
+
+---
+
 <center><img src="../../images/pull-request-2.PNG" /></center>
+
+---
 
 - Each commit that's done in the branch *new-feature* (i.e. only added these 7 lines in this case)
 - Display of the file and a visual representation of what changed in that commit. 
@@ -100,7 +124,12 @@ Underneath the pull request related information, GitHub also gives you a summary
 Click on 'Create pull request'. 
 
 Finally, the last screen pops up in which you verify the merging commit and you give your consent to GitHub to merge both branches by clicking 'Merge pull request'.
+
+---
+
 <center><img src="../../images/pull-request-3.PNG" /></center>
+
+---
 
 It might be possible that in a project with several people, you're not authorized to make changes to the *master* branch. In this case you'll always have to work in a separate branch and someone else will get this last message. He or she will then decide whether this pull request should be merged. 
 
@@ -126,7 +155,14 @@ The first branch is our local master branch in which we're working at the moment
 
 **Note** that if you use `git checkout -b new-feature` (2), you would have created a new branch with the same name as the remote branch. This is error prone and will lead to problems! 
 
-# 4.1 Example workflow
+## 4.1. Example workflow
+An example workflow is depicted in the figure below and is discussed in the following points. 
+
+---
+
+<center><img src="../../images/conceptual_areas_branching.png" /></center>
+
+---
 
 **1. Make a new branch:**
 ```
@@ -167,7 +203,7 @@ Next time you want to push your commits from *new-branch*, you won’t need to b
 
 > ### {% icon hands_on %} Exercise 6
 >
->  Make a new branch and make sure you're in the branch. Edit the README.md file to the following text. 
+>  Make a new branch and make sure you're in the branch. Rewrite the README.md file so it contains the following text. Once the changes have been committed and pushed, create a pull request and merge the changes into the master branch.  
 > 
 > ```
 > # Downstream data-analysis R
@@ -189,28 +225,37 @@ Next time you want to push your commits from *new-branch*, you won’t need to b
 >    >  git commit -m "changed README file completely"
 >    >  git push origin readme
 >    >  ```
->    >  Find the new branch in your GitHub repository. 
+>    >  Find the new branch in your GitHub repository. From there the solution is identical as discussed here above. 
 >    > </details>
 >
 {: .hands_on}
 ---
 
-# x. Deleting branches 
+# 5. Deleting branches 
 
-**1. Via GitHub**
+## 5.1. Via GitHub
 
 If a branch is of no more use, we can delete it. Click on *branches* in the area depicted in figure below and find all of the branches as part of this GitHub repository:
 
-![Deleting a branch step 1](../../images/deleting-branch-1.PNG)
+---
+
+<center><img src="../../images/deleting-branch-1.PNG" /></center>
+
+---
+
 
 After successfully merging our changes in the branch created during the exercise above, it can be deleted. Click on the waste bin:
 
-![Deleting a branch step 2](../../images/deleting-branch-2.PNG)
+---
+
+<center><img src="../../images/deleting-branch-2.PNG" /></center>
+
+---
 
 Go back to the main tab of the repository and find that the branch has been deleted. 
 
 
-**2. Locally**
+## 5.2. Locally
 
 Deleting a branch is as simple as typing the following command:
 

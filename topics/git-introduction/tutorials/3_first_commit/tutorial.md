@@ -8,7 +8,7 @@ questions:
 - Which bioinformatics techniques are important to know for this type of data?
 objectives:
 - Make your own repository, clone into your local computer, make a file, make some changes, status, add, commit push
-time_estimation: 3H
+time_estimation: 1H
 key_points:
 - The take-home messages
 - They will appear at the end of the tutorial
