@@ -1,16 +1,10 @@
 ---
 name: data-management-plans
-type: basics 
-category: rdm 
-title: "How to write your Data Management Plan" 
+type: basics
+category: rdm
+title: "How to write your Data Management Plan"
 summary: "
-Welcome to this self-study course about research data management. In this course you will learn more about how you can manage your research data.
-
-
-A lot of material of that version of the **Learn to write your DMP** course has been developed by RDM Support of University of Utrecht.
-
-
-With all questions about this course you can contact: info.rdm@vib.be.
+Welcome to this self-study course about research data management. In this course, you will learn more about how you can manage your research data. A lot of material of this course was developed by RDM Support of University of Utrecht. For questions about this course please contact info.rdm@vib.be
 
 
 __By VIB Bioinformatics Core, ELIXIR Belgium and Helis Academy__
@@ -25,9 +19,9 @@ __By VIB Bioinformatics Core, ELIXIR Belgium and Helis Academy__
 The course consists of 6 chapters, divided in three categories.
 
 
-* Prepare Data collection
+- Prepare Data collection
 
-* Prepare Data documentation
+- Prepare Data documentation
 
 - Handle Data storage
 
@@ -42,31 +36,31 @@ Each chapter starts with an introduction and ends with an assignment to write th
 uction chapter. In this chapter you will learn more about the course and the learning environment. The course ends with chapter 7, 'Rounding up'.
 
 
-**Data Management Plans**
+## Data Management Plans
 The assignment throughout the course is to fill your own data management plan. At the end of each chapter you will be asked to log into DMPonline. With the content in this course, you should be able to apply this to your research project.
 
 
-**Questions about the course**
+## Questions about the course
 If you have technical questions, please contact bits@vib.be.
-If you have content related questions, please contact RDM Support: info.rdm@vib.be. All feedback is welcome, as this is still a beta version. Based on feedback from users, more content may be added 
+If you have content related questions, please contact RDM Support: info.rdm@vib.be. All feedback is welcome, as this is still a beta version. Based on feedback from users, more content may be added
 or existing content may be changed to a different form.
 
 
-**Technical requirements**
+## Technical requirements
 Some activities use HTML5. Make sure your browser has installed the latest updates. If an activity doesn't work, we recommend you use another browser.
 
 
-**Licenses and credits**
+## Licenses and credits
 We wish you a lot of fun with the course and we hope it turns out to be a useful learning experience.
 The content of the course is adapted from an online course of [University of Utrecht](https://lll-platform-uu.nl/).
 
-" 
+"
 
 subtopics:
-  - id: introduction 
+  - id: introduction
     title: "Introduction"
     description: "We are giving overviews on why it is important to manage your research data, user stories about data loss, funder requirements, and RDM Support."
-  - id: prepare 
+  - id: prepare
     title: "Preparatory steps for Data collection and Documentation"
     description: "
 * Will you use existing data?
@@ -79,7 +73,7 @@ subtopics:
 
 * What are the costs involved in managing and storing your data?
 "
-  - id: handle 
+  - id: handle
     title: "Data handling"
     description: "Storing your data properly can save you a lot of time (in finding and interpreting) and frustration (in not losing it). Moreover, when properly structured and annotated during research, you’ll have your data preserved and/or shared with minimal effort at the end of your research."
   - id: share
@@ -89,33 +83,33 @@ subtopics:
 With well-managed and preserved research data, you can defend yourself against allegations of mistakes. You can also prevent wrong conclusions from further spreading into the scientific community if there really are mistakes."
 
 maintainers:
-- abotzki 
+- abotzki
 
 references:
-- authors: RDM training by the University of Edinburgh 
-  title: MANTRA 
-  link: http://mantra.edina.ac.uk/ 
-- authors: RDM training by the University of Melbourne 
+- authors: RDM training by the University of Edinburgh
+  title: MANTRA
+  link: http://mantra.edina.ac.uk/
+- authors: RDM training by the University of Melbourne
   title: Managing Data @ Melbourne  
-  link: http://library.unimelb.edu.au/Digital-Scholarship/training_and_outreach/data 
+  link: http://library.unimelb.edu.au/Digital-Scholarship/training_and_outreach/data
 - authors: RDM website of University of Amsterdam                            
-  title: "Essentials for Data Support" 
-  link: http://rdm.uva.nl/ 
-- authors: Delft University of Technology 
+  title: "Essentials for Data Support"
+  link: http://rdm.uva.nl/
+- authors: Delft University of Technology
   title: "Research Data Services"
   link: https://www.tudelft.nl/en/library/current-topics/research-data-management/  
-- authors: Wageningen University & Research 
+- authors: Wageningen University & Research
   title: "Essentials for Data Support"
-  link: https://www.wur.nl/en/Expertise-Services/Data-Management-Support-Hub.htm 
-- authors: Digital Curation Centre 
+  link: https://www.wur.nl/en/Expertise-Services/Data-Management-Support-Hub.htm
+- authors: Digital Curation Centre
   title: "Essentials for Data Support"
-  link: http://www.dcc.ac.uk/ 
-- authors: UK Data Archive 
+  link: http://www.dcc.ac.uk/
+- authors: UK Data Archive
   title: "Essentials for Data Support"
-  link: http://data-archive.ac.uk/ 
-- authors: Australian Networked Data Services (ANDS) 
+  link: http://data-archive.ac.uk/
+- authors: Australian Networked Data Services (ANDS)
   title: "Essentials for Data Support"
-  link: http://www.ands.org.au/working-with-data/data-management 
-- authors: ORION e-learning course 
+  link: http://www.ands.org.au/working-with-data/data-management
+- authors: ORION e-learning course
   title: "Essentials for Data Support"
-  link: https://www.orion-openscience.org/news/201912/new-launch-orion-mooc-open-science-life-sciences 
+  link: https://www.orion-openscience.org/news/201912/new-launch-orion-mooc-open-science-life-sciences

@@ -30,7 +30,7 @@ In this video Katarzyna Biernacka explains what data in a research context is.
 
 CC-BY-4.0: Katarzyna Biernacka, HU Berlin & [Discipline Workshops 2019](http://www.discipline-workshops.com/)
 
-Managing your data effectively is crucial to the success of your research. This doesn't only apply to the immediate context of your thesis or publications. Managing your data is a practice that will benefit you throughout your research career. The following list gives an overview of what benefits are evident.
+Managing your data effectively is crucial to the success of your research. This does not only apply to the immediate context of your thesis or publications. Managing your data is a practice that will benefit you throughout your research career. The following list gives an overview of what benefits are evident.
 
 1. **Access, Re-use & Recognition**
    * Facilitating future research by allowing others to build on or add to your research data.
@@ -98,13 +98,14 @@ toplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="di
 
 ## Funder Requirements
 
-More and more research funders explicitly require you to consider the management and publication of your research data, both during and after your research project. The European Commission and the Flemish funders FWO have explicit policies on research data management.
+More and more research funders explicitly require you to consider the management and publication of your research data, both during and after your research project. The European Commission and the Flemish funders [FWO](https://www.fwo.be/nl/het-fwo/organisatie/data-management-plan/) have explicit policies on research data management.
+
 
 ### European Commission - Horizon 2020
 
 The European Commission wants “Horizon 2020 beneficiaries to make their research data findable, accessible, interoperable and reusable (FAIR), to ensure it is soundly managed. Good research data management is not a goal in itself, but rather the key conduit leading to knowledge discovery and innovation, and to subsequent data and knowledge integration and reuse.” Horizon 2020 is the biggest research and innovation program of the European Commission.
 
-[![European Commission - Horizon 2020](../../images/O_Funders_Screenshot_H2020guidelines.JPG)](https://www.nwo.nl/en/policies/open+science/data+management)
+[![European Commission - Horizon 2020](../../images/O_Funders_Screenshot_H2020guidelines.JPG)]https://ec.europa.eu/research/participants/docs/h2020-funding-guide/cross-cutting-issues/open-access-data-management/data-management_en.htm)
 
 ### FWO
 

@@ -10,7 +10,7 @@ objectives:
 - identify preferred file formats for your research data;
 - transform your files into a preferred format;
 - discover sources for existing data;
-- discover existing data yourself
+- discover existing data yourself;
 - assess the usefulness of existing data;
 - understand how a workflow leads to data products;
 - estimate costs involved with managing your data;
