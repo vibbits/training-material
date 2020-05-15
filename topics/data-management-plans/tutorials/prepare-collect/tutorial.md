@@ -82,8 +82,6 @@ Files in proprietary formats usually must be opened by the software in which the
 
 It is recommended that you use open formats for your research data. If this is not possible, try and store a copy of your data in an open format. For example, you might use .xls to store your spreadsheet data, but by saving an additional copy in an open format (such as .csv) you will ensure that your data will be readable in the future.
 
-<iframe src="http://35.187.71.29:8080/wp-admin/admin-ajax.php?action=h5p_embed&id=12" width="958" height="602" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="http://35.187.71.29:8080/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
-
 Even though some proprietary file formats can also be opened in other programs, distortions and loss of data may occur. For example, .ppt can be opened on an IOS operating system, but some features may no longer function. Therefore, it is always advised to store your format in an open data file format, although this does not guarantee loss of features and information either. At least, you are not locked in by one supplier.
 
 ### Preferred formats
@@ -106,60 +104,14 @@ At some time during your research you may need to convert or migrate your data f
 
 Some lossiness’ - that is the loss of information and/or quality in the original data - may occur when converting from one file fonmat to another. It is important for you to understand what is at stake if you lose information for the type of data you are working with.
 
-TODO add h5p - check 01_IdentifyRisksFileConversion_01.png
 
-### {% icon question %} Question
+## Exercises
 
-While file conversion or migration sometimes has to be done, there are also risks. Which ones can you think of?
+<iframe src="http://35.187.71.29:8080/wp-admin/admin-ajax.php?action=h5p_embed&id=12" width="958" height="602" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="http://35.187.71.29:8080/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
-<details markdown='1'>
-  <summary>Check your answers!</summary>
+<iframe src="http://35.187.71.29:8080/wp-admin/admin-ajax.php?action=h5p_embed&id=13" width="958" height="484" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="http://35.187.71.29:8080/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
-- File size may change and even become surprisingly large
-- Blanks used as missing data code
-- Special characters and end of line returns may change
-- Relation among items in a table and among tables may be lost
-- Layers, color fidelity and resolution may be lost or changed in image files
-- Fonts, footnotes and links to other documents may change
-- Frame rate, sound quality, codecs and wrappers may be altered in multimedia files
-- Last characters in rows (due to row size limitations) may be altered
-
-feedback:
-Depending on your data type, all of these issues can occur in file migration or conversion. Prevent problems by cleaning data (e.g. replace special characters in your files, replace footnotes by normal text) before you convert. Also investigate whether other file format exists that may suit your needs better. Always check your files thoroughly after conversion, specifically on the points in the checkboxes which you just selected.
-
-</details>
-
-
-
-### {% icon hands_on %} Hands On
-
-Open the following .docx file: [PreferredFormatsExcersizePenguinDOC.docx](../../images/PreferredFormatsExcersizePenguinDOC.docx)
-
-1. Convert this docx file to the preferred format .txt
-2. Open the text file in an editor
-3. Is all formatting preserved OK?
-
-<details markdown='1'>
-  <summary>Check your answers!</summary>
-
-  No, the format Microsoft Word creates saves the layout together with the textual and other elements. The .txt format created by Word is only the textual information in your file.
-
-</details>
-
-### {% icon hands_on %} Hands On  
-
-Open the following .docx file: [PreferredFormatsExcersizePenguinDOC.docx](../../images/PreferredFormatsExcersizePenguinDOC.docx)
-
-1. Convert this docx file to the preferred format .odt
-2. Open the .odt file
-3. Is all formatting preserved OK?
-
-<details markdown='1'>
-  <summary>Check your answers!</summary>
-
-  No, ODT files are formatted using the OASIS OpenDocument XML-based standard. When you open an OpenDocument Text file in Word, it might not have the same formatting as it did in the original application it was created in. This is because of the differences between applications that use the OpenDocument Format.  
-
-</details>
+<iframe src="http://35.187.71.29:8080/wp-admin/admin-ajax.php?action=h5p_embed&id=14" width="958" height="187" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="http://35.187.71.29:8080/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
 ### Data compression
 
