@@ -82,23 +82,9 @@ Files in proprietary formats usually must be opened by the software in which the
 
 It is recommended that you use open formats for your research data. If this is not possible, try and store a copy of your data in an open format. For example, you might use .xls to store your spreadsheet data, but by saving an additional copy in an open format (such as .csv) you will ensure that your data will be readable in the future.
 
-TODO H5P - check 01_ProprietaryOpenFileFormats.png
-
-### {% icon question %} Question
-
-Determine which format is proprietary and which is an open format
-
-.xml .pdf .psd .odf .ppt .docx .csv .xls
-
-<details markdown='1'>
-  <summary>Check your answers!</summary>
-
-1. Proprietary: .psd, .docx, .xls, .ppt
-2. Open format: .csv, .xml, .odf, .pdf
+<iframe src="http://35.187.71.29:8080/wp-admin/admin-ajax.php?action=h5p_embed&id=12" width="958" height="602" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="http://35.187.71.29:8080/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
 Even though some proprietary file formats can also be opened in other programs, distortions and loss of data may occur. For example, .ppt can be opened on an IOS operating system, but some features may no longer function. Therefore, it is always advised to store your format in an open data file format, although this does not guarantee loss of features and information either. At least, you are not locked in by one supplier.
-
-</details>
 
 ### Preferred formats
 
@@ -111,10 +97,8 @@ There are reasons for preferring some data formats over others. For example, the
 - TIFF, a format which allows you to preserve images at the highest quality, without compression, albeit with large file sizes.
 - PNG, a high-quality format of a smaller file size than TIFF, with the disadvantage of not allowing the inclusion of metadata such as the type of camera used to take the picture. JPEG and TIFF do possess this functionality.
 
-attachments:
-- 01_DataCollection_DANSpreferredformatsUK.pdf
-- 01_DataCollection_Preferred_formats.pdf
-- 01_DataCollection_PreferredFormatsExcersizePenguinDOC.docx
+Check which file formats are preferred at [Dans](https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats). Additionally, you may want to consult this PDF-file: [Preferred File Format](../../docs/01_DataCollection_Preferred_formats.pdf)
+
 
 ### File Conversion and migration
 
@@ -140,6 +124,7 @@ While file conversion or migration sometimes has to be done, there are also risk
 - Frame rate, sound quality, codecs and wrappers may be altered in multimedia files
 - Last characters in rows (due to row size limitations) may be altered
 
+feedback:
 Depending on your data type, all of these issues can occur in file migration or conversion. Prevent problems by cleaning data (e.g. replace special characters in your files, replace footnotes by normal text) before you convert. Also investigate whether other file format exists that may suit your needs better. Always check your files thoroughly after conversion, specifically on the points in the checkboxes which you just selected.
 
 </details>

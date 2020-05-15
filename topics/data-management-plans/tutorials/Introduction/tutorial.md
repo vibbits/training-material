@@ -24,9 +24,7 @@ contributors:
 
 In this video Katarzyna Biernacka explains what data in a research context is.
 
-<div>
 <iframe src="https://www.youtube.com/embed/XCckz_4mlhU" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
-</div>
 
 CC-BY-4.0: Katarzyna Biernacka, HU Berlin & [Discipline Workshops 2019](http://www.discipline-workshops.com/)
 
@@ -59,7 +57,7 @@ Marleen is an early career researcher. She completed her PhD about four years ag
 
 Think about your own research. If someone accused you of research misconduct, would you be in a position to defend your research and reputation? List some strategies you could implement right now that would assist you, should you ever find yourself in Marleen’s situation.
 
-## Data Disasters – Postcards From the Edge
+## Data Disasters – Postcards from the Edge
 
 The following are real examples where researchers or data centers have lost crucial data. Could any of these ever happen to you? With good planning you could avoid or reduce the impact of such occurrences.
 
@@ -71,24 +69,24 @@ For the Flemish universities, it is important that all researchers honour scient
 This policy is intended to set out parameters to safeguard the quality, availability and accessibility of research data within any Flemish university. It provides a basis for evaluating compliance with laws, regulations and codes of conduct. The policy also clarifies the various roles and responsibilities of university staff in managing research data.
 
 The highlights of the policy are:
-* Archive (relevant and valuable) research data for a minimum of ten years;
-* Store data in a structure that is suitable for long-term preservation and later consultation;
-* Provide metadata to describe the data with sufficient clarity to ensure they are findable for further research;
-* Make archived research data available for access and reuse at and outside VIB insofar as is reasonably possible;
-* Each individual researcher / research leader is responsible to draw up a Data Management Plan (DMP) at the start of the research project and to follow up the agreements made in this plan;
-* Scientific directors are responsible for the implementation and monitoring of the University policy framework and for drawing up additional faculty guidelines to this end if needed.
+- Archive (relevant and valuable) research data for a minimum of ten years;
+- Store data in a structure that is suitable for long-term preservation and later consultation;
+- Provide metadata to describe the data with sufficient clarity to ensure they are findable for further research;
+- Make archived research data available for access and reuse at and outside VIB insofar as is reasonably possible;
+- Each individual researcher / research leader is responsible to draw up a Data Management Plan (DMP) at the start of the research project and to follow up the agreements made in this plan;
+- Scientific directors are responsible for the implementation and monitoring of the University policy framework and for drawing up additional faculty guidelines to this end if needed.
 
 Links to the Policy Frameworks of the Flemish Universities
 
-* [Policy Framework from Ghent University](https://www.ugent.be/en/research/datamanagement/rdm-policy.pdf)
+- [Policy Framework from Ghent University](https://www.ugent.be/en/research/datamanagement/rdm-policy.pdf)
 
-* [Policy Framework from KU Leuven](https://www.kuleuven.be/english/research/scholcomm/rdm/policy-plan-rdm-ku-leuven-2014)
+- [Policy Framework from KU Leuven](https://www.kuleuven.be/english/research/scholcomm/rdm/policy-plan-rdm-ku-leuven-2014)
 
-* [Policy Framework from UHasselt](https://bibliotheek.uhasselt.be/sites/default/files/uploads/RDM/20180517_UH_RDM_PolicyPlan_NL.pdf)
+- [Policy Framework from UHasselt](https://bibliotheek.uhasselt.be/sites/default/files/uploads/RDM/20180517_UH_RDM_PolicyPlan_NL.pdf)
 
-* [Policy Framework from VUB](https://vub.sharepoint.com/sites/ORG-RandD/SitePages/RESEARCH-DATA-MANAGEMENT.aspx?web=1)
+- [Policy Framework from VUB](https://vub.sharepoint.com/sites/ORG-RandD/SitePages/RESEARCH-DATA-MANAGEMENT.aspx?web=1)
 
-## Policy in Practise
+## Policy in Practice
 
 In this short video Prof. dr. Chantal Kemner explains the importance of good data management for Utrecht University. Chantal is full professor of Biological Developmental Psychology in Utrecht at the faculty of social sciences and since 2013 also at the UMCU.
 
@@ -139,17 +137,17 @@ We offer you DMPonline to create your Data Management Plan. DMPonline is an inte
 
 With DMPonline you can:
 
-* Write your plan and keep it up-to-date
-  * You can easily update your DMP throughout the lifecycle of a project
+- Write your plan and keep it up-to-date
+  You can easily update your DMP throughout the lifecycle of a project
 
-* Share plans online
-  * DMPonline allows collaborative access, so you can share your DMP with other researchers, within and outside of your university.
+- Share plans online
+  DMPonline allows collaborative access, so you can share your DMP with other researchers, within and outside of your university.
 
-* Create multiple plans
-  * You can store different DMPs for different projects. And you can make a copy of a previous plan as the basis for writing a new one.
+- Create multiple plans
+  You can store different DMPs for different projects. And you can make a copy of a previous plan as the basis for writing a new one.
 
-* Download plans
-  * You can download your DMP in a variety of formats.
+- Download plans
+  You can download your DMP in a variety of formats.
 
 We recommend that graduate researchers share their data management plans with their supervisor(s).
 
@@ -161,13 +159,13 @@ RDM Support provides all kinds of research data management assistance to researc
 
 You can find an overview of the contact details of the main host institutions for DMP related questions and guidance are as follows:
 
-* AMS: Bart Cambré (bart.cambre@ams.ac.be)
-* Hogere Zeevaartschool: Marc Vervoort (marc.vervoort@hzs.be)
-* ITG: Ann Verlinden (averlinden@itg.be)
-* KU Leuven: RDM.ub@kuleuven.be
-* UAntwerpen: RDM-support@uantwerpen.be
-* UGent: Myriam Mertens and Annik Leyman (rdm.support@ugent.be)
-* UHasselt: Sadia Vancauwenbergh (rdm@uhasselt.be)
-* Vlerick: Eva Cools (eva.cools@vlerick.com)
-* VUB: dmp@vub.be
-* VIB: bits@vib.be
+- AMS: Bart Cambré (bart.cambre@ams.ac.be)
+- Hogere Zeevaartschool: Marc Vervoort (marc.vervoort@hzs.be)
+- ITG: Ann Verlinden (averlinden@itg.be)
+- KU Leuven: RDM.ub@kuleuven.be
+- UAntwerpen: RDM-support@uantwerpen.be
+- UGent: Myriam Mertens and Annik Leyman (rdm.support@ugent.be)
+- UHasselt: Sadia Vancauwenbergh (rdm@uhasselt.be)
+- Vlerick: Eva Cools (eva.cools@vlerick.com)
+- VUB: dmp@vub.be
+- VIB: bits@vib.be
