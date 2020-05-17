@@ -18,7 +18,7 @@ jobs:
       run: |
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future --trace"
+        jekyll/builder:3.8 /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future --trace"
 
     - name: Artifact
       uses: actions/upload-artifact@v1
