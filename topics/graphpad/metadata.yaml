@@ -1,0 +1,10 @@
+---
+name: "graphpad"
+type: "basics"
+category: "statistics"
+title: "Statistics with GraphPad Prism"
+summary: "Statistics with GraphPad Prism"
+requirements:
+
+maintainers:
+  - janick-bits 
