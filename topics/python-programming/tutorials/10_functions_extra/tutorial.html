@@ -262,8 +262,8 @@
 </span>    <span class="c1">#
 </span> 
     <span class="n">fin</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">fileName</span><span class="p">)</span>
-    <span class="n">lines</span> <span class="o">=</span> <span class="n">fin</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
-    <span class="n">fin</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="n">fin</span><span class="p">.</span><span class="n">readlines</span><span class="p">()</span>
+    <span class="n">fin</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
  
     <span class="c1">#
 </span>    <span class="c1"># Convert the data from the file into a Python list
@@ -273,14 +273,14 @@
 
     <span class="k">for</span> <span class="n">matrixRow</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
         <span class="c1"># Tab-delimited, so split line by \t - this will give a list of strings
-</span>        <span class="n">matrixColumns</span> <span class="o">=</span> <span class="n">matrixRow</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">"</span><span class="se">\t</span><span class="s">"</span><span class="p">)</span> 
+</span>        <span class="n">matrixColumns</span> <span class="o">=</span> <span class="n">matrixRow</span><span class="p">.</span><span class="n">rstrip</span><span class="p">().</span><span class="n">split</span><span class="p">(</span><span class="s">"</span><span class="se">\t</span><span class="s">"</span><span class="p">)</span> 
  
         <span class="c1"># Add a row to the matrix
-</span>        <span class="n">matrix</span><span class="o">.</span><span class="n">append</span><span class="p">([])</span>
+</span>        <span class="n">matrix</span><span class="p">.</span><span class="n">append</span><span class="p">([])</span>
  
         <span class="c1"># Add the columns, but convert the strings from the file into a float
 </span>        <span class="k">for</span> <span class="n">matrixValue</span> <span class="ow">in</span> <span class="n">matrixColumns</span><span class="p">:</span>
-            <span class="n">matrix</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">matrixValue</span><span class="p">))</span>
+            <span class="n">matrix</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">].</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">matrixValue</span><span class="p">))</span>
  
     <span class="c1">#
 </span>    <span class="c1"># Now sort by column - but have to track the row number as well!
@@ -290,9 +290,9 @@
  
     <span class="k">for</span> <span class="n">rowNumber</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">matrix</span><span class="p">)):</span>
  
-        <span class="n">selectedColumnValues</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">matrix</span><span class="p">[</span><span class="n">rowNumber</span><span class="p">][</span><span class="n">columnNumber</span><span class="p">],</span><span class="n">rowNumber</span><span class="p">))</span>
+        <span class="n">selectedColumnValues</span><span class="p">.</span><span class="n">append</span><span class="p">((</span><span class="n">matrix</span><span class="p">[</span><span class="n">rowNumber</span><span class="p">][</span><span class="n">columnNumber</span><span class="p">],</span><span class="n">rowNumber</span><span class="p">))</span>
  
-        <span class="n">selectedColumnValues</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+        <span class="n">selectedColumnValues</span><span class="p">.</span><span class="n">sort</span><span class="p">()</span>
  
     <span class="c1">#
 </span>    <span class="c1"># Now print out the new matrix - the column value is now not interesting
@@ -302,8 +302,8 @@
     <span class="k">for</span> <span class="p">(</span><span class="n">columnValue</span><span class="p">,</span><span class="n">rowNumber</span><span class="p">)</span> <span class="ow">in</span> <span class="n">selectedColumnValues</span><span class="p">:</span>  
         <span class="n">columnValueStrings</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">matrix</span><span class="p">[</span><span class="n">rowNumber</span><span class="p">]:</span>
-            <span class="n">columnValueStrings</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">"{:.3f}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="se">\t</span><span class="s">"</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">columnValueStrings</span><span class="p">))</span>
+            <span class="n">columnValueStrings</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="s">"{:.3f}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="se">\t</span><span class="s">"</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">columnValueStrings</span><span class="p">))</span>
  
  
 <span class="n">sortMatrixByColumn</span><span class="p">(</span><span class="s">"data/matrix.txt"</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
@@ -335,10 +335,10 @@
  
     <span class="c1"># Gets the title
 </span> 
-    <span class="n">title</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">cols</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="s">''</span><span class="p">)</span>
-    <span class="n">title</span> <span class="o">=</span> <span class="n">title</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">line</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="n">cols</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="s">''</span><span class="p">)</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">title</span><span class="p">.</span><span class="n">strip</span><span class="p">()</span>
  
-    <span class="k">return</span> <span class="p">(</span><span class="s">"The title is '</span><span class="si">%</span><span class="s">s'"</span> <span class="o">%</span> <span class="n">title</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="s">"The title is '%s'"</span> <span class="o">%</span> <span class="n">title</span><span class="p">)</span>
  
 <span class="k">def</span> <span class="nf">getAtomInfo</span><span class="p">(</span><span class="n">cols</span><span class="p">):</span>
  
@@ -365,10 +365,10 @@
  
 <span class="c1"># Read all the lines in the file (as separated by a newline character), and store them in the lines list
 # Each element in this list corresponds to one line of the file!
-</span><span class="n">lines</span> <span class="o">=</span> <span class="n">fileHandle</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+</span><span class="n">lines</span> <span class="o">=</span> <span class="n">fileHandle</span><span class="p">.</span><span class="n">readlines</span><span class="p">()</span>
  
 <span class="c1"># Close the file
-</span><span class="n">fileHandle</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span><span class="n">fileHandle</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
  
 <span class="c1"># Initialise some information
 </span><span class="n">searchCoordinate</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mf">8.7</span><span class="p">,</span><span class="o">-</span><span class="mf">7.7</span><span class="p">,</span><span class="mf">4.7</span><span class="p">)</span>
@@ -377,11 +377,11 @@
 <span class="c1"># Loop over the lines, and do some basic string manipulations
 </span><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
  
-    <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>  <span class="c1"># Remove starting and trailing spaces/tabs/newlines
+    <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="p">.</span><span class="n">strip</span><span class="p">()</span>  <span class="c1"># Remove starting and trailing spaces/tabs/newlines
 </span> 
     <span class="c1"># Only do something if it's not an empty line
 </span>    <span class="k">if</span> <span class="n">line</span><span class="p">:</span>
-        <span class="n">cols</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>   <span class="c1"># Split the line by white spaces; depending on the format this could be commas, ...
+        <span class="n">cols</span> <span class="o">=</span> <span class="n">line</span><span class="p">.</span><span class="n">split</span><span class="p">()</span>   <span class="c1"># Split the line by white spaces; depending on the format this could be commas, ...
 </span> 
         <span class="c1"># Print off the title
 </span>        <span class="k">if</span> <span class="n">cols</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s">'TITLE'</span><span class="p">:</span>
@@ -399,7 +399,7 @@
 </span>            <span class="n">distance</span> <span class="o">=</span> <span class="n">calculateDistance</span><span class="p">((</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">),</span><span class="n">searchCoordinate</span><span class="p">)</span>
  
             <span class="k">if</span> <span class="n">distance</span> <span class="o">&lt;</span> <span class="mf">2.0</span><span class="p">:</span>
-                <span class="k">print</span><span class="p">(</span><span class="s">"Model {}, residue {}, atom {} (serial {}) is {:.2f} away from reference."</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">modelNumber</span><span class="p">,</span><span class="n">residueNumber</span><span class="p">,</span><span class="n">atomName</span><span class="p">,</span><span class="n">atomSerial</span><span class="p">,</span><span class="n">distance</span><span class="p">))</span>
+                <span class="k">print</span><span class="p">(</span><span class="s">"Model {}, residue {}, atom {} (serial {}) is {:.2f} away from reference."</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">modelNumber</span><span class="p">,</span><span class="n">residueNumber</span><span class="p">,</span><span class="n">atomName</span><span class="p">,</span><span class="n">atomSerial</span><span class="p">,</span><span class="n">distance</span><span class="p">))</span>
 </code></pre></div>          </div>
         </details>
       </blockquote>

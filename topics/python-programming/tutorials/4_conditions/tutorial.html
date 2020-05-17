@@ -287,7 +287,7 @@
  
 <span class="k">if</span> <span class="p">(</span><span class="n">y</span> <span class="o">/</span> <span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
   <span class="k">print</span><span class="p">(</span><span class="s">"y divided by x is 2!"</span><span class="p">)</span>
-   <span class="k">print</span> <span class="p">(</span><span class="s">"And x is {}!"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+   <span class="k">print</span> <span class="p">(</span><span class="s">"And x is {}!"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
 </code></pre></div></div>
 
 <p>Note that this can also happen if you start mixing space and tab characters!</p>
@@ -300,16 +300,16 @@
   <p>Write a program where you ask the user for x and y, make sure that y is not zero, and print out x/y.</p>
 
   <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Modify the code below on the ... locations:
-</span><span class="n">xString</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="n">yString</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</span><span class="n">xString</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(...)</span>
+<span class="n">yString</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(...)</span>
 
-<span class="n">x</span> <span class="o">=</span> <span class="o">...</span><span class="p">(</span><span class="n">xString</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="o">...</span><span class="p">(</span><span class="n">yString</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">...(</span><span class="n">xString</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">...(</span><span class="n">yString</span><span class="p">)</span>
 
-<span class="k">if</span> <span class="o">...</span> <span class="p">:</span>
+<span class="k">if</span> <span class="p">...</span> <span class="p">:</span>
     <span class="k">print</span><span class="p">(</span><span class="s">"Error, your y-number is 0"</span><span class="p">)</span>
-<span class="k">if</span> <span class="o">...</span> <span class="p">:</span> 
-    <span class="k">print</span><span class="p">(</span><span class="s">"x divided by y = {:.2f}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="o">...</span><span class="p">))</span>
+<span class="k">if</span> <span class="p">...</span> <span class="p">:</span> 
+    <span class="k">print</span><span class="p">(</span><span class="s">"x divided by y = {:.2f}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(...))</span>
 </code></pre></div>  </div>
 
   <blockquote>
@@ -329,7 +329,7 @@
      <span class="k">print</span><span class="p">(</span><span class="s">"Error, you're y-number is 0"</span><span class="p">)</span>
  <span class="k">if</span> <span class="n">y</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
      <span class="n">result</span> <span class="o">=</span> <span class="n">x</span><span class="o">/</span><span class="n">y</span>
-     <span class="k">print</span><span class="p">(</span><span class="s">"x divided by y = {:.2f}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
+     <span class="k">print</span><span class="p">(</span><span class="s">"x divided by y = {:.2f}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
 </code></pre></div>      </div>
     </details>
   </blockquote>
@@ -412,7 +412,7 @@
 <span class="k">else</span><span class="p">:</span>
     <span class="k">print</span><span class="p">(</span><span class="s">"x is not divisible by two..."</span><span class="p">)</span>
 
-<span class="k">print</span> <span class="p">(</span><span class="s">"x is {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="k">print</span> <span class="p">(</span><span class="s">"x is {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
 </code></pre></div></div>
 
 <p>You can modify the value of x a bit to see what else can happen. Can you spot a problem with this example? What will happen if x can be divided by both two and three? What can you do to solve this problem?</p>
@@ -439,7 +439,7 @@
  <span class="k">else</span><span class="p">:</span>
      <span class="k">print</span><span class="p">(</span><span class="s">"x is not divisible by two or three..."</span><span class="p">)</span>
  
- <span class="k">print</span> <span class="p">(</span><span class="s">"x is {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+ <span class="k">print</span> <span class="p">(</span><span class="s">"x is {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
  
  <span class="c1"># This is not a very elegant solution however, as you are repeating the same bit of code twice to find out whether the value can be divided by three. This one might be   slightly better:
 </span> <span class="n">x</span> <span class="o">=</span> <span class="mi">12</span>
@@ -453,7 +453,7 @@
  <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="mi">3</span><span class="p">):</span>
      <span class="k">print</span><span class="p">(</span><span class="s">"x is not divisible by two or three..."</span><span class="p">)</span>
  
- <span class="k">print</span> <span class="p">(</span><span class="s">"x is {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+ <span class="k">print</span> <span class="p">(</span><span class="s">"x is {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
  
  <span class="c1"># However you still have to repeat the conditions, which would become very tedious (and error-prone) if you were to try division by many values. The next example is a bit more verbose but cleaner and more 'extendable' for other values:
 </span> <span class="n">x</span> <span class="o">=</span> <span class="mi">12</span>
@@ -470,7 +470,7 @@
  <span class="k">if</span> <span class="ow">not</span> <span class="n">xDivisible</span><span class="p">:</span>
      <span class="k">print</span><span class="p">(</span><span class="s">"x is not divisible by two or three..."</span><span class="p">)</span>
  
- <span class="k">print</span> <span class="p">(</span><span class="s">"x is {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+ <span class="k">print</span> <span class="p">(</span><span class="s">"x is {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
 </code></pre></div>      </div>
     </details>
   </blockquote>

@@ -259,7 +259,7 @@ The file name is the module name with the suffix <code class="highlighter-rouge"
 <p>Imagine that in the module <code class="highlighter-rouge">module1</code>, there is a function called <code class="highlighter-rouge">getMeanValue()</code>. This way of importing does not make the name of the function available; it only remembers the module name <code class="highlighter-rouge">module1</code> which you can than use to access the functions within the module:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">module1</span>
-<span class="n">module1</span><span class="o">.</span><span class="n">getMeanValue</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+<span class="n">module1</span><span class="p">.</span><span class="n">getMeanValue</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
 </code></pre></div></div>
 
 <h2 id="113-how-to-create-your-own-module">11.3 How to create your own module</h2>
@@ -304,14 +304,14 @@ The file name is the module name with the suffix <code class="highlighter-rouge"
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">module1</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">module1</span><span class="o">.</span><span class="n">getMeanValue</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">77</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">67</span><span class="p">,</span><span class="mi">54</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">]))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">module1</span><span class="p">.</span><span class="n">getMeanValue</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">77</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">67</span><span class="p">,</span><span class="mi">54</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">]))</span>
 </code></pre></div></div>
 
 <p>If we were to write code for a huge project, long names can get exhaustive. Programmers will intrinsically make shortcut names for functions they use a lot. Renaming a module is therefore a common thing to do (e.g. NumPy as np, pandas as pd, etc.):</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">module1</span> <span class="k">as</span> <span class="n">m1</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">m1</span><span class="o">.</span><span class="n">getMeanValue</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">77</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">67</span><span class="p">,</span><span class="mi">54</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">]))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">m1</span><span class="p">.</span><span class="n">getMeanValue</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">77</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">67</span><span class="p">,</span><span class="mi">54</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">]))</span>
 </code></pre></div></div>
 
 <p>When importing a file, Python only searches the current directory, the directory that the entry-point script is running from, and sys.path which includes locations such as the package installation directory (it’s actually a little more complex than this, but this covers most cases).</p>
@@ -320,12 +320,12 @@ The file name is the module name with the suffix <code class="highlighter-rouge"
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">modules</span> <span class="kn">import</span> <span class="n">module2</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">module2</span><span class="o">.</span><span class="n">getMeanValue</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">77</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">67</span><span class="p">,</span><span class="mi">54</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">]))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">module2</span><span class="p">.</span><span class="n">getMeanValue</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">77</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">67</span><span class="p">,</span><span class="mi">54</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">]))</span>
 </code></pre></div></div>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">modules</span> <span class="kn">import</span> <span class="n">module2</span> <span class="k">as</span> <span class="n">m2</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">m2</span><span class="o">.</span><span class="n">getMeanValue</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">77</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">67</span><span class="p">,</span><span class="mi">54</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">]))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">m2</span><span class="p">.</span><span class="n">getMeanValue</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">77</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">67</span><span class="p">,</span><span class="mi">54</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">]))</span>
 </code></pre></div></div>
 
 <p>Another way of writing this is with an absolute path to the module. You can explicitly import an attribute from a module.</p>
@@ -352,13 +352,13 @@ The file name is the module name with the suffix <code class="highlighter-rouge"
 <p>With <strong>time</strong> you can get information on the current time and date, …:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">time</span>
-<span class="n">time</span><span class="o">.</span><span class="n">ctime</span><span class="p">()</span>  <span class="c1"># Print current day and time
+<span class="n">time</span><span class="p">.</span><span class="n">ctime</span><span class="p">()</span>  <span class="c1"># Print current day and time
 </span></code></pre></div></div>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>   <span class="c1"># Print system clock time
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">()</span>   <span class="c1"># Print system clock time
 </span></code></pre></div></div>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>       <span class="c1"># Sleep for 5 seconds - the program will wait here
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">time</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>       <span class="c1"># Sleep for 5 seconds - the program will wait here
 </span></code></pre></div></div>
 
 <p>See the <a href="https://docs.python.org/3/library/time.html">Python documentation</a> for a full description of time. Also see <a href="https://docs.python.org/3/library/datetime.html">datetime</a>, which is a module to deal with date/time manipulations.</p>
@@ -370,17 +370,17 @@ The file name is the module name with the suffix <code class="highlighter-rouge"
 
 </code></pre></div></div>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sys</span><span class="o">.</span><span class="n">argv</span>  <span class="c1"># A list of parameters that are given when calling this script 
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sys</span><span class="p">.</span><span class="n">argv</span>  <span class="c1"># A list of parameters that are given when calling this script 
 </span>          <span class="c1"># from the command line (e.g. ''python myScript a b c'')
 </span></code></pre></div></div>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sys</span><span class="o">.</span><span class="n">platform</span> <span class="c1"># The platform the code is currently running on
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sys</span><span class="p">.</span><span class="n">platform</span> <span class="c1"># The platform the code is currently running on
 </span></code></pre></div></div>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sys</span><span class="o">.</span><span class="n">path</span>     <span class="c1"># The directories where Python will look for things to import
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sys</span><span class="p">.</span><span class="n">path</span>     <span class="c1"># The directories where Python will look for things to import
 </span></code></pre></div></div>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">help</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="nb">exit</span><span class="p">)</span>          <span class="c1"># Exit the code immediately
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">help</span><span class="p">(</span><span class="n">sys</span><span class="p">.</span><span class="nb">exit</span><span class="p">)</span>          <span class="c1"># Exit the code immediately
 </span></code></pre></div></div>
 
 <p>See the <a href="https://docs.python.org/3/library/sys.html">Python documentation</a> for a full description.</p>
@@ -392,36 +392,36 @@ The file name is the module name with the suffix <code class="highlighter-rouge"
 </code></pre></div></div>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Get the current working directory (cwd)
-</span><span class="n">currentDir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+</span><span class="n">currentDir</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">getcwd</span><span class="p">()</span>
 <span class="n">currentDir</span>
 </code></pre></div></div>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Get a list of the files in the current working directory    
-</span><span class="n">myFiles</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">currentDir</span><span class="p">)</span>
+</span><span class="n">myFiles</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">currentDir</span><span class="p">)</span>
 <span class="n">myFiles</span>
 </code></pre></div></div>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Create a directory, rename it, and remove it
-</span><span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="s">"myTempDir"</span><span class="p">)</span>
-<span class="n">os</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s">"myTempDir"</span><span class="p">,</span><span class="s">"myNewTempDir"</span><span class="p">)</span>
-<span class="n">os</span><span class="o">.</span><span class="n">removedirs</span><span class="p">(</span><span class="s">"myNewTempDir"</span><span class="p">)</span>
+</span><span class="n">os</span><span class="p">.</span><span class="n">mkdir</span><span class="p">(</span><span class="s">"myTempDir"</span><span class="p">)</span>
+<span class="n">os</span><span class="p">.</span><span class="n">rename</span><span class="p">(</span><span class="s">"myTempDir"</span><span class="p">,</span><span class="s">"myNewTempDir"</span><span class="p">)</span>
+<span class="n">os</span><span class="p">.</span><span class="n">removedirs</span><span class="p">(</span><span class="s">"myNewTempDir"</span><span class="p">)</span>
 </code></pre></div></div>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Create a full path name to the `module2` module in the modules folder
-</span><span class="n">myFileFullPath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">currentDir</span><span class="p">,</span><span class="s">'modules'</span><span class="p">,</span><span class="s">'module2.py'</span><span class="p">)</span>
+</span><span class="n">myFileFullPath</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">currentDir</span><span class="p">,</span><span class="s">'modules'</span><span class="p">,</span><span class="s">'module2.py'</span><span class="p">)</span>
 <span class="n">myFileFullPath</span>
 </code></pre></div></div>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Does this file exist?
-</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">myFileFullPath</span><span class="p">)</span>
+</span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">exists</span><span class="p">(</span><span class="n">myFileFullPath</span><span class="p">)</span>
 </code></pre></div></div>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># How big is the file?
-</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">getsize</span><span class="p">(</span><span class="n">myFileFullPath</span><span class="p">)</span>
+</span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">getsize</span><span class="p">(</span><span class="n">myFileFullPath</span><span class="p">)</span>
 </code></pre></div></div>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Split the directory path from the file name
-</span><span class="p">(</span><span class="n">myDir</span><span class="p">,</span><span class="n">myFileName</span><span class="p">)</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">myFileFullPath</span><span class="p">)</span>
+</span><span class="p">(</span><span class="n">myDir</span><span class="p">,</span><span class="n">myFileName</span><span class="p">)</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="n">myFileFullPath</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">myDir</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">myFileName</span><span class="p">)</span>
 </code></pre></div></div>
@@ -440,15 +440,15 @@ shore, I thought I would sail about a little and see the watery part of the
 world."""</span>
 
 <span class="c1"># Compile a regular expression, 
-</span><span class="n">myPattern</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="nb">compile</span><span class="p">(</span><span class="s">"(w</span><span class="err">\</span><span class="s">w+d)"</span><span class="p">)</span>    <span class="c1"># Look for the first word that starts with a w,
+</span><span class="n">myPattern</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="nb">compile</span><span class="p">(</span><span class="s">"(w\w+d)"</span><span class="p">)</span>    <span class="c1"># Look for the first word that starts with a w,
 </span>                                     <span class="c1"># is followed by 1 or more characters (\w+)
 </span>                                     <span class="c1"># and ends in a d
 </span>
-<span class="n">mySearch</span> <span class="o">=</span> <span class="n">myPattern</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">myText</span><span class="p">)</span>
+<span class="n">mySearch</span> <span class="o">=</span> <span class="n">myPattern</span><span class="p">.</span><span class="n">search</span><span class="p">(</span><span class="n">myText</span><span class="p">)</span>
 
 <span class="c1"># mySearch will be None if nothing was found
 </span><span class="k">if</span> <span class="n">mySearch</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">mySearch</span><span class="o">.</span><span class="n">groups</span><span class="p">())</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">mySearch</span><span class="p">.</span><span class="n">groups</span><span class="p">())</span>
 </code></pre></div></div>
 
 <p>See the full <a href="https://docs.python.org/3/library/re.html">Python documentation</a> on regular expressions for more information.</p>
@@ -475,27 +475,27 @@ world."""</span>
 </span><span class="n">myDir</span> <span class="o">=</span> <span class="s">"timeTest"</span>
 
 <span class="c1"># Check whether the directory exists, if not create it
-</span><span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">myDir</span><span class="p">):</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">myDir</span><span class="p">)</span>
+</span><span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">exists</span><span class="p">(</span><span class="n">myDir</span><span class="p">):</span>
+    <span class="n">os</span><span class="p">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">myDir</span><span class="p">)</span>
 
 
 <span class="c1"># Loop from 1 to 5
 </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">):</span>
 
     <span class="c1"># Get the current time
-</span>    <span class="n">currentTime</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">ctime</span><span class="p">()</span>
+</span>    <span class="n">currentTime</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">ctime</span><span class="p">()</span>
 
     <span class="c1"># Write out the file - use i to give a different name to each
-</span>    <span class="n">filePath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">myDir</span><span class="p">,</span><span class="s">"myFile{}.txt"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+</span>    <span class="n">filePath</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">myDir</span><span class="p">,</span><span class="s">"myFile{}.txt"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
 
     <span class="n">outFileHandle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filePath</span><span class="p">,</span><span class="s">'w'</span><span class="p">)</span>    
-    <span class="n">outFileHandle</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">"{}</span><span class="se">\n</span><span class="s">"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">currentTime</span><span class="p">))</span>
-    <span class="n">outFileHandle</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">outFileHandle</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="s">"{}</span><span class="se">\n</span><span class="s">"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">currentTime</span><span class="p">))</span>
+    <span class="n">outFileHandle</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
 
-    <span class="k">print</span><span class="p">(</span><span class="s">"Written file {}..."</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">filePath</span><span class="p">))</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Written file {}..."</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">filePath</span><span class="p">))</span>
 
     <span class="c1"># Sleep for 2 seconds
-</span>    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</span>    <span class="n">time</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </code></pre></div>      </div>
     </details>
   </blockquote>
@@ -520,13 +520,13 @@ world."""</span>
  
 <span class="k">def</span> <span class="nf">readRnaFastaFile</span><span class="p">(</span><span class="n">fileName</span><span class="p">):</span>
  
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">fileName</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">"Error: File {} not available!"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">fileName</span><span class="p">))</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">exists</span><span class="p">(</span><span class="n">fileName</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Error: File {} not available!"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">fileName</span><span class="p">))</span>
         <span class="k">return</span> <span class="p">(</span><span class="bp">None</span><span class="p">,</span><span class="bp">None</span><span class="p">,</span><span class="bp">None</span><span class="p">)</span>
 
     <span class="n">fconnect</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">fileName</span><span class="p">)</span>
-    <span class="n">lines</span> <span class="o">=</span> <span class="n">fconnect</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
-    <span class="n">fconnect</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="n">fconnect</span><span class="p">.</span><span class="n">readlines</span><span class="p">()</span>
+    <span class="n">fconnect</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
 
     <span class="n">sequenceInfo</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">moleculeName</span> <span class="o">=</span> <span class="bp">None</span>
@@ -534,20 +534,20 @@ world."""</span>
 
     <span class="c1"># Get information from the first line - ignore the &gt;
 </span>    <span class="n">firstLine</span> <span class="o">=</span> <span class="n">lines</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">firstLineCols</span> <span class="o">=</span> <span class="n">firstLine</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    <span class="n">firstLineCols</span> <span class="o">=</span> <span class="n">firstLine</span><span class="p">[</span><span class="mi">1</span><span class="p">:].</span><span class="n">split</span><span class="p">()</span>
     <span class="n">moleculeName</span> <span class="o">=</span> <span class="n">firstLineCols</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">description</span> <span class="o">=</span> <span class="n">firstLine</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">moleculeName</span><span class="p">,</span><span class="s">''</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">description</span> <span class="o">=</span> <span class="n">firstLine</span><span class="p">[</span><span class="mi">1</span><span class="p">:].</span><span class="n">replace</span><span class="p">(</span><span class="n">moleculeName</span><span class="p">,</span><span class="s">''</span><span class="p">).</span><span class="n">strip</span><span class="p">()</span>
 
     <span class="c1"># Now get the full sequence out
 </span>    <span class="n">fullSequence</span> <span class="o">=</span> <span class="s">""</span>
     <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
 
-        <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="p">.</span><span class="n">strip</span><span class="p">()</span>
         <span class="n">fullSequence</span> <span class="o">+=</span> <span class="n">line</span>
 
     <span class="c1"># Divide up the sequence depending on type (amino acid or nucleic acid)
 </span>    <span class="k">for</span> <span class="n">seqIndex</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">fullSequence</span><span class="p">),</span><span class="mi">3</span><span class="p">):</span>
-        <span class="n">sequenceInfo</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fullSequence</span><span class="p">[</span><span class="n">seqIndex</span><span class="p">:</span><span class="n">seqIndex</span><span class="o">+</span><span class="mi">3</span><span class="p">])</span>
+        <span class="n">sequenceInfo</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">fullSequence</span><span class="p">[</span><span class="n">seqIndex</span><span class="p">:</span><span class="n">seqIndex</span><span class="o">+</span><span class="mi">3</span><span class="p">])</span>
 
     <span class="k">return</span> <span class="p">(</span><span class="n">moleculeName</span><span class="p">,</span><span class="n">description</span><span class="p">,</span><span class="n">sequenceInfo</span><span class="p">)</span>
 
@@ -581,10 +581,10 @@ world."""</span>
  
 <span class="k">if</span> <span class="n">oneLetterSeq</span><span class="p">:</span>
     <span class="k">for</span> <span class="n">oneLetterCode</span> <span class="ow">in</span> <span class="n">oneLetterSeq</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">oneLetterCode</span> <span class="ow">in</span> <span class="n">oneToThreeLetterCodes</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">oneLetterCode</span> <span class="ow">in</span> <span class="n">oneToThreeLetterCodes</span><span class="p">.</span><span class="n">keys</span><span class="p">():</span>
             <span class="k">print</span><span class="p">(</span><span class="n">oneToThreeLetterCodes</span><span class="p">[</span><span class="n">oneLetterCode</span><span class="p">])</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">print</span><span class="p">(</span><span class="s">"One letter code '{}' is not a valid amino acid code!"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">oneLetterCode</span><span class="p">))</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">"One letter code '{}' is not a valid amino acid code!"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">oneLetterCode</span><span class="p">))</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="k">print</span><span class="p">(</span><span class="s">"You didn't give me any information!"</span><span class="p">)</span>
 </code></pre></div>      </div>
@@ -616,7 +616,7 @@ world."""</span>
 
     <span class="n">aaOneLetterCode</span> <span class="o">=</span> <span class="n">standardRnaToProtein</span><span class="p">[</span><span class="n">rnaCodon</span><span class="p">]</span>
     <span class="n">aaThreeLetterCode</span> <span class="o">=</span> <span class="n">proteinOneToThree</span><span class="p">[</span><span class="n">aaOneLetterCode</span><span class="p">]</span>
-    <span class="n">proteinThreeLetterSeq</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">aaThreeLetterCode</span><span class="p">)</span>
+    <span class="n">proteinThreeLetterSeq</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">aaThreeLetterCode</span><span class="p">)</span>
 
 <span class="k">print</span><span class="p">(</span><span class="n">proteinThreeLetterSeq</span><span class="p">)</span>
 </code></pre></div>      </div>
@@ -648,21 +648,21 @@ world."""</span>
     <span class="c1"># Read in the sample information file in .csv (comma-delimited) format
 </span>
     <span class="c1"># Doublecheck if file exists
-</span>    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">fileName</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">"File {} does not exist!"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">fileName</span><span class="p">))</span>
+</span>    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">exists</span><span class="p">(</span><span class="n">fileName</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"File {} does not exist!"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">fileName</span><span class="p">))</span>
         <span class="k">return</span> <span class="bp">None</span>
  
     <span class="c1"># Open the file and read the information
 </span>    <span class="n">fileHandle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">fileName</span><span class="p">)</span>
-    <span class="n">lines</span> <span class="o">=</span> <span class="n">fileHandle</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
-    <span class="n">fileHandle</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="n">fileHandle</span><span class="p">.</span><span class="n">readlines</span><span class="p">()</span>
+    <span class="n">fileHandle</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
 
     <span class="c1"># Now read the information. The first line has the header information which
 </span>    <span class="c1"># we are going to use to create the dictionary!
 </span>
     <span class="n">fileInfoDict</span> <span class="o">=</span> <span class="p">{}</span>
 
-    <span class="n">headerCols</span> <span class="o">=</span> <span class="n">lines</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">','</span><span class="p">)</span>
+    <span class="n">headerCols</span> <span class="o">=</span> <span class="n">lines</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">strip</span><span class="p">().</span><span class="n">split</span><span class="p">(</span><span class="s">','</span><span class="p">)</span>
 
     <span class="c1"># Now read in the information, use the first column as the key for the dictionary
 </span>    <span class="c1"># Note that you could organise this differently by creating a dictionary with
@@ -670,8 +670,8 @@ world."""</span>
 </span>
     <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
  
-        <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>  <span class="c1"># Remove newline characters
-</span>        <span class="n">cols</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">','</span><span class="p">)</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="p">.</span><span class="n">strip</span><span class="p">()</span>  <span class="c1"># Remove newline characters
+</span>        <span class="n">cols</span> <span class="o">=</span> <span class="n">line</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">','</span><span class="p">)</span>
 
         <span class="n">sampleId</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">cols</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 
@@ -696,7 +696,7 @@ world."""</span>
 </span> 
     <span class="c1">#sampleIdList = fileInfoDict.keys()
 </span>    <span class="c1">#sampleIdList.sort()
-</span>    <span class="n">sampleIdList</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">fileInfoDict</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+</span>    <span class="n">sampleIdList</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">fileInfoDict</span><span class="p">.</span><span class="n">keys</span><span class="p">())</span>
     <span class="n">sampleIdsFound</span> <span class="o">=</span> <span class="p">[]</span>
 
     <span class="k">for</span> <span class="n">sampleId</span> <span class="ow">in</span> <span class="n">sampleIdList</span><span class="p">:</span>
@@ -704,7 +704,7 @@ world."""</span>
         <span class="n">currentValue</span> <span class="o">=</span> <span class="n">fileInfoDict</span><span class="p">[</span><span class="n">sampleId</span><span class="p">][</span><span class="n">valueName</span><span class="p">]</span>
  
         <span class="k">if</span> <span class="n">lowValue</span> <span class="o">&lt;=</span> <span class="n">currentValue</span> <span class="o">&lt;=</span> <span class="n">highValue</span><span class="p">:</span>
-            <span class="n">sampleIdsFound</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sampleId</span><span class="p">)</span>
+            <span class="n">sampleIdsFound</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">sampleId</span><span class="p">)</span>
  
     <span class="k">return</span> <span class="n">sampleIdsFound</span>
  

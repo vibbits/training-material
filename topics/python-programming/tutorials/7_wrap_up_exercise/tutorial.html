@@ -290,12 +290,12 @@
 </span><span class="k">while</span> <span class="ow">not</span> <span class="n">validSequence</span><span class="p">:</span>
     <span class="c1"># Get a string from the user
 </span>    <span class="n">fullDnaSequence</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Please enter your full DNA sequence:"</span><span class="p">)</span>
-    <span class="n">fullDnaSequence</span> <span class="o">=</span> <span class="n">fullDnaSequence</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+    <span class="n">fullDnaSequence</span> <span class="o">=</span> <span class="n">fullDnaSequence</span><span class="p">.</span><span class="n">upper</span><span class="p">()</span>
     
     <span class="c1"># Count the GACT characters in the sequence
 </span>    <span class="n">gactCount</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">code</span> <span class="ow">in</span> <span class="s">'GACT'</span><span class="p">:</span>
-        <span class="n">gactCount</span> <span class="o">+=</span> <span class="n">fullDnaSequence</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">code</span><span class="p">)</span>
+        <span class="n">gactCount</span> <span class="o">+=</span> <span class="n">fullDnaSequence</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="n">code</span><span class="p">)</span>
  
     <span class="c1"># Check if the number of GACT characters matches the full length of the sequence
 </span>    <span class="c1"># and set validSequence to True if so - this will stop the while: loop
@@ -314,18 +314,18 @@
 <span class="k">while</span> <span class="n">dnaFragment</span><span class="p">:</span>
     
     <span class="c1"># Check if present at all
-</span>    <span class="n">dnaFragmentCount</span> <span class="o">=</span> <span class="n">fullDnaSequence</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">dnaFragment</span><span class="p">)</span>
+</span>    <span class="n">dnaFragmentCount</span> <span class="o">=</span> <span class="n">fullDnaSequence</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="n">dnaFragment</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">dnaFragmentCount</span><span class="p">:</span>
         <span class="n">currentDnaSequenceIndex</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">dnaFragmentCount</span><span class="p">):</span>        
             <span class="c1"># Equivalent to currentDnaSequenceIndex = currentDnaSequenceIndex + fullDna...
-</span>            <span class="n">currentDnaSequenceIndex</span> <span class="o">+=</span> <span class="n">fullDnaSequence</span><span class="p">[</span><span class="n">currentDnaSequenceIndex</span><span class="p">:]</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">dnaFragment</span><span class="p">)</span>
+</span>            <span class="n">currentDnaSequenceIndex</span> <span class="o">+=</span> <span class="n">fullDnaSequence</span><span class="p">[</span><span class="n">currentDnaSequenceIndex</span><span class="p">:].</span><span class="n">index</span><span class="p">(</span><span class="n">dnaFragment</span><span class="p">)</span>
  
-            <span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">  Fragment {} present at position {}.</span><span class="se">\n</span><span class="s">"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">dnaFragment</span><span class="p">,</span><span class="n">currentDnaSequenceIndex</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
-            <span class="n">dnaFragmentInfo</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">currentDnaSequenceIndex</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span><span class="n">dnaFragment</span><span class="p">))</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">  Fragment {} present at position {}.</span><span class="se">\n</span><span class="s">"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">dnaFragment</span><span class="p">,</span><span class="n">currentDnaSequenceIndex</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+            <span class="n">dnaFragmentInfo</span><span class="p">.</span><span class="n">append</span><span class="p">((</span><span class="n">currentDnaSequenceIndex</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span><span class="n">dnaFragment</span><span class="p">))</span>
             <span class="n">currentDnaSequenceIndex</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">  Fragment {} not present!</span><span class="se">\n</span><span class="s">"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">dnaFragment</span><span class="p">))</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">  Fragment {} not present!</span><span class="se">\n</span><span class="s">"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">dnaFragment</span><span class="p">))</span>
  
     <span class="n">dnaFragment</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Please give a DNA fragment to check:"</span><span class="p">)</span>
 
@@ -333,9 +333,9 @@
 </span><span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="se">\n\n</span><span class="s">"</span><span class="p">)</span>
 
 <span class="c1"># Print out the fragment information again, first sort it
-</span><span class="n">dnaFragmentInfo</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+</span><span class="n">dnaFragmentInfo</span><span class="p">.</span><span class="n">sort</span><span class="p">()</span>
 <span class="k">for</span> <span class="p">(</span><span class="n">dnaFragmentPosition</span><span class="p">,</span><span class="n">dnaFragment</span><span class="p">)</span> <span class="ow">in</span> <span class="n">dnaFragmentInfo</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"Found {} at position {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">dnaFragment</span><span class="p">,</span><span class="n">dnaFragmentPosition</span><span class="p">))</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Found {} at position {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">dnaFragment</span><span class="p">,</span><span class="n">dnaFragmentPosition</span><span class="p">))</span>
 </code></pre></div>          </div>
         </details>
       </blockquote>

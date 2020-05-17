@@ -257,7 +257,7 @@
 <span class="c1"># for each value (myElement) in this list (myList); do the following:
 </span><span class="k">for</span> <span class="n">myElement</span> <span class="ow">in</span> <span class="n">myList</span><span class="p">:</span> 
     <span class="c1"># Print that value
-</span>    <span class="k">print</span><span class="p">(</span><span class="s">"Counting {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">myElement</span><span class="p">))</span>  
+</span>    <span class="k">print</span><span class="p">(</span><span class="s">"Counting {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">myElement</span><span class="p">))</span>  
 </code></pre></div></div>
 
 <p>In the first iteration myElement will take up the first value of myList and perform the code that is indented (in this cas it will print <em>counting 0</em>), then it will go back to the start of the loop and take up the second value of myList (which is 1) and perform again the code that is indented (<em>counting 1</em>), etc.</p>
@@ -269,7 +269,7 @@
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myTuple</span> <span class="o">=</span> <span class="p">(</span><span class="s">"A"</span><span class="p">,</span><span class="s">"B"</span><span class="p">,</span><span class="s">"C"</span><span class="p">,</span><span class="s">"D"</span><span class="p">,</span><span class="s">"E"</span><span class="p">,</span><span class="s">"F"</span><span class="p">)</span>
  
 <span class="k">for</span> <span class="n">myElement</span> <span class="ow">in</span> <span class="n">myTuple</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"Letter {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">myElement</span><span class="p">))</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Letter {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">myElement</span><span class="p">))</span>
 </code></pre></div></div>
 
 <p>Because you can access individual elements within a list or tuple, you can also count the element index in the list or tuple, so that you know both index and value. If you want to iterate over  a list of letters, in this case it’s in a tuple type, you’ll first have to find the length of the list and then use range to make a list of integers that can be used as an index.</p>
@@ -279,7 +279,7 @@
  
 <span class="k">for</span> <span class="n">tupleIndex</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">myTupleLength</span><span class="p">):</span>
     <span class="n">myElement</span> <span class="o">=</span> <span class="n">myTuple</span><span class="p">[</span><span class="n">tupleIndex</span><span class="p">]</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"Letter {} is at position {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">myElement</span><span class="p">,</span><span class="n">tupleIndex</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>  <span class="c1"># We have to add 1 to the index here because Python starts at zero...
+    <span class="k">print</span><span class="p">(</span><span class="s">"Letter {} is at position {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">myElement</span><span class="p">,</span><span class="n">tupleIndex</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>  <span class="c1"># We have to add 1 to the index here because Python starts at zero...
 </span></code></pre></div></div>
 
 <p>Python has a built-in function <code class="highlighter-rouge">enumerate()</code> which eases this task for you as a programmer. For the tuple which we defined above, you could make the following table with indeces and accompanied values:</p>
@@ -307,7 +307,7 @@
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myTuple</span> <span class="o">=</span> <span class="p">(</span><span class="s">"A"</span><span class="p">,</span><span class="s">"B"</span><span class="p">,</span><span class="s">"C"</span><span class="p">,</span><span class="s">"D"</span><span class="p">,</span><span class="s">"E"</span><span class="p">,</span><span class="s">"F"</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">myTuple</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"Letter {1} is at position {0}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">line</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span> <span class="c1"># For the sake of exercising I switched the format positions for once. 
+    <span class="k">print</span><span class="p">(</span><span class="s">"Letter {1} is at position {0}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">line</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span> <span class="c1"># For the sake of exercising I switched the format positions for once. 
 </span></code></pre></div></div>
 
 <hr />
@@ -367,7 +367,7 @@
  
 <span class="k">for</span> <span class="n">myNumber</span> <span class="ow">in</span> <span class="n">myNumbers</span><span class="p">:</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">myNumber</span> <span class="o">%</span> <span class="n">myDivider</span><span class="p">):</span>  <span class="c1"># Nothing left after division, so number is divisible.
-</span>        <span class="k">print</span><span class="p">(</span><span class="s">"Number {} cannot be divided by {}!"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">myNumber</span><span class="p">,</span><span class="n">myDivider</span><span class="p">))</span>
+</span>        <span class="k">print</span><span class="p">(</span><span class="s">"Number {} cannot be divided by {}!"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">myNumber</span><span class="p">,</span><span class="n">myDivider</span><span class="p">))</span>
 </code></pre></div></div>
 
 <p>Here we now have two levels of code besides the main one; the <strong>if</strong> is checked for every value, but the print is only executed for numbers divisible by myDivider.</p>
@@ -404,9 +404,9 @@
      <span class="n">validDividers</span> <span class="o">=</span> <span class="p">[]</span>     <span class="c1"># In this list we will put all the valid dividers
 </span>     <span class="k">for</span> <span class="n">myDivider</span> <span class="ow">in</span> <span class="n">myDividers</span><span class="p">:</span>
          <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">myNumber</span> <span class="o">%</span> <span class="n">myDivider</span><span class="p">):</span>
-               <span class="n">validDividers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">myDivider</span><span class="p">)</span>
+               <span class="n">validDividers</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">myDivider</span><span class="p">)</span>
      <span class="k">if</span> <span class="n">validDividers</span><span class="p">:</span>      <span class="c1"># This means that the list has to have values in it
-</span>         <span class="k">print</span><span class="p">(</span><span class="s">"Number {} is divisible by {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">myNumber</span><span class="p">,</span><span class="n">validDividers</span><span class="p">))</span>       
+</span>         <span class="k">print</span><span class="p">(</span><span class="s">"Number {} is divisible by {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">myNumber</span><span class="p">,</span><span class="n">validDividers</span><span class="p">))</span>       
 </code></pre></div>      </div>
     </details>
     <details>
@@ -420,15 +420,15 @@
      <span class="n">validDividers</span> <span class="o">=</span> <span class="p">[]</span>     <span class="c1"># In this list we will put all the valid dividers
 </span>     <span class="k">for</span> <span class="n">myDivider</span> <span class="ow">in</span> <span class="n">myDividers</span><span class="p">:</span>
          <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">myNumber</span> <span class="o">%</span> <span class="n">myDivider</span><span class="p">):</span>
-               <span class="n">validDividers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">myDivider</span><span class="p">)</span>
+               <span class="n">validDividers</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">myDivider</span><span class="p">)</span>
      <span class="k">if</span> <span class="n">validDividers</span><span class="p">:</span>      <span class="c1"># This means that the list has to have values in it
 </span>         <span class="c1"># First make strings out of the integers; this is valid Python syntax where you make a list out of a list    
-</span>         <span class="n">validDividerStrings</span> <span class="o">=</span> <span class="p">[</span><span class="s">"{}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">validDivider</span><span class="p">)</span> <span class="k">for</span> <span class="n">validDivider</span> <span class="ow">in</span> <span class="n">validDividers</span><span class="p">]</span>
+</span>         <span class="n">validDividerStrings</span> <span class="o">=</span> <span class="p">[</span><span class="s">"{}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">validDivider</span><span class="p">)</span> <span class="k">for</span> <span class="n">validDivider</span> <span class="ow">in</span> <span class="n">validDividers</span><span class="p">]</span>
  
          <span class="c1"># Now you can join the elements of a list (if they are strings) together using the .join() method for a string:
-</span>         <span class="n">validDividerString</span> <span class="o">=</span> <span class="s">', '</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">validDividerStrings</span><span class="p">)</span>
+</span>         <span class="n">validDividerString</span> <span class="o">=</span> <span class="s">', '</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">validDividerStrings</span><span class="p">)</span>
   
-         <span class="k">print</span><span class="p">(</span><span class="s">"Number {} is divisible by {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">myNumber</span><span class="p">,</span><span class="n">validDividerString</span><span class="p">))</span>
+         <span class="k">print</span><span class="p">(</span><span class="s">"Number {} is divisible by {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">myNumber</span><span class="p">,</span><span class="n">validDividerString</span><span class="p">))</span>
      
      <span class="c1">######### Or as an alternative for the nice printing:
 </span>         <span class="c1">#if len(validDividers) == 1:
@@ -471,10 +471,10 @@ Number 3 can be divided by 1!
      <span class="n">dividers</span> <span class="o">=</span> <span class="p">[]</span>
      <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
          <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="n">y</span><span class="p">):</span>
-             <span class="n">dividers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+             <span class="n">dividers</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
   
      <span class="k">for</span> <span class="n">divider</span> <span class="ow">in</span> <span class="n">dividers</span><span class="p">:</span>
-         <span class="k">print</span> <span class="p">(</span><span class="s">"Number {} can be divided by {}!"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">divider</span><span class="p">))</span>
+         <span class="k">print</span> <span class="p">(</span><span class="s">"Number {} can be divided by {}!"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">divider</span><span class="p">))</span>
 </code></pre></div>      </div>
     </details>
     <details>
@@ -488,12 +488,12 @@ Number 3 can be divided by 1!
      <span class="n">dividers</span> <span class="o">=</span> <span class="p">[]</span>
      <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
          <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="n">y</span><span class="p">):</span>
-             <span class="n">dividers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+             <span class="n">dividers</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
   
      <span class="c1">#for divider in dividers:
-</span>     <span class="n">dividerList</span> <span class="o">=</span> <span class="s">", "</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">divider</span><span class="p">)</span> <span class="k">for</span> <span class="n">divider</span> <span class="ow">in</span> <span class="n">dividers</span><span class="p">])</span>
+</span>     <span class="n">dividerList</span> <span class="o">=</span> <span class="s">", "</span><span class="p">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">divider</span><span class="p">)</span> <span class="k">for</span> <span class="n">divider</span> <span class="ow">in</span> <span class="n">dividers</span><span class="p">])</span>
          
-     <span class="k">print</span> <span class="p">(</span><span class="s">"Number {} can be divided by {}!"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">dividerList</span><span class="p">))</span>
+     <span class="k">print</span> <span class="p">(</span><span class="s">"Number {} can be divided by {}!"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">dividerList</span><span class="p">))</span>
 </code></pre></div>      </div>
     </details>
   </blockquote>
@@ -524,7 +524,7 @@ FYI, if you execute this, you’ll end up in an enternal loop. To break the loop
 <span class="n">powerResult</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">while</span> <span class="n">powerResult</span> <span class="o">&lt;</span> <span class="mi">1000</span><span class="p">:</span>
     <span class="n">powerResult</span> <span class="o">=</span> <span class="n">baseValue</span> <span class="o">**</span> <span class="n">powerValue</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"{} to the power {} is {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">baseValue</span><span class="p">,</span><span class="n">powerValue</span><span class="p">,</span><span class="n">powerResult</span><span class="p">))</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"{} to the power {} is {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">baseValue</span><span class="p">,</span><span class="n">powerValue</span><span class="p">,</span><span class="n">powerResult</span><span class="p">))</span>
     <span class="n">powerValue</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># Add one to itself - this kind of step is crucial in a while loop, or it will be endless!
 </span></code></pre></div></div>
 
@@ -536,7 +536,7 @@ FYI, if you execute this, you’ll end up in an enternal loop. To break the loop
 <span class="n">powerResult</span> <span class="o">=</span> <span class="n">baseValue</span> <span class="o">**</span> <span class="n">powerValue</span>
 
 <span class="k">while</span> <span class="n">powerResult</span> <span class="o">&lt;</span> <span class="mi">1000</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"{} to the power {} is {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">baseValue</span><span class="p">,</span><span class="n">powerValue</span><span class="p">,</span><span class="n">powerResult</span><span class="p">))</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"{} to the power {} is {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">baseValue</span><span class="p">,</span><span class="n">powerValue</span><span class="p">,</span><span class="n">powerResult</span><span class="p">))</span>
     <span class="n">powerValue</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># Add one to itself - this kind of step is crucial in a while loop, or it will be endless!
 </span>    <span class="n">powerResult</span> <span class="o">=</span> <span class="n">baseValue</span> <span class="o">**</span> <span class="n">powerValue</span>
 </code></pre></div></div>
@@ -559,7 +559,7 @@ FYI, if you execute this, you’ll end up in an enternal loop. To break the loop
  
  <span class="k">while</span> <span class="n">myNumber</span> <span class="o">&lt;=</span> <span class="mi">50</span><span class="p">:</span>
      <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">myNumber</span> <span class="o">%</span> <span class="n">myDivider</span><span class="p">):</span> <span class="c1"># Nothing left after division, so number is divisible.
-</span>         <span class="k">print</span><span class="p">(</span><span class="s">"{} is divisible by {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">myNumber</span><span class="p">),</span><span class="nb">str</span><span class="p">(</span><span class="n">myDivider</span><span class="p">)))</span>
+</span>         <span class="k">print</span><span class="p">(</span><span class="s">"{} is divisible by {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">myNumber</span><span class="p">),</span><span class="nb">str</span><span class="p">(</span><span class="n">myDivider</span><span class="p">)))</span>
      <span class="n">myNumber</span> <span class="o">+=</span> <span class="mi">1</span>
  
 </code></pre></div>      </div>
@@ -590,7 +590,7 @@ Tip: you have to make a copy of the original list here, otherwise Python will ge
 
 <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">myNumberList</span><span class="p">[:]:</span>  
     <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">number</span> <span class="o">%</span> <span class="mi">3</span><span class="p">)</span> <span class="ow">or</span> <span class="ow">not</span> <span class="p">(</span><span class="n">number</span> <span class="o">%</span> <span class="mi">5</span><span class="p">):</span>
-        <span class="n">myNumberList</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">myNumberList</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">number</span><span class="p">))</span>
+        <span class="n">myNumberList</span><span class="p">.</span><span class="n">pop</span><span class="p">(</span><span class="n">myNumberList</span><span class="p">.</span><span class="n">index</span><span class="p">(</span><span class="n">number</span><span class="p">))</span>
 
 <span class="k">print</span><span class="p">(</span><span class="n">myNumberList</span><span class="p">)</span>
 </code></pre></div>      </div>
@@ -619,13 +619,13 @@ Tip: you have to make a copy of the original list here, otherwise Python will ge
 </span><span class="n">isNumber</span> <span class="o">=</span> <span class="bp">False</span>
 <span class="k">while</span> <span class="ow">not</span> <span class="p">(</span><span class="n">isNumber</span><span class="p">):</span>
     <span class="n">inputString</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Give a number:"</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">inputString</span><span class="o">.</span><span class="n">isdigit</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">inputString</span><span class="p">.</span><span class="n">isdigit</span><span class="p">():</span>
         <span class="n">isNumber</span> <span class="o">=</span> <span class="bp">True</span>
         <span class="n">number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">inputString</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">print</span><span class="p">(</span><span class="s">"Incorrect, not a whole number, try again."</span><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">number</span> <span class="o">%</span> <span class="mi">7</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">"{} can be divided by 7!"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">number</span><span class="p">))</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"{} can be divided by 7!"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">number</span><span class="p">))</span>
     <span class="k">else</span><span class="p">:</span> 
         <span class="k">print</span><span class="p">(</span><span class="s">"Number not divisible by 7"</span><span class="p">)</span>
 </code></pre></div>      </div>
@@ -644,7 +644,7 @@ Tip: you have to make a copy of the original list here, otherwise Python will ge
 <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
     <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"Iteration: {}. The value i is {}, and the value j is {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">))</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Iteration: {}. The value i is {}, and the value j is {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">))</span>
 </code></pre></div></div>
 
 <p>And the principle is practically the same for three (or more) strings.</p>
@@ -656,7 +656,7 @@ Tip: you have to make a copy of the original list here, otherwise Python will ge
 <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">k</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">):</span>
     <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"Iteration: {}. The value i is {}, the value j is {} and the value k is {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">))</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Iteration: {}. The value i is {}, the value j is {} and the value k is {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">))</span>
 </code></pre></div></div>
 
 

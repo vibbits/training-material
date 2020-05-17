@@ -252,12 +252,12 @@
 <h2 id="32-using-format">3.2 Using .format()</h2>
 <p>The following example gives the most basic use form of the <code class="highlighter-rouge">.format()</code> statement.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"My name is {}."</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="s">"Jane"</span><span class="p">))</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"My name is {}."</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="s">"Jane"</span><span class="p">))</span>
 </code></pre></div></div>
 
 <p>The above doesn’t do anything interesting; you can however put a number in between the curly brackets <code class="highlighter-rouge">{}</code> to force the output to take up a number of characters. Try this:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"My name is {:&gt;10}."</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="s">"Jane"</span><span class="p">))</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"My name is {:&gt;10}."</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="s">"Jane"</span><span class="p">))</span>
 </code></pre></div></div>
 
 <p>You’ll now see that you force an area of 10 characters to put the name. If the name is shorter, the remaining empty characters will be whitespaces. If the name would be longer, the number will be overruled. Note that the &gt; character in the .format() form can be used to determine the alignment (use &lt; for left align, &gt; for right align and = for centered).</p>
@@ -279,10 +279,10 @@ If this worked out succesfully, try to align it explicitly to the right with fiv
 </summary>
 
       <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1"># part 1
-</span> <span class="k">print</span><span class="p">(</span><span class="s">"Percent of alignment: {}</span><span class="si">%</span><span class="s">"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+</span> <span class="k">print</span><span class="p">(</span><span class="s">"Percent of alignment: {}%"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
  
  <span class="c1"># part 2
-</span> <span class="k">print</span><span class="p">(</span><span class="s">"Percent of alignment: {:&gt;8}</span><span class="si">%</span><span class="s">"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+</span> <span class="k">print</span><span class="p">(</span><span class="s">"Percent of alignment: {:&gt;8}%"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
 </code></pre></div>      </div>
     </details>
   </blockquote>
@@ -294,15 +294,15 @@ If this worked out succesfully, try to align it explicitly to the right with fiv
 <h2 id="33-formatting-numbers">3.3 Formatting numbers</h2>
 <p>Here are some examples of formatting integers (digits):</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"This is {:d}."</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="mi">252</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="s">"This is {:d} and {:d}."</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span><span class="mi">30</span><span class="p">))</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"This is {:d}."</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="mi">252</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"This is {:d} and {:d}."</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span><span class="mi">30</span><span class="p">))</span>
 </code></pre></div></div>
 
 <p>Here are some examples of formatting decimal number (floating point):</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myFloat</span> <span class="o">=</span> <span class="mf">4545.4542244</span>
  
-<span class="k">print</span><span class="p">(</span><span class="s">"Print the full float {},</span><span class="se">\n</span><span class="s">cut off decimals {:5.2f},</span><span class="se">\n</span><span class="s">or determine the characters before the decimal {:10.1f}."</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">myFloat</span><span class="p">,</span><span class="n">myFloat</span><span class="p">,</span><span class="n">myFloat</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Print the full float {},</span><span class="se">\n</span><span class="s">cut off decimals {:5.2f},</span><span class="se">\n</span><span class="s">or determine the characters before the decimal {:10.1f}."</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">myFloat</span><span class="p">,</span><span class="n">myFloat</span><span class="p">,</span><span class="n">myFloat</span><span class="p">))</span>
  
 <span class="c1"># Or in old style
 # print("Print the full float %f,\ncut off decimals %.2f,\nor determine the characters before the decimal %10.1f." % (myFloat,myFloat,myFloat))
@@ -311,7 +311,7 @@ If this worked out succesfully, try to align it explicitly to the right with fiv
 <h2 id="34-special-characters">3.4 Special characters</h2>
 <p>For some characters it is necessary to use what are called ‘escape’ codes because you cannot type the character normally from the keyboard. Try this:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"The </span><span class="err">\</span><span class="s"> sign</span><span class="se">\n</span><span class="s">can</span><span class="se">\t</span><span class="s">also</span><span class="se">\t</span><span class="s">be</span><span class="se">\t</span><span class="s">printed."</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"The \ sign</span><span class="se">\n</span><span class="s">can</span><span class="se">\t</span><span class="s">also</span><span class="se">\t</span><span class="s">be</span><span class="se">\t</span><span class="s">printed."</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>Here the \ will print a backslash (however Python might think you are trying to insert a special code and in order to be safe it’s better to type a double \\), the \n will print a new line, \t a tab character.</p>

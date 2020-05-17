@@ -259,7 +259,7 @@
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Open the file
 </span><span class="n">fileHandle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">"data/readfile.txt"</span><span class="p">)</span>  
 <span class="c1"># Close the file
-</span><span class="n">fileHandle</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span><span class="n">fileHandle</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
 <span class="c1"># Nothing happened...
 </span></code></pre></div></div>
 
@@ -284,10 +284,10 @@ Note that the three different lines are read in one long string. This is how the
 </ol>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fileHandle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">"data/readfile.txt"</span><span class="p">)</span>  
-<span class="n">fileHandle</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">fileHandle</span><span class="p">.</span><span class="n">read</span><span class="p">()</span>
 </code></pre></div></div>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fileHandle</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fileHandle</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div></div>
 
 <ol>
@@ -296,25 +296,25 @@ Readline reads in the following line. It starts with the first one. When you cal
 </ol>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fileHandle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">"data/readfile.txt"</span><span class="p">)</span>   
-<span class="n">fileHandle</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+<span class="n">fileHandle</span><span class="p">.</span><span class="n">readline</span><span class="p">()</span>
 </code></pre></div></div>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fileHandle</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fileHandle</span><span class="p">.</span><span class="n">readline</span><span class="p">()</span>
 </code></pre></div></div>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fileHandle</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fileHandle</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div></div>
 
 <ol>
   <li>Using <code class="highlighter-rouge">readlines</code>:
 Instead of reading the lines of a file one by one, you can also do it in one go. As explained above, each line is one string and all of the lines/strings are stored in a list.
     <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fileHandle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">"data/readfile.txt"</span><span class="p">)</span>   
-<span class="n">fileHandle</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+<span class="n">fileHandle</span><span class="p">.</span><span class="n">readlines</span><span class="p">()</span>
 </code></pre></div>    </div>
   </li>
 </ol>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fileHandle</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fileHandle</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div></div>
 
 <p>Knowing this we can move on to more complex examples. First make sure to find the PDB file <em>TestFile.PDB</em> in your data folder or download <a href="http://wiki.bits.vib.be/images/3/3a/TestFile.pdb">this fake PDB coordinate file for a 5 residue peptide</a> and save it in the data directory.</p>
@@ -323,22 +323,22 @@ Instead of reading the lines of a file one by one, you can also do it in one go.
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Read in the file per line
 </span><span class="n">fileHandle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">"data/TestFile.pdb"</span><span class="p">)</span>
-<span class="n">lines</span> <span class="o">=</span> <span class="n">fileHandle</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+<span class="n">lines</span> <span class="o">=</span> <span class="n">fileHandle</span><span class="p">.</span><span class="n">readlines</span><span class="p">()</span>
  
 <span class="c1"># Close the file
-</span><span class="n">fileHandle</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span><span class="n">fileHandle</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
  
 <span class="c1"># Print number of lines in the file
 </span><span class="k">print</span><span class="p">(</span><span class="s">"There are:"</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">lines</span><span class="p">),</span> <span class="s">"lines in the file"</span><span class="p">)</span>
 
 <span class="c1"># Loop over the lines, and do some basic string manipulations
 </span><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
-    <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>  <span class="c1"># Remove starting and trailing spaces/tabs/newlines
+    <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="p">.</span><span class="n">strip</span><span class="p">()</span>  <span class="c1"># Remove starting and trailing spaces/tabs/newlines
 </span>    <span class="k">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
 </code></pre></div></div>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">line</span> <span class="o">=</span> <span class="n">lines</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span>
-<span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="p">.</span><span class="n">strip</span><span class="p">().</span><span class="n">split</span><span class="p">()</span>
 <span class="n">line</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 </code></pre></div></div>
 
@@ -349,23 +349,23 @@ Instead of reading the lines of a file one by one, you can also do it in one go.
  
 <span class="c1"># Read all the lines in the file (as separated by a newline character), and store them in the lines list
 # Each element in this list corresponds to one line of the file!
-</span><span class="n">lines</span> <span class="o">=</span> <span class="n">fileHandle</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+</span><span class="n">lines</span> <span class="o">=</span> <span class="n">fileHandle</span><span class="p">.</span><span class="n">readlines</span><span class="p">()</span>
  
 <span class="c1"># Close the file
-</span><span class="n">fileHandle</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span><span class="n">fileHandle</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
  
 <span class="c1"># Initialise the line counter
 </span><span class="n">lineCount</span> <span class="o">=</span> <span class="mi">0</span>
  
 <span class="c1"># Loop over the lines
 </span><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
-    <span class="n">columns</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    <span class="n">columns</span> <span class="o">=</span> <span class="n">line</span><span class="p">.</span><span class="n">strip</span><span class="p">().</span><span class="n">split</span><span class="p">()</span>
     <span class="k">if</span> <span class="n">columns</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s">'C'</span><span class="p">:</span>       <span class="c1"># Alternatively, use "if ' C ' in line:"
 </span>        <span class="k">print</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">''</span><span class="p">)</span>     <span class="c1"># Using the 'end' argument in the print because the line already contains a newline at the end
 </span>                                <span class="c1"># otherwise will get double spacing.
 </span>        <span class="n">lineCount</span> <span class="o">+=</span> <span class="mi">1</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s">"Number of lines with ' C ': {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">lineCount</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Number of lines with ' C ': {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">lineCount</span><span class="p">))</span>
 </code></pre></div></div>
 
 <p>You should find 75 lines - note that in this case, for those who know the PDB format a bit, you’re finding all carbon atoms.</p>
@@ -383,14 +383,14 @@ Instead of reading the lines of a file one by one, you can also do it in one go.
 <p>For the sake of the example, we’re writing a new file and call it <code class="highlighter-rouge">writefile.txt</code>:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'data/writefile.txt'</span><span class="p">,</span><span class="s">'w'</span><span class="p">)</span>
-<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">'Now we have a new file </span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
-<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">'Because Python automatically makes this file and writes some text to it.'</span><span class="p">)</span>
-<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">'Btw, if you don</span><span class="se">\'</span><span class="s">t specify the newline characters, it will append the string at the end of the last line'</span><span class="p">)</span>
-<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">f</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="s">'Now we have a new file </span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+<span class="n">f</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="s">'Because Python automatically makes this file and writes some text to it.'</span><span class="p">)</span>
+<span class="n">f</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="s">'Btw, if you don</span><span class="se">\'</span><span class="s">t specify the newline characters, it will append the string at the end of the last line'</span><span class="p">)</span>
+<span class="n">f</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
 <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'data/writefile.txt'</span><span class="p">)</span>
-<span class="n">text</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">f</span><span class="p">.</span><span class="n">read</span><span class="p">()</span>
 <span class="k">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
-<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">f</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div></div>
 
 <p><strong>Be careful</strong> - if the file exists already it will be overwritten without warning!</p>
@@ -417,9 +417,9 @@ Instead of reading the lines of a file one by one, you can also do it in one go.
 </span><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
     <span class="k">if</span> <span class="s">'VAL'</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>      <span class="c1"># Alternatively, use "if ' C ' in line:"
 </span>        <span class="k">if</span> <span class="s">'ATOM'</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>
-            <span class="n">g</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
-<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-<span class="n">g</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="n">g</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+<span class="n">f</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">g</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div>      </div>
     </details>
     <details>
@@ -431,26 +431,26 @@ Instead of reading the lines of a file one by one, you can also do it in one go.
 
 <span class="c1"># Read all the lines in the file (as separated by a newline character), and store them in the lines list
 # Each element in this list corresponds to one line of the file!
-</span><span class="n">lines</span> <span class="o">=</span> <span class="n">fileHandle</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+</span><span class="n">lines</span> <span class="o">=</span> <span class="n">fileHandle</span><span class="p">.</span><span class="n">readlines</span><span class="p">()</span>
  
 <span class="c1"># Close the file
-</span><span class="n">fileHandle</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span><span class="n">fileHandle</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
  
 <span class="c1"># Track the lines with VAL
 </span><span class="n">linesToWrite</span> <span class="o">=</span> <span class="p">[]</span>
  
 <span class="c1"># Loop over the lines
 </span><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s">"VAL"</span><span class="p">):</span>      <span class="c1"># Alternatively, use "if ' C ' in line:"
-</span>        <span class="n">linesToWrite</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">line</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="s">"VAL"</span><span class="p">):</span>      <span class="c1"># Alternatively, use "if ' C ' in line:"
+</span>        <span class="n">linesToWrite</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
 
 <span class="c1"># Write out the lines
 </span><span class="n">fileHandle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">"data/fileWithVAL.pdb"</span><span class="p">,</span><span class="s">'w'</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">linesToWrite</span><span class="p">:</span>
-    <span class="n">fileHandle</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="n">fileHandle</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
 
 <span class="c1"># Close the file
-</span><span class="n">fileHandle</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span><span class="n">fileHandle</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div>      </div>
     </details>
     <details>
@@ -464,17 +464,17 @@ Instead of reading the lines of a file one by one, you can also do it in one go.
 </span><span class="n">linesToWrite</span> <span class="o">=</span> <span class="p">[]</span>
 
 <span class="c1"># Loop over the lines
-</span><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">():</span>
-    <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s">"VAL"</span><span class="p">):</span>      <span class="c1"># Alternatively, use "if ' C ' in line:"
-</span>        <span class="n">linesToWrite</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+</span><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">.</span><span class="n">readlines</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">line</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="s">"VAL"</span><span class="p">):</span>      <span class="c1"># Alternatively, use "if ' C ' in line:"
+</span>        <span class="n">linesToWrite</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
 
 <span class="c1"># Write out the lines
 </span><span class="n">fileHandle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">"data/fileWithVAL.pdb"</span><span class="p">,</span><span class="s">'w'</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">linesToWrite</span><span class="p">:</span>
-    <span class="n">fileHandle</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="n">fileHandle</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
 
 <span class="c1"># Close the file
-</span><span class="n">fileHandle</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span><span class="n">fileHandle</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div>      </div>
     </details>
   </blockquote>
@@ -506,10 +506,10 @@ Instead of reading the lines of a file one by one, you can also do it in one go.
  
 <span class="c1"># Read all the lines in the file (as separated by a newline character), and store them in the lines list
 # Each element in this list corresponds to one line of the file!
-</span><span class="n">lines</span> <span class="o">=</span> <span class="n">fileHandle</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+</span><span class="n">lines</span> <span class="o">=</span> <span class="n">fileHandle</span><span class="p">.</span><span class="n">readlines</span><span class="p">()</span>
  
 <span class="c1"># Close the file
-</span><span class="n">fileHandle</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span><span class="n">fileHandle</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
  
 <span class="c1"># Initialise some information
 </span><span class="n">searchCoordinate</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mf">8.7</span><span class="p">,</span><span class="o">-</span><span class="mf">7.7</span><span class="p">,</span><span class="mf">4.7</span><span class="p">)</span>
@@ -517,17 +517,17 @@ Instead of reading the lines of a file one by one, you can also do it in one go.
  
 <span class="c1"># Loop over the lines, and do some basic string manipulations
 </span><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
-    <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>  <span class="c1"># Remove starting and trailing spaces/tabs/newlines
+    <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="p">.</span><span class="n">strip</span><span class="p">()</span>  <span class="c1"># Remove starting and trailing spaces/tabs/newlines
 </span>    
     <span class="c1"># Only do something if it's not an empty line
 </span>    <span class="k">if</span> <span class="n">line</span><span class="p">:</span>
-        <span class="n">cols</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>   <span class="c1"># Split the line by white spaces; depending on the format this could be commas, ...
+        <span class="n">cols</span> <span class="o">=</span> <span class="n">line</span><span class="p">.</span><span class="n">split</span><span class="p">()</span>   <span class="c1"># Split the line by white spaces; depending on the format this could be commas, ...
 </span> 
     <span class="c1"># Print the title
 </span>    <span class="k">if</span> <span class="n">cols</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s">'TITLE'</span><span class="p">:</span>
-        <span class="n">title</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">cols</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="s">''</span><span class="p">)</span>
-        <span class="n">title</span> <span class="o">=</span> <span class="n">title</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">"The title is '{}'"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">title</span><span class="p">))</span>
+        <span class="n">title</span> <span class="o">=</span> <span class="n">line</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="n">cols</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="s">''</span><span class="p">)</span>
+        <span class="n">title</span> <span class="o">=</span> <span class="n">title</span><span class="p">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"The title is '{}'"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">title</span><span class="p">))</span>
  
     <span class="c1"># Track the model number
 </span>    <span class="k">elif</span> <span class="n">cols</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s">'MODEL'</span><span class="p">:</span>
@@ -547,7 +547,7 @@ Instead of reading the lines of a file one by one, you can also do it in one go.
         <span class="c1"># Calculate the distance
 </span>        <span class="n">distance</span> <span class="o">=</span> <span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="n">searchCoordinate</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="n">searchCoordinate</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">z</span> <span class="o">-</span> <span class="n">searchCoordinate</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="o">**</span> <span class="mi">2</span> <span class="p">)</span> <span class="o">**</span> <span class="mf">0.5</span>
         <span class="k">if</span> <span class="n">distance</span> <span class="o">&lt;</span> <span class="mf">2.0</span><span class="p">:</span>
-            <span class="k">print</span><span class="p">(</span><span class="s">"Model {}, residue {}, atom {} (serial {}) is {:.2f} away from reference."</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">modelNumber</span><span class="p">,</span><span class="n">residueNumber</span><span class="p">,</span><span class="n">atomName</span><span class="p">,</span><span class="n">atomSerial</span><span class="p">,</span><span class="n">distance</span><span class="p">))</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">"Model {}, residue {}, atom {} (serial {}) is {:.2f} away from reference."</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">modelNumber</span><span class="p">,</span><span class="n">residueNumber</span><span class="p">,</span><span class="n">atomName</span><span class="p">,</span><span class="n">atomSerial</span><span class="p">,</span><span class="n">distance</span><span class="p">))</span>
 
 </code></pre></div>      </div>
     </details>

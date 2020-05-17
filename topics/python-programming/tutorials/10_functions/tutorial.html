@@ -327,12 +327,12 @@
     <span class="n">meanValueList2</span> <span class="o">=</span> <span class="n">getMeanValue</span><span class="p">(</span><span class="n">valueList2</span><span class="p">)</span>
  
     <span class="k">if</span> <span class="n">meanValueList1</span> <span class="o">==</span> <span class="n">meanValueList2</span><span class="p">:</span>
-        <span class="n">outputText</span> <span class="o">=</span> <span class="s">"The mean values are the same ({:.2f})."</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">meanValueList1</span><span class="p">)</span>
+        <span class="n">outputText</span> <span class="o">=</span> <span class="s">"The mean values are the same ({:.2f})."</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">meanValueList1</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">meanValueList1</span> <span class="o">&gt;</span> <span class="n">meanValueList2</span><span class="p">:</span>
-        <span class="n">outputText</span> <span class="o">=</span> <span class="s">"List1 has a higher average ({:.2f}) than list2 ({:.2f})."</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">meanValueList1</span><span class="p">,</span><span class="n">meanValueList2</span><span class="p">)</span>
+        <span class="n">outputText</span> <span class="o">=</span> <span class="s">"List1 has a higher average ({:.2f}) than list2 ({:.2f})."</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">meanValueList1</span><span class="p">,</span><span class="n">meanValueList2</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="c1"># No need to compare again, only possibility left
-</span>        <span class="n">outputText</span> <span class="o">=</span> <span class="s">"List2 has a higher average ({:.2f}) than list1 ({:.2f})."</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">meanValueList2</span><span class="p">,</span><span class="n">meanValueList1</span><span class="p">)</span>
+</span>        <span class="n">outputText</span> <span class="o">=</span> <span class="s">"List2 has a higher average ({:.2f}) than list1 ({:.2f})."</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">meanValueList2</span><span class="p">,</span><span class="n">meanValueList1</span><span class="p">)</span>
  
     <span class="k">return</span> <span class="n">outputText</span>
 </code></pre></div></div>
@@ -454,12 +454,12 @@
     <span class="n">sequence</span><span class="o">=</span><span class="s">""</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">'&gt;'</span><span class="p">):</span>
-                <span class="n">seq_id</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()[</span><span class="mi">1</span><span class="p">:]</span>
+            <span class="k">if</span> <span class="n">line</span><span class="p">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">'&gt;'</span><span class="p">):</span>
+                <span class="n">seq_id</span> <span class="o">=</span> <span class="n">line</span><span class="p">.</span><span class="n">rstrip</span><span class="p">()[</span><span class="mi">1</span><span class="p">:]</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="n">sequence</span> <span class="o">+=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
-    <span class="n">GC_content</span> <span class="o">=</span> <span class="p">(</span><span class="n">sequence</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s">'G'</span><span class="p">)</span> <span class="o">+</span> <span class="n">sequence</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s">'C'</span><span class="p">))</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"The GC content of {} is</span><span class="se">\t</span><span class="s"> {:.2f}</span><span class="si">%</span><span class="s">"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">seq_id</span><span class="p">,</span> <span class="n">GC_content</span><span class="p">))</span>    
+                <span class="n">sequence</span> <span class="o">+=</span> <span class="n">line</span><span class="p">.</span><span class="n">rstrip</span><span class="p">()</span>
+    <span class="n">GC_content</span> <span class="o">=</span> <span class="p">(</span><span class="n">sequence</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="s">'G'</span><span class="p">)</span> <span class="o">+</span> <span class="n">sequence</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="s">'C'</span><span class="p">))</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"The GC content of {} is</span><span class="se">\t</span><span class="s"> {:.2f}%"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">seq_id</span><span class="p">,</span> <span class="n">GC_content</span><span class="p">))</span>    
 
     
 <span class="n">gc_content</span><span class="p">(</span><span class="s">'data/gene.fa'</span><span class="p">)</span>
@@ -473,13 +473,13 @@
 </span><span class="k">def</span> <span class="nf">gc_content</span><span class="p">(</span><span class="nb">file</span><span class="p">):</span>
     <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span>
     <span class="n">sequence</span><span class="o">=</span><span class="s">""</span>
-    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">():</span>  
-        <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">'&gt;'</span><span class="p">):</span>
-            <span class="n">seq_id</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()[</span><span class="mi">1</span><span class="p">:]</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">.</span><span class="n">readlines</span><span class="p">():</span>  
+        <span class="k">if</span> <span class="n">line</span><span class="p">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">'&gt;'</span><span class="p">):</span>
+            <span class="n">seq_id</span> <span class="o">=</span> <span class="n">line</span><span class="p">.</span><span class="n">rstrip</span><span class="p">()[</span><span class="mi">1</span><span class="p">:]</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">sequence</span> <span class="o">+=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
-    <span class="n">GC_content</span> <span class="o">=</span> <span class="p">(</span><span class="n">sequence</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s">'G'</span><span class="p">)</span> <span class="o">+</span> <span class="n">sequence</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s">'C'</span><span class="p">))</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"The GC content of {} is</span><span class="se">\t</span><span class="s"> {:.2f}</span><span class="si">%</span><span class="s">"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">seq_id</span><span class="p">,</span> <span class="n">GC_content</span><span class="p">))</span>    
+            <span class="n">sequence</span> <span class="o">+=</span> <span class="n">line</span><span class="p">.</span><span class="n">rstrip</span><span class="p">()</span>
+    <span class="n">GC_content</span> <span class="o">=</span> <span class="p">(</span><span class="n">sequence</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="s">'G'</span><span class="p">)</span> <span class="o">+</span> <span class="n">sequence</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="s">'C'</span><span class="p">))</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"The GC content of {} is</span><span class="se">\t</span><span class="s"> {:.2f}%"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">seq_id</span><span class="p">,</span> <span class="n">GC_content</span><span class="p">))</span>    
 
     
 <span class="n">gc_content</span><span class="p">(</span><span class="s">'data/gene.fa'</span><span class="p">)</span>
@@ -504,7 +504,7 @@
     
     <span class="k">for</span> <span class="n">eachList</span> <span class="ow">in</span> <span class="n">valueList</span><span class="p">:</span>
         <span class="n">meanOfList</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">eachList</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">eachList</span><span class="p">)</span>
-        <span class="n">meanValues</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">meanOfList</span><span class="p">)</span>
+        <span class="n">meanValues</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">meanOfList</span><span class="p">)</span>
         
     <span class="k">return</span> <span class="n">meanValues</span>
 </code></pre></div></div>
@@ -529,12 +529,12 @@
 
     <span class="k">for</span> <span class="n">eachList</span> <span class="ow">in</span> <span class="n">valueList</span><span class="p">:</span>
         <span class="n">meanOfList</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">eachList</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">eachList</span><span class="p">)</span>
-        <span class="n">meanValues</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">meanOfList</span><span class="p">)</span>
+        <span class="n">meanValues</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">meanOfList</span><span class="p">)</span>
         
     <span class="k">if</span> <span class="n">sortedList</span> <span class="o">==</span> <span class="bp">False</span><span class="p">:</span>
         <span class="k">print</span><span class="p">(</span><span class="s">'I calculated all the mean values of your lists, however did not sort them'</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">meanValues</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+        <span class="n">meanValues</span><span class="p">.</span><span class="n">sort</span><span class="p">()</span>
         <span class="k">print</span><span class="p">(</span><span class="s">'I calculated the mean values and also sorted them'</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">meanValues</span>
 </code></pre></div></div>

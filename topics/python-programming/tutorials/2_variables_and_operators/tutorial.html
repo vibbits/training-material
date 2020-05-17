@@ -308,8 +308,8 @@ universe."""</span>
 <p>The single and double quotes are essentially the same. If you use triple double quotes - “”” - you can assign a string over multiple lines.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Try assigning a string over multiple lines without using the triple double quotes and see what happens.
-</span><span class="n">myString</span> <span class="o">=</span> <span class="s">"Hello</span><span class="err">
-</span><span class="s">universe."</span>
+</span><span class="n">myString</span> <span class="o">=</span> <span class="s">"Hello
+universe."</span>
 </code></pre></div></div>
 
 <p>This will give a SyntaxError, as Python ‘reads’ each line separately, and it doesn’t find the ending (on the first line) and starting (on the second line) quote. Using the escape codes, you can however do the following:</p>
@@ -390,11 +390,11 @@ universe."""</span>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">firstResult</span> <span class="o">=</span> <span class="p">(</span><span class="mi">5</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">firstResult</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s">"The result of the first calculation is {}."</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">firstResult</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"The result of the first calculation is {}."</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">firstResult</span><span class="p">))</span>
 
 <span class="n">secondResult</span> <span class="o">=</span> <span class="p">(</span><span class="mi">5</span> <span class="o">*</span> <span class="p">(</span><span class="mi">4</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">secondResult</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s">"The result of the second calculation is {}."</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">secondResult</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"The result of the second calculation is {}."</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">secondResult</span><span class="p">))</span>
 </code></pre></div></div>
 
 <p>Note here the precedence of operations; * and / take precedence over + and -. You can use () to change the results.</p>
@@ -434,7 +434,7 @@ universe."""</span>
 <p>Also floats can be incorporated in a string with the <code class="highlighter-rouge">.format()</code> statement. You can determine the number of characters before and after the decimal point as well, however we will cover this in the next section.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myFloat</span> <span class="o">=</span> <span class="mf">4545.4542244</span>
-<span class="k">print</span><span class="p">(</span><span class="s">"Print the full float {},</span><span class="se">\n</span><span class="s">cut off decimals {:.2f},</span><span class="se">\n</span><span class="s">or determine the characters before the decimal {:10.1f}."</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">myFloat</span><span class="p">,</span><span class="n">myFloat</span><span class="p">,</span><span class="n">myFloat</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Print the full float {},</span><span class="se">\n</span><span class="s">cut off decimals {:.2f},</span><span class="se">\n</span><span class="s">or determine the characters before the decimal {:10.1f}."</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">myFloat</span><span class="p">,</span><span class="n">myFloat</span><span class="p">,</span><span class="n">myFloat</span><span class="p">))</span>
 </code></pre></div></div>
 
 <p>Note here that we put three formatting characters in the string; we then also need three values to print out.</p>
@@ -465,9 +465,9 @@ universe."""</span>
 <span class="n">myFloatString</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">myFloat</span><span class="p">)</span>
 <span class="n">myInteger</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">myIntegerString</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">myInteger</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s">"My strings are {} and {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">myFloatString</span><span class="p">,</span><span class="n">myIntegerString</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="s">"My string converted to integer is {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">myIntegerString</span><span class="p">)))</span>
-<span class="k">print</span><span class="p">(</span><span class="s">"My string converted to float is {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">myFloatString</span><span class="p">)))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"My strings are {} and {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">myFloatString</span><span class="p">,</span><span class="n">myIntegerString</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"My string converted to integer is {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">myIntegerString</span><span class="p">)))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"My string converted to float is {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">myFloatString</span><span class="p">)))</span>
 </code></pre></div></div>
 
 <hr />
@@ -483,7 +483,7 @@ universe."""</span>
 
       <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">myFloatString</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Give me a number:"</span><span class="p">)</span>
  <span class="n">myInteger</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">myFloatString</span><span class="p">))</span>
- <span class="k">print</span><span class="p">(</span><span class="s">"My number in integer form is {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">myInteger</span><span class="p">))</span>
+ <span class="k">print</span><span class="p">(</span><span class="s">"My number in integer form is {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">myInteger</span><span class="p">))</span>
 </code></pre></div>      </div>
     </details>
   </blockquote>
@@ -538,13 +538,13 @@ universe."""</span>
 
       <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">myFloat</span> <span class="o">=</span> <span class="mf">11.4</span>
  <span class="n">myIntFloat</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">myFloat</span><span class="p">)</span>
- <span class="k">print</span><span class="p">(</span><span class="s">"My float as integer {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">myIntFloat</span><span class="p">))</span> 
+ <span class="k">print</span><span class="p">(</span><span class="s">"My float as integer {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">myIntFloat</span><span class="p">))</span> 
  <span class="c1">#This works
 </span> <span class="n">myInt</span>  <span class="o">=</span> <span class="mi">12</span>
- <span class="k">print</span><span class="p">(</span><span class="s">"My integer as string {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">myInt</span><span class="p">)))</span>
+ <span class="k">print</span><span class="p">(</span><span class="s">"My integer as string {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">myInt</span><span class="p">)))</span>
  <span class="c1">#This works as well... but:
 </span> <span class="n">myString</span> <span class="o">=</span> <span class="s">"Hello"</span>
- <span class="k">print</span><span class="p">(</span><span class="s">"My string as float {}"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">myString</span><span class="p">)))</span>
+ <span class="k">print</span><span class="p">(</span><span class="s">"My string as float {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">myString</span><span class="p">)))</span>
  <span class="c1">#will fail and give a TypeError - Python cannot convert "aa" into a float.
 </span></code></pre></div>      </div>
     </details>

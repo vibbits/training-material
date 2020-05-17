@@ -263,7 +263,7 @@
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myDictionary</span><span class="p">[</span><span class="s">'A'</span><span class="p">]</span>
 </code></pre></div></div>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myDictionary</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'C'</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myDictionary</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'C'</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>If you would like to add a new pair of key-value:</p>
@@ -290,20 +290,20 @@
 
 <p>Listing the keys within a dictionary:</p>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myDictionary</span> <span class="o">=</span> <span class="p">{</span><span class="s">'A'</span><span class="p">:</span> <span class="s">'Ala'</span><span class="p">,</span> <span class="s">'C'</span><span class="p">:</span> <span class="s">'Cys'</span><span class="p">,</span> <span class="s">'D'</span><span class="p">:</span> <span class="s">'Asp'</span><span class="p">,</span> <span class="s">'E'</span><span class="p">:</span> <span class="s">'Glu'</span><span class="p">}</span>
-<span class="n">myDictionary</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+<span class="n">myDictionary</span><span class="p">.</span><span class="n">keys</span><span class="p">()</span>
 </code></pre></div></div>
 
 <p>Python tells us that the list is still in a dictionary-keys data structure type. If you would like to extract the keys for further processing, it’s probably better to transform them into a list:</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">list</span><span class="p">(</span><span class="n">myDictionary</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">list</span><span class="p">(</span><span class="n">myDictionary</span><span class="p">.</span><span class="n">keys</span><span class="p">())</span>
 </code></pre></div></div>
 
 <p>Similarly for the values of a dictionary:</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">list</span><span class="p">(</span><span class="n">myDictionary</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">list</span><span class="p">(</span><span class="n">myDictionary</span><span class="p">.</span><span class="n">values</span><span class="p">())</span>
 </code></pre></div></div>
 
 <p>We’ve already exploited the <code class="highlighter-rouge">get</code> method, with <code class="highlighter-rouge">pop</code> we can remove a <em>key-value</em> pair:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myDictionary</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">'E'</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myDictionary</span><span class="p">.</span><span class="n">pop</span><span class="p">(</span><span class="s">'E'</span><span class="p">)</span>
 <span class="n">myDictionary</span>
 </code></pre></div></div>
 
@@ -339,14 +339,14 @@
      <span class="s">'W'</span><span class="p">:</span> <span class="s">'Trp'</span><span class="p">,</span>
      <span class="s">'Y'</span><span class="p">:</span> <span class="s">'Tyr'</span><span class="p">}</span>
 
-<span class="k">if</span> <span class="s">'B'</span> <span class="ow">in</span> <span class="n">myDictionary</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+<span class="k">if</span> <span class="s">'B'</span> <span class="ow">in</span> <span class="n">myDictionary</span><span class="p">.</span><span class="n">keys</span><span class="p">():</span>
     <span class="k">print</span><span class="p">(</span><span class="n">myDictionary</span><span class="p">[</span><span class="s">'B'</span><span class="p">])</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="k">print</span><span class="p">(</span><span class="s">"myDictionary doesn't have key 'B'!"</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>However, it’s much cleaner if you use the <code class="highlighter-rouge">get()</code> method as it doesn’t return an explicit error if a key doesn’t exist in your dictionary. Instead it will return a <code class="highlighter-rouge">None</code>-value.</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">type</span><span class="p">(</span><span class="n">myDictionary</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'B'</span><span class="p">))</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">type</span><span class="p">(</span><span class="n">myDictionary</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'B'</span><span class="p">))</span>
 </code></pre></div></div>
 
 <hr />
@@ -374,8 +374,8 @@ NNIKNASLVQIDASNEQSSTSSSMIIDAQISNALNAQQYKVLIGNREWMIRNGLVINNDVNDFMTEHERKGRTAVLVAVD
 </span><span class="n">aminoAcidCount</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="n">myUniqueAminoAcids</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">mySequence</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">aaCode</span> <span class="ow">in</span> <span class="n">myUniqueAminoAcids</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"Amino acid {} occurs {} times."</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">aaCode</span><span class="p">,</span><span class="n">mySequence</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">aaCode</span><span class="p">)))</span>
-    <span class="n">aminoAcidCount</span><span class="p">[</span><span class="n">aaCode</span><span class="p">]</span> <span class="o">=</span> <span class="n">mySequence</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">aaCode</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Amino acid {} occurs {} times."</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">aaCode</span><span class="p">,</span><span class="n">mySequence</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="n">aaCode</span><span class="p">)))</span>
+    <span class="n">aminoAcidCount</span><span class="p">[</span><span class="n">aaCode</span><span class="p">]</span> <span class="o">=</span> <span class="n">mySequence</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="n">aaCode</span><span class="p">)</span>
 </code></pre></div>      </div>
 
     </details>
@@ -408,11 +408,11 @@ NNIKNASLVQIDASNEQSSTSSSMIIDAQISNALNAQQYKVLIGNREWMIRNGLVINNDVNDFMTEHERKGRTAVLVAVD
      <span class="s">'W'</span><span class="p">:</span> <span class="s">'Trp'</span><span class="p">,</span>
      <span class="s">'Y'</span><span class="p">:</span> <span class="s">'Tyr'</span><span class="p">}</span>
 
-<span class="n">lengthDict</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">myDictionary</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="n">lengthDict</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">myDictionary</span><span class="p">.</span><span class="n">keys</span><span class="p">())</span>
 <span class="k">for</span> <span class="n">aa</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">lengthDict</span><span class="p">):</span>
-    <span class="n">aaCode</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">myDictionary</span><span class="o">.</span><span class="n">keys</span><span class="p">())[</span><span class="n">aa</span><span class="p">]</span>
-    <span class="n">aaCount</span> <span class="o">=</span> <span class="n">mySequence</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">aaCode</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"Amino acid {} occurs {} times."</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">aaCode</span><span class="p">,</span><span class="n">aaCount</span><span class="p">))</span>
+    <span class="n">aaCode</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">myDictionary</span><span class="p">.</span><span class="n">keys</span><span class="p">())[</span><span class="n">aa</span><span class="p">]</span>
+    <span class="n">aaCount</span> <span class="o">=</span> <span class="n">mySequence</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="n">aaCode</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Amino acid {} occurs {} times."</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">aaCode</span><span class="p">,</span><span class="n">aaCount</span><span class="p">))</span>
 </code></pre></div>      </div>
 
     </details>
@@ -427,32 +427,32 @@ NNIKNASLVQIDASNEQSSTSSSMIIDAQISNALNAQQYKVLIGNREWMIRNGLVINNDVNDFMTEHERKGRTAVLVAVD
 </span><span class="kn">from</span> <span class="nn">Bio</span> <span class="kn">import</span> <span class="n">SeqIO</span>
 
 <span class="c1"># Reads in (just one record of) the GenBank file
-</span><span class="n">record</span> <span class="o">=</span> <span class="n">SeqIO</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s">"data/NC_005816.gb"</span><span class="p">,</span><span class="s">"genbank"</span><span class="p">)</span>
+</span><span class="n">record</span> <span class="o">=</span> <span class="n">SeqIO</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="s">"data/NC_005816.gb"</span><span class="p">,</span><span class="s">"genbank"</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>The SeqRecord object (which we see here) has an id, name and description as well as a sequence. For other (miscellaneous) annotations, the SeqRecord object has a dictionary attribute <em>annotations</em>. Most of the annotations information gets recorded in the annotations dictionary.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">record</span><span class="o">.</span><span class="nb">id</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">record</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">record</span><span class="o">.</span><span class="n">description</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">record</span><span class="p">.</span><span class="nb">id</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">record</span><span class="p">.</span><span class="n">name</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">record</span><span class="p">.</span><span class="n">description</span><span class="p">)</span>
 <span class="c1">#print(record.seq)
 </span></code></pre></div></div>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">record</span><span class="o">.</span><span class="n">annotations</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">record</span><span class="p">.</span><span class="n">annotations</span>
 </code></pre></div></div>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">record</span><span class="o">.</span><span class="n">annotations</span><span class="p">[</span><span class="s">'organism'</span><span class="p">]</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">record</span><span class="p">.</span><span class="n">annotations</span><span class="p">[</span><span class="s">'organism'</span><span class="p">]</span>
 </code></pre></div></div>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">record</span><span class="o">.</span><span class="n">annotations</span><span class="p">[</span><span class="s">'source'</span><span class="p">]</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">record</span><span class="p">.</span><span class="n">annotations</span><span class="p">[</span><span class="s">'source'</span><span class="p">]</span>
 </code></pre></div></div>
 
 <p>(In general, <code class="highlighter-rouge">organism</code> is used for the scientific name (in Latin, e.g. <em>Arabidopsis thaliana</em>), while <code class="highlighter-rouge">source</code>
 will often be the common name (e.g. thale cress). In this example, as is often the case, the two fields are
 identical.)</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">record</span><span class="o">.</span><span class="n">annotations</span><span class="p">[</span><span class="s">'accessions'</span><span class="p">]</span> <span class="c1"># This could be a list of values, hence the list. 
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">record</span><span class="p">.</span><span class="n">annotations</span><span class="p">[</span><span class="s">'accessions'</span><span class="p">]</span> <span class="c1"># This could be a list of values, hence the list. 
 </span></code></pre></div></div>
 
 <h2 id="84-more-with-dictionaries">8.4 More with dictionaries</h2>
