@@ -143,7 +143,7 @@ You have just learned that there are different places to find data. By actively 
 >
 > [Google Dataset Search](https://datasetsearch.research.google.com/) - try out chip-seq drosophila. Google Dataset Search indexes [OmicsDI](https://www.omicsdi.org/), an index providing a knowledge discovery framework across heterogeneous omics data (genomics, proteomics, transcriptomics and metabolomics).   
 
-### Assess the Usefullness of Existing Data
+### Assess the Usefulness of Existing Data
 
 How useful is a dataset? Follow this short tutorial.
 
@@ -158,90 +158,9 @@ In the previous activity, the lecture described four main points to check if you
 - Trustworthiness
 - Persistence
 
-In the following quizzes, take a closer look at the description or metadata of some datasets and assess the usefulness of these datasets yourself. As the description or metadata of datasets can be lacking in several different areas at the same time, it will be indicated per assignment on which of the four main points your focus should be.
+In the following quiz, take a closer look at the description or metadata of some datasets and assess the usefulness of these datasets yourself. As the description or metadata of datasets can be lacking in several different areas at the same time, it will be indicated per assignment on which of the four main points your focus should be.
 
-### {% icon hands_on %} Hands On  
-
-Can you re-use [this dataset](https://dataverse.nl/dataset.xhtml?persistentId=hdl:10411/UWAU3K) on Spatial Patterns of Water-dispersed Seed Deposition along Stream Riparian Gradients in DataverseNL?
-
-1. Maybe
-2. Yes
-3. No
-
-<details markdown='1'>
-  <summary>Check your answer!</summary>
-
-  Yes, the Terms of use indicate that there is a Creative Commons license 'Public Domain Dedication', which means you can copy, modify, distribute and perform thge work, even for commercial purposes, all without asking permission.
-
-</details>
-
-### {% icon hands_on %} Hands On  
-
-Can you re-use [this weather dataset](http://www.climatemps.com/)?
-
-1. Maybe
-2. Yes
-3. No
-
-<details markdown='1'>
-  <summary>Check your answer!</summary>
-
-  Maybe, although the website states 'We hope that you will enjoy using ClimaTempss as much as we have enjoyed developing it!", there is no clear license or use agreement and directions on how to cite the data are lacking. The use has not been defined nor explained. In this case of re-use you should simply contact the creators.
-
-</details>
-
-### {% icon hands_on %} Hands On  
-
-Given the follwing description of a dataset: can you assess the usefulness of this dataset to establish cholestasis (an unhealthy condition of the liver) parameters in livers in the age group of puberty through adulthood? Please focus on the context.
-
-Description: "We measured livers for several parameters of cholestasis. The subjects were in advanced stages of liver cancer."
-
-1. Maybe
-2. Yes
-3. No
-
-<details markdown='1'>
-  <summary>Check your answer!</summary>
-
-  No, the dataset is not useful because the subjets have cancer. This should affect the values of parameters for cholestasis. You would rather have a dataset of healthy subjects.
-
-</details>
-
-### {% icon hands_on %} Hands On  
-
-Would you trust the following dataset on heart rate under severe physical stress?
-
-Heart rate (beats per minute): 124, 160, 240, 0, 120, 400, 198, 156, 167
-
-Please focus on the trustworthiness.
-
-1. Maybe
-2. Yes
-3. No
-
-<details markdown='1'>
-  <summary>Check your answer!</summary>
-
-  No, there are weird values in the dataset, a value of zero is unlikely. And overall, the values are on the high side.
-
-</details>
-
-### {% icon hands_on %} Hands On  
-
-Is your research likely to be reproducible when you use the following the following infrastructure?
-
-The datasets is created during a PhD. Conditions for use state that it is a dataset stored and shared by the PhD student on his university account.
-
-1. Maybe
-2. Yes
-3. No
-
-<details markdown='1'>
-  <summary>Check your answer!</summary>
-
-  No, it is unlikely that the dataset can be reused since you do not have certainty that the files stored on the university file drives are availble for at least 10 years which is the current rule for data availablity.
-
-</details>
+<iframe src="http://35.187.71.29:8080/wp-admin/admin-ajax.php?action=h5p_embed&id=15" width="958" height="217" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="http://35.187.71.29:8080/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
 
 ## Describe What Kind of Data You Will Generate
@@ -254,7 +173,8 @@ Please watch the video below. Tessa Pronk will explain to you how to describe yo
 
 ## Order Elements in Your Data Flow
 
-TODO: add H5P quiz - check 01_Order_Elements_In_Data_Flow.png
+<iframe src="http://35.187.71.29:8080/wp-admin/admin-ajax.php?action=h5p_embed&id=16" width="958" height="920" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="http://35.187.71.29:8080/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
+
 
 ## Copyright and Intellectual Property Rights (IPR) Issues
 
