@@ -25,5 +25,13 @@ contributors:
 - [Policy Framework from VUB](https://vub.sharepoint.com/sites/ORG-RandD/SitePages/RESEARCH-DATA-MANAGEMENT.aspx?web=1)
 
 ## File Formats
+
 - [Dans](https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats)
 - [Preferred File Formats](../../docs/01_DataCollection_Preferred_formats.pdf)
+
+## metadata
+
+- [Biology](http://www.dcc.ac.uk/resources/subject-areas/biology)
+- [General Sciences](http://www.dcc.ac.uk/resources/subject-areas/general-research-data)
+- [directory of metadata schemas](http://rd-alliance.github.io/metadata-directory/)
+- [FairSharing](https://fairsharing.org/).
