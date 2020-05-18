@@ -143,93 +143,7 @@ If there is no vocabulary available, you can consider making a custom list withi
 
 ### Improve a Record Description
 
-#### {% icon question %} Question  
-
-Take a look at the record descriptions in the table below and answer the question below and in the following pages.
-
-| Soil Sample | Condition | Length | Class\* |
-|:-----------:|:---------:|:------:|:------:|
-| A1          | Low       | 458    | III    |
-| A2          | Low       | 391    | II     |
-| A3          | Medium    | 422    | IV     |
-
-\*according to the classification from last experiment
-
-Is the value in the Soil Sample column clear?
-
-<details markdown='1'>
-  <summary>Click your answers!</summary>
-
-  Yes, it is sufficient to say this is a sample. The identifier for the sample needs to be unique, the content of the sample comes from the other metadata fields and their values.
-
-</details>
-{: .question }
-
-#### {% icon question %} Question  
-
-Take a look at the record descriptions in the table below and answer the question below and in the following pages.
-
-| Soil Sample | Condition | Length | Class\* |
-|:------------|:---------:|:------:|:------:|
-| A1          | Low       | 458    | III    |
-| A2          | Low       | 391    | II     |
-| A3          | Medium    | 422    | IV     |
-
-\*according to the classification from last experiment
-
-Is the value in the Condition column clear?
-
-<details markdown='1'>
-  <summary>Click your answers!</summary>
-
-  No! It is not clear what low or medium as condition means.
-
-</details>
-{: .question }
-
-#### {% icon question %} Question  
-
-Take a look at the record descriptions in the table below and answer the question below and in the following pages.
-
-| Soil Sample | Condition | Length | Class\* |
-|:------------|:---------:|:------:|:------:|
-| A1          | Low       | 458    | III    |
-| A2          | Low       | 391    | II     |
-| A3          | Medium    | 422    | IV     |
-
-\*according to the classification from last experiment
-
-Is the value in the Length column clear?
-
-<details markdown='1'>
-  <summary>Click your answers!</summary>
-
-  No, it is not clear what is meant by length. Also a unit for the values is missing. Is it meters, centimeters, or seconds?
-
-</details>
-{: .question }
-
-#### {% icon question %} Question  
-
-Take a look at the record descriptions n the table below and answer the question below and in the following pages.
-
-| Soil Sample | Condition | Length | Class\* |
-|:------------|:---------:|:------:|:------:|
-| A1          | Low       | 458    | III    |
-| A2          | Low       | 391    | II     |
-| A3          | Medium    | 422    | IV     |
-
-\*according to the classification from last experiment
-
-Is the value in the Class column clear?
-
-<details markdown='1'>
-  <summary>Click your answers!</summary>
-
-  No! There is a reference that the classes are explained somewhere, but no link to the document is given.
-
-</details>
-{: .question }
+<iframe src="http://35.187.71.29:8080/wp-admin/admin-ajax.php?action=h5p_embed&id=20" width="958" height="362" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="http://35.187.71.29:8080/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
 Units are important, and metadata field names need explanations in for instance a codebook or another document explaining names. If metadata field names are from a standard, these are explained in the standard. This saves you time and you can simply refer to the standard in your data.
 
@@ -259,7 +173,9 @@ Follow the links below for examples of standards. What type of standardisation d
 - [SI Units](https://www.nist.gov/pml/weights-and-measures/metric-si/si-units)
 - [UK data service](https://www.ukdataservice.ac.uk/manage-data/format/recommended-formats)
 
-TODO: add H5P exercise - check 02_CheckKnowledgeOnStandards.png
+Drag each link to the box that best describes its type of standardization
+
+<iframe src="http://35.187.71.29:8080/wp-admin/admin-ajax.php?action=h5p_embed&id=21" width="958" height="625" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="http://35.187.71.29:8080/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
 ## Folder Structure and File Naming
 
@@ -351,50 +267,18 @@ A filename is the principal identifier for a research data file. In most cases, 
 - Do not assume that the software application or instrument uses case dependency when naming or renaming files. Instead, assume that *TANGO*, *Tango* and *tango* are the same, even though some file systems may consider them as different;
 - Where possible, use default file extensions to accurately reflect the software environment in which the file was created and the physical format of the file. E.g.. use .por for SPSS portable files, .xls or .xlsx for Excel files, .ssd or .sas7bdat for SAS files, .txt for text files, etc.
 
-TODO H5P
-### {% icon question %} Choose the best chronological file name
+<iframe src="http://35.187.71.29:8080/wp-admin/admin-ajax.php?action=h5p_embed&id=22" width="958" height="300" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="http://35.187.71.29:8080/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
-Which of the file names below is the most appropriate?
-
-- 2019-03-24_Attachment
-- 24 March 2006 Attachment
-- 240306attach
-
-<details markdown='1'>
-  <summary>Click your answers!</summary>
-
-2019-03-24_Attachment is correct! Using a date in the format Year-Month-Day will maintain the chronological order of your files.
-</details>
-{: .question }
-
-TODO H5P
-### {% icon question %} Choose the best descriptive file name
-
-Which of the file names below is the most appropriate?
-
-- labtox_recent_110810_old_version.sps
-- 2010-08-11_bioasssay_tox_V1.sps
-- FFTX_3776438656.sps
-
-<details markdown='1'>
-  <summary>Click your answers!</summary>
-
-2010-08-11_bioasssay_tox_V1.sps is correct! Keep the file names short and relevant while using sufficient characters to capture information. Do not name files recent or final or definitive_final, a date or version number will suffice.
-
-</details>### Batch Renaming of automatically Generated files
+### Batch Renaming of automatically Generated files
 Although all operating systems have built-in tools for managing files, there are software tools that can organise research data files and folders in a consistent and automated way through batch renaming (also known as mass file renaming or bulk renaming). Batch renaming software exists for most operating systems. There are many situations for which batch renaming may be useful, such as:
 
 - Images from digital cameras are automatically assigned base filenames consisting of sequential numbers;
 - Proprietary software or instrumentation generates crude, default or multiple filenames;
 - Files are transferred from a system that supports spaces and/or non-English characters in filenames to one that doesn't {or vice versa). In such cases, batch renaming software can be used to substitute characters or automatically assigned names with acceptable or descriptive ones.
 
-
-{: .question }
-
 ### Batch Renaming of automatically Generated files
 
 Although all operating systems have built-in tools for managing files, there are software tools that can organise research data files and folders in a consistent and automated way through batch renaming (also known as mass file renaming or bulk renaming). Batch renaming software exists for most operating systems. There are many situations for which batch renaming may be useful, such as: Images from digital cameras are automatically assigned base filenames consisting of sequential numbers; Proprietary software or instrumentation generates crude, default or muitiple filenames; Files are transferred from a system that supports spaces and/or non-English characters in filenames to one that doesn't {or vice versal. In such cases, batch renaming software can be used to substitute characters or automatically assigned names with acceptable or descriptive ones.
-
 
 ### A Strategy for Version Control
 
@@ -408,25 +292,9 @@ It is important to identify and distinguish versions of your research data files
 - Consider using version control software such as Subversion or TortoiseSVN or Github.
 - Keep your files in one place only and make sure you stick to that. Consider copies at other places as ‘not current’.
 
-### How would you treat your data
+### Naming Files
 
-#### {% icon question %} Choose the best descriptive file name
-
-Why should you discard or delete obsolete versions of data?
-
-- The most current version is the only relevant version.
-- You have several versions of files in a state between versions
-- You are exceeding the storage space available to you.
-
-<details markdown='1'>
-  <summary>Click your answers!</summary>
-
-Correct answer: You have several versions of files in a state between versions! Too many similar or related files may be confusing to yourself and to anyone else wanting to access or use your data. You may think that you know which data file is which but that may not always be the case as time passes and the number of different versions increases. It is easier to maintain a manageable number of versions with a clear naming structure. As long as the original raw or definitive copy is retained and processing is well documented, the intermediate working files can and should be discarded.
-
-</details>
-{: .question }
-
-TODO: add H5P - check 02_FillTheGap.png
+<iframe src="http://35.187.71.29:8080/wp-admin/admin-ajax.php?action=h5p_embed&id=24" width="958" height="217" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="http://35.187.71.29:8080/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
 ### Write Your Data Management Plan for Your Data Documentation
 
