@@ -61,18 +61,7 @@ Since there is a wide variety of types of data and types of research, there are 
 - Methodology reports
 - Provenance information about sources of derived or digitised data
 
-#### {% icon question %} Question  
-
-TODO H5P 02_WhatDataDocumentation.png
-What data documentation will you use and why?
-
-<details markdown='1'>
-  <summary>Feedback on your reflections</summary>
-
-Data documentation has as goal to be used by people to understand the dataset. Such as specific conditions in which it was collected, what each column means and which methods were used to collect the data. When creating documentation, you need to ask yourself, can others (or I, myself) understand my dataset if I give them this information.
-
-</details>
-{: .question }
+<iframe src="http://35.187.71.29:8080/wp-admin/admin-ajax.php?action=h5p_embed&id=17" width="958" height="570" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="http://35.187.71.29:8080/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
 ### Different Levels of Data Documentation
 There are many different ways to set up and organise your documentation.
@@ -95,23 +84,7 @@ John MacInnes, professor of Sociology of the University of Edinburgh, speaks abo
 
 <iframe src="https://www.youtube.com/embed/Ebaiwg08CW8" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
 
-#### {% icon question %} Question  
-
-Looking back at your previous research project: Did you ever have problems reusing other people's data because of lack of documentation?
-
-- Never tried
-- Successfully reused
-- Had to ask clarification
-- Had to abandon the reuse attempt
-
-<details markdown='1'>
-  <summary>Feedback on your reflections</summary>
-
-Data documentation always provides advantages for yourself and for others such as better understandability, sharability and reusability in the future.
-
-</details>
-
-{: .question }
+<iframe src="http://35.187.71.29:8080/wp-admin/admin-ajax.php?action=h5p_embed&id=18" width="958" height="442" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="http://35.187.71.29:8080/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
 ### Research and Lab Notebooks
 
@@ -136,7 +109,7 @@ Watch this web lecture to learn about the different types of metadata and how me
 
 ### Identify Different Types of Metadata
 
-TODO: HP5 quiz or matrix quiz see 02_IdentifyDifferentTypesofMetadata.png
+<iframe src="http://35.187.71.29:8080/wp-admin/admin-ajax.php?action=h5p_embed&id=19" width="958" height="949" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="http://35.187.71.29:8080/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
 ### Metadata for Different Disciplines
 
