@@ -81,7 +81,7 @@ With a number of simple measures, you can ensure the physical security of your r
 
 #### Data Classification
 
-TODO: what to do with classified data. UU refers to https://intranet.uu.nl/en/data-classification
+TODO: **AB** insert videos from website
 
 #### Data That Contain Personal Information
 
@@ -102,9 +102,9 @@ We are interested to know if you have ever experienced unauthorized access to an
 
 Often other people are required to handle your data, or you might be the person that handles other people’s data.
 
-To arrange the security of the research data you work with, in many cases you have to make a (legal) agreement with other people involved. These agreements will make explicit permitted uses, retention time, and agreed upon security measures. Find out what legal contracts you can use by studying the figure below. Visit the Guide [Legal instruments and agreements](https://www.uu.nl/en/research/research-data-management/guides/legal-instruments-and-agreements) for more information
+To arrange the security of the research data you work with, in many cases you have to make a (legal) agreement with other people involved. These agreements will make explicit permitted uses, retention time, and agreed upon security measures. Find out what legal contracts you can use by studying the figure below. Visit the Guide [Legal instruments and agreements](https://www.uu.nl/en/research/research-data-management/guides/legal-instruments-and-agreements) for more information.
 
-For tailored advice and templates, contact TODO: add link
+For tailored advice and templates, contact TODO: add VIB link
 
 ![Legal Agreement contacts -80width](../../images/AgreementsPicture.png "Agreement types for data")
 
@@ -112,7 +112,7 @@ For tailored advice and templates, contact TODO: add link
 
 You have been acquainted with the different flavors of legal agreements. Is it clear to you when you need which agreement? Please answer the following questions by choosing the right kind of agreement.
 
-TODO: add quiz or H5P quiz - check 03_WhenUseWhichContract_1a.png  > 03_WhenUseWhichContract_3b.png
+<iframe src="http://35.187.71.29:8080/wp-admin/admin-ajax.php?action=h5p_embed&id=25" width="958" height="217" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="http://35.187.71.29:8080/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
 ## Privacy
 
@@ -136,9 +136,7 @@ Please consult this [Privacy Reference Card](https://www.eur.nl/sites/corporate/
 
 The European General Data Protection Regulation (GDPR) outlines how we should work with privacy-sensitive data.
 
-TODO: create working infographics with images
-see http://gdprcoalition.ie/infographics
-TODO: create HP5 lesson
+![GDPR 6 principles -80width](../../images/03_SixPrinciplesGDPR.jpg "Six principles from the European General Data Protection Regulation")
 
 The GDPR outlines six data protection principles you must comply with when processing personal data. These principles relate to:
 
@@ -157,9 +155,7 @@ To comply with the six principles from the GDPR, you can implement privacy by de
 
 ### Which Data Breach Is Breached?
 
-Can you recognise the principles that are breached in the different ways personal data is processed?
-
-TODO: H5P quiz 7 cases - check 03_WhichDataBreachIsBreached_01.png, 03_WhichDataBreachIsBreached_02.png
+<iframe src="http://35.187.71.29:8080/wp-admin/admin-ajax.php?action=h5p_embed&id=26" width="958" height="811" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="http://35.187.71.29:8080/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
 ### Storing Personal Data
 
@@ -177,24 +173,7 @@ Should you want an elaborate visualisation of what is considered identifiable da
 
 [Download the visual guide to practical data de-identification](https://fpf.org/2016/04/25/a-visual-guide-to-practical-data-de-identification/)
 
-TODO H5P
-### {% icon question %} Can you recognize identifiable data?  
-
-1. A collection of GPS data of daily routines
-2. A list of households sizes associated with number of pets
-3. MRI scans without identifying metadata.
-4. Audio recordings with no metadata and no names of the recorded persons
-5. Transcripts of interviews without any directly identifying information
-6. A list of gender and grades for a de-identified course
-
-<details markdown='1'>
-  <summary>Check the answers.</summary>
-
-Answer 1,3, and 4 are correct!
-
-GPS data holds information on where people go. In a daily routine, the track ends at a particular location which is likely the home of the subject. AN MRI scan from the profile of the head can be identifiable. Audio recordings can be identifiable from the tone of the voice. A list of surnames in itself is not identifying nor personal information.
-</details>
-{: .question }
+<iframe src="http://35.187.71.29:8080/wp-admin/admin-ajax.php?action=h5p_embed&id=27" width="958" height="512" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="http://35.187.71.29:8080/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
 ### Access to Privacy-Sensitive Data
 
@@ -220,33 +199,13 @@ CBS publishes reliable and coherent national statistical information. Microdata 
 
 In the topic *Legal agreements and contracts* you learned about informed consent. Informed consent is very important when working with data which is in any way related to people.
 
-TODO: add graphics on informed consent - check 03_SixPrinciplesGDPR.png
+![GDPR Consent -80width](../../images/03_GDPR_Consent.jpg "Six principles from the European General Data Protection Regulation")
 
 One thing to arrange in your informed consent is the possibility for future use, for verification or reuse. In your informed consent, it is important to be clear on future use of data.
 
 #### Informed Consent for Data Sharing
 
-One thing to arrange and to be crystal clear about in your informed consent is the possibility for future use of your data, for verification or reuse.
-
-TODO H5P
-### {% icon question %} Question  
-
-Check the sentences that do permit data sharing if used as a single statement.
-
-1. Any personal information that reasonably could identify you will be removed or changed before files are shared with other researchers or results are made public.
-2. Other genuine researchers (may) have acces to tis data only if they agree to preserve the confidentiality on the information as requested in this form.
-3. Any data that could identify you will be accessible only to the researchers responsible for performing this study.
-4. All personally identifying information collected about you will be destroyed after the study.
-
-<details markdown='1'>
-  <summary>Check the answers.</summary>
-
-Answer 1 and 2 are both correct!
-
-Sharing of research data that relates to people can often be achieved using a combination of obtaining consent, anonymizing data and regulating data access. If the statement towards the data only mentions the current study, sharing is not explicitly possible. You should add some sentence to make it clear to participants that the data could be used for further research, deidentified where possible, or identifiable with enough safeguards and security measures, if it is not.
-
-</details>
-{: .question }
+<iframe src="http://35.187.71.29:8080/wp-admin/admin-ajax.php?action=h5p_embed&id=28" width="958" height="688" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="http://35.187.71.29:8080/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
 ## Write Your Data Management Plan for Your Data Security
 
