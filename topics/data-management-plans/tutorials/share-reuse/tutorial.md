@@ -53,8 +53,8 @@ Criteria to select a certain repository can be:
   Repositories differ in their cost model, some allow free deposits up to a certain amount of storage
 - What is the physical storage location of data?
   The location of your data determines under which data protection law it falls. Some repositories store data in the US and others in the EU.
-- What is the default license?
-  Some repositories allow for open or restricted access, or you can specify which license for use you want for your data.
+- What is the default licence?
+  Some repositories allow for open or restricted access, or you can specify which licence for use you want for your data.
   You can use this [repository selection tool](https://www.uu.nl/en/research/research-data-management/tools-services/tools-for-storing-and-managing-data/decision-aid-data-repositories) to help you select a suitable repository.
 
 ### Registry of Research Data Repositories
@@ -76,24 +76,10 @@ You have just learned about the existence of a global registry of research data 
 
 Re3data.org makes it possible to search for a repository that meets your criteria.
 
-Go to [www.re3data.org/search](http://www.re3data.org/search) and find a repository that meets all three of the following criteria:
-
-- Certificate → CoreTrustSeal
-- Data licences → CC0 (Creative Commons 0)
-- Persistent identifier (PID systems) → DOI (Digital Object Identifier)
-
-Use the filters offered on the left side of the screen, as visualized here:
-
-![Filters](../../images/05_Filters.png)
+<iframe src="http://35.187.71.29:8080/wp-admin/admin-ajax.php?action=h5p_embed&id=30" width="958" height="1532" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="http://35.187.71.29:8080/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
 TODO: H5P quiz with ELIXIR resources
 
-Which repository meets these three criteria?
-- EASY from DANS (offers you access to thousands of datasets in the humanities, the social sciences and other disciplines)
-- Zenodo (enables researchers, scientists, EU projects and institutions to share and showcase multidisciplinary research results (data and publications) that are not part of the existing institutional or subject-based repositories of the research communities).
-- Integrated Climate Data Center (allows easy access to climate-relevant data from in-situ measurements and satellite remote sensing).
-- TalkBank – (provides transcripts, audio and video of communicative interactions for research in human and animal communication)
-Solution: DANS - EASY meets these three criteria.
 
 ## Give Clarity with (Creative Commons) Licences
 
@@ -161,22 +147,13 @@ Examples of generic data journals:
 
 Examples of disciplinary data journals:
 
-TODO: check for life science additions
-
 - Open archaeology data;
 - Earth System Science Data;
 - Research Data Journal for the Humanities and Social Sciences.
 
-TODO H5P
-Have a look at the three journals below:
-- [Geoscience Data Journal](http://onlinelibrary.wiley.com/journal/10.1002/(ISSN)2049-6060)
-- [Archives of Public Health](https://archpublichealth.biomedcentral.com/about)
-- [Biodiversity Data Journal](http://biodiversitydatajournal.com/)
-Which one of these  journals is NOT a data journal?
-- Archives of Public Health
-- Geoscience Data Journal
-- Biodiversity Data Journal
-Answer: Biodiversity Data Journals
+TODO: check for life science additions
+
+<iframe src="http://35.187.71.29:8080/wp-admin/admin-ajax.php?action=h5p_embed&id=31" width="958" height="466" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="http://35.187.71.29:8080/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
 ## How to Cite a Dataset
 
@@ -206,21 +183,7 @@ Irino, T; Tada, R (2009): Chemical and mineral compositions of sediments from OD
 Tip1: Get a PID at the data repository of your choice.
 Tip2: Is your PID a DOI and do you want to cite it in the format of a specific journal? Use the [DOI formatter](https://citation.crosscite.org/) from CrossCite.
 
-
-TODO: H5P add short quiz
-Below you’ll find different elements of a dataset. Please indicate which elements you need to include to form a proper dataset citation.
-- Number of files in dataset
-- License for reuse
-- Persistent identifier
-- URL of the dataset
-- Size of dataset
-- File types
-- Location of dataset
-- Authors/creators
-- Publication date
-
-answer: Persistent identifier, Location of dataset, Authors/creators, Publication date
-feedback wrong: This level of detail is not needed in the citation.
+<iframe src="http://35.187.71.29:8080/wp-admin/admin-ajax.php?action=h5p_embed&id=32" width="958" height="545" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="http://35.187.71.29:8080/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
 ### FAIR Data
 
@@ -252,22 +215,7 @@ If you anonymise your data, presuming the data is of limited sensitivity and you
 
 The FAIR Guiding Principles were put together and published in Scientific Data (Mark D. Wilkinson et al., “The FAIR Guiding Principles for Scientific Data Management and Stewardship,” Scientific Data 3 (March 15, 2016): 160018.).
 
-TODO: add question H5P quiz? Check 05_DataManagementElementsFAIR.png
-We invite you to look back at the elements of data management that you have learned about up to now. Some elements have a clear link to FAIR. Can you match the data management elements that lead to FAIR data?
-Answer options are
-- Findable
-- Accessible
-- Interoperable
-- Reusable
-
-Data package: R
-Standards: I
-Quality control: R
-Data repositories (multiple answers possible) FAR
-Licenses: R
-Data formats: R
-Data documentation and metadata (multiple answers possible): FIR
-Legal contracts: R
+<iframe src="http://35.187.71.29:8080/wp-admin/admin-ajax.php?action=h5p_embed&id=33" width="958" height="397" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="http://35.187.71.29:8080/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
 ## Open Science
 
