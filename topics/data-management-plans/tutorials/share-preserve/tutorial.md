@@ -40,7 +40,7 @@ It may be worthwhile to make (part of) your data available for a longer period o
 
 On the one hand, making research data reusable will need extra effort. On the other hand, possible reuse, even by your future self, might bring you lots of benefits and credits. Consider if your data is worth the effort of making it reusable or if preserving and archiving for verification is enough.
 
-Reuse is explained more in depth in the next part of this course: ‘Availability for reuse’. In this part we will focus on selection and preservation of research data for verification purposes.
+Reuse is explained more in depth in ‘Data Availability for Reuse’. In this part we will focus on selection and preservation of research data for verification purposes.
 
 ## Data Package
 
@@ -53,6 +53,7 @@ If preserving your raw data poses problems, alternatives can also ensure verfica
 ### The contents of your data package
 
 TODO: add image for illustration/zenodo?
+**gb** Not sure what you want here ...
 
 Others should be able to understand what you did. It is not enough to just provide data. Instead you should preserve a package with everything included that is necessary to reproduce your results. Think of including the following:
 
@@ -89,7 +90,7 @@ As you have just learned, preserving your data may serve the purpose of verifica
 
 In the example below, you find a workflow for experimental research. What information can be made available in what place? Drag the items on the right to the correct place in the figure. Please note that some items can be used more than once.
 
-TODO: add H5P quiz and PDF solution? Check 06_WhereWhatData.png and 06_WhereWhatData.pdf
+<iframe src="http://35.187.71.29:8080/wp-admin/admin-ajax.php?action=h5p_embed&id=34" width="958" height="440" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="http://35.187.71.29:8080/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
 ## Accounting for Data of Others
 
@@ -132,10 +133,6 @@ In this video below you will learn how to minimise the risk of losing data. You 
 
 From the weblecture you learned how to prevent data loss. Can you recall all applicable active regimes, as explained in the weblecture?
 
-Below you see a list of solutions to prevent data loss. Underneath that list you see a list of risks for data loss. Please add the number of each solution to the correct risk.
-
-**Solutions to prevent data loss**
-
 1. Have multiple copies. Use a checksum to identify faulty copies
 2. Use preferred file formats that can be opened by a wide range of software. Update the file format to a current one.
 3. Move data to fresh media well before the media’s expiration date.
@@ -143,24 +140,7 @@ Below you see a list of solutions to prevent data loss. Underneath that list you
 5. Document your data well.
 6. Advertise the content in a data catalogue.
 
-TODO: add H5P quiz
-
-Please add the number of each solution mentioned above to the correct risk listed below.
-
-- The media on which data is stored becomes outdated.
-- File formats and software become outdated.
-- The media on which data is stored becomes defective.
-- Digital sources degrade over time ('bit rot').
-- The data repository goes into oblivion.
-- The person that understands the data finds another job or simply forgets.
-
-Solution
-- The media on which data is stored becomes outdated. 3
-- File formats and software become outdated. 2
-- The media on which data is stored becomes defective. 4
-- Digital sources degrade over time ('bit rot'). 1
-- The data repository goes into oblivion. 6
-- The person that understands the data finds another job or simply forgets. 5
+<iframe src="http://35.187.71.29:8080/wp-admin/admin-ajax.php?action=h5p_embed&id=35" width="958" height="692" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="http://35.187.71.29:8080/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
 ### Write Your Data Management Plan for Your Data Preservation
 
