@@ -106,15 +106,9 @@ To avoid confusion, select one place where the master copies of your work are lo
 
 ![Master file location](../../images/04_SchemeMasterBackupDev.png)
 
-TODO add H5P
-Indicate which of the following storage options are appropriate for a master file.
-- Laptops
-- CD-rom
-- USB-stick
-- Local hard drive
-- Mail Server
+TODO exercise below needs a few correct options. In the UU version these are YODA, SURFdrive and their O-drive. Which alternatives do we advise?
 
-Laptops are not appropriate for your master file as they are perishable and not backed up in any way. CD-ROMs are not appropriate for your master file as they are highly perishable, not backed up in any way and easily lost. USB-sticks are not appropriate for your master file as they are perishable, not backed up in any way and easily lost. Local hard drives are not appropriate for your master file as they are perishable and usually not backed up in any way. An email server is not appropriate for your master file as it is unclear where the data is stored and for how long.
+<iframe src="http://35.187.71.29:8080/wp-admin/admin-ajax.php?action=h5p_embed&id=29" width="958" height="354" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="http://35.187.71.29:8080/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
 ## Make Backups
 
