@@ -229,8 +229,7 @@ You have learned that good data management contributes to the findability, acces
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/fduDfgz15PY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-TODO: add links to ORION course or other relevant elements
-Flemish open science plan?
+TODO: add links to ORION course or other relevant elements Flemish open science plan?
 
 ## Write your Data Management Plan for Your Data Reuse
 
