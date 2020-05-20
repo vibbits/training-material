@@ -80,7 +80,6 @@ Re3data.org makes it possible to search for a repository that meets your criteri
 
 TODO: H5P quiz with ELIXIR resources
 
-
 ## Give Clarity with (Creative Commons) Licences
 
 In order to publish your data and make it reusable, you require a licence. A licence creates clarity and certainty for potential users of your data. A licence is not an option for all data; some of it may be too confidential or privacy-sensitive to be published.
@@ -180,8 +179,8 @@ Irino, T; Tada, R (2009): Chemical and mineral compositions of sediments from OD
 
 ### Tips
 
-Tip1: Get a PID at the data repository of your choice.
-Tip2: Is your PID a DOI and do you want to cite it in the format of a specific journal? Use the [DOI formatter](https://citation.crosscite.org/) from CrossCite.
+- Tip1: Get a PID at the data repository of your choice.
+- Tip2: Is your PID a DOI and do you want to cite it in the format of a specific journal? Use the [DOI formatter](https://citation.crosscite.org/) from CrossCite.
 
 <iframe src="http://35.187.71.29:8080/wp-admin/admin-ajax.php?action=h5p_embed&id=32" width="958" height="545" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="http://35.187.71.29:8080/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
