@@ -137,7 +137,9 @@ Please consult this [Privacy Reference Card](https://www.eur.nl/sites/corporate/
 
 The European General Data Protection Regulation (GDPR) outlines how we should work with privacy-sensitive data.
 
-![GDPR 6 principles -80width](../../images/03_SixPrinciplesGDPR.jpg "Six principles from the European General Data Protection Regulation")
+![GDPR 6 principles -80width](../../images/03_GDPR_SixPrinciples.jpg "Six principles from the European General Data Protection Regulation")
+
+![Legal Agreement contacts -80width](../../images/AgreementsPicture.png "Agreement types for data")
 
 The GDPR outlines six data protection principles you must comply with when processing personal data. These principles relate to:
 
