@@ -165,7 +165,7 @@ Here is a list of things you can standardise in your research.
 
 Follow the links below for examples of standards. What type of standardisation do the links refer to?
 
-- Find via Google: “general morphology score (GMS)”
+- Find via Google: “general morphology score (GMS)” TODO **GB** Do they mean this site? http://allie.dbcls.jp/pair/GMS;General+Morphology+Score.html
 - [Demographic market research](http://www.amplituderesearch.com/market-research-questions.shtml)
 - [Marine Geoscience Data](http://www.marine-geo.org/submit/guidelines.php)
 - [The Cultural Objects Name Authority](http://www.getty.edu/research/tools/vocabularies/cona/index.html))
