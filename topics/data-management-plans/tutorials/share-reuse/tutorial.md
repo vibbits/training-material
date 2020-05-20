@@ -63,7 +63,7 @@ You can browse or search for a data repository in re3data.org. This is a global 
 [re3data.org](https://www.re3data.org/)
 
 ### Some Well-known and More Generic Repositories
--**[Zenodo](https://zenodo.org/)** A repository that enables researchers, scientists, EU projects and institutions to share and showcase multidisciplinary research results (data and publications) that are not part of the existing institutional or subject-based repositories of the research communities;
+- **[Zenodo](https://zenodo.org/)** A repository that enables researchers, scientists, EU projects and institutions to share and showcase multidisciplinary research results (data and publications) that are not part of the existing institutional or subject-based repositories of the research communities;
 - **[Dryad](http://www.datadryad.org/)** A curated general-purpose repository that makes the data underlying scientific publications discoverable, freely reusable and citable. Dryad has integrated data submission for a growing list of journals;
 - **[DataverseNL](https://dataverse.nl/dataverse/UU)** For any kind of data with a designated service for Utrecht University;
 - **[Open Science Framework (OSF)](https://osf.io/)** A scholarly commons to connect the entire research cycle. It is part network of research materials, part version control system, and part collaboration software;
