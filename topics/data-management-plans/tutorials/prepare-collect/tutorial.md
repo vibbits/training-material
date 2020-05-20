@@ -138,13 +138,10 @@ Watch the screencast below. In this screencast, you will be guided through diffe
 
 You have just learned that there are different places to find data. By actively searching the different places, you will get an understanding of the differences. Look at the different portals below. Some of them have been showcased in the screencast, some of them are additional.
 
-> [Google](http://www.google.be) - add "database OR registry OR dataset OR archive OR statistics" to your search
->
-> [Registry of Research Data Repositories re3data](https://www.re3data.org/) - find appropriate repositories holding interesting data
->
-> [Elsevier Data Search](https://datasearch.elsevier.com/#/) - try out chip-seq drosophila
->
-> [Google Dataset Search](https://datasetsearch.research.google.com/) - try out chip-seq drosophila. Google Dataset Search indexes [OmicsDI](https://www.omicsdi.org/), an index providing a knowledge discovery framework across heterogeneous omics data (genomics, proteomics, transcriptomics and metabolomics).   
+- [Google](http://www.google.be) - add "database OR registry OR dataset OR archive OR statistics" to your search
+- [Registry of Research Data Repositories re3data](https://www.re3data.org/) - find appropriate repositories holding interesting data
+- [Elsevier Data Search](https://datasearch.elsevier.com/#/) - try out chip-seq drosophila
+- [Google Dataset Search](https://datasetsearch.research.google.com/) - try out chip-seq drosophila. Google Dataset Search indexes [OmicsDI](https://www.omicsdi.org/), an index providing a knowledge discovery framework across heterogeneous omics data (genomics, proteomics, transcriptomics and metabolomics).   
 
 ### Assess the Usefulness of Existing Data
 
