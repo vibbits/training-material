@@ -196,7 +196,7 @@ TODO: change accordingly
 Please find more information in the guide [Legal instruments and agreements](https://www.uu.nl/en/research/research-data-management/guides/legal-instruments-and-agreements)
 
 ### Confidential or Privacy-Sensitive Data
-When your research project has received data under confidentiality or under legal privacy restrictions, you will have to identify and explain how you will deal with these restrictions in your data management plan (also see ‘[Learning Unit: Handle - Data security](../handle-security/tutorial.md)’).
+When your research project has received data under confidentiality or under legal privacy restrictions, you will have to identify and explain how you will deal with these restrictions in your data management plan (also see ‘[Learning Unit: Handle - Data security](../handle-security/tutorial.html)’).
 
 ## Costs Involved with Managing Your Data
 
@@ -206,7 +206,7 @@ The costs of data management and sharing activities must be included into your r
 
 ### Data Management Cost Guide
 
-When you plan your research you may not be able to oversee all costs involved. Nevertheless, it is useful to have an idea of possible costs at an early stage. You can use the Guide [Costs OVerview](../../docs/01_UU_CostOverview.docx), which is a practical overview of possible costs per activity within each phase of the research process. Note: The Cost Guide offers cost indications and examples. These are not real prices.
+When you plan your research you may not be able to oversee all costs involved. Nevertheless, it is useful to have an idea of possible costs at an early stage. You can use the Guide [Costs Overview](../../docs/01_UU_CostOverview.docx), which is a practical overview of possible costs per activity within each phase of the research process. Note: The Cost Guide offers cost indications and examples. These are not real prices.
 
 ### Budget Your Data Management Costs
 
@@ -222,11 +222,9 @@ Planning an early start for certain activities within your research project can 
 
 Spending time to think about data activities beforehand can help prevent unexpected extra efforts and costs later on in your research project.
 
-## Check Current and Expected Costs for Your Research Data
+### Check Current and Expected Costs for Your Research Data
 
 You have just learned that in many parts of a research project there are data related costs. These costs depend on the type and volume of data you produce, analyse and store.
-
-[Cost overview](../../docs/01_UU_CostOverview.docx)
 
 
 ## Write Your Data Management Plan for Your Data Collection
