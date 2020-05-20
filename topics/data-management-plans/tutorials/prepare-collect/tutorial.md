@@ -51,7 +51,6 @@ When collecting data it is important to consider the formats of your data files.
 - Understand why data centres require you to deposit your data in preffered data format;
 - Make informed decisions about data file formatting, conversion and migration.
 
-
 The file formats you use to generate your research data will influence how you can manage them over time, i.e. a program or application must be able to recognise the file format in order to access your data within the file.
 For example, a web browser is able to process and display a file in the HTML file format so that it appears as a web page. If the browser encounters another file type, it may need to call on a special plug-in to view it. Or it may simply let you download the file to view if it can recognise it in another program.
 
@@ -185,7 +184,7 @@ Please watch the video below. Tessa Pronk will explain to you how to describe yo
 Copyright is a form of intellectual property right which arises automatically if an original work is created. Copyright may affect the way data may be stored, shared and reused. You should ask yourself who the copyright holder of your datasets is, especially when you use existing data or when you collaborate with external parties.
 
 ### Using Someone Else’s Research Data
-Here's a [A brief guide to determining what consent is necessary to reuse someone else’s data](../../documents/01_Brief_Guide_To_Determining_Consent_To_Reuse_Data.pdf).
+Here's a [A brief guide to determining what consent is necessary to reuse someone else’s data](../../docs/01_Brief_Guide_To_Determining_Consent_To_Reuse_Data.pdf).
 
 ### Clarifying the Ownership of Your Research Data
 
@@ -210,7 +209,7 @@ The costs of data management and sharing activities must be included into your r
 
 ### Data Management Cost Guide
 
-When you plan your research you may not be able to oversee all costs involved. Nevertheless, it is useful to have an idea of possible costs at an early stage. You can use the Guide [Costs OVerview](../../documents/01_UU_CostOverview.docx), which is a practical overview of possible costs per activity within each phase of the research process. Note: The Cost Guide offers cost indications and examples. These are not real prices.
+When you plan your research you may not be able to oversee all costs involved. Nevertheless, it is useful to have an idea of possible costs at an early stage. You can use the Guide [Costs OVerview](../../docs/01_UU_CostOverview.docx), which is a practical overview of possible costs per activity within each phase of the research process. Note: The Cost Guide offers cost indications and examples. These are not real prices.
 
 ### Budget Your Data Management Costs
 
