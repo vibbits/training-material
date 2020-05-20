@@ -184,7 +184,7 @@ Irino, T; Tada, R (2009): Chemical and mineral compositions of sediments from OD
 
 <iframe src="http://35.187.71.29:8080/wp-admin/admin-ajax.php?action=h5p_embed&id=32" width="958" height="545" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="http://35.187.71.29:8080/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
-### FAIR Data
+## FAIR Data
 
 FAIR stands for ‘Findable, Accessible, Interoperable, and Reusable’. The FAIR data principles act as an international guideline for the result of high-quality data management.
 
@@ -206,7 +206,7 @@ The data can be used and combined with other datasets. To achieve this, the data
 
 The options for reuse should be stated clearly in a licence. Without a licence there is no certainty about the options for reuse and creator rights are implicit.
 
-#### How to achieve FAIR data
+### How to achieve FAIR data
 
 In general, having a good data management plan will lead to FAIR data. In the case of privacy-sensitive data, it is possible to meet the criteria, but not to share the data openly. In this case you can make sure that a well-described dataset can be found online, while preventing the underlying data to be downloaded and used without permission.
 
@@ -216,7 +216,7 @@ The FAIR Guiding Principles were put together and published in Scientific Data (
 
 <iframe src="http://35.187.71.29:8080/wp-admin/admin-ajax.php?action=h5p_embed&id=33" width="958" height="397" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="http://35.187.71.29:8080/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
-## Open Science
+### Open Science
 
 “Open Science is the practice of science in such a way that others can collaborate and contribute, where research data, lab notes and other research processes are freely available, under terms that enable reuse, redistribution and reproduction of the research and its underlying data and methods.”
 
@@ -224,7 +224,7 @@ The FAIR Guiding Principles were put together and published in Scientific Data (
 
 You have learned that good data management contributes to the findability, accessibility, interoperability and reusability of your research data. This does not necessarily mean that you should make your data openly available. But to open up data, you do need good data management from the earliest possible stage of your research project.
 
-### Dr. Daniel Oberski on Open Science
+#### Dr. Daniel Oberski on Open Science
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/fduDfgz15PY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
