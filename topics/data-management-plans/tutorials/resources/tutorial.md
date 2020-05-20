@@ -24,6 +24,10 @@ contributors:
 
 - [Policy Framework from VUB](https://vub.sharepoint.com/sites/ORG-RandD/SitePages/RESEARCH-DATA-MANAGEMENT.aspx?web=1)
 
+## Funder guidelines and Templates
+- [EC – Horizon 2020: guidelines](https://ec.europa.eu/research/openscience/index.cfm)
+- [FWO template](https://www.fwo.be/media/1023898/fwo-dmp-templatedocx.docx)
+
 ## File Formats
 
 - [Dans](https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats)
