@@ -43,15 +43,19 @@ You can watch the video below, provided by TU Delft, about data collection. The 
 
 This part is based on the online Research Data Management training 'MANTRA' of The University of Edinburgh (CC BY: [https://mantra.edina.ac.uk/](https://mantra.edina.ac.uk/)) and Managing Data @ Melbourne.
 
-![Introduction ](../../images/01_Preferred-formats_Learning_Objective.png "Learning objectives")
+When collecting data it is important to consider the formats of your data files. Not all file formats are created equal. Some file fonmats are better suited for your data’s needs than others. When you need to convert, migrate, compress or share your data, you should choose the best available method and file format for the intended use. In this part of the course you will learn to:
 
----
+- Understand why research data formatting and transformation is important;
+- Identify the risks of file transformations;
+- Understand the difference between proprietary and open file fonnats;
+- Understand why data centres require you to deposit your data in preffered data format;
+- Make informed decisions about data file formatting, conversion and migration.
+
+
 The file formats you use to generate your research data will influence how you can manage them over time, i.e. a program or application must be able to recognise the file format in order to access your data within the file.
 For example, a web browser is able to process and display a file in the HTML file format so that it appears as a web page. If the browser encounters another file type, it may need to call on a special plug-in to view it. Or it may simply let you download the file to view if it can recognise it in another program.
 
 To identify the file format, files usually have a file name extension, or suffix that follows a full stop in the file name and contains three or four letters, like for example:
-
-TODO: add PDF with links to preferred file formats
 
 - *.txt*
   text
