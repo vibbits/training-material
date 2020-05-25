@@ -20,6 +20,16 @@ contributors:
 
 <!-- This is a comment. -->
 
+## What is Research Data Management
+
+Research Data Management refers to any action that takes care of data before, during and/or after research. It is *the compilation of many small practices that make your data easier to understand, less likely to be lost, and more likely to be usable during a project or ten years later* (Briney 2015)
+
+![What is research data management -80width](../../images/00_WhatIsResearchDataManagement.jpg "What is research data management")
+
+### The Research Data Lifecycle
+
+
+
 ## Why Manage Your Research Data?
 
 In this video Katarzyna Biernacka explains what data in a research context is.
@@ -113,7 +123,7 @@ FWO states that “FWO has made data management a key element of its policy for 
 
 ### Funder Guidelines and Templates
 
-Most funders require you to write a Data Management Plan. A DMP outlines all key aspects of collecting, storing and managing research data during and after a project. For this they provide you with guidelines, forms, templates and examples. For more information you can download the documents under Resources or check out the websites. You can also contact your faculty Research Support Office:
+Most funders require you to write a Data Management Plan. A DMP outlines all key aspects of collecting, storing and managing research data during and after a project. For this they provide you with guidelines, forms, templates and examples. For more information you can check out the websites. 
 
 - [EC – Horizon 2020: guidelines](https://ec.europa.eu/research/openscience/index.cfm)
 - [FWO template](https://www.fwo.be/media/1023898/fwo-dmp-templatedocx.docx)
