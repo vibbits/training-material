@@ -1,0 +1,10 @@
+---
+name: "basic-statistics"
+type: "basics"
+category: "statistics"
+title: "Basic statistics theory"
+summary: "Basic statistics theory"
+requirements:
+
+maintainers:
+  - janick-bits 
