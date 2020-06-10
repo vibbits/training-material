@@ -35,7 +35,7 @@ Why should you version control?
 One of Git's advantages is that you can choose whenever you save a version of your code, making it very flexible and powerful, however also comes with the downside that it requires good practice from your side to frequently and consistently save your files. Git works on the command line of e.g. your computer, whereas GitHub is a service for connecting and uploading/downloading files much like saving files in the cloud. Alternatives for GitHub are Gitlab, Bitbucket, etc. 
 
 # 2. Installations 
-For this course we will explore version controlling in a mixture of [GitHub online](https://github.com/) & [Git](https://git-scm.com/) on the command line. The latter requires some basic understanding of the Linux command line. If you're not familiar with Linux command line, you can have a look at the materials [here]((https://material.bits.vib.be/topics/linux/)). After discussing Git's essential features, we'll introduce how you can make life easier with Git(Hub)'s integration in Rstudio. 
+For this course we will explore version controlling in a mixture of [GitHub online](https://github.com/) & [Git](https://git-scm.com/) on the command line. The latter requires some basic understanding of the Linux command line. If you're not familiar with Linux command line, you can have a look at the materials [here]((https://material.bits.vib.be/topics/linux/)). After discussing Git's essential features, we'll introduce how you can make life easie r with Git(Hub)'s integration in Rstudio. 
 
 - Git can be installed for any OS (Windows, Mac or Linux) from [this link](https://git-scm.com/downloads).  
 - Make an account on [GitHub](https://github.com/). 
