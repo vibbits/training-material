@@ -4,19 +4,11 @@ layout: tutorial_hands_on
 title: 2 Configurations 
 zenodo_link: ''
 questions:
-- Which biological questions are addressed by the tutorial?
-- Which bioinformatics techniques are important to know for this type of data?
+- How to get started? 
 objectives:
-- The learning objectives are the goals of the tutorial
-- They will be informed by your audience and will communicate to them and to yourself
-  what you should focus on during the course
-- They are single sentences describing what a learner should be able to do once they
-  have completed the tutorial
-- You can use Bloom's Taxonomy to write effective learning objectives
-time_estimation: 3H
-key_points:
-- The take-home messages
-- They will appear at the end of the tutorial
+- Understand different level of configurations and know how to change them
+- Make your own git command
+time_estimation: 15m
 contributors:
 - tmuylder
 
@@ -39,7 +31,7 @@ Here we tell git to configure the global configuration file and add our GitHub u
 
 We can have a look at our global config file with the following command:
 ```
-git config --list
+git config --global --list
 ```
 
 Another thing we can edit in the configuration file is the editor. An editor is the program we want Git to use when we have to add a message or solve conflicts. During this course we will ommit the usage of editors as it sometimes drags us too far of topic, however, we'll define it anyway:
@@ -63,38 +55,8 @@ We will consider everything in the following sections (SSH keys and aliases) as 
 Using the SSH protocol, you can connect and authenticate to remote servers and services in a secure way.
 With SSH keys, you can connect to GitHub without supplying your username or password at each visit. If you want to create one, follow the brief instructions below or find them at [GitHub](https://help.github.com/en/github/authenticating-to-github/checking-for-existing-ssh-keys).
 
-Check whether you already have any existing SSH keys by opening Git Bash and type `ls -al ~/.ssh` and check whether there are files in the directory, e.g. a \*`.pub` file (with \* being any kind of precedent). If this is not the case, we'll make one first. If it is the case, yet it hasn't been linked with GitHub we'll do that in the second step.
-
-**Make an SSH-key**
-
-Paste the text below, substituting in your GitHub email address.
-```
-ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
-```
-This creates a new ssh key, using the provided email as a label. If prompted, choose the default location to save your keys. And lastly, at the prompt, type a secure passphrase. 
-
-Next, in order to securily save your passphrases, you can add the passphrases to your SSH key. Use your `ssh-agent` to securely save your passphrase so you don't have to reenter it. Start the `ssh-agent` in the background using the command below.
-```
-eval $(ssh-agent -s)
-```
-If it returns something like `Agent pid` and some number, you're good to go. Now, add your SSH private key to the ssh-agent. If you created your key with a different name, or if you are adding an existing key that has a different name, replace id_rsa in the command with the name of your private key file.
-```
-ssh-add ~/.ssh/id_rsa
-```
-**Add the SSH-key to your GitHub account**
-
-After adding a new SSH key to your GitHub account, you can reconfigure any local repositories to use SSH.
-1. Copy the public SSH key (the one that ends with `.pub`).
-2. Go to your GitHub account and on the upper right, click settings.
-3. In the user settings sidebar, click 'SSH and GPG keys'
-4. Add a 'New SSH Key'
-5. In the 'Title' field you can describe for what purpose this SSH key serves. In the 'Key' field, enter the copied public SSH key.
-6. Confirm by clicking 'Add SSH key' and entering your GitHub password.
-
-
-
 # 3. Aliases
-The configuration file is also a place where we can make our own aliases. An alias is a tailored command to your wishes. Here are some useful aliases for a structured history overview:
+The configuration file is also a place where we can make our own aliases. An alias is a new command tailored to your wishes. It often consists of an existing Git command (e.g. `git log`) followed by a bunch of variables, renamed to a new command. This omits that we have to type a long command the whole time. Here are some useful aliases for a structured history overview:
 ```
 git config --global alias.hist "log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
 git config --global alias.lol "log --graph --decorate --pretty=oneline --abbrev-commit --all"

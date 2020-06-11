@@ -4,19 +4,12 @@ layout: tutorial_hands_on
 title: 1 Introduction
 zenodo_link: ''
 questions:
-- Which biological questions are addressed by the tutorial?
-- Which bioinformatics techniques are important to know for this type of data?
+- Why should I version control and how to get started? 
+- How does Git work in its essence? 
 objectives:
-- The learning objectives are the goals of the tutorial
-- They will be informed by your audience and will communicate to them and to yourself
-  what you should focus on during the course
-- They are single sentences describing what a learner should be able to do once they
-  have completed the tutorial
-- You can use Bloom's Taxonomy to write effective learning objectives
-time_estimation: 3H
-key_points:
-- The take-home messages
-- They will appear at the end of the tutorial
+- Understand why version controlling is essential in different projects
+- Explain how Git's conceptual areas work together
+time_estimation: 20m
 contributors:
 - tmuylder
 
