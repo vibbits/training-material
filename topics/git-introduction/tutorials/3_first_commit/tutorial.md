@@ -4,14 +4,12 @@ layout: tutorial_hands_on
 title: 3 First commit
 zenodo_link: ''
 questions:
-- Which biological questions are addressed by the tutorial?
-- Which bioinformatics techniques are important to know for this type of data?
+- How to initialize a version controlled repository?
+- How to make your first commits to that repository? 
 objectives:
-- Make your own repository, clone into your local computer, make a file, make some changes, status, add, commit push
-time_estimation: 1H
-key_points:
-- The take-home messages
-- They will appear at the end of the tutorial
+- Make your own repository, clone into your local computer, make a file, make some changes, add to staging area, commit & push.
+- Understand how the different aspects and commands of version control interact with each other
+time_estimation: 1Hf
 contributors:
 - tmuylder
 
@@ -27,7 +25,7 @@ git commit -m "some text that explains what has changed"
 
 These commands will subsequently add the file `<file>` to the staging area and then commit it to the commit repository. If we wouldn't pass along the `-m`-message parameter, Git would have opened your editor where you write the commit message. It's good practice to write a short, but powerful commit message that helps your future self to determine what has changed in this commit. 
 
-Uptil now we kept track of our code locally on our computer. Imagine that your computer dies right now, we've lost everything. A bit less drastical, if you would just like to show your project to your colleagues or with the whole world, we need one more step. The last part of our routine usage would be to **push** the commit(s) to an online repository on GitHub. Here's how it looks like:
+Uptil now we kept track of our code locally on our computer. Imagine that you lose your computer now, you've also lost your project (and all the files in it). A bit less drastical, if you would just like to show your project to your colleagues or with the whole world, we need one more step. The last part of our routine usage would be to **push** the commit(s) to an online repository on GitHub. Here's how it looks like:
 ```
 git push
 ```
@@ -42,7 +40,7 @@ That's all you need to know: `add-commit-push`.
 ---
 
 
-There are two ways of **initializing a new Git repository**:
+Before we can start adding, committing and pushing, we have to start a version controlled project/repository. There are two ways of **initializing a new Git repository** which only has to be performed once right at the start:
 - Clone a GitHub repository (from GitHub): see Section 2
 - Initialize Git on a folder on your computer: see Section 4   
 Both options will work fine and depends on your preferences or maybe the situation of the project. The first option can be used if you're about to start a new project, the second option can be used when you already have some files in a project which you now want to start version controlling. 
@@ -51,7 +49,7 @@ Both options will work fine and depends on your preferences or maybe the situati
 
 # 2. Create a new repository from GitHub
 
-Go to your GitHub homepage and click the '+' icon in the upper right corner. The following screen will pop up.
+Go to your GitHub homepage and click on the '+' icon in the upper right corner and select 'New repository'. The following screen will pop up.
 
 
 ---
@@ -74,7 +72,8 @@ In our case, we will initialize the repository with a README file and click 'Cre
 
 ---
 
-This is the home directory of a GitHub repository. From here we can already do a lot, like changing or uploading files. 
+This is the home directory of a GitHub repository. From here we can already do a lot, like changing or uploading files. We initialized a GitHub repository with a README file and we can see that we have only one file in this repository: the README file. By default the text in this README file is the title of the repository and the description that we created here above. A README file is basically a text file with some explanation related to the repository. For example, what the code is all about, how to use it, how to acknowledge the developers, etc. Notice that it's a Markdown-file as we can see by the .md extension. An ordinary text file on your computer has a .txt extension or a word file has docx. More information related to markdown can be accessed from the Github guides [here](https://guides.github.com/features/mastering-markdown/). 
+
 
 If you want to make a local copy of the repository, we have to **clone** it to our computer. Click on the green button 'Clone or download' and copy the link.  Within the Git Bash (or Terminal), navigate to the folder where you want to keep your project folder and type the following:
 ```
@@ -86,7 +85,7 @@ with `<link>` being the link from GitHub.
 
 > ### {% icon hands_on %} Exercise 1
 >
->  Create a new GitHub repository, give it a name and initialize it with a `README`-file. Upload [this file](../../../../assets/files/git-introduction/plot1.R) to the repository on GitHub. What is GitHub asking you to do? Which stage is ommitted when uploading a file directly to GitHub?  
+>  Create a new GitHub repository, give it a name and initialize it with a `README`-file. Upload [this file](../../../../assets/files/git-introduction/plot1.R) to the repository on GitHub. What is GitHub asking you to do? Which stage is omitted when uploading a file directly to GitHub?  
 > 
 > Clone the repository to your computer. How many files are there in your local repository?
 > 
@@ -103,7 +102,8 @@ with `<link>` being the link from GitHub.
 >    > ```
 >    > in which you change `<link>` to the link that you copied from GitHub. There should be two files in your local repository as well.   
 >    > On a Windows computer we have a folder that contains the following files:
->    > ![windowsfolder](../../images/folder1.PNG)
+>    > <center><img src="../../images/folder1.PNG"/></center>
+>    >  
 >    > </details>
 >
 {: .hands_on}
@@ -114,7 +114,7 @@ Our local copy (clone) of the GitHub repository is now able to communicate with 
 
 
 ## 3.1 Staging
-Let's add a new file to our folder. Download [this file](../../../../assets/files/git-introduction/plot2.R) and copy paste it in our project folder. It contains some R code for plotting a new figure.  
+Let's add a new file to our folder on our computer locally. Download [this file](../../../../assets/files/git-introduction/plot2.R) and add it in the folder where also the `plot1.R` file is located. It contains some R code for plotting a new figure.  
 
 The first thing we'll have to do now is to stage the file into the staging area.  Remember that this is an intermediate area before committing the file to the repository. In a next section we will learn why this staging area can be useful. 
 
@@ -270,6 +270,8 @@ It's always better to have more commits; in case you want to remove part of your
 
 
 # 6. Pull
+Imagine that you change something in a file on GitHub, or upload a new file online via GitHub. We would want this change to appear locally as well. For this we need to use the `pull` command to pull the updates in. 
+
 Let's go back to our repository on GitHub.com. We will make a change in the repository on GitHub and then pull these changes back into the repository on our computer (i.e. the project folder on our computer). 
 
 Click on the `README.md` file in the list of files and click the pencil icon on the upper right. The file will open in an editor mode and we can change the title from *introduction-github* to *Introduction GitHub* or we can add some more descriptive text. Note that a README file is by default a markdown-file. Markdown is a text file with lay-outing options. If you haven't heard of it before, it's worth some [further reading](https://guides.github.com/features/mastering-markdown/).

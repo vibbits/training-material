@@ -4,19 +4,13 @@ layout: tutorial_hands_on
 title: 4 History & status
 zenodo_link: ''
 questions:
-- Which biological questions are addressed by the tutorial?
-- Which bioinformatics techniques are important to know for this type of data?
+- How to get an overview of the status of the repository?
+- How to access the history of all the commits that have been done?
 objectives:
-- The learning objectives are the goals of the tutorial
-- They will be informed by your audience and will communicate to them and to yourself
-  what you should focus on during the course
-- They are single sentences describing what a learner should be able to do once they
-  have completed the tutorial
-- You can use Bloom's Taxonomy to write effective learning objectives
-time_estimation: 3H
-key_points:
-- The take-home messages
-- They will appear at the end of the tutorial
+- Keep track of the status of the repository and its files
+- Understand the suggestions that Git makes
+- Remember that a file in a staging area or that has been committed can be undone.  
+time_estimation: 30m
 contributors:
 - tmuylder
 
