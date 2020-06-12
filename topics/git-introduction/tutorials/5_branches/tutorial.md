@@ -4,19 +4,13 @@ layout: tutorial_hands_on
 title: 5 Branches and merging
 zenodo_link: ''
 questions:
-- Which biological questions are addressed by the tutorial?
-- Which bioinformatics techniques are important to know for this type of data?
+- How to test new features in code
 objectives:
-- The learning objectives are the goals of the tutorial
-- They will be informed by your audience and will communicate to them and to yourself
-  what you should focus on during the course
-- They are single sentences describing what a learner should be able to do once they
-  have completed the tutorial
-- You can use Bloom's Taxonomy to write effective learning objectives
-time_estimation: 3H
-key_points:
-- The take-home messages
-- They will appear at the end of the tutorial
+- Understand why branches are useful 
+- Create new branches in GitHub or locally
+- Merge a new feature into a master branch
+- 
+time_estimation: 40m
 contributors:
 - tmuylder
 
@@ -235,7 +229,14 @@ Next time you want to push your commits from *new-branch*, you won’t need to b
 
 ## 5.1. Via GitHub
 
-If a branch is of no more use, we can delete it. Click on *branches* in the area depicted in figure below and find all of the branches as part of this GitHub repository:
+If a branch is of no more use, we can delete it. To find all the existing branches:
+1. In the new GitHub website, click on *branches* in the upper right of the repository (right underneath Clone)
+---
+
+<center><img src="../../images/deleting-branch-1-update.PNG" /></center>
+
+---
+2. In the slightly older version, click on *branches* in the area depicted in figure below
 
 ---
 
