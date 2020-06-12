@@ -4,19 +4,11 @@ layout: tutorial_hands_on
 title: 6 Forks
 zenodo_link: ''
 questions:
-- Which biological questions are addressed by the tutorial?
-- Which bioinformatics techniques are important to know for this type of data?
+- How to collaborate on a(n existing) project
 objectives:
-- The learning objectives are the goals of the tutorial
-- They will be informed by your audience and will communicate to them and to yourself
-  what you should focus on during the course
-- They are single sentences describing what a learner should be able to do once they
-  have completed the tutorial
-- You can use Bloom's Taxonomy to write effective learning objectives
+- Understand and being able to apply GitHubs Fork & pull workflow
+- Pull upstream commits to a forked repository
 time_estimation: 30m
-key_points:
-- The take-home messages
-- They will appear at the end of the tutorial
 contributors:
 - tmuylder
 
@@ -74,7 +66,7 @@ The repository has been successfully forked if you see something similar to the 
 ---
 
 
-# 3. Changes
+# 4. Changes
 In normal circumstances, this would be the point where you clone this repository locally, make a branch and do some edits in that branch. The flow here remains the same: stage-commit-push. For this exercise we will only edit the `participants.txt` file on GitHub as we've explored the local usage before. 
 
 Add your name, accountname or initials and the date to the `participants.txt` file. 
@@ -109,7 +101,7 @@ A new screen pops up that looks very similar to the one seen in Chapter 5 (Branc
 
 GitHub tells us:
 - It compared the master branch of the forked repository (in my case *tmuylder/fork-repository*) with the upstream (base) repository *vibbits/fork-repository*. 
-- It's able to merge these two branches withouth any conflicting errors
+- It's able to merge these two branches without any conflicting errors
 - It summarizes the changes that have been done in the branch that will be merged into the upstream.  
 
 If all seems good, you can create the pull request. In the case that there are any conflicting errors, they'll need to be solved first. Afterwards you only need to add a message that accompanies the pull request. 
@@ -121,7 +113,7 @@ A brief overview of the pull request is given in the following screen which eith
 <center><img src="../../images/forked-repository-final-pull-request.PNG" /></center>
 ---
 
-# 4. Overview
+# 5. Overview
 This is the easiest collaboration you'll probably do in a lifetime. To briefly summarize, the steps that we took were: *fork > edit > pull request (> merge)*. As mentioned before this is only possible if the upstream repository didn't change (too much). If this were to be the case, there might be one additional step in which you have to solve conflicts in the pull request. 
 
 If your changes were a bit more complex and needed to be performed on your local computer, the steps would extent to: *fork > clone (> branch) > edit-stage-commit-push > pull request (> merge)*. What if the upstream repository changed while you were working on your local repository? In this case a pull request should be done in which the receiving branch is your forked repository. Hence, the order of the branches as depicted in the figure above would be swapped.    
