@@ -139,11 +139,13 @@ We added a parameter `-m` (message) to the command followed by some text. This t
 >   - “Added line ‘We use this repo as an example’ to README.md”
 >   - “Added purpose description to the README file”
 >
-> > ### {% icon solution %} Solution
-> >
-> > One can argue on the appropriatness of commit messages as it is subjective. In this case however, the third options seems most ideal. It's both not too generic and not too specific. 
-> >
-> {: .solution}
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
+>    >
+>    > One can argue on the appropriatness of commit messages as it is subjective. In this case however, the third options seems most ideal. It's both not too generic and not too specific. 
+>    >
+>    > </details>
 >
 {: .question}
 
@@ -157,11 +159,12 @@ We added a parameter `-m` (message) to the command followed by some text. This t
 >   - We saved a version of the file which is now visible on GitHub.com
 >   - We saved a version of the file which is now stored in our commit repository
 >
-> > ### {% icon solution %} Solution
-> >
-> > We've been working locally uptil now and didn't push the commits to the GitHub repository, hence it's still in our commit repository. 
-> >
-> {: .solution}
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
+>    > We've been working locally uptil now and didn't push the commits to the GitHub repository, hence it's still in our commit repository. 
+>    >
+>    > </details>
 >
 {: .question}
 
