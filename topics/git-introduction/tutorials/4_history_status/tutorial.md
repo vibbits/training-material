@@ -71,8 +71,8 @@ Let's do the latter, check the status again and then remove the changes from you
 # 5. The history (log)
 Besides checking the state of your project with `git status`, there is also a possibility to have a look in your commit history. In order to list all your previous commits, enter `git log`. The output is a long list containing several blocks like this:
 ```
-commit e2d7e9a0b461426bee6b3ffd7583237bc5671dc1
-Author: tmuylder <tuurmuyldermans@gmail.com>
+commit e2d7e9a0b4614a6bee6b3ffd7583237125671dc1
+Author: username <user@xyz.com>
 Date:   Wed Jan 01 01:23:45 2020 +0200
 
     The informative commit message
