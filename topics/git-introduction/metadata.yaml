@@ -1,0 +1,10 @@
+---
+name: "git-introduction"
+type: "basics"
+category: "basics"
+title: "Introduction to Git & GitHub"
+summary: "This tutorial will get you started with Git & GitHub for version controlling your project's files & scripts." 
+requirements: 
+
+maintainers:
+- tmuylder
