@@ -8,9 +8,6 @@ questions:
 objectives:
 - Understand the concept of .gitignore files
 time_estimation: 10m
-key_points:
-- The take-home messages
-- They will appear at the end of the tutorial
 contributors:
 - tmuylder
 ---
