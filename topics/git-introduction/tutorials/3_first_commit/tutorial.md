@@ -9,7 +9,7 @@ questions:
 objectives:
 - Make your own repository, clone into your local computer, make a file, make some changes, add to staging area, commit & push.
 - Understand how the different aspects and commands of version control interact with each other
-time_estimation: 1Hf
+time_estimation: 1H
 contributors:
 - tmuylder
 
