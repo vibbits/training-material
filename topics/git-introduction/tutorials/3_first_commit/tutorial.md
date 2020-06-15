@@ -35,7 +35,7 @@ That's all you need to know: `add-commit-push`.
 
 ---
 
-<center><img src="../../images/conceptual_areas_push.png" /></center>
+<center><img src="../../images/conceptual_areas_push.png" width="1000" /></center>
 
 ---
 
