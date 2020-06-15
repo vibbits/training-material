@@ -87,11 +87,12 @@ If we have pushed the commits to our Github repository (online) we will see the 
 > 
 > Why is it useful to have the author's name and e-mail address in the history log?
 >
-> > ### {% icon solution %} Solution
-> >
-> > It's obvious that in this local project we've been doing all the changes & commits. However at a certain point you migth cooperate with someone else on the same project. In this case it's useful to know who did what changes.  
-> >
-> {: .solution}
+>    > <details markdown="1">
+>    > <summary>{% icon solution %} Solution
+>    > </summary>
+>    > It's obvious that in this local project we've been doing all the changes & commits. However at a certain point you migth cooperate with someone else on the same project. In this case it's useful to know who did what changes.  
+>    >
+>    > </details>
 >
 {: .question}
 
