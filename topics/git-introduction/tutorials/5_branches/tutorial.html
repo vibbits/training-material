@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="dw_1zBYRNxF7-vYNDXh3Ght_JuqgJt3BD1N_Pynqmv0" />
+    <title>5 Branches and merging</title>
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-61194136-18', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=3">
+    <link rel="stylesheet" href="/assets/css/bootstrap-toc.min.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="/assets/css/main.scss">
+    <link rel="stylesheet" href="/assets/css/VIB.css">
+    <link rel="stylesheet" href="/assets/css/academicons.css">
+    <link rel="stylesheet" href="/assets/css/syntax_highlighting.css">
+    <link rel="shortcut icon" href="/favicon.ico " type="image/x-icon" />     
+    <meta name="description" content="This tutorial will get you started with Git & GitHub for ..." />
+    <meta property="og:title" content="VIB Bioinformatics Training: 5 Branches and merging" />
+    <meta property="og:description" content="This tutorial will get you started with Git & GitHub for ..." />
+    <meta property="og:image" content="/assets/images/bioinformatics_core_rgb_neg.png" />
+</head>
+
+<body data-spy="scroll" data-target="#toc">
+    <div class="top-bar-vib">
+ <a href="http://vib.be/en" target="_blank" style="font-size:14px">VIB Home </a>
+</div>
+
+<div class="container main-content">
+
+<div class="container page-top__container">
+          <div class="region region-top">
+  <div id="logo" class="col-md-3 col-lg-3 text-left" style="padding-left:0px;margin-top:20px">
+       <a href="/">
+           <img src="/assets/images/logo.svg" height="60" alt="VIB logo" class="margin20">
+       </a>
+    </div>
+    <div class="col-md-9 col-lg-9 text-right" style="margin-top:50px;">
+    <nav role="navigation" aria-labelledby="block-mainnavigation-menu" id="block-mainnavigation" class="block block-menu navigation menu--main">
+  
+
+
+        <a href="/" class="topmenu">Home</a>
+
+
+        <a href="/about.html" class="topmenu" >About</a>
+
+
+        <a href="/hall-of-fame.html" class="topmenu">Contribute</a>
+
+
+        <a href="/faq.html" class="topmenu">Faq</a>
+
+
+        <a href="/search/index.html" class="topmenu">Search</a>
+
+
+  </nav>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="application/ld+json">
+        
+
+
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "accessMode": [
+    "textual",
+    "visual"
+  ],
+  "accessModeSufficient": [
+    "textual",
+    "visual"
+  ],
+  "accessibilityControl": [
+    "fullKeyboardControl",
+    "fullMouseControl"
+  ],
+  "accessibilityFeature": [
+    "alternativeText",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "Short descriptions are present but long descriptions will be needed for non-visual users",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "students"
+  },
+  "copyrightHolder": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "headline": "5 Branches and merging",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "interactivityType": "mixed",
+  "isAccessibleForFree": true,
+  "license": "/blob//LICENSE.md",
+  "producer": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "provider": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "sourceOrganization": {
+    "@type": "Organization",
+    "email": "bits@vib.be",
+    "name": "VIB Bioinformatics Core",
+    "url": "https://www.bits.vib.be"
+  },
+  "courseCode": "git-introduction / 5_branches / hands-on",
+  "learningResourceType": "hands-on tutorial",
+  "name": "Hands-on for '5 Branches and merging' tutorial",
+  "isPartOf": {
+    "@type": "Course",
+    "name": "5 Branches and merging",
+    "description": "5 Branches and merging",
+    "learningResourceType": "tutorial",
+    "interactivityType": "expositive",
+    "provider": {
+      "@type": "Organization",
+      "email": "bits@vib.be",
+      "name": "VIB Bioinformatics Core",
+      "url": "https://www.bits.vib.be"
+    }
+  },
+  "url": "https://material.bits.vib.be//topics/git-introduction/tutorials/5_branches/tutorial.html",
+  "timeRequired": "PT40M",
+  "description": "5 Branches and merging\\nThe questions this  addresses are:\n - How to test new features in code\n\n\\nThe objectives are:\n - Understand why branches are useful\n - Create new branches in GitHub or locally\n - Merge a new feature into a master branch\n - \n\n",
+  "hasPart": [
+
+  ],
+  "mentions": [
+    {
+      "@type": "Thing",
+      "url": "",
+      "name": "Training data for 5 Branches and merging tutorial"
+    }
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Tuur Muyldermans"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Tuur Muyldermans"
+    }
+  ],
+  "about": [
+    {
+      "@type": "CreativeWork",
+      "name": "Introduction to Git & GitHub",
+      "description": "This tutorial will get you started with Git & GitHub for version controlling your project's files & scripts.",
+      "url": "https://material.bits.vib.be//topics/git-introduction/"
+    }
+  ]
+}
+    </script>
+
+    <div class="row tutorial">
+      <div class="col-md-12" role="main">
+        <h1 data-toc-skip>5 Branches and merging</h1>
+        <div class="contributors-line">By: 
+
+<a href="/hall-of-fame#tmuylder" class="contributor-badge">Tuur Muyldermans</a>
+
+
+</div>
+        <blockquote class="overview">
+
+            <strong><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</strong>
+            <ul>
+            
+            <li>How to test new features in code</li>
+            
+            </ul>
+
+            <strong><i class="fa fa-bullseye" aria-hidden="true"></i><span class="visually-hidden">objectives</span> Objectives</strong>
+            <ul>
+            
+            <li>Understand why branches are useful</li>
+            
+            <li>Create new branches in GitHub or locally</li>
+            
+            <li>Merge a new feature into a master branch</li>
+            
+            <li></li>
+            
+            </ul>
+
+            
+
+            
+            <p><strong><i class="fa fa-hourglass-end" aria-hidden="true"></i><span class="visually-hidden">time</span> Time estimation:</strong> 40 minutes</p>
+            
+
+            
+
+
+            
+
+        </blockquote>
+
+        <div class="container" data-field="body">
+            <div class="row">
+                <div class="col-md-10" role="main">
+                    <h1 id="1-whats-a-branch">1. What’s a branch?</h1>
+<p>The idea of branching is that we can create a copy of the project in which we can add a new feature. This branch is a completely separate version of your project and lives next to your original version. If the new feature is working properly we can merge it back into the project. It’s a great way of testing new changes in some code when you’re not sure whether it will work, and in the meanwhile not messing up the code that you already have.</p>
+
+<hr />
+
+<center><img src="../../images/branching.png" /></center>
+
+<hr />
+
+<p>The original repository is always called the <em>master</em> branch.</p>
+
+<p>When a new GitHub repository is made, it’s initialized by default with one branch: the <em>master</em> branch. All the changes in our project that we did so far, have hence always been in this master branch. Remember that when we did <code class="highlighter-rouge">git status</code> we read a line saying that we were on the master branch.</p>
+
+<p>If we would make a new branch, we can name it however we like (e.g. <em>new-feature</em>). There are two ways of doing this: locally or on the GitHub website. We will first show you the latter (section 2) and afterwards how to do it locally via Git Bash or the Terminal (section 4).</p>
+
+<p>A repository can have numerous branches. Branches are ways of organising work on a project: you can have a branch for a new feature, for trying out something new, for exploring an issue - anything at all.</p>
+
+<p>It’s a good practice to create a new branch for every new bit of work you start doing, even if it’s a very small one. It’s especially useful to create a new branch for every new feature you start work on. Branches are of course disposable, you can always remove them.</p>
+
+<h1 id="2-branching-on-github">2. Branching on GitHub</h1>
+<p>The easiest way is to make a new branch on GitHub.</p>
+<ol>
+  <li>Click the button: ‘Branch: master’</li>
+  <li>In ‘Find or create a branch…’ type <code class="highlighter-rouge">new-feature</code></li>
+  <li>Click ‘Create branch’: new-feature</li>
+</ol>
+
+<hr />
+
+<center><img src="../../images/newbranch-github.PNG" /></center>
+
+<hr />
+
+<p>GitHub will now display in that button that it is on <code class="highlighter-rouge">Branch: new-feature</code>. It’s very important to understand that any changes that happen in this branch, will not be visible in the master branch.</p>
+
+<hr />
+
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-exercise-5"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Exercise 5</h3>
+
+  <p>Edit the <code class="highlighter-rouge">plot2.R</code> file again, however make sure you’re in the <em>new-feature</em> branch. Add the following lines that will make a new plot. These lines will allow us to investigate the relation between the weight, horsepower and miles per gallon variables of <code class="highlighter-rouge">mtcars</code> dataset in R.</p>
+
+  <div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Install requirements &amp; plotting of 3D scatterplot</span><span class="w">
+</span><span class="n">install.packages</span><span class="p">(</span><span class="s2">"scatterplot3d"</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">scatterplot3d</span><span class="p">)</span><span class="w">
+</span><span class="n">attach</span><span class="p">(</span><span class="n">mtcars</span><span class="p">)</span><span class="w">
+</span><span class="n">scatterplot3d</span><span class="p">(</span><span class="n">wt</span><span class="p">,</span><span class="n">hp</span><span class="p">,</span><span class="n">mpg</span><span class="p">,</span><span class="w"> </span><span class="n">pch</span><span class="o">=</span><span class="m">16</span><span class="p">,</span><span class="w"> </span><span class="n">highlight.3d</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span><span class="w">
+              </span><span class="n">type</span><span class="o">=</span><span class="s2">"h"</span><span class="p">,</span><span class="w"> </span><span class="n">main</span><span class="o">=</span><span class="s2">"3D Scatterplot"</span><span class="p">)</span><span class="w">
+</span></code></pre></div>  </div>
+  <blockquote>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
+      <p>Edit the file <code class="highlighter-rouge">plot2.R</code> by clicking on the pencil icon and add the following lines:</p>
+
+      <center><img src="../../images/solution5.PNG" /></center>
+      <p>Commit your changes with a useful commit message and save by clicking the green ‘Commit changes’-button.</p>
+
+    </details>
+  </blockquote>
+
+</blockquote>
+
+<hr />
+
+<p>Switch back to your <em>master</em> branch and have a look to the <code class="highlighter-rouge">plot2.R</code>-file. It shouldn’t contain the changes that we just made.</p>
+
+<h1 id="3-merging-branches-on-github">3. Merging branches on GitHub</h1>
+<p>Before exploring how we make branches on our computer locally, we’ll merge the changes in the <em>new-feature</em> branch into the <em>master</em> branch. Test branches are merged into the master branch by making a <strong>pull request</strong>. In this section we will explain how to do a pull request.</p>
+
+<p>Whether you’re on the <em>master</em> or <em>new-feature</em> branch, doesn’t matter. In both cases you should see the following yellow screen. Alternatively, go to ‘Pull requests’ and find it there.</p>
+
+<hr />
+
+<center><img src="../../images/pull-request-pre.PNG" /></center>
+
+<hr />
+
+<p>Click on ‘compare &amp; pull requests’. A new screen pops-up with the following information.</p>
+
+<hr />
+
+<center><img src="../../images/pull-request-1.PNG" /></center>
+
+<hr />
+
+<ul>
+  <li>The pull request should be interpreted as a request to pull the new branch and all of its changes into the master branch.</li>
+  <li>The base where it would be pulled towards is <code class="highlighter-rouge">base: master</code>. The branch where the changes are deriving from is <code class="highlighter-rouge">compare: new-feature</code>.</li>
+  <li>Note that GitHub checks the compatibility of the branches: in this case there are no conflicting edits and the branches can be merged together.</li>
+  <li>Give a descriptive title text and if appropriate some additional comment.</li>
+</ul>
+
+<p>Underneath the pull request related information, GitHub also gives you a summary of the changes that were done.</p>
+
+<hr />
+
+<center><img src="../../images/pull-request-2.PNG" /></center>
+
+<hr />
+
+<ul>
+  <li>Each commit that’s done in the branch <em>new-feature</em> (i.e. only added these 7 lines in this case)</li>
+  <li>Display of the file and a visual representation of what changed in that commit.</li>
+</ul>
+
+<p>Click on ‘Create pull request’.</p>
+
+<p>Finally, the last screen pops up in which you verify the merging commit and you give your consent to GitHub to merge both branches by clicking ‘Merge pull request’.</p>
+
+<hr />
+
+<center><img src="../../images/pull-request-3.PNG" /></center>
+
+<hr />
+
+<p>It might be possible that in a project with several people, you’re not authorized to make changes to the <em>master</em> branch. In this case you’ll always have to work in a separate branch and someone else will get this last message. He or she will then decide whether this pull request should be merged.</p>
+
+<h1 id="4-branching-locally">4. Branching locally</h1>
+<p>Besides the possibility of making branches on GitHub, we can also do it locally on our computer.</p>
+
+<p>As we’ve made changes to the repository on GitHub, we’ll start with pulling the changes into our local repository. Use <code class="highlighter-rouge">git pull</code> in your project folder.</p>
+
+<p>There is always an indication in the Terminal or Git Bash of which branch we’re in (i.e. ‘(master)’). Here are the most important commands related to making branches and switching between different branches:</p>
+<ol>
+  <li><code class="highlighter-rouge">git checkout -b &lt;new-branch&gt;</code>: will create a new branch and move into this branch.</li>
+  <li><code class="highlighter-rouge">git branch &lt;new-branch&gt;</code>: will create a new branch, but will remain in the current branch (i.e. the <em>master</em> branch in this case)</li>
+  <li>With <code class="highlighter-rouge">git checkout &lt;branch&gt;</code> we will switch from one branch to the other.</li>
+  <li>Listing all the existing branches is possible with <code class="highlighter-rouge">git branch -a</code>:</li>
+</ol>
+
+<p>Let’s start with listing all the existing branches (4).</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* master
+remotes/origin/HEAD -&gt; origin/master
+remotes/origin/master
+remotes/origin/new-feature
+</code></pre></div></div>
+<p>The first branch is our local master branch in which we’re working at the moment (as denoted by the asterisk *). The three others relate to the branches that exist remotely on GitHub. If we want to work on the branch <em>new-feature</em> we will have to import it first with: <code class="highlighter-rouge">git checkout new-feature</code> (3). Git will understand that there is a remote branch with the same name and you want to work on this one.</p>
+
+<p><strong>Note</strong> that if you use <code class="highlighter-rouge">git checkout -b new-feature</code> (2), you would have created a new branch with the same name as the remote branch. This is error prone and will lead to problems!</p>
+
+<h2 id="41-example-workflow">4.1. Example workflow</h2>
+<p>An example workflow is depicted in the figure below and is discussed in the following points.</p>
+
+<hr />
+
+<center><img src="../../images/conceptual_areas_branching.png" width="1000" /></center>
+
+<hr />
+
+<p><strong>1. Make a new branch:</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout -b &lt;new-branch&gt;
+</code></pre></div></div>
+<p>Git will make a new branch with the name <code class="highlighter-rouge">&lt;new-branch&gt;</code> and tell you it switched to the new branch. If you want to change branches, just type <code class="highlighter-rouge">git checkout</code> followed by the name of the branch, e.g. <code class="highlighter-rouge">git checkout master</code>.</p>
+
+<p><strong>2. Make the necessary changes:</strong></p>
+<ul>
+  <li>Add  a new file</li>
+  <li>Add new code to an existing file</li>
+</ul>
+
+<p><strong>3. Stage changes:</strong><br />
+Use the following  command to simply add all the new or changed files.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add .
+</code></pre></div></div>
+
+<p><strong>4. Commit staging area:</strong><br />
+Commit all the staged files with:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit -m "some useful commit message"
+</code></pre></div></div>
+
+<p><strong>5. Push commits to GitHub:</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push origin &lt;new-branch&gt;
+</code></pre></div></div>
+<p>or alternatively:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push --set-upstream origin &lt;new-branch&gt;
+</code></pre></div></div>
+<p>The <code class="highlighter-rouge">git push</code> command is now a bit longer. The first time we want to publish a new local branch on a remote repository (GitHub), we need to be explicit and tell Git to add the <code class="highlighter-rouge">&lt;new-branch&gt;</code> to the origin. In Git, the “origin” is used to refer to the GitHub original repository’s URL and makes it much easier to talk about.</p>
+
+<p>Next time you want to push your commits from <em>new-branch</em>, you won’t need to be explicit - you can simply do <code class="highlighter-rouge">git push</code>, because now <em>new-branch</em> exists on GitHub and both branches know how to commmunicate with each other. However, it’s still a good idea to be explicit. That way it’ll be less likely to push something to the wrong branch.</p>
+
+<hr />
+
+<blockquote class="notranslate hands_on">
+  <h3 id="hands_on-exercise-6"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Exercise 6</h3>
+
+  <p>Make a new branch and make sure you’re in the branch. Rewrite the README.md file so it contains the following text. Once the changes have been committed and pushed, create a pull request and merge the changes into the master branch.</p>
+
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Downstream data-analysis R
+This repository contains all the scripts for the downstream data analysis of my project.
+</code></pre></div>  </div>
+
+  <blockquote>
+    <details>
+      <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
+</summary>
+
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> git checkout -b readme
+</code></pre></div>      </div>
+      <p>Do the necessary changes</p>
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> git add README.md
+ git commit -m "changed README file completely"
+ git push origin readme
+</code></pre></div>      </div>
+      <p>Find the new branch in your GitHub repository. From there the solution is identical as discussed here above.</p>
+    </details>
+  </blockquote>
+
+</blockquote>
+<hr />
+
+<h1 id="5-deleting-branches">5. Deleting branches</h1>
+
+<h2 id="51-via-github">5.1. Via GitHub</h2>
+
+<p>If a branch is of no more use, we can delete it. To find all the existing branches:</p>
+<ol>
+  <li>
+    <h2 id="in-the-new-github-website-click-on-branches-in-the-upper-right-of-the-repository-right-underneath-clone">In the new GitHub website, click on <em>branches</em> in the upper right of the repository (right underneath Clone)</h2>
+  </li>
+</ol>
+
+<center><img src="../../images/deleting-branch-1-update.PNG" /></center>
+
+<hr />
+<ol>
+  <li>In the slightly older version, click on <em>branches</em> in the area depicted in figure below</li>
+</ol>
+
+<hr />
+
+<center><img src="../../images/deleting-branch-1.PNG" /></center>
+
+<hr />
+
+<p>After successfully merging our changes in the branch created during the exercise above, it can be deleted. Click on the waste bin:</p>
+
+<hr />
+
+<center><img src="../../images/deleting-branch-2.PNG" /></center>
+
+<hr />
+
+<p>Go back to the main tab of the repository and find that the branch has been deleted.</p>
+
+<h2 id="52-locally">5.2. Locally</h2>
+
+<p>Deleting a branch is as simple as typing the following command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git branch -d &lt;name-of-the-branch&gt;
+</code></pre></div></div>
+
+<p>If git refuses to do so, there is a forced way to do it as well by using the capital <code class="highlighter-rouge">-D</code> parameter.</p>
+
+
+
+                    
+
+                    
+
+                    
+
+                </div>
+                <!-- sidebar, which will be hidden on a small screen -->
+                <nav class="col-md-2 sticky-toc bs-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary" id="toc" data-toggle="toc"></nav>
+            </div>
+        </div>
+
+        <h3><i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="visually-hidden">congratulations</span> Congratulations on successfully completing this tutorial!</h3>
+
+        
+
+        
+
+</div>
+</div>
+</div>
+<footer>
+   <div class="well row">
+       <div class="col-md-2 text-center" style="padding: 25px 20px 25px 20px;">				
+         <a href="https://www.bits.vib.be" target="_blank"><img src="/assets/images/bioinformatics_core_rgb_neg.png" width="200"></a>
+       </div>
+       <div class="col-md-8 text-center" style="padding-top: 20px;">	
+        <a href="https://github.com/vibbits/training-material" title="View on GitHub" class="margin20" target="_blank">
+                            <i class="fa fa-github" aria-hidden="true"></i><span class="visually-hidden">github</span> View on GitHub
+                        </a>
+       </div>
+       <div class="col-md-2 text-center" style="padding-top: 30px;">
+         <span class="slogan"><br>SCIENCE MEETS LIFE</span>
+       </div>
+   </div>
+</footer>
+
+
+</body>
+<script type="text/javascript" src="/assets/js/jquery.slim.min.js"></script>
+<script type="text/javascript" src="/assets/js/popper.min.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.min.js?v=3"></script>
+<script type="text/javascript" src="/assets/js/details-element-polyfill.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" src="/assets/js/bootstrap-toc.min.js"></script>
+<script type="text/javascript" src="/assets/js/main.js"></script>
+<script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
+<script type="text/javascript">
+    var snippets = document.querySelectorAll('div.highlight');
+    [].forEach.call(snippets, function(snippet) {
+        snippet.firstChild.insertAdjacentHTML('beforebegin', '<button class="btn btn-light" data-clipboard-snippet><i class="fa fa-copy"></i>&nbsp;Copy</button>');
+    });
+
+    var clipboardSnippets = new ClipboardJS('[data-clipboard-snippet]', {
+        target: function(trigger) {
+            return trigger.nextElementSibling;
+        }
+    });
+</script>
+
+</html>
