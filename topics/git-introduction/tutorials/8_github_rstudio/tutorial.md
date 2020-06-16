@@ -9,9 +9,9 @@ objectives:
 - Creating a version controlled repository from any project in Rstudio
 - Understand how to use Git's routine usage functions (stage, commit, push, pull) in Rstudio
 time_estimation: 20m
-key_points:
-- Initializing Git on a current project which uses R in Rstudio
-- Exploit the core utilities of Git within Rstudio
+#key_points:
+#- Initializing Git on a current project which uses R in Rstudio
+#- Exploit the core utilities of Git within Rstudio
 contributors:
 - tmuylder
 
