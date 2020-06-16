@@ -9,9 +9,9 @@ objectives:
 - Creating a version controlled repository from any project in Rstudio
 - Understand how to use Git's routine usage functions (stage, commit, push, pull) in Rstudio
 time_estimation: 20m
-key_points:
-- Initializing Git on a current project which uses R in Rstudio
-- Exploit the core utilities of Git within Rstudio
+#key_points:
+#- Initializing Git on a current project which uses R in Rstudio
+#- Exploit the core utilities of Git within Rstudio
 contributors:
 - tmuylder
 
@@ -149,15 +149,15 @@ If the commit has to appear on GitHub we need one more step. Click on *Push* and
 
 > ### {% icon hands_on %} Exercise 
 >
-> Add the `.gitignore` file to the staging area and exploit the *Ignore* button to add the *Rproj* file to the `.gitignore` file. Write a commit message, and commit and push your changes to GitHub. 
+> Add the `.gitignore` file to the staging area and exploit the *Ignore* button to add the *Rproj* file to the `.gitignore` file. Write a commit message, and commit and push your changes to GitHub. If the *Rproj* file already is in the `.gitignore` file, make a new example R-script which you can ignore. 
 >
 >
 >    > <details markdown="1">
 >    > <summary>{% icon solution %} Solution
 >    > </summary>
 >    > 
->    > 
->    > 
+>    > Select *File > New File > R Script*, write something like `# test` and save the file. When they are saved, they will appear in the Git-tab. Select the files in the Git-tab and click on *More > Gitignore*. When you do this, the explicit name of the file will appear in the gitignore file. *Click* on Save. Now the gitignore file will apear in the Git-tab, ready to be staged, and the new file (or *Rproj* file) has disappeared from it. 
+>    > The rest of the workflow remains the same. Click on the tickmarcks to stage the files, click on commit, write a message in the designated textbox and push your changes to the repository on GitHub. 
 >    > 
 >    > 
 >    > </details>

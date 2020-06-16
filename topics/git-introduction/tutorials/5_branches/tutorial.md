@@ -154,7 +154,7 @@ An example workflow is depicted in the figure below and is discussed in the foll
 
 ---
 
-<center><img src="../../images/conceptual_areas_branching.png" /></center>
+<center><img src="../../images/conceptual_areas_branching.png" width="1000" /></center>
 
 ---
 
