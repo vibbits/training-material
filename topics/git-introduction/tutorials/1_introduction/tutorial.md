@@ -17,15 +17,25 @@ contributors:
 
 
 # 1. Introduction
-Git is an open-source tool that manages your code, documents & other files by keeping track of each version of these files throughout its history. It is hence also termed a version controlling system. 
+Git is an open-source tool that keeps track of changes to your files avoiding horrible situations depicted in the figure below. It works similar to [Google Docs'](https://support.google.com/drive/answer/2409045?co=GENIE.Platform%3DDesktop&hl=en) history feature in which Google automatically saves your document and the changes that happened on a particular moment in time. However, Git allows you to control and decide yourself when changes are worth saving, hence making it much more powerful and flexible. Each change is saved together with a message that enables you or your collaborators to keep an overview of the history of the project.  
+
+
+---
+
+<center><img src="../../images/version-control-meme.png"/></center>
+
+---
+
+Git is an open-source tool that manages your project (files) by keeping track of each version of these files throughout its history. It starts with a base version
+
 
 Why should you version control? 
-- It keeps track of any changes to your files
-- Synchronizes files between different people or infrastructures (i.e. laptops, servers, ...)
-- Testing new code
-- Reverting back changes
+- **Keeping track of changes** to your files done by yourself or your collaborators. At any moment you can exploit the history of the project to see who wrote what on a particular day. It even allows you to go back to a specific version or undo specific edits. 
+- **Synchronizes files between different people or infrastructures** (i.e. laptops, servers, ...), making it a powerful collaborating system. 
+- **Testing new code**. Git can control multiple side versions of the same project in which you can make some changes and only when you or your collaborators are happy with hem, you can include them in the main version.
 
-One of Git's advantages is that you can choose whenever you save a version of your code, making it very flexible and powerful, however also comes with the downside that it requires good practice from your side to frequently and consistently save your files. Git works on the command line of e.g. your computer, whereas GitHub is a service for connecting and uploading/downloading files much like saving files in the cloud. Alternatives for GitHub are Gitlab, Bitbucket, etc. 
+
+There is a major difference between Git and GitHub though. Git works on the command line of e.g. your computer, whereas GitHub is a service for connecting and uploading/downloading files much like saving files in the cloud. Alternatives for GitHub are Gitlab, Bitbucket, etc. In this course we will learn how Git works on the core of your computer which will give us proper understanding of its functionalities. Grasping these concepts is important if we want to use Git's version controlling in other apps (cfr. [8 GitHub and RStudio](https://material.bits.vib.be/topics/git-introduction/tutorials/8_github_rstudio/tutorial.html))
 
 # 2. Installations 
 For this course we will explore version controlling in a mixture of [GitHub online](https://github.com/) & [Git](https://git-scm.com/) on the command line. The latter requires some basic understanding of the Linux command line. If you're not familiar with Linux command line, you can have a look at the materials [here]((https://material.bits.vib.be/topics/linux/)). After discussing Git's essential features, we'll introduce how you can make life easier with Git(Hub)'s integration in Rstudio. 
