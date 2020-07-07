@@ -14,7 +14,7 @@ objectives:
 - Discern different kinds of data and their storage requirement;
 - Select an appropriate single source location for your data files;
 - Understand the importance of backups and a backup strategy.
-time_estimation: TODO
+time_estimation: TODO - 45'?
 subtopic: TODO
 key_points:
 - TODO
