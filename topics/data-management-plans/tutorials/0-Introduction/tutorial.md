@@ -18,7 +18,7 @@ objectives:
 - Understanding that funders sometimes have specific requirements
 - Discover funders' data management templates
 - Knowing what a DMP is
-time_estimation: TODO
+time_estimation: TODO - 45'?
 subtopic: introduction
 key_points:
 - Importance of access, re-use of research data
@@ -64,7 +64,7 @@ Before we talk about data management, it is important that we start on the same 
 
 Here's a representation of the active management of research data throughout the data lifecycle.
 ![Research Data Lifecycle -80width](../../images/00_DataLifeCycle.png "Research Data Lifecycle")
-(Adapted from ‘Introduction to RDM’ by Research Department University Library (Book Tower), UGent, licensed under CC-BY 4.0)
+(Adapted from 'Introduction to RDM' by Research Department University Library (Book Tower), UGent, licensed under CC-BY 4.0)
 
 This course follows this course as closely as possible in chapters such as
 - Preparing a DMP
@@ -102,7 +102,7 @@ Each of these will be elaborated in the following topics in this lesson.
 ## FAIR Data
 
 ### Introduction
-FAIR stands for ‘Findable, Accessible, Interoperable, and Reusable’. The FAIR data principles act as an international guideline for the result of high-quality data management.
+FAIR stands for 'Findable, Accessible, Interoperable, and Reusable'. The FAIR data principles act as an international guideline for the result of high-quality data management.
 
 With the increase in volume, complexity and creation speed of data, humans are more and more relying on computational support for dealing with data. The principles were defined with the focus on machine-actionability, i.e. the capacity of computational systems to find, access, interoperate and reuse data with none or minimal human intervention.
 
@@ -131,7 +131,7 @@ In general, having a good data management plan will lead to FAIR data. In the ca
 
 If you anonymise your data, presuming the data is of limited sensitivity and you are very sure the data cannot lead back to the persons involved, you can share your data openly.
 
-The FAIR Guiding Principles were put together and published in Scientific Data (Mark D. Wilkinson et al., “The FAIR Guiding Principles for Scientific Data Management and Stewardship,” Scientific Data 3 (March 15, 2016): 160018.).
+The FAIR Guiding Principles were put together and published in Scientific Data (Mark D. Wilkinson et al., 'The FAIR Guiding Principles for Scientific Data Management and Stewardship,' Scientific Data 3 (March 15, 2016): 160018.).
 
 <iframe src="https://elearning.bits.vib.be/wp-admin/admin-ajax.php?action=h5p_embed&id=33" width="958" height="397" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="https://elearning.bits.vib.be/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
@@ -165,7 +165,7 @@ FAIR and Open are not synonyms. FAIR does not mean data have to be open. Data ca
 
 ### Open Science
 
-“Open Science is the practice of science in such a way that others can collaborate and contribute, where research data, lab notes and other research processes are freely available, under terms that enable reuse, redistribution and reproduction of the research and its underlying data and methods.”
+'Open Science is the practice of science in such a way that others can collaborate and contribute, where research data, lab notes and other research processes are freely available, under terms that enable reuse, redistribution and reproduction of the research and its underlying data and methods.'
 
 (Source:[ FOSTER](https://www.fosteropenscience.eu/foster-taxonomy/open-science-definition)).
 
@@ -175,7 +175,7 @@ You have learned that good data management contributes to the findability, acces
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/fduDfgz15PY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-TODO: add links to ORION course or other relevant elements Flemish open science plan?
+TODO ALEX: add links to ORION course or other relevant elements Flemish open science plan?
 
 **Additional Resources**
 
@@ -213,17 +213,17 @@ Links to the Policy Frameworks of the Flemish Universities
 More and more research funders explicitly require you to consider the management and publication of your research data, both during and after your research project. The European Commission and the Flemish funders [FWO](https://www.fwo.be/nl/het-fwo/organisatie/data-management-plan/) have explicit policies on research data management.
 
 ![Funders' Requirements -80width](../../images/01_FundersRequirements.png "Funders' Requirements")
-(from ‘Preparing a DMP’ by Research Department University Library (Book Tower), UGent, licensed under CC-BY 4.0)
+(from 'Preparing a DMP' by Research Department University Library (Book Tower), UGent, licensed under CC-BY 4.0)
 
 ### European Commission - Horizon 2020
 
-The European Commission wants “Horizon 2020 beneficiaries to make their research data findable, accessible, interoperable and reusable (FAIR), to ensure it is soundly managed. Good research data management is not a goal in itself, but rather the key conduit leading to knowledge discovery and innovation, and to subsequent data and knowledge integration and reuse.” Horizon 2020 is the biggest research and innovation program of the European Commission.
+The European Commission wants 'Horizon 2020 beneficiaries to make their research data findable, accessible, interoperable and reusable (FAIR), to ensure it is soundly managed. Good research data management is not a goal in itself, but rather the key conduit leading to knowledge discovery and innovation, and to subsequent data and knowledge integration and reuse.' Horizon 2020 is the biggest research and innovation program of the European Commission.
 
 [![European Commission - Horizon 2020](../../images/O_Funders_Screenshot_H2020guidelines.JPG)](https://ec.europa.eu/research/participants/docs/h2020-funding-guide/cross-cutting-issues/open-access-data-management/data-management_en.htm)
 
 ### FWO
 
-FWO states that “FWO has made data management a key element of its policy for all support channels provided by the FWO. The FWO expects researchers to pay due attention to this dimension before, during and for at least five years after their research.”
+FWO states that 'FWO has made data management a key element of its policy for all support channels provided by the FWO. The FWO expects researchers to pay due attention to this dimension before, during and for at least five years after their research.'
 
 [FWO Overview Data Management Plan](https://www.fwo.be/en/the-fwo/organisation/data-management-plan/)
 
@@ -246,9 +246,7 @@ The good news is that this online training will take you through the necessary s
 
 ### Contact Details
 
-RDM Support provides all kinds of research data management assistance to researchers of VIB in all stages of their research. This can range from one-off individual advice to large-scale infrastructure coordination.
-
-You can find an overview of the contact details of the main host institutions for DMP related questions and guidance are as follows:
+RDM Support provides all kinds of research data management assistance to researchers of VIB in all stages of their research. This can range from one-off individual advice to large-scale infrastructure coordination. You can find an overview of the contact details of the main host institutions for DMP related questions and guidance are as follows:
 
 - AMS: Bart Cambré (bart.cambre@ams.ac.be)
 - Hogere Zeevaartschool: Marc Vervoort (marc.vervoort@hzs.be)

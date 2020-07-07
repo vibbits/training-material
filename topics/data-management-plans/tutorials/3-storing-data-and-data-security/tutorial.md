@@ -76,10 +76,10 @@ Bear in mind that technology is evolving rapidly. The suggestions in this course
 
 - **Theft** Open doors, lack of backup, leaks of confidential information
 - **Disasters** Fire can happen to anyone. It destroyed university buildings at Southampton, Twente and Delft, causing significant damage to data storage facilities
-- **Technical Failure** In extreme conditions, less than 80% of all hard disk drives survive their 4th birthday; SSD’s show better results, but are more expensive.
+- **Technical Failure** In extreme conditions, less than 80% of all hard disk drives survive their 4th birthday; SSD's show better results, but are more expensive.
 ![Hard Drives Failures](../../images/03_HardDiskFailures.png "Hard Drives Failures")
 Source: [Backblaze](https://www.backblaze.com/blog/how-long-do-disk-drives-last/)
-- **Hacking** Too many users don’t see (or care about) standard risks e.g. spoofing, suspicious files, USB-sticks, . . .
+- **Hacking** Too many users don't see (or care about) standard risks e.g. spoofing, suspicious files, USB-sticks, . . .
 
 ### Questions to Consider
 
@@ -128,7 +128,7 @@ Sometimes it is enough to store your data once which will save you costs. Howeve
 
 Decide whether you need any kind of additional or tailored service. Many storage solutions have additional services. They come in different types:
 - **Data management solutions** add an extra service layer on top of your data. With this service you can add information/metadata about data which is close to the stored data. Additional information on who, when and how the data was created gives people who want to use the data more context.
-- **Cloud based storage** offer ‘pay per storage’, offer services to share and manage your data and are independent of the device you are working on.
+- **Cloud based storage** offer 'pay per storage', offer services to share and manage your data and are independent of the device you are working on.
 - **Server based storage** can offer a special storage device, used to manage the storage and retrieval of data on or from disk. Some have a built-in data restoring service.
 - **External disk devices** can be attached to your experiment device or laptop. You can offload data when there is no network available. And you can offload the data fast, depending on the type of the connection (USB etc.).
 
@@ -136,13 +136,10 @@ Decide whether you need any kind of additional or tailored service. Many storage
 
 To decide where to best store your master file, you should consider at what locations you work on your data. Do you have just one location from where you are working? Or do you have several copies of your datasets at different locations, like your PC at home and a laptop and a tablet at work? How do you keep track of what copy contains the most recent updates? When you choose the wrong file, it will take valuable time to merge both documents afterwards.
 
-To avoid confusion, select one place where the master copies of your work are located (see Figure below). All other copies are temporary and should be placed back or synchronized with the master copy location, at regular intervals, fixed times, or after each edit. The master copy location is the standard source from which you get your files. It’s important that you do not work from the backup or temporary locations.
+To avoid confusion, select one place where the master copies of your work are located (see Figure below). All other copies are temporary and should be placed back or synchronized with the master copy location, at regular intervals, fixed times, or after each edit. The master copy location is the standard source from which you get your files. It's important that you do not work from the backup or temporary locations.
 
 ![Master file location](../../images/04_SchemeMasterBackupDev.png)
 
-TODO exercise below needs a few correct options. In the UU version these are YODA, SURFdrive and their O-drive. Which alternatives do we advise?
-
-<iframe src="https://elearning.bits.vib.be/wp-admin/admin-ajax.php?action=h5p_embed&id=29" width="958" height="354" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="https://elearning.bits.vib.be/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
 ### Backups
 
@@ -179,14 +176,7 @@ Richard Rodger, Professor of Economic and Social History, talks about the differ
 <iframe width="560" height="315" src="https://www.youtube.com/embed/jX-XNo8KbOo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Questionnaire: How Much Data Would You Lose if Your Laptop Got Stolen?
-When you give your reply, we will show you the responses of other researchers in this course.
-
-TODO add survey here. Options:
-- Nothing – everything is backed up
-- Less than 1 day of work
-- 1 – 7 days of work
-- 1 week – 1 month of work
-- Prefer not to think about it
+[ays_poll id=4]
 
 ## Data Security
 
@@ -253,22 +243,14 @@ These data should be treated with higher levels of security than data which do n
 
 ### Questionnaire: Unauthorised Access to Your Research Data
 
-TODO: implementation form widget
-
-We are interested to know if you have ever experienced unauthorized access to any of your research data. When you give your reply, we will show you an overview with the responses of other researchers in this course. All responses will be processed anonymously.
-
-[(1)] No, I am sure about that
-[(2)] Not that I am aware of
-[(3)] Yes, without much consequences
-[(0)] Yes, with severe consequences
+[ays_poll id=5]
 
 ### Legal Agreements and Contracts
 
-Often other people are required to handle your data, or you might be the person that handles other people’s data.
+Often other people are required to handle your data, or you might be the person that handles other people's data.
 
 To arrange the security of the research data you work with, in many cases you have to make a (legal) agreement with other people involved. These agreements will make explicit permitted uses, retention time, and agreed upon security measures. Find out what legal contracts you can use by studying the figure below. Visit the Guide [Legal instruments and agreements](https://www.uu.nl/en/research/research-data-management/guides/legal-instruments-and-agreements) for more information.
 
-For tailored advice and templates, contact TODO: add VIB link
 
 ![Legal Agreement contacts -80width](../../images/AgreementsPicture.png "Agreement types for data")
 
@@ -290,7 +272,7 @@ Privacy is a fundamental right. With regards to privacy, we all have two perspec
 Please consult this [Privacy Reference Card](https://www.eur.nl/sites/corporate/files/2017-11/Privacy_Reference_Card_-why__EUR_Version_1_0.pdf)
 
 ### Privacy-sensitive Data
-Personal data is any information relating to an identified or identifiable natural person (‘data subject’). Personal data is by definition privacy-sensitive and deserves special attention, both from an ethical as from a legal point of view. This applies in the highest degree to certain personal data that is considered particularly sensitive, such as information on race, ethnicity, health, criminal record, sexual orientation, beliefs and economical status. In this part of the course you will leam to:
+Personal data is any information relating to an identified or identifiable natural person ('data subject'). Personal data is by definition privacy-sensitive and deserves special attention, both from an ethical as from a legal point of view. This applies in the highest degree to certain personal data that is considered particularly sensitive, such as information on race, ethnicity, health, criminal record, sexual orientation, beliefs and economical status. In this part of the course you will leam to:
 - Understand the concept of privacy by design;
 - Translate the seven principles of data protection from the European General Data Protection Regulation to your own situation;
 - Recognise when data is identifiable and lean about measures you can take to protect your participant's privacy;
@@ -320,7 +302,7 @@ The GDPR outlines six data protection principles you must comply with when proce
 - **Purpose limitation** You must only collect personal data for a specific, explicit and legitimate purpose. You must clearly state what this purpose is, and only collect data for as long as necessary to complete that purpose.
 - **Data minimisation** You must ensure that personal data you process is adequate, relevant and limited to what is necessary in relation to your processing purpose.
 - **Accuracy** You must take every reasonable step to update or remove data that is inaccurate or incomplete. Individuals have the right to request that you erase or rectify erroneous data that relates to them, and you must do so within a month.
-- **Storage limitation** You must delete personal data when you no longer need it. The timescales in most cases aren't set. They will depend on your business’ circumstances and the reasons why you collect this data.
+- **Storage limitation** You must delete personal data when you no longer need it. The timescales in most cases aren't set. They will depend on your business' circumstances and the reasons why you collect this data.
 - **Integrity and confidentiality** You must keep personal data safe and protected against unauthorised or unlawful processing and against accidental loss, destruction or damage, using appropriate technical or organisational measures.
 
 ### Privacy by Design
@@ -357,9 +339,9 @@ Should you want an elaborate visualisation of what is considered identifiable da
 
 [YOUth](https://www.uu.nl/en/research/youth-cohort-study) is a large-scale, long-term cohort study. YOUth follows children from before birth until the age of 18. YOUth scientists are not allowed to share YOUth data with other scientists or joumals either publicly or privately themselves. All data requests are evaluated on eligibility criteria by an ethical committee. If granted, the data is given out with a unique pseudonymisation code by a data manager, to prevent data coupling with data from other requests. A specific Data Transfer Agreement (DTA) needs to be signed by the requesting party, which states the limitations towards purpose, storage, and access. The participants are asked to sign a consent form.
 
-#### Case 2: TODO: other example from Wings?
+#### Case 2: Wings
 
-CBS publishes reliable and coherent national statistical information. Microdata from the CBS always remains on the CBS network and can be accessed and analysed remotely only by a special secure connection that has to be established. Researchers are prohibited to present the microdata as output. You can publish your script and describe the data. You can refer to the data as hosted and management by CBS if you want your data to be verifiable.
+[Wings](https://wings.esat.kuleuven.be/), a GAP project, seeks to optimize the ICT infrastructure required to support and enable Whole Genome Sequencing. Its aim is to bridge the gap between the low cost of sequencing and the high cost of analysis to enable widespread clinical use of WGS.
 
 ### Informed Consent
 

@@ -22,7 +22,7 @@ objectives:
 - assess the usefulness of existing data;
 - understand how a workflow leads to data products;
 - write the data collection section for your data management plan.
-time_estimation: TODO
+time_estimation: TODO - 90'?
 subtopic: TODO
 key_points:
 - TODO
@@ -33,9 +33,12 @@ contributors:
 
 ## Lessons and Topics in this Section
 - L Data documentation
-  - T General
+  - T Why Document Your Data
+  - T Examples of Data Documentation
+  - T Different Levels of Data Documentation
   - T Metadata
   - T Data standards
+  - T Licences
 - L Organising
   - T Research and Lab Notebooks
   - T File formats
@@ -44,22 +47,18 @@ contributors:
   - T Folder structure
 
 ## Data Documentation
-<iframe src="https://elearning.bits.vib.be/wp-admin/admin-ajax.php?action=h5p_embed&id=18" width="958" height="442" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="https://elearning.bits.vib.be/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
-In this part of the course you will learn to:
+By now you understand how to describe your data collection in terms of, for example, type, size, and format. You have identified this for your own research data. Now we will look into the documentation and metadata which will accompany your data. Documentation and metadata are essential to understand what a dataset means and to make it reusable in the future. In this part of the course you will learn to:
 
 - Understand how documenting your data helps yourself and others understand, verify, review, replicate, access, reuse and build upon your findings;
 - Discern between different ways to document your data;
 - Understand the role of metadata in increasing data interoperability;
 - Apply the presented information to your own data.
 
-### General
+<iframe src="https://elearning.bits.vib.be/wp-admin/admin-ajax.php?action=h5p_embed&id=18" width="958" height="442" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="https://elearning.bits.vib.be/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
-By now you understand how to describe your data collection in terms of, for example, type, size, and format. You have identified this for your own research data.
+### Why Document Your Data?
 
-Now we will look into the documentation and metadata which will accompany your data. Documentation and metadata are essential to understand what a dataset means and to make it reusable in the future.
-
-#### Why Document Your Data?
 John MacInnes, professor of Sociology of the University of Edinburgh, explains why it is necessary to document each step of your research and how this will benefit you in the long term.
 
 <iframe src="https://www.youtube.com/embed/EIZsxT-fIiQ" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
@@ -78,13 +77,14 @@ Here are the main reasons why you want to document your data, and document it we
 
 As rule of thumb, if you want to know what to document, ask yourself **what any user would need to know to make sense of your data.**
 
-#### Examples of Data Documentation
+### Examples of Data Documentation
 
 Since there is a wide variety of types of data and types of research, there are many different ways of documenting data. A few examples of data documentation are:
 
 - Laboratory notebooks and experimental procedures
 - Questionnaires, codebooks, data dictionaries
-- Software syntax and outout files;
+- Software syntax and output files;
+- Custom developed software
 - Information about equipment settings & instrument calibrations
 - Database schemes
 - Methodology reports
@@ -92,10 +92,10 @@ Since there is a wide variety of types of data and types of research, there are 
 
 <iframe src="https://elearning.bits.vib.be/wp-admin/admin-ajax.php?action=h5p_embed&id=17" width="958" height="570" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="https://elearning.bits.vib.be/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
-#### Different Levels of Data Documentation
+### Different Levels of Data Documentation
 There are many different ways to set up and organise your documentation.
 
-##### Project Level
+#### Project Level
 
 Project level documentation gives contextual information about the study/project: it explains the aims of the study, the research questions, the methodologies, etc.
 
@@ -146,7 +146,7 @@ Project level documentation also seeks answers to questions such as:
 
 A complete academic thesis normally contains this information in details, but a published article may not. If a dataset is shared, a detailed technical report needs to be included for the user to understand how the data were collected and processed. You should also provide a sample bibliographic citation to indicate how you would like secondary users of your data to cite it in any publication.
 
-##### File or Database Level
+#### File or Database Level
 
 File or database level documentation documents how all the files (or tables in a database) that make up the dataset relate to each other, what format they are in, whether they supersede or are superseded by previous files, etc.
 
@@ -164,7 +164,7 @@ Data level documentation should also seek to document the **processing steps**, 
 - What is the chronology like? What happens when, and why?
 - use annotated scripts or cookbooks that describe all steps, decisions and study protocol
 
-##### Variable or Item Level
+#### Variable or Item Level
 
 Variable or item level documentation documents how an object of analysis came about. For example, it does not just document a variable name at the top of a spreadsheet file, but also the full label explaining the meaning of that variable in terms of how it was operationalised.
 
@@ -175,7 +175,7 @@ Best practices regarding **variable names**:
   - Refer to numbering system in instrument, e.g. *q1a, q1b, q2, q3a*
   - Avoid simplistic numerical order system like *v1, v2, v3*
 - Be consistent
-  - Don’t change variable names across (versions of) datasets (e.g. *gender, sex*)
+  - Don't change variable names across (versions of) datasets (e.g. *gender, sex*)
   - Use 1 language
   - Short, no spaces, no special characters and lower case. (*Gender* vs *gender*)
 
@@ -185,7 +185,6 @@ Variables in tabular data should have descriptive labels.
 - Spaces or special characters are ok
 - Include unit of measurement where applicable
 - Refer to number used in instrument. e.g. variable *q11bhexw* with label *q11b: hours spent taking physical exercise in a typical week* the description gives the unit of measurement and a reference to the question number (*q11b*)
-
 
 #### Additional resources
 
@@ -201,8 +200,7 @@ Watch this web lecture to learn about the different types of metadata and how me
 <iframe src="https://www.youtube.com/embed/h0oZ3swbTJ0" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
 
 #### Metadata Schemas and Standards
-There is generally no need to generate machine-readable metadata yourself.
-Metadata often follows a certain **schema**, which is nothing but a predefined set of elements. There are also metadata standards, which in some cases are domain-specific. An example of such a standard is the [DublinCore](https://dublincore.org/) schema, which is a set of 15 metadata elements applicable to a wide range of datatypes
+There is generally no need to generate machine-readable metadata yourself. Metadata often follows a certain **schema**, which is nothing but a predefined set of elements. There are also metadata standards, which in some cases are domain-specific. An example of such a standard is the [DublinCore](https://dublincore.org/) schema, which is a set of 15 metadata elements applicable to a wide range of datatypes
 
 #### Exercise: Different Types of Metadata
 
@@ -216,7 +214,7 @@ Different disciplines like biology, earth sciences, physical sciences and social
 
 #### Controlled Vocabulary
 
-You are advised to use a ‘controlled’ vocabulary when you collaborate with others or when you regularly do the same type of research, A ‘controlled’ vocabulary uses predefined and authorised terms. This avoids that the same concept is given different names and ensures consistency. Hence it makes it easier to find and understand data.
+You are advised to use a 'controlled' vocabulary when you collaborate with others or when you regularly do the same type of research, A 'controlled' vocabulary uses predefined and authorised terms. This avoids that the same concept is given different names and ensures consistency. Hence it makes it easier to find and understand data.
 
 Without you knowing, you may already use a generally accepted controlled vocabulary, for instance:
 
@@ -235,6 +233,9 @@ If there is no vocabulary available, you can consider making a custom list withi
 
 Units are important, and metadata field names need explanations in for instance a codebook or another document explaining names. If metadata field names are from a standard, these are explained in the standard. This saves you time and you can simply refer to the standard in your data.
 
+#### Metadata for Software
+Metadata might include information like the source code, location, contributors, licence, version, identifier, references and how to cite the software. (Source: Jiménez RC, Kuzak M, Alhamdoosh M *et al*. Four simple recommendations to encourage best practices in research software [version 1; peer review: 3 approved]. *F1000Research* 2017, 6:876 [https://doi.org/10.12688/f1000research.11407.1](https://doi.org/10.12688/f1000research.11407.1))
+
 #### Useful links to metadata standards:
 
 - [Biology](http://www.dcc.ac.uk/resources/subject-areas/biology)
@@ -243,7 +244,8 @@ Units are important, and metadata field names need explanations in for instance 
 - A list of metadata standards and other standards developed by [FairSharing](https://fairsharing.org/).
 - [Understanding metadata](https://groups.niso.org/apps/group_public/download.php/17446/Understanding%20Metadata.pdf)
 
-## Data Standards
+
+### Data Standards
 
 Your dataset can be standardised in various aspects. Standardisation, in general, makes data comparable and interpretable. In other words, your data becomes interoperable by applying standards. Datasets can be combined, compared or are simply easier to reuse. You have to plan standardisation, as it is for many aspects hard or impossible to apply afterwards.
 
@@ -251,17 +253,17 @@ Standardise as much as possible between you and your collaborators or research g
 
 Here is a list of things you can standardise in your research.
 
-- Standardise how, what and when you measure things by standardising your **protocol, or methods and materials**. For instance, is there a standard set of questions for ‘quality of life’? Is there a standard procedure to house mice for your purpose? What aspects do you measure? At what parameter values (age, concentration, etc.)? When do you measure (every two hours, every gram of weight gain, etc.)?
+- Standardise how, what and when you measure things by standardising your **protocol, or methods and materials**. For instance, is there a standard set of questions for 'quality of life'? Is there a standard procedure to house mice for your purpose? What aspects do you measure? At what parameter values (age, concentration, etc.)? When do you measure (every two hours, every gram of weight gain, etc.)?
 - Standardise your **file formats** so you can easily exchange results without technical difficulties. Check for standard taxonomies or coding systems within your research discipline.
 - Standardise the **units** in which you note down your results. For instance, do you use mm, cm, m? It is extra work to transform units between experiments.
-- Standardise the **metadata** you use to describe your records or study. What fields will fill in by default, and according to what standard do you define the fields’ names? Will you design a metadata spreadsheet where you specify all things that you will note down?
+- Standardise the **metadata** you use to describe your records or study. What fields will fill in by default, and according to what standard do you define the fields' names? Will you design a metadata spreadsheet where you specify all things that you will note down?
 - Standardise the **vocabulary** you use. If everyone has the same terminology, it can avoid confusion or misinterpretation. Check for standard taxonomies or coding systems within your research discipline.
 
 ### Exercise: Data standards
 
 Follow the links below for examples of standards. What type of standardisation do the links refer to?
 
-- Find via Google: “general morphology score (GMS)” TODO **GB** Do they mean this site? http://allie.dbcls.jp/pair/GMS;General+Morphology+Score.html
+- [Allie](http://allie.dbcls.jp/pair/GMS;General+Morphology+Score.html)
 - [Demographic market research](http://www.amplituderesearch.com/market-research-questions.shtml)
 - [Marine Geoscience Data](http://www.marine-geo.org/submit/guidelines.php)
 - [The Cultural Objects Name Authority](http://www.getty.edu/research/tools/vocabularies/cona/index.html))
@@ -272,6 +274,18 @@ Follow the links below for examples of standards. What type of standardisation d
 Drag each link to the box that best describes its type of standardization
 
 <iframe src="https://elearning.bits.vib.be/wp-admin/admin-ajax.php?action=h5p_embed&id=21" width="958" height="625" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="https://elearning.bits.vib.be/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
+
+### Licences
+In the introduction of this course we have already touched upon the subject of licences, and we will deal with licences for your data again in the last chapter. At this point, however, it is important to mention that alongside your data also any custom developed scripts or software that you use should not only be documented but also be licensed. Failing to do so might impact badly on the reproducibility of your research. Jiménez RC, Kuzak M, Alhamdoosh M et al. advise the following:
+
+  "*Adopt a suitable Open Source licence to clarify how to use, modify and redistribute the source code under defined terms and conditions. Define the licence in a publicly accessible source code repository, and ensure the software complies with the licences of all third party dependencies. Providing a licence:*
+
+  - *Clarifies the responsibilities and rights placed on third parties wishing to use, copy, redistribute, modify and/or reuse your source code*
+  - *Enables using the code in jurisdictions where 'code with no licence' means it cannot be used at all*
+  - *Protects the software's intellectual property*
+  - *Provides a model for long-term sustainability by enabling legally well-founded contributions and reuse*
+
+  *We advise choosing a OSI-approved Open Source Licence unless your institution or project requires a different licence. Websites like 'Choose an open source license' provide guidelines to help users to select an OSI-approved Open Source Licence. Organisations like the OSS Watch also provide advice on how to keep track of the licences of software dependencies. For reusability reasons, we also advise authors to disclose any patents and pending patent applications known to them affecting the software.*" (Source: Jiménez RC, Kuzak M, Alhamdoosh M *et al*. Four simple recommendations to encourage best practices in research software [version 1; peer review: 3 approved]. *F1000Research* 2017, 6:876 [https://doi.org/10.12688/f1000research.11407.1](https://doi.org/10.12688/f1000research.11407.1))
 
 ## Organising Data
 
@@ -294,7 +308,7 @@ If you want to learn more about the electronic lab notebook system at VIB, pleas
 
 This part is based on the online Research Data Management training 'MANTRA' of The University of Edinburgh (CC BY: [https://mantra.edina.ac.uk/](https://mantra.edina.ac.uk/)) and Managing Data @ Melbourne.
 
-When collecting data it is important to consider the formats of your data files. Not all file formats are created equal. Some file fonmats are better suited for your data’s needs than others. When you need to convert, migrate, compress or share your data, you should choose the best available method and file format for the intended use. In this part of the course you will learn to:
+When collecting data it is important to consider the formats of your data files. Not all file formats are created equal. Some file fonmats are better suited for your data's needs than others. When you need to convert, migrate, compress or share your data, you should choose the best available method and file format for the intended use. In this part of the course you will learn to:
 
 - Understand why research data formatting and transformation is important;
 - Identify the risks of file transformations;
@@ -382,7 +396,7 @@ At some point you may choose to compress your data files for the purpose of loca
 
 Zip (zip) is a de facto standard compression format that is used, though there are others, sometimes specific to a particular operating system. For example, a self-executing zip file {.exe) should not be used if the file is to be decompressed on another operating system.
 
-Zip is a “lossless” type of compression, which means the file should be identical to the original once unzipped. There are also “lossy” types of compression associated with some multimedia file formats which may result in loss of quality/fidelity when played.
+Zip is a 'lossless' type of compression, which means the file should be identical to the original once unzipped. There are also 'lossy' types of compression associated with some multimedia file formats which may result in loss of quality/fidelity when played.
 
 ### File Naming
 
@@ -390,38 +404,21 @@ This part is based on the online Research Data Management training 'MANTRA' of T
 
 During your research you will have numerous datasets and files which need to be managed. Logical folder structures and file names will help you throughout your research to understand what each file contains without opening it and looking in-depth.
 
-In this part of the course you will leam to:
+In this part of the course you will learn to:
 
 - Understand different concepts of data organisation and why consistently organising your data matters;
 - Name the do's and don'ts in file naming;
 - Apply the presented information to your own data.
 
-#### Good File Management
+### Good File Management
 
 In this short video Jeff Haywood, professor at the University of Edinburg, explains his experiences with good and bad file management.
 
 <iframe src="https://www.youtube.com/embed/i2jcOJOFUZg" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
 
-Good file management practices enable you to identify, locate and use your research data files efficiently and effectively.
+At the start of a research project, it is easy to believe that you'll remember what name you gave a file and where you put it. However, once your research gets under way you may have collected multiple files in various formats, multiple versions and multiple forms such as websites, citations, blogs, articles, methodologies, notes, spreadsheets, etc. Good file management practices enable you to identify, locate and use your research data files efficiently and effectively. It is good practice to name your records according to agreed conventions such as group file naming protocols. This will not only make file naming easier for you and colleagues because you will not have to 'rethink' the process each time; it will also allow you to share your files in a share file space without confusion.
 
-At the start of a research project, it is easy to believe that you'll remember what name you gave a file and where you put it. However, once your research gets under way you may have collected multiple files in various formats, multiple versions and multiple forms such as websites, citations, blogs, articles, methodologies, notes, spreadsheets, etc.
-
-Naming your records consistently, logically and in a predictable way will distinguish similar records from one another at a glance. If properly executed, this will facilitate the storage and retrieval of your research records and will enable yourself or others users to browse file names more effectively and efficiently.
-
-It is good practice to name your records according to agreed conventions such as group file naming protocols. This will not only make file naming easier for you and colleagues because you will not have to ‘rethink’ the process each time; it will also allow you to share your files in a share file space without confusion.
-
-#### Four Best Practices for Organising Your File Naming
-Work through the following four best practices for organising your file naming and consider how you could apply these practices to your own (data) files.
-
-##### 1. General Rules
-There are four general rules which should be followed when developing a file naming strategy to optimize the potential of your research data:
-
-- Do not use generic file names that may conflict when moved from one location to another (e.g. ‘Data.csv’). Ensure filenames are independent of your location.
-- Make sure that file names outlast the file creator who originally named the file;
-- Consider how scalable your file naming policy needs to be, e.g, if you want to include the project number, don't limit your project number to two digits, or you can only have ninety nine projects.
-- Use fixed and short coded elements to build your filename and have a separate document explaining these coded elements. Determining content from filenames is efficient and easy this way.
-
-##### 2. Data File Naming
+### Benefits of Good File Management
 Your research data files and folders need to be named and organised in a systematic way so that they are both identifiable and accessible to yourself and other (future) users. The benefits of consistent data file naming are:
 
 - Data files are distinguishable from each other;
@@ -432,48 +429,37 @@ Your research data files and folders need to be named and organised in a systema
 - Data files are not accidentally overwritten or deleted;
 - Different versions of data files can be identified;
 - If data files are moved to another storage platform their names will retain useful context.
+Work through the following four best practices for organising your file naming and consider how you could apply these practices to your own (data) files.
 
-Consider these criteria when naming and labelling your research data files:
+### Do's and Don'ts
 
-- Organisation
-  Ensure future access and retrieval by following a systematic approach to organising your folders and files.
-- Context
-  Include information about the context in which data is collected. This could include content specific or descriptive information, independent of where the data is stored.
-- Consistency
-  Choose a naming convention and ensure that the rules are followed systematically by always including the same information (such as date and time) in the same order (e.g. YYYYMMDD).
+- Do not use generic file names that may conflict when moved from one location to another (e.g. 'Data.csv'). Ensure filenames are independent of your location.
+- Do not use special characters in a filename suchas *8 * % S£]1{! @* The characters are often used for specific tasks in different operating systems.
+- Do not assume that the software application or instrument uses case dependency when naming or renaming files. Instead, assume that *TANGO*, *Tango* and *tango* are the same, even though some file systems may consider them as different.
+- Make sure that file names outlast the file creator who originally named the file.
+- Consider how scalable your file naming policy needs to be, e.g, if you want to include the project number, don't limit your project number to two digits, or you can only have ninety nine projects.
+- Format dates consistently.
+- Use fixed and short coded elements to build your filename and have a separate document explaining these coded elements. Determining content from filenames is efficient and easy this way. When developing a file naming strategy, the following elements, captured in a short code, could be considered:
+  - Date of creation
+  - Name of creator
+  - Description of content
+  - Name of research team/department associated with the data
+  - Publication date
+  - Version number
+  - Project number
 
-##### 3. Coded Elements in File Naming
-When developing a file naming strategy the following elements, captured in a short code, could be considered:
-
-- Date of creation;
-- Name of creator;
-- Description of content;
-- Name of research team/department associated with the data;
-- Publication date;
-- Version number;
-- Project number.
-
-For instance: 20160912_Pr01_WP4_MA.txt
-(date, project 1, workpackage 4, Microarray data)
-
-##### 4. Do's and Don'ts
-File and folder naming conventions are key to maintaining well-organised electronic directories and drive structures.
-
-A filename is the principal identifier for a research data file. In most cases, the policy for naming a file is left to individuals or to groups of individuals. There are several easy-to-follow rules for naming data files:
-
-- Keep file names short and relevant. Generally, about 25 characters is a sufficient length to capture enough descriptive information for naming a data file;
-- Do not use special characters in a filename suchas *8 * % S£]1{! @* The characters are often used for specific tasks in different operating systems;
 - Use hyphens or underscores instead of full-stops or spaces because, like special characters, these are parsed differently on different systems;
-- The filename should include as much descriptive information that will assist identification independent of where it is stored.
-- Format dates consistently;
-- Do not assume that the software application or instrument uses case dependency when naming or renaming files. Instead, assume that *TANGO*, *Tango* and *tango* are the same, even though some file systems may consider them as different;
+- Keep file names short and relevant. Generally, about 25 characters is a sufficient length to capture enough descriptive information for naming a data file;
 - Where possible, use default file extensions to accurately reflect the software environment in which the file was created and the physical format of the file. E.g.. use .por for SPSS portable files, .xls or .xlsx for Excel files, .ssd or .sas7bdat for SAS files, .txt for text files, etc.
+
+An example of a good file name is for instance *20160912_Pr01_WP4_MA.txt* (date, project 1, workpackage 4, Microarray data)
+
 
 <iframe src="https://elearning.bits.vib.be/wp-admin/admin-ajax.php?action=h5p_embed&id=22" width="958" height="300" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="https://elearning.bits.vib.be/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
 <iframe src="https://elearning.bits.vib.be/wp-admin/admin-ajax.php?action=h5p_embed&id=24" width="958" height="217" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="https://elearning.bits.vib.be/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
-#### Batch Renaming of automatically Generated files
+### Batch Renaming of automatically Generated files
 Although all operating systems have built-in tools for managing files, there are software tools that can organise research data files and folders in a consistent and automated way through batch renaming (also known as mass file renaming or bulk renaming). Batch renaming software exists for most operating systems. There are many situations for which batch renaming may be useful, such as:
 
 - Images from digital cameras are automatically assigned base filenames consisting of sequential numbers;
@@ -482,17 +468,43 @@ Although all operating systems have built-in tools for managing files, there are
 
 ### Version Control
 
+#### Introduction
 It is important to identify and distinguish versions of your research data files consistently. This ensures that a clear audit trail exists for tracking the development of a data file and identifying earlier versions when needed. When establishing a strategy for version control you can use the following tips:
 
 - Use the date in the filename.
 - Use ordinal numbers (1,2,3 etc.) for major version changes and decimals for minor ones, eg, v1.1, v2.6;
 - Delete all versions with minor changes (which you already identified as less important) at set times, and other obsolete versions;
 - Beware of using confusing labels. Labels such as *revision*, *final*, *final2*, *definitive_copy* are ambiguous as you may find that these accumulate during your research;
-- Keep your files in one place only and make sure you stick to that. Consider copies at other places as ‘not current’;
+- Keep your files in one place only and make sure you stick to that. Consider copies at other places as 'not current';
 - Use an auto-backup facility (if available) rather than saving or archiving multiple versions;
 - Use version control facilities within software (e.g. MS Office);
-- Turn on versioning or tracking in collaborative documents or storage utilities such as Wikis, Google Docs, etc.;
-- Consider using version control software such as [Subversion](https://subversion.apache.org/), [TortoiseSVN](https://tortoisesvn.net/), [Git](https://git-scm.com/), [Github](https://github.com/);
+- Turn on versioning or tracking in collaborative documents or storage utilities such as Wikis, Teams, Onedrive, Google Docs, etc.;
+
+#### Version control for your Research Data, Software and Scripts
+This part mainly draws on the very interesting findings in this publication: Jiménez RC, Kuzak M, Alhamdoosh M *et al*. Four simple recommendations to encourage best practices in research software [version 1; peer review: 3 approved]. *F1000Research* 2017, 6:876 [https://doi.org/10.12688/f1000research.11407.1](https://doi.org/10.12688/f1000research.11407.1)
+
+Organising everything with version control is a very clever idea, throughout your research. And interesting and indispensable as these version control platforms are, you may not want to use them to control your raw research data, for instance; multi-gigabyte files are likely too large for these platforms anyway. That being said, your processed research data is an entirely different matter indeed.
+
+Version control needn't be restricted to just your research data. If, for instance, in your research you also develop custom scripts or software, then make sure you clearly document your code, document your project and put it on version control platforms just like you would with your research data. Mind, organising your code on these platforms does not necessarily mean that you are putting them on display for the entire world to see; you control access rights, which means you decide who gets to see your code, and who doesn't.
+
+Putting it on version control platforms just makes a lot of sense, not only for the obvious benefits of having several versions to roll back to if need be. While according to Fogel (Fogel K: *Producing Open Source Software: How to Run a Successful Free Software Project*. O'Reilly Media, Inc. 2005. [Reference Source](https://producingoss.com/en/producingoss.pdf)), the longer a project is run in a closed manner, the harder it is to open it later, we do understand that many people may not be inclined to disclose their source code already from day 1 -this is, after all, a work in progress. At some stage, however, you may already feel a little bit more comfortable releasing your code. This, too, is a very simple story if you have your files on, say, Github: change the access settings of your repository, and you're done. Open source in matter of seconds.
+
+Opening code and exposing the software development life cycle publicly:
+- Promotes trust in the software and broader project
+- Facilitates the discovery of existing software development projects
+- Provides a historical public record of contributions from the start of the project and helps to track recognition
+- Encourages contributions from the community
+- Increases opportunities for collaboration and reuse
+- Exposes work for community evaluation, suggestions and validation
+- Increases transparency through community scrutiny
+- Encourages developers to think about and showcase good coding practices
+- Facilitates reproducibility of scientific results generated by all prior versions of the software
+- Encourages developers to provide documentation, including a detailed user manual and clear in-code comments
+
+#### Tools
+Use version control software such as [Git](https://git-scm.com/), [Github](https://github.com/), [TortoiseSVN](https://tortoisesvn.net/), [Subversion](https://subversion.apache.org/).
+
+If you want to know all there is to know about Git and Github, then why not have a look at our [introduction to Git & Github](https://material.bits.vib.be/topics/git-introduction/)?
 
 
 ## Folder structure
@@ -503,5 +515,5 @@ How to structure files and folders? Organic or predefined?
 - Check if a common folder structure is used within research group, e.g. [https://github.ugent.be/jlammert/folders-experimental](https://github.ugent.be/jlammert/folders-experimental)
 
 ![Organizing Folder Structure](../../images/01_OrganizingFolderStructure.png "Organizing Folder Structure")
-(from ‘Introduction to RDM’ by Research Department University Library (Book Tower), UGent, licensed under CC-BY 4.0)
+(from 'Introduction to RDM' by Research Department University Library (Book Tower), UGent, licensed under CC-BY 4.0)
 ![Organizing Folder Structure](../../images/01_OrganizingFolderStructure2.png "Organizing Folder Structure")

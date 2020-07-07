@@ -12,7 +12,7 @@ objectives:
 - Select what part of your data should be preserved for verification purposes;
 - Understand the benefits of preserving your data in a public data repository;
 - Preserve you data technically correct.
-time_estimation: TODO
+time_estimation: TODO - 120?
 subtopic: TODO
 key_points:
 - TODO
@@ -55,7 +55,7 @@ contributors:
 
 ## Sharing Data
 ### Introduction
-Thanks to information and communication technology and globalisation new opportunities arise to exchange results of scientific research - publications and research data - and even of scientific methods and practices. This new way of practising science is called ‘open science’.
+Thanks to information and communication technology and globalisation new opportunities arise to exchange results of scientific research - publications and research data - and even of scientific methods and practices. This new way of practising science is called 'open science'.
 
 Open data is a part of this movement towards open science. It is the ambition of universities, governments, funders and publishers to make research data optimally suited for reuse.
 
@@ -66,16 +66,6 @@ There are different reasons why you may not be able to share your research data.
 #### Irreproducible results
 In January 2020, tbe [BBC](https://www.bbc.com/news/world-us-canada-50989423) reported *Nobel Prize-winning scientist Frances Arnold retracts paper* It was retracted because '*the results were not reproducible, and the authors found data missing from a lab notebook*'. This is merely to illustrate that reproducibility is a big thing. If you ever had problems understanding or reusing your data, perhaps this helps you to imagine better it is no sinecure to ensure the entire world can understand and use your data. If you have indeed ever experienced difficulties to understand or resuse your own data, do not worry -you are certainly not the only one!
 [![Experiment Reproducibility -80width](../../images/00_ExperimentReproducibility.jpg "Experiment Reproducibility")](https://www.nature.com/news/1-500-scientists-lift-the-lid-on-reproducibility-1.19970)
-
-#### What can you do?
-TODO Keep this bit?
-
-Marleen is an early career researcher. She completed her PhD about four years ago and is now a postdoctoral research fellow at a different university. Since she obtained her PhD, she has published a number of journal articles based on her doctoral research. Her papers have been cited widely in the literature of her field. But just recently a fellow researcher has questioned her findings. He has gone so far as to suggest that the data on which her research was based is inaccurate. One implication is that the data could even have been falsified. Marleen is confident that her research is valid and that her data is accurate.
-
-- What steps could Marleen take to verify her research findings?
-- What evidence would she need to demonstrate that she hasn't falsified her data?
-
-Think about your own research. If someone accused you of research misconduct, would you be in a position to defend your research and reputation? List some strategies you could implement right now that would assist you, should you ever find yourself in Marleen’s situation.
 
 #### Data Disasters
 The following are real examples where researchers or data centers have lost crucial data. Could any of these ever happen to you? With good planning you could avoid or reduce the impact of such occurrences.
@@ -117,7 +107,7 @@ From [nature.com](https://www.nature.com/news/1-500-scientists-lift-the-lid-on-r
   - "We're opening everything': Scientists share coronavirus data in unprecedented way to contain, treat disease" - [CBC](https://www.cbc.ca/news/health/coronavirus-2019-ncov-science-virus-genome-who-research-collaboration-1.5446948)
 - Respecting conventions regarding filenames and folder structure.
 ![Efficient Folder Structures -80width](../../images/00_FilenamesFolderStructure.png "Efficient Folder Structures")
-- Efficient use of resources: *“The cost of not having FAIR research data costs the European economy at least **€10.2bn every year***
+- Efficient use of resources: *'The cost of not having FAIR research data costs the European economy at least **€10.2bn every year***
 ![Benefits of Sharing6](../../images/04_BenefitsSharing6.jpg "Benefits of Sharing6")
 From [Cost-benefit analysis for FAIR research data](https://op.europa.eu/en/publication-detail/-/publication/d375368c-1a0a-11e9-8d04-01aa75ed71a1/language-en)
 
@@ -136,10 +126,10 @@ From [Cost-benefit analysis for FAIR research data](https://op.europa.eu/en/publ
 From [plos.org](https://journals.plos.org/plosone/s/data-availability)
 
 #### Career Recognition
-Shift from ‘publishing as fast as possible’ to ‘sharing knowledge as early as possible’, adapting reward and evaluation systems.
-  - [EC Expert Group on Reward Systems](https://ec.europa.eu/research/openscience/index.cfm?pg=rewards_wg) in Open Science: “Open Science must become part of the recruitment criteria, career progression and grant assessment procedures for researchers at all levels”.
-  - Initial [agreement](http://data.consilium.europa.eu/doc/document/ST-8550-2019-INIT/en/pdf) on Horizon Europe: “Recognition and reward mechanisms […], as well as incentives promoting the adoption of open science practices
-[…]”.
+Shift from 'publishing as fast as possible' to 'sharing knowledge as early as possible', adapting reward and evaluation systems.
+  - [EC Expert Group on Reward Systems](https://ec.europa.eu/research/openscience/index.cfm?pg=rewards_wg) in Open Science: 'Open Science must become part of the recruitment criteria, career progression and grant assessment procedures for researchers at all levels'.
+  - Initial [agreement](http://data.consilium.europa.eu/doc/document/ST-8550-2019-INIT/en/pdf) on Horizon Europe: 'Recognition and reward mechanisms […], as well as incentives promoting the adoption of open science practices
+[…]'.
 
 ### Challenges of Data Sharing
 - **Time and effort** Making data sharable is labor intensive
@@ -186,7 +176,7 @@ There is a wide variety of data repositories. Most have the option to publish yo
   - Provides DOIs / persistent identifiers
   - Metadata standards
   - Costs
-  - Criteria for selection of trustworthy repo’s
+  - Criteria for selection of trustworthy repo's
 
 ![Selecting a Data Repository](../../images/04_SelectingRepo.jpg "Selecting a Data Repository")
 Icons representing attributes of data repositories in [Re3data.org](https://www.re3data.org/), taken from [plos.org](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0078080)
@@ -234,7 +224,7 @@ Re3data.org makes it possible to search for a repository that meets your criteri
 
 <iframe src="https://elearning.bits.vib.be/wp-admin/admin-ajax.php?action=h5p_embed&id=30" width="958" height="1532" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="https://elearning.bits.vib.be/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
-TODO: H5P quiz with ELIXIR resources
+Specifically for the life sciences, make sure you check [ELIXIR Deposition Databases for Biomolecular Data](https://elixir-europe.org/platforms/data/elixir-deposition-databases)
 
 ### Data Journals
 
@@ -258,7 +248,7 @@ Publishing in a data journal may be of interest to researchers and data producer
 
 ### Different Types of Data Journal
 
-There are data journals for various disciplines and also more general data journals exist. A widespread standard PID is the DOI. DOI stands for ‘Digital Object Identifier’. A DOI is an alphanumeric string assigned to an object which allows for an object to be identified over time. Often a DOI will be presented as a link which looks like: https://doi.org/10.1109/5.771073. There are other identifiers available which some repositories may use instead. If you are depositing in a reputable repository then you should be given some type of persistent identifier which you can use to cite and link to your data.
+There are data journals for various disciplines and also more general data journals exist. A widespread standard PID is the DOI. DOI stands for 'Digital Object Identifier'. A DOI is an alphanumeric string assigned to an object which allows for an object to be identified over time. Often a DOI will be presented as a link which looks like: https://doi.org/10.1109/5.771073. There are other identifiers available which some repositories may use instead. If you are depositing in a reputable repository then you should be given some type of persistent identifier which you can use to cite and link to your data.
 
 Examples of generic data journals:
 
@@ -266,13 +256,13 @@ Examples of generic data journals:
 - [Data in Brief](http://www.journals.elsevier.com/data-in-brief)   
 - [Data Science Journal](http://www.codata.org/publications/data-science-journal)
 
+
 Examples of disciplinary data journals:
 
 - Open archaeology data;
 - Earth System Science Data;
 - Research Data Journal for the Humanities and Social Sciences.
 
-TODO: check for life science additions
 
 <iframe src="https://elearning.bits.vib.be/wp-admin/admin-ajax.php?action=h5p_embed&id=31" width="958" height="466" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="https://elearning.bits.vib.be/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
@@ -289,7 +279,7 @@ Citations to your data can add to your academic impact. A citation should includ
 
 #### Examples
 
-A widespread standard PID is the DOI. DOI stands for ‘Digital Object Identifier’. A DOI is an alphanumeric string assigned to an object which allows for an object to be identified over time. Often a DOI will be presented as a link which looks like: https://doi.org/10.1109/5.771073. There are other identifiers available which some repositories may use instead. If you are depositing in a reputable repository then you should be given some type of persistent identifier which you can use to cite and link to your data.
+A widespread standard PID is the DOI. DOI stands for 'Digital Object Identifier'. A DOI is an alphanumeric string assigned to an object which allows for an object to be identified over time. Often a DOI will be presented as a link which looks like: https://doi.org/10.1109/5.771073. There are other identifiers available which some repositories may use instead. If you are depositing in a reputable repository then you should be given some type of persistent identifier which you can use to cite and link to your data.
 
 Irino, T; Tada, R (2009): Chemical and mineral compositions of sediments from ODP Site 127‐797. Geological Institute, University of Tokyo. http://dx.doi.org/10.1594/PANGAEA.726855
 
@@ -300,7 +290,10 @@ Irino, T; Tada, R (2009): Chemical and mineral compositions of sediments from OD
 
 <iframe src="https://elearning.bits.vib.be/wp-admin/admin-ajax.php?action=h5p_embed&id=32" width="958" height="545" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="https://elearning.bits.vib.be/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
+
+
 ### Licences
+
 Licences let potential users know in advance what they can do with shared data. When you are depositing data in the data repository of your choice, you can select which licence you want.
 
 ![The Zenodo Licence Options](../../images/04_Licences1.jpg "The Zenodo Licence Options")
@@ -349,19 +342,7 @@ There is a nice tool that you can use when you want to select a licence, called 
 
 ### Questionnaire
 
-TODO survey
-
-We are very interested to know what licence you would choose if you were to share the underlying research data of your most recent publication.  
-
-An explanation for each licence can be found by clicking on the links below.
-
-1. CC BY: [Attribution](https://creativecommons.org/share-your-work/licensing-types-examples/licensing-examples/#by)
-2. CC BY-SA: [Attribution ShareAlike](https://creativecommons.org/share-your-work/licensing-types-examples/licensing-examples/#sa)
-3. CC BY-ND: [Attribution-NoDerivs](https://creativecommons.org/share-your-work/licensing-types-examples/licensing-examples/#nd)
-4. CC BY-NC: [Attribution-NonCommercial](https://creativecommons.org/share-your-work/licensing-types-examples/licensing-examples/#nc)
-5. CC BY-NC-SA: [Attribution-NonCommercial-ShareAlike](https://creativecommons.org/share-your-work/licensing-types-examples/licensing-examples/#by-nc-sa)
-6. CC BY-NC-ND: [Attribution-NonCommercial-NoDerivs](https://creativecommons.org/share-your-work/licensing-types-examples/licensing-examples/#by-nc-nd)
-7. CC0: [Public Domain](https://creativecommons.org/share-your-work/public-domain/)
+[ays_poll id=6]
 
 **Additional Resources**
 
@@ -387,7 +368,7 @@ Additionally, it can also be your own wish or that of your university, funder or
 
 TODO: adjust this part
 
-The Netherlands Code of Conduct for Academic Practice (VSNU) states that raw data from research must be kept available for a minimum of ten years. This statement is also included in the Utrecht University Policy framework for research data: “Archived research data are to be retained for a minimum of ten years, commencing from the date that the research results are published.”
+The Netherlands Code of Conduct for Academic Practice (VSNU) states that raw data from research must be kept available for a minimum of ten years. This statement is also included in the Utrecht University Policy framework for research data: 'Archived research data are to be retained for a minimum of ten years, commencing from the date that the research results are published.'
 
 #### Reuse
 
@@ -395,13 +376,12 @@ It may be worthwhile to make (part of) your data available for a longer period o
 
 On the one hand, making research data reusable will need extra effort. On the other hand, possible reuse, even by your future self, might bring you lots of benefits and credits. Consider if your data is worth the effort of making it reusable or if preserving and archiving for verification is enough.
 
-Reuse is explained more in depth in ‘Data Availability for Reuse’. In this part we will focus on selection and preservation of research data for verification purposes.
+Reuse is explained more in depth in 'Data Availability for Reuse'. In this part we will focus on selection and preservation of research data for verification purposes.
 
 ### What to preserve?
-TODO: add image for illustration/zenodo?
-**gb** Not sure what you want here ...
+![What to preserve](../../images/01_OrganizingFolderStructure2.png "What to preserve")
 
-Others should be able to understand what you did. It is not enough to just provide data. Without associated information, research data quickly become useless. For all data selected for preservation, you should therefore keep a ‘data package’ consisting of:
+Others should be able to understand what you did. It is not enough to just provide data. Without associated information, research data quickly become useless. For all data selected for preservation, you should therefore keep a 'data package' consisting of:
 - **Research data** files themselves
   - primary (raw) data
   - secondary (processed) data
@@ -448,14 +428,14 @@ In the example below, you find a workflow for experimental research. What inform
 
 ### Accounting for Data of Others
 
-If you are permitted to use data from other parties, you will have to account for those as well if your research is to be verifiable and reproducible by others. You may recognise this from chapter 1 of this course: Data collection: Discover existing data, weblecture ‘Assessing usefulness of research data of others’.
+If you are permitted to use data from other parties, you will have to account for those as well if your research is to be verifiable and reproducible by others. You may recognise this from chapter 1 of this course: Data collection: Discover existing data, weblecture 'Assessing usefulness of research data of others'.
 
 You have the following options:
 
 - If the used data is preserved correctly somewhere for the coming ten years, refer to the data repository in question.
 - If it is not taken care of, contact the responsible persons, negotiate correct preservation in a data repository for ten years, and refer to that repository.
-- If this isn’t possible, try to arrange a local copy that you preserve yourself;
-- If this isn’t allowed, you will not be able to present the data in case of questions. Therefore, you should question yourself whether you can actually use the data.
+- If this isn't possible, try to arrange a local copy that you preserve yourself;
+- If this isn't allowed, you will not be able to present the data in case of questions. Therefore, you should question yourself whether you can actually use the data.
 
 ![Preserve for 10 years](../../images/Cont_5_Share_SelectPreserve_Chart10years.png "Preserve for 10 years")
 
@@ -489,8 +469,8 @@ From the weblecture you learned how to prevent data loss. Can you recall all app
 
 1. Have multiple copies. Use a checksum to identify faulty copies
 2. Use preferred file formats that can be opened by a wide range of software. Update the file format to a current one.
-3. Move data to fresh media well before the media’s expiration date.
-4. Have multiple copies. Move data to fresh media well before the media’s expiration date.
+3. Move data to fresh media well before the media's expiration date.
+4. Have multiple copies. Move data to fresh media well before the media's expiration date.
 5. Document your data well.
 6. Advertise the content in a data catalogue.
 

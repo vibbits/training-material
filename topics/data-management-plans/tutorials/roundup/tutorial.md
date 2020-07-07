@@ -17,30 +17,10 @@ contributors:
 ---
 
 ## Rounding up
+You have almost reached the end of this course on research data management. Have a look at John-Alan Pascoe, researcher at the Faculty of Aerospace Engineering at Delft University of Technology, explaining the advantages he experienced after sharing his raw and derived data in the data archive of 4TU.ResearchData.
+<iframe src="https://www.youtube.com/embed/Q7vC0v988R4" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
 
-You have almost reached the end of this course on research data management.
-
-You have learned about data collection, data documentation, data storage and security, selection and preservation and making data available for reuse.
-
-We are very curious to know if this course has helped you write your Data Management Plan (DMP).
-
-To round up:
-
-* We want to remind you of the DMP review service of RDM Support;
-* We want to share some good practices of data management with you;
-* We invite you to fill out the evaluation of this online training. This will help us to further develop this training and future learners can benefit from this. Thank you very much!
-
-## DMP Review Service
-TODO adjust
-You can have your data management plan (DMP) checked by the specialists of Research Data Management Support. You can get in touch if you are unsure about sections in your DMP or when you doubt whether your plan fits the requirements of your research funder.
-
-When you are in the process of writing a proposal for a research funder and you want a check on the data section, you can also contact the Research Support Office (RSO) of your faculty.
-
-### Researchers Sharing Their Experiences
-
-TODO: add stories if available or links to resources
-
-TODO: merge with experiences
+We hope you have learned a few things about data management. The following stories illustrate not only how important it is to manage your data well well but also how very much alive data management actually is.
 
 ### More Data Stories
 
@@ -54,12 +34,10 @@ Collected by DataONE
 
 Success stories and cautionary tales from researchers related to their experiences with managing and sharing scientific research data as collected by DataONE.
 
-#### Advantages of Data Sharing
+### The Second life of Research Data
+It's clear by now that research data are not confined to your own project -indeed, the movement towards FAIR and OPEN data is a very exciting one. One of the many initiatives that have come to the surface is the [reprohack](https://reprohack.github.io/reprohack-hq/). In a nutshell, a ReproHack is aimed at assessing the reproducibility of scientific research that publicly shared code and data. For more information, please check also [Reproducibility Hackathon Netherlands](https://www.software.ac.uk/blog/2020-01-15-reproducibility-hackathon-netherlands-aftermath).
 
-John-Alan Pascoe, researcher at the Faculty of Aerospace Engineering at Delft University of Technology, explains the advantages he experienced after sharing his raw and derived data in the data archive of 4TU.ResearchData.
-
-<iframe src="https://www.youtube.com/embed/Q7vC0v988R4" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
 
 ## Evaluation of Training
-
+We are very curious to know if this course has helped you write your Data Management Plan (DMP) and therefore kindly invite you to fill out the evaluation of this online training. This will help us to further develop this training and future learners can benefit from this. Thank you very much!
 TODO: link to questionnaire. Check 08_RoundUp_Questionnaire.png
