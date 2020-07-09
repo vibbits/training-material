@@ -4,22 +4,17 @@ type: basics
 category: rdm
 title: "How to write your Data Management Plan"
 summary: "
+
+__By VIB Bioinformatics Core, ELIXIR Belgium and Helis Academy__
+
+
 Welcome to this self-study course about research data management. In this course you will learn more about how you can manage your research data.
 
 
 A lot of material of this course has been developed by RDM Support of University of Utrecht.
 
 
-With all questions about this course you can contact: info.rdm@vib.be.
-
-
-__By VIB Bioinformatics Core, ELIXIR Belgium and Helis Academy__
-
-
-![http://www.vib.be/ -20width](https://corefacilities.vib.be/images/logos/bioinformatics_core_rgb_pos.png)
-
-
-* LiaScript: [this course as e-learning resource](https://material.bits.vib.be/courses/?https://raw.githubusercontent.com/vibbits/material-liascript/master/README.md#1)
+With all questions about this course you can contact: bits@vib.be.
 
 
 The course consists of the following chapters:
@@ -35,14 +30,9 @@ The course consists of the following chapters:
 - Preserving & Sharing Data
 
 
-
-**Data Management Plans**
-The assignment throughout the course is to fill your own data management plan. At the end of each chapter you will be asked to log into DMPonline. With the content in this course, you should be able to apply this to your research project.
-
-
 **Questions about the course**
 If you have technical questions, please contact bits@vib.be.
-If you have content related questions, please contact RDM Support: info.rdm@vib.be. All feedback is welcome, as this is still a beta version. Based on feedback from users, more content may be added
+If you have content related questions, please contact RDM Support: bits@vib.be. Based on feedback from users, more content may be added
 or existing content may be changed to a different form.
 
 
@@ -52,8 +42,6 @@ Some activities use HTML5. Make sure your browser has installed the latest updat
 
 **Licenses and credits**
 We wish you a lot of fun with the course and we hope it turns out to be a useful learning experience.
-The content of the course is adapted from TODO:ADJUST an online course of [University of Utrecht](https://lll-platform-uu.nl/).
-
 "
 
 subtopics:
