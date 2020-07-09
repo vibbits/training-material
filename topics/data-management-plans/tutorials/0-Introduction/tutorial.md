@@ -18,12 +18,13 @@ objectives:
 - Understanding that funders sometimes have specific requirements
 - Discover funders' data management templates
 - Knowing what a DMP is
-time_estimation: TODO - 45'?
+time_estimation: 45M
 subtopic: introduction
 key_points:
 - Importance of access, re-use of research data
 contributors:
 - abotzki
+- gbonamie
 
 ---
 

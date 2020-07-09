@@ -19,7 +19,7 @@ objectives:
 - Knowing how to collect data
 - Knowing which tools can be used to write a DMP
 time_estimation: TODO
-subtopic: TODO
+subtopic: dmp 
 key_points:
 - Importance of access, copyright, licence, costs
 contributors:

@@ -60,6 +60,9 @@ subtopics:
   - id: introduction
     title: "Introduction"
     description: "We are giving overviews on why it is important to manage your research data, user stories about data loss, funder requirements, and RDM Support."
+  - id: dmp
+    title: "Tools for creating Data Management plans"
+    description: "In this tutorial, we cover dmponline.be and the VIB DMP tool."
   - id: prepare
     title: "Preparatory steps for Data collection and Documentation"
     description: "
@@ -84,6 +87,7 @@ With well-managed and preserved research data, you can defend yourself against a
 
 maintainers:
 - abotzki
+- gbonamie
 
 references:
 - authors: RDM training by the University of Edinburgh

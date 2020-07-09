@@ -13,11 +13,12 @@ objectives:
 - Understand the benefits of preserving your data in a public data repository;
 - Preserve you data technically correct.
 time_estimation: TODO - 120?
-subtopic: TODO
+subtopic: share 
 key_points:
 - TODO
 contributors:
 - abotzki
+- gbonamie
 
 ---
 

@@ -15,11 +15,12 @@ objectives:
 - Select an appropriate single source location for your data files;
 - Understand the importance of backups and a backup strategy.
 time_estimation: TODO - 45'?
-subtopic: TODO
+subtopic: handle 
 key_points:
 - TODO
 contributors:
 - abotzki
+- gbonamie
 
 ---
 

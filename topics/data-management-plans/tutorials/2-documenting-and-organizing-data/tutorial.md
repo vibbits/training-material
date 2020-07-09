@@ -23,11 +23,12 @@ objectives:
 - understand how a workflow leads to data products;
 - write the data collection section for your data management plan.
 time_estimation: TODO - 90'?
-subtopic: TODO
+subtopic: prepare 
 key_points:
 - TODO
 contributors:
 - abotzki
+- gbonamie
 
 ---
 
