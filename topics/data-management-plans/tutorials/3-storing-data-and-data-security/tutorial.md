@@ -14,10 +14,11 @@ objectives:
 - Discern different kinds of data and their storage requirement;
 - Select an appropriate single source location for your data files;
 - Understand the importance of backups and a backup strategy.
-time_estimation: TODO - 45'?
+time_estimation: 45M
 subtopic: handle 
 key_points:
-- TODO
+- Select an appropriate single source location for your data files
+- Store and manage privacy-sensitive data 
 contributors:
 - abotzki
 - gbonamie

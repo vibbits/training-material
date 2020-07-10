@@ -176,12 +176,12 @@ You have learned that good data management contributes to the findability, acces
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/fduDfgz15PY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-TODO ALEX: add links to ORION course or other relevant elements Flemish open science plan?
-
 **Additional Resources**
 
 - [What is open science?](https://www.fosteropenscience.eu/learning/what-is-open-science/#/id/5ab8ea32dd1827131b90e3ac), an online course by fosteropenscience.eu
-
+- [Online training material by the ORION project](https://www.orion-openscience.eu/publications/training-materials)
+- [More information about the ORION MOOC for Open Science in the Life Sciences](https://www.orion-openscience.eu/news/201909/orion-mooc-open-science-life-sciences-coming-soon%C2%A0)
+- Follow the self-paced ORION MOOC at the [Open Learn Create Platform](https://www.open.edu/openlearncreate/course/view.php?id=4633)
 
 ## Research Data Frameworks
 

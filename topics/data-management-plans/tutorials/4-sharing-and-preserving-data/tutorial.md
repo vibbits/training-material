@@ -367,9 +367,7 @@ Additionally, it can also be your own wish or that of your university, funder or
 
 #### Verification
 
-TODO: adjust this part
-
-The Netherlands Code of Conduct for Academic Practice (VSNU) states that raw data from research must be kept available for a minimum of ten years. This statement is also included in the Utrecht University Policy framework for research data: 'Archived research data are to be retained for a minimum of ten years, commencing from the date that the research results are published.'
+For the FWO, the emphasis is on long-term data preservation and management. The data are targeted to be preserved for a period of at least five years from the end of the research. The DMP related questions in the application form are related to this central aspect.
 
 #### Reuse
 
