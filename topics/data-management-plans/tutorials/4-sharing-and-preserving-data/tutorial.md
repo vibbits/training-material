@@ -13,7 +13,7 @@ objectives:
 - Understand the benefits of preserving your data in a public data repository;
 - Preserve you data technically correct.
 time_estimation: TODO - 120?
-subtopic: share 
+subtopic: share
 key_points:
 - TODO
 contributors:
@@ -80,7 +80,7 @@ https://www.theatlantic.com/national/archive/2013/12/scientific-data-lost-foreve
 #### A short story
 Not being prepared to share your data can lead to problems in using the data. In this short video, you see what shouldn't happen when a researcher makes a data sharing request! Topics include storage, documentation, and file formats. A made-up, yet not unrealistic story.
 
-<iframe src="https://www.youtube.com/embed/66oNv_DJuPc" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
+https://www.youtube.com/embed/66oNv_DJuPc
 
 ### Benefits of Sharing Data
 
@@ -327,9 +327,9 @@ Assigning licences to data can also have disadvantages. Licences are static and 
 
 A short movie explaining the different Creative Commons elements is shown below. Remember that sharing without a licence can still lead to conflicts.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/HyWdeNQ7fo0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+https://www.youtube.com/embed/HyWdeNQ7fo0
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/5QxkuuiZwRU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+https://www.youtube.com/embed/5QxkuuiZwRU
 
 ### The License Selector
 There is a nice tool that you can use when you want to select a licence, called the [License selector](http://ufal.github.io/public-license-selector/)
@@ -460,7 +460,7 @@ There are five main ways your data can be lost:
 
 In this video below you will learn how to minimise the risk of losing data. You are also given good preservation practices.
 
-<iframe src="https://www.youtube.com/embed/qENaO0Lk6eo" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
+https://www.youtube.com/embed/qENaO0Lk6eo
 
 ### Exercise: Match the Solutions to the Data Loss
 

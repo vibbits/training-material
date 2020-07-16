@@ -83,7 +83,7 @@ TOP 10 excuses for not having a DMP by [FranziMachtDas](https://twitter.com/Fran
 ### What is DMPOnline
 Have a look at the video below for a general introduction on DMPOnline:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/kXuBC6HlO1g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+https://www.youtube.com/embed/kXuBC6HlO1g
 
 DMPonline is an international online service that guides you in creating a DMP by answering a series of questions about your research project. It allows you to create, share, store, and revise your data management plans online. You will be asked to complete different sections of your DMP as we go through the other modules. As a result you will have written your own data management plan at the end of this course.
 
@@ -206,7 +206,7 @@ While during your research your data will probably be stored on a hard drive or 
 - general-purpose, e.g. [Zenodo](https://zenodo.org/), [Dryad](https://datadryad.org/), [OSF](https://osf.io/)
 - find a suitable home via [re3data.org](https://www.re3data.org/). Have a look at the video below to see how it works
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/cutUrqJqjp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+https://www.youtube.com/embed/cutUrqJqjp4
 
 Finally, bear in mind that archiving your data externally is not always possible, and sometimes data may need to be kept in-house!
 
@@ -511,14 +511,14 @@ When you write your data management plan you will need to take into account the 
 
 You can watch the video below, provided by TU Delft, about data collection.
 
-<iframe src="https://www.youtube.com/embed/AqnVrnVdv2Y" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
+https://www.youtube.com/embed/AqnVrnVdv2Y
 
 Having a clear view of what data you will generate will enable you to plan its management. You can create an overview of the data you produce or collect by drawing the data in a workflow, or noting down in a table.
 
 ### The Data Flow
 Describing your data can be done in several ways. Please watch the video below. Tessa Pronk will explain to you how to describe your data.
 
-<iframe src="https://www.youtube.com/embed/KE2UpZY4wYA" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
+https://www.youtube.com/embed/KE2UpZY4wYA
 
 #### Exercise Order Elements in Your Data Flow
 
@@ -527,7 +527,7 @@ Describing your data can be done in several ways. Please watch the video below. 
 ### Discover data
 Watch the screencast below. In this screencast, you will be guided through different ways to find data.
 
-<iframe src="https://www.youtube.com/embed/AZMUKgM8X-A" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
+https://www.youtube.com/embed/AZMUKgM8X-A
 
 You have just learned that there are different places to find data. By actively searching the different places, you will get an understanding of the differences. Look at the different portals below. Some of them have been showcased in the screencast, some of them are additional.
 
@@ -540,7 +540,7 @@ You have just learned that there are different places to find data. By actively 
 
 How useful is a dataset? Follow this short tutorial.
 
-<iframe src="https://www.youtube.com/embed/t1SZutbCAxI" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
+https://www.youtube.com/embed/t1SZutbCAxI
 
 In the previous activity, the lecture described four main points to check if you want to reuse existing data:
 
@@ -587,7 +587,7 @@ In the last chapter of this course, you will learn more about licensing.
 ### Introduction
 
 The costs of data management and sharing activities must be included into your research, in terms of time and resources needed.
-The University of Utrecht has a very valuable overview on their [web site](https://www.uu.nl/en/research/research-data-management/guides/costs-of-data-management) about what to consider for estimating the costs of data management following around the data life cycle. 
+The University of Utrecht has a very valuable overview on their [web site](https://www.uu.nl/en/research/research-data-management/guides/costs-of-data-management) about what to consider for estimating the costs of data management following around the data life cycle.
 
 ### Data Management Cost Guide
 

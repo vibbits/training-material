@@ -26,7 +26,8 @@ contributors:
 ## Rounding up
 ### Conclusion
 You have almost reached the end of this course on research data management. Have a look at John-Alan Pascoe, researcher at the Faculty of Aerospace Engineering at Delft University of Technology, explaining the advantages he experienced after sharing his raw and derived data in the data archive of 4TU.ResearchData.
-<iframe src="https://www.youtube.com/embed/Q7vC0v988R4" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
+
+https://www.youtube.com/embed/Q7vC0v988R4
 
 We hope you have learned a few things about data management. The following stories illustrate not only how important it is to manage your data well well but also how very much alive data management actually is.
 

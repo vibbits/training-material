@@ -15,10 +15,10 @@ objectives:
 - Select an appropriate single source location for your data files;
 - Understand the importance of backups and a backup strategy.
 time_estimation: 45M
-subtopic: handle 
+subtopic: handle
 key_points:
 - Select an appropriate single source location for your data files
-- Store and manage privacy-sensitive data 
+- Store and manage privacy-sensitive data
 contributors:
 - abotzki
 - gbonamie
@@ -65,7 +65,7 @@ Now we will look into data storage. Since your data is the life blood of your re
 
 Need examples of data storage gone wrong? Watch this short video where John MacInnes, Professor of Sociology, the University of Edinburgh, talks about his experience with a corrupted hard drive and the importance of backups.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/1VPBtJAa9Ic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+https://www.youtube.com/embed/1VPBtJAa9Ic
 
 In this part of the course you will learn to:
 
@@ -171,11 +171,11 @@ Two professors from the University of Edinburgh talk about backing up their rese
 
 Professor Lynn Jamieson, Centre for Research on Families and Relationships, talks about the importance of keeping regular backups of research data.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/eDclTVUyf_k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+https://www.youtube.com/embed/eDclTVUyf_k
 
 Richard Rodger, Professor of Economic and Social History, talks about the different ways he backs up his research data.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jX-XNo8KbOo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+https://www.youtube.com/embed/jX-XNo8KbOo
 
 ### Questionnaire: How Much Data Would You Lose if Your Laptop Got Stolen?
 [ays_poll id=4]
@@ -187,7 +187,7 @@ By now you know more about how to manage your data collection, how to organise a
 
 The loss of scientific data can have a devastating impact on careers. Imagine that you loose all of the research data you've been diligently collecting for four years. Now imagine the knock-on effect: you won't get the PhD you've been working towards, affecting your future career. This nightmare happened to Billy Hinchen, a biologist at Cambridge University. Listen to his story.
 
-<iframe src="https://www.youtube.com/embed/3xlax_Iin0Y" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
+https://www.youtube.com/embed/3xlax_Iin0Y
 
 ### Data Breaches
 
@@ -311,7 +311,7 @@ The GDPR outlines six data protection principles you must comply with when proce
 
 To comply with the six principles from the GDPR, you can implement privacy by design. This means that you design a data management plan with measures on both IT and procedural level.
 
-<iframe src="https://www.youtube.com/embed/iZRcePnhS5I" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
+https://www.youtube.com/embed/iZRcePnhS5I
 
 ### Exercise: Which Data Breach Is Breached?
 

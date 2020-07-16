@@ -23,7 +23,7 @@ objectives:
 - understand how a workflow leads to data products;
 - write the data collection section for your data management plan.
 time_estimation: TODO - 90'?
-subtopic: prepare 
+subtopic: prepare
 key_points:
 - TODO
 contributors:
@@ -62,7 +62,7 @@ By now you understand how to describe your data collection in terms of, for exam
 
 John MacInnes, professor of Sociology of the University of Edinburgh, explains why it is necessary to document each step of your research and how this will benefit you in the long term.
 
-<iframe src="https://www.youtube.com/embed/EIZsxT-fIiQ" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
+https://www.youtube.com/embed/EIZsxT-fIiQ
 
 Indeed, the importance of documenting your data during the collection and analysis phase of your research cannot be overestimated.
 
@@ -198,7 +198,7 @@ Metadata is data about data. Consequently, it allows for very structured documen
 
 Watch this web lecture to learn about the different types of metadata and how metadata can help make your research data better findable. You are pointed to useful sources for metadata standards.
 
-<iframe src="https://www.youtube.com/embed/h0oZ3swbTJ0" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
+https://www.youtube.com/embed/h0oZ3swbTJ0
 
 #### Metadata Schemas and Standards
 There is generally no need to generate machine-readable metadata yourself. Metadata often follows a certain **schema**, which is nothing but a predefined set of elements. There are also metadata standards, which in some cases are domain-specific. An example of such a standard is the [DublinCore](https://dublincore.org/) schema, which is a set of 15 metadata elements applicable to a wide range of datatypes
@@ -211,7 +211,7 @@ There is generally no need to generate machine-readable metadata yourself. Metad
 
 Different disciplines like biology, earth sciences, physical sciences and social sciences and humanities have their own standards. By choosing a well-supported standard, you will maximise the chance that your data can be (re)used and understood by other researchers.
 
-<iframe src="https://www.youtube.com/embed/AvL7hEk8RJQ" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
+https://www.youtube.com/embed/AvL7hEk8RJQ
 
 #### Controlled Vocabulary
 
@@ -415,7 +415,7 @@ In this part of the course you will learn to:
 
 In this short video Jeff Haywood, professor at the University of Edinburg, explains his experiences with good and bad file management.
 
-<iframe src="https://www.youtube.com/embed/i2jcOJOFUZg" allowfullscreen="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block;" width="800px" title=""></iframe>
+https://www.youtube.com/embed/i2jcOJOFUZg
 
 At the start of a research project, it is easy to believe that you'll remember what name you gave a file and where you put it. However, once your research gets under way you may have collected multiple files in various formats, multiple versions and multiple forms such as websites, citations, blogs, articles, methodologies, notes, spreadsheets, etc. Good file management practices enable you to identify, locate and use your research data files efficiently and effectively. It is good practice to name your records according to agreed conventions such as group file naming protocols. This will not only make file naming easier for you and colleagues because you will not have to 'rethink' the process each time; it will also allow you to share your files in a share file space without confusion.
 
