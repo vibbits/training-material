@@ -18,8 +18,8 @@ objectives:
 - Check the current and expected costs for your research data;
 - Knowing how to collect data
 - Knowing which tools can be used to write a DMP
-time_estimation: 60M 
-subtopic: dmp 
+time_estimation: 60M
+subtopic: dmp
 key_points:
 - Importance of access, copyright, licence, costs
 contributors:
@@ -587,7 +587,7 @@ In the last chapter of this course, you will learn more about licensing.
 ### Introduction
 
 The costs of data management and sharing activities must be included into your research, in terms of time and resources needed.
-The University of Utrecht has a very valuable overview on their [web site]((https://www.uu.nl/en/research/research-data-management/guides/costs-of-data-management) about what to consider for estimating the costs of data management following around the data life cycle. 
+The University of Utrecht has a very valuable overview on their [web site](https://www.uu.nl/en/research/research-data-management/guides/costs-of-data-management) about what to consider for estimating the costs of data management following around the data life cycle. 
 
 ### Data Management Cost Guide
 
