@@ -28,7 +28,7 @@ contributors:
 ## Lessons and Topics in this Section
 
 - L Data Storage
-  - T Introduction
+  - T Data Storage - Introduction
   - T Things that can go wrong
   - T Questions to Consider
   - T Shared or Individual Data
@@ -38,11 +38,12 @@ contributors:
   - T Additional or Tailored Services
   - T Store Your Masterfile
   - T Backups
+  - T Questionnaire: How Much Data Would You Lose if Your Laptop Got Stolen?
 - L Data Security
-  - T Introduction
+  - T Data Security- Introduction
   - T Data Breaches
   - T Prevent Unauthorised Access
-  - T Questionnaire: Unauthorised Access to Your Research Data
+  - T Questionnaire: Prevent Unauthorised Access
   - T Legal Agreements and Contracts
   - T Exercise: When to Use Which Legal Contract?
 - L Privacy
@@ -54,11 +55,12 @@ contributors:
   - T Storing Personal Data
   - T Cases on How to Make Personal Data Accessible
   - T Informed Consent
-
+- L Storing Data & Data Security - References
+    - References
 
 ## Data Storage
 
-### Introduction
+### Data Storage - Introduction
 By now you will have obtained some idea of how to manage your data collection and how to organise and document your research data.
 
 Now we will look into data storage. Since your data is the life blood of your research you want to avoid losing it. Recovery could be slow, costly or even impossible. Therefore, during your research you must ensure that all your research data, regardless of format, are stored securely, backed up and maintained regularly.
@@ -114,7 +116,7 @@ You can choose a cloud storage service such as Dropbox, Google Drive, OneDrive o
 - The conditions of use of a public cloud storage service may include stipulations which give the provider undesired rights {of ownership) to the stored files;
 - Leaks in the security of the storage service may be discovered.
 
-You could also consider securing your files by means of encryption. Data security is explained in a different lesson in this course. |
+You could also consider securing your files by means of encryption. Data security is explained in a different lesson in this course.
 
 ### Single or Multiple Storage
 
@@ -140,7 +142,7 @@ To decide where to best store your master file, you should consider at what loca
 
 To avoid confusion, select one place where the master copies of your work are located (see Figure below). All other copies are temporary and should be placed back or synchronized with the master copy location, at regular intervals, fixed times, or after each edit. The master copy location is the standard source from which you get your files. It's important that you do not work from the backup or temporary locations.
 
-![Master file location](../../images/04_SchemeMasterBackupDev.png)
+![Master file location](../../images/03_SchemeMasterBackupDev.png)
 
 
 ### Backups
@@ -182,7 +184,7 @@ https://www.youtube.com/embed/jX-XNo8KbOo
 
 ## Data Security
 
-### Introduction
+### Data Security - Introduction
 By now you know more about how to manage your data collection, how to organise and document your research data and where and how to store your data. Now we will take you into the world of keeping data safe and secure.
 
 The loss of scientific data can have a devastating impact on careers. Imagine that you loose all of the research data you've been diligently collecting for four years. Now imagine the knock-on effect: you won't get the PhD you've been working towards, affecting your future career. This nightmare happened to Billy Hinchen, a biologist at Cambridge University. Listen to his story.
@@ -196,7 +198,7 @@ There are several examples of (mainly online) data storage going wrong, leading 
 The picture below shows the biggest cases of data breaches in the past 10 years. They involve some well-known, highly regarded and trusted companies as well as some practices from the academic world.
 [Read about the story](http://www.informationisbeautiful.net/visualizations/worlds-biggest-data-breaches-hacks/)
 
-[![examples about data breaches](../../images/data-breaches.png "Biggest data breaches")](http://www.informationisbeautiful.net/visualizations/worlds-biggest-data-breaches-hacks/)
+[![examples about data breaches](../../images/03_data-breaches.png "Biggest data breaches")](http://www.informationisbeautiful.net/visualizations/worlds-biggest-data-breaches-hacks/)
 
 ### Prevent Unauthorised Access
 
@@ -243,7 +245,7 @@ TODO: **AB** insert videos from website
 
 These data should be treated with higher levels of security than data which do not. You will learn more about privacy-sensitive data later in this module.
 
-### Questionnaire: Unauthorised Access to Your Research Data
+### Questionnaire: Prevent Unauthorised Access
 
 [ays_poll id=5]
 
@@ -254,7 +256,7 @@ Often other people are required to handle your data, or you might be the person 
 To arrange the security of the research data you work with, in many cases you have to make a (legal) agreement with other people involved. These agreements will make explicit permitted uses, retention time, and agreed upon security measures. Find out what legal contracts you can use by studying the figure below. Visit the Guide [Legal instruments and agreements](https://www.uu.nl/en/research/research-data-management/guides/legal-instruments-and-agreements) for more information.
 
 
-![Legal Agreement contacts -80width](../../images/AgreementsPicture.png "Agreement types for data")
+![Legal Agreement contacts -80width](../../images/03_AgreementsPicture.png "Agreement types for data")
 
 ### Exercise: When to Use Which Legal Contract?
 
@@ -356,3 +358,7 @@ One thing to arrange in your informed consent is the possibility for future use,
 #### Informed Consent for Data Sharing
 
 <iframe src="https://elearning.bits.vib.be/wp-admin/admin-ajax.php?action=h5p_embed&id=28" width="958" height="688" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="https://elearning.bits.vib.be/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
+
+## Storing Data & Data Security - References
+
+### References

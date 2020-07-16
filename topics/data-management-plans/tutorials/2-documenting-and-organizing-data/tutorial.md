@@ -34,21 +34,30 @@ contributors:
 
 ## Lessons and Topics in this Section
 - L Data documentation
-  - T Why Document Your Data
+  - T Data Documentation - Introduction
+  - T Why Document Your Data?
   - T Examples of Data Documentation
   - T Different Levels of Data Documentation
   - T Metadata
   - T Data standards
+  - T Exercise: Data standards
   - T Licences
 - L Organising
   - T Research and Lab Notebooks
   - T File formats
   - T File naming
+  - T Good File Management
+  - T Benefits of Good File Management
+  - T Do's and Don'ts
+  - T Batch Renaming of automatically Generated files
   - T Version control
   - T Folder structure
+- L Documenting & Organising - References
+  - References
 
 ## Data Documentation
 
+### Data Documentation - Introduction
 By now you understand how to describe your data collection in terms of, for example, type, size, and format. You have identified this for your own research data. Now we will look into the documentation and metadata which will accompany your data. Documentation and metadata are essential to understand what a dataset means and to make it reusable in the future. In this part of the course you will learn to:
 
 - Understand how documenting your data helps yourself and others understand, verify, review, replicate, access, reuse and build upon your findings;
@@ -235,7 +244,7 @@ If there is no vocabulary available, you can consider making a custom list withi
 Units are important, and metadata field names need explanations in for instance a codebook or another document explaining names. If metadata field names are from a standard, these are explained in the standard. This saves you time and you can simply refer to the standard in your data.
 
 #### Metadata for Software
-Metadata might include information like the source code, location, contributors, licence, version, identifier, references and how to cite the software. (Source: Jiménez RC, Kuzak M, Alhamdoosh M *et al*. Four simple recommendations to encourage best practices in research software [version 1; peer review: 3 approved]. *F1000Research* 2017, 6:876 [https://doi.org/10.12688/f1000research.11407.1](https://doi.org/10.12688/f1000research.11407.1))
+Metadata might include information like the source code, location, contributors, licence, version, identifier, references and how to cite the software. (Jiménez 2017)
 
 #### Useful links to metadata standards:
 
@@ -267,7 +276,7 @@ Follow the links below for examples of standards. What type of standardisation d
 - [Allie](http://allie.dbcls.jp/pair/GMS;General+Morphology+Score.html)
 - [Demographic market research](http://www.amplituderesearch.com/market-research-questions.shtml)
 - [Marine Geoscience Data](http://www.marine-geo.org/submit/guidelines.php)
-- [The Cultural Objects Name Authority](http://www.getty.edu/research/tools/vocabularies/cona/index.html))
+- [The Cultural Objects Name Authority](http://www.getty.edu/research/tools/vocabularies/cona/index.html)
 - [International Union of crystallography](http://www.iucr.org/resources/cif/spec/ancillary/abbreviations)
 - [SI Units](https://www.nist.gov/pml/weights-and-measures/metric-si/si-units)
 - [UK data service](https://www.ukdataservice.ac.uk/manage-data/format/recommended-formats)
@@ -286,7 +295,7 @@ In the introduction of this course we have already touched upon the subject of l
   - *Protects the software's intellectual property*
   - *Provides a model for long-term sustainability by enabling legally well-founded contributions and reuse*
 
-  *We advise choosing a OSI-approved Open Source Licence unless your institution or project requires a different licence. Websites like 'Choose an open source license' provide guidelines to help users to select an OSI-approved Open Source Licence. Organisations like the OSS Watch also provide advice on how to keep track of the licences of software dependencies. For reusability reasons, we also advise authors to disclose any patents and pending patent applications known to them affecting the software.*" (Source: Jiménez RC, Kuzak M, Alhamdoosh M *et al*. Four simple recommendations to encourage best practices in research software [version 1; peer review: 3 approved]. *F1000Research* 2017, 6:876 [https://doi.org/10.12688/f1000research.11407.1](https://doi.org/10.12688/f1000research.11407.1))
+  *We advise choosing a OSI-approved Open Source Licence unless your institution or project requires a different licence. Websites like 'Choose an open source license' provide guidelines to help users to select an OSI-approved Open Source Licence. Organisations like the OSS Watch also provide advice on how to keep track of the licences of software dependencies. For reusability reasons, we also advise authors to disclose any patents and pending patent applications known to them affecting the software.*" (Jiménez 2017)
 
 ## Organising Data
 
@@ -313,7 +322,7 @@ When collecting data it is important to consider the formats of your data files.
 
 - Understand why research data formatting and transformation is important;
 - Identify the risks of file transformations;
-- Understand the difference between proprietary and open file fonnats;
+- Understand the difference between proprietary and open file formats;
 - Understand why data centres require you to deposit your data in preffered data format;
 - Make informed decisions about data file formatting, conversion and migration.
 
@@ -372,10 +381,11 @@ There are reasons for preferring some data formats over others. For example, the
 - PNG, a high-quality format of a smaller file size than TIFF, with the disadvantage of not allowing the inclusion of metadata such as the type of camera used to take the picture. JPEG and TIFF do possess this functionality.
 
 More information can be found
-- at [Dans](https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats).
-- in this PDF-file: [Preferred File Format](../../docs/01_DataCollection_Preferred_formats.pdf)
-- [Recommended Formats](https://www.ukdataservice.ac.uk/manage data/format/recommended formats)
+- at [Dans](https://dans.knaw.nl/en/about/services/easy/information-about-depositing-data/before-depositing/file-formats);
+- at [Recommended Formats](https://www.ukdataservice.ac.uk/manage-data/format/recommended-formats)
+- in the PDF which you can download below
 
+[Preferred File Format](../../docs/01_DataCollection_Preferred_formats.pdf);
 
 #### File Conversion and migration
 
@@ -385,10 +395,13 @@ Conversion can be done via an **export** function if provided by the software, v
 
 #### Exercises
 
+Exercise 1
 <iframe src="https://elearning.bits.vib.be/wp-admin/admin-ajax.php?action=h5p_embed&id=12" width="958" height="602" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="https://elearning.bits.vib.be/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
+Exercise 2
 <iframe src="https://elearning.bits.vib.be/wp-admin/admin-ajax.php?action=h5p_embed&id=13" width="958" height="484" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="https://elearning.bits.vib.be/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
+Exercise 3
 <iframe src="https://elearning.bits.vib.be/wp-admin/admin-ajax.php?action=h5p_embed&id=14" width="958" height="187" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="https://elearning.bits.vib.be/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
 #### Data compression
@@ -430,7 +443,8 @@ Your research data files and folders need to be named and organised in a systema
 - Data files are not accidentally overwritten or deleted;
 - Different versions of data files can be identified;
 - If data files are moved to another storage platform their names will retain useful context.
-Work through the following four best practices for organising your file naming and consider how you could apply these practices to your own (data) files.
+
+Work through the following do's and don'ts for organising your file naming and consider how you could apply these practices to your own (data) files.
 
 ### Do's and Don'ts
 
@@ -482,13 +496,13 @@ It is important to identify and distinguish versions of your research data files
 - Turn on versioning or tracking in collaborative documents or storage utilities such as Wikis, Teams, Onedrive, Google Docs, etc.;
 
 #### Version control for your Research Data, Software and Scripts
-This part mainly draws on the very interesting findings in this publication: Jiménez RC, Kuzak M, Alhamdoosh M *et al*. Four simple recommendations to encourage best practices in research software [version 1; peer review: 3 approved]. *F1000Research* 2017, 6:876 [https://doi.org/10.12688/f1000research.11407.1](https://doi.org/10.12688/f1000research.11407.1)
+This part mainly draws on Jiménez (2017).
 
 Organising everything with version control is a very clever idea, throughout your research. And interesting and indispensable as these version control platforms are, you may not want to use them to control your raw research data, for instance; multi-gigabyte files are likely too large for these platforms anyway. That being said, your processed research data is an entirely different matter indeed.
 
 Version control needn't be restricted to just your research data. If, for instance, in your research you also develop custom scripts or software, then make sure you clearly document your code, document your project and put it on version control platforms just like you would with your research data. Mind, organising your code on these platforms does not necessarily mean that you are putting them on display for the entire world to see; you control access rights, which means you decide who gets to see your code, and who doesn't.
 
-Putting it on version control platforms just makes a lot of sense, not only for the obvious benefits of having several versions to roll back to if need be. While according to Fogel (Fogel K: *Producing Open Source Software: How to Run a Successful Free Software Project*. O'Reilly Media, Inc. 2005. [Reference Source](https://producingoss.com/en/producingoss.pdf)), the longer a project is run in a closed manner, the harder it is to open it later, we do understand that many people may not be inclined to disclose their source code already from day 1 -this is, after all, a work in progress. At some stage, however, you may already feel a little bit more comfortable releasing your code. This, too, is a very simple story if you have your files on, say, Github: change the access settings of your repository, and you're done. Open source in matter of seconds.
+Putting it on version control platforms just makes a lot of sense, not only for the obvious benefits of having several versions to roll back to if need be. While according to Fogel (2005), the longer a project is run in a closed manner, the harder it is to open it later, we do understand that many people may not be inclined to disclose their source code already from day 1 -this is, after all, a work in progress. At some stage, however, you may already feel a little bit more comfortable releasing your code. This, too, is a very simple story if you have your files on, say, Github: change the access settings of your repository, and you're done. Open source in matter of seconds.
 
 Opening code and exposing the software development life cycle publicly:
 - Promotes trust in the software and broader project
@@ -508,13 +522,19 @@ Use version control software such as [Git](https://git-scm.com/), [Github](https
 If you want to know all there is to know about Git and Github, then why not have a look at our [introduction to Git & Github](https://material.bits.vib.be/topics/git-introduction/)?
 
 
-## Folder structure
+### Folder structure
 How to structure files and folders? Organic or predefined?
-- ̶Better to plan
-- ̶Use a logical structure and naming scheme. Make sure collaborators understand.
+- Better to plan
+- Use a logical structure and naming scheme. Make sure collaborators understand.
 - Structure and naming is an implicit form of documentation
 - Check if a common folder structure is used within research group, e.g. [https://github.ugent.be/jlammert/folders-experimental](https://github.ugent.be/jlammert/folders-experimental)
 
 ![Organizing Folder Structure](../../images/01_OrganizingFolderStructure.png "Organizing Folder Structure")
 (from 'Introduction to RDM' by Research Department University Library (Book Tower), UGent, licensed under CC-BY 4.0)
 ![Organizing Folder Structure](../../images/01_OrganizingFolderStructure2.png "Organizing Folder Structure")
+
+## Documenting & Organising - References
+
+### References
+- Fogel K: *Producing Open Source Software: How to Run a Successful Free Software Project*. O'Reilly Media, Inc. 2005. [Reference Source](https://producingoss.com/en/producingoss.pdf
+- Jiménez RC, Kuzak M, Alhamdoosh M *et al*. Four simple recommendations to encourage best practices in research software [version 1; peer review: 3 approved]. *F1000Research* 2017, 6:876 [https://doi.org/10.12688/f1000research.11407.1](https://doi.org/10.12688/f1000research.11407.1)
