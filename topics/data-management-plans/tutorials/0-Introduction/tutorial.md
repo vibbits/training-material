@@ -1,3 +1,4 @@
+
 ---
 layout: tutorial_hands_on
 
@@ -195,7 +196,7 @@ The highlights of the policy are:
 - Each individual researcher / research leader is responsible to draw up a Data Management Plan (DMP) at the start of the research project and to follow up the agreements made in this plan;
 - Scientific directors are responsible for the implementation and monitoring of the University policy framework and for drawing up additional faculty guidelines to this end if needed.
 
-Links to the Policy Frameworks of the Flemish Universities
+Links to the Policy Frameworks of the Flemish Universities:
 
 - [Policy Framework from Ghent University](https://www.ugent.be/en/research/datamanagement/rdm-policy.pdf)
 
@@ -218,7 +219,7 @@ More and more research funders explicitly require you to consider the management
 
 The European Commission wants 'Horizon 2020 beneficiaries to make their research data findable, accessible, interoperable and reusable (FAIR), to ensure it is soundly managed. Good research data management is not a goal in itself, but rather the key conduit leading to knowledge discovery and innovation, and to subsequent data and knowledge integration and reuse.' Horizon 2020 is the biggest research and innovation program of the European Commission.
 
-[![European Commission - Horizon 2020](../../images/O_Funders_Screenshot_H2020guidelines.JPG)](https://ec.europa.eu/research/participants/docs/h2020-funding-guide/cross-cutting-issues/open-access-data-management/data-management_en.htm)
+[![European Commission - Horizon 2020](../../images/00_Funders_Screenshot_H2020guidelines.JPG)](https://ec.europa.eu/research/participants/docs/h2020-funding-guide/cross-cutting-issues/open-access-data-management/data-management_en.htm)
 
 ### FWO
 
