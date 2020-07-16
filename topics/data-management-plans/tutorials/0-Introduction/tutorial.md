@@ -61,7 +61,7 @@ Before we talk about data management, it is important that we start on the same 
 
 ### What is the typical lifecycle of research data?
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/OL_Vd9dd-AQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+https://www.youtube.com/embed/OL_Vd9dd-AQ
 
 Here's a representation of the active management of research data throughout the data lifecycle.
 ![Research Data Lifecycle -80width](../../images/00_DataLifeCycle.png "Research Data Lifecycle")
@@ -77,7 +77,7 @@ This course follows this course as closely as possible in chapters such as
 
 ### What is Research Data Management (RDM)?
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bbsLmy3Njv4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+https://www.youtube.com/embed/bbsLmy3Njv4
 
 **Research Data Management** refers to any action that takes care of data before, during and/or after research. It is *the compilation of many small practices that make your data easier to understand, less likely to be lost, and more likely to be usable during a project or ten years later* (Briney 2015)
 
@@ -86,9 +86,7 @@ This course follows this course as closely as possible in chapters such as
 ### What are the Benefits of RDM?
 In this short video Prof. dr. Chantal Kemner explains the importance of good data management for Utrecht University.
 
-<iframe src="https://www.youtube.com/embed/f48l4Uca9nA" allowfullscreen="" allow="accelerometer; au
-toplay; encrypted-media; gyroscope; picture-in-picture" height="515px" style="display: inline-block
-;" width="800px" title=""></iframe>
+https://www.youtube.com/embed/f48l4Uca9nA
 
 Managing your data effectively is crucial to the success of your research. This doesn't only apply to the immediate context of your thesis or publications. Managing your data is a practice that will benefit you throughout your research career. The following list gives an overview of what benefits are evident:
 - Access, Re-use & Recognition
@@ -174,7 +172,7 @@ You have learned that good data management contributes to the findability, acces
 
 #### Dr. Daniel Oberski on Open Science
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/fduDfgz15PY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+https://www.youtube.com/embed/fduDfgz15PY
 
 **Additional Resources**
 
