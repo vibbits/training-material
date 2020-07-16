@@ -36,7 +36,7 @@ contributors:
   - T What are the benefits of RDM?
 - L FAIR data
   - T Introduction
-  - T Identify FAIR data
+  - T Exercise: Identify FAIR data
   - T How to achieve FAIR data
   - T OPEN Data
   - T FAIR vs OPEN
@@ -101,23 +101,23 @@ Each of these will be elaborated in the following topics in this lesson.
 ## FAIR Data
 
 ### Introduction
-FAIR stands for 'Findable, Accessible, Interoperable, and Reusable'. The FAIR data principles act as an international guideline for the result of high-quality data management.
+FAIR stands for **Findable, Accessible, Interoperable, and Reusable**. The FAIR data principles act as an international guideline for the result of high-quality data management.
 
 With the increase in volume, complexity and creation speed of data, humans are more and more relying on computational support for dealing with data. The principles were defined with the focus on machine-actionability, i.e. the capacity of computational systems to find, access, interoperate and reuse data with none or minimal human intervention.
 
-- F – Findable
+#### F – Findable
 
 By using correct metadata to describe the data, it will be findable. By using a persistent identifier the data can be found by computer systems automatically.
 
-- A – Accessible
+#### A – Accessible
 
 The data should be accessible for the long term. Even when underlying data is not accessible, the describing metadata should remain available.
 
-- I – Interoperable
+#### I – Interoperable
 
 The data can be used and combined with other datasets. To achieve this, the data should be stored in generic file types, not in software specific file types.
 
-- R – Reusable
+#### R – Reusable
 
 The options for reuse should be stated clearly in a licence. Without a licence there is no certainty about the options for reuse and creator rights are implicit.
 
@@ -135,17 +135,17 @@ The FAIR Guiding Principles were put together and published in Scientific Data (
 <iframe src="https://elearning.bits.vib.be/wp-admin/admin-ajax.php?action=h5p_embed&id=33" width="958" height="397" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="https://elearning.bits.vib.be/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
 Not having FAIR research data is very expensive. 'The cost of not having
-FAIR research data costs the European economy at least €10.2bn every year' [Cost-benefit analysis for FAIR research data](https://op.europa.eu/en/publication-detail/-/publication/d375368c-1a0a-11e9-8d04-01aa75ed71a1/language-en)
+FAIR research data costs the European economy at least €10.2bn every year' ([Cost-benefit analysis for FAIR research data](https://op.europa.eu/en/publication-detail/-/publication/d375368c-1a0a-11e9-8d04-01aa75ed71a1/language-en))
 
-**Additional Resources**
+#### Additional Resources
 
 - [How to make your data fair?](https://www.openaire.eu/how-to-make-your-data-fair) by OpenAire
 - [FAIR Data: What it means, how we achieve it, and the role of RDA](https://www.slideshare.net/sjDCC/fair-data-what-it-means-how-we-achieve-it-and-the-role-of-rda)
 - [Turning FAIR into Reality](https://ec.europa.eu/info/sites/info/files/turning_fair_into_reality_0.pdf)
 
 ### OPEN Data
-Opendatahandbook.org defines open data as **data that can be freely used, re-used and redistributed by anyone - subject only, at most, to the requirement to attribute and sharealike.**
-Opendefinition.org says that **open data can be freely used, modified and shared by anyone for any purpose**
+Opendatahandbook.org defines open data as *data that can be freely used, re-used and redistributed by anyone - subject only, at most, to the requirement to attribute and sharealike.*
+Opendefinition.org says that *open data can be freely used, modified and shared by anyone for any purpose.*
 
 Have a look at the following figure
 ![Open & Closed Data -80width](../../images/00_OpenDataVsClosedData.png "Open & Closed Data")
