@@ -24,7 +24,7 @@ contributors:
 
 ## Lessons and Topics in this Section
 - L Sharing Data
-  - T Introduction
+  - T Sharing Data - Introduction
   - T What can go wrong when not sharing ...
   - T Benefits of Sharing Data
   - T Challenges of Data Sharing
@@ -44,18 +44,19 @@ contributors:
   - T The License Selector
   - T Questionnaire
 - L Preserving Data
-  - T Introduction
+  - T Preserving Data - Introduction
   - T What to preserve?
   - T Where to preserve?
   - T Exercise: workflow
   - T Accounting for Data of Others
-  - T Accounting for data of others on websites
+  - T Accounting for Data of Others on Websites
   - T How to Preserve Your Data Correctly
   - T Exercise: Match the Solutions to the Data Loss
-
+- L Sharing & Preserving Data - References
+  - T References
 
 ## Sharing Data
-### Introduction
+### Sharing Data - Introduction
 Thanks to information and communication technology and globalisation new opportunities arise to exchange results of scientific research - publications and research data - and even of scientific methods and practices. This new way of practising science is called 'open science'.
 
 Open data is a part of this movement towards open science. It is the ambition of universities, governments, funders and publishers to make research data optimally suited for reuse.
@@ -64,7 +65,7 @@ There are different reasons why you may not be able to share your research data.
 
 ### What can go wrong when not sharing ...
 
-#### Irreproducible results
+#### Irreproducible Results
 In January 2020, tbe [BBC](https://www.bbc.com/news/world-us-canada-50989423) reported *Nobel Prize-winning scientist Frances Arnold retracts paper* It was retracted because '*the results were not reproducible, and the authors found data missing from a lab notebook*'. This is merely to illustrate that reproducibility is a big thing. If you ever had problems understanding or reusing your data, perhaps this helps you to imagine better it is no sinecure to ensure the entire world can understand and use your data. If you have indeed ever experienced difficulties to understand or resuse your own data, do not worry -you are certainly not the only one!
 [![Experiment Reproducibility -80width](../../images/00_ExperimentReproducibility.jpg "Experiment Reproducibility")](https://www.nature.com/news/1-500-scientists-lift-the-lid-on-reproducibility-1.19970)
 
@@ -73,11 +74,11 @@ The following are real examples where researchers or data centers have lost cruc
 
 <iframe src="https://elearning.bits.vib.be/wp-admin/admin-ajax.php?action=h5p_embed&id=1" width="958" height="642" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="https://elearning.bits.vib.be/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
-#### Data Lost forever
+#### Data Lost Forever
 [![Research Data Lost Forever -80width](../../images/00_ResearchDataLostForever.png "Research Data Lost Forever")](https://www.theatlantic.com/national/archive/2013/12/scientific-data-lost-forever/356422/)
 https://www.theatlantic.com/national/archive/2013/12/scientific-data-lost-forever/356422/
 
-#### A short story
+#### A Short Story
 Not being prepared to share your data can lead to problems in using the data. In this short video, you see what shouldn't happen when a researcher makes a data sharing request! Topics include storage, documentation, and file formats. A made-up, yet not unrealistic story.
 
 https://www.youtube.com/embed/66oNv_DJuPc
@@ -92,24 +93,29 @@ Indeed, there are many benefits to sharing data:
 #### Access, Re-use & Recognition
 - Facilitating future research by allowing others to build on or add to your research data.
 ![Benefits of Sharing2](../../images/04_BenefitsSharing2.jpg "Benefits of Sharing2")
-From [Facts and Figures for Open Research Data](https://ec.europa.eu/info/research and innovation/strategy/goals research and innovation policy/open science/open science monito r/facts and figures open research data_en)
+From [Facts and Figures for Open Research Data](https://ec.europa.eu/info/research-and-innovation/strategy/goals-research-and-innovation-policy/open-science/open-science-monitor/facts-and-figures-open-research-data_en)
 - Enhancing research visibility and impact and increasing citations of research data and of publications based on that data.
 ![Benefits of Sharing4](../../images/04_BenefitsSharing4.jpg "Benefits of Sharing4")
 - Accelerating Scientific discovery
-  - "Just three weeks after the first viral sequence was published, more than 42 different genomes are available on [Nextstrain](https://nextstrain.org/)"
+  - "*Just three weeks after the first viral sequence was published, more than 42 different genomes are available on [Nextstrain](https://nextstrain.org/)*" ([CBC](https://www.cbc.ca/news/health/coronavirus-2019-ncov-science-virus-genome-who-research-collaboration-1.5446948))
   - Using open source tools and public cyberinfrastructure for transparent, reproducible analyses of viral datasets: the [Galaxy Project](https://covid19.galaxyproject.org/)
 
 #### Efficiency
 - Increasing your research efficiency by saving time and resources.
 - Supporting research integrity and reproducibility
 ![Benefits of Sharing3](../../images/04_BenefitsSharing3.jpg "Benefits of Sharing3")
+
 From [nature.com](https://www.nature.com/news/1-500-scientists-lift-the-lid-on-reproducibility-1.19970)
+
 - Preventing duplication of effort by enabling others to use your data.
   - "We're opening everything': Scientists share coronavirus data in unprecedented way to contain, treat disease" - [CBC](https://www.cbc.ca/news/health/coronavirus-2019-ncov-science-virus-genome-who-research-collaboration-1.5446948)
 - Respecting conventions regarding filenames and folder structure.
-![Efficient Folder Structures -80width](../../images/00_FilenamesFolderStructure.png "Efficient Folder Structures")
+
+![Efficient Folder Structures -80width](../../images/01_OrganizingFolderStructure2.png "Efficient Folder Structures")
+
 - Efficient use of resources: *'The cost of not having FAIR research data costs the European economy at least **€10.2bn every year***
-![Benefits of Sharing6](../../images/04_BenefitsSharing6.jpg "Benefits of Sharing6")
+
+[![Benefits of Sharing6](../../images/04_BenefitsSharing6.jpg "Benefits of Sharing6")](https://op.europa.eu/en/publication-detail/-/publication/d375368c-1a0a-11e9-8d04-01aa75ed71a1/language-en)
 From [Cost-benefit analysis for FAIR research data](https://op.europa.eu/en/publication-detail/-/publication/d375368c-1a0a-11e9-8d04-01aa75ed71a1/language-en)
 
 #### Quality & Security
@@ -128,9 +134,8 @@ From [plos.org](https://journals.plos.org/plosone/s/data-availability)
 
 #### Career Recognition
 Shift from 'publishing as fast as possible' to 'sharing knowledge as early as possible', adapting reward and evaluation systems.
-  - [EC Expert Group on Reward Systems](https://ec.europa.eu/research/openscience/index.cfm?pg=rewards_wg) in Open Science: 'Open Science must become part of the recruitment criteria, career progression and grant assessment procedures for researchers at all levels'.
-  - Initial [agreement](http://data.consilium.europa.eu/doc/document/ST-8550-2019-INIT/en/pdf) on Horizon Europe: 'Recognition and reward mechanisms […], as well as incentives promoting the adoption of open science practices
-[…]'.
+  - [EC Expert Group on Reward Systems](https://ec.europa.eu/research/openscience/index.cfm?pg=rewards_wg) on Open Science: 'Open Science must become part of the recruitment criteria, career progression and grant assessment procedures for researchers at all levels'.
+  - Initial [agreement](http://data.consilium.europa.eu/doc/document/ST-8550-2019-INIT/en/pdf) on Horizon Europe: 'Recognition and reward mechanisms (...), as well as incentives promoting the adoption of open science practices'.
 
 ### Challenges of Data Sharing
 - **Time and effort** Making data sharable is labor intensive
@@ -204,9 +209,7 @@ Icons representing attributes of data repositories in [Re3data.org](https://www.
   - Be transparent about mission, scope, preservation policies, and plans (including governance , financial sustainability, retention period, and continuity plan)
 
 ### Registry of Data Repositories
-You can browse or search for a data repository in re3data.org. This is a global registry of research data repositories covering different academic disciplines. You can search or browse by subject, content type or country. You can filter the search and browse results on criteria for choosing a data repository as described above.
-
-[re3data.org](https://www.re3data.org/)
+You can browse or search for a data repository at [re3data.org](https://www.re3data.org/). This is a global registry of research data repositories covering different academic disciplines. You can search or browse by subject, content type or country. You can filter the search and browse results on criteria for choosing a data repository as described above.
 
 Here are some well-known and generic repositories:
 
@@ -221,7 +224,7 @@ Here are some well-known and generic repositories:
 
 You have just learned about the existence of a global registry of research data repositories that covers repositories from different academic disciplines.
 
-Re3data.org makes it possible to search for a repository that meets your criteria.
+[re3data.org](https://www.re3data.org/) makes it possible to search for a repository that meets your criteria.
 
 <iframe src="https://elearning.bits.vib.be/wp-admin/admin-ajax.php?action=h5p_embed&id=30" width="958" height="1532" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="https://elearning.bits.vib.be/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
@@ -260,9 +263,9 @@ Examples of generic data journals:
 
 Examples of disciplinary data journals:
 
-- Open archaeology data;
-- Earth System Science Data;
-- Research Data Journal for the Humanities and Social Sciences.
+- [Open archaeology data](https://openarchaeologydata.metajnl.com/);
+- [Earth System Science Data](https://www.earth-system-science-data.net/);
+- [Research Data Journal for the Humanities and Social Sciences](https://brill.com/view/journals/rdj/rdj-overview.xml).
 
 
 <iframe src="https://elearning.bits.vib.be/wp-admin/admin-ajax.php?action=h5p_embed&id=31" width="958" height="466" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="https://elearning.bits.vib.be/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
@@ -316,6 +319,11 @@ Examples of standard licences are
 
 Sometimes, however  research partner, funder, research institution, or data repository may require a **tailor-made licence**. The most common reason to adopt them is the commercial value of data. These tailor-made licences are typically written by the publisher or adapted from a standard license by adding / adaption conditions. They may increase complexity for users, and decrease interoperability.
 
+#### Additional Resources
+
+- [About Creative Commons Licenses](https://guides.library.queensu.ca/c.php?g=704790&p=5014948)
+
+
 ### Sharing & Licensing Derivative works
 Whenever licensing a work or dataset that contains data already licensed, do not claim rights you do not hold. If the derived data was licensed with conditions:
 - Copyleft / SA: license the derived dataset in the same way.
@@ -328,6 +336,8 @@ Assigning licences to data can also have disadvantages. Licences are static and 
 A short movie explaining the different Creative Commons elements is shown below. Remember that sharing without a licence can still lead to conflicts.
 
 https://www.youtube.com/embed/HyWdeNQ7fo0
+
+Here's a video from Kingsborough Community College that shows how you can add a CC licence to your work.
 
 https://www.youtube.com/embed/5QxkuuiZwRU
 
@@ -345,14 +355,10 @@ There is a nice tool that you can use when you want to select a licence, called 
 
 [ays_poll id=6]
 
-**Additional Resources**
-
-- [About Creative Commons Licenses](https://guides.library.queensu.ca/c.php?g=704790&p=5014948)
-
 
 ## Preserving Data
 
-### Introduction
+### Preserving Data - Introduction
 For clarity's sake, preserving data does not equal storing or backing up your data. When we use the words data preservation, then without exception we are talking about a milestone version of your data which is not in active use anymore. As it's not subject to change, one could compare it to a mosquito caught in amber.
 
 Research should be transparent and you should always be able to revert back to your data if necessary and be able to show others how you came to your results. Therefore, your research data with all information reasonably necessary for verification needs to be preserved.
@@ -375,7 +381,6 @@ It may be worthwhile to make (part of) your data available for a longer period o
 
 On the one hand, making research data reusable will need extra effort. On the other hand, possible reuse, even by your future self, might bring you lots of benefits and credits. Consider if your data is worth the effort of making it reusable or if preserving and archiving for verification is enough.
 
-Reuse is explained more in depth in 'Data Availability for Reuse'. In this part we will focus on selection and preservation of research data for verification purposes.
 
 ### What to preserve?
 ![What to preserve](../../images/01_OrganizingFolderStructure2.png "What to preserve")
@@ -408,7 +413,7 @@ This is especially practical if the data package can be found and used on its ow
 
 Do not forget to explicitly state who is responsible for the content of the data package, who is to be contacted in case of a request for access, and under what conditions access is granted.
 
-##### Alternatives to preserving raw data
+#### Alternatives to preserving raw data
 
 If preserving your raw data poses problems, alternatives can also ensure verfication. For instance, transcripts of recorded interviews could hold all important information and may be less privacy-sensitive, so it is reasonable to preserve those instead of the recordings themselves. Also, if raw data is very large, preserving your data only in some processed form could be an alternative. Combined with, for instance, a demonstrable quality check on the processing.
 
@@ -436,7 +441,7 @@ You have the following options:
 - If this isn't possible, try to arrange a local copy that you preserve yourself;
 - If this isn't allowed, you will not be able to present the data in case of questions. Therefore, you should question yourself whether you can actually use the data.
 
-![Preserve for 10 years](../../images/Cont_5_Share_SelectPreserve_Chart10years.png "Preserve for 10 years")
+![Preserve for 10 years](../../images/04_Cont_5_Share_SelectPreserve_Chart10years.png "Preserve for 10 years")
 
 ### Accounting for data of others on websites
 
@@ -474,3 +479,13 @@ From the weblecture you learned how to prevent data loss. Can you recall all app
 6. Advertise the content in a data catalogue.
 
 <iframe src="https://elearning.bits.vib.be/wp-admin/admin-ajax.php?action=h5p_embed&id=35" width="958" height="692" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="https://elearning.bits.vib.be/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
+
+## Sharing & Preserving Data - References
+
+### References
+- Baker, M. (2016, May 25). 1,500 scientists lift the lid on reproducibility. Retrieved from [https://www.nature.com/news/1-500-scientists-lift-the-lid-on-reproducibility-1.19970](https://www.nature.com/news/1-500-scientists-lift-the-lid-on-reproducibility-1.19970)
+- Crowe, K. (2020, February 1). 'We're opening everything': Scientists share coronavirus data in unprecedented way to contain, treat disease. Retrieved from [https://www.cbc.ca/news/health/coronavirus-2019-ncov-science-virus-genome-who-research-collaboration-1.5446948](https://www.cbc.ca/news/health/coronavirus-2019-ncov-science-virus-genome-who-research-collaboration-1.5446948)
+- Facts and Figures for open research data. (2020, July 17). Retrieved from [https://ec.europa.eu/info/research-and-innovation/strategy/goals-research-and-innovation-policy/open-science/open-science-monitor/facts-and-figures-open-research-data_en](https://ec.europa.eu/info/research-and-innovation/strategy/goals-research-and-innovation-policy/open-science/open-science-monitor/facts-and-figures-open-research-data_en)
+- Hole, B. (2014). 'Overcoming Obstacles to Sharing Research Data' (Slideshare Presentation). Retrieved from [https://www.slideshare.net/brianhole/overcoming-obstacles-to-sharing-research-data](https://www.slideshare.net/brianhole/overcoming-obstacles-to-sharing-research-data) (Accessed: 17 July 2020). Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- PwC EU Services. (2019, 16 January). Cost-benefit analysis for FAIR research data. Retrieved from [https://op.europa.eu/en/publication-detail/-/publication/d375368c-1a0a-11e9-8d04-01aa75ed71a1/language-en](https://op.europa.eu/en/publication-detail/-/publication/d375368c-1a0a-11e9-8d04-01aa75ed71a1/language-en)
+- Science Europe. (2018, November) ‘Practical Guide to the International Alignment of Research Data Management’: D/2018/13.324/4. Retrieved from [https://www.scienceeurope.org/media/jezkhnoo/se_rdm_practical_guide_final.pdf](https://www.scienceeurope.org/media/jezkhnoo/se_rdm_practical_guide_final.pdf)
