@@ -247,6 +247,8 @@ These data should be treated with higher levels of security than data which do n
 
 ### Questionnaire: Prevent Unauthorised Access
 
+We are interested to know if you have ever experienced unauthorized access to any of your research data. When you give your reply, we will show you an overview with the responses of other researchers in this course. All responses will be processed anonymously.
+
 [ays_poll id=5]
 
 ### Legal Agreements and Contracts
