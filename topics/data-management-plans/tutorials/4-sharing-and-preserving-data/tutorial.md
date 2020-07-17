@@ -42,7 +42,7 @@ contributors:
   - T Sharing & Licensing Derivative works
   - T Assigning a Licence to Your Data
   - T The License Selector
-  - T Questionnaire
+  - T Questionnaire - How will you share your data?
 - L Preserving Data
   - T Preserving Data - Introduction
   - T What to preserve?
@@ -351,7 +351,13 @@ There is a nice tool that you can use when you want to select a licence, called 
 (from [Sharing and preserving data](https://osf.io/kdypa/), Research Department - University Library (Book Tower), Ghent University)
 
 
-### Questionnaire
+### Questionnaire - How will you share your data?
+
+You have learned by now that there are various ways to share and make your data available for reuse.
+
+We are very interested to know what you will do with (most of) your data.
+
+When you choose one of the options, no strings attached, we will show you the responses of other researchers in this course. All responses will be processed anonymous.
 
 [ays_poll id=6]
 
