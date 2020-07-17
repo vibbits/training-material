@@ -39,21 +39,21 @@ contributors:
   - T Examples of Data Documentation
   - T Different Levels of Data Documentation
   - T Metadata
-  - T Data standards
-  - T Exercise: Data standards
+  - T Data Standards
+  - T Exercise: Data Standards
   - T Licences
 - L Organizing
   - T Research and Lab Notebooks
-  - T File formats
-  - T File naming
+  - T File Formats
+  - T File Naming
   - T Good File Management
   - T Benefits of Good File Management
   - T Do's and Don'ts
-  - T Batch Renaming of automatically Generated files
-  - T Version control
-  - T Folder structure
+  - T Batch Renaming of Automatically Generated Files
+  - T Version Control
+  - T Folder Structure
 - L Documenting & Organizing - References
-  - References
+  - T Documenting & Organizing - References
 
 ## Data Documentation
 
@@ -269,7 +269,7 @@ Here is a list of things you can standardise in your research.
 - Standardise the **metadata** you use to describe your records or study. What fields will fill in by default, and according to what standard do you define the fields' names? Will you design a metadata spreadsheet where you specify all things that you will note down?
 - Standardise the **vocabulary** you use. If everyone has the same terminology, it can avoid confusion or misinterpretation. Check for standard taxonomies or coding systems within your research discipline.
 
-### Exercise: Data standards
+### Exercise: Data Standards
 
 Follow the links below for examples of standards. What type of standardisation do the links refer to?
 
@@ -314,7 +314,7 @@ Thorough and effective management of laboratory data and the routine documentati
 
 If you want to learn more about the electronic lab notebook system at VIB, please see [these tutorials](https://material.bits.vib.be/topics/eln/)
 
-### File formats
+### File Formats
 
 This part is based on the online Research Data Management training 'MANTRA' of The University of Edinburgh (CC BY: [https://mantra.edina.ac.uk/](https://mantra.edina.ac.uk/)) and Managing Data @ Melbourne.
 
@@ -474,7 +474,8 @@ An example of a good file name is for instance *20160912_Pr01_WP4_MA.txt* (date,
 
 <iframe src="https://elearning.bits.vib.be/wp-admin/admin-ajax.php?action=h5p_embed&id=24" width="958" height="217" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="https://elearning.bits.vib.be/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
-### Batch Renaming of automatically Generated files
+### Batch Renaming of Automatically Generated Files
+
 Although all operating systems have built-in tools for managing files, there are software tools that can organise research data files and folders in a consistent and automated way through batch renaming (also known as mass file renaming or bulk renaming). Batch renaming software exists for most operating systems. There are many situations for which batch renaming may be useful, such as:
 
 - Images from digital cameras are automatically assigned base filenames consisting of sequential numbers;
@@ -522,7 +523,7 @@ Use version control software such as [Git](https://git-scm.com/), [Github](https
 If you want to know all there is to know about Git and Github, then why not have a look at our [introduction to Git & Github](https://material.bits.vib.be/topics/git-introduction/)?
 
 
-### Folder structure
+### Folder Structure
 How to structure files and folders? Organic or predefined?
 - Better to plan
 - Use a logical structure and naming scheme. Make sure collaborators understand.
@@ -535,6 +536,6 @@ How to structure files and folders? Organic or predefined?
 
 ## Documenting & Organising - References
 
-### References
+### Documenting & Organizing - References
 - Fogel K: *Producing Open Source Software: How to Run a Successful Free Software Project*. O'Reilly Media, Inc. 2005. [Reference Source](https://producingoss.com/en/producingoss.pdf
 - Jiménez RC, Kuzak M, Alhamdoosh M *et al*. Four simple recommendations to encourage best practices in research software [version 1; peer review: 3 approved]. *F1000Research* 2017, 6:876 [https://doi.org/10.12688/f1000research.11407.1](https://doi.org/10.12688/f1000research.11407.1)

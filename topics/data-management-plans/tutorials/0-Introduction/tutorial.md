@@ -32,10 +32,10 @@ contributors:
 ## Lessons and Topics in this Section
 - L What is data?
   - T Introduction
-  - T What is the typical lifecycle of research data?
-  - T What is Research Data Management (RDM)?
-  - T What are the benefits of RDM?
-  - T Questionnaire - Rate your data management
+  - T What Is the Typical Lifecycle of Research Data?
+  - T What Is Research Data Management (RDM)?
+  - T What Are the Benefits of RDM?
+  - T Questionnaire - Rate Your Data Management
 - L FAIR data
   - T Introduction
   - T Exercise: Identify FAIR data
@@ -61,7 +61,7 @@ Before we talk about data management, it is important that we start on the same 
 
 **Data is any information collected or generated for the purpose of analysis, in order to generate or validate scientific claims.** This could take the form of surveys, measurements, code, images, documents, etc. It can be qualitative/quantitative, structured or unstructured, digital or analogue, raw or processed, experimental or observational, derived or compiled, and so on. Research data can mean a lot!
 
-### What is the typical lifecycle of research data?
+### What Is the Typical Lifecycle of Research Data?
 
 https://www.youtube.com/embed/OL_Vd9dd-AQ
 
@@ -77,7 +77,7 @@ This course follows this course as closely as possible in chapters such as
 
 ![Course Chapters -80width](../../images/00_DataLifeCycleCourseChapters.png "Course Chapters")
 
-### What is Research Data Management (RDM)?
+### What Is Research Data Management (RDM)?
 
 https://www.youtube.com/embed/bbsLmy3Njv4
 
@@ -85,7 +85,7 @@ https://www.youtube.com/embed/bbsLmy3Njv4
 
 ![What is research data management -80width](../../images/00_WhatIsResearchDataManagement.jpg "What is research data management")
 
-### What are the Benefits of RDM?
+### What Are the Benefits of RDM?
 In this short video Prof. dr. Chantal Kemner explains the importance of good data management for Utrecht University.
 
 https://www.youtube.com/embed/f48l4Uca9nA
@@ -99,7 +99,7 @@ Managing your data effectively is crucial to the success of your research. This 
 
 Each of these will be elaborated in the following topics in this lesson.
 
-### Questionnaire - Rate your data management
+### Questionnaire - Rate Your Data Management
 
 Think about your own research project right now. Please rate your current data management practices: how easily can you find all the data relating to your publications?
 

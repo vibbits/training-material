@@ -29,7 +29,7 @@ contributors:
 
 - L Data Storage
   - T Data Storage - Introduction
-  - T Things that can go wrong
+  - T Things That Can Go Wrong
   - T Questions to Consider
   - T Shared or Individual Data
   - T Access Management
@@ -56,7 +56,7 @@ contributors:
   - T Cases on How to Make Personal Data Accessible
   - T Informed Consent
 - L Storing Data & Data Security - References
-    - References
+  - T Storing Data & Data Security - References
 
 ## Data Storage
 
@@ -76,7 +76,7 @@ In this part of the course you will learn to:
 
 Bear in mind that technology is evolving rapidly. The suggestions in this course for storage options, technology and regulations is a snapshot that may soon be outdated.
 
-### Things that can go wrong
+### Things That Can Go Wrong
 
 - **Theft** Open doors, lack of backup, leaks of confidential information
 - **Disasters** Fire can happen to anyone. It destroyed university buildings at Southampton, Twente and Delft, causing significant damage to data storage facilities
@@ -365,4 +365,4 @@ One thing to arrange in your informed consent is the possibility for future use,
 
 ## Storing Data & Data Security - References
 
-### References
+### Storing Data & Data Security - References

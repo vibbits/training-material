@@ -25,8 +25,8 @@ contributors:
 ## Lessons and Topics in this Section
 - L Sharing Data
   - T Sharing Data - Introduction
-  - T What can go wrong when not sharing ...
-  - T Benefits of Sharing Data
+  - T Things That Can Go Wrong
+  - T Benefits of Data Sharing
   - T Challenges of Data Sharing
   - T Restrictions on Data Sharing
   - T Ways of Sharing Data
@@ -34,28 +34,28 @@ contributors:
   - T Choosing a Data Repository
   - T Registry of Data Repositories
   - T Exercise: Explore Data Repositories
-  - T Questionnaire - How will you share your data?
+  - T Questionnaire - How Will You Share Your Data?
   - T Data Journals
   - T Benefits of Publishing in a Data Journal
   - T Different Types of Data Journal
   - T Citing a Dataset
   - T Questionnaire - Data Loss Risks
   - T Licences
-  - T Sharing & Licensing Derivative works
+  - T Sharing & Licensing Derivative Works
   - T Assigning a Licence to Your Data
   - T The License Selector
   - T Questionnaire - Which Licence Would You Choose?
 - L Preserving Data
   - T Preserving Data - Introduction
-  - T What to preserve?
-  - T Where to preserve?
-  - T Exercise: workflow
+  - T What to Preserve?
+  - T Where to Preserve?
+  - T Exercise: Workflow
   - T Accounting for Data of Others
   - T Accounting for Data of Others on Websites
   - T How to Preserve Your Data Correctly
   - T Exercise: Match the Solutions to the Data Loss
 - L Sharing & Preserving Data - References
-  - T References
+  - T Sharing & Preserving Data - References
 
 ## Sharing Data
 ### Sharing Data - Introduction
@@ -65,7 +65,7 @@ Open data is a part of this movement towards open science. It is the ambition of
 
 There are different reasons why you may not be able to share your research data. Thinking about these issues and challenges when developing your data management plan will help you reflect on such reasons in an early stage.
 
-### What can go wrong when not sharing ...
+### Things That Can Go Wrong
 
 #### Irreproducible Results
 In January 2020, tbe [BBC](https://www.bbc.com/news/world-us-canada-50989423) reported *Nobel Prize-winning scientist Frances Arnold retracts paper* It was retracted because '*the results were not reproducible, and the authors found data missing from a lab notebook*'. This is merely to illustrate that reproducibility is a big thing. If you ever had problems understanding or reusing your data, perhaps this helps you to imagine better it is no sinecure to ensure the entire world can understand and use your data. If you have indeed ever experienced difficulties to understand or resuse your own data, do not worry -you are certainly not the only one!
@@ -85,7 +85,7 @@ Not being prepared to share your data can lead to problems in using the data. In
 
 https://www.youtube.com/embed/66oNv_DJuPc
 
-### Benefits of Sharing Data
+### Benefits of Data Sharing
 
 ![Benefits of Sharing](../../images/04_BenefitsSharing.jpg "Benefits of Sharing")
 From [Overcoming obstacles to sharing research data](https://www.slideshare.net/brianhole/overcoming-obstacles-to-sharing-research-data) by Brian Hole, licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
@@ -232,7 +232,7 @@ You have just learned about the existence of a global registry of research data 
 
 Specifically for the life sciences, make sure you check [ELIXIR Deposition Databases for Biomolecular Data](https://elixir-europe.org/platforms/data/elixir-deposition-databases)
 
-### Questionnaire - How will you share your data?
+### Questionnaire - How Will You Share Your Data?
 
 You have learned by now that there are various ways to share and make your data available for reuse.
 
@@ -342,7 +342,7 @@ Sometimes, however  research partner, funder, research institution, or data repo
 - [About Creative Commons Licenses](https://guides.library.queensu.ca/c.php?g=704790&p=5014948)
 
 
-### Sharing & Licensing Derivative works
+### Sharing & Licensing Derivative Works
 Whenever licensing a work or dataset that contains data already licensed, do not claim rights you do not hold. If the derived data was licensed with conditions:
 - Copyleft / SA: license the derived dataset in the same way.
 - NC: do not charge for the derived dataset.
@@ -412,7 +412,7 @@ It may be worthwhile to make (part of) your data available for a longer period o
 On the one hand, making research data reusable will need extra effort. On the other hand, possible reuse, even by your future self, might bring you lots of benefits and credits. Consider if your data is worth the effort of making it reusable or if preserving and archiving for verification is enough.
 
 
-### What to preserve?
+### What to Preserve?
 ![What to preserve](../../images/01_OrganizingFolderStructure2.png "What to preserve")
 
 Others should be able to understand what you did. It is not enough to just provide data. Without associated information, research data quickly become useless. For all data selected for preservation, you should therefore keep a 'data package' consisting of:
@@ -447,7 +447,7 @@ Do not forget to explicitly state who is responsible for the content of the data
 
 If preserving your raw data poses problems, alternatives can also ensure verfication. For instance, transcripts of recorded interviews could hold all important information and may be less privacy-sensitive, so it is reasonable to preserve those instead of the recordings themselves. Also, if raw data is very large, preserving your data only in some processed form could be an alternative. Combined with, for instance, a demonstrable quality check on the processing.
 
-### Where to preserve?
+### Where to Preserve?
 
 Research data and documentation selected for retention should be kept in a suitable location and in a secure manner to ensure that they remain available and usable beyond the end of your project, with appropriate access rights:
 - **Data repository** This is the preferred way.
@@ -455,7 +455,7 @@ Research data and documentation selected for retention should be kept in a suita
 
 As you have just learned, preserving your data may serve the purpose of verification or  reuse. Public data repositories cater to both needs. In addition, they handle requests to view or use your data which means you do not have to take care of such requests yourself.
 
-### Exercise: workflow
+### Exercise: Workflow
 In the example below, you find a workflow for experimental research. What information can be made available in what place? Drag the items on the right to the correct place in the figure. Please note that some items can be used more than once.
 
 <iframe src="https://elearning.bits.vib.be/wp-admin/admin-ajax.php?action=h5p_embed&id=34" width="958" height="440" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="https://elearning.bits.vib.be/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
@@ -473,7 +473,7 @@ You have the following options:
 
 ![Preserve for 10 years](../../images/04_Cont_5_Share_SelectPreserve_Chart10years.png "Preserve for 10 years")
 
-### Accounting for data of others on websites
+### Accounting for Data of Others on Websites
 
 If you find interesting information on a website that you want to refer to, it is possible that this information will not be future proof.
 
@@ -512,7 +512,7 @@ From the weblecture you learned how to prevent data loss. Can you recall all app
 
 ## Sharing & Preserving Data - References
 
-### References
+### Sharing & Preserving Data - References
 - Baker, M. (2016, May 25). 1,500 scientists lift the lid on reproducibility. Retrieved from [https://www.nature.com/news/1-500-scientists-lift-the-lid-on-reproducibility-1.19970](https://www.nature.com/news/1-500-scientists-lift-the-lid-on-reproducibility-1.19970)
 - Crowe, K. (2020, February 1). 'We're opening everything': Scientists share coronavirus data in unprecedented way to contain, treat disease. Retrieved from [https://www.cbc.ca/news/health/coronavirus-2019-ncov-science-virus-genome-who-research-collaboration-1.5446948](https://www.cbc.ca/news/health/coronavirus-2019-ncov-science-virus-genome-who-research-collaboration-1.5446948)
 - Facts and Figures for open research data. (2020, July 17). Retrieved from [https://ec.europa.eu/info/research-and-innovation/strategy/goals-research-and-innovation-policy/open-science/open-science-monitor/facts-and-figures-open-research-data_en](https://ec.europa.eu/info/research-and-innovation/strategy/goals-research-and-innovation-policy/open-science/open-science-monitor/facts-and-figures-open-research-data_en)

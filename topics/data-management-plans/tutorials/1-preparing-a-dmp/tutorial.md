@@ -29,36 +29,30 @@ contributors:
 
 ## Lessons and Topics in this Section
 - L Tools
-  - T Introduction
+  - T Tools - Introduction
 - L DMPOnline
   - T What is DMPOnline
   - T 7 Main Themes
-  - T Theme 1 Data description
-  - T Theme 2 Ethical and legal issues
-  - T Theme 3 Data documentation and metadata
-  - T Theme 4 Data storage and backup during the project
-  - T Theme 5 Data preservation after the end of the projects
-  - T Theme 6 Data sharing and Reuse
+  - T Theme 1 Data Description
+  - T Theme 2 Ethical and Legal Issues
+  - T Theme 3 Data Documentation and Metadata
+  - T Theme 4 Data Storage and Backup During the Project
+  - T Theme 5 Data Preservation after the End of the Project
+  - T Theme 6 Data Sharing and Reuse
   - T Theme 7 Responsibilities
 - L VIB Forms
-  - T General Information
-  - T Datasets Information
-  - T Data type 1 - Observational data
-  - T Data type 2. Experimental data
-  - T Data type 3. Simulation data
-  - T Data type 4. Derived and compiled data
-  - T Data type 5. Canonical data
-  - T Data purpose
-  - T Ethical and legal issues
+  - T General Information & Datasets Information
+  - T Data Types & Data Purpose
+  - T Ethical and Legal Issues
   - T Making Data Findable
-  - T Documentation and metadata
-  - T Data storage & backup during the project
-  - T Who will be able to access the data and under what conditions?
-  - T Data preservation after the end of the project
+  - T Documentation and Metadata
+  - T Data Storage & Backup During the Project
+  - T Data Access: for Whom and under Which Conditions?
+  - T Data Preservation after the End of the Project
   - T Responsibilities
-  - T Ready to submit?
+  - T Ready to Submit?
 - L Data collection
-  - T Introduction
+  - T Data Collection - Introduction
   - T The Data Flow
   - T Discover Data
   - T Assess the Usefulness of Existing Data
@@ -68,13 +62,13 @@ contributors:
 - L Licences
   - T About Licences
 - L Costs Involved with Managing Your Data
-  - T introduction
+  - T Costs - Introduction
   - T Data Management Cost Guide
 
 
 ## Tools
 
-### Introduction
+### Tools - Introduction
 Before you start working, let us explore the tools we have at our disposal. In this section we will look at [DMPOnline](https://dmponline.be/) and, specifically for VIB staff, [VIB Forms](https://forms.vib.be/). Especially in the latter section, sample answers are provided in italics.
 
 ![Top 10 Excuses for not having a DMP](../../images/01_DMPTop10.png "Top 10 Excuses for not having a DMP")
@@ -116,7 +110,7 @@ Templates for a Data Management Plans (DMP) may vary from funder to funder, but 
 (from 'Preparing a DMP' by Research Department University Library (Book Tower), UGent, licensed under CC-BY 4.0)
 
 
-### Theme 1 Data description
+### Theme 1 Data Description
 This section contains the following questions:
 
 - Will you generate/collect new data and/or make use of existing data?
@@ -132,7 +126,7 @@ Here are a few tips:
   - specify file formats (e.g. .csv, .txt, .docx, ...)
   - specify data source/collection methods (e.g. experimental, observational, simulation, ...)
 
-### Theme 2 Ethical and legal issues
+### Theme 2 Ethical and Legal Issues
 This section contains the following questions:
 
 - Will you use personal data?
@@ -149,7 +143,7 @@ This section contains the following questions:
   - e.g. you work with third-party data/collaborate with external partners. Check licenses/agreements to know what you can do.
 - Do existing 3rd party agreements restrict dissemination or exploitation of the data you (re)use?
 
-### Theme 3 Data documentation and metadata
+### Theme 3 Data Documentation and Metadata
 This section contains the following questions:
 
 - What documentation will be provided to enable understanding and reuse of the data collected/generated in this project?
@@ -183,7 +177,7 @@ Ensure that it is clear what the study was about, what the variables in your dat
 ![Metadata -80width](../../images/01_Metadata.png "Metadata")
 'Metadata' by Jørgen Stamp, attribution: digitalbevaring.dk, licensed under [CC-BY 2.5 DK](https://creativecommons.org/licenses/by/2.5/dk/deed.en_GB)
 
-### Theme 4 Data storage and backup during the project
+### Theme 4 Data Storage and Backup During the Project
 This section contains the following questions:
 
 - Where will data be stored?
@@ -194,7 +188,7 @@ This section contains the following questions:
 
 Make sure you have multiple copies in different places. If possible, have an automatic back-up system!
 
-### Theme 5 Data preservation after the end of the projects
+### Theme 5 Data Preservation after the End of the Project
 This section contains the following questions:
 
 - Which data will be retained for the expected 5-year period after the end of the project?
@@ -212,7 +206,7 @@ https://www.youtube.com/embed/cutUrqJqjp4
 
 Finally, bear in mind that archiving your data externally is not always possible, and sometimes data may need to be kept in-house!
 
-### Theme 6 Data sharing and Reuse
+### Theme 6 Data Sharing and Reuse
 This section contains the following questions:
 
 - Are there any factors restricting or preventing the sharing of (some of) the data?
@@ -261,7 +255,7 @@ For each of the following 5 data types, indicate which datasets you are reusing 
 - Provide an estimation of the expected size of the datasets;
 - Specify to whom it will be useful.
 
-### Data types
+### Data Types & Data Purpose
 
 #### Data type 1 - Observational data
 This section contains the following questions:
@@ -308,12 +302,12 @@ This section contains the following questions:
 - Dataset 5.3 – Chemical structures
 - Dataset 5.4 – Protein structures
 
-#### Data purpose
+#### Data Purpose
 This section contains the following questions:
 
 - For who will the data be valuable?
 
-### Ethical and legal issues
+### Ethical and Legal Issues
 This section contains the following questions:
 
 - Will you use personal data?
@@ -334,14 +328,14 @@ This section contains the following questions:
 Describe the file naming convention that will be used, and if applicable the persistent and unique identifiers e.g., DOI. The form contains a sample answer.
 
 
-### Documentation and metadata
+### Documentation and Metadata
 This section provides sample answers to the following questions:
 
 - What documentation will be provided to enable understanding and reuse of the data collected/generated in this project?
 - Will a metadata standard be used?
 - State in detail which metadata will be created to make the data easy/easier to find and reuse.
 
-### Data storage & backup during the project
+### Data Storage & Backup During the Project
 This section provides sample answers to the following questions:
 
 - Where will the data be stored?
@@ -350,7 +344,7 @@ This section provides sample answers to the following questions:
 - What are the expected costs for data storage and backup during the project? How will these costs be covered?
 - Data security: how will you ensure that the data are securely stored and not accessed or modified by unauthorized persons?
 
-### Who will be able to access the data and under what conditions?
+### Data Access: for Whom and under Which Conditions?
 This section provides sample answers to the following questions:
 
 - Are there any factors restricting or preventing the sharing of (some of) the data (e.g. as defined in an agreement with a 3rd party, legal restrictions)?
@@ -366,7 +360,7 @@ This section provides sample answers to the following questions:
 - Who will be able to access the data and under what conditions?
 - What are the expected costs for data sharing? How will these costs be covered?
 
-### Data preservation after the end of the project
+### Data Preservation after the End of the Project
 This section provides sample answers to the following questions:
 
 - Which data will be retained for the expected 5 year period after the end of the project?
@@ -381,7 +375,7 @@ This section provides sample answers to the following questions:
   - Who will be responsible for ensuring data preservation and sharing?
   - Who bears the end responsibility for updating & implementing this DMP?
 
-### Ready to submit?
+### Ready to Submit?
 Before submitting this form, please make sure that you have read and edited all the defaults answers as required for your project. In particular, pay attention to the following points:
 
 - Your answers should be consistent throughout the document. For example: if you mention personal data when listing your different datasets, do not overlook the corresponding ethics question on tab 9 , etc...
@@ -395,7 +389,7 @@ If you require further assistance, please contact:
 
 ## Data Collection
 
-### Introduction
+### Data Collection - Introduction
 By now you will have obtained some idea of what research data management is all about. Now we will have a more in-depth look into the different phases of your research by starting with data collection.
 
 Data collection involves understanding the different types of data you collect. Depending on the nature of your research, there are different methods of collecting data and thus different types of data.
