@@ -180,6 +180,8 @@ Richard Rodger, Professor of Economic and Social History, talks about the differ
 https://www.youtube.com/embed/jX-XNo8KbOo
 
 ### Questionnaire: How Much Data Would You Lose if Your Laptop Got Stolen?
+When you give your reply, we will show you the responses of other researchers in this course.
+
 [ays_poll id=4]
 
 ## Data Security
