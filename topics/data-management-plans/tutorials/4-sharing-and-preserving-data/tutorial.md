@@ -34,6 +34,7 @@ contributors:
   - T Choosing a Data Repository
   - T Registry of Data Repositories
   - T Exercise: Explore Data Repositories
+  - T Questionnaire - How will you share your data?
   - T Data Journals
   - T Benefits of Publishing in a Data Journal
   - T Different Types of Data Journal
@@ -42,7 +43,7 @@ contributors:
   - T Sharing & Licensing Derivative works
   - T Assigning a Licence to Your Data
   - T The License Selector
-  - T Questionnaire - How will you share your data?
+  - T Questionnaire - Which Licence Would You Choose?
 - L Preserving Data
   - T Preserving Data - Introduction
   - T What to preserve?
@@ -230,6 +231,17 @@ You have just learned about the existence of a global registry of research data 
 
 Specifically for the life sciences, make sure you check [ELIXIR Deposition Databases for Biomolecular Data](https://elixir-europe.org/platforms/data/elixir-deposition-databases)
 
+### Questionnaire - How will you share your data?
+
+You have learned by now that there are various ways to share and make your data available for reuse.
+
+We are very interested to know what you will do with (most of) your data.
+
+When you choose one of the options, no strings attached, we will show you the responses of other researchers in this course. All responses will be processed anonymous.
+
+[ays_poll id=6]
+
+
 ### Data Journals
 
 Data journals are publications whose primary purpose is to publish datasets. They enable you as an author to focus on the data itself, rather than producing an extensive analysis of the data which occurs in the traditional journal model. Fundamentally, data journals seek to:
@@ -351,16 +363,22 @@ There is a nice tool that you can use when you want to select a licence, called 
 (from [Sharing and preserving data](https://osf.io/kdypa/), Research Department - University Library (Book Tower), Ghent University)
 
 
-### Questionnaire - How will you share your data?
+### Questionnaire - Which Licence Would You Choose?
+We are very interested to know what license you would choose if you were to share the underlying research data of your most recent publication.  
 
-You have learned by now that there are various ways to share and make your data available for reuse.
+An explanation for each license can be found by clicking on the links below.
 
-We are very interested to know what you will do with (most of) your data.
+- CC BY: [Attribution](https://creativecommons.org/share-your-work/licensing-types-examples/licensing-examples/#by)
+- CC BY-SA: [Attribution ShareAlike](https://creativecommons.org/share-your-work/licensing-types-examples/licensing-examples/#sa)
+- CC BY-ND: [Attribution-NoDerivs](https://creativecommons.org/share-your-work/licensing-types-examples/licensing-examples/#nd)
+- CC BY-NC: [Attribution-NonCommercial](https://creativecommons.org/share-your-work/licensing-types-examples/licensing-examples/#nc)
+- CC BY-NC-SA: [Attribution-NonCommercial-ShareAlike](https://creativecommons.org/share-your-work/licensing-types-examples/licensing-examples/#by-nc-sa)
+- CC BY-NC-ND: [Attribution-NonCommercial-NoDerivs](https://creativecommons.org/share-your-work/licensing-types-examples/licensing-examples/#by-nc-nd)
+- CC0: [Public Domain](https://creativecommons.org/share-your-work/public-domain/)
 
-When you choose one of the options, no strings attached, we will show you the responses of other researchers in this course. All responses will be processed anonymous.
+When you give your reply, we will show you the responses of other researchers in this course.
 
-[ays_poll id=6]
-
+[ays_poll id=7]
 
 ## Preserving Data
 
