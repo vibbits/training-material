@@ -77,8 +77,8 @@ TODO: Questionnaire. Cf 08_RoundUp_Questionnaire.png
 #### FAIR & OPEN
 - [How to make your data fair?](https://www.openaire.eu/how-to-make-your-data-fair) by OpenAire
 - [FAIR Data: What it means, how we achieve it, and the role of RDA](https://www.slideshare.net/sjDCC/fair-data-what-it-means-how-we-achieve-it-and-the-role-of-rda)
-- [What is open science?](https://www.fosteropenscience.eu/learning/what-is-open-science/#/id/5ab8ea32dd1827131b90e3ac), an online course by fosteropenscience.eu
-- - [Turning FAIR into Reality](https://ec.europa.eu/info/sites/info/files/turning_fair_into_reality_0.pdf)
+- [What is open science?]https://www.fosteropenscience.eu/node/1420), an online course by fosteropenscience.eu
+- [Turning FAIR into Reality](https://ec.europa.eu/info/sites/info/files/turning_fair_into_reality_0.pdf)
 
 #### Copyright and Licences
 - [Legal instruments and agreements](https://www.uu.nl/en/research/research-data-management/guides/legal-instruments-and-agreements)
@@ -93,7 +93,7 @@ TODO: Questionnaire. Cf 08_RoundUp_Questionnaire.png
 
 - [Biology](http://www.dcc.ac.uk/resources/subject-areas/biology)
 - [General Sciences](http://www.dcc.ac.uk/resources/subject-areas/general-research-data)
-- [directory of metadata schemas](http://rd-alliance.github.io/metadata-directory/)
+- [Directory of metadata schemas](http://rd-alliance.github.io/metadata-directory/)
 - [FairSharing](https://fairsharing.org/).
 - [Understanding metadata](https://groups.niso.org/apps/group_public/download.php/17446/Understanding%20Metadata.pdf)
 
