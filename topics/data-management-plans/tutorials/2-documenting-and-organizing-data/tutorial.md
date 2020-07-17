@@ -42,7 +42,7 @@ contributors:
   - T Data standards
   - T Exercise: Data standards
   - T Licences
-- L Organising
+- L Organizing
   - T Research and Lab Notebooks
   - T File formats
   - T File naming
@@ -52,7 +52,7 @@ contributors:
   - T Batch Renaming of automatically Generated files
   - T Version control
   - T Folder structure
-- L Documenting & Organising - References
+- L Documenting & Organizing - References
   - References
 
 ## Data Documentation
