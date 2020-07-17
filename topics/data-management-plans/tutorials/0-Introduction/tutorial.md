@@ -35,6 +35,7 @@ contributors:
   - T What is the typical lifecycle of research data?
   - T What is Research Data Management (RDM)?
   - T What are the benefits of RDM?
+  - T Questionnaire - Rate your data management
 - L FAIR data
   - T Introduction
   - T Exercise: Identify FAIR data
@@ -98,6 +99,13 @@ Managing your data effectively is crucial to the success of your research. This 
 
 Each of these will be elaborated in the following topics in this lesson.
 
+### Questionnaire - Rate your data management
+
+Think about your own research project right now. Please rate your current data management practices: how easily can you find all the data relating to your publications?
+
+You can be honest: your rating is private and in this course we will be sharing some advice and techniques to help you improve your data management.
+
+[ays_poll id=9]
 
 ## FAIR Data
 
@@ -241,6 +249,11 @@ As well as defending against misconduct accusations, some additional benefits of
 - Reaching agreement between stakeholders about ownership of data;
 - Reducing time and effort in the long term.
 The good news is that this online training will take you through the necessary steps to create a plan during the subsequent modules.
+
+### Questionnaire - Your Main Reason for Writing a DMP
+We are very interested in your main reason to write a Data Management Plan. Give us your main reason and we will show you the responses of other researchers in this course.
+
+[ays_poll id=10]
 
 ## RDM Support
 
