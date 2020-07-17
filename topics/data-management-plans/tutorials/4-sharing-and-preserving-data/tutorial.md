@@ -39,6 +39,7 @@ contributors:
   - T Benefits of Publishing in a Data Journal
   - T Different Types of Data Journal
   - T Citing a Dataset
+  - T Questionnaire - Data Loss Risks
   - T Licences
   - T Sharing & Licensing Derivative works
   - T Assigning a Licence to Your Data
@@ -306,7 +307,12 @@ Irino, T; Tada, R (2009): Chemical and mineral compositions of sediments from OD
 
 <iframe src="https://elearning.bits.vib.be/wp-admin/admin-ajax.php?action=h5p_embed&id=32" width="958" height="545" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="https://elearning.bits.vib.be/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
+### Questionnaire - Data Loss Risks
+Think about your own data. Which risk of losing data will be most difficult to solve for your data?
 
+When you give your reply, we will show you the responses of other researchers in this course.
+
+[ays_poll id=8]
 
 ### Licences
 
