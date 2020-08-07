@@ -2,6 +2,9 @@
 layout: tutorial_hands_on
 
 title: "01 Exploring the Protein Data Bank exercises"
+
+TODO What do you want to do with the ZENODO link below?
+
 zenodo_link: "https://data.bits.vib.be/pub/trainingen/PSA/"
 questions:
   - "How to find structures in the PDB database?"
@@ -24,6 +27,8 @@ The way of searching for a specific protein structure depends on the data you al
 
 ![uniprotsearchbox.png](../../images/uniprotsearchbox.png "Search box")
 
+**TODO Replace howto below with video? If so, where host it?**
+
 > ### {% icon hands_on %} Explore a PDB structure on the Uniprot web site
 >
 > 1. Go to the UniProt website and search for the DnaK protein
@@ -31,6 +36,8 @@ The way of searching for a specific protein structure depends on the data you al
 > 2. Click on the *accession code* (column Entry) to view the protein page of this DnaK from the model organism *Escherichia coli*.
 > 3. Click on *Structure* in the left-side menu and then look at the *3D structure databases* table.
 {: .hands_on }
+
+**TODO Insert h5p. Adjust the 'why'-part of the exercise**
 
 ### {% icon question %} Guidelines which PDB structures to select
 
@@ -85,6 +92,8 @@ There is also an Advanced Search section, with a Blast/Fasta option in the Seque
 
 ![Blastpdb.png](../../images/blastpdb.png "BLAST")
 
+**TODO Section below: Advanced search has changed. Adjust this.**
+
 > ### {% icon hands_on %} Hands-on: BLAST search for PDB structure
 >
 > 1. Go to the Advanced Search section
@@ -99,22 +108,16 @@ There is also an Advanced Search section, with a Blast/Fasta option in the Seque
 
 ## Introduction
 
-A PDB (Protein Data Bank) file is a plain text file that contains the
-atom coordinates of a solved 3D structure of a protein or even DNA. Such
-coordinate files can be obtained at the Protein Data Bank at
-<http://www.rcsb.org/pdb>. Each PDB file has a unique identifier (ID)
-consisting of 4 characters, the first one is always a number. Note: It
-has been announced that the 4 character code will change in the future
-<https://www.wwpdb.org/news/news?year=2017\#5910c8d8d3b1d333029d4ea8>.
-
-The PDB file with ID **1DKX** contains the atomic coordinates of the
-molecular chaperone (DnaK) from *E coli*.
+A PDB (Protein Data Bank) file is a plain text file that contains the atom coordinates of a solved 3D structure of a protein or even DNA. Such coordinate files can be obtained at the Protein Data Bank at <http://www.rcsb.org/pdb>. Each PDB file has a unique identifier (ID) consisting of 4 characters, the first one is always a number. Note: It has been announced that the 4 character code will change in the future <https://www.wwpdb.org/news/news?year=2017\#5910c8d8d3b1d333029d4ea8>.
+The PDB file with ID **1DKX** contains the atomic coordinates of the molecular chaperone (DnaK) from *E coli*.
 
 > ### {% icon hands_on %} Hands-on: BLAST search for PDB structure
 >
 > 1. Go to the PDB website at <http://www.rcsb.org/pdb>
 > 2. Type 1DKX in the search and try to answer the following questions.
 {: .hands_on}
+
+**TODO Add h5p quiz**
 
 ### {% icon question %} Questions
 
@@ -138,10 +141,7 @@ molecular chaperone (DnaK) from *E coli*.
 
 ## Downloading the structure
 
-The file that holds the 3D coordinates can be downloaded by clicking on
-*Download files* in the top right corner and then choosing *PDB file (text)*.
-For convenience, save this file on your desktop. The filename is the
-4-character unique PDB ID.
+The file that holds the 3D coordinates can be downloaded by clicking on *Download files* in the top right corner and then choosing *PDB file (text)*. For convenience, save this file on your desktop. The filename is the 4-character unique PDB ID.
 
 ![Pdbdownloadfile1.png](../../images/pdbdownloadfile1.png)
 
