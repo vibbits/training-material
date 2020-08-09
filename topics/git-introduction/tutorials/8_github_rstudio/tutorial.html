@@ -288,8 +288,8 @@
 
 <hr />
 
-<p>Notice that after creating the repository, a <code class="highlighter-rouge">.gitignore</code> file is added on the fly containing the following 4 lines. These lines will make sure that irrelevant information related to Rstudio is neglected.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.Rproj.user
+<p>Notice that after creating the repository, a <code class="language-plaintext highlighter-rouge">.gitignore</code> file is added on the fly containing the following 4 lines. These lines will make sure that irrelevant information related to Rstudio is neglected.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.Rproj.user
 .Rhistory
 .RData
 .Ruserdata
@@ -304,7 +304,7 @@
 
 <hr />
 
-<p>This approach will initialize Git on the project. As discussed in chapter 3, this local repository does not exist on GitHub yet, hence we can’t push our commits to GitHub. In order to do so, we’ll have to make a repository on GitHub first (see chapter 3.2.). This repository should be initialized without(!!) a README file, <code class="highlighter-rouge">.gitignore</code> file or license. Copy the link that GitHub created for the new repository (e.g. https://github.com/vibbits/rstudio-project.git). In Rstudio, find a <em>Git</em> tab in the upper right corner and click on <em>New Branch</em> (or the icon next to it).</p>
+<p>This approach will initialize Git on the project. As discussed in chapter 3, this local repository does not exist on GitHub yet, hence we can’t push our commits to GitHub. In order to do so, we’ll have to make a repository on GitHub first (see chapter 3.2.). This repository should be initialized without(!!) a README file, <code class="language-plaintext highlighter-rouge">.gitignore</code> file or license. Copy the link that GitHub created for the new repository (e.g. https://github.com/vibbits/rstudio-project.git). In Rstudio, find a <em>Git</em> tab in the upper right corner and click on <em>New Branch</em> (or the icon next to it).</p>
 
 <hr />
 
@@ -333,7 +333,7 @@
 <p>By initializing Git on an Rstudio project, there appears a <em>Git</em> tab in the upper right corner as depicted below. The tab consists of the main actions that can be performed with Git (the window might be too small to contain the keywords related to the symbol). Neglecting the <em>diff</em> keyword which is out of scope for this tutorial, we can find the following actions: <em>Commit, Pull, Push, History</em> and <em>More</em> followed by <em>New Branch</em>, the name of the branch (<em>master</em>) and a refresh button.</p>
 
 <ul>
-  <li><strong>Stage</strong>: The only action we’re missing is the <em>staging</em>. Rstudio &amp; Git actually continuously process the files within the project searching for new changes. If there is a new change it will appear in the list in the screen as depicted here for the <code class="highlighter-rouge">.gitignore</code> file.</li>
+  <li><strong>Stage</strong>: The only action we’re missing is the <em>staging</em>. Rstudio &amp; Git actually continuously process the files within the project searching for new changes. If there is a new change it will appear in the list in the screen as depicted here for the <code class="language-plaintext highlighter-rouge">.gitignore</code> file.</li>
   <li><strong>Commit</strong>: Opens a new screen that controls the staging area and committing.</li>
   <li><strong>Pull</strong>: Pulls upstream changes from the GitHub repository into our, this local repository.</li>
   <li><strong>Push</strong>: Pushes previous commits to the GitHub repository.</li>
@@ -372,7 +372,7 @@
   <li>Next to that tab we can switch the branch, generally we leave this untouched as we’re already in the preferred branch.</li>
   <li>The <em>staging</em> tab allows us to stage and unstage specific files, even after they were staged in a previous step.</li>
   <li>The <em>revert</em> tab is neglected in this tutorial</li>
-  <li><em>Ignore</em> allows us to edit the <code class="highlighter-rouge">.gitignore</code> file by simply selecting the file that we want to ignore and clicking on <em>Ignore</em>.</li>
+  <li><em>Ignore</em> allows us to edit the <code class="language-plaintext highlighter-rouge">.gitignore</code> file by simply selecting the file that we want to ignore and clicking on <em>Ignore</em>.</li>
 </ul>
 
 <p>If you’re happy with the changes and the staging area, a commit message is written in the right tab and finalized by hitting the <em>Commit</em> button. A message will pop up summarizing the commit in a technical way.</p>
@@ -384,14 +384,14 @@
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-exercise"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Exercise</h3>
 
-  <p>Add the <code class="highlighter-rouge">.gitignore</code> file to the staging area and exploit the <em>Ignore</em> button to add the <em>Rproj</em> file to the <code class="highlighter-rouge">.gitignore</code> file. Write a commit message, and commit and push your changes to GitHub. If the <em>Rproj</em> file already is in the <code class="highlighter-rouge">.gitignore</code> file, make a new example R-script which you can ignore.</p>
+  <p>Add the <code class="language-plaintext highlighter-rouge">.gitignore</code> file to the staging area and exploit the <em>Ignore</em> button to add the <em>Rproj</em> file to the <code class="language-plaintext highlighter-rouge">.gitignore</code> file. Write a commit message, and commit and push your changes to GitHub. If the <em>Rproj</em> file already is in the <code class="language-plaintext highlighter-rouge">.gitignore</code> file, make a new example R-script which you can ignore.</p>
 
   <blockquote>
     <details>
       <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
 
-      <p>Select <em>File &gt; New File &gt; R Script</em>, write something like <code class="highlighter-rouge"># test</code> and save the file. When they are saved, they will appear in the Git-tab. Select the files in the Git-tab and click on <em>More &gt; Gitignore</em>. When you do this, the explicit name of the file will appear in the gitignore file. <em>Click</em> on Save. Now the gitignore file will apear in the Git-tab, ready to be staged, and the new file (or <em>Rproj</em> file) has disappeared from it. 
+      <p>Select <em>File &gt; New File &gt; R Script</em>, write something like <code class="language-plaintext highlighter-rouge"># test</code> and save the file. When they are saved, they will appear in the Git-tab. Select the files in the Git-tab and click on <em>More &gt; Gitignore</em>. When you do this, the explicit name of the file will appear in the gitignore file. <em>Click</em> on Save. Now the gitignore file will apear in the Git-tab, ready to be staged, and the new file (or <em>Rproj</em> file) has disappeared from it. 
 The rest of the workflow remains the same. Click on the tickmarcks to stage the files, click on commit, write a message in the designated textbox and push your changes to the repository on GitHub.</p>
 
     </details>

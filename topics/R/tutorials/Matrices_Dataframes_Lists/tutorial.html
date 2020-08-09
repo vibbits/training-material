@@ -262,7 +262,7 @@ All columns in a matrix must contain the same type of data. The top row, called 
 
 <h3 id="creating-a-matrix">Creating a matrix</h3>
 <p>To create a matrix M use the matrix() function</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>M &lt;- matrix(data,nrow=r,ncol=c,byrow=FALSE))
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>M &lt;- matrix(data,nrow=r,ncol=c,byrow=FALSE))
 </code></pre></div></div>
 
 <p>It takes a long list of arguments:</p>
@@ -289,7 +289,7 @@ All columns in a matrix must contain the same type of data. The top row, called 
           <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
 
-          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> mat&lt;-matrix(c(2,3,1,5),nrow=2,ncol=2)
+          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> mat&lt;-matrix(c(2,3,1,5),nrow=2,ncol=2)
  mat
 </code></pre></div>          </div>
         </details>
@@ -310,7 +310,7 @@ All columns in a matrix must contain the same type of data. The top row, called 
           <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
 
-          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> onemat&lt;-matrix(1,nrow=2,ncol=3)
+          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> onemat&lt;-matrix(1,nrow=2,ncol=3)
  onemat
 </code></pre></div>          </div>
         </details>
@@ -331,7 +331,7 @@ All columns in a matrix must contain the same type of data. The top row, called 
           <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
 
-          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> m &lt;- matrix(c(1,2,3,4,5,6,7),ncol=3) 
+          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> m &lt;- matrix(c(1,2,3,4,5,6,7),ncol=3) 
  m[m &gt; 3]
 </code></pre></div>          </div>
         </details>
@@ -352,7 +352,7 @@ All columns in a matrix must contain the same type of data. The top row, called 
 
 <h3 id="creating-a-data-frame">Creating a data frame</h3>
 <p>To create a data frame D use the function data.frame() with the vectors we want to use as columns:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>D &lt;- data.frame(column1,column2,column3)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>D &lt;- data.frame(column1,column2,column3)
 </code></pre></div></div>
 
 <blockquote class="comment">
@@ -362,7 +362,7 @@ All columns in a matrix must contain the same type of data. The top row, called 
 </blockquote>
 
 <p>You can provide names (labels) for the columns:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>D &lt;- data.frame(label1=column1,label2=column2,label3=column3)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>D &lt;- data.frame(label1=column1,label2=column2,label3=column3)
 </code></pre></div></div>
 
 <blockquote class="comment">
@@ -387,7 +387,7 @@ If you don’t define labels (as in the first example), the names of the vector 
       <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
 
-      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Plant_study &lt;- data.frame(Days=days,Plants=Plants_with_lesions)
+      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Plant_study &lt;- data.frame(Days=days,Plants=Plants_with_lesions)
  Plant_study
 </code></pre></div>      </div>
     </details>
@@ -404,7 +404,7 @@ If you don’t define labels (as in the first example), the names of the vector 
       <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
 
-      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Drug_study &lt;- data.frame(ID,treatment,smoking)
+      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Drug_study &lt;- data.frame(ID,treatment,smoking)
  Drug_study
 </code></pre></div>      </div>
     </details>
@@ -425,7 +425,7 @@ If you don’t define labels (as in the first example), the names of the vector 
           <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
 
-          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> organism &lt;- c("Human","Mouse","Fruit Fly", "Roundworm","Yeast")
+          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> organism &lt;- c("Human","Mouse","Fruit Fly", "Roundworm","Yeast")
  size &lt;- c(3000000000,3000000000,135600000,97000000,12100000)
  geneCount &lt;- c(30000,30000,13061,19099,6034) 
  genomeSize &lt;- data.frame(organism,size,geneCount)
@@ -449,7 +449,7 @@ If you don’t define labels (as in the first example), the names of the vector 
           <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
 
-          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> a &lt;- c(1,3,2,1)
+          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> a &lt;- c(1,3,2,1)
  b &lt;- c(2,3,4,1)
  ab &lt;- data.frame(a,b)
 </code></pre></div>          </div>
@@ -464,11 +464,11 @@ If you don’t define labels (as in the first example), the names of the vector 
 <p>Referring to elements of a data frame can be done in the same way as for matrices, using row and column <strong>indices</strong> in between square brackets. The only difference is that in data frames you can also use the <strong>labels</strong> of the columns to retrieve them.</p>
 
 <p>To retrieve the element on the second row, first column:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>D[2,1]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>D[2,1]
 </code></pre></div></div>
 
 <p>To select all values from one dimension leave the index blank, e.g. all elements of the first column:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>D[,1]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>D[,1]
 </code></pre></div></div>
 
 <blockquote class="comment">
@@ -478,15 +478,15 @@ If you don’t define labels (as in the first example), the names of the vector 
 </blockquote>
 
 <p>You can also use column labels for retrieving elements. Column names have to be written between quotes:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>D[,"label1"]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>D[,"label1"]
 </code></pre></div></div>
 
 <p>You can also use the range function to select elements:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>D[2:4,1]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>D[2:4,1]
 </code></pre></div></div>
 
 <p>The <strong>$</strong> symbol can be used to retrieve a column based on its label e.g. to retrieve column label1 from D:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>D$label1
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>D$label1
 </code></pre></div></div>
 
 <blockquote class="comment">
@@ -495,12 +495,12 @@ If you don’t define labels (as in the first example), the names of the vector 
 </blockquote>
 
 <p>Since the result of $ is a vector, you can address a specific element of a column using its index:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>D$label1[2]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>D$label1[2]
 </code></pre></div></div>
 <p>retrieves the second element of the column called label1</p>
 
 <p>Specific for data frames is the <strong>subset()</strong> function that can be used to select columns that satisfy a logical operation:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>subset(D,select=columns to extract)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>subset(D,select=columns to extract)
 subset(D,logical expression,columns to extract)
 </code></pre></div></div>
 
@@ -521,7 +521,7 @@ subset(D,logical expression,columns to extract)
           <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
 
-          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> mtcars["Volvo 142E",]
+          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> mtcars["Volvo 142E",]
  mtcars["Volvo 142E","mpg"]
 </code></pre></div>          </div>
         </details>
@@ -531,7 +531,7 @@ subset(D,logical expression,columns to extract)
         <h3 id="question-question"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
         <p>What will happen when you run this code ?</p>
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> mtcars["Volvo 142E"]
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> mtcars["Volvo 142E"]
  
 </code></pre></div>        </div>
       </blockquote>
@@ -539,7 +539,7 @@ subset(D,logical expression,columns to extract)
         <h3 id="question-question-1"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
         <p>What will happen when you run this code ?</p>
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> mtcars[Volvo 142E,]
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> mtcars[Volvo 142E,]
   
 </code></pre></div>        </div>
       </blockquote>
@@ -562,7 +562,7 @@ subset(D,logical expression,columns to extract)
           <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
 
-          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> subset(Drug_study,smoking==TRUE,ID)
+          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> subset(Drug_study,smoking==TRUE,ID)
  subset(Drug_study,smoking==TRUE,c(ID,treament))
  Drug_study$smoking
  Drug_study$treatment[4] &lt;- "A"
@@ -576,7 +576,7 @@ subset(D,logical expression,columns to extract)
         <h3 id="question-question-2"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
         <p>What will happen when you run this code ?</p>
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Drug_study[Drug_study$smoking==TRUE,"ID"]
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Drug_study[Drug_study$smoking==TRUE,"ID"]
   
 </code></pre></div>        </div>
       </blockquote>
@@ -584,7 +584,7 @@ subset(D,logical expression,columns to extract)
         <h3 id="question-question-3"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
         <p>What will happen when you run this code ?</p>
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Drug_study[Drug_study$smoking==TRUE,ID]
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Drug_study[Drug_study$smoking==TRUE,ID]
   
 </code></pre></div>        </div>
       </blockquote>
@@ -592,7 +592,7 @@ subset(D,logical expression,columns to extract)
         <h3 id="question-question-4"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
         <p>What will happen when you run this code ?</p>
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Drug_study[,"smoking"]
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Drug_study[,"smoking"]
  
 </code></pre></div>        </div>
       </blockquote>
@@ -600,14 +600,14 @@ subset(D,logical expression,columns to extract)
         <h3 id="question-question-5"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
         <p>What will happen when you run this code ?</p>
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Drug_study[4,"treatment"] &lt;- "B"
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Drug_study[4,"treatment"] &lt;- "B"
 </code></pre></div>        </div>
       </blockquote>
       <blockquote class="question">
         <h3 id="question-question-6"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
         <p>What will happen when you run this code ?</p>
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Drug_study["activity"] &lt;- c(4,NA,12.1,2.5)
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Drug_study["activity"] &lt;- c(4,NA,12.1,2.5)
   
 </code></pre></div>        </div>
       </blockquote>
@@ -615,7 +615,7 @@ subset(D,logical expression,columns to extract)
         <h3 id="question-question-7"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
         <p>What will happen when you run this code ?</p>
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> subset(Drug_study,c(ID,treatment))
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> subset(Drug_study,c(ID,treatment))
   
 </code></pre></div>        </div>
       </blockquote>
@@ -623,7 +623,7 @@ subset(D,logical expression,columns to extract)
         <h3 id="question-question-8"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
         <p>What will happen when you run this code ?</p>
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> subset(Drug_study,,c(ID,treatment))
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> subset(Drug_study,,c(ID,treatment))
   
 </code></pre></div>        </div>
       </blockquote>
@@ -646,7 +646,7 @@ subset(D,logical expression,columns to extract)
       <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
 
-      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &gt; Plant_study[Plant_study$Plants &gt; 2,"Days"]
+      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &gt; Plant_study[Plant_study$Plants &gt; 2,"Days"]
  &gt; subset(Plant_study,Plants &gt; 2,Days)
 </code></pre></div>      </div>
     </details>
@@ -656,7 +656,7 @@ subset(D,logical expression,columns to extract)
     <h3 id="question-question-9"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
     <p>What will happen when you run this code ?</p>
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Plant_study[Plant_study["Plants"] &gt; 2,"Days"]
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Plant_study[Plant_study["Plants"] &gt; 2,"Days"]
   
 </code></pre></div>    </div>
   </blockquote>
@@ -674,7 +674,7 @@ subset(D,logical expression,columns to extract)
           <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
 
-          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> q &lt;- ab$a
+          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> q &lt;- ab$a
  subset(q,select=a)
  ab$a[2]
  ab$c &lt;- c(2,1,4,7)
@@ -688,7 +688,7 @@ subset(D,logical expression,columns to extract)
 
 <h5 id="removing-elements-from-a-data-frame">Removing elements from a data frame</h5>
 <p>To remove elements from a data frame use negative indices just as in a vector e.g. to remove the second row from data frame D use:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>D &lt;- D[-2,]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>D &lt;- D[-2,]
 </code></pre></div></div>
 
 <blockquote class="comment">
@@ -698,7 +698,7 @@ subset(D,logical expression,columns to extract)
 </blockquote>
 
 <p>To remove columns based on labels assign them to NULL:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>D$genome &lt;- NULL
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>D$genome &lt;- NULL
 </code></pre></div></div>
 
 <blockquote class="comment">
@@ -721,7 +721,7 @@ subset(D,logical expression,columns to extract)
 
 <h5 id="reordering-columns-in-a-data-frame">Reordering columns in a data frame</h5>
 <p>Reordering columns is a special case of retrieving columns, e.g. for a data frame that has 4 columns you can switch the position of the second and third column as follows:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>D2 &lt;- D[ ,c(1,3,2,4)]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>D2 &lt;- D[ ,c(1,3,2,4)]
 </code></pre></div></div>
 
 <blockquote class="comment">
@@ -732,7 +732,7 @@ You can use indices or labels to refer to the columns.</p>
 </blockquote>
 
 <p>You can also use subset():</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>D2 &lt;- subset(D,select=c(1,3,2,4))
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>D2 &lt;- subset(D,select=c(1,3,2,4))
 </code></pre></div></div>
 
 <blockquote class="notranslate hands_on">
@@ -750,7 +750,7 @@ You can use indices or labels to refer to the columns.</p>
       <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
 
-      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Drug_study[,c(1,3,2)]
+      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Drug_study[,c(1,3,2)]
   
 </code></pre></div>      </div>
     </details>
@@ -760,7 +760,7 @@ You can use indices or labels to refer to the columns.</p>
     <h3 id="question-question-10"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
     <p>What will happen when you run this code ?</p>
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> subset(Drug_study,select=c(1,3,2))
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> subset(Drug_study,select=c(1,3,2))
   
 </code></pre></div>    </div>
   </blockquote>
@@ -771,7 +771,7 @@ You can use indices or labels to refer to the columns.</p>
 
 <h5 id="creating-a-list">Creating a list</h5>
 <p>To create a list L use the list() function:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>L &lt;- list(label1=object1,label2=object2,label3=object3)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>L &lt;- list(label1=object1,label2=object2,label3=object3)
 </code></pre></div></div>
 
 <blockquote class="notranslate hands_on">
@@ -785,7 +785,7 @@ You can use indices or labels to refer to the columns.</p>
           <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
 
-          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> myList&lt;-list(5,6,"seven",mat)
+          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> myList&lt;-list(5,6,"seven",mat)
   
 </code></pre></div>          </div>
         </details>
@@ -795,7 +795,7 @@ You can use indices or labels to refer to the columns.</p>
         <h3 id="question-question-11"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
         <p>What will happen when you run this code ?</p>
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> subset(Drug_study,select=c(1,3,2))
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> subset(Drug_study,select=c(1,3,2))
   
 </code></pre></div>        </div>
       </blockquote>

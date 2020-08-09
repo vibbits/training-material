@@ -272,7 +272,7 @@
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">silly_function</span><span class="p">()</span>
 </code></pre></div></div>
 
-<p>Information about the function can be retrieved by using the <code class="highlighter-rouge">help()</code> function.</p>
+<p>Information about the function can be retrieved by using the <code class="language-plaintext highlighter-rouge">help()</code> function.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">help</span><span class="p">(</span><span class="n">silly_function</span><span class="p">)</span>
 </code></pre></div></div>
@@ -313,7 +313,7 @@
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">getMeanValue</span><span class="p">([</span><span class="mi">3443</span><span class="p">,</span><span class="mi">434</span><span class="p">,</span><span class="mi">34343456</span><span class="p">,</span><span class="mi">32434</span><span class="p">,</span><span class="mi">34</span><span class="p">,</span><span class="mi">34341</span><span class="p">,</span><span class="mi">23</span><span class="p">])</span>
 </code></pre></div></div>
 
-<p>Note that it’s a good practice to add a comment (in this case a multi-line one) to the top of the function that describes what it does, what it takes as input and what it produces as output. This is especially important for more complex functions. You can invoke the information with <code class="highlighter-rouge">help(function_name)</code></p>
+<p>Note that it’s a good practice to add a comment (in this case a multi-line one) to the top of the function that describes what it does, what it takes as input and what it produces as output. This is especially important for more complex functions. You can invoke the information with <code class="language-plaintext highlighter-rouge">help(function_name)</code></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">compareMeanValueOfLists</span><span class="p">(</span><span class="n">valueList1</span><span class="p">,</span><span class="n">valueList2</span><span class="p">):</span>
  
@@ -351,7 +351,7 @@
 
 <hr />
 
-<p>There are several ways to solve this problem, however it might be easier to do it with <code class="highlighter-rouge">zip()</code> ;).</p>
+<p>There are several ways to solve this problem, however it might be easier to do it with <code class="language-plaintext highlighter-rouge">zip()</code> ;).</p>
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-exercise-1021"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Exercise 10.2.1</h3>
 
@@ -429,7 +429,7 @@
 
 <hr />
 
-<p>There are several ways to solve this problem, however it might be easier to do it with the <code class="highlighter-rouge">zip()</code> function.</p>
+<p>There are several ways to solve this problem, however it might be easier to do it with the <code class="language-plaintext highlighter-rouge">zip()</code> function.</p>
 
 <hr />
 
@@ -438,7 +438,7 @@
 
   <p>Write a function that calculates the GC content of the sequence in a fasta file. For this example you can use <a href="data/gene.fa">this fasta file</a> which contains the genetic sequence of a bone gla protein. The function must accept a fasta file as input file and will print the following:</p>
 
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The GC content of HSBGPG Human gene for bone gla protein (BGP) is	 63.53%
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The GC content of HSBGPG Human gene for bone gla protein (BGP) is	 63.53%
 </code></pre></div>  </div>
 
   <p>The method <a href="https://www.tutorialspoint.com/python/string_startswith.htm">.startswith()</a> might help. The function should read the lines of the fasta file and if it starts with a ‘&gt;’ define the text that comes afterwards as the sequence ID. The other lines are part of the sequence. After reading through the lines, you can easily define the GC content by counting the bases and taking the average.</p>
@@ -492,7 +492,7 @@
 
 <h2 id="103-flexibility-in-functions">10.3 Flexibility in functions</h2>
 
-<p>In the functions so far we’ve been using values (arguments) that are passed in and are required for the function to work. If you’re not sure how many arguments the user will give, you can use an asterisk <code class="highlighter-rouge">*</code>. However, make sure that your code is flexible to access the number of arguments that the user is giving as input. In the example below we use the * asterisk to define a flexible number of arguments, and we use a for-loop to access each argument:</p>
+<p>In the functions so far we’ve been using values (arguments) that are passed in and are required for the function to work. If you’re not sure how many arguments the user will give, you can use an asterisk <code class="language-plaintext highlighter-rouge">*</code>. However, make sure that your code is flexible to access the number of arguments that the user is giving as input. In the example below we use the * asterisk to define a flexible number of arguments, and we use a for-loop to access each argument:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">MeanValue</span><span class="p">(</span><span class="o">*</span><span class="n">valueList</span><span class="p">):</span>
     <span class="s">"""
@@ -517,7 +517,7 @@
 
 <p>A second way of making flexible functions is by using <em>keywords</em> in a function; these are not required for the function to work because they are given a default value in the function definition. You can then set these keywords if necessary; consider the following example.</p>
 
-<p>By default the parameter sortedList is <code class="highlighter-rouge">False</code> which means that Python will not make a sorted list in the function below, unless you explicitly ask it by setting the parameter to <code class="highlighter-rouge">True</code>.</p>
+<p>By default the parameter sortedList is <code class="language-plaintext highlighter-rouge">False</code> which means that Python will not make a sorted list in the function below, unless you explicitly ask it by setting the parameter to <code class="language-plaintext highlighter-rouge">True</code>.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">MeanValue</span><span class="p">(</span><span class="o">*</span><span class="n">valueList</span><span class="p">,</span> <span class="n">sortedList</span> <span class="o">=</span> <span class="bp">False</span><span class="p">):</span>
     <span class="s">"""

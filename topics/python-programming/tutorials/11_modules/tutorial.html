@@ -246,7 +246,7 @@
 <p>So now that we know how to make functions, how can you re-use them? Imagine that you’ve started writing code and functions in one file and the project has grown to such an extent that it would be easier to maintain it in different files each containing a specific part of the project. Or you want to re-use some of the functions in other projects as well.</p>
 
 <p>In Python you can import functions and chunks of code from files. Such a file containing the functions is called a <em>module</em>. Generally we say that we import a <em>definition</em> from a <em>module</em>. A module can have one or multiple functions in it. 
-The file name is the module name with the suffix <code class="highlighter-rouge">.py</code> appended.</p>
+The file name is the module name with the suffix <code class="language-plaintext highlighter-rouge">.py</code> appended.</p>
 
 <p>Using the code from this module is possible by using <strong>import</strong>. In this way you can import your own functions, but also draw on a very extensive library of functions provided by Python (built-in modules). We will first look at the syntax for imports and how to import your own functions, then explore the most commonly used Python libraries.</p>
 
@@ -256,14 +256,14 @@ The file name is the module name with the suffix <code class="highlighter-rouge"
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">module1</span>
 </code></pre></div></div>
 
-<p>Imagine that in the module <code class="highlighter-rouge">module1</code>, there is a function called <code class="highlighter-rouge">getMeanValue()</code>. This way of importing does not make the name of the function available; it only remembers the module name <code class="highlighter-rouge">module1</code> which you can than use to access the functions within the module:</p>
+<p>Imagine that in the module <code class="language-plaintext highlighter-rouge">module1</code>, there is a function called <code class="language-plaintext highlighter-rouge">getMeanValue()</code>. This way of importing does not make the name of the function available; it only remembers the module name <code class="language-plaintext highlighter-rouge">module1</code> which you can than use to access the functions within the module:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">module1</span>
 <span class="n">module1</span><span class="p">.</span><span class="n">getMeanValue</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
 </code></pre></div></div>
 
 <h2 id="113-how-to-create-your-own-module">11.3 How to create your own module</h2>
-<p>The easiest example is importing a module from within the same working directory. Let’s create a Python module called <code class="highlighter-rouge">module1.py</code> with the code of the function <code class="highlighter-rouge">getMeanValue()</code> that we have written earlier (and you can find here below).</p>
+<p>The easiest example is importing a module from within the same working directory. Let’s create a Python module called <code class="language-plaintext highlighter-rouge">module1.py</code> with the code of the function <code class="language-plaintext highlighter-rouge">getMeanValue()</code> that we have written earlier (and you can find here below).</p>
 
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-create-your-own-module"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Create your own module</h3>
@@ -280,7 +280,7 @@ The file name is the module name with the suffix <code class="highlighter-rouge"
 
 <p>Unfortunately, Jupyter Notebook doesn’t have a streamlined &amp; straightforward way of creating Python modules and Python scripts. When you export the notebook, it will always export the whole Notebook and not just a part of it, which makes it very messy if you have a very large notebook.</p>
 
-<p>Import the following code in the <code class="highlighter-rouge">module1.py</code> file.</p>
+<p>Import the following code in the <code class="language-plaintext highlighter-rouge">module1.py</code> file.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># When you download this as a Python script, Jupyter will automatically insert the environment shebang here. 
 </span>
@@ -316,7 +316,7 @@ The file name is the module name with the suffix <code class="highlighter-rouge"
 
 <p>When importing a file, Python only searches the current directory, the directory that the entry-point script is running from, and sys.path which includes locations such as the package installation directory (it’s actually a little more complex than this, but this covers most cases).</p>
 
-<p>However, you can specify the Python path yourself as well. If you’re using the materials from <a href="https://github.com/vibbits/gentle-hands-on-python">Github</a>, note that within our folders there is a directory named <code class="highlighter-rouge">modules</code> and within this folder, there is a module named <code class="highlighter-rouge">module2</code> (recognizable due to its .py extension). In that module there are two functions: ‘getMeanValue’ and ‘compareMeanValueOfLists’.</p>
+<p>However, you can specify the Python path yourself as well. If you’re using the materials from <a href="https://github.com/vibbits/gentle-hands-on-python">Github</a>, note that within our folders there is a directory named <code class="language-plaintext highlighter-rouge">modules</code> and within this folder, there is a module named <code class="language-plaintext highlighter-rouge">module2</code> (recognizable due to its .py extension). In that module there are two functions: ‘getMeanValue’ and ‘compareMeanValueOfLists’.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">modules</span> <span class="kn">import</span> <span class="n">module2</span>
 
@@ -337,7 +337,7 @@ The file name is the module name with the suffix <code class="highlighter-rouge"
 
 <p>So here we <em>import</em> the function compareMeanValueOfLists (without brackets!) from the file <em>module2</em> (without .py extension!).</p>
 
-<p>In order to have an overview of all the different functions within a module, use <code class="highlighter-rouge">dir()</code>:</p>
+<p>In order to have an overview of all the different functions within a module, use <code class="language-plaintext highlighter-rouge">dir()</code>:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">dir</span><span class="p">(</span><span class="n">module2</span><span class="p">)</span>
 </code></pre></div></div>
@@ -348,7 +348,7 @@ The file name is the module name with the suffix <code class="highlighter-rouge"
 
 <p>Python has many ready-to-use functions that can save you a lot of time when writing code. The most common ones are <strong>time</strong>, <strong>sys</strong>, <strong>os/os.path</strong> and <strong>re</strong>.</p>
 
-<h3 id="1151-time">11.5.1 <code class="highlighter-rouge">time</code></h3>
+<h3 id="1151-time">11.5.1 <code class="language-plaintext highlighter-rouge">time</code></h3>
 <p>With <strong>time</strong> you can get information on the current time and date, …:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">time</span>
@@ -363,7 +363,7 @@ The file name is the module name with the suffix <code class="highlighter-rouge"
 
 <p>See the <a href="https://docs.python.org/3/library/time.html">Python documentation</a> for a full description of time. Also see <a href="https://docs.python.org/3/library/datetime.html">datetime</a>, which is a module to deal with date/time manipulations.</p>
 
-<h3 id="1152-sys">11.5.2 <code class="highlighter-rouge">sys</code></h3>
+<h3 id="1152-sys">11.5.2 <code class="language-plaintext highlighter-rouge">sys</code></h3>
 <p>gives you system-specific parameters and functions:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">sys</span>
@@ -385,7 +385,7 @@ The file name is the module name with the suffix <code class="highlighter-rouge"
 
 <p>See the <a href="https://docs.python.org/3/library/sys.html">Python documentation</a> for a full description.</p>
 
-<h3 id="1153-os-and-ospath">11.5.3 <code class="highlighter-rouge">os</code> and <code class="highlighter-rouge">os.path</code></h3>
+<h3 id="1153-os-and-ospath">11.5.3 <code class="language-plaintext highlighter-rouge">os</code> and <code class="language-plaintext highlighter-rouge">os.path</code></h3>
 <p>are very useful when dealing with files and directories:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">os</span>
@@ -428,7 +428,7 @@ The file name is the module name with the suffix <code class="highlighter-rouge"
 
 <p>See the Python documentation for <a href="https://docs.python.org/3/library/os.html"><strong>os</strong></a> and <a href="https://docs.python.org/3/library/os.path.html"><strong>os.path</strong></a> for a full description.</p>
 
-<h3 id="1154-re">11.5.4 <code class="highlighter-rouge">re</code></h3>
+<h3 id="1154-re">11.5.4 <code class="language-plaintext highlighter-rouge">re</code></h3>
 
 <p>A library that is very powerful for dealing with strings is <strong>re</strong>. It allows you to use regular expressions to examine text - using these is a course in itself, so just consider this simple example:</p>
 
@@ -598,7 +598,7 @@ world."""</span>
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-exercise-1164"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Exercise 11.6.4</h3>
 
-  <p>Write a program where you translate the RNA sequence <code class="highlighter-rouge">data/rnaSeq.txt</code> into 3 letter amino acid codes. Use the dictionary from section 8.2 (called myDictionary) and save it as a module named SequenceDicts.py first. You can use the <code class="highlighter-rouge">readFasta.py</code> module from the modules folder.</p>
+  <p>Write a program where you translate the RNA sequence <code class="language-plaintext highlighter-rouge">data/rnaSeq.txt</code> into 3 letter amino acid codes. Use the dictionary from section 8.2 (called myDictionary) and save it as a module named SequenceDicts.py first. You can use the <code class="language-plaintext highlighter-rouge">readFasta.py</code> module from the modules folder.</p>
 
   <blockquote>
     <details>
@@ -632,9 +632,9 @@ world."""</span>
 
   <p>Write a program that:</p>
   <ul>
-    <li>Has a function <code class="highlighter-rouge">readSampleInformationFile()</code> to read the information from this sample data file into a dictionary. Also check whether the file exists.</li>
+    <li>Has a function <code class="language-plaintext highlighter-rouge">readSampleInformationFile()</code> to read the information from this sample data file into a dictionary. Also check whether the file exists.</li>
     <li>
-      <p>Has a function <code class="highlighter-rouge">getSampleIdsForValueRange()</code> that can extract sample IDs from this dictionary. Print the sample IDs for pH 6.0-7.0, temperature 280-290 and volume 200-220 using this function.</p>
+      <p>Has a function <code class="language-plaintext highlighter-rouge">getSampleIdsForValueRange()</code> that can extract sample IDs from this dictionary. Print the sample IDs for pH 6.0-7.0, temperature 280-290 and volume 200-220 using this function.</p>
 
       <blockquote>
         <details>

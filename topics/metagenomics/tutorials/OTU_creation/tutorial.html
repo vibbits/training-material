@@ -305,27 +305,27 @@
 
 <h2 id="the-data">The data</h2>
 
-<p>In a recent experiment, we sequenced 73 samples in two 454 runs, the raw fasta and quality files are in <code class="highlighter-rouge">/home/VIBTrainingX/metagenomics/</code> on the bits server. For each run we have a fasta (.fna) and quality (.qual) file. Go to this directory using the command <code class="highlighter-rouge">cd</code> and become aware of the files required from the experimenter (command <code class="highlighter-rouge">ls</code>). You can always take a look at files and their contents using viewing commands like <code class="highlighter-rouge">less</code>.</p>
+<p>In a recent experiment, we sequenced 73 samples in two 454 runs, the raw fasta and quality files are in <code class="language-plaintext highlighter-rouge">/home/VIBTrainingX/metagenomics/</code> on the bits server. For each run we have a fasta (.fna) and quality (.qual) file. Go to this directory using the command <code class="language-plaintext highlighter-rouge">cd</code> and become aware of the files required from the experimenter (command <code class="language-plaintext highlighter-rouge">ls</code>). You can always take a look at files and their contents using viewing commands like <code class="language-plaintext highlighter-rouge">less</code>.</p>
 
 <p>The sequence files were multiplexed before the experiment, that is a small nucleotide sequence – the barcode - was attached to each read, specific for each experiment. A mapping file is typically used, containing the link between a sequence barcode and the name of the experiment and is essential to demultiplex the fasta files.</p>
 
 <h2 id="the-tools">The tools</h2>
 
-<p>LotuS is actually a set of tools that were installed in the <code class="highlighter-rouge">/opt/</code> folder. First go to <a href="http://psbweb05.psb.ugent.be/lotus/">the lotus website</a> and familiarize yourself with the basic documentation.</p>
+<p>LotuS is actually a set of tools that were installed in the <code class="language-plaintext highlighter-rouge">/opt/</code> folder. First go to <a href="http://psbweb05.psb.ugent.be/lotus/">the lotus website</a> and familiarize yourself with the basic documentation.</p>
 
 <p>To start the exercises, go to the directory where Lotus is installed.</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> /opt/lotus-1.62/lotus_pipeline/
 </code></pre></div></div>
 
-<p>From this directory you can run all the tools. To reach all data files (e.g. input files) you have to provide the path to the files: <code class="highlighter-rouge">~/metagenomics/</code></p>
+<p>From this directory you can run all the tools. To reach all data files (e.g. input files) you have to provide the path to the files: <code class="language-plaintext highlighter-rouge">~/metagenomics/</code></p>
 
 <h2 id="the-analysis">The analysis</h2>
 
 <h3 id="creation-of-mapping-file">Creation of Mapping file.</h3>
 
-<p><a href="http://data.bits.vib.be/pub/trainingen/metagenomics/Mice_experiment.xlsx">An Excel</a> is provided, with some basic experiment annotation. The fwd primer is given as <code class="highlighter-rouge">ACTYAAAKGAATTGACGG</code>, but if you search for the primer sequence in the reads (in one of the .fna files) you will not find it because you need to reverse translate the primer sequence first using [http://www.bioinformatics.org/sms/rev_comp.html this tool]. So you see annotation provided by the provider is not always correct.</p>
+<p><a href="http://data.bits.vib.be/pub/trainingen/metagenomics/Mice_experiment.xlsx">An Excel</a> is provided, with some basic experiment annotation. The fwd primer is given as <code class="language-plaintext highlighter-rouge">ACTYAAAKGAATTGACGG</code>, but if you search for the primer sequence in the reads (in one of the .fna files) you will not find it because you need to reverse translate the primer sequence first using [http://www.bioinformatics.org/sms/rev_comp.html this tool]. So you see annotation provided by the provider is not always correct.</p>
 
-<p>Lotus needs experiment annotation to map input files to barcodes. Based on the documentation on [http://psbweb05.psb.ugent.be/lotus/documentation.html#MapFile the Lotus website], create a mapping file for this experiment. This means that you need to replace the column headers of the Excel file to terms that are accepted by Lotus and that you have to indicate that there is a .fna and a .qual file for each run. The header line should be preceeded by a <code class="highlighter-rouge">#</code>. The mapping file should at least contain four columns with the following headers:</p>
+<p>Lotus needs experiment annotation to map input files to barcodes. Based on the documentation on [http://psbweb05.psb.ugent.be/lotus/documentation.html#MapFile the Lotus website], create a mapping file for this experiment. This means that you need to replace the column headers of the Excel file to terms that are accepted by Lotus and that you have to indicate that there is a .fna and a .qual file for each run. The header line should be preceeded by a <code class="language-plaintext highlighter-rouge">#</code>. The mapping file should at least contain four columns with the following headers:</p>
 
 <ul>
   <li>SampleID</li>
@@ -344,7 +344,7 @@
 
 <h3 id="changing--the-data-format-of-the-input-files">Changing  the data format of the input files.</h3>
 
-<p>Sometimes you need to transcribe data from one format to another. For instance we could transform the fasta files (.fna) to fastq files (.fq). This can be done with the program <code class="highlighter-rouge">sdm</code>, that is part of the LotuS pipeline. Take a look at the sdm help by typing <code class="highlighter-rouge">./sdm</code> and exploring the options, e.g.</p>
+<p>Sometimes you need to transcribe data from one format to another. For instance we could transform the fasta files (.fna) to fastq files (.fq). This can be done with the program <code class="language-plaintext highlighter-rouge">sdm</code>, that is part of the LotuS pipeline. Take a look at the sdm help by typing <code class="language-plaintext highlighter-rouge">./sdm</code> and exploring the options, e.g.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./sdm <span class="nt">-help_commands</span>
 </code></pre></div></div>
@@ -464,9 +464,9 @@
 </code></pre></div></div>
 
 <ul>
-  <li>Peek at the file hiera_RDP (using <code class="highlighter-rouge">head</code>). The file maps eachg OTU to a genus.</li>
-  <li>Peek at the file OTU.txt (using <code class="highlighter-rouge">head</code>). The first line contains the number of reads that represent OTU_1 in each sample.</li>
-  <li>Peek at the file otus.fa (using <code class="highlighter-rouge">head</code>). It contains the reads representing each OTU. You can use this file to blast the sequences to check if they are really from the OTU they were assigned to.</li>
+  <li>Peek at the file hiera_RDP (using <code class="language-plaintext highlighter-rouge">head</code>). The file maps eachg OTU to a genus.</li>
+  <li>Peek at the file OTU.txt (using <code class="language-plaintext highlighter-rouge">head</code>). The first line contains the number of reads that represent OTU_1 in each sample.</li>
+  <li>Peek at the file otus.fa (using <code class="language-plaintext highlighter-rouge">head</code>). It contains the reads representing each OTU. You can use this file to blast the sequences to check if they are really from the OTU they were assigned to.</li>
   <li>Go to the folder higherLvl. This contains the data that we are going to use in the Ecology analysis.</li>
   <li>Go to the folder LotuSLogs. This contains the settings of the analysis. For instance, peek a the file demulti.log: it shows how many reads were rejected… The file citations.txt contains the references for reporting your LotuS results.</li>
 </ul>
@@ -538,7 +538,7 @@
 <p>Now that you have run LotuS with various databases and options, go back and look at the output folder of the different runs, look at the statistics provided in the ‘‘LotuSLogS’’ subfolder. Based on this, tune the sdm filtering parameter file from step 3 (again), choose the database you think best suited/most interesting, and choose a clustering algorithm. With this create run the sample set again, saving the output in folder ‘‘testrun1.3’’. This output folder you can use in the following session on numerical ecology.</p>
 
 <p>If LotuS run has finished, go to the specified output folder and copy the genus.txt from the output folder to your home folder:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cp testrun1.3/ higherLvl/genus.txt ~
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cp testrun1.3/ higherLvl/genus.txt ~
 </code></pre></div></div>
 
 <h3 id="using-illumina-data-as-input">Using Illumina data as input.</h3>

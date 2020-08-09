@@ -255,13 +255,13 @@
 <p>In this section we will introduce the basic types of variables and how you can manipulate them. Just to get started, we give an overview of the different <strong>built-in data types</strong> that are present in Python and which you can assign to a variable. Although this variety of data types exist, not all of them will be discussed in this course.</p>
 
 <ul>
-  <li>Text type:       <code class="highlighter-rouge">str</code></li>
-  <li>Numeric types:   <code class="highlighter-rouge">int</code>, <code class="highlighter-rouge">float</code>, <code class="highlighter-rouge">complex</code></li>
-  <li>Sequence types:  <code class="highlighter-rouge">list</code>, <code class="highlighter-rouge">tuple</code>, <code class="highlighter-rouge">range</code></li>
-  <li>Mapping types:   <code class="highlighter-rouge">dict</code></li>
-  <li>Set types:       <code class="highlighter-rouge">set</code>, <code class="highlighter-rouge">frozenset</code></li>
-  <li>Boolean types:   <code class="highlighter-rouge">bool</code></li>
-  <li>Binary types:    <code class="highlighter-rouge">bytes</code>, <code class="highlighter-rouge">bytearray</code>, <code class="highlighter-rouge">memoryview</code></li>
+  <li>Text type:       <code class="language-plaintext highlighter-rouge">str</code></li>
+  <li>Numeric types:   <code class="language-plaintext highlighter-rouge">int</code>, <code class="language-plaintext highlighter-rouge">float</code>, <code class="language-plaintext highlighter-rouge">complex</code></li>
+  <li>Sequence types:  <code class="language-plaintext highlighter-rouge">list</code>, <code class="language-plaintext highlighter-rouge">tuple</code>, <code class="language-plaintext highlighter-rouge">range</code></li>
+  <li>Mapping types:   <code class="language-plaintext highlighter-rouge">dict</code></li>
+  <li>Set types:       <code class="language-plaintext highlighter-rouge">set</code>, <code class="language-plaintext highlighter-rouge">frozenset</code></li>
+  <li>Boolean types:   <code class="language-plaintext highlighter-rouge">bool</code></li>
+  <li>Binary types:    <code class="language-plaintext highlighter-rouge">bytes</code>, <code class="language-plaintext highlighter-rouge">bytearray</code>, <code class="language-plaintext highlighter-rouge">memoryview</code></li>
 </ul>
 
 <p>In this section, we will cover the text type, numeric types (complex are out of scope) and booleans.</p>
@@ -271,7 +271,7 @@
   <li>Arithmetic: additions, substractions, multiplications, divisions, remainders and power</li>
   <li>Comparison: equal to, not equal to, greater than, less than, etc.</li>
   <li>Logical: AND, OR and NOT used for conditional statements</li>
-  <li>Identity: <code class="highlighter-rouge">is</code>, <code class="highlighter-rouge">is not</code></li>
+  <li>Identity: <code class="language-plaintext highlighter-rouge">is</code>, <code class="language-plaintext highlighter-rouge">is not</code></li>
 </ul>
 
 <p><strong>Note</strong>:<br />
@@ -285,14 +285,14 @@ This section doesn’t really include any exercises. Try to follow and code alon
 <span class="k">print</span><span class="p">(</span><span class="n">mySequence</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p>What happens here is that you assign a <strong>value</strong>: “<em>AGAATCGATACGA</em>” to a <strong>variable</strong>: <code class="highlighter-rouge">mySequence</code> and then print it out. You can now keep on using <code class="highlighter-rouge">mySequence</code> throughout your program. Note that <code class="highlighter-rouge">mySequence</code> is not quoted because it is now part of the program, try this for example:</p>
+<p>What happens here is that you assign a <strong>value</strong>: “<em>AGAATCGATACGA</em>” to a <strong>variable</strong>: <code class="language-plaintext highlighter-rouge">mySequence</code> and then print it out. You can now keep on using <code class="language-plaintext highlighter-rouge">mySequence</code> throughout your program. Note that <code class="language-plaintext highlighter-rouge">mySequence</code> is not quoted because it is now part of the program, try this for example:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Repeat the above, but this time put the variable in quotation marks when you put in the print statement and see what happens
 </span><span class="n">mySequence</span> <span class="o">=</span> <span class="s">"AGAATCGATACGA"</span>
 <span class="k">print</span><span class="p">(</span><span class="s">"mySequence"</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p>You will now still assign the value “<em>AGAATCGATACGA</em>” to the variable <code class="highlighter-rouge">mySequence</code>, but because of the quotes you then print off the string “mySequence”, not the variable.</p>
+<p>You will now still assign the value “<em>AGAATCGATACGA</em>” to the variable <code class="language-plaintext highlighter-rouge">mySequence</code>, but because of the quotes you then print off the string “mySequence”, not the variable.</p>
 
 <p>You can assign strings in the following ways:</p>
 
@@ -386,7 +386,7 @@ universe."</span>
 <span class="k">print</span><span class="p">(</span><span class="s">"The result is"</span><span class="p">,</span> <span class="n">firstResult</span><span class="p">,</span><span class="s">"."</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p>However, there is another way using the <code class="highlighter-rouge">.format()</code> method. The format method allows you to change the lay-out of the output that it prints. We will use it a lot during this course, here you see it in the most simplest form. The variable that you want to print is given within the rounded brackets of the format method, and the location in the string to where it prints is given with curly brackets:</p>
+<p>However, there is another way using the <code class="language-plaintext highlighter-rouge">.format()</code> method. The format method allows you to change the lay-out of the output that it prints. We will use it a lot during this course, here you see it in the most simplest form. The variable that you want to print is given within the rounded brackets of the format method, and the location in the string to where it prints is given with curly brackets:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">firstResult</span> <span class="o">=</span> <span class="p">(</span><span class="mi">5</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">firstResult</span><span class="p">)</span>
@@ -431,7 +431,7 @@ universe."</span>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">4</span> <span class="o">**</span> <span class="mf">0.5</span> <span class="c1"># Power
 </span></code></pre></div></div>
 
-<p>Also floats can be incorporated in a string with the <code class="highlighter-rouge">.format()</code> statement. You can determine the number of characters before and after the decimal point as well, however we will cover this in the next section.</p>
+<p>Also floats can be incorporated in a string with the <code class="language-plaintext highlighter-rouge">.format()</code> statement. You can determine the number of characters before and after the decimal point as well, however we will cover this in the next section.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myFloat</span> <span class="o">=</span> <span class="mf">4545.4542244</span>
 <span class="k">print</span><span class="p">(</span><span class="s">"Print the full float {},</span><span class="se">\n</span><span class="s">cut off decimals {:.2f},</span><span class="se">\n</span><span class="s">or determine the characters before the decimal {:10.1f}."</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">myFloat</span><span class="p">,</span><span class="n">myFloat</span><span class="p">,</span><span class="n">myFloat</span><span class="p">))</span>
@@ -440,7 +440,7 @@ universe."</span>
 <p>Note here that we put three formatting characters in the string; we then also need three values to print out.</p>
 
 <h2 id="26-floats-integers-and-strings">2.6 Floats, integers and strings</h2>
-<p>You can also force a conversion between the different value types float, integers and strings with the <code class="highlighter-rouge">str()</code>, <code class="highlighter-rouge">int()</code> and <code class="highlighter-rouge">float()</code> conversions:</p>
+<p>You can also force a conversion between the different value types float, integers and strings with the <code class="language-plaintext highlighter-rouge">str()</code>, <code class="language-plaintext highlighter-rouge">int()</code> and <code class="language-plaintext highlighter-rouge">float()</code> conversions:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Use the int() and float() statements to switch the value types and print out the values. Do you notice any differences?
 </span><span class="n">myFloat</span> <span class="o">=</span> <span class="mf">4.5</span>
@@ -458,7 +458,7 @@ universe."</span>
 <span class="n">myOtherFloat</span>
 </code></pre></div></div>
 
-<p>The same is possible to convert between strings with <code class="highlighter-rouge">str()</code>, you can also convert strings back to integers and floats but only if the content of the string is an integer or float:</p>
+<p>The same is possible to convert between strings with <code class="language-plaintext highlighter-rouge">str()</code>, you can also convert strings back to integers and floats but only if the content of the string is an integer or float:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Convert a float and an integer to a string with the str() statement 
 </span><span class="n">myFloat</span> <span class="o">=</span> <span class="mf">4.5</span>
@@ -512,7 +512,7 @@ universe."</span>
 </span><span class="k">print</span><span class="p">(</span><span class="n">myFloat</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p>Finally, you can check what data type a variable is by using <code class="highlighter-rouge">type()</code>:</p>
+<p>Finally, you can check what data type a variable is by using <code class="language-plaintext highlighter-rouge">type()</code>:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myInteger</span> <span class="o">=</span> <span class="o">-</span><span class="mi">6</span>
 <span class="n">myFloat</span> <span class="o">=</span> <span class="mf">5.22</span>
@@ -554,8 +554,8 @@ universe."</span>
 <hr />
 
 <h2 id="27-booleans">2.7 Booleans</h2>
-<p>Finally, there are the boolean variables <code class="highlighter-rouge">True</code> and <code class="highlighter-rouge">False</code>. 
-Python returns booleans when comparing values. In the code below python checks whether the comparison is <code class="highlighter-rouge">TRUE</code>, when this is the case it will print out the boolean True. In order to do a comparison, we use <strong>comparison operators</strong> like <code class="highlighter-rouge">==, &gt;, &lt;, &lt;=, &gt;=, !=</code></p>
+<p>Finally, there are the boolean variables <code class="language-plaintext highlighter-rouge">True</code> and <code class="language-plaintext highlighter-rouge">False</code>. 
+Python returns booleans when comparing values. In the code below python checks whether the comparison is <code class="language-plaintext highlighter-rouge">TRUE</code>, when this is the case it will print out the boolean True. In order to do a comparison, we use <strong>comparison operators</strong> like <code class="language-plaintext highlighter-rouge">==, &gt;, &lt;, &lt;=, &gt;=, !=</code></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myBoolean</span> <span class="o">=</span> <span class="bp">True</span>
 <span class="n">myBoolean</span>
@@ -583,7 +583,7 @@ Python returns booleans when comparing values. In the code below python checks w
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myInteger</span> <span class="o">!=</span> <span class="mi">6</span>   <span class="c1"># This means 'is myInteger not equal to 6?'
 </span></code></pre></div></div>
 
-<p>Similarly to comparison operators, you can also use <code class="highlighter-rouge">is</code> and <code class="highlighter-rouge">not</code> which are the <strong>identity operators</strong>:</p>
+<p>Similarly to comparison operators, you can also use <code class="language-plaintext highlighter-rouge">is</code> and <code class="language-plaintext highlighter-rouge">not</code> which are the <strong>identity operators</strong>:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myInteger</span> <span class="o">=</span> <span class="mi">5</span>
 </code></pre></div></div>
@@ -597,7 +597,7 @@ Python returns booleans when comparing values. In the code below python checks w
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="ow">not</span> <span class="n">myInteger</span> <span class="o">&gt;</span> <span class="mi">6</span>    <span class="c1"># Same as &lt;=
 </span></code></pre></div></div>
 
-<p>If you want to combine multiple comparisons, it is possible to use the logical operators <code class="highlighter-rouge">and</code> and <code class="highlighter-rouge">or</code>. With the <code class="highlighter-rouge">and</code> operator both comparisons have to be True for the result to be True. With the <code class="highlighter-rouge">or</code> operator, only one has to be True for the result to be True.</p>
+<p>If you want to combine multiple comparisons, it is possible to use the logical operators <code class="language-plaintext highlighter-rouge">and</code> and <code class="language-plaintext highlighter-rouge">or</code>. With the <code class="language-plaintext highlighter-rouge">and</code> operator both comparisons have to be True for the result to be True. With the <code class="language-plaintext highlighter-rouge">or</code> operator, only one has to be True for the result to be True.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">6</span>
@@ -611,7 +611,7 @@ Python returns booleans when comparing values. In the code below python checks w
 
 <h2 id="28-nothing">2.8 Nothing</h2>
 
-<p>Finally, we highlight the <code class="highlighter-rouge">None</code> value which is comparable to other program’s <code class="highlighter-rouge">null</code> values. In the code below we show that None, which you could interpret as nothing, is still something else than the value 0 or e.g. an empty string.</p>
+<p>Finally, we highlight the <code class="language-plaintext highlighter-rouge">None</code> value which is comparable to other program’s <code class="language-plaintext highlighter-rouge">null</code> values. In the code below we show that None, which you could interpret as nothing, is still something else than the value 0 or e.g. an empty string.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myNothing</span> <span class="o">=</span> <span class="bp">None</span>
 <span class="n">myNothing</span>
@@ -634,7 +634,7 @@ Python returns booleans when comparing values. In the code below python checks w
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="ow">not</span> <span class="bp">None</span>
 </code></pre></div></div>
 
-<p>Really 0 is still an integer, “” a string, so <code class="highlighter-rouge">None</code> is really nothing:</p>
+<p>Really 0 is still an integer, “” a string, so <code class="language-plaintext highlighter-rouge">None</code> is really nothing:</p>
 
 
 

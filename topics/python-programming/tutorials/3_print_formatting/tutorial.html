@@ -243,27 +243,27 @@
                     <h2 id="31-introduction">3.1 Introduction</h2>
 <p>There are several ways to present the output of a program, data can be printed in a human-readable form, or written to a file for future use. Sometimes users want more control over the formatting of output, rather than simply printing space-separated values. There are several ways to format output which we will cover in this section.</p>
 
-<p>The following figure (which I shamelessly copied from <a href="https://www.python-course.eu/python3_formatted_output.php">here</a>) helps to visualize the <code class="highlighter-rouge">.format()</code> argument. If you don’t understand it completely, don’t worry, we’ll cover it in this section:</p>
+<p>The following figure (which I shamelessly copied from <a href="https://www.python-course.eu/python3_formatted_output.php">here</a>) helps to visualize the <code class="language-plaintext highlighter-rouge">.format()</code> argument. If you don’t understand it completely, don’t worry, we’ll cover it in this section:</p>
 
 <center><img src="../../images/format_method_positional_parameters.png" /></center>
 
-<p>Everything between the double quotation marks is what will be printed (thus the <code class="highlighter-rouge">print()</code> statement is missing). Between curly brackets you can find lay-out options for the arguments, the arguments themselves are given within the <code class="highlighter-rouge">.format()</code> statement. The first number defines the argument that will be printed (Python starts counting at 0), the number behind the colon (<code class="highlighter-rouge">:</code>) defines the number of characters that is foreseen for the argument, and lastly the number behind the point (<code class="highlighter-rouge">.</code>) is only applicable for floats and defines the amount of decimals that will be printed. E.g.: <code class="highlighter-rouge">1:8.2f</code> will print the first argument with 8 characters/numbers of which two decimals and the type of the argument is a float. If the argument has less than 8 characters/numbers than whitespace will be used.</p>
+<p>Everything between the double quotation marks is what will be printed (thus the <code class="language-plaintext highlighter-rouge">print()</code> statement is missing). Between curly brackets you can find lay-out options for the arguments, the arguments themselves are given within the <code class="language-plaintext highlighter-rouge">.format()</code> statement. The first number defines the argument that will be printed (Python starts counting at 0), the number behind the colon (<code class="language-plaintext highlighter-rouge">:</code>) defines the number of characters that is foreseen for the argument, and lastly the number behind the point (<code class="language-plaintext highlighter-rouge">.</code>) is only applicable for floats and defines the amount of decimals that will be printed. E.g.: <code class="language-plaintext highlighter-rouge">1:8.2f</code> will print the first argument with 8 characters/numbers of which two decimals and the type of the argument is a float. If the argument has less than 8 characters/numbers than whitespace will be used.</p>
 
 <h2 id="32-using-format">3.2 Using .format()</h2>
-<p>The following example gives the most basic use form of the <code class="highlighter-rouge">.format()</code> statement.</p>
+<p>The following example gives the most basic use form of the <code class="language-plaintext highlighter-rouge">.format()</code> statement.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"My name is {}."</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="s">"Jane"</span><span class="p">))</span>
 </code></pre></div></div>
 
-<p>The above doesn’t do anything interesting; you can however put a number in between the curly brackets <code class="highlighter-rouge">{}</code> to force the output to take up a number of characters. Try this:</p>
+<p>The above doesn’t do anything interesting; you can however put a number in between the curly brackets <code class="language-plaintext highlighter-rouge">{}</code> to force the output to take up a number of characters. Try this:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"My name is {:&gt;10}."</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="s">"Jane"</span><span class="p">))</span>
 </code></pre></div></div>
 
 <p>You’ll now see that you force an area of 10 characters to put the name. If the name is shorter, the remaining empty characters will be whitespaces. If the name would be longer, the number will be overruled. Note that the &gt; character in the .format() form can be used to determine the alignment (use &lt; for left align, &gt; for right align and = for centered).</p>
 
-<p>There are a number of differences between the old Python (version &lt;2.5) and the version you’re using now (Python 3.7). In older scripts you might see different print statements. Instead of using the <code class="highlighter-rouge">.format()</code> statement, it used to be a <code class="highlighter-rouge">%</code>-symbol to position information in the right place. E.g.:
-<code class="highlighter-rouge">print("My name is %s." % "Jane")</code></p>
+<p>There are a number of differences between the old Python (version &lt;2.5) and the version you’re using now (Python 3.7). In older scripts you might see different print statements. Instead of using the <code class="language-plaintext highlighter-rouge">.format()</code> statement, it used to be a <code class="language-plaintext highlighter-rouge">%</code>-symbol to position information in the right place. E.g.:
+<code class="language-plaintext highlighter-rouge">print("My name is %s." % "Jane")</code></p>
 
 <hr />
 

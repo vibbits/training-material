@@ -282,7 +282,7 @@
     <span class="k">print</span><span class="p">(</span><span class="s">"Letter {} is at position {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">myElement</span><span class="p">,</span><span class="n">tupleIndex</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>  <span class="c1"># We have to add 1 to the index here because Python starts at zero...
 </span></code></pre></div></div>
 
-<p>Python has a built-in function <code class="highlighter-rouge">enumerate()</code> which eases this task for you as a programmer. For the tuple which we defined above, you could make the following table with indeces and accompanied values:</p>
+<p>Python has a built-in function <code class="language-plaintext highlighter-rouge">enumerate()</code> which eases this task for you as a programmer. For the tuple which we defined above, you could make the following table with indeces and accompanied values:</p>
 
 <center>
 
@@ -296,7 +296,7 @@
 | 5 | F |
 </center>
 
-<p><code class="highlighter-rouge">enumerate()</code> mimics this table and you can use it in this way which immediately gives you the indeces:</p>
+<p><code class="language-plaintext highlighter-rouge">enumerate()</code> mimics this table and you can use it in this way which immediately gives you the indeces:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myTuple</span> <span class="o">=</span> <span class="p">(</span><span class="s">"A"</span><span class="p">,</span><span class="s">"B"</span><span class="p">,</span><span class="s">"C"</span><span class="p">,</span><span class="s">"D"</span><span class="p">,</span><span class="s">"E"</span><span class="p">,</span><span class="s">"F"</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">myTuple</span><span class="p">):</span>
@@ -314,7 +314,7 @@
 
 <p><strong>Intermezzo:</strong></p>
 
-<p>Before starting with exercises, we want to highlight the if-conditions from chapter 4 again, especially the fact that Python interprets the integer 0 to be <code class="highlighter-rouge">False</code>, the integer 1 is interpreted as <code class="highlighter-rouge">True</code> and any other integer different than 0 and 1 is considered to be not <code class="highlighter-rouge">False</code> (it’s also not <code class="highlighter-rouge">True</code> though)</p>
+<p>Before starting with exercises, we want to highlight the if-conditions from chapter 4 again, especially the fact that Python interprets the integer 0 to be <code class="language-plaintext highlighter-rouge">False</code>, the integer 1 is interpreted as <code class="language-plaintext highlighter-rouge">True</code> and any other integer different than 0 and 1 is considered to be not <code class="language-plaintext highlighter-rouge">False</code> (it’s also not <code class="language-plaintext highlighter-rouge">True</code> though)</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">a</span> <span class="o">==</span> <span class="bp">False</span>
@@ -337,7 +337,7 @@
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">c</span> <span class="o">!=</span> <span class="bp">False</span>
 </code></pre></div></div>
 
-<p>Why is this important to know? We see sometimes code similar to the one below in which an arithmetical operation is evaluated in an <code class="highlighter-rouge">if</code> statement. If the result of this arithmetical operation is an integer like 2, 3, etc. we know now how we can deploy this knowledge to evaluate the statement.</p>
+<p>Why is this important to know? We see sometimes code similar to the one below in which an arithmetical operation is evaluated in an <code class="language-plaintext highlighter-rouge">if</code> statement. If the result of this arithmetical operation is an integer like 2, 3, etc. we know now how we can deploy this knowledge to evaluate the statement.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">c</span> <span class="o">=</span> <span class="mi">2</span> 
 <span class="k">if</span> <span class="n">c</span> <span class="o">!=</span> <span class="bp">False</span><span class="p">:</span>  <span class="c1"># 
@@ -390,7 +390,7 @@
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-exercise-621"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Exercise 6.2.1</h3>
 
-  <p>Write a program where you print out all positive numbers up to 1000 that can be divided by 13, or 17, or both. The output should be printed as : <code class="highlighter-rouge">Number 13 is divisible by [13]</code>. If you want a little more challenge, the output should be printed as <code class="highlighter-rouge">Number 884 is divisible by 13, 17</code></p>
+  <p>Write a program where you print out all positive numbers up to 1000 that can be divided by 13, or 17, or both. The output should be printed as : <code class="language-plaintext highlighter-rouge">Number 13 is divisible by [13]</code>. If you want a little more challenge, the output should be printed as <code class="language-plaintext highlighter-rouge">Number 884 is divisible by 13, 17</code></p>
 
   <blockquote>
     <details>
@@ -451,13 +451,13 @@
   <p>Write a program where you find, for each positive number up to 50, all numbers that can divide each number. E.g. 16 can be divided by 1, 2, 4, 8 and 16. 17 can be divided by…</p>
 
   <p>It’s fine if you print the output like this:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Number 1 can be divided by 1!
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Number 1 can be divided by 1!
 Number 2 can be divided by 1!
 Number 2 can be divided by 2!
 Number 3 can be divided by 1!
 </code></pre></div>  </div>
   <p>However, you can also try to print the output like this:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Number 4 can be divided by 1, 2, 4!
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Number 4 can be divided by 1, 2, 4!
 </code></pre></div>  </div>
   <blockquote>
     <details>
@@ -501,7 +501,7 @@ Number 3 can be divided by 1!
 </blockquote>
 
 <h2 id="63-while-loop">6.3 While loop</h2>
-<p>A <strong>while</strong> loop is dependent on a condition, as long as this condition is evaluated as <code class="highlighter-rouge">True</code> the loop will continue. Its structure is very similar to the for-loop we saw here above.</p>
+<p>A <strong>while</strong> loop is dependent on a condition, as long as this condition is evaluated as <code class="language-plaintext highlighter-rouge">True</code> the loop will continue. Its structure is very similar to the for-loop we saw here above.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">while</span> <span class="n">result</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
@@ -575,7 +575,7 @@ FYI, if you execute this, you’ll end up in an enternal loop. To break the loop
   <h3 id="hands_on-exercise-632"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Exercise 6.3.2</h3>
 
   <p>Write a program where you start with a list of numbers from 1 to 100, and you then remove every number from this list that can be divided by 3 or by 5. Print the result.<br />
-Tip: you have to make a copy of the original list here, otherwise Python will get ‘confused’ when you remove values from the list while it’s looping over it. Use <code class="highlighter-rouge">[:]</code> for this purpose.</p>
+Tip: you have to make a copy of the original list here, otherwise Python will get ‘confused’ when you remove values from the list while it’s looping over it. Use <code class="language-plaintext highlighter-rouge">[:]</code> for this purpose.</p>
 
   <blockquote>
     <details>

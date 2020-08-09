@@ -144,12 +144,12 @@
   <p>Print the word hello to the screen</p>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo hello
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo hello
 </code></pre></div></div>
 <blockquote>
   <p>Print the sentence “hello my friends to the screen (with open quotation and without end quotation)
 Remember you can use the up arrow to go back to previously typed commands</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo "hello my friends
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo "hello my friends
 </code></pre></div>  </div>
   <p>Now the terminal hangs. We typed an incorrect command and the terminal does not know what to do.</p>
 </blockquote>
@@ -165,10 +165,10 @@ If <strong>Ctrl-C</strong> fails, try hitting <strong>ESC</strong>. In most of t
   <p>Open the manual of the echo command ?</p>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>man echo
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>man echo
 </code></pre></div></div>
 <p>The synopsis of this command is:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo [-n] [string ...]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo [-n] [string ...]
 </code></pre></div></div>
 
 <p>Things in between square brackets are optional, so it means that you can use echo without options and arguments.</p>
@@ -180,7 +180,7 @@ If <strong>Ctrl-C</strong> fails, try hitting <strong>ESC</strong>. In most of t
 <blockquote>
   <p>By reading the man page, find the command to print hello without a newline, and verify that it works as expected.
 Again remember to use the up arrow to go to previously typed commands.</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo -n hello
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo -n hello
 </code></pre></div>  </div>
 </blockquote>
 
@@ -188,36 +188,36 @@ Again remember to use the up arrow to go to previously typed commands.</p>
   <p>Open the manual of the sleep command, find how to make the terminal “sleep” for 5 seconds, and execute the command.</p>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>man sleep
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>man sleep
 </code></pre></div></div>
 <p>According to the manual sleep has a required argument called number representing the number of seconds to sleep.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sleep 5
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sleep 5
 </code></pre></div></div>
 <blockquote>
   <p>Make the terminal sleep for 5000 seconds and rescue the terminal.</p>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sleep 5000
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sleep 5000
 </code></pre></div></div>
 <p>That’s more than an hour so use Ctrl-C to break off the command.</p>
 
 <h3 id="navigating-the-linux-file-system">Navigating the Linux file system</h3>
 
 <p>Type the following command in the terminal:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd
 </code></pre></div></div>
 <p>cd stands for change directory and is used for navigating the Linux file system</p>
 
 <blockquote>
   <p>Which directory are you in ?
 To view the name of the current working directory, type</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pwd
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pwd
 </code></pre></div>  </div>
   <p>pwd stands for print working directory.
 You see that using cd without arguments leads you to your home directory, on the BITS laptops this is /home/bits.
 Which directories are located in your home directory ?
 To view a list of the files and directories that are located in the current working directory, type</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ls
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ls
 </code></pre></div>  </div>
   <p>ls stands for <strong>list</strong> and is used for listing all files and directories in the current directory. 
 On the BITS laptops the home directory <strong>/home/bits</strong> contains a set of folders like Desktop, Documents, Downloads…</p>
@@ -227,7 +227,7 @@ On the BITS laptops the home directory <strong>/home/bits</strong> contains a se
   <p>List all files and directories in your home directory that start with the letter D</p>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ls D*
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ls D*
 </code></pre></div></div>
 <p>D(star) means everything which name starts with a <strong>D</strong></p>
 
@@ -236,7 +236,7 @@ On the BITS laptops the home directory <strong>/home/bits</strong> contains a se
   <p>List the detailed content of your home directory ?</p>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ls -l
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ls -l
 </code></pre></div></div>
 <p>the l in -l stands for <strong>long output</strong>. 
 Among others, the detailed list shows a date and time indicating the last time a file was modified. The number before the date is the size of the file in bytes.</p>
@@ -244,7 +244,7 @@ Among others, the detailed list shows a date and time indicating the last time a
   <p>List the content of the /usr/local/bin directory ?</p>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ls /usr/local/bin
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ls /usr/local/bin
 </code></pre></div></div>
 <p>/usr/local/bin corresponds to a directory in the file system (/), with bin a subdirectory of local and local a subdirectory of usr.</p>
 
@@ -254,7 +254,7 @@ Among others, the detailed list shows a date and time indicating the last time a
   <p>Name the variable <strong>folder</strong></p>
 </blockquote>
 
-<p>Use the following command: <code class="highlighter-rouge">folder=Illumina_exp4_20042004_mapping_to_hg19_results</code></p>
+<p>Use the following command: <code class="language-plaintext highlighter-rouge">folder=Illumina_exp4_20042004_mapping_to_hg19_results</code></p>
 
 <p>To create a new directory use the <strong>mkdir</strong> (make directory) command.</p>
 
@@ -263,7 +263,7 @@ Among others, the detailed list shows a date and time indicating the last time a
 </blockquote>
 
 <p>If you want to refer to a named variable in a command you have to preceed the name by a <strong>$</strong> sign to indicate that what is following is a <strong>reference</strong> to a variable.
-So use the following command: <code class="highlighter-rouge">mkdir ${folder}</code>
+So use the following command: <code class="language-plaintext highlighter-rouge">mkdir ${folder}</code>
 The curly braces delineate the start and end of the variable name.
 Check if the folder is created using the <strong>ls</strong> command.</p>
 
@@ -274,7 +274,7 @@ Check if the folder is created using the <strong>ls</strong> command.</p>
 </blockquote>
 
 <p>Use the variable as an argument of the rm command:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm -r ${folder}
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm -r ${folder}
 </code></pre></div></div>
 <p>Check if it’s removed using the <strong>ls</strong> command.
 Now navigate to the <strong>NGS</strong> folder which is located in the <strong>/home/bits/</strong> folder.</p>
@@ -282,15 +282,15 @@ Now navigate to the <strong>NGS</strong> folder which is located in the <strong>
 <blockquote>
   <p>Navigate to this location.
 Since you want to navigate, you need to use the <strong>cd</strong> command. Since the NGS folder is located in the folder that you are currently in, you can simply give the name of the folder (NGS) as an argument:
-<code class="highlighter-rouge">cd NGS</code>
+<code class="language-plaintext highlighter-rouge">cd NGS</code>
 If you want to move to a folder that’s located in another location of the file system, you have to give the full path to the folder.</p>
 </blockquote>
 
 <blockquote>
   <p>Go to the <strong>/usr/bin</strong> folder
-<code class="highlighter-rouge">cd /usr/bin</code>
+<code class="language-plaintext highlighter-rouge">cd /usr/bin</code>
 Go back to your home folder
-<code class="highlighter-rouge">cd</code></p>
+<code class="language-plaintext highlighter-rouge">cd</code></p>
 </blockquote>
 
 <h3 id="manipulating-files">Manipulating files</h3>
@@ -301,17 +301,17 @@ Go back to your home folder
   <p>Create a file called test1.txt containing the text “Why do bioinformaticians work on the command line?” using echo</p>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo "Why do bioinformaticians work on the command line?" &gt; test1.txt
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo "Why do bioinformaticians work on the command line?" &gt; test1.txt
 </code></pre></div></div>
 <p>The redirect operator &gt; takes the text output of echo and redirects its contents to a file called test1.txt</p>
 <blockquote>
   <p>Check if it worked by viewing the content of the file on the screen</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cat test1.txt
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cat test1.txt
 </code></pre></div>  </div>
   <p>The name cat is short for “concatenate”. The command can be used to combine the contents of multiple files, but we use it here to dump the content of a single file to the screen. Cat is as a “quick-and-dirty” way to view the content of a file, less is a neater way. 
 Add the line “Because they don’t want to scare you with huge amounts of data!” to the file and check if it worked
 To add lines of text to a file, use the append operator <strong>»</strong>:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo "Because they don't want to scare you with huge amounts of data!" &gt;&gt; test1.txt
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo "Because they don't want to scare you with huge amounts of data!" &gt;&gt; test1.txt
 cat test1.txt
 </code></pre></div>  </div>
   <p>The append operator » appends the text output of echo to the file test1.txt</p>
@@ -320,24 +320,24 @@ cat test1.txt
 <blockquote>
   <p>Create an empty file called test2.txt and check if it exists
 To create an empty file, use the <strong>touch</strong> command:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>touch test2.txt
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>touch test2.txt
 ls
 </code></pre></div>  </div>
   <p>List the names of all text files in your current directory</p>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ls *.txt
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ls *.txt
 </code></pre></div></div>
 <p>Here *.txt automatically expands to all filenames that match the pattern “any string followed by .txt”.</p>
 <blockquote>
   <p>Rename the file test2.txt to test_partII.txt using mv and check if it worked
 To rename a file use the mv command, short for <strong>move</strong>:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mv test2.txt test_partII.txt
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mv test2.txt test_partII.txt
 ls *.txt
 </code></pre></div>  </div>
   <p>Copy the file test_partII.txt to test2.txt and check if it worked
 To copy a file use the cp command, short for <strong>copy</strong>:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cp test_partII.txt test2.txt
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cp test_partII.txt test2.txt
 ls *.txt
 </code></pre></div>  </div>
   <p>You don’t have to type out test_partII.txt, instead you can type something like test_-Tab thereby making use of tab completion. Tab completion involves automatically completing a word if there’s only one valid match on the system. For example, if the only file starting with the letters “test_” is test_partII.txt, test_-Tab refers to test_partII.txt
@@ -347,7 +347,7 @@ Especially with longer names, tab completion can save a huge amount of typing.</
 <blockquote>
   <p>Remove the file test_partII.txt and check if it worked
 To remove a file use the rm command, short for <strong>remove</strong>:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm test_partII.txt
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm test_partII.txt
 ls *.txt
 </code></pre></div>  </div>
   <p>Download the file called exams.txt, containing the results of the spelling and maths exams of all 10-year olds of a school, into your home folder. Use wget to download the file from http://data.bits.vib.be/pub/trainingen/NGSIntro/exams.txt</p>
@@ -355,13 +355,13 @@ ls *.txt
 
 <blockquote>
   <p>Download the file.</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget http://data.bits.vib.be/pub/trainingen/NGSIntro/exams.txt
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget http://data.bits.vib.be/pub/trainingen/NGSIntro/exams.txt
 </code></pre></div>  </div>
 </blockquote>
 
 <blockquote>
   <p>Show the first 10 lines of the file.</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>head exams.txt
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>head exams.txt
 </code></pre></div>  </div>
   <p>Two complementary commands for inspecting files are head and tail, which allow to view the beginning (head) and end (tail) of a file. The head command shows the first 10 lines of a file.</p>
 </blockquote>
@@ -369,17 +369,17 @@ ls *.txt
 <blockquote>
   <p>Show the last 10 lines of the file.
 Similarly, tail shows the last 10 lines of a file.</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tail exams.txt
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tail exams.txt
 </code></pre></div>  </div>
   <p>Open the manual of head to check out the options of head. Learn how to look at the first n lines of the file.</p>
 </blockquote>
 
 <blockquote>
   <p>Save the first 30 lines of exams.txt in a file called test.txt</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>head -n 30 exams.txt &gt; test.txt
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>head -n 30 exams.txt &gt; test.txt
 </code></pre></div>  </div>
   <p>Look at test.txt using the less command</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>less test.txt
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>less test.txt
 </code></pre></div>  </div>
   <p>There are many commands to look at the full content of a file. The oldest of these programs is called <strong>more</strong>, and the more recent and powerful variant is called <strong>less</strong>. Less lets you navigate through the file in several ways, such as moving one line up or down with the arrow keys, pressing space bar to move a page down… Perhaps the most powerful aspect of less is the forward slash key /, which lets you search through the file from beginning to end.</p>
 </blockquote>
@@ -392,7 +392,7 @@ The last three essential less commands are G to move to the end of the file and 
 
 <blockquote>
   <p>Look at the last 10 lines of the first 20 lines of exams.txt</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>head -n 20 exams.txt | tail 
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>head -n 20 exams.txt | tail 
 </code></pre></div>  </div>
   <p>The command runs head -n 20 exams.txt and then pipes the result through tail using the pipe symbol <strong>|</strong></p>
 </blockquote>
@@ -410,33 +410,33 @@ The last three essential less commands are G to move to the end of the file and 
 <blockquote>
   <p>Install sl
 For installing you need superuser privileges !</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install sl
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install sl
 </code></pre></div>  </div>
   <p>Find out in the manual what sl stands for</p>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>man sl
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>man sl
 </code></pre></div></div>
 <p>You can find the solution in the <strong>description</strong> section of the manual.</p>
 <blockquote>
   <p>run the command</p>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sl
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sl
 </code></pre></div></div>
 <p>:o)
 Try out some of the options !!</p>
 
 <h4 id="running-blastp">Running blastp</h4>
 <p>In the folder /home/bits/Linux/ you find a file called [http://data.bits.vib.be/pub/trainingen/NGSIntro/sprot.fasta sprot.fasta] containing a set of protein sequences. We will use this file as a database for blast. The query sequence is the following:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MLLFAPCGCNNLIVEIGQRCCRFSCKNTPCPMVHNITAKVTNRTKYPKHLKEVYDVLGGSAAWE
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MLLFAPCGCNNLIVEIGQRCCRFSCKNTPCPMVHNITAKVTNRTKYPKHLKEVYDVLGGSAAWE
 </code></pre></div></div>
 
 <blockquote>
   <p>Create a fasta file containing the query sequence using echo called seq.fasta</p>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo "&gt;query seq" &gt; seq.fasta
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo "&gt;query seq" &gt; seq.fasta
 cat seq.fasta
 echo MLLFAPCGCNNLIVEIGQRCCRFSCKNTPCPMVHNITAKVTNRTKYPKHLKEVYDVLGGSAAWE &gt;&gt; seq.fasta
 cat seq.fasta
@@ -449,14 +449,14 @@ cat seq.fasta
   <p>Look at the help file of makeblastdb and find the options to define the input fasta file and the database type</p>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>makeblastdb -help
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>makeblastdb -help
 </code></pre></div></div>
 <p>You have to define the input fasta file using the -in option and the type of sequences using the -dbtype option</p>
 <blockquote>
   <p>Create the blast database</p>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>makeblastdb -in sprot.fasta -dbtype prot
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>makeblastdb -in sprot.fasta -dbtype prot
 </code></pre></div></div>
 <p>Now you can perform a blastp search using the <strong>blastp</strong> command. Write the results to a tabular text file with comments called output.txt</p>
 
@@ -464,14 +464,14 @@ cat seq.fasta
   <p>Look at the help file of blastp and find the options to define input, database, output and output format</p>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>blastp -help
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>blastp -help
 </code></pre></div></div>
 <p>You need the -query, the -db, the -out and the -outfmt option</p>
 <blockquote>
   <p>Perform the blast and open the results with less</p>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>blastp -query seq.fasta -db sprot.fasta -out output.txt -outfmt 7
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>blastp -query seq.fasta -db sprot.fasta -out output.txt -outfmt 7
 less output.txt
 </code></pre></div></div>
 
@@ -483,7 +483,7 @@ less output.txt
   <p>Go to this folder and look at the 10 first lines of the file.</p>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /home/bits/NGS/Intro
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /home/bits/NGS/Intro
 head SRR0474262.fastq
 </code></pre></div></div>
 <p>This data sets contain a high number of adapter sequences. These are reads that consist solely or partly of adapter sequence. You have to remove this adapter contamination using command line tools like [https://code.google.com/p/cutadapt/ cutadapt]. This tool is installed on the bits laptops. It is not a regular bash command (it’s a python program) so it doesn’t have a manual but it does have a help file.</p>
@@ -491,11 +491,11 @@ head SRR0474262.fastq
 <blockquote>
   <p>Check the help file of cutadapt for the option to define the adapter sequence and trim at the 3’ends of the reads.
 To open the cutadapt help file type:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cutadapt -h
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cutadapt -h
 </code></pre></div>  </div>
   <p>The <strong>-a</strong> option trims adapter sequences at the 3’ end of the reads. 
 At the top of the help file you see that the standard usage of the command is:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cutadapt -a ADAPTER -o output.fastq input.fastq
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cutadapt -a ADAPTER -o output.fastq input.fastq
 </code></pre></div>  </div>
   <p>The sequence of the adapter is GATCGGAAGAGCTCGTATGCCGTCTTCTGCTTGAAA</p>
 </blockquote>
@@ -503,11 +503,11 @@ At the top of the help file you see that the standard usage of the command is:</
 <blockquote>
   <p>Trim the adapter sequence and store the trimmed sequences in a file called SRR074262trim.fastq
 Go to the folder where the input file is located and type:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cutadapt -a GATCGGAAGAGCTCGTATGCCGTCTTCTGCTTGAAA -o SRR074262trim.fastq SRR074262.fastq
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cutadapt -a GATCGGAAGAGCTCGTATGCCGTCTTCTGCTTGAAA -o SRR074262trim.fastq SRR074262.fastq
 </code></pre></div>  </div>
   <p>Look at the first lines of the trimmed file
 Go to the folder where the input file is located and type:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>head SRR0474262trim.fastq
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>head SRR0474262trim.fastq
 </code></pre></div>  </div>
 </blockquote>
 
@@ -519,12 +519,12 @@ Go to the folder where the input file is located and type:</p>
   <p>Download the file via the command line</p>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget http://data.bits.vib.be/pub/trainingen/NGSIntro/1271011_reads.pair.1.list.accepted_hits.bam
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget http://data.bits.vib.be/pub/trainingen/NGSIntro/1271011_reads.pair.1.list.accepted_hits.bam
 </code></pre></div></div>
 <blockquote>
   <p>Rename the file SRR074262.bam
 Remember to use tab autocompletion !</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mv 1271011_reads.pair.1.list.accepted_hits.bam SRR074262.bam
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mv 1271011_reads.pair.1.list.accepted_hits.bam SRR074262.bam
 </code></pre></div>  </div>
   <p>This is a raw unsorted bam file, if we want to visualize the mapping results in IGV, we need to sort and index the file. We can do the sorting using one of [http://broadinstitute.github.io/picard/ the Picard tools], called SortSam. Picard can be downloaded from https://github.com/broadinstitute/picard/releases/download/2.8.2/picard-2.8.2.jar</p>
 </blockquote>
@@ -532,11 +532,11 @@ Remember to use tab autocompletion !</p>
 <blockquote>
   <p>Download the file
 Remember to use tab autocompletion !</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget https://github.com/broadinstitute/picard/releases/download/2.8.2/picard-2.8.2.jar
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget https://github.com/broadinstitute/picard/releases/download/2.8.2/picard-2.8.2.jar
 ll
 </code></pre></div>  </div>
   <p>For the tools to run properly, you must have Java 1.8 installed. To check your java version run the following command:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>java -version
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>java -version
 </code></pre></div>  </div>
   <p>Running Java tools from the command line requires a special syntax: you have to start the command with <strong>java</strong> and then the name of the java tool and its options and arguments.</p>
 </blockquote>
@@ -547,14 +547,14 @@ ll
   <p>Test the installation by opening the help file</p>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>java -jar picard-2.8.2.jar -h 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>java -jar picard-2.8.2.jar -h 
 </code></pre></div></div>
 <p>Bam files are enormous files that are hard to search through. The order of the reads in a bam file is the same as in the original fastq file. However, if you want to visualize the mapping results or if you want to calculate mapping statistics it’s much more efficient to sort the reads according to genomic location. This can be achieved with the SortSam tool. Look in [https://broadinstitute.github.io/picard/command-line-overview.html the picard documentation] for the SortSam tool.</p>
 
 <blockquote>
   <p>Sort the bam file to SRR074262sorted.bam
 Remember to use tab autocompletion !</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>java -jar picard-2.8.2.jar SortSam \
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>java -jar picard-2.8.2.jar SortSam \
       I=SRR074262.bam \
       O=SRR074262sorted.bam \
       SORT_ORDER=coordinate
@@ -566,7 +566,7 @@ MarkDuplicates compares sequences of reads and detects duplicates. The tool’s 
 <blockquote>
   <p>Remove duplicates from the sorted bam file
 Remember to use tab autocompletion !</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>java -jar picard.jar MarkDuplicates \
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>java -jar picard.jar MarkDuplicates \
       I=SRR074262sorted.bam \
       O=SRR074262sortednodup.bam \
       M=marked_dup_metrics.txt \
@@ -578,7 +578,7 @@ Remember to use tab autocompletion !</p>
 <blockquote>
   <p>Build the bai file for SRR074262sortednodup.bam
 Remember to use tab autocompletion !</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>java -jar picard-2.8.2.jar BuildBamIndex \
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>java -jar picard-2.8.2.jar BuildBamIndex \
       I=SRR074262sortednodup.bam 
 </code></pre></div>  </div>
   <p>Check if the files were generated.</p>
@@ -589,12 +589,12 @@ Remember to use tab autocompletion !</p>
 <blockquote>
   <p>Compress the SRR074262.bam file to .gz format
 Remember to use tab autocompletion !</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gzip SRR074262.bam
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gzip SRR074262.bam
 ll
 </code></pre></div>  </div>
   <p>and unzip it again
 Remember to use tab autocompletion !</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gunzip SRR074262.bam.gz
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gunzip SRR074262.bam.gz
 ll
 </code></pre></div>  </div>
 </blockquote>
@@ -604,7 +604,7 @@ ll
 <h4 id="writing-and-executing-bash-scripts">Writing and executing bash scripts</h4>
 
 <p>We are going to make additions to the bash script you find below:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#this program pretends to hack sites
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#this program pretends to hack sites
 !Define a variable str equal to " 0  1  23  45  6 789"
 clear
 !Print to screen: "hacking www.bits.vib.be"
@@ -639,7 +639,7 @@ done
   <p>Replace all lines that start with ! by the appropriate command</p>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#this program pretends to hack sites
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#this program pretends to hack sites
 str=" 0  1  23  45  6 789"
 clear
 echo "hacking www.bits.vib.be"
@@ -675,17 +675,17 @@ echo "PASSWORD ACCEPTED: token is 453572345763425834756376534"
 str=” 0  1  23  45  6 789”
 clear
 …</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Save the script as HackIt.sh
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Save the script as HackIt.sh
 
 &gt; If necessary make executable
 
 </code></pre></div></div>
 <p>chmod 755 HackIt.sh</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; Run the script
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; Run the script
 
 </code></pre></div></div>
 <p>bash HackIt.sh</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>What if you want to "hack" another website ? The easiest way to do allow for this is to enable to give the url as an argument of the bash command so that's what we'll do.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>What if you want to "hack" another website ? The easiest way to do allow for this is to enable to give the url as an argument of the bash command so that's what we'll do.
 
 Reopen the file in gedit
 
@@ -720,11 +720,11 @@ echo “453572345763425834756376534”
 sleep 3
 echo “$1 succesfully hacked!”
 echo “PASSWORD ACCEPTED: token is 453572345763425834756376534”</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; Save and run the script again now giving www.kuleuven.be as an argument 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; Save and run the script again now giving www.kuleuven.be as an argument 
 
 </code></pre></div></div>
 <p>bash HackIt.sh www.kuleuven.be</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$1 refers to the first argument of the command. If you have two arguments you use $1 and $2 to represent them.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$1 refers to the first argument of the command. If you have two arguments you use $1 and $2 to represent them.
 
 #### Writing and executing Perl scripts
 
@@ -739,7 +739,7 @@ if ($seq =~ /[JO]/) {
 } else {
   print “is nucleic acid\n”;
 }</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 Open gedit and paste the code.
 
 &gt; Add a shebang line to the top of the script
@@ -750,17 +750,17 @@ Open gedit and paste the code.
 $seq = $ARGV[0];
 if ($seq =~ /[JO]/) {
 …</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Save the script as SeqIt.pl
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Save the script as SeqIt.pl
 
 &gt; If necessary make executable
 
 </code></pre></div></div>
 <p>chmod 755 SeqIt.pl</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; Run the script using your first name in capitals as an argument
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; Run the script using your first name in capitals as an argument
 
 </code></pre></div></div>
 <p>perl SeqIt.pl JANICK</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 #### Writing and executing Python scripts
 
 We are going to make additions to the python script you find below:
@@ -770,7 +770,7 @@ We are going to make additions to the python script you find below:
 !Create a set myUniqueAminoAcids out of mySequence
 for aaCode in myUniqueAminoAcids:
   !Print to screen, use format to fill in the values: “Amino acid {} occurs {} times.”</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 Open gedit and paste the code.
 
 &gt; Replace all lines that start with ! by the appropriate command
@@ -781,7 +781,7 @@ mySequence = “SFTMHGTPVVNQVKVLTESNRISHHKILAIVGTAESNSEHPLGTAITKYCKQELDTETLGTCID
 myUniqueAminoAcids = set(mySequence)
 for aaCode in myUniqueAminoAcids:
   print(“Amino acid {} occurs {} times.”.format(aaCode,mySequence.count(aaCode)))</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; Add a shebang line to the top of the script
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; Add a shebang line to the top of the script
 
 </code></pre></div></div>
 <p>#!/usr/bin/env python
@@ -789,17 +789,17 @@ for aaCode in myUniqueAminoAcids:
 mySequence = “SFTMHGTPVVNQVKVLTESNRISHHKILAIVGTAESNSEHPLGTAITKYCKQELDTETLGTCIDFQVVPGCGI”
 myUniqueAminoAcids = set(mySequence)
 …</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Save the script as CountIt.py
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Save the script as CountIt.py
 
 &gt; If necessary make executable
 
 </code></pre></div></div>
 <p>chmod 755 CountIt.py</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; Run the script
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; Run the script
 
 </code></pre></div></div>
 <p>python CountIt.py</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>What if you want to "count" another protein ? The easiest way to do allow for this is to enable to give the sequence as an argument of the python command so that's what we'll do.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>What if you want to "count" another protein ? The easiest way to do allow for this is to enable to give the sequence as an argument of the python command so that's what we'll do.
 
 Reopen the file in gedit
 
@@ -813,11 +813,11 @@ mySequence = sys.argv[1]
 myUniqueAminoAcids = set(mySequence)
 for aaCode in myUniqueAminoAcids:
   print(“Amino acid {} occurs {} times.”.format(aaCode,mySequence.count(aaCode)))</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; Save and run the script again now giving QWEERTIPSDFFFGHKKKKLLLLLLLLLLLLLL as an argument 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; Save and run the script again now giving QWEERTIPSDFFFGHKKKKLLLLLLLLLLLLLL as an argument 
 
 </code></pre></div></div>
 <p>python CountIt.py QWEERTIPSDFFFGHKKKKLLLLLLLLLLLLLL</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 sys.argv[1] refers to the first argument of the command. If you have two arguments you use sys.argv[1] and sys.argv[2] to represent them.
 
 #### Installing and using Python tools
@@ -831,7 +831,7 @@ As an example we will install Biopython, a Python library for bioinformatics. Se
 You need superuser privileges for this
 </code></pre></div></div>
 <p>sudo pip install biopython</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>We will write a small python script to check if Biopython was successfully installed. In the folder /home/bits/Linux/ you find a file called [http://data.bits.vib.be/pub/trainingen/NGSIntro/sprot.fasta sprot.fasta] containing a set of protein sequences that we will use as input. Move to the folder containing the file.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>We will write a small python script to check if Biopython was successfully installed. In the folder /home/bits/Linux/ you find a file called [http://data.bits.vib.be/pub/trainingen/NGSIntro/sprot.fasta sprot.fasta] containing a set of protein sequences that we will use as input. Move to the folder containing the file.
 
 We will use SeqIO module of Biopython to parse the fasta file with the protein sequences. Check out [http://biopython.org/wiki/SeqIO the tutorial of the module].
 
@@ -840,7 +840,7 @@ We will use SeqIO module of Biopython to parse the fasta file with the protein s
 !For every record in the sprot.fasta file do:
 !Print the id of the seq_record to the screen
 !Print the length of the sequence to the screen</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 Open gedit and paste the code.
 
 &gt; Replace all lines that start with ! by the appropriate command
@@ -850,24 +850,24 @@ Open gedit and paste the code.
 for seq_record in SeqIO.parse(“sprot.fasta”,”fasta”):
      print(seq_record.id)
      print(len(seq_record))</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; Add a shebang line to the top of the script
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; Add a shebang line to the top of the script
 
 </code></pre></div></div>
 <p>#!/usr/bin/env python
 from Bio import SeqIO
 for seq_record in SeqIO.parse(“sprot.fasta”,”fasta”):
 …</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Save the script as ParseIt.py in the folder that contains the input file.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Save the script as ParseIt.py in the folder that contains the input file.
 
 &gt; If necessary make executable
 
 </code></pre></div></div>
 <p>chmod 755 ParseIt.py</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; Run the script
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; Run the script
 
 </code></pre></div></div>
 <p>python ParseIt.py</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 ### Compressing and decompressing files
 
 Some files or tools come in **.zip** format, how to decompress them ? 
@@ -922,20 +922,20 @@ You have to **sort** the lines in the file according to the maths score. So you 
 When you look in the manual you see that you can use the -k option for this: 
 </code></pre></div></div>
 <p>sort -k2 exams.txt</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This will sort the file according to the values in the second column, but it will overwrite the original file. To save the sorted list in a new file, examssort1.txt, use the **redirect operator: &gt;**
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This will sort the file according to the values in the second column, but it will overwrite the original file. To save the sorted list in a new file, examssort1.txt, use the **redirect operator: &gt;**
 </code></pre></div></div>
 <p>sort -k2 exams.txt &gt; examssort1.txt</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; Use the head command to look at the sorted file.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; Use the head command to look at the sorted file.
 
 </code></pre></div></div>
 <p>head examssort1.txt</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>You can see that the sorting was not done correctly: it was done alphabetically, treating the numbers in the second column as characters, instead of numbers. This means that we are still missing an option that allows for numerical sorting.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>You can see that the sorting was not done correctly: it was done alphabetically, treating the numbers in the second column as characters, instead of numbers. This means that we are still missing an option that allows for numerical sorting.
 
 &gt; Sort the file numerically based on score on maths.
 </code></pre></div></div>
 <p>sort -k2 -n exams.txt &gt; examssort1.txt
 head examssort1.txt</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This looks a lot better, but we still have to reverse the order since we want the scores from high to low. 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This looks a lot better, but we still have to reverse the order since we want the scores from high to low. 
 
 &gt; Sort the file numerically from highest to lowest score on maths.
 For this we need to add a third option to the **sort** command.
@@ -944,20 +944,20 @@ When you look in the manual you see that you can use the -r option for this:
 </code></pre></div></div>
 <p>sort -k2 -n -r exams.txt &gt; examssort1.txt
 head examssort1.txt</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; Show the results of the 10 students with the highest scores on the maths exam using a single line of commands.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; Show the results of the 10 students with the highest scores on the maths exam using a single line of commands.
 
 This means that you have to combine the **head** command and the **sort** command from the previous exercise into one single command. Remember that you can combine commands by writing them in the order they have to be performed, so in our case first **sort** then **head**, separated by the **pipe operator: |**
 
 </code></pre></div></div>
 <p>sort -k2 -n -r exams.txt | head</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; Show only the names of the 10 students with the highest scores on the maths exam using a single line of commands.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; Show only the names of the 10 students with the highest scores on the maths exam using a single line of commands.
 
 To leave out gender and scores you have to use the **cut** command. To specify which columns to cut you can use the -f option. Please note that the -f option specifies the column(s) that you want to retain ! As an argument you have to specify the name of the file you want to cut.
 In the manual you can see that TAB is the default delimiter for the cut command. So if you have a tab-delimited text file, as in our case, you do not need to specify the delimiter. Only if you use another delimiter you need to specify it.
 
 </code></pre></div></div>
 <p>sort -k2 -n -r exams.txt | head | cut -f3</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 
 **The case of chromosomes and natural sorting.**
 'sort' will sort chromosomes as text; adding few more parameters allows to get the sort you need.
@@ -967,7 +967,7 @@ In the manual you can see that TAB is the default delimiter for the cut command.
 Remember that you can use **echo** to print text to the screen, so to generate text. Try
 </code></pre></div></div>
 <p>echo {22..1} X Y MT</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>and see what happens...
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>and see what happens...
 You don't want to numbers next to each other in one row, you want them in a column underneath each other. This means you want to replace the blanks by end-of-lines. 
 
 &gt; Replace blanks by end-of-lines. Use the sed command for this.
@@ -975,7 +975,7 @@ You don't want to numbers next to each other in one row, you want them in a colu
 Look up the command for replacing text in the slides. Blanks are represented by **\ ** (back slash followed by a blank) and end-of-lines are represented by **\n** (back slash followed by n). To replace all blanks by an end-of-line you need to add the **g** option (see [http://sed.sourceforge.net/sed1line.txt sed tutorial] for more info). So 
 </code></pre></div></div>
 <p>sed “s/\ /\n/g”</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>should do the replacement. Of course you need to combine the two commands using the output of echo as input in sed. Look in the slides or the cheat sheet how to do this.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>should do the replacement. Of course you need to combine the two commands using the output of echo as input in sed. Look in the slides or the cheat sheet how to do this.
 However, you do not want to print the text to the screen you want to print the text to a file. Look in the slides or the cheat sheet how to do this and try to combine the three parts of the command.
 
 &gt; Write chromosomes as a column to a file called chroms.txt
@@ -983,21 +983,21 @@ However, you do not want to print the text to the screen you want to print the t
 The correct solution is: 
 </code></pre></div></div>
 <p>echo {22..1} X Y MT | sed “s/\ /\n/g” &gt; chroms.txt</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The s in the sed argument refers to substitution: you want to substitute blanks by end-of-lines, it is followed by the character you want to replace (a blank or "\ "), then the character you want to replace it with (an end-of-line or "\n"), then you add g to use sed recursively, in other words to do the substitution more than once so each time a blank is encountered.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The s in the sed argument refers to substitution: you want to substitute blanks by end-of-lines, it is followed by the character you want to replace (a blank or "\ "), then the character you want to replace it with (an end-of-line or "\n"), then you add g to use sed recursively, in other words to do the substitution more than once so each time a blank is encountered.
 It prints the chromosome numbers as a column to the file chroms.txt
 
 &gt; Look at the file using the less command.
 
 </code></pre></div></div>
 <p>less chroms.txt</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Remember to use q to leave a less page. 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Remember to use q to leave a less page. 
 
 &gt; Sort the chromosome file by using a simple sort. Write results to chromssort.txt
 
 </code></pre></div></div>
 <p>sort chroms.txt &gt; chromssort.txt
 head chromssort.txt</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Not good! This is a tricky problem that always comes up when you are working with chromosome numbers e.g. when sorting bam/sam files, annotation files, vcf files...
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Not good! This is a tricky problem that always comes up when you are working with chromosome numbers e.g. when sorting bam/sam files, annotation files, vcf files...
 
 &gt; Modify the sort command so that the sorting of the chromosomes is done in the correct way.
 
@@ -1005,7 +1005,7 @@ Most people solve it by specifying that you want sort to do natural sorting usin
 </code></pre></div></div>
 <p>sort -V chroms.txt &gt; chromssort.txt
 head chromssort.txt</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Nice !
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Nice !
 Now try with chr in front.
 
 &gt; Create a file with values chr22 to chr1 chrX chrY chrMT into one column called chroms2.txt in one single command
@@ -1013,11 +1013,11 @@ Now try with chr in front.
 </code></pre></div></div>
 <p>echo chr{22..1} chrX chrY chrMT | sed “s/\ /\n/g” &gt; chroms2.txt
 head chroms2.txt</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; Sort the file into a new file called chromssort2.txt
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; Sort the file into a new file called chromssort2.txt
 
 </code></pre></div></div>
 <p>sort -V chroms2.txt &gt; chromssort2.txthead chroms2.txt</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 ### Getting files from the internet
 
 To download data via a link on the internet you can use the **wget** command.
@@ -1032,7 +1032,7 @@ Go to this folder and use the wget command to download the data:
 <p>cd /home/bits/NGS?ChIPSeq/
 wget ftp://igenome:G3nom3s4u@ussd-ftp.illumina.com/Escherichia_coli_K_12_MG1655/NCBI/2001-10-15/Escherichia_coli_K_12_MG1655_NCBI_2001-10-15.tar.gz
 ll</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>In the same way you can download NGS data from the internet. We are not going to actually do this because 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>In the same way you can download NGS data from the internet. We are not going to actually do this because 
 NGS data sets are enormous and can take hours to download. Interrupting the download is done with  + C
 
 &gt; Decompress the file. 
@@ -1040,7 +1040,7 @@ NGS data sets are enormous and can take hours to download. Interrupting the down
 </code></pre></div></div>
 <p>tar -xzvf Escherichia_coli_K_12_MG1655_NCBI_2001-10-15.tar.gz
 ll</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This creates a new folder called Escherichia_coli_K_12_MG1655.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This creates a new folder called Escherichia_coli_K_12_MG1655.
 Go into this folder and look at the whole genome fasta sequence
 
 &gt; Look at the fasta sequence. 
@@ -1057,7 +1057,7 @@ ll
 cd WholeGenomeFasta
 ll
 head genome.fa</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 ### Installing tools
 
 The FastQC tool was installed by unzipping it. Most tools can be installed using the **make** command. There are many ways to install software on Linux:
@@ -1098,13 +1098,13 @@ TopHat is downloaded as a .tar.gz file
 For decompressing a .tar.gz file you need the following command:
 </code></pre></div></div>
 <p>tar -xzvf tophat-2.1.1.Linux_x86_64.tar.gz</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Remember to use tab autocompletion !
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Remember to use tab autocompletion !
 
 This creates a new folder called tophat-2.1...
 Go into the tophat folder and type:
 </code></pre></div></div>
 <p>./tophat</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 If this opens the help of tophat, it means the software has been installed correctly. It does not mean that you can use the software now. Well you can but you will always have to type the commands from inside the tophat folder like we do here or provide the full path to the tophat folder. The dot slash (./) in front of the command means use the tophat **that is located in this folder**. It tells the command line where it can find the script (./ = the current directory = /usr/bin/tools/tophat-2.1.1.Linux_x86_64/).To avoid this we can create a symbolic link for tophat2 (see later).
 
 #### Installing samtools
@@ -1115,7 +1115,7 @@ When you navigate to the **tophat** folder in /usr/bin/NGS/ you see that samtool
 If you see the samtools help page when you type
 </code></pre></div></div>
 <p>./samtools_0.1.18</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>it means that samtools is indeed installed
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>it means that samtools is indeed installed
 
 
 
@@ -1137,18 +1137,18 @@ We will now try to do the same FastQC analysis from command line in Linux. FastQ
 In command line you can check if java is installed on your laptop using the following command:
 </code></pre></div></div>
 <p>java -version</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>You should see something like:
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>You should see something like:
 </code></pre></div></div>
 <p>ava version “1.8.0_101”
 Java(TM) SE Runtime Environment (build 1.8.0_101-b13)
 Java HotSpot(TM) 64-Bit Server VM (build 25.101-b13, mixed mode)</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>If you get an error then you don't have java installed. If the version listed on the first line is less than 1.5 then you will have problems running FastQC and you need to update java on your laptop.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>If you get an error then you don't have java installed. If the version listed on the first line is less than 1.5 then you will have problems running FastQC and you need to update java on your laptop.
 
 &gt; Run FastQC
 To run FastQC as a GUI just like in Windows type:
 </code></pre></div></div>
 <p>fastqc</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This opens the FastQC GUI and you could load a fastq file via the GUI to get its quality report. However, you can also use fastqc as a command via the command line. 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This opens the FastQC GUI and you could load a fastq file via the GUI to get its quality report. However, you can also use fastqc as a command via the command line. 
 
 &gt; Open the file SRR074262.fastq to obtain the sequence of the contaminating adapter.
 Check [http://wiki.bits.vib.be/index.php/Quality_control_of_NGS_data#Exercise_1:_Quality_control_of_the_data_of_the_introduction_training the exercise on FastQC in Windows] for details on the quality report that is generated
@@ -1161,13 +1161,13 @@ If you have many FASTQ files to check you might prefer running FASTQC from comma
 As for most commands the -h option nicely opens the help file:
 </code></pre></div></div>
 <p>fastqc -h</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 
 
 To run via command line you can simply specify a list of files to process:
 </code></pre></div></div>
 <p>fastqc somefile.fastq someotherfile.fastq</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>You can specify as many files as you like. If you don't specify any files the program will open the GUI.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>You can specify as many files as you like. If you don't specify any files the program will open the GUI.
 
 However, there are a few options that might be helpful to use. Since FASTQC can process FASTQ, SAM and BAM files, it is always safer to tell him upfront which format to expect.
 
@@ -1178,26 +1178,26 @@ First you have to decompress the fastq files. In the cheat sheet look up the com
 </code></pre></div></div>
 <p>gunzip chr22_SRR1039509_1.fastq.gz
 gunzip chr22_SRR1039509_2.fastq.gz</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Decompression of the files results in two .fastq files that can be used as inputs generating the FASTQC reports.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Decompression of the files results in two .fastq files that can be used as inputs generating the FASTQC reports.
 
 &gt; Generate the FASTQC reports for the two fastq files.
 As you can see in the help file of fastqc, the -f option allows you to specify the format of the input file(s). 
 </code></pre></div></div>
 <p>fastqc -f fastq chr22_SRR1039509_1.fastq chr22_SRR1039509_2.fastq</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The two .html files contain the FASTQC reports and can be opened in a browser. 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The two .html files contain the FASTQC reports and can be opened in a browser. 
 
 &gt; Open the first report in firefox via command line
 
 </code></pre></div></div>
 <p>firefox chr22_SRR1039509_1_fastqc.html</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>By default, FastQC will create an HTML report with embedded graphs, but also a zip file containing individual graphs and additional data files containing the raw data from which the plots were drawn.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>By default, FastQC will create an HTML report with embedded graphs, but also a zip file containing individual graphs and additional data files containing the raw data from which the plots were drawn.
 
 &gt; Remove the .html and the .zip files 
 
 </code></pre></div></div>
 <p>rm *.zip
 rm *.html</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>If you have many files you might want to use a for-loop instead of typing all file names into the command.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>If you have many files you might want to use a for-loop instead of typing all file names into the command.
 
 &gt; Write a for-loop to process the two FASTQ files.
 First go back to the folder that contains the fastqc command and make sure you are operating as superuser.
@@ -1207,7 +1207,7 @@ Take a close look at the syntax of the for-loop that is described in the slides.
 do
 fastqc -f fastq ${file}
 done</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Don't forget the **$** since file is just a variable that refers to the actual files in the folder. Write every line on a different line in the terminal.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Don't forget the **$** since file is just a variable that refers to the actual files in the folder. Write every line on a different line in the terminal.
 
 When you go to the /home/bits/NGS/RNASeq folder you should see the same html and zip files as in the previous exercise. The two .html files contain the FASTQC reports and can be opened in a browser.
 If you want to save your reports in a folder other than the folder which contains your fastq files you can specify an alternative location by using the **-o** option.
@@ -1216,11 +1216,11 @@ If you want to save your reports in a folder other than the folder which contain
 
 </code></pre></div></div>
 <p>mkdir FASTQCresults</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; Create a variable output. Its value is the path to the newly created folder.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; Create a variable output. Its value is the path to the newly created folder.
 
 </code></pre></div></div>
 <p>output=/home/bits/NGS/RNASeq/FASTQCresults/</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; Write a for-loop to analyze the quality of the fastq files and write the report to the new folder
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; Write a for-loop to analyze the quality of the fastq files and write the report to the new folder
 
 Adjust the code of the for-loop to write the results to the newly created folder
 </code></pre></div></div>
@@ -1228,7 +1228,7 @@ Adjust the code of the for-loop to write the results to the newly created folder
 do
 fastqc -f fastq -o ${output} ${file}
 done</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Don't forget the **$** since output and file are variables. Write every line on a different line in the terminal.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Don't forget the **$** since output and file are variables. Write every line on a different line in the terminal.
 When you go to the /home/bits/NGS/RNASeq/FASTQCresults folder you should see the same html and zip files as in the previous exercise. The two .html files contain the FASTQC reports and can be opened in a browser.
 
 In this way you can process hundreds of FASTQ files automatically. You can even write a script to process the reports and create a general overview of the quality of the complete experiment.
@@ -1244,7 +1244,7 @@ Almost all NGS data sets contain a high number of contaminating adapter sequence
 To open the cutadapt help files (it's not a regular bash command so it doesn't have a manual) type:
 </code></pre></div></div>
 <p>cutadapt -h</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 Scrolling down the help file shows that the **-e** option defines the maximum allowed error rate: the default is 0.1 meaning that it allows one mismatch every 10 nucleotides. Adapter sequences are identified by aligning each read to the adapter sequence: if the frequency of mismatches in the alignment is below the allowed error rate then the adapter sequence is trimmed from the read.
 &gt; Check the option you need for defining the adapter sequence
 In the help file you see that you have multiple options:
@@ -1255,23 +1255,23 @@ In the help file you see that you have multiple options:
 MYSEQUENCEADAP                   (part of adapter at 3’ end)
 MYSEQUENCEADAPTER                (adapter at 3’ end)
 MYSEQUENCEADAPTERSOMETHINGELSE   (adapter within the read)</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Cutadapt will cut the adapter (part) and all sequence following it resulting in:
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Cutadapt will cut the adapter (part) and all sequence following it resulting in:
 </code></pre></div></div>
 <p>MYSEQUEN
 MYSEQUENCE
 MYSEQUENCE
 MYSEQUENCE</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
  - **-g** to trim adapter sequences ligated at the 5' end of the reads. These adapters are expected to appear at the start of a read (where they can be just partially there) or somewhere within the read:
 </code></pre></div></div>
 <p>ADAPTERMYSEQUENCE              (5’ end)
 DAPTERMYSEQUENCE               (partial)
 TERMYSEQUENCE                  (partial)
 SOMETHINGADAPTERMYSEQUENCE     (within)</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>In all cases, the adapter itself and the sequence preceding it will be removed, leaving in all examples above:
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>In all cases, the adapter itself and the sequence preceding it will be removed, leaving in all examples above:
 </code></pre></div></div>
 <p>MYSEQUENCE</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
  - **-b** to trim adapters at the 3' or 5' end of the read. If there is at least one base before the adapter, then the adapter is trimmed as a 3’ adapter and the adapter itself and everything following it is removed. Otherwise, the adapter is trimmed as a 5’ adapter and it is removed from the read, but the sequence after it it remains:
 </code></pre></div></div>
 <p>Before trimming 	        After trimming 	
@@ -1282,19 +1282,19 @@ MADAPTER 	                M
 ADAPTERMYSEQUENCE 	        MYSEQUENCE
 PTERMYSEQUENCE 	                MYSEQUENCE
 TERMYSEQUENCE 	                MYSEQUENCE</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 
 Since we probably have contaminating adapter at the 3' end we'll take the -a option
 At the top of the help file you see that the standard usage of the command is:
 </code></pre></div></div>
 <p>cutadapt -a ADAPTER -o output.fastq input.fastq</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>You can find the sequence of the adapter in the FastQC report of SRR074262.fastq
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>You can find the sequence of the adapter in the FastQC report of SRR074262.fastq
 
 &gt; Trim the adapter sequence using the default error rate, store the trimmed sequences in a file SRR074262trim.fastq
 So in our case the command is: 
 </code></pre></div></div>
 <p>cutadapt -a GATCGGAAGAGCTCGTATGCCGTCTTCTGCTTGAAA -o SRR074262trim.fastq SRR074262.fastq</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Note that the default error rate means that you allow max. 10% mismatches in the alignment of adapter and read. 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Note that the default error rate means that you allow max. 10% mismatches in the alignment of adapter and read. 
 
 &gt; How many reads consisted solely of adapter sequence (and were consequently completely removed) ?
 The output of the cutadapt command is:
@@ -1363,12 +1363,12 @@ length    count    expect    max.err    error counts
 34    700    0.0    3    541 85 53 21
 35    5390    0.0    3    4652 507 171 60
 36    2037526    0.0    3    1870684 129754 20094 16994</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>In the last line you see the number of reads with 36 bases aligned to the adapter sequence. Since that is the total of the read (the reads are 36bp long) it means that over 2 million reads only consist of adapter sequence, 1.870.684 being completely identical to the adapter, 129.754 containing 1 mismatch with the adapter...
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>In the last line you see the number of reads with 36 bases aligned to the adapter sequence. Since that is the total of the read (the reads are 36bp long) it means that over 2 million reads only consist of adapter sequence, 1.870.684 being completely identical to the adapter, 129.754 containing 1 mismatch with the adapter...
 &gt; Open the trimmed sequences in FastQC
 To open the FastQC GUI type the fastqc command
 </code></pre></div></div>
 <p>fastqc</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>You can compare the results with these of the original reads on [http://wiki.bits.vib.be/index.php/Quality_control_of_NGS_data the Quality control of NGS data wiki page].
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>You can compare the results with these of the original reads on [http://wiki.bits.vib.be/index.php/Quality_control_of_NGS_data the Quality control of NGS data wiki page].
 
 &gt; Are all the reads still 36 nt long after trimming ?
 In the **Basic statistics** tab you see that the length of the reads varies as was to be expected after trimming
@@ -1398,7 +1398,7 @@ length    count    expect    max.err    error counts
 34    700    0.0    3    541 85 53 21
 35    5390    0.0    3    4652 507 171 60
 36    2037526    0.0    3    1870684 129754 20094 16994</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>As you can see here over 2 million reads corresponded to adapter over their entire length and as a result were trimmed to length zero. This is the large peak at length zero on the plot. Over 150000 reads contain 3 bases that belong to the adapter. These 3 bases have been cut leaving reads of 33 nt long: this is the small peak you see on the plot at length 33. All intermediate lengths of adapter contamination have been detected but in such a small fraction of reads that you cannot see the influence of the trimming on the plot.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>As you can see here over 2 million reads corresponded to adapter over their entire length and as a result were trimmed to length zero. This is the large peak at length zero on the plot. Over 150000 reads contain 3 bases that belong to the adapter. These 3 bases have been cut leaving reads of 33 nt long: this is the small peak you see on the plot at length 33. All intermediate lengths of adapter contamination have been detected but in such a small fraction of reads that you cannot see the influence of the trimming on the plot.
 
  
 FASTQC calls a failure for this plot because it knows the file contains Illumina data and it expects the reads to have the same lengths. The software does not consider the fact that this is no longer true after trimming.
@@ -1420,15 +1420,15 @@ In the previous exercise you had to specify the path of the fastqc command, othe
 You can soft or hard links, for what we want to achieve a soft link is fine. When you place a link to the command in /usr/local/bin you will be able to run the program from any location by just typing
 </code></pre></div></div>
 <p>fastqc</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>So the overall format of the command is as follows:
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>So the overall format of the command is as follows:
 </code></pre></div></div>
 <p>ln -s (soft link) path_where_fastqc_is (source path) /usr/local/bin/fastqc (destination path)</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 &gt; What's the command you would need for creating this soft link ? 
 When you look in the manual of **ln** you see that for creating a soft link you need the **-s** option. So you use the following command: 
 </code></pre></div></div>
 <p>ln -s /usr/bin/tools/FastQC/fastqc /usr/local/bin/fastqc</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Check if you can run the fastqc command from any location now.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Check if you can run the fastqc command from any location now.
 
 #### Linking Tophat2
 
@@ -1437,18 +1437,18 @@ You can make soft or hard links, for what we want to achieve a soft link is fine
 So the overall format of the command is as follows:
 </code></pre></div></div>
 <p>ln -s (soft link) path_where_command_is (source path) /usr/local/bin/name (destination path)</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 &gt; Create a symbolic link for tophat2
 For creating the link you need the following command:
 </code></pre></div></div>
 <p>sudo ln -s /usr/bin/NGS/tophat-2.1.1.Linux_x86_64/tophat2 /usr/local/bin/tophat2</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Remember to use tab autocompletion !
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Remember to use tab autocompletion !
 Now type **tophat2**. If you see the help file, the link works.
 
 If you mess up the link you have to remove it before you can try again using the following command:
 </code></pre></div></div>
 <p>sudo unlink /usr/local/bin/tophat2</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 
 #### Linking samtools
 
@@ -1458,10 +1458,10 @@ We will also do the same for samtools to use samtools from anywhere in the file 
 Create a link using the **ln -s** command:
 </code></pre></div></div>
 <p>sudo ln -s /usr/bin/NGS/tophat-2.1.1.Linux_x86_64/samtools_0.1.18 /usr/local/bin/samtools-0.1.18</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Check if the command works. If you type
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Check if the command works. If you type
 </code></pre></div></div>
 <p>samtools-0.1.18 view</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(one of the possible samtools commands) you should see the manual of the command.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(one of the possible samtools commands) you should see the manual of the command.
 In many cases you will have several versions of samtools running on your laptop. That's why I don't call the tool samtools but I choose the full name including the version number.
 
 [http://wiki.bits.vib.be/index.php/Introduction_to_ChIP-Seq_analysis#Linking_tools Linking tools for the ChIP-Seq training]
@@ -1553,22 +1553,22 @@ Indexing a reference genome is a one-time effort: you do not have to repeat it e
 
 </code></pre></div></div>
 <p>folder=/home/bits/NGS/ChIPSeq/</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; Check out the manual of the bowtie-1.1.2-build command to see the arguments it takes
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; Check out the manual of the bowtie-1.1.2-build command to see the arguments it takes
 Since we have created a soft link for the bowtie-1.1.2-build command, the command should work from any location in the Linux file system. To see to help file just type the command:
 </code></pre></div></div>
 <p>bowtie-1.1.2-build</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>In the help file you see that you need to specify the reference genome that you want to index as an input (in our case the E. coli fasta file) and that you have to specify the output file.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>In the help file you see that you need to specify the reference genome that you want to index as an input (in our case the E. coli fasta file) and that you have to specify the output file.
 </code></pre></div></div>
 <p>Usage: bowtie-build [options]* <reference_in> <ebwt_outfile_base>
     reference_in            comma-separated list of files with ref sequences
     ebwt_outfile_base       write Ebwt data to files with this dir/basename</ebwt_outfile_base></reference_in></p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>We will give the output files the same name as our input file: Escherichia_coli_K12
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>We will give the output files the same name as our input file: Escherichia_coli_K12
 
 &gt; Prepare an indexed reference sequence for E. coli using the bowtie-build command, use the folder variable
 So as an input the command expects the name of the input and the output file. 
 </code></pre></div></div>
 <p>bowtie-1.1.2-build ${folder}Escherichia_coli_K12.fasta ${folder}Escherichia_coli_K12</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bowtie-build will index the Escherichia_coli_K12.fasta generating a whole set of .ebwt files whose name all start with Escherichia_coli_K12. We will write a bash script to do the rest of the mapping.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bowtie-build will index the Escherichia_coli_K12.fasta generating a whole set of .ebwt files whose name all start with Escherichia_coli_K12. We will write a bash script to do the rest of the mapping.
 
 Writing a script can be done in any text editor. On the BITS laptops you can use gedit:
 
@@ -1587,18 +1587,18 @@ We need the following variables:
 </code></pre></div></div>
 <p>folder=/home/bits/NGS/ChIPSeq/
 input=SRR576933</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Make sure that the file containing the indexed reference genome and the fastq files containing the *E. coli* reads are located in the same folder.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Make sure that the file containing the indexed reference genome and the fastq files containing the *E. coli* reads are located in the same folder.
 
 &gt; Check the help file for bowtie-1.1.2 
  Go back to the terminal and type
 </code></pre></div></div>
 <p>bowtie-1.1.2</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; What is the first argument bowtie expects ?
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; What is the first argument bowtie expects ?
 As first argument bowtie expects the path to the ebwt files (= the genome index files) so in our case that's Escherichia_coli_K_12
 </code></pre></div></div>
 <p>Usage: 
 bowtie [options]* <ebwt></ebwt></p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; What is the second argument bowtie expects ?
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; What is the second argument bowtie expects ?
 As second argument bowtie expects the information of the input file containing the reads, in our case SRR576933.fastq Bowtie can be used to map single end reads as we have but also to map paired end reads. In the case of paired end reads you have two fastq files, one with the upstream reads and one with the downstream reads. That's why you can specify two input files m1 and m2. In our case it's just one file.
 </code></pre></div></div>
 <p>Usage: 

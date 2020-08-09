@@ -263,26 +263,26 @@
 
 <p>The programming language Python must be installed to use some very useful YASARA features. Simply start YASARA as administrator. Right click the YASARA icon on the desktop and choose “Run as administrator”. Once the program is opened, click</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Help &gt; Install program &gt; Python
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Help &gt; Install program &gt; Python
 </code></pre></div></div>
 
 <p>PovRay is used to make high quality publication-ready images and should be downloaded first with:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Help &gt; Install program &gt; PovRay
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Help &gt; Install program &gt; PovRay
 </code></pre></div></div>
 
 <h2 id="tutorial-movie">Tutorial movie</h2>
 
 <p>Play the movie “Working with YASARA”:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Help &gt; Play help movie &gt; General: Working with YASARA
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Help &gt; Play help movie &gt; General: Working with YASARA
 
 </code></pre></div></div>
 
 <h2 id="scene-styles">Scene styles</h2>
 
 <p>Open the PDB with code 1TRZ in YASARA.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>File &gt; Load &gt; PDB file from Internet
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>File &gt; Load &gt; PDB file from Internet
 </code></pre></div></div>
 <p>If this option is not there, it means you haven’t installed Python yet. Please check above.</p>
 
@@ -309,7 +309,7 @@
 Mostly to do structure analysis, we want to show only the most interesting residues, the ones we want to analyze, and hide all the others.</p>
 
 <p>The structure of insulin was crystallized together with some water molecules. In many cases, it is no problem to permanently delete those waters. To visualize the waters, select an atom view such as F1, F2 or F3. See the red water (oxygen) atoms floating around the surface?</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Edit &gt; Delete &gt; Waters
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Edit &gt; Delete &gt; Waters
 </code></pre></div></div>
 
 <p>Then select the base scene style without any explicit atoms, e.g. tube style (F5). Press F5. This is our representation of the backbone.</p>
@@ -318,13 +318,13 @@ Mostly to do structure analysis, we want to show only the most interesting resid
 
 <ol>
   <li>From the menu
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>View &gt; Show atoms in &gt; Residue
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>View &gt; Show atoms in &gt; Residue
 </code></pre></div>    </div>
     <p>Select Cys7 from Molecule <strong>A</strong> and press OK</p>
   </li>
   <li>From the sequence selector <img src="../../images/Seqselector.png" alt="seqselector.png" />
 Hover the mouse on the bottom of the screen, you will see the sequence selector opening. Open it permanently by pressing the blue nailpin on the left side of it. Search for Cys7 from Molecule <strong>B</strong>, right-click and select:
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Show &gt; Residue
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Show &gt; Residue
 </code></pre></div>    </div>
   </li>
 </ol>
@@ -356,12 +356,12 @@ again those stretches that we want. But if you have a better idea, I
 would like to hear it.</p>
 
 <p>Hide all secondary structure:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   View &gt; Hide secondary structure of &gt; All
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   View &gt; Hide secondary structure of &gt; All
 </code></pre></div></div>
 
 <p>Then show stretches of residues 2-10 in Mol B and residues 4-10 in Mol A
 in tube view as:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    View &gt; Show secondary structure &gt; Tube through &gt; Residue
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    View &gt; Show secondary structure &gt; Tube through &gt; Residue
 </code></pre></div></div>
 <p>Then select the correct stretches of residues by keeping the CTRL key
 pressed to select multiple residues.</p>
@@ -371,13 +371,13 @@ hidden because they are metal bound (a YASARA specific thing). Hide
 those histidines by clicking on one of the sidechain atoms, then
 right-click and select:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   Hide atoms &gt; Residue
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   Hide atoms &gt; Residue
 </code></pre></div></div>
 
 <p>The nasty dative bonds and metals can be removed simply by deleting all
 of them:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   Edit &gt; Delete &gt; Residue &gt; Name
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   Edit &gt; Delete &gt; Residue &gt; Name
 </code></pre></div></div>
 
 <p>In the name column select all the metals and ions you can find.</p>
@@ -392,7 +392,7 @@ of them:</p>
 main menu or selecting an atom from a residue and right-click. In the
 latter case you select:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   Label &gt; Residue
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   Label &gt; Residue
 </code></pre></div></div>
 
 <p>Note that <em>residue name</em> and <em>residue number</em> is automatically selected.
@@ -412,7 +412,7 @@ colors. So we shouldn’t color entire residues, but only a selected atom
 set. Therefore our selection will be at the atom level, not the residue
 level. Go to:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    View &gt; Color &gt; Atom &gt; Belongs to or has &gt; Backbone
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    View &gt; Color &gt; Atom &gt; Belongs to or has &gt; Backbone
 </code></pre></div></div>
 
 <p>Then select the orange color (color code 150) and select ‘Apply unique
@@ -426,14 +426,14 @@ the next day. That’s why YASARA can save the entire Scene including
 orientations, colors, views, everything. To save the current scene, go
 to:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    File &gt; Save as &gt; YASARA Scene
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    File &gt; Save as &gt; YASARA Scene
 </code></pre></div></div>
 
 <p>Choose a filename such as MyInsulin.sce</p>
 
 <p>To load the work again in YASARA go to:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    File &gt; Load &gt; YASARA Scene
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    File &gt; Load &gt; YASARA Scene
 </code></pre></div></div>
 
 <p>Careful: loading a Scene will erase everything else!</p>
@@ -443,7 +443,7 @@ to:</p>
 <p>To save the current view to a high quality publication ready image file,
 go to:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>File &gt; Save as &gt; Ray-traced hires screenshot
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>File &gt; Save as &gt; Ray-traced hires screenshot
 </code></pre></div></div>
 
 <p>This requires that the PovRay program has been installed. See the first
@@ -491,12 +491,12 @@ hydrogens are missing. Luckily YASARA can add the hydrogens for you.</p>
 
 <p>Add hydrogens with:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Edit &gt; Add &gt; Hydrogens to all
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Edit &gt; Add &gt; Hydrogens to all
 </code></pre></div></div>
 
 <p>Then show the hydrogen-bonds:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>View &gt; Show interactions &gt; Hydrogen bonds of&gt; All &gt; OK
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>View &gt; Show interactions &gt; Hydrogen bonds of&gt; All &gt; OK
 </code></pre></div></div>
 
 <p>If the view is to chaotic for you, toggle off the sidechains with F8
@@ -518,12 +518,12 @@ hydrogens are missing. Luckily YASARA can add the hydrogens for you.</p>
 
 <p>To remove the hydrogen bonds, you have multiple choices:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>View &gt; Hide hydrogen bonds of &gt; All
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>View &gt; Hide hydrogen bonds of &gt; All
 </code></pre></div></div>
 
 <p>or just delete all hydrogens (this will also delete all hydrogen bonds):</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Edit &gt; Delete &gt; Hydrogens
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Edit &gt; Delete &gt; Hydrogens
 </code></pre></div></div>
 
 <h2 id="surfaces">Surfaces</h2>
@@ -532,7 +532,7 @@ hydrogens are missing. Luckily YASARA can add the hydrogens for you.</p>
 protein. you can visualize cavities, ligand binding sites, etc … To
 show the molecular surface of one monomer of dimeric insulin, go to:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>View &gt; Show surface of &gt; Molecule
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>View &gt; Show surface of &gt; Molecule
 </code></pre></div></div>
 
 <p>Select in the <em>Name</em> column A and B (these are the two chains in 1

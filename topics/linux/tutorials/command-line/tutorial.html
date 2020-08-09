@@ -248,7 +248,7 @@
 <p>We will first hold your hand: type over these commands below step by step, and watch what they do.
 Use <strong>cd</strong> to change the current working directory (user bits). To create your own directories use the <strong>mkdir</strong> (make directory) command.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd ~
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd ~
 $ mkdir sequences
 $ cd sequences
 $ mkdir proteins
@@ -261,7 +261,7 @@ $ pwd
 </code></pre></div></div>
 
 <p>To create a new file, use the <strong>touch</strong> command:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd ~/sequences/proteins/
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd ~/sequences/proteins/
 $ touch my_sequence.txt
 $ ls -l
 -rw-r--r-- 1 bits users 0 Sep 19 15:56 my_sequence.txt
@@ -271,12 +271,12 @@ $ ls -l
 Most commands accept options. But which options can you use? The command <strong>man</strong> helps you. Type <strong>man</strong> followed by the command name. E.g. <strong>man ls</strong> to see what options are available for the ls command. You get a the list of options. Keep pressing Space until the page stops scrolling, then enter “q” to return to the command prompt.
 Luckily, most tools have the <strong>–help</strong> option. (ls –help for example). These 2 methods should help you further. To see what options can be used with ls, enter <strong>man ls</strong>.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ man ls
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ man ls
 </code></pre></div></div>
 
 <p>To delete a file, use the <strong>rm</strong> (remove) command:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd ~/sequences/proteins/
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd ~/sequences/proteins/
 $ ls
 my_sequence.txt
 $ rm my_sequence.txt
@@ -285,7 +285,7 @@ $
 </code></pre></div></div>
 
 <p>To remove a directory, use the <strong>rmdir</strong> (remove directory) command. The directory needs to be empty to do this.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd ~/sequences/
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd ~/sequences/
 $ ls
 proteins
 $ rmdir proteins
@@ -295,7 +295,7 @@ $
 
 <p>To copy a file, use the <strong>cp</strong> (copy) command:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd ~/sequences
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd ~/sequences
 $ touch testfile1
 $ ls
 testfile1
@@ -305,7 +305,7 @@ testfile1 testfile2
 </code></pre></div></div>
 
 <p>To rename a file, or to move it to another directory, use the <strong>mv</strong> (move) command:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd 
 $ touch testfile3
 $ mv testfile3 junk
 $ mkdir testdir
@@ -315,7 +315,7 @@ junk
 </code></pre></div></div>
 
 <p>To download a file, use the <strong>wget</strong> command:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd ~/Downloads
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd ~/Downloads
 $ wget http://data.bits.vib.be/pub/trainingen/Linux/sample.sam
 $ ls sample.sam
 $
@@ -328,14 +328,14 @@ $
 <blockquote>
   <p>Create the following directory structure</p>
   <figure id="figure-1"><img src="https://wiki.bits.vib.be/images/c/c4/Dirstructureex1.png" alt="tree-structure" /><figcaption><span class="figcaption-prefix">Figure 1:</span> Tree</figcaption></figure>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$mkdir -p docs/{pdf/{man,readme},html/{man,readme}}
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$mkdir -p docs/{pdf/{man,readme},html/{man,readme}}
 </code></pre></div>  </div>
 </blockquote>
 
 <p>The ‘{‘ and ‘}’ can group arguments but you can also create the structure step by step.</p>
 <blockquote>
   <p>The little tree figure above is created with the ‘tree’ command. Display such a tree.</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tree /home/bits/docs/
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tree /home/bits/docs/
 </code></pre></div>  </div>
 </blockquote>
 
@@ -348,7 +348,7 @@ $
 <p>As an example, we will download the rice genome from the Rice Annotation Project database. But first create the folder structure.</p>
 <blockquote>
   <p>Create following folder structure.</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ mkdir "Rice Example"
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ mkdir "Rice Example"
  $ cd Rice\ Example
  $ mkdir Genome\ data
  $ cd Genome\ data
@@ -368,7 +368,7 @@ Hence, you might save yourself some trouble (and typing!) by putting _ instead o
   <p>Download the genome data to the “Rice example”/”Genome data”/Sequence folder. Use <strong>wget</strong> to download from the link.
 Right-click on the download link, and copy the download link. The download link is: http://rapdb.dna.affrc.go.jp/download/archive/build5/IRGSPb5.fa.masked.gz
 Go the directory and execute wget</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd      ## to go back to the home directory
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd      ## to go back to the home directory
 $ cd Ric&lt;tab&gt;
 $ cd Gen&lt;tab&gt;/Seq&lt;tab&gt;
 $ wget http://rapdb.dna.affrc.go.jp/download/archive/build5/IRGSPb5.fa.masked.gz
@@ -389,23 +389,23 @@ IRGSPb5.fa.masked.gz
 
 <h3 id="did-your-data-get-through-correctly">Did your data get through correctly?</h3>
 <p>Large downloads or slow downloads like this can take a long time. Plenty of opportunity for the transfer to go wrong. Therefore, large downloads should always have a <strong>checksum</strong> mentioned. You can find the md5 checksum on the downloads page. The md5 checksum is an unique string identifying (and calculated from) this data. Once downloaded, you should calculate this string yourself with <strong>md5sum</strong>.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ md5sum IRGSPb5.fa.masked.gz
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ md5sum IRGSPb5.fa.masked.gz
 7af391c32450de873f80806bbfaedf05  IRGSPb5.fa.masked.gz
 </code></pre></div></div>
 
 <p>You should go to the rice genome download page, and compare this string with the MD5 checksum mentioned over there. You can do this manually. Now that you know the concept of checksums, there is an easier way to verify the data using <strong>md5sum</strong>. Can you find the easier way?</p>
 <blockquote>
   <p>Search how to use md5sum to check the downloaded files with the .md5 file from the website. Check the man page</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ man md5sum
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ man md5sum
 </code></pre></div>  </div>
 </blockquote>
 
 <p>It does not say much: in the end it refers to</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ info coreutils 'md5sum invocation'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ info coreutils 'md5sum invocation'
 </code></pre></div></div>
 
 <p>Reading the options, there is one option sounding promising:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>`-c'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>`-c'
 `--check'
      Read file names and checksum information (not data) from each FILE
      (or from stdin if no FILE was specified) and report whether the
@@ -413,7 +413,7 @@ IRGSPb5.fa.masked.gz
 </code></pre></div></div>
 
 <p>This way we can check the download:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ wget http://rapdb.dna.affrc.go.jp/download/archive/build5/IRGSPb5.fa.masked.gz.md5
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ wget http://rapdb.dna.affrc.go.jp/download/archive/build5/IRGSPb5.fa.masked.gz.md5
 --2013-10-15 09:47:02--  http://rapdb.dna.affrc.go.jp/download/archive/build5/IRGSPb5.fa.masked.gz.md5
 Resolving rapdb.dna.affrc.go.jp (rapdb.dna.affrc.go.jp)... 150.26.230.179
 Connecting to rapdb.dna.affrc.go.jp (rapdb.dna.affrc.go.jp)|150.26.230.179|:80... connected.
@@ -435,13 +435,13 @@ The Short Read Archive (SRA), storing NGS data sets, makes use of <a href="http:
 <h3 id="extracting-the-data">Extracting the data</h3>
 <blockquote>
   <p>What type of file have you downloaded?</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ file IRGSPb5.fa.masked.gz
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ file IRGSPb5.fa.masked.gz
 IRGSPb5.fa.masked.gz: gzip compressed data, was "IRGSPb5.fa.masked", from Unix, last modified: Wed Aug 18 03:45:47 2010
 </code></pre></div>  </div>
 </blockquote>
 
 <p>It is a compressed file. Files are compressed to save storage space. Before using these files, you have to decompress them. What can you do with this type of file? Check the command apropos.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ apropos gzip
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ apropos gzip
 gzip (1)             - compress or expand files
 lz (1)               - gunzips and shows a listing of a gzip'd tar'd archive
 tgz (1)              - makes a gzip'd tar archive
@@ -452,7 +452,7 @@ zforce (1)           - force a '.gz' extension on all gzip files
 <p><strong>apropos</strong> is a command that helps you discover new commands. In case you have a type of file that you don’t know about, use apropos to search for corresponding programs.</p>
 <blockquote>
   <p>Decompress the file. Check the man page of gzip. From the man page:&lt;pre&gt;gunzip [ -acfhlLnNrtvV ] [-S suffix] [ name …  ]&lt;/pre&gt;</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gunzip IRGSPb5.fa.masked.gz 
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gunzip IRGSPb5.fa.masked.gz 
 $ ls
 IRGSPb5.fa.masked  IRGSPb5.fa.masked.gz.md5
 </code></pre></div>  </div>

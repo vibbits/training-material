@@ -288,7 +288,7 @@
 
 <p>The main focus of FoldX is the prediction of free energy changes, e.g. what happens to the free energy of the protein when we mutate an Asp to a Tyr? FoldX will then calculate the free energy of the wild type (WT) and the mutant (MT) and make the difference:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ddG(change) = dG(MT) - dG(WT)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ddG(change) = dG(MT) - dG(WT)
 </code></pre></div></div>
 
 <p>FoldX is trained using experimental values to predict ddG(change). It is important to realize that dG(WT) and dG(MT) are meaningless numbers as such. These do not correlate with experimental values. Only ddG(change) does.</p>
@@ -312,12 +312,12 @@
 
   <p>Load the scene with:</p>
 
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>File &gt; Load &gt; YASARA Scene
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>File &gt; Load &gt; YASARA Scene
 </code></pre></div>  </div>
   <figure id="figure-1"><img src="../../images/Training_1.png" alt="monomer bound to DNA -80width" /><figcaption><span class="figcaption-prefix">Figure 1:</span> P53 monomer bound to DNA</figcaption></figure>
 
   <p>To Repair (or minimize) the structure with FoldX go to:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Analyse &gt; FoldX &gt; Repair object 
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Analyse &gt; FoldX &gt; Repair object 
 </code></pre></div>  </div>
 
   <figure id="figure-2"><img src="../../images/Training_2.png" alt="Select the object for repairing -80width" /><figcaption><span class="figcaption-prefix">Figure 2:</span> Select the object for repairing</figcaption></figure>
@@ -365,7 +365,7 @@ First turn on all atoms in the molecules G and H (DNA) again as you did previous
 
 <p>Show the sidechain of Arg273 of Object 2 by searching for it in the sequence selector, then right-click on it and go to:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Show atoms &gt; Sidechain and CA and zoom in on Arg273
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Show atoms &gt; Sidechain and CA and zoom in on Arg273
 </code></pre></div></div>
 
 <p>Notice how the positively charged Arginine is making an electrostatic interaction with the negative phosphate from the DNA backbone.</p>
@@ -376,7 +376,7 @@ First turn on all atoms in the molecules G and H (DNA) again as you did previous
 
 <p>Right-click on this Arg273 in the sequence selector and go to:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>FoldX &gt; Mutate residue
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>FoldX &gt; Mutate residue
 </code></pre></div></div>
 
 <p>A number of menus is now presented and here is what you need to do in each menu:</p>

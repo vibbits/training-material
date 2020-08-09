@@ -250,12 +250,12 @@
 
 <h3 id="general-functions">General functions</h3>
 <p>The big difference between R and other programming languages is that functions in R are designed to be applied to variables rather than to individual values to avoid loops e.g. if we want to log transform a whole dataset we can do this using a single operation:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; v &lt;- c(1,10,100,1000,10000)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; v &lt;- c(1,10,100,1000,10000)
 &gt; log10(v)
 [1] 0 1 2 3 4
 </code></pre></div></div>
 <p>The log10() function is written in such a way that it can be applied on a vector. This is true for all functions and operators in R:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; v - 1
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; v - 1
 [1] 0     9    99   999  9999
 </code></pre></div></div>
 <p>R has built-in functions for virtually any standard mathematical task.</p>
@@ -264,7 +264,7 @@
 
 <p>Arithmetic operators can be used on variables. Provided that the variables have the same dimensions, you can do element-wise addition, subtraction, multiplication and division of two vectors or tables. Element-wise means that the calculation is performed on the equivalent positions between the two variables: first element + first element, second element + second element etc.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; v1&lt;-c(1,2,3)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; v1&lt;-c(1,2,3)
 &gt; v2&lt;-c(4,5,6)
 &gt; z&lt;-v1+v2
 &gt; z
@@ -273,7 +273,7 @@
 
 <p>If you perform operations on vectors with different lengths (not recommended) then the vector with the shorter length is recycled to the length of the longer vector so that the first element of the shorter vector is appended to the end of that vector (a way of faking that it is of equal length to the longer vector) and so forth. You will get a warning, but R does let you perform the operation:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; x1 &lt;- c(1,2,3)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; x1 &lt;- c(1,2,3)
 &gt; x2 &lt;- c(3,4)
 &gt; x3 &lt;- x1 + x2
 Warning message: 
@@ -299,7 +299,7 @@ In x1 + x2:
         <details>
           <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
-          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> log.act &lt;- (log2(Drug_study$activity))
+          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> log.act &lt;- (log2(Drug_study$activity))
  round(log.act)
 </code></pre></div>          </div>
         </details>
@@ -321,7 +321,7 @@ In x1 + x2:
         <details>
           <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
-          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> v &lt;- newVector + threes
+          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> v &lt;- newVector + threes
  v
  x2 &lt;- c(3,1)
  newVector + x2 
@@ -345,7 +345,7 @@ In x1 + x2:
           <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
 
-          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> dens.fl &lt;- genomeSize$size / genomeSize$geneCount
+          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> dens.fl &lt;- genomeSize$size / genomeSize$geneCount
  genomeSize$geneDensity &lt;- round(dens.fl)
 </code></pre></div>          </div>
         </details>
@@ -356,7 +356,7 @@ In x1 + x2:
 </blockquote>
 
 <p>Some functions only work on vectors. For instance sort() will sort data from smallest to largest (arguments allow other ordering) and order() returns the indices of the sorted elements:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>x
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>x
 [1] 1 3 11 1 7
 sort(x)
 [1] 1 1 3 7 11
@@ -365,13 +365,13 @@ order(x)
 </code></pre></div></div>
 <p>In the sorted vector the first element is also the first element of the original vector, the second element of the sorted vector has index 4 in the original vector etc.
 To sort a data frame use order() inside square brackets:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mtcars[order(mtcars$mpg),]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mtcars[order(mtcars$mpg),]
 </code></pre></div></div>
 <p>To sort on two columns (first on mpg, then on cyl):</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mtcars[order(mtcars$mpg,mtcars$wt),]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mtcars[order(mtcars$mpg,mtcars$wt),]
 </code></pre></div></div>
 <p>To sort in descending order place a minus sign in front of the variable:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mtcars[order(mtcars$mpg,-mtcars$wt),]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mtcars[order(mtcars$mpg,-mtcars$wt),]
 </code></pre></div></div>
 
 <p>Select the <strong>labels</strong> of a vector or table using names(). For tables rownames() and colnames() can access or set the either row or the column labels. Both functions will not work on vectors.</p>
@@ -385,7 +385,7 @@ To sort a data frame use order() inside square brackets:</p>
 </ul>
 
 <p>On data frames it will not do an element-wise comparison but a column-wise comparison:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>match(D1,D2) 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>match(D1,D2) 
 </code></pre></div></div>
 <p>will return a vector with length equal to the number of columns in D1 containing:</p>
 <ul>
@@ -402,17 +402,17 @@ To sort a data frame use order() inside square brackets:</p>
 </ul>
 
 <p>Use merge() to join two data frames. Let?s say D1 has a column A with values. Data frame D2 has the same values stored in column A. Merge the two data frames on the basis of this common column:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>newD &lt;- merge(D1,D2)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>newD &lt;- merge(D1,D2)
 </code></pre></div></div>
 <p>If (some of) the values of the common column differ, merge() will ignore these values. Use argument <em>all.x</em> to add an extra row for every different value to the resulting data frame. All rows where the values of the two data frames don?t correspond, will be filled up with NA values.</p>
 
 <p>Most functions operate on numbers but there are also functions for manipulating text, e.g.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>paste(x,y,sep=" ") 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>paste(x,y,sep=" ") 
 </code></pre></div></div>
 <p>concatenates two strings x and y (glues them together into one string) separating them by the character defined by <em>sep</em>. Arguments <em>x</em> and <em>y</em> can be strings but they can also be vectors. If they are vectors, they are concatenated element-wise to give a character vector result.</p>
 
 <p>Furthermore there are also functions specific for factors. For instance to select the names of the categories (levels) of a factor use levels() and table() to create a contingency table.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> table(cell_phone_data$own, cell_phone_data$grade)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> table(cell_phone_data$own, cell_phone_data$grade)
 </code></pre></div></div>
 
 <figure id="figure-2"><img src="../../images/Rtable_function.png" alt="table_function" /><figcaption><span class="figcaption-prefix">Figure 2:</span> Example of a contingency table</figcaption></figure>
@@ -430,7 +430,7 @@ To sort a data frame use order() inside square brackets:</p>
           <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
 
-          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Plant_study$repeated &lt;- c(1,6,6,5,4)
+          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Plant_study$repeated &lt;- c(1,6,6,5,4)
  names(Plant_study) &lt;- c("Day","Infected","Repeat")
  ?paste
  Plant_study$Day &lt;- paste(Plant_study$Day,"day",sep="")
@@ -442,7 +442,7 @@ To sort a data frame use order() inside square brackets:</p>
         <h3 id="question-question"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
         <p>What will happen when you run this code ?</p>
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> paste(Plant_study[,"Day"],"day",sep="")
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> paste(Plant_study[,"Day"],"day",sep="")
 </code></pre></div>        </div>
       </blockquote>
     </li>
@@ -461,7 +461,7 @@ To sort a data frame use order() inside square brackets:</p>
           <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
 
-          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> colnames(Drug_study)[2] &lt;- "drug"
+          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> colnames(Drug_study)[2] &lt;- "drug"
  nrow(Drug_study)
  Drug_study[order(Drug_study$activity,decreasing=TRUE),]
 </code></pre></div>          </div>
@@ -472,28 +472,28 @@ To sort a data frame use order() inside square brackets:</p>
         <h3 id="question-question-1"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
         <p>What happens when you run this code ?</p>
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> colnames(Drug_study$ID) &lt;- "id"
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> colnames(Drug_study$ID) &lt;- "id"
 </code></pre></div>        </div>
       </blockquote>
       <blockquote class="question">
         <h3 id="question-question-2"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
         <p>What happens when you run this code ?</p>
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> colnames(Drug_study[2]) &lt;- "blabla"
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> colnames(Drug_study[2]) &lt;- "blabla"
 </code></pre></div>        </div>
       </blockquote>
       <blockquote class="question">
         <h3 id="question-question-3"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
         <p>What will happen when you run this code ?</p>
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Drug_study[order(Drug_study$activity),"ID"]
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Drug_study[order(Drug_study$activity),"ID"]
 </code></pre></div>        </div>
       </blockquote>
       <blockquote class="question">
         <h3 id="question-question-4"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
         <p>What will happen when you run this code ?</p>
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> n &lt;- order(Drug_study$activity,decreasing=TRUE)
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> n &lt;- order(Drug_study$activity,decreasing=TRUE)
  Drug_study[n,]
 </code></pre></div>        </div>
       </blockquote>
@@ -513,7 +513,7 @@ To sort a data frame use order() inside square brackets:</p>
           <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
 
-          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> sort(z)
+          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> sort(z)
  order(z)
  length(z) 
 </code></pre></div>          </div>
@@ -533,7 +533,7 @@ To sort a data frame use order() inside square brackets:</p>
       <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
 
-      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> d &lt;- c(3,4,7)
+      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> d &lt;- c(3,4,7)
  ab &lt;- rbind(ab,d)
 </code></pre></div>      </div>
     </details>
@@ -554,7 +554,7 @@ To sort a data frame use order() inside square brackets:</p>
           <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
 
-          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> dim(CO2)
+          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> dim(CO2)
  levels(CO2$Treatment)
  table(CO2$Type,CO2$Treatment)
  length(unique(CO2$Plant))
@@ -584,7 +584,7 @@ To sort a data frame use order() inside square brackets:</p>
         <details>
           <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
-          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> head(mtcars)
+          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> head(mtcars)
  nrow(subset(mtcars,gear==6))!=0
  nrow(subset(mtcars,gear==3))
 </code></pre></div>          </div>
@@ -597,13 +597,13 @@ To sort a data frame use order() inside square brackets:</p>
 
 <h3 id="functions-for-finding-indices-of-specific-elements">Functions for finding indices of specific elements</h3>
 <p>There are functions that help you locate specific values, the which functions:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>which.min(x)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>which.min(x)
 which.max(x)
 </code></pre></div></div>
 <p>return the location (index) of the minimum, maximum or a specific value of a vector x. So max() will return the highest value in the data, which.max() will return the index of the highest value in the data.</p>
 
 <p>The argument of which() is a logical expression and which() will return the indices of the elements for which the logical expression is TRUE.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>x &lt;- c(1,5,8,4,6)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>x &lt;- c(1,5,8,4,6)
 x
 # [1] 1 5 8 4 6
 which(x == 5)
@@ -621,7 +621,7 @@ which(x != 5)
       <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
 
-      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Drug_study[which.max(Drug_study$activity),]
+      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Drug_study[which.max(Drug_study$activity),]
  
 </code></pre></div>      </div>
     </details>
@@ -631,7 +631,7 @@ which(x != 5)
     <h3 class="question" id="question-question-5"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
     <p>What will happen when you run this code ?</p>
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> n &lt;- which.max(Drug_study$activity)
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> n &lt;- which.max(Drug_study$activity)
  Drug_study[n,]
 </code></pre></div>    </div>
   </blockquote>
@@ -648,7 +648,7 @@ which(x != 5)
           <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
 
-          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> which(names(mtcars)=="cyl")
+          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> which(names(mtcars)=="cyl")
  C4m &lt;- mtcars[order(mtcars$cyl,mtcars$mpg),][1,]
  C6 &lt;- subset(mtcars,cyl==6)
  C6m &lt;- C6[which.min(C6$mpg),]
@@ -664,7 +664,7 @@ which(x != 5)
 
 <h3 id="checking-and-converting-types-of-variables">Checking and converting types of variables</h3>
 <p>To check the data structure of an object you can use str() and the generic class() function:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class(c(10,12,30))
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class(c(10,12,30))
 # [1] "numeric"
 class(c("alana","britt","chris"))
 # [1] "character"
@@ -675,21 +675,21 @@ class(c(TRUE,TRUE,FALSE))
 <p>You can also use the specific is. functions e.g. is.numeric(), is.character(), is.Date(), is.vector(), is.matrix(), is.data.frame() etc.</p>
 
 <p>The is.na(x) function returns TRUE when an element of x is missing:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>x &lt;- c(1,2,3,NA)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>x &lt;- c(1,2,3,NA)
 is.na(x)
 # [1] FALSE FALSE FALSE TRUE
 </code></pre></div></div>
 <p>To recode values to missing values you don?t need is.na(). Select the rows that contain the value you want to recode, e.g. 99, and change the value using an assignment:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>data$v1[data$v1==99] &lt;- NA
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>data$v1[data$v1==99] &lt;- NA
 </code></pre></div></div>
 <p>To exclude missing values you can use is.na() but there are alternatives. The problem with missing values is that when you apply arithmetic functions on variables that contain missing values they will return missing values and you will have no result. To circumvent this problem many functions have the <em>na.rm</em> argument. If you set <em>na.rm=TRUE</em> missing values are deleted before calculations are done.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mean(x) 			
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mean(x) 			
 # NA
 mean(x,na.rm=TRUE) 	
 # 2
 </code></pre></div></div>
 <p>The function na.omit() allows to create a new vector without missing values. If you apply this function on a data frame it will remove complete rows that contain one or more NA-values.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>newdata &lt;- na.omit(x)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>newdata &lt;- na.omit(x)
 </code></pre></div></div>
 <p>You can convert the data type of an object by using the as. functions e.g. as.numeric(), as.character(), as.Date(), as.vector(), as.matrix(),
 as.data.frame() etc.</p>
@@ -719,7 +719,7 @@ as.data.frame() etc.</p>
               <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
 
-              <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Plant_study$Days &lt;- as.Date(c("2019-01-09","2019-01-10","2019-01-11","2019-01-12","2019-01-13"))
+              <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Plant_study$Days &lt;- as.Date(c("2019-01-09","2019-01-10","2019-01-11","2019-01-12","2019-01-13"))
  class(Plant_study)
  PS &lt;- as.matrix(Plant_study)
  PS
@@ -745,7 +745,7 @@ as.data.frame() etc.</p>
           <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
 
-          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> class(Drug_study[,2])
+          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> class(Drug_study[,2])
  v &lt;- as.vector(Drug_study[,2])
  v
 </code></pre></div>          </div>
@@ -770,7 +770,7 @@ as.data.frame() etc.</p>
           <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
 
-          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> x &lt;- c(1,2,3,NA)
+          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> x &lt;- c(1,2,3,NA)
  x*2
  is.na(x[2])
  x[!is.na(x)]
@@ -795,7 +795,7 @@ as.data.frame() etc.</p>
           <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
 
-          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> is.vector(z)
+          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> is.vector(z)
  is.data.frame(z) 
  is.character(z)
  is.numeric(z)
@@ -820,7 +820,7 @@ as.data.frame() etc.</p>
           <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
 
-          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> words &lt;- c("Hello","Hi")
+          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> words &lt;- c("Hello","Hi")
  as.numeric(words) 
 </code></pre></div>          </div>
         </details>

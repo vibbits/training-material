@@ -246,10 +246,10 @@
 
 <p>So far we’ve seen variables where you essentially assign a value to a name that you can use in the program. It is also possible to assign groups of values to a name, in Python these are called <em>lists</em> and <em>tuples</em> - variables that contain multiple values in a fixed order. Python also has <em>sets</em>, which are also variables that contain multiple values, but in no particular order. In <a href="8_Dictionaries.ipynb">section 8</a> we will also discuss dictionaries. By means of a brief summary, already in this stage; there are four collection data types in Python:</p>
 <ul>
-  <li><code class="highlighter-rouge">List</code> is a collection which is ordered and changeable. Allows duplicate members. Use square brackets [] for lists.</li>
-  <li><code class="highlighter-rouge">Tuple</code> is a collection which is ordered and unchangeable. Allows duplicate members. Use normal brackets () for tuples.</li>
-  <li><code class="highlighter-rouge">Set</code> is a collection which is unordered and unindexed. No duplicate members. Use curly brackets {} for sets.</li>
-  <li><code class="highlighter-rouge">Dictionary</code> is a collection which is unordered, changeable and indexed. No duplicate members. Use curly brackets {} for dictionaries (see <a href="8_Dictionaries.ipynb">section 8</a>).</li>
+  <li><code class="language-plaintext highlighter-rouge">List</code> is a collection which is ordered and changeable. Allows duplicate members. Use square brackets [] for lists.</li>
+  <li><code class="language-plaintext highlighter-rouge">Tuple</code> is a collection which is ordered and unchangeable. Allows duplicate members. Use normal brackets () for tuples.</li>
+  <li><code class="language-plaintext highlighter-rouge">Set</code> is a collection which is unordered and unindexed. No duplicate members. Use curly brackets {} for sets.</li>
+  <li><code class="language-plaintext highlighter-rouge">Dictionary</code> is a collection which is unordered, changeable and indexed. No duplicate members. Use curly brackets {} for dictionaries (see <a href="8_Dictionaries.ipynb">section 8</a>).</li>
 </ul>
 
 <p>They are useful in different circumstances and each data-type has its own advantage. On a small-case example this might not be noticable, however on a larger scale using the right data-type can save you a lot of time.</p>
@@ -262,7 +262,7 @@
 <span class="n">myList</span>
 </code></pre></div></div>
 
-<p>You can also use the <code class="highlighter-rouge">range()</code> function. Try this:</p>
+<p>You can also use the <code class="language-plaintext highlighter-rouge">range()</code> function. Try this:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myList</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
 <span class="n">myList</span>
@@ -284,26 +284,26 @@
 <ul>
   <li>Add elements
     <ul>
-      <li><code class="highlighter-rouge">append()</code> to append an item to the end of the list</li>
-      <li><code class="highlighter-rouge">insert()</code> to add an item at the specified index</li>
-      <li><code class="highlighter-rouge">extend()</code> to extend an item</li>
+      <li><code class="language-plaintext highlighter-rouge">append()</code> to append an item to the end of the list</li>
+      <li><code class="language-plaintext highlighter-rouge">insert()</code> to add an item at the specified index</li>
+      <li><code class="language-plaintext highlighter-rouge">extend()</code> to extend an item</li>
     </ul>
   </li>
   <li>Delete elements
     <ul>
-      <li><code class="highlighter-rouge">remove()</code> to remove the specified item</li>
-      <li><code class="highlighter-rouge">pop()</code> to remove the specified index (or the last item if index is not specified)</li>
-      <li><code class="highlighter-rouge">del</code> keyword removes the specified index</li>
-      <li><code class="highlighter-rouge">clear()</code> method empties the list</li>
+      <li><code class="language-plaintext highlighter-rouge">remove()</code> to remove the specified item</li>
+      <li><code class="language-plaintext highlighter-rouge">pop()</code> to remove the specified index (or the last item if index is not specified)</li>
+      <li><code class="language-plaintext highlighter-rouge">del</code> keyword removes the specified index</li>
+      <li><code class="language-plaintext highlighter-rouge">clear()</code> method empties the list</li>
     </ul>
   </li>
   <li>Sorting:
     <ul>
-      <li><code class="highlighter-rouge">sort()</code> will sort the list in an ordered way</li>
-      <li><code class="highlighter-rouge">reverse()</code> will reverse the order of the list</li>
+      <li><code class="language-plaintext highlighter-rouge">sort()</code> will sort the list in an ordered way</li>
+      <li><code class="language-plaintext highlighter-rouge">reverse()</code> will reverse the order of the list</li>
     </ul>
   </li>
-  <li>Copy of a list with the <code class="highlighter-rouge">copy()</code> method</li>
+  <li>Copy of a list with the <code class="language-plaintext highlighter-rouge">copy()</code> method</li>
 </ul>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myList</span> <span class="o">=</span> <span class="p">[]</span>             <span class="c1"># Create an empty list
@@ -355,8 +355,8 @@
 
 <p>There are two other methods you can use on lists:</p>
 <ul>
-  <li><code class="highlighter-rouge">index()</code> returns the index of the first element with the specified value</li>
-  <li><code class="highlighter-rouge">count()</code> returns the number of elements with the specified value</li>
+  <li><code class="language-plaintext highlighter-rouge">index()</code> returns the index of the first element with the specified value</li>
+  <li><code class="language-plaintext highlighter-rouge">count()</code> returns the number of elements with the specified value</li>
 </ul>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myList</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">15</span><span class="p">))</span>
@@ -419,7 +419,7 @@
 </span><span class="n">myWrongTuple</span>
 </code></pre></div></div>
 
-<p>A tuple is indicated by round brackets <strong>( )</strong>. You can interconvert between lists and tuples by using <code class="highlighter-rouge">list()</code> and <code class="highlighter-rouge">tuple()</code>:</p>
+<p>A tuple is indicated by round brackets <strong>( )</strong>. You can interconvert between lists and tuples by using <code class="language-plaintext highlighter-rouge">list()</code> and <code class="language-plaintext highlighter-rouge">tuple()</code>:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myTuple</span> <span class="o">=</span> <span class="p">(</span><span class="s">"A"</span><span class="p">,</span><span class="s">"B"</span><span class="p">,</span><span class="s">"C"</span><span class="p">,</span><span class="s">"D"</span><span class="p">,</span><span class="s">"E"</span><span class="p">,</span><span class="s">"F"</span><span class="p">)</span>
 <span class="n">myList</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
@@ -431,7 +431,7 @@
 <span class="k">print</span><span class="p">(</span><span class="s">"{} and {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">myTuple</span><span class="p">,</span> <span class="n">myNewList</span><span class="p">))</span>
 </code></pre></div></div>
 
-<p>You can find out the length (number of elements) in a list or tuple with <code class="highlighter-rouge">len()</code>:</p>
+<p>You can find out the length (number of elements) in a list or tuple with <code class="language-plaintext highlighter-rouge">len()</code>:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">myTuple</span> <span class="o">=</span> <span class="p">(</span><span class="s">"A"</span><span class="p">,</span><span class="s">"B"</span><span class="p">,</span><span class="s">"C"</span><span class="p">,</span><span class="s">"D"</span><span class="p">,</span><span class="s">"E"</span><span class="p">,</span><span class="s">"F"</span><span class="p">)</span>
 <span class="n">myTupleLength</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">myTuple</span><span class="p">)</span>
@@ -445,7 +445,7 @@
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-exercise-531"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Exercise 5.3.1</h3>
 
-  <p>Start with the tuple <code class="highlighter-rouge">('a','B','c','D','e','F')</code>, sort it, take the fourth value out, and print the result.</p>
+  <p>Start with the tuple <code class="language-plaintext highlighter-rouge">('a','B','c','D','e','F')</code>, sort it, take the fourth value out, and print the result.</p>
 
   <blockquote>
     <details>
@@ -503,7 +503,7 @@
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">myString</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="s">' is '</span><span class="p">,</span><span class="s">' was '</span><span class="p">))</span>  <span class="c1"># Replace ' is ' by ' was '. Spaces are necessary, otherwise the 'is' in 'This' will be replaced!
 </span></code></pre></div></div>
 
-<p>A list with all string methods and a full description can be found in the <a href="https://docs.python.org/3/library/stdtypes.html#string-methods">Python documentation</a>, or simply type <code class="highlighter-rouge">dir(myString)</code></p>
+<p>A list with all string methods and a full description can be found in the <a href="https://docs.python.org/3/library/stdtypes.html#string-methods">Python documentation</a>, or simply type <code class="language-plaintext highlighter-rouge">dir(myString)</code></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">dir</span><span class="p">(</span><span class="n">myString</span><span class="p">)</span>
 </code></pre></div></div>

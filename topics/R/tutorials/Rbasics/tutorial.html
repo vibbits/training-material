@@ -338,7 +338,7 @@ Once it is saved the asterisk disappears and the name becomes black.</p>
 <h3 id="the-console">The console</h3>
 <p>The  &gt; symbol in the console shows that R is ready to execute code 
 e.g. type 10+3 and press return</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; 10 + 3
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; 10 + 3
 [1] 13
 &gt;
 </code></pre></div></div>
@@ -353,7 +353,7 @@ e.g. type 10+3 and press return</p>
 <h3 id="environment">Environment</h3>
 <p>A list of all variables (numbers, vectors, plots, models…) that have been imported or generated. The variables that R creates and manipulates are called <em>objects</em>. 
 To remove all variables that have been generated in the RStudio session:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; rm(list=ls())
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; rm(list=ls())
 </code></pre></div></div>
 <p>ls() lists the objects in the current workspace and rm() removes them.</p>
 
@@ -369,10 +369,10 @@ To remove all variables that have been generated in the RStudio session:</p>
 <h3 id="changing-the-working-directory">Changing the working directory</h3>
 <p>Often you want to work in the folder that contains the data. In that case you can change the working directory. 
  Check which folder R is using as a working directory:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; getwd()
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; getwd()
 </code></pre></div></div>
 <p>Change the working directory:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; setwd("D:/trainingen/zelfgegeven/R/")
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; setwd("D:/trainingen/zelfgegeven/R/")
 </code></pre></div></div>
 
 <blockquote class="comment">
@@ -390,7 +390,7 @@ To remove all variables that have been generated in the RStudio session:</p>
 
   <ol>
     <li>Download the demo script for this lesson and open it in RStudio
-<a href="http://data.bits.vib.be/pub/trainingen/RIntro/Demo_1.R"><code class="highlighter-rouge">Demo_1.R</code></a></li>
+<a href="http://data.bits.vib.be/pub/trainingen/RIntro/Demo_1.R"><code class="language-plaintext highlighter-rouge">Demo_1.R</code></a></li>
     <li>From the demo script run the <strong>Set working directory</strong> section</li>
   </ol>
 </blockquote>
@@ -402,7 +402,7 @@ To remove all variables that have been generated in the RStudio session:</p>
 </blockquote>
 
 <p>To list the files in the working directory:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; list.files() 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; list.files() 
 </code></pre></div></div>
 
 <h3 id="plots">Plots</h3>
@@ -413,13 +413,13 @@ To save a plot click the <strong>Export</strong> button: <img src="../../images/
 <p>R is popular because of the enormous diversity of packages. R is essentially a modular environment and you install and load the modules (packages) you need. Packages are available at the <a href="https://cran.r-project.org/web/packages/available_packages_by_name.html">CRAN</a> and <a href="http://www.bioconductor.org/packages/release/BiocViews.html">Bioconductor</a> websites. 
 Installing a package means that a copy of the package is downloaded and unzipped on your computer. If you want to know in what directory R stores the packages, type:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;.libPaths()
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;.libPaths()
 [1] "D:/R-3.6.0/library"
 &gt;
 </code></pre></div></div>
 <p>to see the default path where R stores packages. If you want to change this folder use the <em>destdir</em> argument of the install.packages() function:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; install.packages("car",destdir="C:/Users/Janick/R")
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; install.packages("car",destdir="C:/Users/Janick/R")
 </code></pre></div></div>
 <p>You only need to install a package once, as it is saved on your computer.</p>
 
@@ -434,31 +434,31 @@ When you have made changes to the right side of the Rstudio user interface (pack
 <h3 id="installing-bioconductor-packages">Installing Bioconductor packages</h3>
 <p>Bioconductor is a set of R packages that provides tools for the analysis of high-throughput data, e.g. NGS data.
 Make sure you have the BiocManager package installed:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; if (!requireNamespace("BiocManager")) 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; if (!requireNamespace("BiocManager")) 
 install.packages("BiocManager") 
 </code></pre></div></div>
 <p>The if statement is checking if you already have the BiocManager package installed, if not then install.packages() will install it. BiocManager is a package to install and update Bioconductor packages. Once BiocManager is installed, you can install the Bioconductor core packages:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; BiocManager::install()
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; BiocManager::install()
 </code></pre></div></div>
 <p>To install additional Bioconductor packages e.g. <strong>GenomicFeatures</strong> you type the following command:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; BiocManager::install("GenomicFeatures")
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; BiocManager::install("GenomicFeatures")
 </code></pre></div></div>
 <p>Overview of all available Bioconductor <a href="https://www.bioconductor.org/packages/release/BiocViews.html#___Software">packages</a> and <a href="https://www.bioconductor.org/packages/release/BiocViews.html#___Workflow">workflows</a>.</p>
 
 <h3 id="installing-packages-from-github">Installing packages from GitHub</h3>
 <p>Git is a free and open source version control system. Version control helps software developers manage changes to code by keeping track of every change in a special database. If a mistake is made, the developer can turn back the clock and compare earlier versions of the code to fix the mistake. 
 There is an install_github() function in the devtools packageto install R packages hosted on GitHub:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; install.packages("devtools") 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; install.packages("devtools") 
 &gt; library(devtools)
 &gt; devtools::install_github("statOmics/MSqRob&amp;copy;MSqRob0.7.6")
 </code></pre></div></div>
 
 <h3 id="loading-packages">Loading packages</h3>
 <p>Each time you want to use a package you have to load it (activate its functions). Loading a package is done by selecting it in the list of installed packages or by typing the following command:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; library("name_of_package")
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; library("name_of_package")
 </code></pre></div></div>
 <p>If R responds:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error in library(car) : there is no package called 'car'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error in library(car) : there is no package called 'car'
 </code></pre></div></div>
 <p>or similar, it means that the car package needs to be installed first.</p>
 
@@ -497,10 +497,10 @@ Additional useful links:</p>
 
 <h3 id="character-data">Character data</h3>
 <p>Character data like “green”, “cytoplasm” must be typed in between <strong>single or double quotes</strong>:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; x &lt;- "Hello"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; x &lt;- "Hello"
 </code></pre></div></div>
 <p>To use quotes in the text escape the quotes:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; x &lt;- "say \"Hello\""
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; x &lt;- "say \"Hello\""
 </code></pre></div></div>
 <p>Names of packages, files, paths on your computer, urls are all text data and need to be typed in between quotes. Names of variables do not.</p>
 
@@ -530,7 +530,7 @@ Impossible values (e.g., dividing by zero) are represented by the symbol NaN (No
 
 <p>Logical expressions may be combined using logical operators. The NOT operator (!) can be used to assess whether something is NOT the case.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; x = 1
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; x = 1
 &gt; y = 2   
 &gt; z = x &gt; y      		is x larger than y? 
 &gt; z              			FALSE 
@@ -576,23 +576,23 @@ Impossible values (e.g., dividing by zero) are represented by the symbol NaN (No
 <p>A variable allows you to save a value or an object (a plot, a table, a list of values) in R. 
 A value or object is assigned to a variable by the assignment operator <strong>&lt;-</strong>
 It consists of the two characters &lt; (less than) and - (minus):</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; v &lt;- 4	now the value of variable v is 4
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; v &lt;- 4	now the value of variable v is 4
 </code></pre></div></div>
 <p>In most contexts the = operator can be used as an alternative:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; v &lt;- 4 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; v &lt;- 4 
 &gt; v = 4 
 give the same result: a variable called v with value 4
 </code></pre></div></div>
 <p>After R has performed the assignment you will not see any output, as the value 4 has been saved to variable v. You can access and use this variable at any time and print its value in the console by running its name:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; v
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; v
 [1] 4
 </code></pre></div></div>
 <p>You can now use v in expressions instead of 4</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; v * v
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; v * v
 [1] 16
 </code></pre></div></div>
 <p>You can re-assign a new value to a variable at any time:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; v &lt;- "a cool variable"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; v &lt;- "a cool variable"
 &gt; v
 [1] "a cool variable"
 </code></pre></div></div>
@@ -609,7 +609,7 @@ There are lots of built in functions in R and you can also write your own. Even 
 Calling a function in R has a certain syntax:
 <strong>output &lt;- function(list of arguments)</strong> 
 For example:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; p &lt;-  ggplot(mtcars,(aes(wt,mpg))
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; p &lt;-  ggplot(mtcars,(aes(wt,mpg))
 </code></pre></div></div>
 <p>In this example <strong>ggplot()</strong> is the <strong>function</strong>. The brackets () are always needed. Before a function can start the actions and calculations  it encodes, it needs prior information: <strong>input</strong> data and parameter settings. These are called the <strong>arguments</strong> of the function. In this example the arguments are:</p>
 <ul>
@@ -618,7 +618,7 @@ For example:</p>
 </ul>
 
 <p>To see the arguments of a function you can use <strong>?</strong> or <strong>help()</strong>:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; ? ggplot 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; ? ggplot 
 &gt; help(ggplot)
 </code></pre></div></div>
 <p>This opens the documentation of the function in the <strong>Help</strong> tab including an overview of the arguments of the function. At the bottom of the documentation page you find examples on how to use the function.
@@ -643,7 +643,7 @@ The function generates a plot so the plot <strong>p</strong> is the <strong>outp
           <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
 
-          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> patients &lt;- 42
+          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> patients &lt;- 42
  patients/2
  patients_gr2 &lt;- 24
  total_patients &lt;- patients + patients_gr2
@@ -656,7 +656,7 @@ The function generates a plot so the plot <strong>p</strong> is the <strong>outp
         <h3 id="question-question-1"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
         <p>What will happen when you run this code ?</p>
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> "patients" &lt;- 42
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> "patients" &lt;- 42
  "patients"/2
 </code></pre></div>        </div>
       </blockquote>
@@ -673,7 +673,7 @@ The function generates a plot so the plot <strong>p</strong> is the <strong>outp
       <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
 
-      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ?mean
+      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ?mean
 </code></pre></div>      </div>
     </details>
   </blockquote>
@@ -682,7 +682,7 @@ The function generates a plot so the plot <strong>p</strong> is the <strong>outp
 
 <p>The mean() function has many arguments and each argument has a default value. To use the default values simply do not specify these arguments in the function call. You only have to specify the arguments for which you want to use a value other than the default.
 To show the <strong>examples</strong> section instead of the full documentation page:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; example(min) 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; example(min) 
 </code></pre></div></div>
 
 <blockquote class="notranslate hands_on">
@@ -693,7 +693,7 @@ To show the <strong>examples</strong> section instead of the full documentation 
     <details>
       <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> solution: answer
 </summary>
-      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> sum(patients,patients_gr2)
+      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> sum(patients,patients_gr2)
 </code></pre></div>      </div>
     </details>
   </blockquote>
@@ -716,30 +716,30 @@ To show the <strong>examples</strong> section instead of the full documentation 
     <h3 id="question-question-3"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
     <p>Will the code below work ?</p>
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> sum (patients,patients_gr2)
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> sum (patients,patients_gr2)
 </code></pre></div>    </div>
   </blockquote>
   <blockquote class="question">
     <h3 id="question-question-4"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
 
     <p>Will the code below work ?</p>
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> sum ( patients , patients_gr2 )
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> sum ( patients , patients_gr2 )
 </code></pre></div>    </div>
   </blockquote>
 </blockquote>
 
-<p>Sometimes functions from different packages have the same name. In that case use <strong>package::function</strong> to specify the package you want to use, e.g. <code class="highlighter-rouge">ggplot2::ggplot()</code> where <code class="highlighter-rouge">ggplot2</code> is the name of the package and <code class="highlighter-rouge">ggplot()</code> is the name of the function.</p>
+<p>Sometimes functions from different packages have the same name. In that case use <strong>package::function</strong> to specify the package you want to use, e.g. <code class="language-plaintext highlighter-rouge">ggplot2::ggplot()</code> where <code class="language-plaintext highlighter-rouge">ggplot2</code> is the name of the package and <code class="language-plaintext highlighter-rouge">ggplot()</code> is the name of the function.</p>
 
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-hands-on-extra-exercise-3d"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Extra exercise 3d</h3>
 
-  <p>Create a variable <code class="highlighter-rouge">patients_gr3</code> with value “twenty” and print the total number of patients</p>
+  <p>Create a variable <code class="language-plaintext highlighter-rouge">patients_gr3</code> with value “twenty” and print the total number of patients</p>
   <blockquote>
     <details>
       <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
 
-      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> patients_gr3 &lt;- "twenty"
+      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> patients_gr3 &lt;- "twenty"
  patients + patients_gr3
 </code></pre></div>      </div>
     </details>
@@ -751,17 +751,17 @@ To show the <strong>examples</strong> section instead of the full documentation 
   <h3 id="hands_on-hands-on-extra-exercise-3e"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Extra exercise 3e</h3>
 
   <ol>
-    <li>Create variable <code class="highlighter-rouge">x</code> with value <code class="highlighter-rouge">5</code></li>
-    <li>Create variable <code class="highlighter-rouge">y</code> with value <code class="highlighter-rouge">2</code></li>
-    <li>Create variable <code class="highlighter-rouge">z</code> as the sum of <code class="highlighter-rouge">x</code> and <code class="highlighter-rouge">y</code> and print the value of <code class="highlighter-rouge">z</code></li>
-    <li>Print <code class="highlighter-rouge">x - y</code></li>
-    <li>Print the product of <code class="highlighter-rouge">x</code> and <code class="highlighter-rouge">y</code> and add <code class="highlighter-rouge">2</code> to it
+    <li>Create variable <code class="language-plaintext highlighter-rouge">x</code> with value <code class="language-plaintext highlighter-rouge">5</code></li>
+    <li>Create variable <code class="language-plaintext highlighter-rouge">y</code> with value <code class="language-plaintext highlighter-rouge">2</code></li>
+    <li>Create variable <code class="language-plaintext highlighter-rouge">z</code> as the sum of <code class="language-plaintext highlighter-rouge">x</code> and <code class="language-plaintext highlighter-rouge">y</code> and print the value of <code class="language-plaintext highlighter-rouge">z</code></li>
+    <li>Print <code class="language-plaintext highlighter-rouge">x - y</code></li>
+    <li>Print the product of <code class="language-plaintext highlighter-rouge">x</code> and <code class="language-plaintext highlighter-rouge">y</code> and add <code class="language-plaintext highlighter-rouge">2</code> to it
       <blockquote>
         <details>
           <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
 
-          <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> x &lt;- 5
+          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> x &lt;- 5
  y &lt;- 2
  z &lt;- x+y
  z
@@ -780,8 +780,8 @@ To show the <strong>examples</strong> section instead of the full documentation 
 
   <p>What is the difference between:</p>
   <ol>
-    <li><code class="highlighter-rouge">correctLogic &lt;- TRUE</code></li>
-    <li><code class="highlighter-rouge">incorrectLogic &lt;- "TRUE"</code></li>
+    <li><code class="language-plaintext highlighter-rouge">correctLogic &lt;- TRUE</code></li>
+    <li><code class="language-plaintext highlighter-rouge">incorrectLogic &lt;- "TRUE"</code></li>
   </ol>
 </blockquote>
 
@@ -790,9 +790,9 @@ To show the <strong>examples</strong> section instead of the full documentation 
 
   <p>Is there a difference between:</p>
   <ol>
-    <li><code class="highlighter-rouge">name &lt;- "Janick"</code></li>
-    <li><code class="highlighter-rouge">name &lt;- 'Janick'</code></li>
-    <li><code class="highlighter-rouge">name &lt;- Janick</code></li>
+    <li><code class="language-plaintext highlighter-rouge">name &lt;- "Janick"</code></li>
+    <li><code class="language-plaintext highlighter-rouge">name &lt;- 'Janick'</code></li>
+    <li><code class="language-plaintext highlighter-rouge">name &lt;- Janick</code></li>
   </ol>
 </blockquote>
 

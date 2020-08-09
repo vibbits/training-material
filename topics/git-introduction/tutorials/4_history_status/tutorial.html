@@ -251,18 +251,18 @@
             <div class="row">
                 <div class="col-md-10" role="main">
                     <h1 id="1-status">1. Status</h1>
-<p>Git can display the state of your working directory and staging area. The command that we’ll use for this is <code class="highlighter-rouge">git status</code> and depending on the situation the output will look differently, but it will always give you some informative status description.</p>
+<p>Git can display the state of your working directory and staging area. The command that we’ll use for this is <code class="language-plaintext highlighter-rouge">git status</code> and depending on the situation the output will look differently, but it will always give you some informative status description.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git status
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git status
 On branch master
 Your branch is up to date with 'origin/master'.
 
 nothing to commit, working tree clean
 </code></pre></div></div>
-<p>The first sentence tells us that we’re on the <code class="highlighter-rouge">master</code> branch, which is the default branch name in Git. More on branches later. The second sentence tells us that our local branch is exactly the same as our origin. This means that all of the files and folders within our local project are identical to the ones in the remote GitHub repo. Lastly, git tells us that there is nothing to commit, which makes sense as we don’t have any changes at the moment.</p>
+<p>The first sentence tells us that we’re on the <code class="language-plaintext highlighter-rouge">master</code> branch, which is the default branch name in Git. More on branches later. The second sentence tells us that our local branch is exactly the same as our origin. This means that all of the files and folders within our local project are identical to the ones in the remote GitHub repo. Lastly, git tells us that there is nothing to commit, which makes sense as we don’t have any changes at the moment.</p>
 
-<p>Let’s make some changes to one of our files again.  Check the status again with <code class="highlighter-rouge">git status</code>.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git status
+<p>Let’s make some changes to one of our files again.  Check the status again with <code class="language-plaintext highlighter-rouge">git status</code>.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git status
 On branch master
 Your branch is up to date with 'origin/master'.
 
@@ -273,15 +273,15 @@ Changes not staged for commit:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 </code></pre></div></div>
-<p>This time, git tells us that there are changes in the file <code class="highlighter-rouge">plot1.R</code> and they are not in the staging area. There are two options here:</p>
+<p>This time, git tells us that there are changes in the file <code class="language-plaintext highlighter-rouge">plot1.R</code> and they are not in the staging area. There are two options here:</p>
 <ul>
-  <li>Use <code class="highlighter-rouge">git add plot1.R</code> to add the changes to the staging area</li>
-  <li>Use <code class="highlighter-rouge">git restore plot1.R</code> to remove the changes from your working directory. This will undo the changes that you made since the last time you committed it.</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">git add plot1.R</code> to add the changes to the staging area</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">git restore plot1.R</code> to remove the changes from your working directory. This will undo the changes that you made since the last time you committed it.</li>
 </ul>
 
-<p>Add the file to the staging area and check the status again with <code class="highlighter-rouge">git status</code></p>
+<p>Add the file to the staging area and check the status again with <code class="language-plaintext highlighter-rouge">git status</code></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git status
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git status
 On branch master
 Your branch is up to date with 'origin/master'.
 
@@ -291,21 +291,21 @@ Changes to be committed:
 </code></pre></div></div>
 <p>The file is now in the staging area and we have two options:</p>
 <ul>
-  <li>Use <code class="highlighter-rouge">git commit -m "some informative text"</code> to commit the changes to the commit repository</li>
-  <li>Use <code class="highlighter-rouge">git restore --staged plot1.R</code> to pull the file back out of the staging area.</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">git commit -m "some informative text"</code> to commit the changes to the commit repository</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">git restore --staged plot1.R</code> to pull the file back out of the staging area.</li>
 </ul>
 
 <p>Let’s do the latter, check the status again and then remove the changes from your working directory.</p>
 
 <h1 id="5-the-history-log">5. The history (log)</h1>
-<p>Besides checking the state of your project with <code class="highlighter-rouge">git status</code>, there is also a possibility to have a look in your commit history. In order to list all your previous commits, enter <code class="highlighter-rouge">git log</code>. The output is a long list containing several blocks like this:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>commit e2d7e9a0b4614a6bee6b3ffd7583237125671dc1
+<p>Besides checking the state of your project with <code class="language-plaintext highlighter-rouge">git status</code>, there is also a possibility to have a look in your commit history. In order to list all your previous commits, enter <code class="language-plaintext highlighter-rouge">git log</code>. The output is a long list containing several blocks like this:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>commit e2d7e9a0b4614a6bee6b3ffd7583237125671dc1
 Author: username &lt;user@xyz.com&gt;
 Date:   Wed Jan 01 01:23:45 2020 +0200
 
     The informative commit message
 </code></pre></div></div>
-<p><code class="highlighter-rouge">git log</code> lists all commits made to a repository in reverse chronological order. Each commit starts with an identifier which is a unique code for each commit. Besides the identifier, the commit’s author and date are given, and the log message Git was given when the commit was created.</p>
+<p><code class="language-plaintext highlighter-rouge">git log</code> lists all commits made to a repository in reverse chronological order. Each commit starts with an identifier which is a unique code for each commit. Besides the identifier, the commit’s author and date are given, and the log message Git was given when the commit was created.</p>
 
 <p>If we have pushed the commits to our Github repository (online) we will see the last commit ID somewhere in the upper right corner. This is a verification for us so we know that the remote repository is up to date with the local repository.</p>
 
@@ -329,19 +329,19 @@ Date:   Wed Jan 01 01:23:45 2020 +0200
 
 <hr />
 
-<p>Git log can be extended with many other parameters. You can also combine it with the <code class="highlighter-rouge">--oneline</code> parameter. One useful combination adds <code class="highlighter-rouge">--graph</code> to display the commit history as a text-based graph and <code class="highlighter-rouge">--decorate</code> to indicate which commits are associated with the current HEAD, the current branch master, or other Git references.</p>
+<p>Git log can be extended with many other parameters. You can also combine it with the <code class="language-plaintext highlighter-rouge">--oneline</code> parameter. One useful combination adds <code class="language-plaintext highlighter-rouge">--graph</code> to display the commit history as a text-based graph and <code class="language-plaintext highlighter-rouge">--decorate</code> to indicate which commits are associated with the current HEAD, the current branch master, or other Git references.</p>
 
 <hr />
 <p>Extra reading:</p>
 
 <p>When the output of git log is too long to fit in your screen, git uses a program to split it into pages of the size of your screen. When this “pager” is called, you will notice that the last line in your screen is a :, instead of your usual prompt.</p>
 <ul>
-  <li>To get out of the pager, press <code class="highlighter-rouge">Q</code>.</li>
-  <li>To move to the next page, press <code class="highlighter-rouge">Spacebar</code>.</li>
-  <li>To search for <code class="highlighter-rouge">some_word</code> in all pages, press <code class="highlighter-rouge">/</code> and type <code class="highlighter-rouge">some_word</code>. Navigate through matches pressing <code class="highlighter-rouge">N</code> (next).</li>
+  <li>To get out of the pager, press <code class="language-plaintext highlighter-rouge">Q</code>.</li>
+  <li>To move to the next page, press <code class="language-plaintext highlighter-rouge">Spacebar</code>.</li>
+  <li>To search for <code class="language-plaintext highlighter-rouge">some_word</code> in all pages, press <code class="language-plaintext highlighter-rouge">/</code> and type <code class="language-plaintext highlighter-rouge">some_word</code>. Navigate through matches pressing <code class="language-plaintext highlighter-rouge">N</code> (next).</li>
 </ul>
 
-<p>To avoid having <code class="highlighter-rouge">git log</code> cover your entire terminal screen, you can limit the number of commits that Git lists by using <code class="highlighter-rouge">-N</code>, where <code class="highlighter-rouge">N</code> is the number of commits that you want to view. For example, if you only want information from the last commit you can use <code class="highlighter-rouge">git log -1</code>. Otherwise, if you want to reduce the quantity of information, using the <code class="highlighter-rouge">git log --oneline</code> command is also a good option.</p>
+<p>To avoid having <code class="language-plaintext highlighter-rouge">git log</code> cover your entire terminal screen, you can limit the number of commits that Git lists by using <code class="language-plaintext highlighter-rouge">-N</code>, where <code class="language-plaintext highlighter-rouge">N</code> is the number of commits that you want to view. For example, if you only want information from the last commit you can use <code class="language-plaintext highlighter-rouge">git log -1</code>. Otherwise, if you want to reduce the quantity of information, using the <code class="language-plaintext highlighter-rouge">git log --oneline</code> command is also a good option.</p>
 
 <hr />
 

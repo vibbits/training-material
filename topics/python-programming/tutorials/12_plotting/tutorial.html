@@ -254,7 +254,7 @@
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
 </code></pre></div></div>
 
-<p><code class="highlighter-rouge">matplotlib.pyplot</code> is a collection of command style functions that make matplotlib work like MATLAB. Each pyplot function makes some change to a figure: e.g., creates a figure, creates a plotting area in a figure, plots some lines in a plotting area, decorates the plot with labels, etc. In matplotlib.pyplot various states are preserved across function calls, so that it keeps track of things like the current figure and plotting area, and the plotting functions are directed to the current subplot.</p>
+<p><code class="language-plaintext highlighter-rouge">matplotlib.pyplot</code> is a collection of command style functions that make matplotlib work like MATLAB. Each pyplot function makes some change to a figure: e.g., creates a figure, creates a plotting area in a figure, plots some lines in a plotting area, decorates the plot with labels, etc. In matplotlib.pyplot various states are preserved across function calls, so that it keeps track of things like the current figure and plotting area, and the plotting functions are directed to the current subplot.</p>
 
 <p>What we first have to do is importing the library of course.</p>
 
@@ -267,7 +267,7 @@
 
 <center><img src="../../images/plotting1.png" /></center>
 
-<p><code class="highlighter-rouge">plot()</code> is a versatile command, and will take an arbitrary number of arguments. For example, to plot x versus y, you can issue the command:</p>
+<p><code class="language-plaintext highlighter-rouge">plot()</code> is a versatile command, and will take an arbitrary number of arguments. For example, to plot x versus y, you can issue the command:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
 <span class="n">y_list</span> <span class="o">=</span> <span class="p">[</span><span class="nb">pow</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x_list</span><span class="p">]</span>

@@ -265,22 +265,22 @@
 
 <p>All this does, is creating this connection, the file has not been read. In order to read in a file, there are a couple of possibilities:</p>
 <ul>
-  <li><code class="highlighter-rouge">readline()</code> - read the first line of the file as one string.</li>
-  <li><code class="highlighter-rouge">readlines()</code> - read all of the lines in the file. Each line is one string. The lines are combined as a list of lines (strings).</li>
-  <li><code class="highlighter-rouge">read()</code> - read the whole file as one string. 
+  <li><code class="language-plaintext highlighter-rouge">readline()</code> - read the first line of the file as one string.</li>
+  <li><code class="language-plaintext highlighter-rouge">readlines()</code> - read all of the lines in the file. Each line is one string. The lines are combined as a list of lines (strings).</li>
+  <li><code class="language-plaintext highlighter-rouge">read()</code> - read the whole file as one string. 
 Each method has its advantage. E.g. if you’re searching for the presence of a word or string in a file, given that the file is not too big, you can use <em>read</em>. If you want to process an enormously big file and from each line you need to extract, process and save the information, than it’s better to read line by line with <em>readline</em> within a for-loop. Try to understand the difference of these methods while you go through this section.</li>
 </ul>
 
-<p>Given the file <code class="highlighter-rouge">readfile.txt</code> in a folder named data:</p>
+<p>Given the file <code class="language-plaintext highlighter-rouge">readfile.txt</code> in a folder named data:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This is the first line.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This is the first line.
 Here is a second one. 
 And there is also a third line. 
 </code></pre></div></div>
 
 <ol>
-  <li>Using <code class="highlighter-rouge">read</code>:
-Note that the three different lines are read in one long string. This is how the <code class="highlighter-rouge">read</code> function works.</li>
+  <li>Using <code class="language-plaintext highlighter-rouge">read</code>:
+Note that the three different lines are read in one long string. This is how the <code class="language-plaintext highlighter-rouge">read</code> function works.</li>
 </ol>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fileHandle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">"data/readfile.txt"</span><span class="p">)</span>  
@@ -291,7 +291,7 @@ Note that the three different lines are read in one long string. This is how the
 </code></pre></div></div>
 
 <ol>
-  <li>Using <code class="highlighter-rouge">readline</code>:
+  <li>Using <code class="language-plaintext highlighter-rouge">readline</code>:
 Readline reads in the following line. It starts with the first one. When you call the method again, it will print the second line. It’s important to understand this as you can exploit this method in a for-loop to access each line separately.</li>
 </ol>
 
@@ -306,7 +306,7 @@ Readline reads in the following line. It starts with the first one. When you cal
 </code></pre></div></div>
 
 <ol>
-  <li>Using <code class="highlighter-rouge">readlines</code>:
+  <li>Using <code class="language-plaintext highlighter-rouge">readlines</code>:
 Instead of reading the lines of a file one by one, you can also do it in one go. As explained above, each line is one string and all of the lines/strings are stored in a list.
     <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fileHandle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">"data/readfile.txt"</span><span class="p">)</span>   
 <span class="n">fileHandle</span><span class="p">.</span><span class="n">readlines</span><span class="p">()</span>
@@ -378,9 +378,9 @@ Instead of reading the lines of a file one by one, you can also do it in one go.
 <p>This method is often used as it does not require you to keep track of the open file in your mind, as well as clearer syntax.</p>
 
 <h2 id="93-writing-a-file">9.3 Writing a file</h2>
-<p>Writing a file is very similar, except that you have to let Python know you are writing this time by adding the <code class="highlighter-rouge">'w'</code> parameter in the <code class="highlighter-rouge">open()</code> function. Actually Python needs two arguments, however it assumes that if you only give one parameter (the file that it has to read), the other one is <code class="highlighter-rouge">'r'</code> which stands for <em>reading</em> mode.</p>
+<p>Writing a file is very similar, except that you have to let Python know you are writing this time by adding the <code class="language-plaintext highlighter-rouge">'w'</code> parameter in the <code class="language-plaintext highlighter-rouge">open()</code> function. Actually Python needs two arguments, however it assumes that if you only give one parameter (the file that it has to read), the other one is <code class="language-plaintext highlighter-rouge">'r'</code> which stands for <em>reading</em> mode.</p>
 
-<p>For the sake of the example, we’re writing a new file and call it <code class="highlighter-rouge">writefile.txt</code>:</p>
+<p>For the sake of the example, we’re writing a new file and call it <code class="language-plaintext highlighter-rouge">writefile.txt</code>:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'data/writefile.txt'</span><span class="p">,</span><span class="s">'w'</span><span class="p">)</span>
 <span class="n">f</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="s">'Now we have a new file </span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
@@ -402,7 +402,7 @@ Instead of reading the lines of a file one by one, you can also do it in one go.
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-exercise-931"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Exercise 9.3.1</h3>
 
-  <p>Read in the file <code class="highlighter-rouge">TestFile.pdb</code>, and write out all lines that contain ‘VAL’ to a new file.</p>
+  <p>Read in the file <code class="language-plaintext highlighter-rouge">TestFile.pdb</code>, and write out all lines that contain ‘VAL’ to a new file.</p>
 
   <blockquote>
     <details>
@@ -487,10 +487,10 @@ Instead of reading the lines of a file one by one, you can also do it in one go.
   <h3 id="hands_on-exercise-941"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Exercise 9.4.1</h3>
 
   <p>Read in the TestFile.pdb file, print out the title of the file, and find all atoms that have coordinates closer than 2 angstrom to the (x,y,z) coordinate (-8.7,-7.7,4.7). Print out the model number, residue number, atom name and atom serial for each; the model is indicated by:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MODEL     1
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MODEL     1
 </code></pre></div>  </div>
   <p>lines, the atom coordinate information is in:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ATOM      1  N   ASP A   1     -10.341  -9.922   9.398  1.00  0.00           N
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ATOM      1  N   ASP A   1     -10.341  -9.922   9.398  1.00  0.00           N
 </code></pre></div>  </div>
   <p>lines, where column 1 is always ATOM, column 2 is the atom serial,  column 3 the atom name, column 4 the residue name, column 5 the chain code, column 6 the residue number, followed by the x, y and z coordinates in angstrom in columns 7, 8 and 9.</p>
 

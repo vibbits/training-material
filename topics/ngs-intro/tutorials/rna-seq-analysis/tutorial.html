@@ -152,7 +152,7 @@ The goal of the analysis is to find DE genes (differentially expressed: genes wi
 </ul>
 
 <p>So all samples come from the same 4 cell lines (<strong>cells</strong>).</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#   run_accession  read_count  samples            cells    treatment
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#   run_accession  read_count  samples            cells    treatment
 1   SRR1039508     22935521    CL1_untreated   CL1   untreated
 2   SRR1039509     21155707    CL1_Dex         CL1   Dex
 3   SRR1039510     22852619    CL1_Alb         CL1   Alb
@@ -292,7 +292,7 @@ Go to the <strong>Overrepresented sequences</strong> module:</p>
 <p>To make it feasible to go through the complete RNA-Seq workflow during the training, we have limited the data set to reads that map to chromosome 22. The data come from a paired-end experiment so we have two files with reads. You can download these limited data sets: [http://data.bits.vib.be/pub/trainingen/NGSIntro/chr22_SRR1039509_1.fastq.gz data_set_1] (first reads of a pair that map to chromosome 22) and [http://data.bits.vib.be/pub/trainingen/NGSIntro/chr22_SRR1039509_2.fastq.gz data_set_2] (second reads of a pair that map to chromosome 22). On the bits laptops, the files are already present in the /home/bits/NGS/RNASeq/ folder.</p>
 
 <p>Remember that the <strong>Overrepresented sequence</strong> module of the FASTQC report showed contamination with the following TruSeq adapter in the first file of sample SRR1039509:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ACACGTCTGAACTCCAGTCACTGACCAATCTCGTATGCCGTCTTCTGCTTGAAAAAAAAAAAA
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ACACGTCTGAACTCCAGTCACTGACCAATCTCGTATGCCGTCTTCTGCTTGAAAAAAAAAAAA
 </code></pre></div></div>
 <p>We will remove this adapter from the file containing the reads that map to chromosome 22.</p>
 
@@ -301,7 +301,7 @@ Go to the <strong>Overrepresented sequences</strong> module:</p>
 <blockquote>
   <p>Make a variable called adapter to hold the sequence of the adapter
 |-</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>adapter=ACACGTCTGAACTCCAGTCACTGACCAATCTCGTATGCCGTCTTCTGCTTGAAAAAAAAAAAA
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>adapter=ACACGTCTGAACTCCAGTCACTGACCAATCTCGTATGCCGTCTTCTGCTTGAAAAAAAAAAAA
 </code></pre></div>  </div>
   <p>Remember to use Shift + Insert to paste in the terminal !</p>
 </blockquote>
@@ -309,7 +309,7 @@ Go to the <strong>Overrepresented sequences</strong> module:</p>
 <blockquote>
   <p>Check the cutadapt option for defining the number of mismatches you allow (= error rate)
 Cutadapt is not a regular bash command but a Python script so it doesn’t have a manual. So to open the cutadapt help type:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cutadapt -h
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cutadapt -h
 </code></pre></div>  </div>
 </blockquote>
 
@@ -322,30 +322,30 @@ In the help file you see that you have multiple options:</p>
 
 <ul>
   <li><strong>-a</strong> to trim adapter sequences at the 3’ end of the reads. In most cases this is the end that is causing the problems: when small RNA fragments are sequenced, the resulting reads can be longer than the RNA fragments. As a results they will contain (parts of) the adapter at their 3’end. In long reads the adapter might even lie within the read:
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MYSEQUEN                         (no adapter contaimination)
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MYSEQUEN                         (no adapter contaimination)
 MYSEQUENCEADAP                   (part of adapter at 3' end)
 MYSEQUENCEADAPTER                (adapter at 3' end)
 MYSEQUENCEADAPTERSOMETHINGELSE   (adapter within the read)
 </code></pre></div>    </div>
     <p>Cutadapt will cut the adapter (part) and all sequence following it resulting in:</p>
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MYSEQUEN
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MYSEQUEN
 MYSEQUENCE
 MYSEQUENCE
 MYSEQUENCE
 </code></pre></div>    </div>
   </li>
   <li><strong>-g</strong> to trim adapter sequences at the 5’ end of the reads. These adapters are expected to appear at the start of a read (where they can be just partially there) or somewhere within the read:
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ADAPTERMYSEQUENCE              (5' end)
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ADAPTERMYSEQUENCE              (5' end)
 DAPTERMYSEQUENCE               (partial)
 TERMYSEQUENCE                  (partial)
 SOMETHINGADAPTERMYSEQUENCE     (within)
 </code></pre></div>    </div>
     <p>In all cases, the adapter itself and the sequence preceding it will be removed, leaving in all examples above:</p>
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MYSEQUENCE
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MYSEQUENCE
 </code></pre></div>    </div>
   </li>
   <li><strong>-b</strong> to trim adapters at the 3’ or 5’ end of the read. If there is at least one base before the adapter, then the adapter is trimmed as a 3’ adapter and the adapter itself and everything following it is removed. Otherwise, the adapter is trimmed as a 5’ adapter and it is removed from the read, but the sequence after it remains:
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Before trimming 	        After trimming 	
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Before trimming 	        After trimming 	
 MYSEQUENCEADAPTERSOMETHING 	MYSEQUENCE 
 MYSEQUENCEADAPTER 	        MYSEQUENCE
 MYSEQUENCEADAP 	                MYSEQUENCE
@@ -394,7 +394,7 @@ Scroll up to the start of the help file to check the usage of cutadapt for paire
 <blockquote>
   <p>Create the variable path
 |-</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>folder=/home/bits/NGS/RNASeq/
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>folder=/home/bits/NGS/RNASeq/
 </code></pre></div>  </div>
 </blockquote>
 
@@ -403,7 +403,7 @@ Scroll up to the start of the help file to check the usage of cutadapt for paire
 <blockquote>
   <p>Clean up the files using the knowledge you have obtained
 |-</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cutadapt -a ${adapter} -q 10 -m 20 -o ${path}chr22_SRR1039509_1t.fastq -p ${path}chr22_SRR1039509_2t.fastq ${path}chr22_SRR1039509_1.fastq.gz ${path}chr22_SRR1039509_2.fastq.gz
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cutadapt -a ${adapter} -q 10 -m 20 -o ${path}chr22_SRR1039509_1t.fastq -p ${path}chr22_SRR1039509_2t.fastq ${path}chr22_SRR1039509_1.fastq.gz ${path}chr22_SRR1039509_2.fastq.gz
 </code></pre></div>  </div>
 </blockquote>
 
@@ -420,13 +420,13 @@ Scroll up to the start of the help file to check the usage of cutadapt for paire
 <p><img src="../../images/CLcutadapt4.png" alt="" /></p>
 
 <p>That is because the sequences from the other end of the fragments contain another adapter:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATTAAAAAAAAAAAAAAAAAA
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATTAAAAAAAAAAAAAAAAAA
 </code></pre></div></div>
 
 <blockquote>
   <p>Redefine the adapter variable
 |-</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>adapter=GTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATTAAAAAAAAAAAAAAAAAA
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>adapter=GTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATTAAAAAAAAAAAAAAAAAA
 </code></pre></div>  </div>
   <p>Remember to use Shift + Insert to paste in the terminal.</p>
 </blockquote>
@@ -434,7 +434,7 @@ Scroll up to the start of the help file to check the usage of cutadapt for paire
 <blockquote>
   <p>Run cutadapt again to remove the other adapter
 Remember to switch the two files now:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cutadapt -a ${adapter} -q 10 -m 20 -o ${path}chr22_SRR1039509_2trim.fastq -p ${path}chr22_SRR1039509_1trim.fastq ${path}chr22_SRR1039509_2t.fastq ${path}chr22_SRR1039509_1t.fastq
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cutadapt -a ${adapter} -q 10 -m 20 -o ${path}chr22_SRR1039509_2trim.fastq -p ${path}chr22_SRR1039509_1trim.fastq ${path}chr22_SRR1039509_2t.fastq ${path}chr22_SRR1039509_1t.fastq
 </code></pre></div>  </div>
   <p>Remember to use the up arrow to go back in the history.</p>
 </blockquote>
@@ -501,7 +501,7 @@ We can download the hash table from the <a href="ftp://ftp.ccb.jhu.edu/pub/data/
 <blockquote>
   <p>Unzip the reference genome file
 To decompress a .zip file you need the <strong>unzip</strong> command:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>unzip hg19.zip
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>unzip hg19.zip
 </code></pre></div>  </div>
 </blockquote>
 
@@ -514,7 +514,7 @@ To decompress a .zip file you need the <strong>unzip</strong> command:</p>
 <blockquote>
   <p>Generate the human reference genome sequence in fasta format.
 The required command simply is:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bowtie2-inspect hg19 &gt; hg19.fa
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bowtie2-inspect hg19 &gt; hg19.fa
 </code></pre></div>  </div>
 </blockquote>
 
@@ -553,7 +553,7 @@ It will take a few minutes to generate the file.</p>
 <blockquote>
   <p>Decompress the file
 For decompressing a .tar.gz file you need the following command:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tar -xzvf tophat-2.1.0.Linux_x86_64.tar.gz
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tar -xzvf tophat-2.1.0.Linux_x86_64.tar.gz
 </code></pre></div>  </div>
   <p>Remember to use tab autocompletion !</p>
 </blockquote>
@@ -563,7 +563,7 @@ For decompressing a .tar.gz file you need the following command:</p>
 <p><img src="../../images/MapRNASeq3.png" alt="" /></p>
 
 <p>Go into the tophat folder and type:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./tophat
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./tophat
 </code></pre></div></div>
 
 <p>If this opens the help of tophat, it means the software has been installed correctly. It does not mean that you can use the software now. Well you can but you will always have to type the commands from inside the tophat folder or provide the full path to the tophat folder. To avoid this we can create a symbolic link for tophat2.</p>
@@ -571,7 +571,7 @@ For decompressing a .tar.gz file you need the following command:</p>
 <blockquote>
   <p>Create a symbolic link for tophat2
 For creating the link you need the following command:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ln -s /usr/bin/NGS/tophat-2.1.0.Linux_x86_64/tophat2 /usr/local/bin/tophat2
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ln -s /usr/bin/NGS/tophat-2.1.0.Linux_x86_64/tophat2 /usr/local/bin/tophat2
 </code></pre></div>  </div>
   <p>Remember to use tab autocompletion !</p>
 </blockquote>
@@ -584,7 +584,7 @@ For creating the link you need the following command:</p>
  <img src="../../images/MapRNASeq5.png" alt="" /></p>
 
 <p>If you see the samtools help page when you type</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./samtools_0.1.18
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./samtools_0.1.18
 </code></pre></div></div>
 <p>it means that samtools is indeed installed
  <img src="../../images/MapRNASeq6.png" alt="" /></p>
@@ -594,10 +594,10 @@ For creating the link you need the following command:</p>
 <blockquote>
   <p>Create a soft link for samtools.
 Create a link using the <strong>ln -s</strong> command:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ln -s /usr/bin/NGS/tophat-2.1.0_Linux_x86_64/samtools-0.1.18/samtools /usr/local/bin/samtools
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ln -s /usr/bin/NGS/tophat-2.1.0_Linux_x86_64/samtools-0.1.18/samtools /usr/local/bin/samtools
 </code></pre></div>  </div>
   <p>Go up one directory in the file system and check if the command works. If you type</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>samtools view
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>samtools view
 </code></pre></div>  </div>
   <p>(one of the possible samtools commands) you should see the manual of the command.</p>
 </blockquote>
@@ -605,7 +605,7 @@ Create a link using the <strong>ln -s</strong> command:</p>
 <h4 id="mapping-the-reads">Mapping the reads</h4>
 
 <p>We are not going to do the actual mapping since it takes almost 25 minutes even with the chromosome22-limited datasets. If we were to map the reads we would use the following command:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>folder=/home/bits/NGS/RNASeq/
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>folder=/home/bits/NGS/RNASeq/
 tophat2 --no-coverage-search ${folder}reference/hg19 ${folder}chr22_SRR1039509_1.fastq.gz ${folder}chr22_SRR1039509_2.fastq.gz 
 </code></pre></div></div>
 
@@ -658,13 +658,13 @@ On the <a href="http://davetang.org/wiki/tiki-index.php?page=SAMTools">samtools 
 <p><img src="../../images/samtools2b.png" alt="" /></p>
 
 <p>You can see that you need the <strong>samtools flagstat</strong> command for this. The bam file is in the /home/bits/NGS/RNASeq/ folder so we are going to reuse the folder variable that we created for the mapping:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>folder=/home/bits/NGS/RNAseq/
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>folder=/home/bits/NGS/RNAseq/
 samtools_0.1.18 flagstat ${folder}accepted_hits_chr22.bam
 </code></pre></div></div>
 
 <p>or if you have done the mapping yourself:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>samtools_0.1.18 flagstat /usr/bin/NGS/tophat-2.1.0_Linux_x86_64/tophat_out/accepted_hits_chr22.bam
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>samtools_0.1.18 flagstat /usr/bin/NGS/tophat-2.1.0_Linux_x86_64/tophat_out/accepted_hits_chr22.bam
 </code></pre></div></div>
 
 <p>The samtools flagstat command displays an overview of the alignment results on your screen. You just see that 100% of the reads were mapped. This is extremely high but it is of course because we reversed engineered our chromosome 22 limited data set. From the complete fastq files we took the reads that mapped to chromosome 22 so it’s normal that we get an almost perfect mapping.</p>
@@ -715,7 +715,7 @@ As you can see in the manual the <strong>samtools sort</strong> command sorts .b
 <p><img src="../../images/CountTable7.png" alt="" /></p>
 
 <p>The input and output file are located in the /home/bits/NGS/RNASeq/ folder (or the /usr/bin/NGS/tophat-2.1.0.Linux_x86_64/tophat_out/ folder if you have done the mapping yourself). We are going to create a folder variable:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>folder=/home/bits/NGS/RNASeq/
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>folder=/home/bits/NGS/RNASeq/
 samtools_0.1.18 sort -n ${folder}accepted_hits.bam ${folder}accepted_hits_sort
 </code></pre></div></div>
 
@@ -732,7 +732,7 @@ As you can see in the manual the <strong>samtools view</strong> command can tran
 <p><img src="../../images/CountTable8.png" alt="" /></p>
 
 <p>We are going to reuse the folder variable:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>samtools_0.1.18 view ${folder}accepted_hits_sort.bam &gt; ${folder}accepted_hits.sam
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>samtools_0.1.18 view ${folder}accepted_hits_sort.bam &gt; ${folder}accepted_hits.sam
 </code></pre></div></div>
 
 <p>Go to the folder where input and output file are stored and check if the .sam file was generated.</p>
@@ -748,7 +748,7 @@ As a solution, HTSeq recommends to use a gtf file from Ensembl. You can find Ens
 <blockquote>
   <p>Decompress the gtf file.<br />
 .gz files are decompressed by the <strong>gunzip</strong> command:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gunzip Homo_sapiens.GRCh37.82.gtf.gz 
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gunzip Homo_sapiens.GRCh37.82.gtf.gz 
 </code></pre></div>  </div>
   <p>Use Tab autocompletion for the name of the file.</p>
 </blockquote>
@@ -756,7 +756,7 @@ As a solution, HTSeq recommends to use a gtf file from Ensembl. You can find Ens
 <blockquote>
   <p>Look at the first 10 lines of the gtf file.<br />
 Use the <strong>head</strong> command to preview the file:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>head Homo_sapiens.GRCh37.82.gtf
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>head Homo_sapiens.GRCh37.82.gtf
 </code></pre></div>  </div>
   <p>Use Tab autocompletion for the name of the file.</p>
 </blockquote>
@@ -768,7 +768,7 @@ Use the <strong>head</strong> command to preview the file:</p>
 <blockquote>
   <p>Look at the first 10 lines of the sam file.<br />
 Use the <strong>head</strong> command to preview the file:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>head accepted_hits.sam
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>head accepted_hits.sam
 </code></pre></div>  </div>
   <p>Use Tab autocompletion for the name of the file.</p>
 </blockquote>
@@ -787,7 +787,7 @@ Use the <strong>head</strong> command to preview the file:</p>
 <blockquote>
   <p>Use the move command to rename the file to hg19_EnsGene.gtf<br />
 Use the <strong>mv</strong> command to rename the file:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mv Homo_sapiens.GRCh37.82.gtf ./hg19_EnsGene.gtf
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mv Homo_sapiens.GRCh37.82.gtf ./hg19_EnsGene.gtf
 </code></pre></div>  </div>
   <p>The <strong>./</strong> defines to move the file to the current folder (the folder that you are in when you type the command). So you will move the file to the same folder but under another name, which corresponds to just renaming it.</p>
 </blockquote>
@@ -795,7 +795,7 @@ Use the <strong>mv</strong> command to rename the file:</p>
 <blockquote>
   <p>Filter chromsome 22 annotations from the gtf file. Name the resulting file chr22_Ens.gtf
 Chromosome 22 annotations are lines starting with <strong>22</strong>. Use the <strong>grep</strong> command to filter the file:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grep "^22" hg19_EnsGene.gtf &gt; chr22_Ens.gtf
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grep "^22" hg19_EnsGene.gtf &gt; chr22_Ens.gtf
 </code></pre></div>  </div>
   <p>The <strong>^</strong> defines the start of a line. So <strong>^22</strong> means: search for lines that start with <strong>22</strong>.</p>
 </blockquote>
@@ -803,7 +803,7 @@ Chromosome 22 annotations are lines starting with <strong>22</strong>. Use the <
 <blockquote>
   <p>Look at the first 10 lines of the filtered gtf file.<br />
 Use the <strong>head</strong> command to preview the file:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>head chr22_Ens.gtf
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>head chr22_Ens.gtf
 </code></pre></div>  </div>
   <p>Use Tab autocompletion for the name of the file.</p>
 </blockquote>
@@ -815,7 +815,7 @@ Use the <strong>head</strong> command to preview the file:</p>
 <blockquote>
   <p>Add the prefix to each line of the gtf file. Name the resulting file chr22_Ens_corr.gtf
 To do a replacement or substitution you need to use the <strong>s</strong> command, followed by what you want to replace and what to replace it with, each separated by a <strong>/</strong>. Remember from the filtering exercise that the start of a line is represented by <strong>^</strong>. So use the following command to make the substitution:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sed 's/^/chr/' chr22_Ens.gtf &gt; chr22_Ens_corr.gtf
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sed 's/^/chr/' chr22_Ens.gtf &gt; chr22_Ens_corr.gtf
 </code></pre></div>  </div>
   <p>Use Tab autocompletion for the name of the file.</p>
 </blockquote>
@@ -823,7 +823,7 @@ To do a replacement or substitution you need to use the <strong>s</strong> comma
 <blockquote>
   <p>Look at the first 10 lines of the substituted gtf file.<br />
 Use the <strong>head</strong> command to preview the file:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>head chr22_Ens_corr.gtf
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>head chr22_Ens_corr.gtf
 </code></pre></div>  </div>
   <p>Use Tab autocompletion for the name of the file.</p>
 </blockquote>
@@ -837,7 +837,7 @@ Use the <strong>head</strong> command to preview the file:</p>
 <blockquote>
   <p>Try to install HTSeq. What happens ?<br />
 Use the following command to install the tool:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install HTSeq
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install HTSeq
 </code></pre></div>  </div>
 </blockquote>
 
@@ -850,12 +850,12 @@ Use the following command to install the tool:</p>
 <blockquote>
   <p>Install the missing dependencies and try again. What happens ?<br />
 Use the following command to install the dependencies:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt-get install python-dev
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt-get install python-dev
 </code></pre></div>  </div>
 </blockquote>
 
 <p>Then try to install HTseq again:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install HTSeq
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install HTSeq
 </code></pre></div></div>
 
 <p>As you can see this generates a new error and the tool is not installed.</p>
@@ -867,16 +867,16 @@ Use the following command to install the dependencies:</p>
 <blockquote>
   <p>Install the missing compiler and try again. What happens ?<br />
 Use the following command to install the dependencies:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt-get install g++
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt-get install g++
 </code></pre></div>  </div>
 </blockquote>
 
 <p>Then try to install HTseq again:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install HTSeq
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install HTSeq
 </code></pre></div></div>
 
 <p>As you can see this does not generate an error. To check if the tool works type:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>htseq-count
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>htseq-count
 </code></pre></div></div>
 
 <p>If this displays the help file, you know that the tool was correctly installed</p>
@@ -929,7 +929,7 @@ The <strong>-i</strong> option allows to define the feature to use as ID.</p>
   <p>Calculate the count table
 HTSeq was installed by <strong>pip install</strong> which automatically creates a link. So the HTSeq commands will work from anywhere in the file system. We will go to the folder that contains the input sam file: <strong>/home/bits/NGS/RNAseq/</strong> and run the command from there or create a variable folder containing the path.
 In the <a href="http://www-huber.embl.de/users/anders/HTSeq/doc/count.html">HTSeq manual</a> we get an overview of the options we can use. Default options should not be defined.</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>folder=/home/bits/NGS/RNAseq/
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>folder=/home/bits/NGS/RNAseq/
 htseq-count -m union -s no ${folder}accepted_hits.sam ${folder}reference/chr22_Ens_corr.gtf &gt; ${folder}chr22_counts.txt
 </code></pre></div>  </div>
 </blockquote>
@@ -937,7 +937,7 @@ htseq-count -m union -s no ${folder}accepted_hits.sam ${folder}reference/chr22_E
 <blockquote>
   <p>View the first 10 lines of the resulting count table</p>
 
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>head chr22_counts.txt
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>head chr22_counts.txt
 </code></pre></div>  </div>
 </blockquote>
 

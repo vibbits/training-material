@@ -266,7 +266,7 @@
 <p>The gene abundance table (Genus.txt) can be found in the folder /home/VIBTrainingX/NGS/metagenomics/higherLvl folder on the server. Those who are working on their own laptop can download it <a href="http://psbweb05.psb.ugent.be/lotus/data/LotuStutorial.tar.gz">from the lotus website</a>.</p>
 
 <ol>
-  <li>Set the folder with the provided files as your working directory in R using <code class="highlighter-rouge">setw</code>. This way required files can be easily loaded. To find out how to use this command, you can type ?setwd() to open the help. If there are other R-commands that you want to know more about, you can open the R-help for that command by entering in the R-prompt <code class="highlighter-rouge">?command</code>. This will be very useful when working with R, make sure to use this a lot as you can only learn more :o).</li>
+  <li>Set the folder with the provided files as your working directory in R using <code class="language-plaintext highlighter-rouge">setw</code>. This way required files can be easily loaded. To find out how to use this command, you can type ?setwd() to open the help. If there are other R-commands that you want to know more about, you can open the R-help for that command by entering in the R-prompt <code class="language-plaintext highlighter-rouge">?command</code>. This will be very useful when working with R, make sure to use this a lot as you can only learn more :o).</li>
 </ol>
 
 <blockquote class="notranslate hands_on">
@@ -289,7 +289,7 @@
 </blockquote>
 
 <ol>
-  <li>Load the provided data into the matrix M (Genus.txt, actual genus abundance data), using the read.delim command, saving the loaded table as <code class="highlighter-rouge">M</code>. Make sure, the row names are correctly read in. As R reads the matrix as an object of class data.frame, we convert M from a data.frame to a matrix <code class="highlighter-rouge">M=as.matrix(M)</code>. This is important for some of the following calculations, where we need a <code class="highlighter-rouge">matrix</code> class object.</li>
+  <li>Load the provided data into the matrix M (Genus.txt, actual genus abundance data), using the read.delim command, saving the loaded table as <code class="language-plaintext highlighter-rouge">M</code>. Make sure, the row names are correctly read in. As R reads the matrix as an object of class data.frame, we convert M from a data.frame to a matrix <code class="language-plaintext highlighter-rouge">M=as.matrix(M)</code>. This is important for some of the following calculations, where we need a <code class="language-plaintext highlighter-rouge">matrix</code> class object.</li>
 </ol>
 
 <blockquote class="notranslate hands_on">
@@ -315,10 +315,10 @@
 </blockquote>
 
 <p>The matrix you loaded represents the number of 16S sequences assignable to each genus, which we could find in the samples. Also note that not all genera are real genera, but partly assigned unknown sequences. With these groups we do not know if this is a single genus or in fact several genera or in extreme cases even several classes, that just all fall under the same phylum tag. What are the advantages and disadvantages of keeping such undefined groups in the data?
-Use the function <code class="highlighter-rouge">edit(M)</code> to better view the abundance matrix.</p>
+Use the function <code class="language-plaintext highlighter-rouge">edit(M)</code> to better view the abundance matrix.</p>
 
 <ol>
-  <li>Let’s look at some  basic features of the abundance matrix. The <code class="highlighter-rouge">summary(M)</code> command is a good start, but also look at total row and column counts (<code class="highlighter-rouge">colSums</code>, <code class="highlighter-rouge">rowSums</code> command). To see how the genera are distributed within each sample, we will plot a sample-wise density plot.We will be using a combination of the <code class="highlighter-rouge">density</code>, <code class="highlighter-rouge">lines</code> and <code class="highlighter-rouge">lapply</code> functions, to draw the densities of values found in each sample. Let’s start with looking at the density of the first sample. In R you can access specific columns by writing the matrix coordinates in square brackets. For example <code class="highlighter-rouge">M[1,]</code> shows the first row of a matrix, <code class="highlighter-rouge">M[,7]</code> shows the 7th column etc:</li>
+  <li>Let’s look at some  basic features of the abundance matrix. The <code class="language-plaintext highlighter-rouge">summary(M)</code> command is a good start, but also look at total row and column counts (<code class="language-plaintext highlighter-rouge">colSums</code>, <code class="language-plaintext highlighter-rouge">rowSums</code> command). To see how the genera are distributed within each sample, we will plot a sample-wise density plot.We will be using a combination of the <code class="language-plaintext highlighter-rouge">density</code>, <code class="language-plaintext highlighter-rouge">lines</code> and <code class="language-plaintext highlighter-rouge">lapply</code> functions, to draw the densities of values found in each sample. Let’s start with looking at the density of the first sample. In R you can access specific columns by writing the matrix coordinates in square brackets. For example <code class="language-plaintext highlighter-rouge">M[1,]</code> shows the first row of a matrix, <code class="language-plaintext highlighter-rouge">M[,7]</code> shows the 7th column etc:</li>
 </ol>
 
 <blockquote class="notranslate hands_on">
@@ -342,9 +342,9 @@ Use the function <code class="highlighter-rouge">edit(M)</code> to better view t
   </blockquote>
 </blockquote>
 
-<p>Look at the object densityOfSample1 by simply entering the object name into the command prompt. Next try to visualize it with <code class="highlighter-rouge">plot(densityOfSample1)</code>. In this plot you see that most genera are at 0 abundance, some genera have an abundance &lt;10 and some rare genera actually occur with a higher frequency, one genus even having ~1100 16S reads assigned to it. Which genus is this?</p>
+<p>Look at the object densityOfSample1 by simply entering the object name into the command prompt. Next try to visualize it with <code class="language-plaintext highlighter-rouge">plot(densityOfSample1)</code>. In this plot you see that most genera are at 0 abundance, some genera have an abundance &lt;10 and some rare genera actually occur with a higher frequency, one genus even having ~1100 16S reads assigned to it. Which genus is this?</p>
 
-<p>Alternatively you can also use the function <code class="highlighter-rouge">hist</code>, to plot a histogram of the abundances. Try to do this now.</p>
+<p>Alternatively you can also use the function <code class="language-plaintext highlighter-rouge">hist</code>, to plot a histogram of the abundances. Try to do this now.</p>
 
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-hands-on-exercise-4"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 4</h3>
@@ -367,7 +367,7 @@ Use the function <code class="highlighter-rouge">edit(M)</code> to better view t
   </blockquote>
 </blockquote>
 
-<p>We can use the <code class="highlighter-rouge">apply</code> command, to apply the density command to every column of M, which will return a list of density objects. The second argument to the <code class="highlighter-rouge">apply</code> function is the <code class="highlighter-rouge">margin</code> and is set to 2, which tells the <code class="highlighter-rouge">apply</code> function that we want to work on columns (margin = 2) and not on rows (margin = 1). Save this into object  <code class="highlighter-rouge">S_densities</code>.</p>
+<p>We can use the <code class="language-plaintext highlighter-rouge">apply</code> command, to apply the density command to every column of M, which will return a list of density objects. The second argument to the <code class="language-plaintext highlighter-rouge">apply</code> function is the <code class="language-plaintext highlighter-rouge">margin</code> and is set to 2, which tells the <code class="language-plaintext highlighter-rouge">apply</code> function that we want to work on columns (margin = 2) and not on rows (margin = 1). Save this into object  <code class="language-plaintext highlighter-rouge">S_densities</code>.</p>
 
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-hands-on-exercise-5"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 5</h3>
@@ -395,7 +395,7 @@ Use the function <code class="highlighter-rouge">edit(M)</code> to better view t
 </span><span class="n">plot</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="n">type</span><span class="o">=</span><span class="s2">"n"</span><span class="p">,</span><span class="n">ylim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">3</span><span class="p">),</span><span class="n">xlim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">5000</span><span class="p">))</span><span class="w"> 
 </span></code></pre></div></div>
 
-<p>This will open a new plotting window, already set to the range of x and y coordinates (xlim, ylim) we will need in this example. In this case we just want to plot a blank space, this is done with the <code class="highlighter-rouge">type=n</code> argument. Try to replace the argument by <code class="highlighter-rouge">type=p</code>, to actually see that point! S_densities is a list, so we use <code class="highlighter-rouge">lapply</code> (list apply), in combination with the <code class="highlighter-rouge">lines</code> function, try this now to plot all the density lines into the open plot window.</p>
+<p>This will open a new plotting window, already set to the range of x and y coordinates (xlim, ylim) we will need in this example. In this case we just want to plot a blank space, this is done with the <code class="language-plaintext highlighter-rouge">type=n</code> argument. Try to replace the argument by <code class="language-plaintext highlighter-rouge">type=p</code>, to actually see that point! S_densities is a list, so we use <code class="language-plaintext highlighter-rouge">lapply</code> (list apply), in combination with the <code class="language-plaintext highlighter-rouge">lines</code> function, try this now to plot all the density lines into the open plot window.</p>
 
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-hands-on-exercise-6"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 6</h3>
@@ -418,19 +418,19 @@ Use the function <code class="highlighter-rouge">edit(M)</code> to better view t
   </blockquote>
 </blockquote>
 
-<p>What you should see now in the plot window is the density distribution of all samples. The lines function is adding new lines, while a plot function makes a completely new plot. Try to replace the <code class="highlighter-rouge">lines</code> with <code class="highlighter-rouge">plot</code> to see this (it’s very fast, so keep a close eye on your plot). How are these lines already telling us something about the differences between the communities of each sample?</p>
+<p>What you should see now in the plot window is the density distribution of all samples. The lines function is adding new lines, while a plot function makes a completely new plot. Try to replace the <code class="language-plaintext highlighter-rouge">lines</code> with <code class="language-plaintext highlighter-rouge">plot</code> to see this (it’s very fast, so keep a close eye on your plot). How are these lines already telling us something about the differences between the communities of each sample?</p>
 
 <ol>
-  <li>Maybe you noticed that the <code class="highlighter-rouge">colSums</code> command showed that the totals are not equal. What does this mean? In this state the data is actually not comparable among each other. One way to <code class="highlighter-rouge">correct</code> the data for this shortcoming is to normalize the matrix. In this step we will normalize the abundance matrix into variable M1:</li>
+  <li>Maybe you noticed that the <code class="language-plaintext highlighter-rouge">colSums</code> command showed that the totals are not equal. What does this mean? In this state the data is actually not comparable among each other. One way to <code class="language-plaintext highlighter-rouge">correct</code> the data for this shortcoming is to normalize the matrix. In this step we will normalize the abundance matrix into variable M1:</li>
 </ol>
 
 <div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># normalize matrix: divide each column by the total of that column</span><span class="w">
 </span><span class="n">M1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sweep</span><span class="p">(</span><span class="n">M</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="n">colSums</span><span class="p">(</span><span class="n">M</span><span class="p">),</span><span class="s2">"/"</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<p>The <code class="highlighter-rouge">sweep</code> command is extremely useful, as it will apply a simple arithmetic operation (like divide) in a matrix column- or row-wise with a vector of your choice. So it is very similar to <code class="highlighter-rouge">apply</code>, but takes more basic functions. In this case we will divide each column by the sum of the column, this is called normalization.</p>
+<p>The <code class="language-plaintext highlighter-rouge">sweep</code> command is extremely useful, as it will apply a simple arithmetic operation (like divide) in a matrix column- or row-wise with a vector of your choice. So it is very similar to <code class="language-plaintext highlighter-rouge">apply</code>, but takes more basic functions. In this case we will divide each column by the sum of the column, this is called normalization.</p>
 
-<p>Now we will compare these matrices using the <code class="highlighter-rouge">barplot</code> function. For this we need to open another graphical window, using the <code class="highlighter-rouge">X11</code> function:</p>
+<p>Now we will compare these matrices using the <code class="language-plaintext highlighter-rouge">barplot</code> function. For this we need to open another graphical window, using the <code class="language-plaintext highlighter-rouge">X11</code> function:</p>
 <div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># create barplot of original and normalized data</span><span class="w">
 </span><span class="n">barplot</span><span class="p">(</span><span class="n">M</span><span class="p">)</span><span class="w">
 </span><span class="n">X11</span><span class="p">()</span><span class="w">
@@ -451,7 +451,7 @@ Use the function <code class="highlighter-rouge">edit(M)</code> to better view t
 
 <p>If you spot a difference in species abundance between two samples using matrix M, is this difference real, does it have scientific value?</p>
 
-<p>For the next step the R-library vegan is required. It is a set of functions specifically designed for ecological data analysis. The package has been installed on the bits laptops. If you were to install the package, you could do so using the command: <code class="highlighter-rouge">install.packages(“vegan”)</code>. More details on the <a href="http://cc.oulu.fi/~jarioksa/softhelp/vegan.html">vegan web site </a>. Load vegan, using the <code class="highlighter-rouge">library</code> command.</p>
+<p>For the next step the R-library vegan is required. It is a set of functions specifically designed for ecological data analysis. The package has been installed on the bits laptops. If you were to install the package, you could do so using the command: <code class="language-plaintext highlighter-rouge">install.packages(“vegan”)</code>. More details on the <a href="http://cc.oulu.fi/~jarioksa/softhelp/vegan.html">vegan web site </a>. Load vegan, using the <code class="language-plaintext highlighter-rouge">library</code> command.</p>
 
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-hands-on-exercise-7"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 7</h3>
@@ -474,7 +474,7 @@ Use the function <code class="highlighter-rouge">edit(M)</code> to better view t
   </blockquote>
 </blockquote>
 
-<p>Let’s try to put the differences we observed in sample density into numbers. To do this, ecologists rely on the concept of diversity. Diversity describes the evenness of species distributions as well as the richness of species that are observed in a given ecological system. We will first calculate the Shannon diversity, using vegan’s <code class="highlighter-rouge">diversity</code> command. Try to do this per sample, using the <code class="highlighter-rouge">apply</code> function again. Save the result in object <code class="highlighter-rouge">div</code>.</p>
+<p>Let’s try to put the differences we observed in sample density into numbers. To do this, ecologists rely on the concept of diversity. Diversity describes the evenness of species distributions as well as the richness of species that are observed in a given ecological system. We will first calculate the Shannon diversity, using vegan’s <code class="language-plaintext highlighter-rouge">diversity</code> command. Try to do this per sample, using the <code class="language-plaintext highlighter-rouge">apply</code> function again. Save the result in object <code class="language-plaintext highlighter-rouge">div</code>.</p>
 
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-hands-on-exercise-8"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 8</h3>
@@ -497,7 +497,7 @@ Use the function <code class="highlighter-rouge">edit(M)</code> to better view t
   </blockquote>
 </blockquote>
 
-<p>Now we can see in action what these indices are actually doing for us. Plot the density of the sample with the lowest and highest diversity in red and blue on your previous density plot of M1, this you do by first finding out which diversity indexes are the maximum and minimum values using the <code class="highlighter-rouge">which.max</code> and <code class="highlighter-rouge">which.min</code> functions on the object <code class="highlighter-rouge">div</code>. Don’t forget to have the last density plot still open (or replot it from step 4 on M1), than add the lowest samples as a blue line and the highest sample as a red line, using the <code class="highlighter-rouge">lines</code> command.</p>
+<p>Now we can see in action what these indices are actually doing for us. Plot the density of the sample with the lowest and highest diversity in red and blue on your previous density plot of M1, this you do by first finding out which diversity indexes are the maximum and minimum values using the <code class="language-plaintext highlighter-rouge">which.max</code> and <code class="language-plaintext highlighter-rouge">which.min</code> functions on the object <code class="language-plaintext highlighter-rouge">div</code>. Don’t forget to have the last density plot still open (or replot it from step 4 on M1), than add the lowest samples as a blue line and the highest sample as a red line, using the <code class="language-plaintext highlighter-rouge">lines</code> command.</p>
 
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-hands-on-exercise-9"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 9</h3>
@@ -523,10 +523,10 @@ Use the function <code class="highlighter-rouge">edit(M)</code> to better view t
   </blockquote>
 </blockquote>
 
-<p>You can now readjust the window by changing the <code class="highlighter-rouge">ylim</code> and <code class="highlighter-rouge">xlim</code> attribute in the plot function, if necessary (tip, try to rerun using <code class="highlighter-rouge">ylim=c(0,180)</code>). Try to explain why the colored samples have the highest &amp; lowest diversity. What does this tell about an ecosystem (remember that these are genus abundances).
+<p>You can now readjust the window by changing the <code class="language-plaintext highlighter-rouge">ylim</code> and <code class="language-plaintext highlighter-rouge">xlim</code> attribute in the plot function, if necessary (tip, try to rerun using <code class="language-plaintext highlighter-rouge">ylim=c(0,180)</code>). Try to explain why the colored samples have the highest &amp; lowest diversity. What does this tell about an ecosystem (remember that these are genus abundances).
 Raise your hand if you reached this step.</p>
 
-<p>A different way to normalize the data is to sample exactly equal amounts of 16S rDNA for each sample in this experiment. Of course in practice this is impossible to do, but we can simulate this, by randomly selecting a subset of 16S rDNA. This is called rarefaction. Rarefy your original abundance matrix (M) into M2, using 1000 reads per sample, using the <code class="highlighter-rouge">rrarefy</code> function of vegan. Note that you need to transpose (command <code class="highlighter-rouge">t()</code>) the matrix, before giving it to <code class="highlighter-rouge">rrarefy</code>. Transform the matrix back and save it as <code class="highlighter-rouge">M2</code>.</p>
+<p>A different way to normalize the data is to sample exactly equal amounts of 16S rDNA for each sample in this experiment. Of course in practice this is impossible to do, but we can simulate this, by randomly selecting a subset of 16S rDNA. This is called rarefaction. Rarefy your original abundance matrix (M) into M2, using 1000 reads per sample, using the <code class="language-plaintext highlighter-rouge">rrarefy</code> function of vegan. Note that you need to transpose (command <code class="language-plaintext highlighter-rouge">t()</code>) the matrix, before giving it to <code class="language-plaintext highlighter-rouge">rrarefy</code>. Transform the matrix back and save it as <code class="language-plaintext highlighter-rouge">M2</code>.</p>
 
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-hands-on-exercise-10"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 10</h3>
@@ -549,7 +549,7 @@ Raise your hand if you reached this step.</p>
   </blockquote>
 </blockquote>
 
-<p>Use <code class="highlighter-rouge">colSums(M2)</code> to check if the rarefaction worked. The main use of rarefaction is in calculating diversity and richness correctly, for this we will look in the following step at observed richness.</p>
+<p>Use <code class="language-plaintext highlighter-rouge">colSums(M2)</code> to check if the rarefaction worked. The main use of rarefaction is in calculating diversity and richness correctly, for this we will look in the following step at observed richness.</p>
 
 <p>The concept of observed richness within a sample is pretty simple (but useful): richness describes the number of different species that occur at least once in a sample. This can be calculated in two steps:</p>
 
@@ -557,7 +557,7 @@ Raise your hand if you reached this step.</p>
 </span><span class="n">OnceOrMoreOftenPresent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">M1</span><span class="o">&gt;</span><span class="m">0</span><span class="w">
 </span></code></pre></div></div>
 
-<p>The sum of each column in this matrix will tell us how many species were detected in total within the respective sample, use the <code class="highlighter-rouge">apply</code> and <code class="highlighter-rouge">sum</code> functions , saving the result in <code class="highlighter-rouge">rich1</code>.</p>
+<p>The sum of each column in this matrix will tell us how many species were detected in total within the respective sample, use the <code class="language-plaintext highlighter-rouge">apply</code> and <code class="language-plaintext highlighter-rouge">sum</code> functions , saving the result in <code class="language-plaintext highlighter-rouge">rich1</code>.</p>
 
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-hands-on-exercise-11"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 11</h3>
@@ -580,13 +580,13 @@ Raise your hand if you reached this step.</p>
   </blockquote>
 </blockquote>
 
-<p>Compare the richness values in <code class="highlighter-rouge">rich1</code> to the richness obtained on the rarefied matrix <code class="highlighter-rouge">M2</code>, calculated with a shortened command:</p>
+<p>Compare the richness values in <code class="language-plaintext highlighter-rouge">rich1</code> to the richness obtained on the rarefied matrix <code class="language-plaintext highlighter-rouge">M2</code>, calculated with a shortened command:</p>
 
 <div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Calculate number of present species in each sample using the rarefied data</span><span class="w">
 </span><span class="n">rich2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">apply</span><span class="p">(</span><span class="n">M2</span><span class="o">&gt;</span><span class="m">0</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="n">sum</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Compare rich1 and rich2 in a matrix value by value. We use the <code class="highlighter-rouge">cbind</code> command to bind two vectors column wise together, so we get a matrix with 2 columns. Order this matrix by the richness values in rich1, using the <code class="highlighter-rouge">order</code> command and accessing the vector representation with <code class="highlighter-rouge">[]</code> square brackets.</p>
+<p>Compare rich1 and rich2 in a matrix value by value. We use the <code class="language-plaintext highlighter-rouge">cbind</code> command to bind two vectors column wise together, so we get a matrix with 2 columns. Order this matrix by the richness values in rich1, using the <code class="language-plaintext highlighter-rouge">order</code> command and accessing the vector representation with <code class="language-plaintext highlighter-rouge">[]</code> square brackets.</p>
 
 <div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Create new matrix with two columns: rich1 and rich2 and order rows according to rich1 values</span><span class="w">
 </span><span class="n">cbind</span><span class="p">(</span><span class="n">rich1</span><span class="p">,</span><span class="n">rich2</span><span class="p">)[</span><span class="n">order</span><span class="p">(</span><span class="n">rich1</span><span class="p">),]</span><span class="w">
@@ -598,9 +598,9 @@ Raise your hand if you reached this step.</p>
 
 <p>Why did we choose 1000 as cutoff for the sequences per sample? What is the maximum value we could choose?</p>
 
-<p>First samples are clustered to see underlying data structures. For this tutorial we will choose a hierarchical clustering, based on a bray-curtis distance between samples, using the function <code class="highlighter-rouge">vegdist</code>. Make  sure the distances are calculated between Samples and not Genera.</p>
+<p>First samples are clustered to see underlying data structures. For this tutorial we will choose a hierarchical clustering, based on a bray-curtis distance between samples, using the function <code class="language-plaintext highlighter-rouge">vegdist</code>. Make  sure the distances are calculated between Samples and not Genera.</p>
 
-<p>Next, use the function <code class="highlighter-rouge">hclust</code> on the distance matrix, saving the output in variable <code class="highlighter-rouge">cluster</code>, and subsequently plot the clustering of the samples (using <code class="highlighter-rouge">plot</code>).
+<p>Next, use the function <code class="language-plaintext highlighter-rouge">hclust</code> on the distance matrix, saving the output in variable <code class="language-plaintext highlighter-rouge">cluster</code>, and subsequently plot the clustering of the samples (using <code class="language-plaintext highlighter-rouge">plot</code>).
 Take a guess of how many groups there might be in this clustering?</p>
 
 <blockquote class="notranslate hands_on">
@@ -628,7 +628,7 @@ Take a guess of how many groups there might be in this clustering?</p>
 
 <p>To visualize the samples and their relatedness to each other in a two-dimensional space, we can use an ordination to visualize the data in a low dimensional space. The dimensionality of the original matrix (73 genera=73 dimensions) is reduced to two dimensions. If you know what a PCA (Principal component analysis) is, this step will use a conceptually similar, but methodologically quite different technique to perform an ordination of the data, NMDS (non-metric multidimensional scaling).</p>
 
-<p>Start by calculating a 2-dimensional NMDS of the data using M1, using the Bray-Curtis distance in the function <code class="highlighter-rouge">metaMDS</code>, saving the result to <code class="highlighter-rouge">nmds</code>. Again, make sure that samples are being ordinated and not Genera.</p>
+<p>Start by calculating a 2-dimensional NMDS of the data using M1, using the Bray-Curtis distance in the function <code class="language-plaintext highlighter-rouge">metaMDS</code>, saving the result to <code class="language-plaintext highlighter-rouge">nmds</code>. Again, make sure that samples are being ordinated and not Genera.</p>
 
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-hands-on-exercise-11-2"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 11</h3>
@@ -651,14 +651,14 @@ Take a guess of how many groups there might be in this clustering?</p>
   </blockquote>
 </blockquote>
 
-<p>Take a look at the <code class="highlighter-rouge">nmds</code> object and explore some of its features (e.g. type <code class="highlighter-rouge">str(nmds)</code> to see what variables are stored within the NMDS object). Try to find out what the <code class="highlighter-rouge">stress</code> of your ordination is. What does stress stand for (tip: go to the R help on metaMDS)? Next we can visualize the NMDS, similar to what you get out of PCA’s, displaying samples only:</p>
+<p>Take a look at the <code class="language-plaintext highlighter-rouge">nmds</code> object and explore some of its features (e.g. type <code class="language-plaintext highlighter-rouge">str(nmds)</code> to see what variables are stored within the NMDS object). Try to find out what the <code class="language-plaintext highlighter-rouge">stress</code> of your ordination is. What does stress stand for (tip: go to the R help on metaMDS)? Next we can visualize the NMDS, similar to what you get out of PCA’s, displaying samples only:</p>
 <div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># plot NMDS</span><span class="w">
 </span><span class="n">plot</span><span class="p">(</span><span class="n">nmds</span><span class="p">,</span><span class="n">display</span><span class="w"> </span><span class="o">=</span><span class="s2">"sites"</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
 <p>The important difference of NMDS compared to PCA is, that NMDS works with any kind of distance metric, while PCA can only use Euclidean distances between samples. A second important feature of NMDS is, that this method finds non-parametric, monotonic relationships between objects; in short: it doesn’t assume a specific data distribution. Why might these two features be important for ecologists?</p>
 
-<p>You might have noticed that you see two clusters, similar to the hierarchical clustering of the data. We can get for each sample the identity within the two clusters using the <code class="highlighter-rouge">cutree</code> commands, specifying k=2 (2 clusters). This can be plotted into the NMDS with the following command:</p>
+<p>You might have noticed that you see two clusters, similar to the hierarchical clustering of the data. We can get for each sample the identity within the two clusters using the <code class="language-plaintext highlighter-rouge">cutree</code> commands, specifying k=2 (2 clusters). This can be plotted into the NMDS with the following command:</p>
 
 <div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># identify clusters</span><span class="w">
 </span><span class="n">memb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cutree</span><span class="p">(</span><span class="n">cluster</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w">
@@ -667,7 +667,7 @@ Take a guess of how many groups there might be in this clustering?</p>
 
 <p>Congratulations, you have just visualized the mouse enterotypes. Next we are going to look closer at these. If you want to know the exact methods to detect enterotypes in your data visit [http://enterotype.embl.de/enterotypes.html http://enterotype.embl.de/enterotypes.html]</p>
 
-<p>In the last step, we will test for all the genera in the matrix whether they show significant differences between two clusters. The scientific question we are posing here is: what are the significant differences in the gut microbiota of between enterotypes? We will use a non-parametric test (kruskal-wallis) to do the tests, as ecological data is in most cases not normally distributed. This test is very similar to the student t-test, and the interpretation works just the same way. Use the function <code class="highlighter-rouge">kruskal.test</code> to test the first genera (M[1,]) for significant differences between the two cluster groups (in object <code class="highlighter-rouge">memb</code>). Save the output of this command in variable <code class="highlighter-rouge">Kt</code>.</p>
+<p>In the last step, we will test for all the genera in the matrix whether they show significant differences between two clusters. The scientific question we are posing here is: what are the significant differences in the gut microbiota of between enterotypes? We will use a non-parametric test (kruskal-wallis) to do the tests, as ecological data is in most cases not normally distributed. This test is very similar to the student t-test, and the interpretation works just the same way. Use the function <code class="language-plaintext highlighter-rouge">kruskal.test</code> to test the first genera (M[1,]) for significant differences between the two cluster groups (in object <code class="language-plaintext highlighter-rouge">memb</code>). Save the output of this command in variable <code class="language-plaintext highlighter-rouge">Kt</code>.</p>
 
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-hands-on-exercise-12"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 12</h3>
@@ -690,9 +690,9 @@ Take a guess of how many groups there might be in this clustering?</p>
   </blockquote>
 </blockquote>
 
-<p>Look at the output of this function. This will show you a human readable summary of the test and the result. You can access elements of a list (<code class="highlighter-rouge">Kt</code> is a list in this case) using the <code class="highlighter-rouge">$</code> operator. Try to extract the p-value from the <code class="highlighter-rouge">Kt</code> object.</p>
+<p>Look at the output of this function. This will show you a human readable summary of the test and the result. You can access elements of a list (<code class="language-plaintext highlighter-rouge">Kt</code> is a list in this case) using the <code class="language-plaintext highlighter-rouge">$</code> operator. Try to extract the p-value from the <code class="language-plaintext highlighter-rouge">Kt</code> object.</p>
 
-<p>Once you know how, we can start to calculate the significance for every genus in the M1 matrix,. These p-values we will store in a newly created vector <code class="highlighter-rouge">pvals</code>. Let’s add the first 2 p-values to the vector:</p>
+<p>Once you know how, we can start to calculate the significance for every genus in the M1 matrix,. These p-values we will store in a newly created vector <code class="language-plaintext highlighter-rouge">pvals</code>. Let’s add the first 2 p-values to the vector:</p>
 
 <div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Test if there is a difference between the two clusters for the first and second genera. Store p-values in a vector.</span><span class="w">
 </span><span class="n">pvals</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">()</span><span class="w">
@@ -700,7 +700,7 @@ Take a guess of how many groups there might be in this clustering?</p>
 </span><span class="n">pvals</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">kruskal.test</span><span class="p">(</span><span class="n">M1</span><span class="p">[</span><span class="m">2</span><span class="p">,],</span><span class="w"> </span><span class="n">memb</span><span class="p">)</span><span class="o">$</span><span class="n">p.value</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Since doing this 73 times takes a long time, we will be using a for-loop to <code class="highlighter-rouge">loop</code> over the matrix and do this for us. We could as well use the apply function, but the syntax would get a little more complicated, since we are only interested in a subpart of the result, the $p.value part. Try to write a for-loop, to calculate the p-value 73 times.</p>
+<p>Since doing this 73 times takes a long time, we will be using a for-loop to <code class="language-plaintext highlighter-rouge">loop</code> over the matrix and do this for us. We could as well use the apply function, but the syntax would get a little more complicated, since we are only interested in a subpart of the result, the $p.value part. Try to write a for-loop, to calculate the p-value 73 times.</p>
 
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-hands-on-exercise-13"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 13</h3>
@@ -738,7 +738,7 @@ Take a guess of how many groups there might be in this clustering?</p>
 
 <p>In total we were testing in 73 genera, if their p-value was below a threshold of 0.05. What is the chance of observing data with a p-value &gt;0.05 by random chance? How many genera do you expect to be below this threshold by random chance?</p>
 
-<p>To avoid statistical errors of this kind, we will use a Benjamini-Hochberg multiple testing correction, implemented in the R function <code class="highlighter-rouge">p.adjust</code>. Save the result as <code class="highlighter-rouge">qvals</code>.</p>
+<p>To avoid statistical errors of this kind, we will use a Benjamini-Hochberg multiple testing correction, implemented in the R function <code class="language-plaintext highlighter-rouge">p.adjust</code>. Save the result as <code class="language-plaintext highlighter-rouge">qvals</code>.</p>
 
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-hands-on-exercise-14"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Exercise 14</h3>
