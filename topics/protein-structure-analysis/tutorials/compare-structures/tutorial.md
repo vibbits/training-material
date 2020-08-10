@@ -11,12 +11,12 @@ time_estimation: 15M
 key_points:
 - Superimposition of related structures is a very efficient approach to spot similarities and differences of structutally related proteins.
 contributors:
-- abotzki 
-- jvdurme 
+- abotzki
+- jvdurme
 
 ---
 
-## Structural comparison and RMSD 
+## Structural comparison and RMSD
 We compare structures by structurally aligning them on top of each other. That is, we
 align structurally equivalent atoms. For now, we will only use CA atoms as a representation of the backbones. 
 But Yasara also can align on any type of atom you want. You always need to specify:
@@ -25,17 +25,17 @@ But Yasara also can align on any type of atom you want. You always need to speci
 er structure
 -  target object: the structure to superpose on
 
-An optimal alignment is found when the root-mean-square deviation (RMSD) is at a minimum. 
-The RMSD is given as:
+An optimal alignment is found when the root-mean-square deviation (RMSD) is at a minimum.
+The RMSD is given as follows, where R is the distance between two structurally equivalent atom pairs (CA in our case) and n is the total number of atom pairs:
 ![RMSD](../../images/RMSD.gif "calculation of RMSD")
-where R is the distance between two structurally equivalent atom pairs (CA in our case) and n is the total number of atom pairs.
+
 
 > ### {% icon hands_on %} Hands-on: Data download
 >
-> 1. Download the following adapted PDB files from [Zenodo](https://zenodo.org/record/3550492#.XdeNL1dKiUk) 
+> 1. Download the following adapted PDB files from [Zenodo](https://zenodo.org/record/3550492#.XdeNL1dKiUk)
 >
 >    ```
->     1DKX_1.pdb 1DKY_1.pdb 1DKZ_1.pdb 3DPO_1.pdb 3DPP_1.pdb 
+>     1DKX_1.pdb 1DKY_1.pdb 1DKZ_1.pdb 3DPO_1.pdb 3DPP_1.pdb
 >    ```
 >
 {: .hands_on}
@@ -69,6 +69,8 @@ Then choose BFactor in the next window and press 'Apply unique color'.
 
 High BFactors are yellow, low BFactors are blue.
 
+**TODO Add h5p. Get clarification: answer options? Is this a yes or a no?**
+
 ### {% icon question %} Questions
 
 Do you see a correlation between the BFactors and the variability in the structure?
@@ -76,10 +78,10 @@ Do you see a correlation between the BFactors and the variability in the structu
 > <details markdown="1">
 > <summary>{% icon solution %} Solution
 > </summary>
-> 
-> ![Structural alignemnt](../../images/aligned-structures.png) 
 >
-> 
+> ![Structural alignemnt](../../images/aligned-structures.png)
+>
+>
 > </details>
 
 
