@@ -34,13 +34,8 @@ FoldX is a molecular modeling tool that can quantitatively predict the change in
 
 In this section we will let the FoldX plugin loose on some real world examples and give you step-by-step instructions on how to proceed and analyze the results. We will use the P53 tumor suppressor protein as our example molecule. In a first exercise you will make a point mutation with FoldX and determine if the mutation is stabilizing or destabilizing for the P53 structure. In a second exercise you will design a mutation in the P53 structure at the DNA binding interface and determine how the mutation affects the interaction energy of P53 with the DNA strand.
 
-## Get data
+Let's get the data first: Download the file [2AC0.sce](https://zenodo.org/record/3551686/files/2AC0.sce?download=1)
 
-> ### {% icon hands_on %} Hands-on: Data download
->
-> Download the file [2AC0.sce](https://zenodo.org/record/3551686/files/2AC0.sce?download=1).
->
-{: .hands_on}
 
 ## What do FoldX energies mean?
 
