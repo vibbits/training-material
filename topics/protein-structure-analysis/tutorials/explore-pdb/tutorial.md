@@ -3,7 +3,7 @@ layout: tutorial_hands_on
 
 title: "01 Exploring the Protein Data Bank exercises"
 
-TODO What do you want to do with the ZENODO link below?
+TODO What do you want to do with the ZENODO link below? AB: intro chapter with intructions to download and install | https://catalog.vib.be/apps/#/app/131 | https://training.vib.be/all-trainings/introduction-protein-structure-analysis-autumn-session 
 
 zenodo_link: "https://data.bits.vib.be/pub/trainingen/PSA/"
 questions:
@@ -27,7 +27,7 @@ The way of searching for a specific protein structure depends on the data you al
 
 ![uniprotsearchbox.png](../../images/uniprotsearchbox.png "Search box")
 
-**TODO Replace howto below with video? If so, where host it?**
+**TODO Replace howto below with video? If so, where host it?** youtube Christof voor BITS account channel
 
 > ### {% icon hands_on %} Explore a PDB structure on the Uniprot web site
 >
@@ -37,7 +37,8 @@ The way of searching for a specific protein structure depends on the data you al
 > 3. Click on *Structure* in the left-side menu and then look at the *3D structure databases* table.
 {: .hands_on }
 
-**TODO Insert h5p. Adjust the 'why'-part of the exercise**
+**TODO Insert h5p. Adjust the 'why'-part of the exercise** aanvullen met opties die fout zijn / welk scenario draagt je voorkeur (2 of 3 opties)? 
+**TODO where do we go from here? - scenario gebaseerde oefening / formaat screenshot of korte video
 
 ### {% icon question %} Guidelines which PDB structures to select
 
@@ -46,11 +47,11 @@ Which structures (give the 4-character PDB ID) of the C-terminal domain of DnaK 
 > <summary>{% icon solution %} Solution
 > </summary>
 >
-> Usually, the recommended selection criteria are using an X-ray structure with low resolution and low $R_{free}$ factor. Furthermore, the PDB database has pre-calculated a validation report for all of the structures.
->
 > As an example, have a look at https://www.ebi.ac.uk/pdbe/entry/pdb/4EZX under the section 'Experiments and Validation'. For many PDB structures, there is also a re-done structure available with a vast amount of information on the quality of the X-ray structure and suggested 'better' models e.g. (https://pdb-redo.eu/db/4ezx). In our case, we could opt for the structures 1DKX and 4EZX.
 >
 > This is a difficult example since there are so many high resolution structures available. So, it is recommended to study the articles and compare the available structures to find your favorite structure for further analysis.
+> Why: Usually, the recommended selection criteria are using an X-ray structure (if available) with low resolution and low $R_{free}$ factor. Furthermore, the PDB database has pre-calculated a validation report for all of the structures.
+>
 > </details>
 {: .solution}
 {: .question }
@@ -111,7 +112,7 @@ There is also an Advanced Search section, with a Blast/Fasta option in the Seque
 A PDB (Protein Data Bank) file is a plain text file that contains the atom coordinates of a solved 3D structure of a protein or even DNA. Such coordinate files can be obtained at the Protein Data Bank at <http://www.rcsb.org/pdb>. Each PDB file has a unique identifier (ID) consisting of 4 characters, the first one is always a number. Note: It has been announced that the 4 character code will change in the future <https://www.wwpdb.org/news/news?year=2017\#5910c8d8d3b1d333029d4ea8>.
 The PDB file with ID **1DKX** contains the atomic coordinates of the molecular chaperone (DnaK) from *E coli*.
 
-> ### {% icon hands_on %} Hands-on: BLAST search for PDB structure
+> ### {% icon hands_on %} Hands-on: Search for PDB structure by identifier
 >
 > 1. Go to the PDB website at <http://www.rcsb.org/pdb>
 > 2. Type 1DKX in the search and try to answer the following questions.
