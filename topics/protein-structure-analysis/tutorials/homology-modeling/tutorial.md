@@ -65,7 +65,7 @@ A suitable template structure to make a high quality model should have following
 - A good resolution (and R-factor): if many identical template structures exist with the same sequence, filter by resolution
 - Is solved by X-RAY, not NMR.
 
-**TODO Add h5p. Get responses.**
+**TODO Add h5p. Get responses. Get a few alternatives for the second question if multiple choice**
 
 > ### {% icon question %} Questions
 >
@@ -112,7 +112,9 @@ In our example, we take the [Swiss Model server](https://swissmodel.expasy.org/i
 >
 {: .hands_on}
 
-**TODO add h5p**
+**TODO add h5p. The answer 1jxx.1.A is listed but does not appear among the 8 results shown. Can this be adjusted?**
+
+[h5p id="101"]
 
 > ### {% icon question %} Question
 >
@@ -132,7 +134,7 @@ In our example, we take the [Swiss Model server](https://swissmodel.expasy.org/i
 >
 > 1. Once you have selected the template, hit 'Build Model' to start the homology modelling procedure.
 >    The server will alignment of target sequence and template structure(s), build a model and evaluate it.
->    These steps require specialized software and integrate up-to-date protein sequence and structure databases. 
+>    These steps require specialized software and integrate up-to-date protein sequence and structure databases.
 >    Each of the above steps can be repeated interactively until a satisfying modelling result is achieved.
 >    ![download model -80width](../../images/Modelling_template_selection_step2.png)
 > 2. Once the model has been built, you can download it.

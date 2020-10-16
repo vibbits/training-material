@@ -18,7 +18,7 @@ contributors:
 
 ## Structural comparison and RMSD
 We compare structures by structurally aligning them on top of each other. That is, we
-align structurally equivalent atoms. For now, we will only use CA atoms as a representation of the backbones. 
+align structurally equivalent atoms. For now, we will only use CA atoms as a representation of the backbones.
 But Yasara also can align on any type of atom you want. You always need to specify:
 
 -  source object(s): the structure(s) that needs to be rotated and translated to superpose on anoth
@@ -69,7 +69,9 @@ Then choose BFactor in the next window and press 'Apply unique color'.
 
 High BFactors are yellow, low BFactors are blue.
 
-**TODO Add h5p. Get clarification: answer options? Is this a yes or a no?**
+https://youtu.be/61wijsAFZlY?list=PLHOTpM-hNSSUa1b-Ac_gcIhwQGcMRISFq
+
+**TODO Is h5p wanted for this? If so, what are answer options? Is this a yes or a no?**
 
 ### {% icon question %} Questions
 

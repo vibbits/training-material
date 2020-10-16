@@ -103,84 +103,9 @@ FoldX has mutated the Ala to Trp and the structure with the Trp mutation has bee
 ![Zoomed-in-view on the mutated Ala159Trp, lots of red Vander Waals clashes here -80width](../../images/Training_8.png "Zoomed-in-view on the mutated Ala159Trp, lots of red Vander Waals clashes here")
 
 
-**TODO Add h5p. Get clarification**
-
-> ### {% icon question %} Questions
->
-> Van der Waals clashes are red colored atoms.
-> Do you see a difference around the mutation site between WT and mutant?
->
-> <details markdown="1">
-> <summary>{% icon solution %} Solution
-> </summary>
->
-> Toggle the Visibility of WT and mutant to see the differences.
-> Open the Console by pressing the spacebar twice and see the free energy change of the mutation.
-> Anything above a change of +0.5kcal/mol is already assumed to be destabilizing.
-> In the console - to open press spacebar twice - we see an energy change of +29 kcal/mol.
-> ![In the console - to open press spacebar twice - we see an energy change of +29 kcal/mol. -80width](../../images/Training_9.png "Open the console to explore the situation.")
-> This is clearly a destabilizing mutation.
-> </details>
-{: .question}
+https://youtu.be/yyFAwebyENc?list=PLHOTpM-hNSSUa1b-Ac_gcIhwQGcMRISFq
 
 
-# Study the effect of a second mutation
-
-Hide Object 3 by toggling its Visibility so that only Object 2 (the repaired WT) is visible.
-First turn on all atoms in the molecules G and H (DNA) again as you did previously, because the FoldX run has hidden it (it rearranged the view to show the VdW clashes).
-
-Show the sidechain of Arg273 of Object 2 by searching for it in the sequence selector, then right-click on it and go to:
-
-
-```
-Show atoms > Sidechain and CA and zoom in on Arg273
-```
-
-Notice how the positively charged Arginine is making an electrostatic interaction with the negative phosphate from the DNA backbone.
-
-![R273 makes an electrostatic interaction with the DNA phosphate groups. -80width](../../images/Training_10.png "R273 makes an electrostatic interaction with the DNA phosphate groups.")
-
-Let's see what would happen to the interaction energy between the DNA and P53 when we mutate this Arginine to Alanine.
-
-Right-click on this Arg273 in the sequence selector and go to:
-
-```
-FoldX > Mutate residue
-```
-
-A number of menus is now presented and here is what you need to do in each menu:
-
-1. Select Calculate interaction energy change
-2. Select Ala
-3. 'Move neighbours' and 'Show disrupted and new hydrogen bonds'
-4. Don't change any numerical options in the last menu
-
-![View of the first options menu with 'Show new and disrupted hydrogen bondsxi' selected. -80width](../../images/Training_11.png "View of the first options menu with 'Show new and disrupted hydrogen bonds' selected.")
-
-**TODO Add h5p. Get answer to second question.**
-
-> ### {% icon question %} Questions
->
-> 1. What is the change in interaction energy is between P53 and DNA chain G upon mutation?
->    And what is the reason?
-> 2. Why doesn't the mutation affect the interaction with DNA chain H?
->
->
-> <details markdown="1">
-> <summary>{% icon solution %} Solution
-> </summary>
->
-> 1. Toggle the Visibility between this mutant and the WT structure and see how the hydrogen bonding changes and check the output in the Console.
->     ![Mutation](../../images/Training_12.png "Change in interaction energy")
->     We see that the mutation decreases the interaction with DNA strand G by approximately 1 kcal/mol
->     since we lost 1 hydrogen bond.
->
-> 2. ***TODO***  
->
-> </details>
->
->
-{: .question}
 
 # Conclusion
 {:.no_toc}

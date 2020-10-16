@@ -5,6 +5,7 @@ title: "01 Exploring the Protein Data Bank exercises"
 
 TODO What do you want to do with the ZENODO link below?
 
+
 zenodo_link: "https://data.bits.vib.be/pub/trainingen/PSA/"
 questions:
   - "How to find structures in the PDB database?"
@@ -27,7 +28,6 @@ The way of searching for a specific protein structure depends on the data you al
 
 ![uniprotsearchbox.png](../../images/uniprotsearchbox.png "Search box")
 
-**TODO Replace howto below with video? If so, where host it?**
 
 > ### {% icon hands_on %} Explore a PDB structure on the Uniprot web site
 >
@@ -37,23 +37,10 @@ The way of searching for a specific protein structure depends on the data you al
 > 3. Click on *Structure* in the left-side menu and then look at the *3D structure databases* table.
 {: .hands_on }
 
-**TODO Insert h5p. Adjust the 'why'-part of the exercise**
+https://youtu.be/rVY6GGvzE10?list=PLHOTpM-hNSSUa1b-Ac_gcIhwQGcMRISFq
 
-### {% icon question %} Guidelines which PDB structures to select
 
-Which structures (give the 4-character PDB ID) of the C-terminal domain of DnaK should preferentially be use for analysis and why?
-> <details markdown="1">
-> <summary>{% icon solution %} Solution
-> </summary>
->
-> Usually, the recommended selection criteria are using an X-ray structure with low resolution and low $R_{free}$ factor. Furthermore, the PDB database has pre-calculated a validation report for all of the structures.
->
-> As an example, have a look at https://www.ebi.ac.uk/pdbe/entry/pdb/4EZX under the section 'Experiments and Validation'. For many PDB structures, there is also a re-done structure available with a vast amount of information on the quality of the X-ray structure and suggested 'better' models e.g. (https://pdb-redo.eu/db/4ezx). In our case, we could opt for the structures 1DKX and 4EZX.
->
-> This is a difficult example since there are so many high resolution structures available. So, it is recommended to study the articles and compare the available structures to find your favorite structure for further analysis.
-> </details>
-{: .solution}
-{: .question }
+[h5p id="99"]
 
 
 ### Via the Protein Data Bank by PDB ID
@@ -92,15 +79,12 @@ There is also an Advanced Search section, with a Blast/Fasta option in the Seque
 
 ![Blastpdb.png](../../images/blastpdb.png "BLAST")
 
-**TODO Section below: Advanced search has changed. Adjust this.**
-
 > ### {% icon hands_on %} Hands-on: BLAST search for PDB structure
 >
 > 1. Go to the Advanced Search section
-> 2. Please select 'Sequence BLAST/PSI-BLAST' in the Query type drop down.
->    This method allows you to change some parameters for the search.
+> 2. Open the Sequence section in the Query Builder. This method allows you to change some parameters for the search.
 > 3. Copy and paste the sequence in the ''Sequence'' field
-> 4. Press ''Submit query''.
+> 4. Press Enter or click on the Search Icon in the bottom corner.
 > 5. You should see the same structures popping up as you saw in the UniProt page of DnaK.
 {: .hands_on}
 
@@ -117,26 +101,8 @@ The PDB file with ID **1DKX** contains the atomic coordinates of the molecular c
 > 2. Type 1DKX in the search and try to answer the following questions.
 {: .hands_on}
 
-**TODO Add h5p quiz**
 
-### {% icon question %} Questions
-
-1. How many molecules were solved in this PDB file? What kind of molecules are these (proteins, peptides, DNA, ...)?
-2. Does the structure represent the full protein? If not, how many residues are missing? Hint: Click on the UniProt KB link in the Sequence tab to see the full sequence.
-3. Was this structure solved by X-Ray or NMR?
-4. What is the atomic resolution and R-factor?
-
-> <details markdown="1">
-> <summary>{% icon solution %} Solution
-> </summary>
-> 1. Two, called polymers or chains: they are polypeptides ![Type](../../images/Mol_desc_1DKX.png)
-> 2. To answer this question you can go to the sequence tab at the top:
->    - ![Uniprot view](../../images/Pdb_firstresiduesmissing_1dkx.png)
->    - Summary: a large chunk of the N-terminus is missing from the structure, the C-terminus is virtually complete.
-> 3. X-RAY diffraction, as shown by Experimental Details
-> 4. Atomic resolution: 2.00 Ångstrom and R-factor of 0.206
-> </details>
-{: .question}
+[h5p id="100"]
 
 
 ## Downloading the structure
