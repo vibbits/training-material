@@ -3,7 +3,7 @@ layout: tutorial_hands_on
 
 title: "01 Exploring the Protein Data Bank exercises"
 
-TODO What do you want to do with the ZENODO link below? AB: intro chapter with intructions to download and install | https://catalog.vib.be/apps/#/app/131 | https://training.vib.be/all-trainings/introduction-protein-structure-analysis-autumn-session 
+TODO What do you want to do with the ZENODO link below? AB: intro chapter with intructions to download and install | https://catalog.vib.be/apps/#/app/131 | https://training.vib.be/all-trainings/introduction-protein-structure-analysis-autumn-session
 
 
 zenodo_link: "https://data.bits.vib.be/pub/trainingen/PSA/"
@@ -41,31 +41,12 @@ The way of searching for a specific protein structure depends on the data you al
 > 3. Click on *Structure* in the left-side menu and then look at the *3D structure databases* table.
 {: .hands_on }
 
-<<<<<<< HEAD
 https://youtu.be/rVY6GGvzE10?list=PLHOTpM-hNSSUa1b-Ac_gcIhwQGcMRISFq
-=======
-**TODO Insert h5p. Adjust the 'why'-part of the exercise** aanvullen met opties die fout zijn / welk scenario draagt je voorkeur (2 of 3 opties)? 
+
+**TODO Insert h5p** aanvullen met opties die fout zijn / welk scenario draagt je voorkeur (2 of 3 opties)?
 **TODO where do we go from here? - scenario gebaseerde oefening / formaat screenshot of korte video
->>>>>>> e7656c794b288903a26802f6f174b0081784a7da
 
-
-<<<<<<< HEAD
 [h5p id="99"]
-=======
-Which structures (give the 4-character PDB ID) of the C-terminal domain of DnaK should preferentially be use for analysis and why?
-> <details markdown="1">
-> <summary>{% icon solution %} Solution
-> </summary>
->
-> As an example, have a look at https://www.ebi.ac.uk/pdbe/entry/pdb/4EZX under the section 'Experiments and Validation'. For many PDB structures, there is also a re-done structure available with a vast amount of information on the quality of the X-ray structure and suggested 'better' models e.g. (https://pdb-redo.eu/db/4ezx). In our case, we could opt for the structures 1DKX and 4EZX.
->
-> This is a difficult example since there are so many high resolution structures available. So, it is recommended to study the articles and compare the available structures to find your favorite structure for further analysis.
-> Why: Usually, the recommended selection criteria are using an X-ray structure (if available) with low resolution and low $R_{free}$ factor. Furthermore, the PDB database has pre-calculated a validation report for all of the structures.
->
-> </details>
-{: .solution}
-{: .question }
->>>>>>> e7656c794b288903a26802f6f174b0081784a7da
 
 
 ### Via the Protein Data Bank by PDB ID
