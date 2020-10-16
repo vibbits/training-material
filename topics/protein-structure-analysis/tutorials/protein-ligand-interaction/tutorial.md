@@ -78,28 +78,7 @@ We do not go into great detail on all the tools but only mention PoseView. With 
 ![Protein Plus Server](../../images/ProteinPlusPoseView.png "Overview of 3P0G")
 ![Zoom on ligand of 3P0G](../../images/3P0G_A_PoseView_Input.png "Zoom on ligand co-crystallized with 3P0G")
 
-**TODO Add h5p**
-
-> ### {% icon question %} Questions
->
-> 1. Between which amino acids and the ligand do you see hydrogen bonds using YASARA?
-> 2. According to PoseView, between which amino acids and the ligand do you see hydrogen bonds?
-> 3. What other interactions are presented in the sketch?
-> 4. Inspect the visualisation in Yasara: Do you see the interactions in Yasara as well?
->
-> <details markdown="1">
-> <summary>{% icon solution %} Solution
-> </summary>
->
-> 1. In YASARA, you observe hydrogen bonds between Asp113A as well as the carbonyl function of Asn312A and the charged amine function.
->    
-> 2. PoseView indicates hydrogen bonds between Asp113A as well as the carbonyl function of Asn312A and the charged amine function. Furthermore, hydrogen bonds are indicated between the phenolic OH and Ser207A and Ser203A as well as the amine function and Ser203A.
->
-> 3. Furthermore, hydrophobic interactions are indicated for the methylbenzyl moiety and pi-pi interactions of Phe290A and the phenolic moiety.
->
-> 4. With YASARA Structure license, those hydrophobic interactions can also be visualised.
-> </details>
-{: .question}
+https://youtu.be/0gKccDq62-s?list=PLHOTpM-hNSSUa1b-Ac_gcIhwQGcMRISFq
 
 
 # Exploring the structure of a nanobody-stabilized active state of the β2 adrenoceptor - the nanobody
@@ -122,22 +101,6 @@ In order to estimate the binding energy between the nanobody and the β2 adrenoc
 >    ```
 {: .hands_on}
 
-> ### {% icon question %} Questions
->
-> 1. What is the dG in the two cases?
-> 2. Any idea why the difference is rather hugh?
->
-> <details markdown="1">
-> <summary>{% icon solution %} Solution
-> </summary>
->
-> 1. first case (X-ray structure): Interaction energy between molecule(s) A and B in object 1 = -9.86 (kcal/mol)
->    second case:
->    Interaction energy between molecule(s) A and B in object 2 = -20.19 (kcal/mol)
-> 2. Through the energy minimisation of the Repair Object function, the interactions of the amino acids are optimised.  
-> </details>
-{: .question}
-
 This command also creates a list of residues forming the interface of the two proteins. Hit space to see the list of residues in the interface.
 
 Tip: This list can also be useful if you want to make visualisations of the interaction site.
@@ -146,6 +109,8 @@ Tip: This list can also be useful if you want to make visualisations of the inte
 Plugin>interface residues between A and B
 Plugin>TA66 TA68 IA72 IA127 RA131 AA134 IA135 TA136 SA137 PA138 FA139 KA140 QA142 YA219 VA222 EA225 AA226 LA266 KA267 EA268 AA271 LA272 TA274 LA275 IA278 IA325 YA326 RA328 SA329 PA330 SB27 IB28 FB29 SB30 IB31 TB33 AB50 IB51 eB52 SB56 TB57 NB58 YB100 AB102 VB103 LB104 YB105 EB106 YB107
 ```
+
+https://youtu.be/0gKccDq62-s?list=PLHOTpM-hNSSUa1b-Ac_gcIhwQGcMRISFq&t=891
 
 # Comparing the active and the inactive conformation of the β2 adrenoceptor
 
@@ -180,7 +145,7 @@ Tip: Color the secondary structures to better identify the individual chains/uni
 # Conclusion
 {:.no_toc}
 
-Sum up the tutorial and the key takeaways here. We encourage adding an overview image of the
+**Sum up the tutorial and the key takeaways here.** We encourage adding an overview image of the
 pipeline used.
 
 **TODO Adjust the sentence above.**

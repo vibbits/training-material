@@ -49,7 +49,6 @@ Help > Play help movie > General: Working with YASARA
 
 ## Scene styles
 
-**TODO Perhaps we can attach this file to this topic?**
 
 Open the PDB with code 1TRZ in YASARA.
 ```
@@ -203,23 +202,7 @@ This requires that the PovRay program has been installed. If such is not the cas
 
 <!-- end list -->
 
-**TODO Add h5p. Are there other answer options?**
-
-### {% icon question %} Questions
-
-What is the distance between the C-alpha (CA) atoms of Tyr19 and Leu16?
-
-> <details markdown="1">
-> <summary>{% icon solution %} Solution
-> </summary>
-> To solve the question you need to select a view that shows you atoms
-including C-alphas. Possible views or scene styles that show these atoms
-can be F1 (ball), F2 (stick), F3 (ball\&stick) and F4 (C-alpha). The
-views F5-F8 won't show you any CA's explicitly. Try it.
-> So you've probably noticed that pressing the CTRL button allows you to select multiple atoms. This is important for the next exercise.
-> The distance is 5.8 Ångstrom.
-> </details>
-{: .question}
+[h5p id="102"]
 
 ## Hydrogen bonds
 
@@ -241,21 +224,7 @@ View > Show interactions > Hydrogen bonds of> All > OK
 
 If the view is too chaotic for you, toggle off the sidechains with F8 (press untill the sidechains are hidden).
 
-**TODO Add h5p**
-
-### {% icon question %} Questions
-
-Do you see the typical helix and beta sheet pattern?
-
-Arg22 from Molecule/Chain B is making an hydrogen bonded electrostatic interaction (salt bridge) with another residue. Which residue?
-
-> <details markdown="1">
-> <summary>{% icon solution %} Solution
-> </summary>
-> The interaction partner is Glu17 from chain A.
-> </details>
-{: .question}
-
+[h5p id="102"]
 
 
 To remove the hydrogen bonds, you have multiple choices:
