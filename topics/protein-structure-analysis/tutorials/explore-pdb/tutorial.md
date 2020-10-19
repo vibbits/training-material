@@ -28,23 +28,8 @@ The way of searching for a specific protein structure depends on the data you al
 
 ![uniprotsearchbox.png](../../images/uniprotsearchbox.png "Search box")
 
-<<<<<<< HEAD
-=======
-**TODO Replace howto below with video? If so, where host it?** youtube Christof voor BITS account channel
->>>>>>> e7656c794b288903a26802f6f174b0081784a7da
-
-> ### {% icon hands_on %} Explore a PDB structure on the Uniprot web site
->
-> 1. Go to the UniProt website and search for the DnaK protein
-> - The UniProt search engine returns a list of DnaK protein sequences from a variety of organisms. An entry with accession code **P0A6Y8** and entry name **DNAK_ECOLI** should be near the top of this list.
-> 2. Click on the *accession code* (column Entry) to view the protein page of this DnaK from the model organism *Escherichia coli*.
-> 3. Click on *Structure* in the left-side menu and then look at the *3D structure databases* table.
-{: .hands_on }
 
 https://youtu.be/rVY6GGvzE10?list=PLHOTpM-hNSSUa1b-Ac_gcIhwQGcMRISFq
-
-**TODO Insert h5p** aanvullen met opties die fout zijn / welk scenario draagt je voorkeur (2 of 3 opties)?
-**TODO where do we go from here? - scenario gebaseerde oefening / formaat screenshot of korte video
 
 [h5p id="99"]
 

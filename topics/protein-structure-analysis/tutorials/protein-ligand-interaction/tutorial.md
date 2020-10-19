@@ -36,25 +36,7 @@ We will start with exploring one crystal structure of the β2 adrenoceptor. Toge
 
 Let's get the data first: Download the crystal structure 3P0G from the PDB into YASARA: File - Load - PDB file from internet.
 
-**TODO Add h5p**
-
-> ### {% icon question %} Questions
->
-> 1. How many molecules are present in the crystallized structures?
-> 2. And how many chain identifiers are used?
->
-> <details markdown="1">
-> <summary>{% icon solution %} Solution
-> </summary>
->
-> 1. There are three molecules, chain A Beta-2 adrenergic receptor; Endolysin, chain B Camelid Antibody Fragment, and a small molecule ligand.
-     Also have a look at PDBe [3P0G](https://www.ebi.ac.uk/pdbe/entry/pdb/3p0g) which gives a very nice overview of the structure and its composition.
-> 2. Only two chain identifiers A and B. Sometimes, this leads to issues depending on the software you might want to use for downstream processing.
->
-> </details>
->
->
-{: .question}
+[h5p id="104"]
 
 Some software routines need seperate chain identifiers for molecular entities to work correctly, so we suggest to rename the small molecule to chain L:
 
@@ -145,7 +127,7 @@ Tip: Color the secondary structures to better identify the individual chains/uni
 # Conclusion
 {:.no_toc}
 
-**Sum up the tutorial and the key takeaways here.** We encourage adding an overview image of the
-pipeline used.
+**TODO is this the correct conclusion**
+Visualisation of interaction types depends on settings of the visualising tool.
 
-**TODO Adjust the sentence above.**
+Visualisation techniques together with structural alignment lead to the discovery of biological insights.

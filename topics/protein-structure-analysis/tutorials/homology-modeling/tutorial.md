@@ -65,7 +65,7 @@ A suitable template structure to make a high quality model should have following
 - A good resolution (and R-factor): if many identical template structures exist with the same sequence, filter by resolution
 - Is solved by X-RAY, not NMR.
 
-**TODO Add h5p. Get responses. Get a few alternatives for the second question if multiple choice**
+**TODO Postponed. Add h5p. Get responses. Get a few alternatives for the second question if multiple choice**
 
 > ### {% icon question %} Questions
 >
@@ -93,7 +93,6 @@ Homology modelling evolved over the years and many online tools for homology mod
 
 Can you imagine what could be the reasons?
 
-**TODO Is there an answer for the question above?**
 
 # Building the homology model with Swiss Model
 
@@ -112,7 +111,7 @@ In our example, we take the [Swiss Model server](https://swissmodel.expasy.org/i
 >
 {: .hands_on}
 
-**TODO add h5p. The answer 1jxx.1.A is listed but does not appear among the 8 results shown. Can this be adjusted?**
+**TODO POSTPONED add h5p. The answer 1jxx.1.A is listed but does not appear among the 8 results shown. Can this be adjusted?**
 
 [h5p id="101"]
 

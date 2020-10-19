@@ -36,10 +36,6 @@ Help > Install program > PovRay
 
 ## Tutorial movie
 
-**TODO It would be nice to have that video right here. Is it on Youtube/Vimeo? In the course site I linked to https://www.youtube.com/watch?v=1xdJfUYwewU**
-
-**TODO There are some nice uniform videos available at https://www.youtube.com/user/NewProtTutorials Why do we not use these?**
-
 Play the movie "Working with YASARA":
 
 ```
@@ -67,8 +63,6 @@ The molecule will be loaded and presented in the ball style. Different scene sty
 * F7: Cartoon
 * F8: Toggle sidechains on/off (press multiple times and see what happens)
 
-**TODO FYI I linked here to https://www.youtube.com/watch?v=YNmxRdxxdug**
-
 **Be careful!** If you have just made a nice close-up of e.g. an active site where you show some residues and hide others, and put some atoms in balls while others are in sticks, you will lose everything when you press one of the F-keys!!! The F-keys change the viewing style without asking.
 
 Try all the different scene styles!
@@ -77,9 +71,8 @@ Try all the different scene styles!
 
 The function keys F1-F3 show all atoms and residues by default. The keys F4-F7 do not explicitly show atoms and residues but are merely a impressionistic representation of the structure. The F8 keys does, to a certain extent, show atoms, but only of side chains, not main chain atoms. Mostly to do structure analysis, we want to show only the most interesting residues, the ones we want to analyze, and hide all the others.
 
-The structure of insulin was crystallized together with some water molecules. In many cases, it is no problem to permanently delete those waters. To visualize the waters, select an atom view such as F1, F2 or F3. See the red water (oxygen) atoms floating around the surface?
+The structure of insulin was crystallized together with some water molecules. In many cases, it is no problem to permanently delete those waters. To visualize the waters, select an atom view such as F1, F2 or F3. See the red water (oxygen) atoms floating around the surface? Check the video at 1.13.
 
-TODO Is there a screenshot of this somewhere?
 
 ```
 Edit > Delete > Waters
@@ -105,8 +98,6 @@ Now show the atoms of His5 in Molecule B using a method of choice.
 And now that we're on it, what is special about the two cysteines we just visualized?
 
 **Hiding** individual atoms or residues works in the same way as showing them, only now you should go to **Hide atoms** in the menus.
-
-**TODO sentence above: menus a typo or are there in fact multiple menus? I corrected this to *menu*.**
 
 ## Showing and hiding secondary structure
 

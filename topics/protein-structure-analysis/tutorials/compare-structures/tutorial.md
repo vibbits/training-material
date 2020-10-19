@@ -71,20 +71,6 @@ High BFactors are yellow, low BFactors are blue.
 
 https://youtu.be/61wijsAFZlY?list=PLHOTpM-hNSSUa1b-Ac_gcIhwQGcMRISFq
 
-**TODO Is h5p wanted for this? If so, what are answer options? Is this a yes or a no?**
-
-### {% icon question %} Questions
-
-Do you see a correlation between the BFactors and the variability in the structure?
-
-> <details markdown="1">
-> <summary>{% icon solution %} Solution
-> </summary>
->
-> ![Structural alignemnt](../../images/aligned-structures.png)
->
->
-> </details>
 
 
 # Conclusion
