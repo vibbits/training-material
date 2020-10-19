@@ -3,7 +3,8 @@ layout: tutorial_hands_on
 
 title: "01 Exploring the Protein Data Bank exercises"
 
-TODO What do you want to do with the ZENODO link below? AB: intro chapter with intructions to download and install | https://catalog.vib.be/apps/#/app/131 | https://training.vib.be/all-trainings/introduction-protein-structure-analysis-autumn-session
+TODO What do you want to do with the ZENODO link below? AB: intro chapter with instructions to download and install | https://catalog.vib.be/apps/#/app/131 | https://training.vib.be/all-trainings/introduction-protein-structure-analysis-autumn-session
+GB Update: see Course page adjustments
 
 
 zenodo_link: "https://data.bits.vib.be/pub/trainingen/PSA/"

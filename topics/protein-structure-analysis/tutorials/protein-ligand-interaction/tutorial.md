@@ -127,7 +127,4 @@ Tip: Color the secondary structures to better identify the individual chains/uni
 # Conclusion
 {:.no_toc}
 
-**TODO is this the correct conclusion**
-Visualisation of interaction types depends on settings of the visualising tool.
-
-Visualisation techniques together with structural alignment lead to the discovery of biological insights.
+In these exercises, you have explored how visualisation techniques together with structural alignment, superposition and the use of FoldX to calculate interaction energies enables in-depth analysis of protein-protein and protein-ligand complexes.
