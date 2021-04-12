@@ -13,7 +13,7 @@ contributors:
 ---
 
 # 1. Introduction
-What if we have files that we do not want Git to track for us, like backup files or intermediate files created during data analysis? Remember that GitHub is not your next cloud storage infrastructure. Hence, your (big) data should not be uploaded on GitHub. Besides, there's a strict file size limit of 100MB so you won't even be able to do so. 
+What if we have files that we do not want Git to track for us, like backup files or intermediate files created during data analysis? Remember that GitHub is not your next cloud storage infrastructure. Hence, (big) data should not be uploaded on GitHub. In fact, there's a strict file size limit of 100MB so you won't even be able to do so. 
 
 Regardless of the above, it is often useful if your data is in the same projectfolder. And you can't help the fact that Jupyter Notebooks makes intermediate checkpoints (.ipynb_checkpoints) in the same folder of the notebook. 
 

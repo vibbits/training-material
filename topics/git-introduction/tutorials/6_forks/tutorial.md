@@ -106,11 +106,8 @@ A brief overview of the pull request is given in the following screen which eith
 
 
 # 5. Overview
-This is the easiest collaboration you'll probably do in a lifetime. To briefly summarize, the steps that we took were: *fork > edit > pull request (> merge)*. As mentioned before this is only possible if the upstream repository didn't change (too much). If this were to be the case, there might be one additional step in which you have to solve conflicts in the pull request. 
 
-If your changes were a bit more complex and needed to be performed on your local computer, the steps would extent to:
-
-To briefly summarize, the steps that we took were: *fork > clone(> branch > edit-stage-commit-push > pull request (> merge)*. 
+To briefly summarize, the steps that we took were: *fork > clone(> branch > edit-stage-commit-push > pull request (> merge)* and represent a strategy for collaborating on projects. These strategies are especially useful when we do not have authorisation to change the content of someone else's project, even though we still have a useful edit/suggestion in mind.    
 What if the upstream repository changed while you were working on your local repository? In this case a pull request should be done in which the receiving branch is your forked repository. Hence, the order of the branches as depicted in the figure above would be swapped.    
 
 
