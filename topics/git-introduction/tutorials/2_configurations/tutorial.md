@@ -94,4 +94,6 @@ If at some point we are not happy any more about an alias, we can delete it with
 git config --global --unset alias.<command>
 ```
 
+---
+
 Let's go to the [next session](https://material.bits.vib.be/topics/git-introduction/tutorials/3_first_commit/tutorial.html)!

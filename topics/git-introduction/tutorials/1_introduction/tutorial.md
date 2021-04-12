@@ -61,4 +61,7 @@ Notice that the repository is not yet visible on [github.com](https://github.com
 
 During our adventure through Git & GitHub we'll use some specific glossary. Confused on what the meaning of all these new words are? Check out the [GitHub glossary](https://help.github.com/en/github/getting-started-with-github/github-glossary).
 
+
+---
+
 Let's go to the [next session](https://material.bits.vib.be/topics/git-introduction/tutorials/2_configurations/tutorial.html)!
