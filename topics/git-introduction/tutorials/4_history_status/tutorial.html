@@ -254,17 +254,17 @@
 <p>Git can display the state of your working directory and staging area. The command that we’ll use for this is <code class="language-plaintext highlighter-rouge">git status</code> and depending on the situation the output will look differently, but it will always give you some informative status description.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git status
-On branch master
-Your branch is up to date with 'origin/master'.
+On branch main
+Your branch is up to date with 'origin/main'.
 
 nothing to commit, working tree clean
 </code></pre></div></div>
-<p>The first sentence tells us that we’re on the <code class="language-plaintext highlighter-rouge">master</code> branch, which is the default branch name in Git. More on branches later. The second sentence tells us that our local branch is exactly the same as our origin. This means that all of the files and folders within our local project are identical to the ones in the remote GitHub repo. Lastly, git tells us that there is nothing to commit, which makes sense as we don’t have any changes at the moment.</p>
+<p>The first sentence tells us that we’re on the <code class="language-plaintext highlighter-rouge">main</code> branch, which is the default branch name in Git. More on branches later. The second sentence tells us that our local branch is exactly the same as our origin. This means that all of the files and folders within our local project are identical to the ones in the remote GitHub repo. Lastly, git tells us that there is nothing to commit, which makes sense as we don’t have any changes at the moment.</p>
 
 <p>Let’s make some changes to one of our files again.  Check the status again with <code class="language-plaintext highlighter-rouge">git status</code>.</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git status
-On branch master
-Your branch is up to date with 'origin/master'.
+On branch main
+Your branch is up to date with 'origin/main'.
 
 Changes not staged for commit:
   (use "git add &lt;file&gt;..." to update what will be committed)
@@ -282,8 +282,8 @@ no changes added to commit (use "git add" and/or "git commit -a")
 <p>Add the file to the staging area and check the status again with <code class="language-plaintext highlighter-rouge">git status</code></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git status
-On branch master
-Your branch is up to date with 'origin/master'.
+On branch main
+Your branch is up to date with 'origin/main'.
 
 Changes to be committed:
   (use "git restore --staged &lt;file&gt;..." to unstage)
@@ -292,22 +292,22 @@ Changes to be committed:
 <p>The file is now in the staging area and we have two options:</p>
 <ul>
   <li>Use <code class="language-plaintext highlighter-rouge">git commit -m "some informative text"</code> to commit the changes to the commit repository</li>
-  <li>Use <code class="language-plaintext highlighter-rouge">git restore --staged plot1.R</code> to pull the file back out of the staging area.</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">git restore --staged plot1.R</code> to remove the file from the staging area.</li>
 </ul>
 
 <p>Let’s do the latter, check the status again and then remove the changes from your working directory.</p>
 
 <h1 id="5-the-history-log">5. The history (log)</h1>
-<p>Besides checking the state of your project with <code class="language-plaintext highlighter-rouge">git status</code>, there is also a possibility to have a look in your commit history. In order to list all your previous commits, enter <code class="language-plaintext highlighter-rouge">git log</code>. The output is a long list containing several blocks like this:</p>
+<p>Besides checking the current state of your project with <code class="language-plaintext highlighter-rouge">git status</code>, there is also a possibility to have a look in your commit history. In order to list all your previous commits, enter <code class="language-plaintext highlighter-rouge">git log</code>. The output is a long list containing several blocks like this:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>commit e2d7e9a0b4614a6bee6b3ffd7583237125671dc1
 Author: username &lt;user@xyz.com&gt;
 Date:   Wed Jan 01 01:23:45 2020 +0200
 
     The informative commit message
 </code></pre></div></div>
-<p><code class="language-plaintext highlighter-rouge">git log</code> lists all commits made to a repository in reverse chronological order. Each commit starts with an identifier which is a unique code for each commit. Besides the identifier, the commit’s author and date are given, and the log message Git was given when the commit was created.</p>
+<p><code class="language-plaintext highlighter-rouge">git log</code> lists all commits made to a repository in reverse chronological order. Each commit starts with an identifier which is a unique code for each commit (hash). Besides the identifier, the commit’s author and date are given, and the commit message is given.</p>
 
-<p>If we have pushed the commits to our Github repository (online) we will see the last commit ID somewhere in the upper right corner. This is a verification for us so we know that the remote repository is up to date with the local repository.</p>
+<p>If we have pushed the commits to our Github repository (online) we will see the last commit ID somewhere in the upper right corner. This is a verification for us so we know that the remote repository is up to date with the local repository. Can you also find an overview of all commits in GitHub?</p>
 
 <hr />
 
@@ -320,7 +320,7 @@ Date:   Wed Jan 01 01:23:45 2020 +0200
     <details>
       <summary><i class="fa fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution
 </summary>
-      <p>It’s obvious that in this local project we’ve been doing all the changes &amp; commits. However at a certain point you migth cooperate with someone else on the same project. In this case it’s useful to know who did what changes.</p>
+      <p>It’s obvious that in this local project we’ve been doing all the changes &amp; commits. However at a certain point you migth collaborate with someone else on the same project. In this case it’s useful to know who did what changes.</p>
 
     </details>
   </blockquote>
@@ -329,10 +329,11 @@ Date:   Wed Jan 01 01:23:45 2020 +0200
 
 <hr />
 
-<p>Git log can be extended with many other parameters. You can also combine it with the <code class="language-plaintext highlighter-rouge">--oneline</code> parameter. One useful combination adds <code class="language-plaintext highlighter-rouge">--graph</code> to display the commit history as a text-based graph and <code class="language-plaintext highlighter-rouge">--decorate</code> to indicate which commits are associated with the current HEAD, the current branch master, or other Git references.</p>
+<p>Git log can be extended with many other parameters, e.g. combine it with the <code class="language-plaintext highlighter-rouge">--oneline</code> argument, or add <code class="language-plaintext highlighter-rouge">--graph</code> to display the commit history as a text-based graph and <code class="language-plaintext highlighter-rouge">--decorate</code> to indicate which commits are associated with the current HEAD, the current branch main, or other Git references. Git’s aliases are very useful in this case as the way how the history is displayed is very personal. With this information you should understand the last section of <a href="https://material.bits.vib.be/topics/git-introduction/tutorials/2_configurations/tutorial.html">Chapter 2</a> better and create your own alias.</p>
 
 <hr />
-<p>Extra reading:</p>
+
+<p><strong>Intermezzo / extra reading</strong>:</p>
 
 <p>When the output of git log is too long to fit in your screen, git uses a program to split it into pages of the size of your screen. When this “pager” is called, you will notice that the last line in your screen is a :, instead of your usual prompt.</p>
 <ul>
@@ -341,9 +342,9 @@ Date:   Wed Jan 01 01:23:45 2020 +0200
   <li>To search for <code class="language-plaintext highlighter-rouge">some_word</code> in all pages, press <code class="language-plaintext highlighter-rouge">/</code> and type <code class="language-plaintext highlighter-rouge">some_word</code>. Navigate through matches pressing <code class="language-plaintext highlighter-rouge">N</code> (next).</li>
 </ul>
 
-<p>To avoid having <code class="language-plaintext highlighter-rouge">git log</code> cover your entire terminal screen, you can limit the number of commits that Git lists by using <code class="language-plaintext highlighter-rouge">-N</code>, where <code class="language-plaintext highlighter-rouge">N</code> is the number of commits that you want to view. For example, if you only want information from the last commit you can use <code class="language-plaintext highlighter-rouge">git log -1</code>. Otherwise, if you want to reduce the quantity of information, using the <code class="language-plaintext highlighter-rouge">git log --oneline</code> command is also a good option.</p>
-
 <hr />
+
+<p>Let’s continue with the <a href="https://material.bits.vib.be/topics/git-introduction/tutorials/5_branches/tutorial.html">next session</a>!</p>
 
 
 

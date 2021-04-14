@@ -169,7 +169,7 @@
   },
   "url": "https://material.bits.vib.be//topics/git-introduction/tutorials/5_branches/tutorial.html",
   "timeRequired": "PT40M",
-  "description": "5 Branches and merging\\nThe questions this  addresses are:\n - How to test new features in code\n\n\\nThe objectives are:\n - Understand why branches are useful\n - Create new branches in GitHub or locally\n - Merge a new feature into a master branch\n - \n\n",
+  "description": "5 Branches and merging\\nThe questions this  addresses are:\n - How to test new features in code\n\n\\nThe objectives are:\n - Understand why branches are useful\n - Create new branches in GitHub or locally\n - Merge a new feature into a main branch\n\n",
   "hasPart": [
 
   ],
@@ -228,9 +228,7 @@
             
             <li>Create new branches in GitHub or locally</li>
             
-            <li>Merge a new feature into a master branch</li>
-            
-            <li></li>
+            <li>Merge a new feature into a main branch</li>
             
             </ul>
 
@@ -259,21 +257,21 @@
 
 <hr />
 
-<p>The original repository is always called the <em>master</em> branch.</p>
+<p>The original repository is now called the <em>master</em> branch, however historically was called the <em>main</em> branch.</p>
 
-<p>When a new GitHub repository is made, it’s initialized by default with one branch: the <em>master</em> branch. All the changes in our project that we did so far, have hence always been in this master branch. Remember that when we did <code class="language-plaintext highlighter-rouge">git status</code> we read a line saying that we were on the master branch.</p>
+<p>A new GitHub repository is initialized by default with one branch: the <em>main</em> branch. All the changes in our project that we did so far, have hence always been in this main branch. Remember that when we did <code class="language-plaintext highlighter-rouge">git status</code> we read a line saying that we were on the main branch.</p>
 
 <p>If we would make a new branch, we can name it however we like (e.g. <em>new-feature</em>). There are two ways of doing this: locally or on the GitHub website. We will first show you the latter (section 2) and afterwards how to do it locally via Git Bash or the Terminal (section 4).</p>
 
 <p>A repository can have numerous branches. Branches are ways of organising work on a project: you can have a branch for a new feature, for trying out something new, for exploring an issue - anything at all.</p>
 
-<p>It’s a good practice to create a new branch for every new bit of work you start doing, even if it’s a very small one. It’s especially useful to create a new branch for every new feature you start work on. Branches are of course disposable, you can always remove them.</p>
+<p>It’s a good practice to create a new branch for every new bit of work you start doing, even if it’s a very small one. It’s especially useful to create a new branch for every new feature you start working on. Branches are of course disposable, you can always remove them.</p>
 
 <h1 id="2-branching-on-github">2. Branching on GitHub</h1>
-<p>The easiest way is to make a new branch on GitHub.</p>
+<p>We can make a new branch on GitHub.</p>
 <ol>
-  <li>Click the button: ‘Branch: master’</li>
-  <li>In ‘Find or create a branch…’ type <code class="language-plaintext highlighter-rouge">new-feature</code></li>
+  <li>Click the button: ‘Main’</li>
+  <li>In ‘Find or create a branch…’ type <code class="language-plaintext highlighter-rouge">new-feature</code> (or any other name)</li>
   <li>Click ‘Create branch’: new-feature</li>
 </ol>
 
@@ -283,7 +281,7 @@
 
 <hr />
 
-<p>GitHub will now display in that button that it is on <code class="language-plaintext highlighter-rouge">Branch: new-feature</code>. It’s very important to understand that any changes that happen in this branch, will not be visible in the master branch.</p>
+<p>GitHub will now display <code class="language-plaintext highlighter-rouge">new-feature</code>. It’s very important to understand that any changes that happen in this branch, will not be influencing the main branch.</p>
 
 <hr />
 
@@ -315,12 +313,12 @@
 
 <hr />
 
-<p>Switch back to your <em>master</em> branch and have a look to the <code class="language-plaintext highlighter-rouge">plot2.R</code>-file. It shouldn’t contain the changes that we just made.</p>
+<p>Switch back to your <em>main</em> branch and have a look to the <code class="language-plaintext highlighter-rouge">plot2.R</code>-file. It shouldn’t contain these changes.</p>
 
 <h1 id="3-merging-branches-on-github">3. Merging branches on GitHub</h1>
-<p>Before exploring how we make branches on our computer locally, we’ll merge the changes in the <em>new-feature</em> branch into the <em>master</em> branch. Test branches are merged into the master branch by making a <strong>pull request</strong>. In this section we will explain how to do a pull request.</p>
+<p>Before exploring how we make branches on our computer locally, we’ll merge the changes in the <em>new-feature</em> branch into the <em>main</em> branch. Branches are merged by making a <strong>pull request</strong>. In this section we will explain how to do a pull request, often shorted to PR.</p>
 
-<p>Whether you’re on the <em>master</em> or <em>new-feature</em> branch, doesn’t matter. In both cases you should see the following yellow screen. Alternatively, go to ‘Pull requests’ and find it there.</p>
+<p>Whether you are on the <em>main</em> or <em>new-feature</em> branch, doesn’t matter. In both cases you should see the following yellow screen. Alternatively, go to ‘Pull requests’ and find it there.</p>
 
 <hr />
 
@@ -328,7 +326,7 @@
 
 <hr />
 
-<p>Click on ‘compare &amp; pull requests’. A new screen pops-up with the following information.</p>
+<p>Click on <strong>compare &amp; pull requests</strong> or go to the section <strong>Pull requests</strong> and create a <strong>New pull request</strong> (select the branches you want to incorporate). A new screen pops-up with the following information.</p>
 
 <hr />
 
@@ -337,13 +335,17 @@
 <hr />
 
 <ul>
-  <li>The pull request should be interpreted as a request to pull the new branch and all of its changes into the master branch.</li>
-  <li>The base where it would be pulled towards is <code class="language-plaintext highlighter-rouge">base: master</code>. The branch where the changes are deriving from is <code class="language-plaintext highlighter-rouge">compare: new-feature</code>.</li>
+  <li>The pull request should be interpreted as a request to pull the new branch and all of its changes into the main branch.</li>
+  <li>The base where it would be pulled towards is <code class="language-plaintext highlighter-rouge">base: main</code>. The branch where the changes are deriving from is <code class="language-plaintext highlighter-rouge">compare: new-feature</code>.</li>
   <li>Note that GitHub checks the compatibility of the branches: in this case there are no conflicting edits and the branches can be merged together.</li>
   <li>Give a descriptive title text and if appropriate some additional comment.</li>
 </ul>
 
 <p>Underneath the pull request related information, GitHub also gives you a summary of the changes that were done.</p>
+<ul>
+  <li>Each commit from the branch <em>new-feature</em> (i.e. only added these 7 lines in this case)</li>
+  <li>Display of the file and a visual representation of what changed in that commit.</li>
+</ul>
 
 <hr />
 
@@ -351,14 +353,9 @@
 
 <hr />
 
-<ul>
-  <li>Each commit that’s done in the branch <em>new-feature</em> (i.e. only added these 7 lines in this case)</li>
-  <li>Display of the file and a visual representation of what changed in that commit.</li>
-</ul>
+<p>Click on <strong>Create pull request</strong> to finalize the creation of the PR. Note that the the branches are not merged yet, one more comment before we do that! We know that GitHub allows us to collaborate on projects. Here we can find some of the features that GitHub is providing us to start collaborating. We could for example start a conversation here and discuss the PR, select a (couple of) reviewer(s), add assignees who authored, add labels representing what type of edits were done in the branch, etc. Essentially these are valuable for organizing bigger projects; keep track of who’s working on what and who needs to review specific changes, etc.</p>
 
-<p>Click on ‘Create pull request’.</p>
-
-<p>Finally, the last screen pops up in which you verify the merging commit and you give your consent to GitHub to merge both branches by clicking ‘Merge pull request’.</p>
+<p>Finally, we verify the merge pull request commit and you give your consent to GitHub to merge both branches by clicking ‘Merge pull request’.</p>
 
 <hr />
 
@@ -366,30 +363,28 @@
 
 <hr />
 
-<p>It might be possible that in a project with several people, you’re not authorized to make changes to the <em>master</em> branch. In this case you’ll always have to work in a separate branch and someone else will get this last message. He or she will then decide whether this pull request should be merged.</p>
+<p>It might be possible that in a project with several people, you are not authorized to make changes to the <em>main</em> branch. In this case you will always have to work in a separate branch and someone else will get this last message. He or she will then decide whether this pull request should be merged.</p>
 
 <h1 id="4-branching-locally">4. Branching locally</h1>
-<p>Besides the possibility of making branches on GitHub, we can also do it locally on our computer.</p>
+<p>Besides the possibility of making branches on GitHub, we can also do it locally on our computer. As we’ve made changes to the repository on GitHub, we’ll start with pulling the changes into our local repository. Use <code class="language-plaintext highlighter-rouge">git pull</code> in your project folder.</p>
 
-<p>As we’ve made changes to the repository on GitHub, we’ll start with pulling the changes into our local repository. Use <code class="language-plaintext highlighter-rouge">git pull</code> in your project folder.</p>
-
-<p>There is always an indication in the Terminal or Git Bash of which branch we’re in (i.e. ‘(master)’). Here are the most important commands related to making branches and switching between different branches:</p>
+<p>There is always an indication in the Terminal or Git Bash of which branch we are in (i.e. <em>main</em>). Here are the most important commands related to making branches and switching between different branches:</p>
 <ol>
+  <li>Listing all the existing branches is possible with <code class="language-plaintext highlighter-rouge">git branch -a</code></li>
   <li><code class="language-plaintext highlighter-rouge">git checkout -b &lt;new-branch&gt;</code>: will create a new branch and move into this branch.</li>
-  <li><code class="language-plaintext highlighter-rouge">git branch &lt;new-branch&gt;</code>: will create a new branch, but will remain in the current branch (i.e. the <em>master</em> branch in this case)</li>
+  <li><code class="language-plaintext highlighter-rouge">git branch &lt;new-branch&gt;</code>: will create a new branch, but will remain in the current branch (i.e. the <em>main</em> branch in this case)</li>
   <li>With <code class="language-plaintext highlighter-rouge">git checkout &lt;branch&gt;</code> we will switch from one branch to the other.</li>
-  <li>Listing all the existing branches is possible with <code class="language-plaintext highlighter-rouge">git branch -a</code>:</li>
 </ol>
 
 <p>Let’s start with listing all the existing branches (4).</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* master
-remotes/origin/HEAD -&gt; origin/master
-remotes/origin/master
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* main
+remotes/origin/HEAD -&gt; origin/main
+remotes/origin/main
 remotes/origin/new-feature
 </code></pre></div></div>
-<p>The first branch is our local master branch in which we’re working at the moment (as denoted by the asterisk *). The three others relate to the branches that exist remotely on GitHub. If we want to work on the branch <em>new-feature</em> we will have to import it first with: <code class="language-plaintext highlighter-rouge">git checkout new-feature</code> (3). Git will understand that there is a remote branch with the same name and you want to work on this one.</p>
+<p>The first branch is our local <em>main</em> branch in which we are currently working (as denoted by the asterisk *). The three others relate to the branches that exist <strong>remotely</strong> on GitHub. If we want to work on the branch <em>new-feature</em> we will have to import it first with: <code class="language-plaintext highlighter-rouge">git checkout new-feature</code>. Git will understand that there is a remote branch with the same name and you want to work on this one.</p>
 
-<p><strong>Note</strong> that if you use <code class="language-plaintext highlighter-rouge">git checkout -b new-feature</code> (2), you would have created a new branch with the same name as the remote branch. This is error prone and will lead to problems!</p>
+<p><strong>Note</strong> that if you use <code class="language-plaintext highlighter-rouge">git checkout -b new-feature</code>, you would have created a new branch with the same name as the remote branch. This is error prone and will lead to problems! Hence, it is really important that you switch from branch and not create a new one!</p>
 
 <h2 id="41-example-workflow">4.1. Example workflow</h2>
 <p>An example workflow is depicted in the figure below and is discussed in the following points.</p>
@@ -403,17 +398,17 @@ remotes/origin/new-feature
 <p><strong>1. Make a new branch:</strong></p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout -b &lt;new-branch&gt;
 </code></pre></div></div>
-<p>Git will make a new branch with the name <code class="language-plaintext highlighter-rouge">&lt;new-branch&gt;</code> and tell you it switched to the new branch. If you want to change branches, just type <code class="language-plaintext highlighter-rouge">git checkout</code> followed by the name of the branch, e.g. <code class="language-plaintext highlighter-rouge">git checkout master</code>.</p>
+<p>Git will make a new branch with the name <code class="language-plaintext highlighter-rouge">&lt;new-branch&gt;</code> and tell you it switched to the new branch. If you want to change branches, just type <code class="language-plaintext highlighter-rouge">git checkout</code> followed by the name of the branch, e.g. <code class="language-plaintext highlighter-rouge">git checkout main</code>.</p>
 
-<p><strong>2. Make the necessary changes:</strong></p>
+<p><strong>2. Make some changes:</strong></p>
 <ul>
-  <li>Add  a new file</li>
-  <li>Add new code to an existing file</li>
+  <li>Add a new file</li>
+  <li>Edit an existing file</li>
 </ul>
 
 <p><strong>3. Stage changes:</strong><br />
 Use the following  command to simply add all the new or changed files.</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add .
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add -A
 </code></pre></div></div>
 
 <p><strong>4. Commit staging area:</strong><br />
@@ -422,6 +417,7 @@ Commit all the staged files with:</p>
 </code></pre></div></div>
 
 <p><strong>5. Push commits to GitHub:</strong></p>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push origin &lt;new-branch&gt;
 </code></pre></div></div>
 <p>or alternatively:</p>
@@ -429,14 +425,14 @@ Commit all the staged files with:</p>
 </code></pre></div></div>
 <p>The <code class="language-plaintext highlighter-rouge">git push</code> command is now a bit longer. The first time we want to publish a new local branch on a remote repository (GitHub), we need to be explicit and tell Git to add the <code class="language-plaintext highlighter-rouge">&lt;new-branch&gt;</code> to the origin. In Git, the “origin” is used to refer to the GitHub original repository’s URL and makes it much easier to talk about.</p>
 
-<p>Next time you want to push your commits from <em>new-branch</em>, you won’t need to be explicit - you can simply do <code class="language-plaintext highlighter-rouge">git push</code>, because now <em>new-branch</em> exists on GitHub and both branches know how to commmunicate with each other. However, it’s still a good idea to be explicit. That way it’ll be less likely to push something to the wrong branch.</p>
+<p>Next time you want to push your commits from <em>new-branch</em>, you won’t need to be explicit - you can simply do <code class="language-plaintext highlighter-rouge">git push</code>, because now <em>new-branch</em> exists on GitHub and both branches know how to commmunicate with each other.</p>
 
 <hr />
 
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-exercise-6"><i class="fa fa-pencil" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Exercise 6</h3>
 
-  <p>Make a new branch and make sure you’re in the branch. Rewrite the README.md file so it contains the following text. Once the changes have been committed and pushed, create a pull request and merge the changes into the master branch.</p>
+  <p>Make a new branch and make sure you’re in the branch. Rewrite the README.md file so it contains the following text. Once the changes have been committed and pushed to GitHub, create a pull request and merge the changes into the main branch.</p>
 
   <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Downstream data-analysis R
 This repository contains all the scripts for the downstream data analysis of my project.
@@ -461,31 +457,21 @@ This repository contains all the scripts for the downstream data analysis of my 
 </blockquote>
 <hr />
 
+<p>As a final note on merging branches, we mention here that it is obviously also possible to merge branches on our computer locally. For this, we refer to some further reading materials linked <a href="https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging">here</a>.</p>
+
 <h1 id="5-deleting-branches">5. Deleting branches</h1>
 
 <h2 id="51-via-github">5.1. Via GitHub</h2>
 
-<p>If a branch is of no more use, we can delete it. To find all the existing branches:</p>
-<ol>
-  <li>
-    <h2 id="in-the-new-github-website-click-on-branches-in-the-upper-right-of-the-repository-right-underneath-clone">In the new GitHub website, click on <em>branches</em> in the upper right of the repository (right underneath Clone)</h2>
-  </li>
-</ol>
+<p>If a branch is of no more use, we can delete it. To find all the existing branches in GitHub, click on <em>branches</em> in the top left corner of the repository.</p>
+
+<hr />
 
 <center><img src="../../images/deleting-branch-1-update.PNG" /></center>
 
 <hr />
-<ol>
-  <li>In the slightly older version, click on <em>branches</em> in the area depicted in figure below</li>
-</ol>
 
-<hr />
-
-<center><img src="../../images/deleting-branch-1.PNG" /></center>
-
-<hr />
-
-<p>After successfully merging our changes in the branch created during the exercise above, it can be deleted. Click on the waste bin:</p>
+<p>After successfully merging our changes in the <em>main</em> branch, the old one(s) can be deleted. Click on the waste bin:</p>
 
 <hr />
 
@@ -503,6 +489,10 @@ This repository contains all the scripts for the downstream data analysis of my 
 </code></pre></div></div>
 
 <p>If git refuses to do so, there is a forced way to do it as well by using the capital <code class="language-plaintext highlighter-rouge">-D</code> parameter.</p>
+
+<hr />
+
+<p>Let’s continue with the <a href="https://material.bits.vib.be/topics/git-introduction/tutorials/6_forks/tutorial.html">next session</a>!</p>
 
 
 

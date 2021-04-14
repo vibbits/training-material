@@ -169,7 +169,7 @@
   },
   "url": "https://material.bits.vib.be//topics/git-introduction/tutorials/1_introduction/tutorial.html",
   "timeRequired": "PT20M",
-  "description": "1 Introduction\\nThe questions this  addresses are:\n - Why should I version control and how to get started?\n - How does Git work in its essence?\n\n\\nThe objectives are:\n - Understand why version controlling is essential in different projects\n - Explain how Git's conceptual areas work together\n\n",
+  "description": "1 Introduction\\nThe questions this  addresses are:\n - Why should I version control and how to get started?\n - How does Git work in its essence?\n\n\\nThe objectives are:\n - Understand why version control is essential in research projects\n - Explain how Git's conceptual areas interact\n\n",
   "hasPart": [
 
   ],
@@ -226,9 +226,9 @@
             <strong><i class="fa fa-bullseye" aria-hidden="true"></i><span class="visually-hidden">objectives</span> Objectives</strong>
             <ul>
             
-            <li>Understand why version controlling is essential in different projects</li>
+            <li>Understand why version control is essential in research projects</li>
             
-            <li>Explain how Git's conceptual areas work together</li>
+            <li>Explain how Git's conceptual areas interact</li>
             
             </ul>
 
@@ -249,7 +249,7 @@
             <div class="row">
                 <div class="col-md-10" role="main">
                     <h1 id="1-introduction">1. Introduction</h1>
-<p>Git is an open-source tool that keeps track of changes to your files avoiding horrible situations depicted in the figure below. It works similar to <a href="https://support.google.com/drive/answer/2409045?co=GENIE.Platform%3DDesktop&amp;hl=en">Google Docs’</a> history feature in which Google automatically saves your document and the changes that happened on a particular moment in time. However, Git allows you to control and decide yourself when changes are worth saving, hence making it much more powerful and flexible. Each change is saved together with a message that enables you or your collaborators to keep an overview of the history of the project.</p>
+<p>Have you also been in a similar and recognizable situation as depicted below? Saving different versions of your files and scripts is essential to keep track of changes, though it can become chaotic very quickly if we do not use the excellent tools we have available to us. Git is one of these excellent tools. It works similar to <a href="https://support.google.com/drive/answer/2409045?co=GENIE.Platform%3DDesktop&amp;hl=en">Google Docs’</a> history feature in which Google automatically saves your document and the changes that happened at a particular moment in time. However, Git allows you to control and decide yourself when changes are worth saving, hence making it much more powerful and flexible. Each change is saved together with a message that enables you or your collaborators to keep an overview of the history of the project.</p>
 
 <hr />
 
@@ -257,45 +257,48 @@
 
 <hr />
 
-<p>Git is an open-source tool that manages your project (files) by keeping track of each version of these files throughout its history. It starts with a base version</p>
+<p>Git is an open-source tool that keeps track of the changes made to your project files throughout their history.</p>
 
 <p>Why should you version control?</p>
 <ul>
   <li><strong>Keeping track of changes</strong> to your files done by yourself or your collaborators. At any moment you can exploit the history of the project to see who wrote what on a particular day. It even allows you to go back to a specific version or undo specific edits.</li>
   <li><strong>Synchronizes files between different people or infrastructures</strong> (i.e. laptops, servers, …), making it a powerful collaborating system.</li>
-  <li><strong>Testing new code</strong>. Git can control multiple side versions of the same project in which you can make some changes and only when you or your collaborators are happy with hem, you can include them in the main version.</li>
+  <li><strong>Testing new code/changes</strong>. Git can control multiple alternative versions of the same project in which you can make some changes and only when you or your collaborators are happy with hem, you can include them in the main version.</li>
 </ul>
 
-<p>There is a major difference between Git and GitHub though. Git works on the command line of e.g. your computer, whereas GitHub is a service for connecting and uploading/downloading files much like saving files in the cloud. Alternatives for GitHub are Gitlab, Bitbucket, etc. In this course we will learn how Git works on the core of your computer which will give us proper understanding of its functionalities. Grasping these concepts is important if we want to use Git’s version controlling in other apps (cfr. <a href="https://material.bits.vib.be/topics/git-introduction/tutorials/8_github_rstudio/tutorial.html">8 GitHub and RStudio</a>)</p>
+<p>There is a major difference between Git and GitHub though. Git is software that works on your computer, whereas GitHub is a service for connecting and uploading/downloading files much like saving files in the cloud. There are some alternatives for Git (<a href="https://www.g2.com/products/git/competitors/alternatives">link</a>) which will not be discussed in this course, and there are some for GitHub with Gitlab and Bitbucket as main competitors. These alternatives essentially share the same concepts and therefore we choose for the tools that enjoy the most traction in the community, namely Git and GitHub. In this course we will learn how Git works on your computer, giving us a proper understanding of its functionalities. Grasping these concepts is important if we want to use Git in other apps (e.g. in <a href="https://material.bits.vib.be/topics/git-introduction/tutorials/8_github_rstudio/tutorial.html">Chapter 8</a> we will learn how GitHub and RStudio interact).</p>
 
 <h1 id="2-installations">2. Installations</h1>
-<p>For this course we will explore version controlling in a mixture of <a href="https://github.com/">GitHub online</a> &amp; <a href="https://git-scm.com/">Git</a> on the command line. The latter requires some basic understanding of the Linux command line. If you’re not familiar with Linux command line, you can have a look at the materials <a href="(https://material.bits.vib.be/topics/linux/)">here</a>. After discussing Git’s essential features, we’ll introduce how you can make life easier with Git(Hub)’s integration in Rstudio.</p>
+<p>For this course we will explore version controlling in a mixture of <a href="https://git-scm.com/">Git</a> via the command-line and <a href="https://github.com/">GitHub</a>. The former requires some basic understanding of the Linux command line. If you’re not familiar with Linux command line, you can have a look at the materials <a href="(https://material.bits.vib.be/topics/linux/)">here</a>. After discussing Git’s essential features, we’ll introduce how you can setup a collaboration with externals or colleagues, how to integrate version controlling in Rstudio, etc.</p>
 
 <ul>
-  <li>Git can be installed for any OS (Windows, Mac or Linux) from <a href="https://git-scm.com/downloads">this link</a>.</li>
+  <li>Git can be installed for any OS (Windows, Mac or Linux) from <a href="https://git-scm.com/downloads">this link</a>. Please keep the recommended and default settings as is.</li>
   <li>Make an account on <a href="https://github.com/">GitHub</a>.</li>
-  <li>GitHub Desktop can be installed from <a href="https://desktop.github.com/">this link</a>.</li>
 </ul>
 
 <p>We will address further configurations in the next chapter.</p>
 
 <h1 id="3-three-conceptual-areas">3. Three conceptual areas</h1>
-<p>Before diving in, let’s have a look at how Git works. It’s important to understand the three conceptual areas that exist locally when using Git on your computer: the development area, the staging area and the repository containing the commits.</p>
+<p>Before diving in, let’s have a look at how Git works. It’s important to understand the three conceptual areas that exist locally when using Git on your computer: the development area, the staging area and the repository containing the commits. We already know that we want to use Git for keeping track of changes in our files. To keep track of those changes we need to run through these conceptual areas: first we edit a file on our computer (development area), then we tell Git about it (add it to the staging area) and lastly we commit those changes (commits repository). Let’s have a closer look:</p>
 
 <p><img src="../../images/conceptual_areas.png" alt="Three conceptual areas" /></p>
 
 <ol>
-  <li>The <strong>development area</strong> is where your coding happens. Usually this is a folder with multiple files on your computer. Git will never change anything at this level, actually it won’t really do anything. The only thing Git does is remembering that it needs to keep track of changes made in this folder or its files. Initializing Git on a project is only done once in the beginning.</li>
-  <li>The <strong>staging area</strong> is an intermediate stage which assembles the files with changes you want to save. Imagine that we want to save a file, we first have to add it to the staging area before we can commit it.</li>
-  <li>Files that are in the staging area are then committed to what we’ll call the <strong>commit repository</strong> here. Committing is a synonym for saving the files in the Git terminology. The repository with commits contains a list of all the commits that we have done in a project. It’s neatly structured in a history log which we can call at any point. Notice that all of this is still happening on our computer.</li>
+  <li>The <strong>development area</strong> is where your coding happens. Usually this is a folder with multiple files on your computer. Git will never change anything at this level, actually it won’t really do anything. The only thing Git does is remembering that it needs to keep track of changes made in this folder or its files. However, for this we first need to initialize Git on this folder (only once in the beginning).</li>
+  <li>The <strong>staging area</strong> is an intermediate stage which assembles the files that contain changes. We can select one or multiple files with changes and stage them for a commit. This means that we’re telling Git that we will want to save those changes. Hence, imagine that we want to save a file, we first have to add it to the staging area before we can commit it.</li>
+  <li>Files that are in the staging area are then committed to what we’ll call the <strong>commit repository</strong>. Once we have done that, we stored a specific version of the committed files. Committing is a synonym for saving the files in the Git terminology. The repository with commits contains a list of all the commits that we have done in a project. It’s neatly structured in a history log which we can call at any point. Notice that all of this is still happening on our computer.</li>
 </ol>
 
-<p>Here’s an example. Let’s assume that we’re starting a new project. Usually that  also means that you make a new folder on your computer where you will keep all the files related to the project. The first thing you have to do is to tell Git (or GitHub Desktop) that it has to keep track of this folder.In this step, we’re initializing Git on this folder. Now, you just made your first file, however it’s not automatically saved in Git. First, you’ll have to add it to the staging area and afterwards you need to commit it to the repository. Voila, it’s now safely stored in Git’s repo.<br />
-If we make a second file, the only thing we have to do now is to add it to the staging area and afterwards commit it.</p>
+<p>Here’s an example. Let’s assume that we’re starting a new project. Usually that also means that you make a new folder on your computer where you will keep all the files related to the project. The first thing you have to do is to tell Git that it has to keep track of this folder.In this step, we’re initializing Git on this folder. Now, you just made your first file. Even though it is stored on your computer, it’s not automatically saved in Git. First, you’ll have to add it to the staging area and afterwards you need to commit it to the repository. When we initialized Git on the folder, a new folder <code class="language-plaintext highlighter-rouge">.git/</code> was created which will store the different versions. That allows us to only have the latest version of the files visible on our computer and all of its histories in the <code class="language-plaintext highlighter-rouge">.git/</code> folder. <br />
+If we make a second file, the only thing we have to do is adding it to the staging area and then commit it.</p>
 
-<p>Notice that the repository is not yet visible on <a href="https://github.com/">github.com</a>. For this we would still need a fourth and last step, namely pushing the commits repository from your local machine to GitHub. By pushing your commits repository, you’ll not only push the commits repository GitHub, but also push the files within the project to GitHub. After this last step, your project and all of the files are accessible in a GitHub repository.</p>
+<p>Notice that the repository is not yet visible on <a href="https://github.com/">github.com</a>. For this we would still need a fourth and last step, namely pushing the commits repository from your computer to GitHub. By pushing your commits repository, you will push the files within the project to GitHub. After this last step, your project and all of the files are accessible in a GitHub repository.</p>
 
-<p>During our adventure through git &amp; GitHub we’ll use some specific glossary. Confused on what the meaning of all these new words are? Check out the <a href="https://help.github.com/en/github/getting-started-with-github/github-glossary">GitHub glossary!</a></p>
+<p>During our adventure through Git &amp; GitHub we’ll use some specific glossary. Confused on what the meaning of all these new words are? Check out the <a href="https://help.github.com/en/github/getting-started-with-github/github-glossary">GitHub glossary</a>.</p>
+
+<hr />
+
+<p>Let’s go to the <a href="https://material.bits.vib.be/topics/git-introduction/tutorials/2_configurations/tutorial.html">next session</a>!</p>
 
 
 

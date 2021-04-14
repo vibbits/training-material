@@ -169,7 +169,7 @@
   },
   "url": "https://material.bits.vib.be//topics/git-introduction/tutorials/7_gitignore/tutorial.html",
   "timeRequired": "PT10M",
-  "description": "7 Gitignore\\nThe questions this  addresses are:\n - How to exclude certain files from uploading to GitHub\n\n\\nThe objectives are:\n - Understand the concept of .gitignore files\n\n",
+  "description": "7 Gitignore\\nThe questions this  addresses are:\n - How to exclude certain files from uploading to GitHub\n\n\\nThe objectives are:\n - Write expressions that ignore files from your repository\n\n",
   "hasPart": [
 
   ],
@@ -224,7 +224,7 @@
             <strong><i class="fa fa-bullseye" aria-hidden="true"></i><span class="visually-hidden">objectives</span> Objectives</strong>
             <ul>
             
-            <li>Understand the concept of .gitignore files</li>
+            <li>Write expressions that ignore files from your repository</li>
             
             </ul>
 
@@ -245,19 +245,20 @@
             <div class="row">
                 <div class="col-md-10" role="main">
                     <h1 id="1-introduction">1. Introduction</h1>
-<p>What if we have files that we do not want Git to track for us, like backup files or intermediate files created during data analysis? Remember that GitHub is not your next cloud storage infrastructure. Hence, your (big) data should not be uploaded on GitHub. Besides, there’s a strict file size limit of 100MB so you won’t even be able to do so.</p>
+<p>What if we have files that we do not want Git to track for us, like backup files or intermediate files created during data analysis? Remember that GitHub is not your next cloud storage infrastructure. Hence, (big) data should not be uploaded on GitHub. In fact, there’s a strict file size limit of 100MB so you won’t even be able to do so.</p>
 
 <p>Regardless of the above, it is often useful if your data is in the same projectfolder. And you can’t help the fact that Jupyter Notebooks makes intermediate checkpoints (.ipynb_checkpoints) in the same folder of the notebook.</p>
 
-<p>Git has a file, the <code class="language-plaintext highlighter-rouge">.gitignore</code> file, that has a list of expressions which define the files it doesn’t need to track. This chapter will briefly discuss the <code class="language-plaintext highlighter-rouge">.gitignore</code> file without any exercises and going into detail.</p>
+<p>Git has a file, the <code class="language-plaintext highlighter-rouge">.gitignore</code> file in which we can write expressions that define the files it should ignore. This chapter will briefly discuss the <code class="language-plaintext highlighter-rouge">.gitignore</code> file with a few simple examples.</p>
 
 <h1 id="2-expressions">2. Expressions</h1>
 <p>Imagine the following project folder structure:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> project-folder/
     |
-    |- .ipynb_checkpoints
-    |- .Rhistory
+    |- .git/
+    |- .ipynb_checkpoints/
+    |- .Rhistory/
     |
     |- data/
     |   |- R1.fastq
@@ -266,25 +267,26 @@
     ...
 </code></pre></div></div>
 
+<p>Let’s discuss how to ignore a specific file and how we can use symbols to generalize the ignoring behaviour.</p>
+
 <ul>
   <li><strong>Ignore a file</strong>:</li>
 </ul>
 
 <p>The easiest would be to define the file or the path to the file. E.g. the fastq file can be ignored by adding <code class="language-plaintext highlighter-rouge">data/R1.fastq</code> to the <code class="language-plaintext highlighter-rouge">.gitignore</code> file.</p>
 
-<p>Similar to a file, a folder can also be ignored. The folders data/, .ipynb_checkpoints and .Rhistory can be ignored by adding the following lines:</p>
+<p>Similar to a file, a folder can also be ignored. The folders <code class="language-plaintext highlighter-rouge">data/</code> and <code class="language-plaintext highlighter-rouge">.ipynb_checkpoints/</code> can be ignored by adding the following lines:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>data/
-.ipynb_checkpoints
-.Rhistory
+.ipynb_checkpoints/
 </code></pre></div></div>
 
 <ul>
   <li><strong><code class="language-plaintext highlighter-rouge">*</code>, <code class="language-plaintext highlighter-rouge">!</code> and <code class="language-plaintext highlighter-rouge">#</code></strong>:</li>
 </ul>
 
-<p>The asterisk is often used in <code class="language-plaintext highlighter-rouge">.gitignore</code> files and represents a wildcard. E.g. <code class="language-plaintext highlighter-rouge">*.csv</code> will ignore any csv file in your folder. The asterisk can precede a file format in which case it will ignore all the files with that format (csv, fastq, sam, bam, xlsx, pdf, etc.)</p>
+<p>The asterisk is often used in <code class="language-plaintext highlighter-rouge">.gitignore</code> files and represents a wildcard. E.g. <code class="language-plaintext highlighter-rouge">*.csv</code> will ignore any csv file in your folder and subfolders. The asterisk can precede a file format in which case it will ignore all the files with that format (e.g. ignore all csv, fastq, sam, bam, xlsx, pdf, etc. files).</p>
 
-<p>An exclamation mark is used for exceptions. The following lines of code will ignore all files in the data folder, except for the csv dataset:</p>
+<p>An exclamation mark is used for exceptions. The following lines of code will ignore all files in the data folder, except for the <code class="language-plaintext highlighter-rouge">dataset.csv</code> file:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>data/
 !data/dataset.csv
 </code></pre></div></div>
@@ -293,13 +295,15 @@
 
 <h1 id="3-standard-files">3. Standard files</h1>
 
-<p>It’s always good to think this through and manually add the files or folders that need to be ignored. However, it’s also useful to know that there are standardized <code class="language-plaintext highlighter-rouge">.gitignore</code> files depending on the programming environment. They are all accessible in <a href="https://github.com/github/gitignore">this repository</a> and contain <code class="language-plaintext highlighter-rouge">.gitignore</code> files for Python, R, Ruby, Java, Perl, C++, amongst many others. These files can also be added on the fly to a new repository by initializing the repository with one of these files (see figure below).</p>
+<p>It’s always good to think this through and manually add the files or folders that need to be ignored. However, it’s also useful to know that there are standardized <code class="language-plaintext highlighter-rouge">.gitignore</code> files. These files have been created based on a specific programming environment. They are all accessible in <a href="https://github.com/github/gitignore">this repository</a> and contain <code class="language-plaintext highlighter-rouge">.gitignore</code> files for Python, R, Ruby, Java, Perl, C++, amongst many others. These files can also be added on the fly to a new repository by initializing the repository with one of these files (see figure below).</p>
 
 <hr />
 
 <center><img src="../../images/gitignore.PNG" /></center>
 
 <hr />
+
+<p>Let’s continue with the <a href="https://material.bits.vib.be/topics/git-introduction/tutorials/8_github_rstudio/tutorial.html">next session</a>!</p>
 
 
 
