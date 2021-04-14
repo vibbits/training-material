@@ -26,7 +26,7 @@ Have you also been in a similar and recognizable situation as depicted below? Sa
 
 ---
 
-Git is an open-source tool that manages your project (files) by keeping track of each version of these files throughout its history. 
+Git is an open-source tool that keeps track of the changes made to your project files throughout their history. 
 
 Why should you version control? 
 - **Keeping track of changes** to your files done by yourself or your collaborators. At any moment you can exploit the history of the project to see who wrote what on a particular day. It even allows you to go back to a specific version or undo specific edits. 
