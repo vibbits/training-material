@@ -7,7 +7,7 @@ questions:
 - Why should I version control and how to get started? 
 - How does Git work in its essence? 
 objectives:
-- Understand why version controlling is essential in research projects
+- Understand why version control is essential in research projects
 - Explain how Git's conceptual areas interact
 time_estimation: 20m
 contributors:
