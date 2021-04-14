@@ -88,7 +88,7 @@ Click on *add remote* in the new screen, paste the GitHub link and add the name 
 
 ---
 
-Finally, add the name of the new branch *master* and hit create. Select *overwrite* when asked.  
+Finally, add the name of the new branch *main* and hit create. Select *overwrite* when asked.  
 
 ---
 
@@ -98,7 +98,7 @@ Finally, add the name of the new branch *master* and hit create. Select *overwri
 
 # 3. Git's features in Rstudio
 
-By initializing Git on an Rstudio project, there appears a *Git* tab in the upper right corner as depicted below. The tab consists of the main actions that can be performed with Git (the window might be too small to contain the keywords related to the symbol). Neglecting the *diff* keyword which is out of scope for this tutorial, we can find the following actions: *Commit, Pull, Push, History* and *More* followed by *New Branch*, the name of the branch (*master*) and a refresh button.
+By initializing Git on an Rstudio project, there appears a *Git* tab in the upper right corner as depicted below. The tab consists of the main actions that can be performed with Git (the window might be too small to contain the keywords related to the symbol). Neglecting the *diff* keyword which is out of scope for this tutorial, we can find the following actions: *Commit, Pull, Push, History* and *More* followed by *New Branch*, the name of the branch (*main*) and a refresh button.
 
 - **Stage**: The only action we're missing is the *staging*. Rstudio & Git actually continuously process the files within the project searching for new changes. If there is a new change it will appear in the list in the screen as depicted here for the `.gitignore` file. 
 - **Commit**: Opens a new screen that controls the staging area and committing. 
