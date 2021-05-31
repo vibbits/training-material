@@ -166,7 +166,7 @@ You can find an overview of the contact details of the main host institutions fo
 * AMS: Bart Cambré (bart.cambre@ams.ac.be)
 * Hogere Zeevaartschool: Marc Vervoort (marc.vervoort@hzs.be)
 * ITG: Ann Verlinden (averlinden@itg.be)
-* KU Leuven: RDM.ub@kuleuven.be
+* KU Leuven: rdm@kuleuven.be
 * UAntwerpen: RDM-support@uantwerpen.be
 * UGent: Myriam Mertens and Annik Leyman (rdm.support@ugent.be)
 * UHasselt: Sadia Vancauwenbergh (rdm@uhasselt.be)
